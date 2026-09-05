@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "info": {
+      "type": "collapsible-content",
+      "blocks": {
+        "row_shipping": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shipping",
+            "icon": "none",
+            "row_content": ""
+          }
+        },
+        "row_returns": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Returns",
+            "icon": "none",
+            "row_content": ""
+          }
+        },
+        "row_payment": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Payment and security",
+            "icon": "none",
+            "row_content": ""
+          }
+        },
+        "row_contact": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Questions",
+            "icon": "none",
+            "row_content": ""
+          }
+        }
+      },
+      "block_order": ["row_shipping", "row_returns", "row_payment", "row_contact"],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "padding_top": 28,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": ["main", "info"]
+}

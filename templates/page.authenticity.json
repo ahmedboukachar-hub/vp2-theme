@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "row_review": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How pieces are reviewed",
+            "icon": "none",
+            "row_content": ""
+          }
+        },
+        "row_documentation": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Documentation and receipts",
+            "icon": "none",
+            "row_content": ""
+          }
+        },
+        "row_concerns": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "If something isn't right",
+            "icon": "none",
+            "row_content": ""
+          }
+        }
+      },
+      "block_order": ["row_review", "row_documentation", "row_concerns"],
+      "settings": {
+        "caption": "Authenticity",
+        "heading": "A considered approach to authenticity",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "padding_top": 28,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": ["main", "faq"]
+}
