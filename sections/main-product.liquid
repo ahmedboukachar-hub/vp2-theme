@@ -210,6 +210,8 @@
                   </p>
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
+                {%- when 'specifications' -%}
+                  {% render 'product-specifications', product: product, block: block %}
                 {%- when 'collapsible_tab' -%}
                   <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                     <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -970,6 +972,23 @@
           "id": "custom_liquid",
           "label": "t:sections.custom-liquid.settings.custom_liquid.label",
           "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+        }
+      ]
+    },
+    {
+      "type": "specifications",
+      "name": "Specifications",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Details & condition"
+        },
+        {
+          "type": "paragraph",
+          "content": "Shows product metafields from the \"custom\" namespace: designer, model, product_type, year_or_era, condition, condition_notes, material, color, dimensions, inclusions, serial_or_date_code, provenance, authentication_notes. Empty fields are hidden."
         }
       ]
     },

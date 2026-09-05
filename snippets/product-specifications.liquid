@@ -1,0 +1,59 @@
+{% comment %}
+  Renders product specifications from metafields in the "custom" namespace.
+  Fields without a value — or without a metafield definition — are skipped,
+  so the block is safe to enable before any definitions exist.
+
+  Accepts:
+  - product: {Object} Product Liquid object
+  - block: {Object} The "specifications" block of the main-product section
+
+  Usage:
+  {% render 'product-specifications', product: product, block: block %}
+{% endcomment %}
+
+{{ 'component-product-specifications.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign spec_keys = 'designer,model,product_type,year_or_era,condition,material,color,dimensions,serial_or_date_code,inclusions' | split: ','
+  assign note_keys = 'condition_notes,provenance,authentication_notes' | split: ','
+-%}
+
+{%- capture spec_rows -%}
+  {%- for key in spec_keys -%}
+    {%- assign value = product.metafields.custom[key] | metafield_text -%}
+    {%- if value != blank -%}
+      {%- assign label_key = 'products.product.specifications.' | append: key -%}
+      <div class="product-specifications__row">
+        <dt>{{ label_key | t }}</dt>
+        <dd>{{ value | escape }}</dd>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- capture note_rows -%}
+  {%- for key in note_keys -%}
+    {%- assign value = product.metafields.custom[key] | metafield_text -%}
+    {%- if value != blank -%}
+      {%- assign label_key = 'products.product.specifications.' | append: key -%}
+      <div class="product-specifications__note">
+        <h3 class="product-specifications__note-heading">{{ label_key | t }}</h3>
+        <p>{{ value | escape | newline_to_br }}</p>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- if spec_rows != blank or note_rows != blank -%}
+  <div class="product-specifications quick-add-hidden" {{ block.shopify_attributes }}>
+    {%- if block.settings.heading != blank -%}
+      <h2 class="product-specifications__heading h4 inline-richtext">{{ block.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if spec_rows != blank -%}
+      <dl class="product-specifications__list">
+        {{ spec_rows }}
+      </dl>
+    {%- endif -%}
+    {{ note_rows }}
+  </div>
+{%- endif -%}

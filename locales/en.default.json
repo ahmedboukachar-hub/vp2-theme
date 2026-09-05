@@ -117,6 +117,21 @@
       "inventory_out_of_stock": "Out of stock",
       "inventory_out_of_stock_continue_selling": "In stock",
       "sku": "SKU",
+      "specifications": {
+        "designer": "Designer",
+        "model": "Model",
+        "product_type": "Type",
+        "year_or_era": "Year / era",
+        "condition": "Condition",
+        "condition_notes": "Condition notes",
+        "material": "Material",
+        "color": "Color",
+        "dimensions": "Dimensions",
+        "inclusions": "Includes",
+        "serial_or_date_code": "Serial / date code",
+        "provenance": "Provenance",
+        "authentication_notes": "Authentication"
+      },
       "on_sale": "Sale",
       "product_variants": "Product variants",
       "media": {
