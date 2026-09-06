@@ -34,6 +34,20 @@ to a client, or upgrade to a paid Shopify plan.
    Markets. Requires the owner's real business address and decisions on
    shipping countries and rates first. Shipping rates currently visible are
    unreviewed Shopify defaults.
+
+   **Currency gate (redesign §36.8), verified 2026-09-06:** shop currency is
+   `USD` with **zero orders**, so the base currency can still be changed
+   safely. The change is an Admin-only action (no supported API mutation);
+   the theme must not fake it with Liquid/JS. Owner click path:
+   **Shopify admin → Settings → General → Store defaults → Currency
+   display → change store currency to EUR → Save.** After changing:
+   review each migrated product's price (values were EUR-intended, no
+   conversion needed — verify per product), then check Markets, shipping
+   rates, taxes and a test checkout. The 20 published migrated products
+   currently display EUR-intended numbers as USD; they were published on
+   the owner's explicit earlier instruction and remain published, but this
+   is the top presentation blocker: either apply the two-click currency
+   change above or ask for the products to be set back to draft.
 4. **Legal & policies.** Only a Privacy Policy exists. Terms, refund policy,
    company details, cookie/consent setup and other legal texts must be added
    before launch (footer intentionally does not link to missing policies).

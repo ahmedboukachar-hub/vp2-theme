@@ -1,5 +1,10 @@
 # Editorial imagery — sources and usage
 
+> **Superseded:** the authoritative, current register of every active
+> non-product visual (including §36 rejections) is
+> `docs/design/image-register.md`. This file is kept as the historical
+> record of imagery batches 1–3.
+
 None of these images are used as product images. All files live in Shopify
 **Content → Files** and were resized to max 2400 px (JPEG q85) before upload.
 

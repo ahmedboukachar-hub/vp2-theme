@@ -1,0 +1,136 @@
+/* Design tokens + small global refinements for the storefront system.
+   Loaded after base.css. Colours and fonts stay in Theme Editor settings;
+   these tokens cover rhythm, measure, borders and motion only. */
+
+:root {
+  /* spacing rhythm */
+  --vp-space-2xs: 0.8rem;
+  --vp-space-xs: 1.6rem;
+  --vp-space-s: 2.4rem;
+  --vp-space-m: 4rem;
+  --vp-space-l: 5.6rem;
+  --vp-space-xl: 9.6rem;
+  --vp-space-2xl: 14.4rem;
+
+  /* content measure */
+  --vp-measure-text: 72rem;
+  --vp-measure-lead: 60rem;
+
+  /* structure */
+  --vp-border: 1px solid rgba(var(--color-foreground), 0.12);
+  --vp-border-strong: 1px solid rgba(var(--color-foreground), 0.35);
+  --vp-radius: 2px;
+
+  /* motion */
+  --vp-duration: 200ms;
+  --vp-ease: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --vp-duration: 0ms;
+  }
+}
+
+/* ---- product card refinement (mobile legibility, §36.7) ---- */
+
+.card__information .caption-with-letter-spacing {
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+}
+
+.card__heading {
+  line-height: 1.35;
+}
+
+@media screen and (max-width: 749px) {
+  .card__information .card__heading {
+    font-size: 1.6rem;
+  }
+
+  .card-information .price {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}
+
+/* verified differentiator line: material · condition */
+.card__meta-line {
+  margin-top: 0.2rem;
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.72);
+}
+
+@media screen and (max-width: 749px) {
+  .card__meta-line {
+    font-size: 1.2rem;
+  }
+}
+
+/* keep sold cards fully readable, only slightly muted */
+.card-wrapper.card--sold-archive .card__media {
+  opacity: 0.92;
+}
+
+/* ---- filter & sort tap targets (§36.7) ---- */
+
+.mobile-facets__open,
+.facets__summary,
+.facet-filters__sort {
+  min-height: 44px;
+}
+
+.mobile-facets__open {
+  font-size: 1.5rem;
+}
+
+/* ---- popular searches in the search overlay ---- */
+
+.search-popular {
+  margin-top: 1.6rem;
+}
+
+.search-popular__label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.search-popular__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-popular__list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 1.4rem;
+  border: var(--vp-border);
+  border-radius: var(--vp-radius);
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  transition: border-color var(--vp-duration) var(--vp-ease);
+}
+
+.search-popular__list a:hover,
+.search-popular__list a:focus-visible {
+  border-color: rgba(var(--color-foreground), 0.55);
+}
+
+/* ---- footer refinements ---- */
+
+.footer__meta-note {
+  max-width: var(--vp-measure-text);
+  margin: 1.2rem auto 0;
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.65);
+  text-align: center;
+}

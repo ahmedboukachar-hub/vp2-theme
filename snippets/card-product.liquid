@@ -47,7 +47,7 @@
   -%}
 
   <product-component view-event-payload="{{ card_product | standard_event_data: 'view', context: product_view_context | escape }}">
-    <div class="card-wrapper product-card-wrapper underline-links-hover">
+    <div class="card-wrapper product-card-wrapper underline-links-hover{% if card_is_sold_archive %} card--sold-archive{% endif %}">
       {%- unless skip_wishlist_button -%}
         {% render 'wishlist-button', wishlist_product: card_product %}
       {%- endunless -%}
@@ -181,6 +181,19 @@
               {%- if show_vendor -%}
                 <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
                 <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+              {%- endif -%}
+
+              {%- liquid
+                # verified differentiators only: material · condition (hidden when empty)
+                assign card_material = card_product.metafields.custom.material.value
+                assign card_condition = card_product.metafields.custom.condition.value
+              -%}
+              {%- if card_material != blank or card_condition != blank -%}
+                <div class="card__meta-line">
+                  {%- if card_material != blank -%}{{ card_material | escape }}{%- endif -%}
+                  {%- if card_material != blank and card_condition != blank %} &middot; {% endif -%}
+                  {%- if card_condition != blank -%}{{ card_condition | escape }}{%- endif -%}
+                </div>
               {%- endif -%}
 
               <span class="caption-large light">{{ block.settings.description | escape }}</span>

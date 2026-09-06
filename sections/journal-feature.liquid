@@ -1,0 +1,160 @@
+{{ 'section-journal-feature.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign blog = blogs[section.settings.blog]
+-%}
+
+<div class="journal-feature color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="journal-feature__header{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="journal-feature__eyebrow caption-with-letter-spacing">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="journal-feature__heading inline-richtext {{ section.settings.heading_size }}">
+          {{- section.settings.heading -}}
+        </h2>
+      {%- endif -%}
+    </div>
+
+    {%- if blog != blank and blog.articles_count > 0 -%}
+      <div class="journal-feature__grid">
+        {%- for article in blog.articles limit: 3 -%}
+          {%- liquid
+            assign words = article.content | strip_html | split: ' ' | size
+            assign minutes = words | divided_by: 200 | at_least: 1
+          -%}
+          <article class="journal-feature__card{% if forloop.first %} journal-feature__card--lead{% endif %}">
+            <a href="{{ article.url }}" class="journal-feature__card-link">
+              {%- if article.image -%}
+                <div class="journal-feature__media media">
+                  {{
+                    article.image
+                    | image_url: width: 1400
+                    | image_tag: loading: 'lazy', widths: '375, 550, 750, 1100, 1400', sizes: '(min-width: 990px) 50vw, 100vw'
+                  }}
+                </div>
+              {%- endif -%}
+              <div class="journal-feature__card-info">
+                {%- if article.tags.size > 0 -%}
+                  <p class="journal-feature__topic caption-with-letter-spacing">{{ article.tags.first | escape }}</p>
+                {%- endif -%}
+                <h3 class="journal-feature__card-title {% if forloop.first %}h2{% else %}h4{% endif %}">
+                  {{ article.title | escape }}
+                </h3>
+                {%- if forloop.first and article.excerpt_or_content != blank -%}
+                  <p class="journal-feature__excerpt">
+                    {{ article.excerpt_or_content | strip_html | truncatewords: 28 }}
+                  </p>
+                {%- endif -%}
+                <p class="journal-feature__meta">
+                  {{ article.published_at | time_tag: format: 'date' }}
+                  <span aria-hidden="true">·</span>
+                  {{ 'blogs.article.min_read' | t: count: minutes }}
+                </p>
+              </div>
+            </a>
+          </article>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.settings.button_label != blank -%}
+        <div class="journal-feature__footer">
+          <a href="{{ blog.url }}" class="button button--secondary">
+            {{- section.settings.button_label | escape -}}
+          </a>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</div>
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Journal feature",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Notes from the archive"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Stories, details and buying guides"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Visit the Journal"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 144,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 144,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "presets": [
+    {
+      "name": "Journal feature"
+    }
+  ]
+}
+{% endschema %}

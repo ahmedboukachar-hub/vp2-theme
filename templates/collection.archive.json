@@ -4,7 +4,7 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
+        "show_collection_image": true,
         "color_scheme": "scheme-1"
       }
     },
@@ -19,7 +19,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
         "image_ratio": "portrait",
         "image_shape": "default",
@@ -36,5 +36,9 @@
       }
     }
   },
-  "order": ["banner", "actions", "product-grid"]
+  "order": [
+    "banner",
+    "actions",
+    "product-grid"
+  ]
 }

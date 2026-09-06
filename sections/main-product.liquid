@@ -226,6 +226,8 @@
                   {{ block.settings.custom_liquid }}
                 {%- when 'specifications' -%}
                   {% render 'product-specifications', product: product, block: block %}
+                {%- when 'curators_note' -%}
+                  {% render 'product-curators-note', product: product, block: block %}
                 {%- when 'condition_report' -%}
                   {% render 'product-condition-report', product: product, block: block %}
                 {%- when 'what_fits' -%}
@@ -807,6 +809,17 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "curators_note",
+      "name": "Curator's note",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Shows the 'Why this piece' note from the custom.curators_note metafield. Hidden when empty. Describe observable qualities only."
+        }
+      ]
     },
     {
       "type": "condition_report",

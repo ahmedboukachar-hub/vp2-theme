@@ -41,7 +41,8 @@
     },
     "search": {
       "search": "Suchen",
-      "reset": "Suchbegriff zurücksetzen"
+      "reset": "Suchbegriff zurücksetzen",
+      "popular_searches": "Beliebte Suchanfragen"
     },
     "cart": {
       "view": "Warenkorb ansehen ({{ count }})",
@@ -71,6 +72,9 @@
       "empty_cta": "Alle Taschen entdecken",
       "unavailable": "Nicht mehr verfügbar",
       "requires_js": "Ihre Wunschliste benötigt JavaScript, um gespeicherte Stücke anzuzeigen."
+    },
+    "footer": {
+      "non_affiliation": "{{ shop_name }} ist ein unabhängiger Wiederverkäufer und steht in keiner Verbindung zu den auf dieser Website vorgestellten Designerhäusern. Alle Marken bleiben Eigentum ihrer jeweiligen Inhaber."
     }
   },
   "newsletter": {
@@ -113,7 +117,11 @@
       "back_to_blog": "Zurück zum Blog",
       "share": "Diesen Artikel teilen",
       "success": "Dein Kommentar wurde erfolgreich gepostet! Vielen Dank!",
-      "success_moderated": "Dein Kommentar wurde erfolgreich gepostet. Da unser Blog moderiert wird, werden wir ihn erst kurze Zeit später veröffentlichen."
+      "success_moderated": "Dein Kommentar wurde erfolgreich gepostet. Da unser Blog moderiert wird, werden wir ihn erst kurze Zeit später veröffentlichen.",
+      "min_read": {
+        "one": "{{ count }} Min. Lesezeit",
+        "other": "{{ count }} Min. Lesezeit"
+      }
     }
   },
   "onboarding": {
@@ -253,7 +261,8 @@
         "find_similar": "Ähnliches entdecken",
         "join_drop": "Den nächsten Drop nicht verpassen",
         "sourcing_link": "Sagen Sie uns, was Sie suchen"
-      }
+      },
+      "curators_note_heading": "Warum dieses Stück"
     },
     "modal": {
       "label": "Medien-Galerie"
@@ -340,7 +349,11 @@
       }
     },
     "404": {
-      "title": "Seite nicht gefunden",
+      "eyebrow": "Nicht gefunden",
+      "title": "Diese Seite ist nicht mehr Teil der Kollektion.",
+      "body": "Das Stück oder die Seite wurde möglicherweise verschoben. Entdecken Sie die Neuheiten, das Archiv oder suchen Sie nach Designer und Modell.",
+      "cta_new_arrivals": "Neuheiten entdecken",
+      "cta_archive": "Das Archiv entdecken",
       "subtext": "404"
     },
     "find_a_bag": {

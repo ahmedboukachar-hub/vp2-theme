@@ -41,7 +41,8 @@
     },
     "search": {
       "search": "Zoeken",
-      "reset": "Zoekterm wissen"
+      "reset": "Zoekterm wissen",
+      "popular_searches": "Populaire zoekopdrachten"
     },
     "cart": {
       "view": "Winkelwagen bekijken ({{ count }})",
@@ -71,6 +72,9 @@
       "empty_cta": "Ontdek alle tassen",
       "unavailable": "Niet meer beschikbaar",
       "requires_js": "Je wishlist heeft JavaScript nodig om bewaarde stukken te tonen."
+    },
+    "footer": {
+      "non_affiliation": "{{ shop_name }} is een onafhankelijke wederverkoper en is niet verbonden aan de designerhuizen op deze website. Alle merknamen blijven eigendom van hun respectievelijke eigenaren."
     }
   },
   "newsletter": {
@@ -113,7 +117,11 @@
       "back_to_blog": "Terug naar blog",
       "share": "Dit artikelen delen",
       "success": "Je reactie is geplaatst! Bedankt!",
-      "success_moderated": "Je reactie is geplaatst. Wij publiceren het zo; onze blog wordt gemodereerd."
+      "success_moderated": "Je reactie is geplaatst. Wij publiceren het zo; onze blog wordt gemodereerd.",
+      "min_read": {
+        "one": "{{ count }} min leestijd",
+        "other": "{{ count }} min leestijd"
+      }
     }
   },
   "onboarding": {
@@ -253,7 +261,8 @@
         "find_similar": "Vind iets vergelijkbaars",
         "join_drop": "Mis de volgende drop niet",
         "sourcing_link": "Vertel ons wat je zoekt"
-      }
+      },
+      "curators_note_heading": "Waarom dit stuk"
     },
     "modal": {
       "label": "Mediagalerij"
@@ -340,7 +349,11 @@
       }
     },
     "404": {
-      "title": "Pagina niet gevonden",
+      "eyebrow": "Niet gevonden",
+      "title": "Deze pagina maakt geen deel meer uit van de collectie.",
+      "body": "Het item of de pagina is mogelijk verplaatst. Bekijk de nieuwste stukken, verken het archief of zoek op designer en model.",
+      "cta_new_arrivals": "Bekijk nieuw binnen",
+      "cta_archive": "Verken het archief",
       "subtext": "404"
     },
     "find_a_bag": {

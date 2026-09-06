@@ -93,6 +93,26 @@
         {%- else -%}
           </search-form>
         {%- endif -%}
+        {%- liquid
+          assign popular_terms = settings.popular_searches | split: ','
+        -%}
+        {%- if popular_terms.size > 0 and search.terms == blank -%}
+          <nav class="search-popular" aria-label="{{ 'general.search.popular_searches' | t }}">
+            <span class="search-popular__label">{{ 'general.search.popular_searches' | t }}</span>
+            <ul class="search-popular__list" role="list">
+              {%- for term in popular_terms -%}
+                {%- assign clean_term = term | strip -%}
+                {%- if clean_term != blank -%}
+                  <li>
+                    <a href="{{ routes.search_url }}?q={{ clean_term | url_encode }}&options%5Bprefix%5D=last">
+                      {{- clean_term -}}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </nav>
+        {%- endif -%}
         <button
           type="button"
           class="search-modal__close-button modal__close-button link link--text focus-inset"

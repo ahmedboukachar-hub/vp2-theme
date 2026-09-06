@@ -1,33 +1,68 @@
 {
   "sections": {
     "hero": {
-      "type": "editorial-hero",
+      "type": "editorial-split-hero",
       "settings": {
         "image": "shopify://shop_images/editorial-monogram-bags-flatlay.jpg",
-        "image_mobile": "shopify://shop_images/editorial-crossbody-street.jpg",
-        "image_height": "large",
-        "image_overlay_opacity": 30,
-        "desktop_content_position": "left",
-        "show_text_below_mobile": false,
-        "eyebrow": "Vintage & pre-owned designer pieces",
-        "heading": "Curated vintage luxury",
+        "eyebrow": "The latest edit",
+        "heading": "Rare pieces, chosen with care.",
         "heading_size": "h1",
-        "text": "",
-        "button_label_1": "Explore the archive",
-        "button_link_1": "shopify://collections/all",
-        "button_label_2": "Our approach",
-        "button_link_2": "shopify://pages/authenticity",
-        "color_scheme": "scheme-3"
+        "text": "<p>A considered collection of vintage and pre-owned designer bags, selected for their character, condition and enduring appeal.</p>",
+        "button_label": "Shop new arrivals",
+        "button_link": "shopify://collections/new-arrivals",
+        "link_label": "Explore all bags",
+        "link_url": "shopify://collections/all-bags",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "proof": {
+      "type": "trust-strip",
+      "blocks": {
+        "proof_pieces": {
+          "type": "item",
+          "settings": {
+            "heading": "Individual pieces",
+            "text": ""
+          }
+        },
+        "proof_condition": {
+          "type": "item",
+          "settings": {
+            "heading": "Detailed condition notes",
+            "text": ""
+          }
+        },
+        "proof_questions": {
+          "type": "item",
+          "settings": {
+            "heading": "Questions welcomed",
+            "text": ""
+          }
+        },
+        "proof_delivery": {
+          "type": "item",
+          "settings": {
+            "heading": "Delivery options shown at checkout",
+            "text": ""
+          }
+        }
+      },
+      "block_order": ["proof_pieces", "proof_condition", "proof_questions", "proof_delivery"],
+      "settings": {
+        "show_borders": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "new_arrivals": {
       "type": "featured-collection",
       "settings": {
-        "title": "New arrivals",
+        "title": "Recently found",
         "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "collection": "all",
+        "description": "Newly added pieces, each available only once.",
+        "show_description": true,
+        "collection": "new-arrivals",
         "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
@@ -42,79 +77,56 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 60,
-        "padding_bottom": 52
+        "padding_top": 96,
+        "padding_bottom": 72
       }
     },
-    "trust": {
-      "type": "trust-strip",
+    "curation": {
+      "type": "image-with-text",
       "blocks": {
-        "trust_curated": {
-          "type": "item",
+        "curation_caption": {
+          "type": "caption",
           "settings": {
-            "heading": "Carefully curated",
-            "text": "<p>A small archive, selected piece by piece.</p>"
+            "caption": "Our point of view",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
           }
         },
-        "trust_condition": {
-          "type": "item",
+        "curation_heading": {
+          "type": "heading",
           "settings": {
-            "heading": "Condition, clearly described",
-            "text": "<p>Honest photography and detailed condition notes.</p>"
+            "heading": "Chosen individually. Described honestly.",
+            "heading_size": "h1"
           }
         },
-        "trust_checkout": {
-          "type": "item",
+        "curation_text": {
+          "type": "text",
           "settings": {
-            "heading": "Secure checkout",
-            "text": "<p>Safe payment through trusted providers.</p>"
+            "text": "<p>Pre-owned luxury is personal. Every piece has its own materials, proportions and signs of wear. We present those details clearly, so you can choose the bag that feels right for you.</p>",
+            "text_style": "body"
+          }
+        },
+        "curation_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "How we curate",
+            "button_link": "shopify://pages/our-curation",
+            "button_style_secondary": true
           }
         }
       },
-      "block_order": [
-        "trust_curated",
-        "trust_condition",
-        "trust_checkout"
-      ],
+      "block_order": ["curation_caption", "curation_heading", "curation_text", "curation_button"],
       "settings": {
-        "show_borders": true,
+        "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "archive": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_1": {
-          "type": "featured_collection",
-          "settings": {}
-        },
-        "collection_2": {
-          "type": "featured_collection",
-          "settings": {}
-        },
-        "collection_3": {
-          "type": "featured_collection",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "collection_1",
-        "collection_2",
-        "collection_3"
-      ],
-      "settings": {
-        "title": "The archive",
-        "heading_size": "h2",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-1",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 52
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "designers": {
@@ -132,184 +144,61 @@
             "collection": "gucci"
           }
         },
-        "designer_chanel": {
+        "designer_jacquemus": {
           "type": "designer",
           "settings": {
-            "collection": "chanel"
-          }
-        },
-        "designer_dior": {
-          "type": "designer",
-          "settings": {
-            "collection": "dior"
-          }
-        },
-        "designer_prada": {
-          "type": "designer",
-          "settings": {
-            "collection": "prada"
-          }
-        },
-        "designer_fendi": {
-          "type": "designer",
-          "settings": {
-            "collection": "fendi"
+            "collection": "jacquemus"
           }
         }
       },
-      "block_order": [
-        "designer_louis_vuitton",
-        "designer_gucci",
-        "designer_chanel",
-        "designer_dior",
-        "designer_prada",
-        "designer_fendi"
-      ],
+      "block_order": ["designer_louis_vuitton", "designer_gucci", "designer_jacquemus"],
       "settings": {
-        "title": "Selected houses",
+        "title": "Explore the houses",
         "heading_size": "h2",
-        "columns_desktop": 6,
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
-        "padding_top": 48,
-        "padding_bottom": 48
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
-    "story": {
-      "type": "image-with-text",
-      "blocks": {
-        "story_caption": {
-          "type": "caption",
-          "settings": {
-            "caption": "The brand",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "small"
-          }
-        },
-        "story_heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Selected with intention",
-            "heading_size": "h1"
-          }
-        },
-        "story_text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Every piece in the archive is chosen for its design, its quality and the way it has aged. This is the beginning of a longer story — told one piece at a time.</p>",
-            "text_style": "body"
-          }
-        },
-        "story_button": {
-          "type": "button",
-          "settings": {
-            "button_label": "About the brand",
-            "button_link": "shopify://pages/about",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "story_caption",
-        "story_heading",
-        "story_text",
-        "story_button"
-      ],
+    "find_a_bag": {
+      "type": "service-panel",
       "settings": {
-        "image": "shopify://shop_images/editorial-desk-scene.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-1",
-        "padding_top": 60,
-        "padding_bottom": 36
-      }
-    },
-    "condition": {
-      "type": "image-with-text",
-      "blocks": {
-        "condition_caption": {
-          "type": "caption",
-          "settings": {
-            "caption": "Transparency",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "small"
-          }
-        },
-        "condition_heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Condition, clearly described",
-            "heading_size": "h1"
-          }
-        },
-        "condition_text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Vintage pieces have lived a life. Each item is photographed as it is, with detail shots and honest notes on wear — so you know exactly what you are buying.</p>",
-            "text_style": "body"
-          }
-        },
-        "condition_button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Read the condition guide",
-            "button_link": "shopify://pages/condition-guide",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "condition_caption",
-        "condition_heading",
-        "condition_text",
-        "condition_button"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/pexels-boutique-bag-inspection-6650000.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 60
-      }
-    },
-    "authenticity": {
-      "type": "authenticity-process",
-      "disabled": true,
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {}
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {}
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3"
-      ],
-      "settings": {
-        "caption": "Authenticity",
-        "heading": "A considered approach to authenticity",
+        "eyebrow": "Personal sourcing",
+        "heading": "Looking for a particular piece?",
         "heading_size": "h1",
-        "intro": "",
-        "color_scheme": "scheme-2",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "text": "<p>Tell us the house, model, colour or era you have in mind. We will keep your request in view as we source new pieces.</p>",
+        "button_label": "Start a search",
+        "button_link": "shopify://pages/find-a-bag",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "archive": {
+      "type": "archive-feature",
+      "settings": {
+        "eyebrow": "Past pieces",
+        "heading": "From the archive",
+        "heading_size": "h1",
+        "text": "<p>A record of pieces that have passed through our collection — and a place to discover what we may be able to source again.</p>",
+        "collection": "archive",
+        "products_to_show": 3,
+        "button_label": "Explore the archive",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "journal": {
+      "type": "journal-feature",
+      "settings": {
+        "blog": "journal",
+        "eyebrow": "Notes from the archive",
+        "heading": "Stories, details and buying guides",
+        "heading_size": "h1",
+        "button_label": "Visit the Journal",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     },
     "newsletter": {
@@ -318,14 +207,14 @@
         "newsletter_heading": {
           "type": "heading",
           "settings": {
-            "heading": "Stay informed",
+            "heading": "The next piece may not return.",
             "heading_size": "h2"
           }
         },
         "newsletter_text": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>An occasional note when new pieces enter the archive.</p>"
+            "text": "<p>Receive new arrivals and occasional notes on the bags we love.</p>"
           }
         },
         "newsletter_form": {
@@ -333,28 +222,24 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "newsletter_heading",
-        "newsletter_text",
-        "newsletter_form"
-      ],
+      "block_order": ["newsletter_heading", "newsletter_text", "newsletter_form"],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "full_width": true,
-        "padding_top": 52,
-        "padding_bottom": 52
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     }
   },
   "order": [
     "hero",
+    "proof",
     "new_arrivals",
-    "trust",
-    "archive",
+    "curation",
     "designers",
-    "story",
-    "condition",
-    "authenticity",
+    "find_a_bag",
+    "archive",
+    "journal",
     "newsletter"
   ]
 }

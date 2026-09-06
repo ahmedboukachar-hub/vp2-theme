@@ -1,0 +1,39 @@
+.service-panel {
+  padding: var(--vp-space-xl, 9.6rem) 0;
+}
+
+@media screen and (max-width: 749px) {
+  .service-panel {
+    padding: var(--vp-space-l, 5.6rem) 0;
+  }
+}
+
+.service-panel__inner {
+  max-width: var(--vp-measure-text, 72rem);
+}
+
+.service-panel__eyebrow {
+  margin: 0 0 1.2rem;
+  opacity: 0.8;
+}
+
+.service-panel__heading {
+  margin: 0;
+}
+
+.service-panel__text {
+  margin-top: 1.4rem;
+  max-width: var(--vp-measure-lead, 60rem);
+}
+
+.service-panel__text > * {
+  margin: 0;
+}
+
+.service-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem 2.4rem;
+  margin-top: 2.4rem;
+}

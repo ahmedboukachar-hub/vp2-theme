@@ -1395,6 +1395,13 @@
         "default": false,
         "label": "t:settings_schema.search_input.settings.predictive_search_show_price.label",
         "info": "t:settings_schema.search_input.settings.predictive_search_show_price.info"
+      },
+      {
+        "type": "text",
+        "id": "popular_searches",
+        "label": "Popular searches",
+        "info": "Comma-separated terms shown in the search overlay. Only use terms that return results.",
+        "default": "Speedy 30, Petit Noé, Looping, Gucci Jackie, Jacquemus"
       }
     ]
   },

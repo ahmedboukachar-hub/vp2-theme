@@ -1,23 +1,76 @@
-<style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
-  }
-
-  @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
-    }
-  }
-</style>
-
 <div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+  <p class="caption-with-letter-spacing">{{ 'templates.404.eyebrow' | t }}</p>
+  <h1 class="title">{{ 'templates.404.title' | t }}</h1>
+  <p class="template-404__body">{{ 'templates.404.body' | t }}</p>
+
+  <form action="{{ routes.search_url }}" method="get" role="search" class="template-404__search search">
+    <div class="field">
+      <input
+        class="search__input field__input"
+        id="Search-404"
+        type="search"
+        name="q"
+        placeholder="{{ 'general.search.search' | t }}"
+      >
+      <label class="field__label" for="Search-404">{{ 'general.search.search' | t }}</label>
+      <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+        <span class="svg-wrapper">
+          {{- 'icon-search.svg' | inline_asset_content -}}
+        </span>
+      </button>
+    </div>
+  </form>
+
+  <div class="template-404__actions">
+    {%- assign new_arrivals = collections['new-arrivals'] -%}
+    {%- assign archive = collections['archive'] -%}
+    <a
+      href="{{ new_arrivals.url | default: routes.all_products_collection_url }}"
+      class="button"
+    >
+      {{- 'templates.404.cta_new_arrivals' | t -}}
+    </a>
+    {%- if archive != blank -%}
+      <a href="{{ archive.url }}" class="button button--secondary">
+        {{- 'templates.404.cta_archive' | t -}}
+      </a>
+    {%- endif -%}
+  </div>
 </div>
+
+{% style %}
+  .template-404 {
+    padding-top: var(--vp-space-xl, 9.6rem);
+    padding-bottom: var(--vp-space-xl, 9.6rem);
+  }
+
+  .template-404 .title {
+    margin: 1rem 0 0;
+  }
+
+  .template-404__body {
+    max-width: var(--vp-measure-lead, 60rem);
+    margin: 1.6rem auto 0;
+  }
+
+  .template-404__search {
+    max-width: 44rem;
+    margin: 2.8rem auto 0;
+  }
+
+  .template-404__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem 1.6rem;
+    margin-top: 2.8rem;
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "t:sections.main-404.name",
+  "tag": "section",
+  "class": "section"
+}
+{% endschema %}
