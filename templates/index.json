@@ -3,6 +3,8 @@
     "hero": {
       "type": "editorial-hero",
       "settings": {
+        "image": "shopify://shop_images/editorial-monogram-bags-flatlay.jpg",
+        "image_mobile": "shopify://shop_images/editorial-crossbody-street.jpg",
         "image_height": "large",
         "image_overlay_opacity": 30,
         "desktop_content_position": "left",
@@ -200,6 +202,7 @@
       },
       "block_order": ["story_caption", "story_heading", "story_text", "story_button"],
       "settings": {
+        "image": "shopify://shop_images/editorial-desk-scene.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -247,6 +250,7 @@
       },
       "block_order": ["condition_caption", "condition_heading", "condition_text", "condition_button"],
       "settings": {
+        "image": "shopify://shop_images/editorial-crossbody-street.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
