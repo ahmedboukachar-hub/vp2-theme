@@ -352,6 +352,7 @@
       tabindex="-1"
       data-template="{{ template.name }}"
     >
+      {% render 'breadcrumbs' %}
       {{ content_for_layout }}
     </main>
 
