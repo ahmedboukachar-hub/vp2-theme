@@ -1480,5 +1480,34 @@
         "label": "t:settings_schema.customer_accounts.settings.customer_account_menu.label"
       }
     ]
+  },
+  {
+    "name": "Language detection",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Automatically shows first-time visitors the site in their browser language, when that language is published. A manual choice via the language selector always takes precedence and is remembered. Only the language changes — never country, market or currency."
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_auto_language_detection",
+        "label": "Enable automatic language detection",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_location_fallback",
+        "label": "Enable location fallback",
+        "info": "Used only when no supported browser language is found. Single-language countries map to their language (Netherlands → Dutch, Germany/Austria → German, France → French); multilingual countries fall back to English.",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_language_notice",
+        "label": "Show language confirmation notice",
+        "info": "One-time dismissible notice after an automatic language switch, linking to the language selector.",
+        "default": true
+      }
+    ]
   }
 ]

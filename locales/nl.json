@@ -403,7 +403,10 @@
     "update_country": "Land/regio bijwerken",
     "search": "Zoeken",
     "popular_countries_regions": "Populaire landen/regio's",
-    "country_results_count": "{{ count }} landen/regio's gevonden"
+    "country_results_count": "{{ count }} landen/regio's gevonden",
+    "auto_notice_message": "We tonen de website in het Nederlands op basis van je taalinstellingen.",
+    "auto_notice_change": "Wijzigen",
+    "auto_notice_dismiss": "Sluiten"
   },
   "customer": {
     "account": {

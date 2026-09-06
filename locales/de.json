@@ -403,7 +403,10 @@
     "update_country": "Land/Region aktualisieren",
     "search": "Suchen",
     "popular_countries_regions": "Beliebte Länder/Regionen",
-    "country_results_count": "{{ count }} Länder/Regionen gefunden"
+    "country_results_count": "{{ count }} Länder/Regionen gefunden",
+    "auto_notice_message": "Wir zeigen diese Website auf Deutsch basierend auf deinen Spracheinstellungen.",
+    "auto_notice_change": "Ändern",
+    "auto_notice_dismiss": "Schließen"
   },
   "customer": {
     "account": {
