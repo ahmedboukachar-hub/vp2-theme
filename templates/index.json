@@ -34,7 +34,7 @@
         "view_all_style": "outline",
         "enable_desktop_slider": false,
         "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": false,
@@ -105,6 +105,63 @@
         "swipe_on_mobile": true,
         "padding_top": 52,
         "padding_bottom": 52
+      }
+    },
+    "designers": {
+      "type": "featured-designers",
+      "blocks": {
+        "designer_louis_vuitton": {
+          "type": "designer",
+          "settings": {
+            "collection": "louis-vuitton"
+          }
+        },
+        "designer_gucci": {
+          "type": "designer",
+          "settings": {
+            "collection": "gucci"
+          }
+        },
+        "designer_chanel": {
+          "type": "designer",
+          "settings": {
+            "collection": "chanel"
+          }
+        },
+        "designer_dior": {
+          "type": "designer",
+          "settings": {
+            "collection": "dior"
+          }
+        },
+        "designer_prada": {
+          "type": "designer",
+          "settings": {
+            "collection": "prada"
+          }
+        },
+        "designer_fendi": {
+          "type": "designer",
+          "settings": {
+            "collection": "fendi"
+          }
+        }
+      },
+      "block_order": [
+        "designer_louis_vuitton",
+        "designer_gucci",
+        "designer_chanel",
+        "designer_dior",
+        "designer_prada",
+        "designer_fendi"
+      ],
+      "settings": {
+        "title": "Selected houses",
+        "heading_size": "h2",
+        "columns_desktop": 6,
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "story": {
@@ -202,49 +259,29 @@
       }
     },
     "authenticity": {
-      "type": "rich-text",
+      "type": "authenticity-process",
+      "disabled": true,
       "blocks": {
-        "authenticity_caption": {
-          "type": "caption",
-          "settings": {
-            "caption": "Authenticity",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "small"
-          }
+        "step_1": {
+          "type": "step",
+          "settings": {}
         },
-        "authenticity_heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "A considered approach to authenticity",
-            "heading_size": "h1"
-          }
+        "step_2": {
+          "type": "step",
+          "settings": {}
         },
-        "authenticity_text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Read how pieces are reviewed, described and documented before they are offered.</p>"
-          }
-        },
-        "authenticity_button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Our approach",
-            "button_link": "shopify://pages/authenticity",
-            "button_style_secondary": false
-          }
+        "step_3": {
+          "type": "step",
+          "settings": {}
         }
       },
-      "block_order": [
-        "authenticity_caption",
-        "authenticity_heading",
-        "authenticity_text",
-        "authenticity_button"
-      ],
+      "block_order": ["step_1", "step_2", "step_3"],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "caption": "Authenticity",
+        "heading": "A considered approach to authenticity",
+        "heading_size": "h1",
+        "intro": "",
         "color_scheme": "scheme-2",
-        "full_width": true,
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -279,5 +316,15 @@
       }
     }
   },
-  "order": ["hero", "new_arrivals", "trust", "archive", "story", "condition", "authenticity", "newsletter"]
+  "order": [
+    "hero",
+    "new_arrivals",
+    "trust",
+    "archive",
+    "designers",
+    "story",
+    "condition",
+    "authenticity",
+    "newsletter"
+  ]
 }
