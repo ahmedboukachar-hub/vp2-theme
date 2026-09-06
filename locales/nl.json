@@ -59,6 +59,18 @@
       "next_slide": "Naar rechts schuiven",
       "previous_slide": "Naar links schuiven",
       "name": "Schuifregelaar"
+    },
+    "wishlist": {
+      "link_label": "Wishlist",
+      "add": "Bewaar in wishlist",
+      "remove": "Verwijder uit wishlist",
+      "remove_short": "Verwijderen",
+      "intro": "Bewaar de stukken waar je op terug wilt komen op één plek.",
+      "empty_heading": "Je wishlist is leeg",
+      "empty_body": "Bewaar een stuk om er later naar terug te keren.",
+      "empty_cta": "Ontdek alle tassen",
+      "unavailable": "Niet meer beschikbaar",
+      "requires_js": "Je wishlist heeft JavaScript nodig om bewaarde stukken te tonen."
     }
   },
   "newsletter": {
@@ -198,7 +210,50 @@
       "product_variants": "Productvarianten",
       "taxes_included": "Belastingen inbegrepen.",
       "duties_included": "Douanerechten inbegrepen.",
-      "duties_and_taxes_included": "Douanerechten en belastingen inbegrepen."
+      "duties_and_taxes_included": "Douanerechten en belastingen inbegrepen.",
+      "test_label": "Testproduct — fictieve listing",
+      "recently_viewed": "Recent bekeken",
+      "condition_report": {
+        "heading": "Conditierapport",
+        "issues_heading": "Gebruikssporen",
+        "guide_link": "Lees onze conditiegids"
+      },
+      "what_fits": {
+        "heading": "Wat past erin",
+        "size_guide_link": "Bekijk onze maatgids voor tassen"
+      },
+      "shipping_card": {
+        "heading": "Verzending & retouren",
+        "body": "Beschikbare verzendopties en kosten zie je bij het afrekenen. Bekijk vóór het bestellen onze informatie over verzending en retouren.",
+        "link": "Bekijk verzending & retouren"
+      },
+      "enquiry": {
+        "button": "Vraag iets over dit stuk",
+        "heading": "Vragen over dit stuk?",
+        "intro": "We vertellen je graag meer over de conditie, afmetingen of levering.",
+        "name": "Naam",
+        "email": "E-mail",
+        "country": "Land",
+        "topic_label": "Wat wil je weten?",
+        "topic_condition": "Conditie",
+        "topic_dimensions": "Afmetingen",
+        "topic_authentication": "Authenticatie",
+        "topic_shipping": "Verzending",
+        "topic_other": "Anders",
+        "message": "Bericht",
+        "submit": "Verstuur vraag",
+        "success": "Bedankt. Je vraag is verzonden.",
+        "error": "We konden je vraag niet versturen. Controleer de velden en probeer het opnieuw.",
+        "hidden_product": "Product",
+        "hidden_url": "Product-URL"
+      },
+      "sold": {
+        "badge": "Verkocht",
+        "heading": "Dit stuk heeft een nieuw thuis gevonden.",
+        "find_similar": "Vind iets vergelijkbaars",
+        "join_drop": "Mis de volgende drop niet",
+        "sourcing_link": "Vertel ons wat je zoekt"
+      }
     },
     "modal": {
       "label": "Mediagalerij"
@@ -263,7 +318,11 @@
         "other": "{{ count }} producten"
       },
       "suggestions": "Suggesties",
-      "pages": "Pagina's"
+      "pages": "Pagina's",
+      "empty_heading": "We konden geen passend stuk vinden",
+      "empty_body": "Probeer een bredere zoekopdracht, ontdek alle tassen of vertel ons wat je zoekt.",
+      "empty_cta_all": "Ontdek alle tassen",
+      "empty_cta_find": "Vind een tas"
     },
     "cart": {
       "cart": "Winkelwagen"
@@ -283,6 +342,31 @@
     "404": {
       "title": "Pagina niet gevonden",
       "subtext": "404"
+    },
+    "find_a_bag": {
+      "fields": {
+        "name": "Naam",
+        "email": "E-mail",
+        "country": "Land",
+        "designer": "Designer",
+        "model_or_style": "Model of stijl",
+        "preferred_size": "Voorkeursmaat",
+        "preferred_colour": "Voorkeurskleur",
+        "preferred_material": "Voorkeursmateriaal",
+        "preferred_era": "Voorkeursperiode",
+        "minimum_condition": "Minimale conditie",
+        "maximum_budget": "Maximaal budget",
+        "currency": "Valuta",
+        "flexible_details": "Welke details zijn flexibel?",
+        "reference_link": "Referentielink (optioneel)",
+        "notes": "Is er nog iets dat we moeten weten?"
+      },
+      "consent": "We gebruiken deze gegevens om op je aanvraag te reageren. Dit is geen reservering of koopovereenkomst.",
+      "submit": "Verstuur mijn aanvraag",
+      "success_heading": "Je aanvraag is ontvangen",
+      "success_body": "Bedankt. We nemen contact op als we je zoektocht echt verder kunnen helpen.",
+      "closing": "Elk pre-owned stuk is uniek. Conditie, leeftijd, details en meegeleverde accessoires kunnen verschillen, zelfs binnen hetzelfde model. We beschrijven altijd het specifieke stuk dat we aanbieden.",
+      "hidden_source": "Aanvraagtype"
     }
   },
   "sections": {
@@ -394,6 +478,20 @@
       "min_error": "Voor dit artikel geldt een minimum van {{ min }}.",
       "max_error": "Voor dit artikel geldt een maximum van {{ max }}.",
       "step_error": "Je kunt dit artikel alleen toevoegen in stappen van {{ step }}"
+    },
+    "archive": {
+      "sourcing_note": "Een stuk gemist? Deel het met ons en vertel wat je zoekt. We kunnen geen exacte match beloven, maar je aanvraag helpt onze toekomstige inkoop richting te geven.",
+      "find_similar": "Vind een vergelijkbaar stuk",
+      "explore_available": "Ontdek beschikbare tassen",
+      "empty_heading": "Het archief krijgt vorm",
+      "empty_body": "Eerder gecureerde stukken verschijnen hier."
+    },
+    "drop_signup": {
+      "heading": "Hoor als eerste over nieuwe stukken",
+      "body": "Ontvang af en toe een update wanneer nieuw gecureerde tassen binnenkomen. Geen constante promoties.",
+      "email_placeholder": "E-mailadres",
+      "submit": "Schrijf je in",
+      "success": "Bedankt. Je staat op de lijst."
     }
   },
   "localization": {
@@ -406,7 +504,10 @@
     "country_results_count": "{{ count }} landen/regio's gevonden",
     "auto_notice_message": "We tonen de website in het Nederlands op basis van je taalinstellingen.",
     "auto_notice_change": "Wijzigen",
-    "auto_notice_dismiss": "Sluiten"
+    "auto_notice_dismiss": "Sluiten",
+    "banner_prompt": "Wil je deze winkel liever in {{ language }} bekijken?",
+    "banner_accept": "Wissel van taal",
+    "banner_dismiss": "In het Nederlands blijven"
   },
   "customer": {
     "account": {

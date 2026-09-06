@@ -1,0 +1,79 @@
+{% comment %}
+  Renders the condition report: grade, human summary, individual signs of
+  wear (condition_issue metaobjects) and a link to the Condition Guide.
+  Renders nothing when no condition data exists.
+
+  Accepts:
+  - product: {Object} Product Liquid object
+  - block: {Object} The "condition_report" block
+{% endcomment %}
+
+{%- liquid
+  assign grade = product.metafields.custom.condition | metafield_text
+  assign summary = product.metafields.custom.condition_summary | metafield_text
+  assign issues = product.metafields.custom.condition_issues.value
+-%}
+
+{%- if grade != blank or summary != blank or issues.size > 0 -%}
+  {{ 'component-inspection.css' | asset_url | stylesheet_tag }}
+  <div class="condition-report quick-add-hidden" {{ block.shopify_attributes }}>
+    <h2 class="condition-report__heading h4">{{ 'products.product.condition_report.heading' | t }}</h2>
+
+    {%- if grade != blank -%}
+      <p class="condition-report__grade">
+        <span class="condition-report__grade-label caption-with-letter-spacing">
+          {{- 'products.product.specifications.condition' | t -}}
+        </span>
+        <span class="condition-report__grade-value h5">{{ grade | escape }}</span>
+      </p>
+    {%- endif -%}
+
+    {%- if summary != blank -%}
+      <p class="condition-report__summary">{{ summary | escape | newline_to_br }}</p>
+    {%- endif -%}
+
+    {%- if issues.size > 0 -%}
+      <h3 class="condition-report__issues-heading h5">{{ 'products.product.condition_report.issues_heading' | t }}</h3>
+      <ul class="condition-report__issues list-unstyled" role="list">
+        {%- for issue in issues -%}
+          {%- liquid
+            assign issue_title = issue.title | metafield_text
+            assign issue_description = issue.description | metafield_text
+            assign issue_area = issue.area | metafield_text
+            assign issue_image = issue.image.value
+          -%}
+          {%- if issue_title != blank or issue_description != blank -%}
+            <li class="condition-report__issue">
+              {%- if issue_image.preview_image -%}
+                <div class="condition-report__issue-media">
+                  {{
+                    issue_image.preview_image
+                    | image_url: width: 400
+                    | image_tag: loading: 'lazy', widths: '200, 400', sizes: '(min-width: 750px) 12rem, 9rem', alt: issue_title
+                  }}
+                </div>
+              {%- endif -%}
+              <div class="condition-report__issue-body">
+                {%- if issue_title != blank -%}
+                  <p class="condition-report__issue-title">{{ issue_title | escape }}</p>
+                {%- endif -%}
+                {%- if issue_area != blank -%}
+                  <p class="condition-report__issue-area caption-with-letter-spacing">{{ issue_area | escape }}</p>
+                {%- endif -%}
+                {%- if issue_description != blank -%}
+                  <p class="condition-report__issue-description">{{ issue_description | escape | newline_to_br }}</p>
+                {%- endif -%}
+              </div>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    <p class="condition-report__guide-link">
+      <a href="{{ pages['condition-guide'].url | default: '/pages/condition-guide' }}" class="link underlined-link">
+        {{- 'products.product.condition_report.guide_link' | t -}}
+      </a>
+    </p>
+  </div>
+{%- endif -%}

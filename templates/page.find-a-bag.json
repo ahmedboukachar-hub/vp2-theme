@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "find-a-bag-form",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": ["main"]
+}

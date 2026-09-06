@@ -41,7 +41,13 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-  {%- if section.settings.enable_sticky_mobile_buy and product.available -%}
+  {%- liquid
+    assign is_sold_archive = false
+    if product.tags contains 'sold-archive'
+      assign is_sold_archive = true
+    endif
+  -%}
+  {%- if section.settings.enable_sticky_mobile_buy and product.available and is_sold_archive == false -%}
     {{ 'component-sticky-buy.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'component-sticky-buy.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
@@ -81,6 +87,10 @@
     <div class="page-width">
       <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper">
+          {%- if section.settings.show_test_label and product.tags contains 'vp2-test-data' -%}
+            {{ 'component-inspection.css' | asset_url | stylesheet_tag }}
+            <span class="product-test-label">{{ 'products.product.test_label' | t }}</span>
+          {%- endif -%}
           {% render 'product-media-gallery', variant_images: variant_images %}
         </div>
         <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -216,6 +226,18 @@
                   {{ block.settings.custom_liquid }}
                 {%- when 'specifications' -%}
                   {% render 'product-specifications', product: product, block: block %}
+                {%- when 'condition_report' -%}
+                  {% render 'product-condition-report', product: product, block: block %}
+                {%- when 'what_fits' -%}
+                  {% render 'product-what-fits', product: product, block: block %}
+                {%- when 'shipping_card' -%}
+                  {% render 'product-shipping-card', block: block %}
+                {%- when 'enquiry' -%}
+                  {% render 'product-enquiry', product: product, block: block %}
+                {%- when 'wishlist_button' -%}
+                  <div class="product__wishlist quick-add-hidden" {{ block.shopify_attributes }}>
+                    {% render 'wishlist-button', wishlist_product: product %}
+                  </div>
                 {%- when 'collapsible_tab' -%}
                   <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                     <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -498,13 +520,17 @@
                     product_form_id: product_form_id
                   %}
                 {%- when 'buy_buttons' -%}
-                  {%- render 'buy-buttons',
-                    block: block,
-                    product: product,
-                    product_form_id: product_form_id,
-                    section_id: section.id,
-                    show_pickup_availability: true
-                  -%}
+                  {%- if is_sold_archive -%}
+                    {%- render 'product-sold-state', product: product, block: block -%}
+                  {%- else -%}
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      show_pickup_availability: true
+                    -%}
+                  {%- endif -%}
                 {%- when 'rating' -%}
                   {%- if product.metafields.reviews.rating.value != blank -%}
                     <div class="rating-wrapper">
@@ -759,7 +785,7 @@
   </product-component>
 </product-info>
 
-{%- if section.settings.enable_sticky_mobile_buy and product.available -%}
+{%- if section.settings.enable_sticky_mobile_buy and product.available and is_sold_archive == false -%}
   <sticky-buy-bar class="sticky-buy" data-section="{{ section.id }}">
     <div class="page-width sticky-buy__inner">
       <div class="sticky-buy__info">
@@ -781,6 +807,61 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "condition_report",
+      "name": "Condition report",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Shows the condition grade, summary and individual signs of wear from product metafields. Hidden when no condition data exists."
+        }
+      ]
+    },
+    {
+      "type": "what_fits",
+      "name": "What fits inside",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Shows the custom.what_fits metafield with a link to the bag size guide. Hidden when empty."
+        }
+      ]
+    },
+    {
+      "type": "shipping_card",
+      "name": "Shipping & returns card",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Neutral shipping and returns card linking to the shipping information page."
+        }
+      ]
+    },
+    {
+      "type": "enquiry",
+      "name": "Ask about this piece",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Accessible product enquiry form (native contact form, no app). Sends the product title and URL automatically."
+        }
+      ]
+    },
+    {
+      "type": "wishlist_button",
+      "name": "Wishlist button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Browser-local wishlist heart button."
+        }
+      ]
     },
     {
       "type": "text",
@@ -2196,6 +2277,13 @@
       "default": false,
       "label": "Show sticky buy bar on mobile",
       "info": "A compact add-to-cart bar appears on mobile once the product form scrolls out of view. Hidden for sold-out products."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_test_label",
+      "default": true,
+      "label": "Show test-product label",
+      "info": "Shows a subtle label near the gallery on products tagged vp2-test-data."
     },
     {
       "type": "color_scheme",

@@ -59,6 +59,18 @@
       "next_slide": "Slide right",
       "previous_slide": "Slide left",
       "name": "Slider"
+    },
+    "wishlist": {
+      "link_label": "Wishlist",
+      "add": "Save to wishlist",
+      "remove": "Remove from wishlist",
+      "remove_short": "Remove",
+      "intro": "Keep the pieces you would like to revisit in one place.",
+      "empty_heading": "Your wishlist is empty",
+      "empty_body": "Save a piece to return to it later.",
+      "empty_cta": "Explore all bags",
+      "unavailable": "No longer available",
+      "requires_js": "Your wishlist needs JavaScript to display saved pieces."
     }
   },
   "newsletter": {
@@ -198,7 +210,50 @@
       "taxes_included": "Taxes included.",
       "duties_included": "Duties included.",
       "duties_and_taxes_included": "Duties and taxes included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "test_label": "Test product — placeholder listing",
+      "recently_viewed": "Recently viewed",
+      "condition_report": {
+        "heading": "Condition report",
+        "issues_heading": "Signs of wear",
+        "guide_link": "Read our condition guide"
+      },
+      "what_fits": {
+        "heading": "What fits inside",
+        "size_guide_link": "View our bag size guide"
+      },
+      "shipping_card": {
+        "heading": "Shipping & returns",
+        "body": "Available shipping options and costs are shown at checkout. Please review our shipping and returns information before ordering.",
+        "link": "View shipping & returns"
+      },
+      "enquiry": {
+        "button": "Ask about this piece",
+        "heading": "Questions about this piece?",
+        "intro": "We are happy to provide additional details about its condition, dimensions or delivery.",
+        "name": "Name",
+        "email": "Email",
+        "country": "Country",
+        "topic_label": "What would you like to know?",
+        "topic_condition": "Condition",
+        "topic_dimensions": "Dimensions",
+        "topic_authentication": "Authentication",
+        "topic_shipping": "Shipping",
+        "topic_other": "Other",
+        "message": "Message",
+        "submit": "Send enquiry",
+        "success": "Thank you. Your enquiry has been sent.",
+        "error": "We could not send your enquiry. Please review the fields and try again.",
+        "hidden_product": "Product",
+        "hidden_url": "Product URL"
+      },
+      "sold": {
+        "badge": "Sold",
+        "heading": "This piece has found a new home.",
+        "find_similar": "Find something similar",
+        "join_drop": "Join the next drop",
+        "sourcing_link": "Tell us what you are looking for"
+      }
     },
     "modal": {
       "label": "Media gallery"
@@ -263,7 +318,11 @@
       "title": "Search results",
       "search_for": "Search for “{{ terms }}”",
       "suggestions": "Suggestions",
-      "pages": "Pages"
+      "pages": "Pages",
+      "empty_heading": "We could not find a matching piece",
+      "empty_body": "Try a broader search, explore all bags or tell us what you are looking for.",
+      "empty_cta_all": "Explore all bags",
+      "empty_cta_find": "Find a bag"
     },
     "cart": {
       "cart": "Cart"
@@ -283,6 +342,31 @@
     "404": {
       "title": "Page not found",
       "subtext": "404"
+    },
+    "find_a_bag": {
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "country": "Country",
+        "designer": "Designer",
+        "model_or_style": "Model or style",
+        "preferred_size": "Preferred size",
+        "preferred_colour": "Preferred colour",
+        "preferred_material": "Preferred material",
+        "preferred_era": "Preferred era",
+        "minimum_condition": "Minimum condition",
+        "maximum_budget": "Maximum budget",
+        "currency": "Currency",
+        "flexible_details": "Which details are flexible?",
+        "reference_link": "Reference link (optional)",
+        "notes": "Anything else we should know?"
+      },
+      "consent": "We will use these details to respond to your request. This is not a reservation or purchase agreement.",
+      "submit": "Submit my request",
+      "success_heading": "Your request has been received",
+      "success_body": "Thank you. We will contact you if we can meaningfully help with your search.",
+      "closing": "Every pre-owned piece is individual. Condition, age, details and inclusions can vary, even within the same model. We will always describe the specific piece offered.",
+      "hidden_source": "Request type"
     }
   },
   "sections": {
@@ -394,6 +478,20 @@
       "min_error": "This item has a minimum of {{ min }}",
       "max_error": "This item has a maximum of {{ max }}",
       "step_error": "You can only add this item in increments of {{ step }}"
+    },
+    "archive": {
+      "sourcing_note": "Found a piece you missed? Share it with us and tell us what you are looking for. We cannot promise an exact match, but your request can help guide future sourcing.",
+      "find_similar": "Find a similar piece",
+      "explore_available": "Explore available bags",
+      "empty_heading": "The archive is taking shape",
+      "empty_body": "Previously curated pieces will appear here."
+    },
+    "drop_signup": {
+      "heading": "Hear about new pieces first",
+      "body": "Receive occasional updates when newly curated bags arrive. No constant promotions.",
+      "email_placeholder": "Email address",
+      "submit": "Join the list",
+      "success": "Thank you. You are on the list."
     }
   },
   "localization": {
@@ -406,7 +504,10 @@
     "country_results_count": "{{ count }} countries/regions found",
     "auto_notice_message": "We’re showing this site in English based on your language settings.",
     "auto_notice_change": "Change",
-    "auto_notice_dismiss": "Dismiss"
+    "auto_notice_dismiss": "Dismiss",
+    "banner_prompt": "Would you prefer to view this store in {{ language }}?",
+    "banner_accept": "Switch language",
+    "banner_dismiss": "Stay in English"
   },
   "customer": {
     "account": {

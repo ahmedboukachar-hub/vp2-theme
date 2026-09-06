@@ -1,0 +1,88 @@
+{{ 'component-inspection.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .archive-actions__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .archive-actions--empty {
+    text-align: center;
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  {%- if collection.products_count > 0 -%}
+    <div class="archive-actions">
+      <p>{{ 'sections.archive.sourcing_note' | t }}</p>
+      <div class="archive-actions__buttons">
+        <a href="{{ pages['find-a-bag'].url | default: '/pages/find-a-bag' }}" class="button">
+          {{- 'sections.archive.find_similar' | t -}}
+        </a>
+        <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button button--secondary">
+          {{- 'sections.archive.explore_available' | t -}}
+        </a>
+      </div>
+    </div>
+  {%- else -%}
+    <div class="archive-actions archive-actions--empty">
+      <h2 class="h3">{{ 'sections.archive.empty_heading' | t }}</h2>
+      <p>{{ 'sections.archive.empty_body' | t }}</p>
+      <div class="archive-actions__buttons" style="justify-content: center;">
+        <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button">{{ 'sections.archive.explore_available' | t }}</a>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Archive actions",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Sourcing CTAs for the Sold Archive, plus its empty state. Copy comes from locale files and is fully translated."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 8
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,19 @@
+{% comment %}
+  Neutral shipping & returns card. Deliberately contains no countries, rates,
+  carriers or delivery times: those are shown at checkout until Markets and
+  shipping are finalised.
+
+  Accepts:
+  - block: {Object} The "shipping_card" block
+{% endcomment %}
+
+{{ 'component-inspection.css' | asset_url | stylesheet_tag }}
+<div class="shipping-card quick-add-hidden" {{ block.shopify_attributes }}>
+  <h2 class="shipping-card__heading h4">{{ 'products.product.shipping_card.heading' | t }}</h2>
+  <p class="shipping-card__body">{{ 'products.product.shipping_card.body' | t }}</p>
+  <p class="shipping-card__link">
+    <a href="{{ pages['shipping-returns'].url | default: '/pages/shipping-returns' }}" class="link underlined-link">
+      {{- 'products.product.shipping_card.link' | t -}}
+    </a>
+  </p>
+</div>

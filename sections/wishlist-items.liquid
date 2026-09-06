@@ -1,0 +1,89 @@
+{{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'wishlist.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>
+  <p class="wishlist-items__intro">{{ 'general.wishlist.intro' | t }}</p>
+
+  <noscript>
+    <p>{{ 'general.wishlist.requires_js' | t }}</p>
+  </noscript>
+
+  <wishlist-items
+    class="wishlist-items no-js-hidden"
+    data-root-url="{{ routes.root_url }}"
+    data-money-format="{{ shop.money_format | escape }}"
+  >
+    <div class="wishlist-items__empty" data-wishlist-empty hidden>
+      <h2 class="h3">{{ 'general.wishlist.empty_heading' | t }}</h2>
+      <p>{{ 'general.wishlist.empty_body' | t }}</p>
+      <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button">{{ 'general.wishlist.empty_cta' | t }}</a>
+    </div>
+    <ul class="wishlist-items__grid list-unstyled" role="list" data-wishlist-grid hidden></ul>
+    <template>
+      <li class="wishlist-card" data-wishlist-card>
+        <a data-wishlist-link href="#" class="wishlist-card__link">
+          <span class="wishlist-card__media"><img data-wishlist-image src="" alt="" loading="lazy" width="600" height="750"></span>
+          <span data-wishlist-title class="wishlist-card__title"></span>
+        </a>
+        <span class="wishlist-card__unavailable" data-wishlist-unavailable>{{ 'general.wishlist.unavailable' | t }}</span>
+        <p data-wishlist-price class="wishlist-card__price"></p>
+        <button type="button" class="wishlist-card__remove link underlined-link" data-wishlist-remove>
+          {{- 'general.wishlist.remove_short' | t -}}
+        </button>
+      </li>
+    </template>
+  </wishlist-items>
+</div>
+
+{% schema %}
+{
+  "name": "Wishlist",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Renders the browser-local wishlist. Items are stored only in the visitor's browser and do not sync between devices."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ]
+}
+{% endschema %}

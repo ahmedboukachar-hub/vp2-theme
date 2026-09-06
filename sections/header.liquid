@@ -299,6 +299,14 @@
         {%- endcase -%}
       {%- endfor -%}
 
+      {%- if section.settings.show_wishlist_link -%}
+        {{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
+        <a href="{{ pages['wishlist'].url | default: '/pages/wishlist' }}" class="header__icon header__icon--wishlist link focus-inset">
+          <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
+          <span class="visually-hidden">{{ 'general.wishlist.link_label' | t }}</span>
+        </a>
+      {%- endif -%}
+
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {% if cart == empty %}
           <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
@@ -634,6 +642,13 @@
       "default": true,
       "label": "t:sections.header.settings.enable_language_selector.label",
       "info": "t:sections.header.settings.enable_language_selector.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_wishlist_link",
+      "default": true,
+      "label": "Show wishlist link",
+      "info": "Utility icon linking to the wishlist page."
     },
     {
       "type": "paragraph",

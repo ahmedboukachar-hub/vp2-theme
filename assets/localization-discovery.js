@@ -196,6 +196,16 @@
         writePreference({ locale: targetLocale, source: 'auto', via: via });
         return;
       }
+      // Location is only an indication, never certainty: recommend instead of
+      // redirecting. Only a clear browser-language match switches directly.
+      if (via === 'location') {
+        showSuggestion(targetLocale);
+        return;
+      }
+      switchLocale(targetLocale, via);
+    }
+
+    function switchLocale(targetLocale, via) {
       // Store first so the localized page never re-triggers detection (no loops).
       if (!writePreference({ locale: targetLocale, source: 'auto', via: via, noticePending: true })) return;
       var form = document.getElementById('LocalizationDiscoveryForm');
@@ -206,6 +216,40 @@
       var returnToInput = form.querySelector('input[name="return_to"]');
       if (returnToInput) returnToInput.value = safeReturnTo();
       form.submit();
+    }
+
+    function showSuggestion(targetLocale) {
+      var banner = document.getElementById('LocalizationSuggestion');
+      if (!banner) {
+        writePreference({ locale: config.currentLocale, source: 'auto', via: 'location-no-banner' });
+        return;
+      }
+      var names = {};
+      try {
+        names = JSON.parse(banner.dataset.languageNames || '{}');
+      } catch (error) {
+        names = {};
+      }
+      var prompt = banner.querySelector('[data-suggestion-prompt]');
+      if (prompt) {
+        prompt.textContent = prompt.textContent.replace('[language]', names[targetLocale] || targetLocale);
+      }
+      banner.hidden = false;
+
+      var accept = banner.querySelector('[data-suggestion-accept]');
+      if (accept) {
+        accept.addEventListener('click', function () {
+          banner.hidden = true;
+          switchLocale(targetLocale, 'location');
+        });
+      }
+      var dismiss = banner.querySelector('[data-suggestion-dismiss]');
+      if (dismiss) {
+        dismiss.addEventListener('click', function () {
+          banner.hidden = true;
+          writePreference({ locale: config.currentLocale, source: 'auto', via: 'location-dismissed' });
+        });
+      }
     }
   }
 

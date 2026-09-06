@@ -59,6 +59,18 @@
       "next_slide": "Nach rechts schieben",
       "previous_slide": "Nach links schieben",
       "name": "Slider"
+    },
+    "wishlist": {
+      "link_label": "Wunschliste",
+      "add": "Zur Wunschliste hinzufügen",
+      "remove": "Von der Wunschliste entfernen",
+      "remove_short": "Entfernen",
+      "intro": "Bewahren Sie die Stücke, zu denen Sie zurückkehren möchten, an einem Ort auf.",
+      "empty_heading": "Ihre Wunschliste ist leer",
+      "empty_body": "Speichern Sie ein Stück, um später darauf zurückzukommen.",
+      "empty_cta": "Alle Taschen entdecken",
+      "unavailable": "Nicht mehr verfügbar",
+      "requires_js": "Ihre Wunschliste benötigt JavaScript, um gespeicherte Stücke anzuzeigen."
     }
   },
   "newsletter": {
@@ -198,7 +210,50 @@
       "product_variants": "Produktvarianten",
       "taxes_included": "Inkl. Steuern.",
       "duties_included": "Inkl. Zollgebühren.",
-      "duties_and_taxes_included": "Inkl. Zollgebühren und Steuern."
+      "duties_and_taxes_included": "Inkl. Zollgebühren und Steuern.",
+      "test_label": "Testprodukt — fiktive Anzeige",
+      "recently_viewed": "Zuletzt angesehen",
+      "condition_report": {
+        "heading": "Zustandsbericht",
+        "issues_heading": "Gebrauchsspuren",
+        "guide_link": "Unseren Zustandsführer lesen"
+      },
+      "what_fits": {
+        "heading": "Was hineinpasst",
+        "size_guide_link": "Zum Taschen-Größenratgeber"
+      },
+      "shipping_card": {
+        "heading": "Versand & Rückgabe",
+        "body": "Verfügbare Versandoptionen und Kosten werden im Checkout angezeigt. Bitte lesen Sie vor der Bestellung unsere Informationen zu Versand und Rückgabe.",
+        "link": "Versand & Rückgabe ansehen"
+      },
+      "enquiry": {
+        "button": "Frage zu diesem Stück stellen",
+        "heading": "Fragen zu diesem Stück?",
+        "intro": "Gern nennen wir Ihnen weitere Details zu Zustand, Maßen oder Lieferung.",
+        "name": "Name",
+        "email": "E-Mail",
+        "country": "Land",
+        "topic_label": "Was möchten Sie wissen?",
+        "topic_condition": "Zustand",
+        "topic_dimensions": "Maße",
+        "topic_authentication": "Authentifizierung",
+        "topic_shipping": "Versand",
+        "topic_other": "Sonstiges",
+        "message": "Nachricht",
+        "submit": "Anfrage senden",
+        "success": "Vielen Dank. Ihre Anfrage wurde gesendet.",
+        "error": "Ihre Anfrage konnte nicht gesendet werden. Bitte prüfen Sie die Felder und versuchen Sie es erneut.",
+        "hidden_product": "Produkt",
+        "hidden_url": "Produkt-URL"
+      },
+      "sold": {
+        "badge": "Verkauft",
+        "heading": "Dieses Stück hat ein neues Zuhause gefunden.",
+        "find_similar": "Ähnliches entdecken",
+        "join_drop": "Den nächsten Drop nicht verpassen",
+        "sourcing_link": "Sagen Sie uns, was Sie suchen"
+      }
     },
     "modal": {
       "label": "Medien-Galerie"
@@ -263,7 +318,11 @@
         "other": "{{ count }} Produkte"
       },
       "suggestions": "Vorschläge",
-      "pages": "Seiten"
+      "pages": "Seiten",
+      "empty_heading": "Wir konnten kein passendes Stück finden",
+      "empty_body": "Versuchen Sie eine breitere Suche, entdecken Sie alle Taschen oder sagen Sie uns, was Sie suchen.",
+      "empty_cta_all": "Alle Taschen entdecken",
+      "empty_cta_find": "Eine Tasche finden"
     },
     "cart": {
       "cart": "Warenkorb"
@@ -283,6 +342,31 @@
     "404": {
       "title": "Seite nicht gefunden",
       "subtext": "404"
+    },
+    "find_a_bag": {
+      "fields": {
+        "name": "Name",
+        "email": "E-Mail",
+        "country": "Land",
+        "designer": "Designer",
+        "model_or_style": "Modell oder Stil",
+        "preferred_size": "Bevorzugte Größe",
+        "preferred_colour": "Bevorzugte Farbe",
+        "preferred_material": "Bevorzugtes Material",
+        "preferred_era": "Bevorzugte Ära",
+        "minimum_condition": "Mindestzustand",
+        "maximum_budget": "Maximales Budget",
+        "currency": "Währung",
+        "flexible_details": "Welche Details sind flexibel?",
+        "reference_link": "Referenzlink (optional)",
+        "notes": "Gibt es sonst noch etwas, das wir wissen sollten?"
+      },
+      "consent": "Wir verwenden diese Angaben, um auf Ihre Anfrage zu antworten. Dies ist keine Reservierung und kein Kaufvertrag.",
+      "submit": "Anfrage absenden",
+      "success_heading": "Ihre Anfrage ist eingegangen",
+      "success_body": "Vielen Dank. Wir melden uns, wenn wir Ihre Suche sinnvoll unterstützen können.",
+      "closing": "Jedes Pre-Owned-Stück ist individuell. Zustand, Alter, Details und Zubehör können variieren, selbst innerhalb desselben Modells. Wir beschreiben stets das konkret angebotene Stück.",
+      "hidden_source": "Anfragetyp"
     }
   },
   "sections": {
@@ -394,6 +478,20 @@
       "min_error": "Dieser Artikel hat ein Minimum von {{ min }}",
       "max_error": "Dieser Artikel hat ein Maximum von {{ max }}",
       "step_error": "Du kannst diesen Artikel nur in Abstufungen von {{ step }} hinzufügen."
+    },
+    "archive": {
+      "sourcing_note": "Ein Stück verpasst? Teilen Sie es mit uns und sagen Sie uns, was Sie suchen. Wir können keine exakte Übereinstimmung versprechen, doch Ihre Anfrage hilft, unsere künftige Beschaffung zu lenken.",
+      "find_similar": "Ein ähnliches Stück finden",
+      "explore_available": "Verfügbare Taschen entdecken",
+      "empty_heading": "Das Archiv nimmt Gestalt an",
+      "empty_body": "Zuvor kuratierte Stücke erscheinen hier."
+    },
+    "drop_signup": {
+      "heading": "Erfahren Sie zuerst von neuen Stücken",
+      "body": "Erhalten Sie gelegentliche Updates, wenn neu kuratierte Taschen eintreffen. Keine ständigen Aktionen.",
+      "email_placeholder": "E-Mail-Adresse",
+      "submit": "In die Liste eintragen",
+      "success": "Vielen Dank. Sie stehen auf der Liste."
     }
   },
   "localization": {
@@ -406,7 +504,10 @@
     "country_results_count": "{{ count }} Länder/Regionen gefunden",
     "auto_notice_message": "Wir zeigen diese Website auf Deutsch basierend auf deinen Spracheinstellungen.",
     "auto_notice_change": "Ändern",
-    "auto_notice_dismiss": "Schließen"
+    "auto_notice_dismiss": "Schließen",
+    "banner_prompt": "Möchten Sie diesen Shop lieber auf {{ language }} ansehen?",
+    "banner_accept": "Sprache wechseln",
+    "banner_dismiss": "Bei Deutsch bleiben"
   },
   "customer": {
     "account": {
