@@ -293,7 +293,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
@@ -404,7 +403,10 @@
     "update_country": "Update country/region",
     "search": "Search",
     "popular_countries_regions": "Popular countries/regions",
-    "country_results_count": "{{ count }} countries/regions found"
+    "country_results_count": "{{ count }} countries/regions found",
+    "auto_notice_message": "We’re showing this site in English based on your language settings.",
+    "auto_notice_change": "Change",
+    "auto_notice_dismiss": "Dismiss"
   },
   "customer": {
     "account": {

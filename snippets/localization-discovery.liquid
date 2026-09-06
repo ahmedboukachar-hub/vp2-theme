@@ -1,0 +1,72 @@
+{%- comment -%}
+  Automatic language detection (localization discovery).
+
+  Renders the configuration, a hidden native Shopify localization form (so
+  locale switches use Shopify's own routing with a correct return_to), and a
+  one-time, non-blocking confirmation notice. Only the language is ever
+  changed — never country, Market or currency.
+
+  Rendered from theme.liquid. Never renders in the Theme Editor, and only
+  when more than one language is published and detection is enabled.
+{%- endcomment -%}
+
+{%- liquid
+  assign discovery_enabled = false
+  if settings.enable_auto_language_detection and localization.available_languages.size > 1 and request.design_mode == false
+    assign discovery_enabled = true
+  endif
+-%}
+
+{%- if discovery_enabled -%}
+  {{ 'component-localization-notice.css' | asset_url | stylesheet_tag }}
+
+  {%- liquid
+    assign primary_locale_code = 'en'
+    for language in localization.available_languages
+      if language.primary
+        assign primary_locale_code = language.iso_code | split: '-' | first | downcase
+      endif
+    endfor
+  -%}
+  <script id="LocalizationDiscoveryConfig" type="application/json">
+    {
+      "currentLocale": {{ localization.language.iso_code | split: '-' | first | downcase | json }},
+      "currentIsPrimary": {{ request.locale.primary | json }},
+      "primaryLocale": {{ primary_locale_code | json }},
+      "availableLocales": [{% for language in localization.available_languages %}{{ language.iso_code | split: '-' | first | downcase | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+      "rootUrl": {{ routes.root_url | json }},
+      "autoDetect": {{ settings.enable_auto_language_detection | json }},
+      "locationFallback": {{ settings.enable_location_fallback | json }},
+      "showNotice": {{ settings.show_language_notice | json }}
+    }
+  </script>
+
+  {%- form 'localization', id: 'LocalizationDiscoveryForm', class: 'hidden' -%}
+    <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
+  {%- endform -%}
+
+  {%- if settings.show_language_notice -%}
+    <div
+      id="LocalizationNotice"
+      class="localization-notice color-scheme-1 gradient"
+      role="status"
+      aria-live="polite"
+      hidden
+    >
+      <p class="localization-notice__text">{{ 'localization.auto_notice_message' | t }}</p>
+      <button type="button" class="localization-notice__change link underlined-link" data-notice-change>
+        {{- 'localization.auto_notice_change' | t -}}
+      </button>
+      <button
+        type="button"
+        class="localization-notice__dismiss"
+        data-notice-dismiss
+        aria-label="{{ 'localization.auto_notice_dismiss' | t }}"
+      >
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </button>
+    </div>
+  {%- endif -%}
+
+  <script src="{{ 'localization-discovery.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}

@@ -415,7 +415,10 @@
     "update_country": "Mettre à jour le pays/la région",
     "search": "Rechercher",
     "popular_countries_regions": "Pays/régions populaires",
-    "country_results_count": "{{ count }} pays/régions trouvés"
+    "country_results_count": "{{ count }} pays/régions trouvés",
+    "auto_notice_message": "Nous affichons ce site en français selon vos préférences linguistiques.",
+    "auto_notice_change": "Modifier",
+    "auto_notice_dismiss": "Fermer"
   },
   "customer": {
     "account": {

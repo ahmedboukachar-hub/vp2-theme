@@ -1,0 +1,65 @@
+.localization-notice {
+  position: fixed;
+  inset-block-end: 1.5rem;
+  inset-inline: 1.5rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  max-width: 44rem;
+  margin-inline-start: auto;
+  padding: 1.2rem 1.5rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border-radius: 0.4rem;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  box-shadow: 0 0.4rem 1.2rem rgba(var(--color-shadow), 0.15);
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 750px) {
+  .localization-notice {
+    inset-inline-start: auto;
+  }
+}
+
+.localization-notice__text {
+  margin: 0;
+  flex: 1 1 24rem;
+}
+
+.localization-notice__change {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: rgb(var(--color-foreground));
+  font-size: 1.3rem;
+}
+
+.localization-notice__dismiss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(var(--color-foreground));
+}
+
+.localization-notice__dismiss .svg-wrapper,
+.localization-notice__dismiss svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.localization-notice__change:focus-visible,
+.localization-notice__dismiss:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.2rem;
+}
