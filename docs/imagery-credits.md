@@ -48,9 +48,27 @@ to use commercially, may be modified, and require no attribution
 | `pexels-vintage-bag-contents-3777932.jpg` | 3777932 | Bag Size Guide page banner | Open vintage leather bag holding sketchbooks and personal belongings |
 | `pexels-leather-workshop-tools-4452603.jpg` | 4452603 | Care Guide page banner | Leather-working tools and card holders laid out on a workshop cutting mat |
 
-After batch 2, `editorial-books-flatlay.jpg` is no longer used on Gucci
-resources; it remains in Files as a spare. `editorial-crossbody-street.jpg`
-remains in use as mobile hero and on the Louis Vuitton Journal articles.
+After batch 2, `editorial-crossbody-street.jpg` remains in use as mobile
+hero and on the Louis Vuitton Journal articles.
+
+## Batch 3 — Pexels free-licence photos (2026-09-06)
+
+Same sourcing and licence as batch 2 ("maak elke pagina visueel
+aantrekkelijk, met banners"). Every remaining page now carries a banner;
+`editorial-books-flatlay.jpg` from batch 1 was reused as the Designers page
+banner.
+
+| File (Shopify Files) | Pexels id | Used as | Alt text |
+| --- | --- | --- | --- |
+| `pexels-leather-grain-seam-30989203.jpg` | 30989203 | Condition Guide page banner | Close-up of brown pebbled leather with a stitched seam |
+| `pexels-writing-letter-6918482.jpg` | 6918482 | Contact page banner | Hands writing a letter with a fountain pen on white paper |
+| `pexels-white-gift-bag-7670677.jpg` | 7670677 | FAQ page banner | Minimal white gift bag tied with a black ribbon on a muted background |
+| `pexels-gift-boxes-beige-5872362.jpg` | 5872362 | Shipping & Returns page banner | Two black gift boxes with white ribbons on a warm beige background |
+| `pexels-canvas-tote-warm-light-6310184.jpg` | 6310184 | Wishlist page banner | Taupe canvas tote bag standing in warm sunlight on a dresser |
+| `pexels-magazines-coffee-30388455.jpg` | 30388455 | Journal (blog) landing banner | Coffee glass resting on fashion magazines beside a vintage mirror |
+
+Also in batch 3: the homepage hero now overlays its text and call-to-action
+buttons on the image on mobile as well (`show_text_below_mobile: false`).
 
 ## Guardrails applied
 

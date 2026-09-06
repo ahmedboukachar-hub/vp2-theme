@@ -8,7 +8,7 @@
         "image_height": "large",
         "image_overlay_opacity": 30,
         "desktop_content_position": "left",
-        "show_text_below_mobile": true,
+        "show_text_below_mobile": false,
         "eyebrow": "Vintage & pre-owned designer pieces",
         "heading": "Curated vintage luxury",
         "heading_size": "h1",
