@@ -1,0 +1,66 @@
+.faq-content h2 {
+  margin: 3rem 0 0.5rem;
+}
+
+.faq-content h2:first-child {
+  margin-top: 0;
+}
+
+.faq-content details {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.faq-content details:first-of-type,
+.faq-content h2 + details {
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.faq-content summary {
+  position: relative;
+  display: block;
+  padding: 1.5rem 3rem 1.5rem 0;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq-content summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-content summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-right: 0.1rem solid rgb(var(--color-foreground));
+  border-bottom: 0.1rem solid rgb(var(--color-foreground));
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.faq-content details[open] > summary::after {
+  transform: translateY(-30%) rotate(225deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-content summary::after {
+    transition: none;
+  }
+}
+
+.faq-content summary:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.3rem;
+  box-shadow: none;
+}
+
+.faq-content details > *:not(summary) {
+  margin-top: 0;
+}
+
+.faq-content details p:last-of-type {
+  margin-bottom: 1.5rem;
+}
