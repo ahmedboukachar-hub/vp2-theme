@@ -41,6 +41,10 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  {%- if section.settings.enable_sticky_mobile_buy and product.available -%}
+    {{ 'component-sticky-buy.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'component-sticky-buy.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
   {%- if product.quantity_price_breaks_configured? -%}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
@@ -754,6 +758,20 @@
     </div>
   </product-component>
 </product-info>
+
+{%- if section.settings.enable_sticky_mobile_buy and product.available -%}
+  <sticky-buy-bar class="sticky-buy" data-section="{{ section.id }}">
+    <div class="page-width sticky-buy__inner">
+      <div class="sticky-buy__info">
+        <span class="sticky-buy__title">{{ product.title | escape }}</span>
+        <span class="sticky-buy__price" data-sticky-price></span>
+      </div>
+      <button type="button" class="button sticky-buy__button" data-sticky-submit>
+        <span data-sticky-label>{{ 'products.product.add_to_cart' | t }}</span>
+      </button>
+    </div>
+  </sticky-buy-bar>
+{%- endif -%}
 
 {% schema %}
 {
@@ -2171,6 +2189,13 @@
       "id": "enable_sticky_info",
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_mobile_buy",
+      "default": false,
+      "label": "Show sticky buy bar on mobile",
+      "info": "A compact add-to-cart bar appears on mobile once the product form scrolls out of view. Hidden for sold-out products."
     },
     {
       "type": "color_scheme",
