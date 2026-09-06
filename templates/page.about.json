@@ -33,7 +33,11 @@
           }
         }
       },
-      "block_order": ["caption", "heading", "text"],
+      "block_order": [
+        "caption",
+        "heading",
+        "text"
+      ],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -43,9 +47,13 @@
         "content_layout": "no-overlap",
         "color_scheme": "scheme-1",
         "padding_top": 28,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg"
       }
     }
   },
-  "order": ["main", "story"]
+  "order": [
+    "main",
+    "story"
+  ]
 }
