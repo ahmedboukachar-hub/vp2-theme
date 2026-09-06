@@ -1,0 +1,29 @@
+{% comment %}
+  Wishlist heart button (browser-local wishlist, no account, no tracking —
+  see docs/wishlist-and-recently-viewed.md).
+
+  Accepts:
+  - wishlist_product: {Object} Product or card product Liquid object
+{% endcomment %}
+
+{{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'wishlist.js' | asset_url }}" defer="defer"></script>
+
+<wishlist-button
+  class="wishlist-button no-js-hidden"
+  data-product-handle="{{ wishlist_product.handle }}"
+  data-product-id="{{ wishlist_product.id }}"
+  data-product-title="{{ wishlist_product.title | escape }}"
+  data-product-url="{{ wishlist_product.url }}"
+>
+  <button
+    type="button"
+    class="wishlist-button__toggle"
+    aria-pressed="false"
+    data-label-add="{{ 'general.wishlist.add' | t | escape }}"
+    data-label-remove="{{ 'general.wishlist.remove' | t | escape }}"
+    aria-label="{{ 'general.wishlist.add' | t | escape }}"
+  >
+    <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
+  </button>
+</wishlist-button>

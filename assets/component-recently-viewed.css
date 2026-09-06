@@ -1,0 +1,46 @@
+.recently-viewed__heading {
+  margin: 0 0 1.5rem;
+}
+
+.recently-viewed__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .recently-viewed__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.recently-viewed__link {
+  display: block;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+}
+
+.recently-viewed__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 0.2rem;
+}
+
+.recently-viewed__title {
+  display: block;
+  margin-top: 1rem;
+}
+
+.recently-viewed__link:hover .recently-viewed__title {
+  text-decoration: underline;
+}
+
+.recently-viewed__link:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.3rem;
+}

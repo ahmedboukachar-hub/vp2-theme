@@ -59,6 +59,18 @@
       "next_slide": "Faire glisser vers la droite",
       "previous_slide": "Faire glisser vers la gauche",
       "name": "Carrousel"
+    },
+    "wishlist": {
+      "link_label": "Wishlist",
+      "add": "Ajouter à la wishlist",
+      "remove": "Retirer de la wishlist",
+      "remove_short": "Retirer",
+      "intro": "Gardez au même endroit les pièces que vous souhaitez retrouver.",
+      "empty_heading": "Votre wishlist est vide",
+      "empty_body": "Enregistrez une pièce pour y revenir plus tard.",
+      "empty_cta": "Explorer tous les sacs",
+      "unavailable": "N’est plus disponible",
+      "requires_js": "Votre wishlist nécessite JavaScript pour afficher les pièces enregistrées."
     }
   },
   "newsletter": {
@@ -199,7 +211,50 @@
       },
       "taxes_included": "Taxes incluses.",
       "duties_included": "Frais de douane inclus.",
-      "duties_and_taxes_included": "Frais de douane et taxes inclus."
+      "duties_and_taxes_included": "Frais de douane et taxes inclus.",
+      "test_label": "Produit test — fiche fictive",
+      "recently_viewed": "Récemment consultés",
+      "condition_report": {
+        "heading": "Rapport d’état",
+        "issues_heading": "Traces d’usure",
+        "guide_link": "Consulter notre guide des états"
+      },
+      "what_fits": {
+        "heading": "Ce qu’il peut contenir",
+        "size_guide_link": "Voir notre guide des tailles de sacs"
+      },
+      "shipping_card": {
+        "heading": "Livraison & retours",
+        "body": "Les options et frais de livraison disponibles sont affichés au moment du paiement. Veuillez consulter nos informations de livraison et de retours avant de commander.",
+        "link": "Voir livraison & retours"
+      },
+      "enquiry": {
+        "button": "Poser une question sur cette pièce",
+        "heading": "Des questions sur cette pièce ?",
+        "intro": "Nous vous renseignons volontiers sur son état, ses dimensions ou sa livraison.",
+        "name": "Nom",
+        "email": "E-mail",
+        "country": "Pays",
+        "topic_label": "Que souhaitez-vous savoir ?",
+        "topic_condition": "État",
+        "topic_dimensions": "Dimensions",
+        "topic_authentication": "Authentification",
+        "topic_shipping": "Livraison",
+        "topic_other": "Autre",
+        "message": "Message",
+        "submit": "Envoyer la demande",
+        "success": "Merci. Votre demande a bien été envoyée.",
+        "error": "Votre demande n’a pas pu être envoyée. Veuillez vérifier les champs et réessayer.",
+        "hidden_product": "Produit",
+        "hidden_url": "URL du produit"
+      },
+      "sold": {
+        "badge": "Vendu",
+        "heading": "Cette pièce a trouvé une nouvelle maison.",
+        "find_similar": "Trouver une pièce similaire",
+        "join_drop": "Ne manquez pas le prochain arrivage",
+        "sourcing_link": "Dites-nous ce que vous recherchez"
+      }
     },
     "modal": {
       "label": "Galerie de supports multimédias"
@@ -272,7 +327,11 @@
         "many": "Produits {{ count }}"
       },
       "suggestions": "Suggestions",
-      "pages": "Pages"
+      "pages": "Pages",
+      "empty_heading": "Nous n’avons pas trouvé de pièce correspondante",
+      "empty_body": "Essayez une recherche plus large, explorez tous les sacs ou dites-nous ce que vous recherchez.",
+      "empty_cta_all": "Explorer tous les sacs",
+      "empty_cta_find": "Trouver un sac"
     },
     "cart": {
       "cart": "Panier"
@@ -292,6 +351,31 @@
     "404": {
       "title": "Page non trouvée",
       "subtext": "404"
+    },
+    "find_a_bag": {
+      "fields": {
+        "name": "Nom",
+        "email": "E-mail",
+        "country": "Pays",
+        "designer": "Créateur",
+        "model_or_style": "Modèle ou style",
+        "preferred_size": "Taille souhaitée",
+        "preferred_colour": "Couleur souhaitée",
+        "preferred_material": "Matière souhaitée",
+        "preferred_era": "Époque souhaitée",
+        "minimum_condition": "État minimum",
+        "maximum_budget": "Budget maximum",
+        "currency": "Devise",
+        "flexible_details": "Quels détails sont flexibles ?",
+        "reference_link": "Lien de référence (facultatif)",
+        "notes": "Autre chose à nous signaler ?"
+      },
+      "consent": "Nous utiliserons ces informations pour répondre à votre demande. Ceci ne constitue ni une réservation ni un contrat d’achat.",
+      "submit": "Envoyer ma demande",
+      "success_heading": "Votre demande a bien été reçue",
+      "success_body": "Merci. Nous vous contacterons si nous pouvons réellement vous aider dans votre recherche.",
+      "closing": "Chaque pièce de seconde main est unique. L’état, l’âge, les détails et les accessoires peuvent varier, même au sein d’un même modèle. Nous décrivons toujours la pièce précise proposée.",
+      "hidden_source": "Type de demande"
     }
   },
   "sections": {
@@ -406,6 +490,20 @@
       "min_error": "Cet article a un minimum de {{ min }}",
       "max_error": "Cet article a un maximum de {{ max }}",
       "step_error": "Vous pouvez ajouter cet article uniquement par incréments de {{ step }}"
+    },
+    "archive": {
+      "sourcing_note": "Une pièce vous a échappé ? Partagez-la avec nous et dites-nous ce que vous recherchez. Nous ne pouvons pas promettre une correspondance exacte, mais votre demande peut orienter nos futures acquisitions.",
+      "find_similar": "Trouver une pièce similaire",
+      "explore_available": "Explorer les sacs disponibles",
+      "empty_heading": "L’archive prend forme",
+      "empty_body": "Les pièces précédemment sélectionnées apparaîtront ici."
+    },
+    "drop_signup": {
+      "heading": "Soyez informé des nouvelles pièces en premier",
+      "body": "Recevez des nouvelles occasionnelles lorsque de nouveaux sacs rejoignent la sélection. Pas de promotions incessantes.",
+      "email_placeholder": "Adresse e-mail",
+      "submit": "Rejoindre la liste",
+      "success": "Merci. Vous êtes sur la liste."
     }
   },
   "localization": {
@@ -418,7 +516,10 @@
     "country_results_count": "{{ count }} pays/régions trouvés",
     "auto_notice_message": "Nous affichons ce site en français selon vos préférences linguistiques.",
     "auto_notice_change": "Modifier",
-    "auto_notice_dismiss": "Fermer"
+    "auto_notice_dismiss": "Fermer",
+    "banner_prompt": "Préférez-vous consulter cette boutique en {{ language }} ?",
+    "banner_accept": "Changer de langue",
+    "banner_dismiss": "Rester en français"
   },
   "customer": {
     "account": {

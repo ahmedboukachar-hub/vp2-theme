@@ -1,0 +1,36 @@
+{% comment %}
+  Sold state shown instead of the buy buttons for pieces explicitly tagged
+  'sold-archive' (taxonomy documented in docs/taxonomy.md). Inventory 0 alone
+  does not trigger this: a piece can be temporarily unavailable or reserved.
+
+  Accepts:
+  - product: {Object} Product Liquid object
+  - block: {Object} The "buy_buttons" block (for shopify_attributes)
+{% endcomment %}
+
+{{ 'component-inspection.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign vendor_handle = product.vendor | handleize
+  assign vendor_collection = collections[vendor_handle]
+  assign similar_url = collections['all-bags'].url | default: routes.all_products_collection_url
+  if vendor_collection != blank and vendor_collection.products_count > 0
+    assign similar_url = vendor_collection.url
+  endif
+-%}
+
+<div class="product-sold-state quick-add-hidden" {{ block.shopify_attributes }}>
+  <span class="badge product-sold-state__badge color-{{ settings.sold_out_badge_color_scheme }}">
+    {{- 'products.product.sold.badge' | t -}}
+  </span>
+  <h2 class="product-sold-state__heading h4">{{ 'products.product.sold.heading' | t }}</h2>
+  <div class="product-sold-state__actions">
+    <a href="{{ similar_url }}" class="button">{{ 'products.product.sold.find_similar' | t }}</a>
+    <a href="{{ collections['new-arrivals'].url | default: routes.all_products_collection_url }}" class="button button--secondary">{{ 'products.product.sold.join_drop' | t }}</a>
+  </div>
+  <p class="product-sold-state__sourcing">
+    <a href="{{ pages['find-a-bag'].url | default: '/pages/find-a-bag' }}" class="link underlined-link">
+      {{- 'products.product.sold.sourcing_link' | t -}}
+    </a>
+  </p>
+</div>

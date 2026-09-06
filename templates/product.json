@@ -36,11 +36,26 @@
         "description": {
           "type": "description"
         },
+        "condition_report": {
+          "type": "condition_report"
+        },
         "specifications": {
           "type": "specifications",
           "settings": {
             "heading": "Details & condition"
           }
+        },
+        "what_fits": {
+          "type": "what_fits"
+        },
+        "shipping_card": {
+          "type": "shipping_card"
+        },
+        "enquiry": {
+          "type": "enquiry"
+        },
+        "wishlist_button": {
+          "type": "wishlist_button"
         },
         "share": {
           "type": "share",
@@ -53,11 +68,16 @@
         "vendor",
         "title",
         "price",
+        "wishlist_button",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
+        "condition_report",
         "specifications",
+        "what_fits",
+        "shipping_card",
+        "enquiry",
         "share"
       ],
       "settings": {
@@ -101,11 +121,19 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "padding_top": 8,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "disclosures",
-    "related-products"
+    "related-products",
+    "recently-viewed"
   ]
 }

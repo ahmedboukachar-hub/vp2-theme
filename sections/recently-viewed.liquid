@@ -1,0 +1,72 @@
+{{ 'component-recently-viewed.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'recently-viewed.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<recently-viewed
+  class="recently-viewed page-width section-{{ section.id }}-padding no-js-hidden"
+  data-current-handle="{{ product.handle }}"
+  data-root-url="{{ routes.root_url }}"
+  hidden
+>
+  <h2 class="recently-viewed__heading h3">{{ 'products.product.recently_viewed' | t }}</h2>
+  <ul class="recently-viewed__grid list-unstyled" role="list" data-recently-viewed-grid></ul>
+  <template>
+    <li class="recently-viewed__card">
+      <a data-rv-link href="#" class="recently-viewed__link">
+        <img data-rv-image src="" alt="" loading="lazy" width="600" height="750" class="recently-viewed__image">
+        <span data-rv-title class="recently-viewed__title"></span>
+      </a>
+    </li>
+  </template>
+</recently-viewed>
+
+{% schema %}
+{
+  "name": "Recently viewed",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows up to four recently viewed products from this browser. Hidden on a first visit and without JavaScript. No tracking; data stays in the visitor's browser."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

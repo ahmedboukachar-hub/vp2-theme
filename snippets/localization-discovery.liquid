@@ -45,6 +45,30 @@
     <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
   {%- endform -%}
 
+  {%- if settings.enable_location_fallback -%}
+    <div
+      id="LocalizationSuggestion"
+      class="localization-notice color-scheme-1 gradient"
+      role="status"
+      aria-live="polite"
+      {%- capture language_names_json -%}
+        { {%- for language in localization.available_languages -%}{{ language.iso_code | split: '-' | first | downcase | json }}: {{ language.endonym_name | capitalize | json }}{% unless forloop.last %}, {% endunless %}{%- endfor -%} }
+      {%- endcapture %}
+      data-language-names="{{ language_names_json | strip | escape }}"
+      hidden
+    >
+      <p class="localization-notice__text" data-suggestion-prompt>
+        {{- 'localization.banner_prompt' | t: language: '[language]' -}}
+      </p>
+      <button type="button" class="localization-notice__change link underlined-link" data-suggestion-accept>
+        {{- 'localization.banner_accept' | t -}}
+      </button>
+      <button type="button" class="localization-notice__dismiss" data-suggestion-dismiss aria-label="{{ 'localization.banner_dismiss' | t }}">
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </button>
+    </div>
+  {%- endif -%}
+
   {%- if settings.show_language_notice -%}
     <div
       id="LocalizationNotice"

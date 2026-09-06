@@ -1,0 +1,25 @@
+{% comment %}
+  Renders the "What fits inside" module from custom.what_fits (rich text).
+  Renders nothing when the field is empty — no empty labels or placeholders.
+
+  Accepts:
+  - product: {Object} Product Liquid object
+  - block: {Object} The "what_fits" block
+{% endcomment %}
+
+{%- liquid
+  assign what_fits = product.metafields.custom.what_fits | metafield_tag
+-%}
+
+{%- if what_fits != blank -%}
+  {{ 'component-inspection.css' | asset_url | stylesheet_tag }}
+  <div class="what-fits quick-add-hidden" {{ block.shopify_attributes }}>
+    <h2 class="what-fits__heading h4">{{ 'products.product.what_fits.heading' | t }}</h2>
+    <div class="what-fits__content rte">{{ what_fits }}</div>
+    <p class="what-fits__link">
+      <a href="{{ pages['bag-size-guide'].url | default: '/pages/bag-size-guide' }}" class="link underlined-link">
+        {{- 'products.product.what_fits.size_guide_link' | t -}}
+      </a>
+    </p>
+  </div>
+{%- endif -%}

@@ -1,0 +1,150 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+{{ 'component-inspection.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .find-a-bag__form .field,
+  .find-a-bag__field {
+    margin-bottom: 1.5rem;
+  }
+
+  .find-a-bag__field label {
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  .find-a-bag__consent {
+    margin: 1.5rem 0;
+    font-size: 1.3rem;
+    opacity: 0.85;
+  }
+
+  .find-a-bag__closing {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    font-style: italic;
+  }
+{%- endstyle -%}
+
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>
+  <div class="rte">{{ page.content }}</div>
+
+  {%- form 'contact', id: 'FindABagForm', class: 'find-a-bag__form' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="form__message" tabindex="-1" autofocus role="status">
+        <h2 class="h4">{{ 'templates.find_a_bag.success_heading' | t }}</h2>
+        <p>{{ 'templates.find_a_bag.success_body' | t }}</p>
+      </div>
+    {%- else -%}
+      {%- if form.errors -%}
+        <p class="form__message" tabindex="-1" autofocus role="alert">
+          {{ 'icon-error.svg' | inline_asset_content }}
+          {{ 'templates.contact.form.error_heading' | t }}
+        </p>
+      {%- endif -%}
+
+      <input type="hidden" name="contact[{{ 'templates.find_a_bag.hidden_source' | t }}]" value="Find a Bag">
+
+      {%- liquid
+        assign text_fields = 'name,country,designer,model_or_style,preferred_size,preferred_colour,preferred_material,preferred_era,minimum_condition,maximum_budget,currency,flexible_details,reference_link' | split: ','
+      -%}
+
+      <div class="field">
+        <input type="text" id="FindABag-name" name="contact[{{ 'templates.find_a_bag.fields.name' | t }}]" class="field__input" autocomplete="name" placeholder="{{ 'templates.find_a_bag.fields.name' | t }}">
+        <label for="FindABag-name" class="field__label">{{ 'templates.find_a_bag.fields.name' | t }}</label>
+      </div>
+      <div class="field">
+        <input
+          type="email"
+          id="FindABag-email"
+          name="contact[email]"
+          class="field__input"
+          value="{{ form.email }}"
+          autocomplete="email"
+          placeholder="{{ 'templates.find_a_bag.fields.email' | t }}"
+          required
+          aria-required="true"
+          {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="FindABag-email-error"
+          {% endif %}
+        >
+        <label for="FindABag-email" class="field__label">{{ 'templates.find_a_bag.fields.email' | t }}</label>
+        {%- if form.errors contains 'email' -%}
+          <small id="FindABag-email-error" class="contact__field-error">
+            {{ form.errors.translated_fields.email | capitalize }}
+            {{ form.errors.messages.email }}
+          </small>
+        {%- endif -%}
+      </div>
+      {%- for field_key in text_fields offset: 1 -%}
+        {%- assign field_label_key = 'templates.find_a_bag.fields.' | append: field_key -%}
+        {%- assign field_label = field_label_key | t -%}
+        <div class="field">
+          <input type="text" id="FindABag-{{ field_key }}" name="contact[{{ field_label }}]" class="field__input" placeholder="{{ field_label }}">
+          <label for="FindABag-{{ field_key }}" class="field__label">{{ field_label }}</label>
+        </div>
+      {%- endfor -%}
+      <div class="field">
+        <textarea rows="5" id="FindABag-notes" name="contact[body]" class="text-area field__input" placeholder="{{ 'templates.find_a_bag.fields.notes' | t }}">{{ form.body }}</textarea>
+        <label for="FindABag-notes" class="form__label field__label">{{ 'templates.find_a_bag.fields.notes' | t }}</label>
+      </div>
+
+      <p class="find-a-bag__consent">{{ 'templates.find_a_bag.consent' | t }}</p>
+      <button type="submit" class="button">{{ 'templates.find_a_bag.submit' | t }}</button>
+    {%- endif -%}
+  {%- endform -%}
+
+  <p class="find-a-bag__closing">{{ 'templates.find_a_bag.closing' | t }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Find a Bag form",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Personal sourcing request form. Editorial copy comes from the page content; labels come from locale files and are fully translated."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ]
+}
+{% endschema %}

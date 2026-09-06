@@ -141,7 +141,16 @@
           {%- endif -%}
         {%- endunless -%}
         {%- if search.results_count == 0 and search.filters == empty -%}
-          <p role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+          <div class="search__empty-state center" role="status">
+            <h2 class="h3">{{ 'templates.search.empty_heading' | t }}</h2>
+            <p>{{ 'templates.search.empty_body' | t }}</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+              <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button">{{ 'templates.search.empty_cta_all' | t }}</a>
+              <a href="{{ pages['find-a-bag'].url | default: '/pages/find-a-bag' }}" class="button button--secondary">
+                {{- 'templates.search.empty_cta_find' | t -}}
+              </a>
+            </div>
+          </div>
         {%- endif -%}
       {%- endif -%}
     </div>

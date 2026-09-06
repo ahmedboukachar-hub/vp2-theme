@@ -1,0 +1,171 @@
+/* Product inspection-report modules: condition report, what fits inside,
+   shipping card, enquiry disclosure, sold state, test label. */
+
+.condition-report,
+.what-fits,
+.shipping-card,
+.product-enquiry,
+.product-sold-state {
+  margin: 2.5rem 0 0;
+  padding-top: 2rem;
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.condition-report__heading,
+.what-fits__heading,
+.shipping-card__heading,
+.product-enquiry__heading {
+  margin: 0 0 1rem;
+}
+
+.condition-report__grade {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0 0 1rem;
+}
+
+.condition-report__grade-label {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.condition-report__grade-value {
+  margin: 0;
+}
+
+.condition-report__summary {
+  margin: 0 0 1.5rem;
+}
+
+.condition-report__issues-heading {
+  margin: 1.5rem 0 1rem;
+}
+
+.condition-report__issues {
+  display: grid;
+  gap: 1.2rem;
+  margin: 0 0 1.5rem;
+}
+
+.condition-report__issue {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-radius: 0.4rem;
+}
+
+.condition-report__issue-media {
+  flex: 0 0 9rem;
+}
+
+@media screen and (min-width: 750px) {
+  .condition-report__issue-media {
+    flex-basis: 12rem;
+  }
+}
+
+.condition-report__issue-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.2rem;
+}
+
+.condition-report__issue-title {
+  margin: 0 0 0.2rem;
+  font-weight: 600;
+}
+
+.condition-report__issue-area {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.condition-report__issue-description {
+  margin: 0;
+}
+
+.condition-report__guide-link,
+.what-fits__link,
+.shipping-card__link {
+  margin: 0.5rem 0 0;
+}
+
+.shipping-card__body {
+  margin: 0;
+}
+
+/* Enquiry disclosure */
+.product-enquiry__summary {
+  display: inline-flex;
+  cursor: pointer;
+  list-style: none;
+}
+
+.product-enquiry__summary::-webkit-details-marker {
+  display: none;
+}
+
+.product-enquiry__disclosure[open] .product-enquiry__summary {
+  margin-bottom: 1.5rem;
+}
+
+.product-enquiry__content .field,
+.product-enquiry__topic {
+  margin-bottom: 1.5rem;
+}
+
+.product-enquiry__topic .form__label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.product-enquiry__intro {
+  margin: 0 0 1.5rem;
+}
+
+.product-enquiry__success,
+.product-enquiry__error {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1.5rem;
+}
+
+/* Sold state */
+.product-sold-state__badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.product-sold-state__heading {
+  margin: 0 0 1.5rem;
+}
+
+.product-sold-state__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-sold-state__sourcing {
+  margin: 0;
+}
+
+/* Subtle configurable label for test products */
+.product-test-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.8rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.25);
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
