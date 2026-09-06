@@ -98,6 +98,20 @@
           "on_secondary_button": "secondary_button_label",
           "secondary_button_border": "secondary_button_label"
         }
+      },
+      {
+        "type": "color",
+        "id": "button_hover_color",
+        "label": "Primary button hover color",
+        "info": "Background color of primary buttons on hover, in every color scheme.",
+        "default": "#6A2634"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent color",
+        "info": "Used only for small decorative details, never for body text.",
+        "default": "#A8844F"
       }
     ]
   },

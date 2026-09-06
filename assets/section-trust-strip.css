@@ -23,6 +23,15 @@
   font-size: 1.2rem;
 }
 
+.trust-strip__heading::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 0.1rem;
+  background: rgb(var(--color-accent, var(--color-foreground)));
+  margin: 0.8rem auto 0;
+}
+
 .trust-strip__text {
   margin-top: 0.8rem;
   font-size: 1.3rem;
