@@ -71,7 +71,11 @@
           }
         }
       },
-      "block_order": ["trust_curated", "trust_condition", "trust_checkout"],
+      "block_order": [
+        "trust_curated",
+        "trust_condition",
+        "trust_checkout"
+      ],
       "settings": {
         "show_borders": true,
         "color_scheme": "scheme-1",
@@ -95,7 +99,11 @@
           "settings": {}
         }
       },
-      "block_order": ["collection_1", "collection_2", "collection_3"],
+      "block_order": [
+        "collection_1",
+        "collection_2",
+        "collection_3"
+      ],
       "settings": {
         "title": "The archive",
         "heading_size": "h2",
@@ -200,7 +208,12 @@
           }
         }
       },
-      "block_order": ["story_caption", "story_heading", "story_text", "story_button"],
+      "block_order": [
+        "story_caption",
+        "story_heading",
+        "story_text",
+        "story_button"
+      ],
       "settings": {
         "image": "shopify://shop_images/editorial-desk-scene.jpg",
         "height": "adapt",
@@ -248,9 +261,14 @@
           }
         }
       },
-      "block_order": ["condition_caption", "condition_heading", "condition_text", "condition_button"],
+      "block_order": [
+        "condition_caption",
+        "condition_heading",
+        "condition_text",
+        "condition_button"
+      ],
       "settings": {
-        "image": "shopify://shop_images/editorial-crossbody-street.jpg",
+        "image": "shopify://shop_images/pexels-boutique-bag-inspection-6650000.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -279,7 +297,11 @@
           "settings": {}
         }
       },
-      "block_order": ["step_1", "step_2", "step_3"],
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
       "settings": {
         "caption": "Authenticity",
         "heading": "A considered approach to authenticity",
@@ -311,7 +333,11 @@
           "settings": {}
         }
       },
-      "block_order": ["newsletter_heading", "newsletter_text", "newsletter_form"],
+      "block_order": [
+        "newsletter_heading",
+        "newsletter_text",
+        "newsletter_form"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "full_width": true,

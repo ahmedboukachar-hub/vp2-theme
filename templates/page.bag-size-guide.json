@@ -3,7 +3,7 @@
     "banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/pexels-handbag-selection-shelf-9327162.jpg",
+        "image": "shopify://shop_images/pexels-vintage-bag-contents-3777932.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
@@ -17,10 +17,10 @@
       }
     },
     "main": {
-      "type": "find-a-bag-form",
+      "type": "main-page",
       "settings": {
         "padding_top": 36,
-        "padding_bottom": 52
+        "padding_bottom": 36
       }
     }
   },
