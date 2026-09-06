@@ -1,0 +1,142 @@
+{{ 'section-editorial-split-hero.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading_tag = 'h2'
+  if template.name == 'index' and section.index == 1
+    assign heading_tag = 'h1'
+  endif
+-%}
+
+<div
+  id="SplitHero-{{ section.id }}"
+  class="split-hero color-{{ section.settings.color_scheme }} gradient{% if section.settings.image == blank %} split-hero--no-image{% endif %}"
+>
+  <div class="split-hero__copy">
+    <div class="split-hero__copy-inner{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="split-hero__eyebrow caption-with-letter-spacing">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <{{ heading_tag }} class="split-hero__heading inline-richtext {{ section.settings.heading_size }}">
+          {{- section.settings.heading -}}
+        </{{ heading_tag }}>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="split-hero__text rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+      <div class="split-hero__actions">
+        {%- if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link"
+              aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button split-hero__button"
+          >
+            {{- section.settings.button_label | escape -}}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.link_label != blank and section.settings.link_url != blank -%}
+          <a href="{{ section.settings.link_url }}" class="split-hero__link link underlined-link">
+            {{- section.settings.link_label | escape -}}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="split-hero__media" {% if section.settings.image == blank %}aria-hidden="true"{% endif %}>
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 2200
+        | image_tag:
+          loading: 'eager',
+          fetchpriority: 'high',
+          widths: '375, 550, 750, 1100, 1500, 1800, 2200',
+          sizes: '(min-width: 750px) 58vw, 100vw'
+      }}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Editorial split hero",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "One strong editorial image of a real piece. Leave empty for a deliberate typographic hero with a neutral field."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "The latest edit"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Rare pieces, chosen with care."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>A considered collection of vintage and pre-owned designer bags, selected for their character, condition and enduring appeal.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Primary button label",
+      "default": "Shop new arrivals"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Secondary link label",
+      "default": "Explore all bags"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Secondary link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Editorial split hero"
+    }
+  ]
+}
+{% endschema %}

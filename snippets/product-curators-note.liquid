@@ -1,0 +1,17 @@
+{% comment %}
+  Renders the curator's note ("Why this piece") from custom.curators_note.
+  Hidden entirely when the metafield is empty — never rendered as a heading
+  without content.
+
+  Accepts:
+  - product: {Object} Product Liquid object
+  - block: {Object} Section block
+{% endcomment %}
+
+{%- assign note = product.metafields.custom.curators_note.value -%}
+{%- if note != blank -%}
+  <div class="product__curators-note" {{ block.shopify_attributes }}>
+    <h2 class="product__curators-note-heading h4">{{ 'products.product.curators_note_heading' | t }}</h2>
+    <div class="product__curators-note-body rte">{{ note | metafield_tag }}</div>
+  </div>
+{%- endif -%}

@@ -62,6 +62,10 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "curators_note": {
+          "type": "curators_note",
+          "settings": {}
         }
       },
       "block_order": [
@@ -73,6 +77,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "curators_note",
         "condition_report",
         "specifications",
         "what_fits",

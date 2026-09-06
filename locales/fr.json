@@ -41,7 +41,8 @@
     },
     "search": {
       "search": "Recherche",
-      "reset": "Effacer le terme de recherche"
+      "reset": "Effacer le terme de recherche",
+      "popular_searches": "Recherches populaires"
     },
     "cart": {
       "view": "Voir le panier ({{ count }})",
@@ -71,6 +72,9 @@
       "empty_cta": "Explorer tous les sacs",
       "unavailable": "N’est plus disponible",
       "requires_js": "Votre wishlist nécessite JavaScript pour afficher les pièces enregistrées."
+    },
+    "footer": {
+      "non_affiliation": "{{ shop_name }} est un revendeur indépendant et n'est affilié à aucune des maisons de créateurs présentées sur ce site. Toutes les marques restent la propriété de leurs détenteurs respectifs."
     }
   },
   "newsletter": {
@@ -114,7 +118,11 @@
       "back_to_blog": "Retour au blog",
       "share": "Partager cet article",
       "success": "Votre commentaire a bien été publié ! Merci !",
-      "success_moderated": "Votre commentaire a bien été publié. Nous le publierons sous peu, conformément au processus de modération de notre blog."
+      "success_moderated": "Votre commentaire a bien été publié. Nous le publierons sous peu, conformément au processus de modération de notre blog.",
+      "min_read": {
+        "one": "{{ count }} min de lecture",
+        "other": "{{ count }} min de lecture"
+      }
     }
   },
   "onboarding": {
@@ -254,7 +262,8 @@
         "find_similar": "Trouver une pièce similaire",
         "join_drop": "Ne manquez pas le prochain arrivage",
         "sourcing_link": "Dites-nous ce que vous recherchez"
-      }
+      },
+      "curators_note_heading": "Pourquoi cette pièce"
     },
     "modal": {
       "label": "Galerie de supports multimédias"
@@ -349,7 +358,11 @@
       }
     },
     "404": {
-      "title": "Page non trouvée",
+      "eyebrow": "Page introuvable",
+      "title": "Cette page ne fait plus partie de la collection.",
+      "body": "La pièce ou la page a peut-être été déplacée. Découvrez les nouveautés, explorez les archives ou recherchez par créateur et modèle.",
+      "cta_new_arrivals": "Voir les nouveautés",
+      "cta_archive": "Explorer les archives",
       "subtext": "404"
     },
     "find_a_bag": {
