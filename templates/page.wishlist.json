@@ -1,5 +1,21 @@
 {
   "sections": {
+    "banner": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/pexels-canvas-tote-warm-light-6310184.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "show_text_below": true,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "color_scheme": "scheme-1",
+        "image_behavior": "none"
+      }
+    },
     "main": {
       "type": "wishlist-items",
       "settings": {
@@ -15,5 +31,9 @@
       }
     }
   },
-  "order": ["main", "recently-viewed"]
+  "order": [
+    "banner",
+    "main",
+    "recently-viewed"
+  ]
 }
