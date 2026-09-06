@@ -1,0 +1,180 @@
+{{ 'section-featured-designers.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    #FeaturedDesigners-{{ section.id }} .featured-designers__list {
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  comment
+    Only blocks whose linked collection actually exists are shown, so
+    designers can be prepared here before their collections are created.
+  endcomment
+  assign visible_blocks = 0
+  for block in section.blocks
+    if block.settings.collection != blank
+      assign visible_blocks = visible_blocks | plus: 1
+    endif
+  endfor
+
+  assign sizes = '(min-width: 990px) calc((100vw - 10rem) / ' | append: section.settings.columns_desktop | append: '), (min-width: 750px) 33vw, 50vw'
+-%}
+
+{%- if visible_blocks > 0 -%}
+  <div id="FeaturedDesigners-{{ section.id }}" class="featured-designers color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width section-{{ section.id }}-padding center">
+      {%- if section.settings.title != blank -%}
+        <h2 class="featured-designers__heading inline-richtext {{ section.settings.heading_size }}">
+          {{- section.settings.title -}}
+        </h2>
+      {%- endif -%}
+      <ul class="featured-designers__list" role="list">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign designer_collection = block.settings.collection
+            if designer_collection == blank
+              continue
+            endif
+            assign designer_name = block.settings.title | default: designer_collection.title
+          -%}
+          <li class="featured-designers__item" {{ block.shopify_attributes }}>
+            <a class="featured-designers__link" href="{{ designer_collection.url }}">
+              <div class="featured-designers__media">
+                {%- if designer_collection.featured_image != blank -%}
+                  {{
+                    designer_collection.featured_image
+                    | image_url: width: 1000
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '165, 330, 500, 750, 1000',
+                      sizes: sizes,
+                      alt: designer_name
+                  }}
+                {%- endif -%}
+              </div>
+              <span class="featured-designers__name">{{ designer_name | escape }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Featured designers",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 12,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Only designers with a linked, existing collection are shown. Use your own collection imagery (recommended ratio 4:5) — no brand logos."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Selected houses"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "default": 6
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "designer",
+      "name": "Designer",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection",
+          "info": "The block is hidden until this collection exists."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Display name",
+          "info": "Optional. Defaults to the collection title."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured designers",
+      "blocks": [
+        { "type": "designer" },
+        { "type": "designer" },
+        { "type": "designer" },
+        { "type": "designer" },
+        { "type": "designer" },
+        { "type": "designer" }
+      ]
+    }
+  ]
+}
+{% endschema %}

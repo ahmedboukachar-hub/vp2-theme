@@ -1,0 +1,61 @@
+.authenticity-process .page-width--narrow {
+  max-width: 72rem;
+}
+
+.authenticity-process__caption {
+  margin: 0 0 1rem;
+  opacity: 0.85;
+}
+
+.authenticity-process__heading {
+  margin: 0;
+}
+
+.authenticity-process__intro {
+  margin-top: 1.5rem;
+}
+
+.authenticity-process__steps {
+  list-style: none;
+  counter-reset: authenticity-step;
+  margin: 3rem 0 0;
+  padding: 0;
+}
+
+.authenticity-process__step {
+  counter-increment: authenticity-step;
+  position: relative;
+  padding: 1.8rem 0 1.8rem 5rem;
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.authenticity-process__step:last-child {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.authenticity-process__step::before {
+  content: counter(authenticity-step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 2.1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: rgb(var(--color-accent, var(--color-foreground)));
+}
+
+.authenticity-process__step-heading {
+  margin: 0 0 0.6rem;
+}
+
+.authenticity-process__step-text > *,
+.authenticity-process__extra .rte > * {
+  margin: 0;
+}
+
+.authenticity-process__extra {
+  margin-top: 2.5rem;
+}
+
+.authenticity-process__extra-heading {
+  margin: 0 0 0.6rem;
+}

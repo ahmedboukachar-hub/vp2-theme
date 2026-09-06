@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 8
+      }
+    },
+    "designers": {
+      "type": "featured-designers",
+      "blocks": {
+        "louis-vuitton": {
+          "type": "designer",
+          "settings": {
+            "collection": "louis-vuitton"
+          }
+        },
+        "gucci": {
+          "type": "designer",
+          "settings": {
+            "collection": "gucci"
+          }
+        },
+        "chanel": {
+          "type": "designer",
+          "settings": {
+            "collection": "chanel"
+          }
+        },
+        "dior": {
+          "type": "designer",
+          "settings": {
+            "collection": "dior"
+          }
+        },
+        "prada": {
+          "type": "designer",
+          "settings": {
+            "collection": "prada"
+          }
+        },
+        "fendi": {
+          "type": "designer",
+          "settings": {
+            "collection": "fendi"
+          }
+        }
+      },
+      "block_order": ["louis-vuitton", "gucci", "chanel", "dior", "prada", "fendi"],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "padding_top": 8,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": ["main", "designers"]
+}

@@ -1,75 +1,330 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "hero": {
+      "type": "editorial-hero",
       "settings": {
-        "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "image_overlay_opacity": 30,
+        "desktop_content_position": "left",
+        "show_text_below_mobile": true,
+        "eyebrow": "Vintage & pre-owned designer pieces",
+        "heading": "Curated vintage luxury",
+        "heading_size": "h1",
+        "text": "",
+        "button_label_1": "Explore the archive",
+        "button_link_1": "shopify://collections/all",
+        "button_label_2": "Our approach",
+        "button_link_2": "shopify://pages/authenticity",
+        "color_scheme": "scheme-3"
       }
     },
-    "featured_collection": {
+    "new_arrivals": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "New arrivals",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
-        "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "outline",
         "enable_desktop_slider": false,
         "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
+        "image_ratio": "portrait",
         "show_secondary_image": true,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 44,
+        "padding_top": 60,
+        "padding_bottom": 52
+      }
+    },
+    "trust": {
+      "type": "trust-strip",
+      "blocks": {
+        "trust_curated": {
+          "type": "item",
+          "settings": {
+            "heading": "Carefully curated",
+            "text": "<p>A small archive, selected piece by piece.</p>"
+          }
+        },
+        "trust_condition": {
+          "type": "item",
+          "settings": {
+            "heading": "Condition, clearly described",
+            "text": "<p>Honest photography and detailed condition notes.</p>"
+          }
+        },
+        "trust_checkout": {
+          "type": "item",
+          "settings": {
+            "heading": "Secure checkout",
+            "text": "<p>Safe payment through trusted providers.</p>"
+          }
+        }
+      },
+      "block_order": ["trust_curated", "trust_condition", "trust_checkout"],
+      "settings": {
+        "show_borders": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "archive": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_1": {
+          "type": "featured_collection",
+          "settings": {}
+        },
+        "collection_2": {
+          "type": "featured_collection",
+          "settings": {}
+        },
+        "collection_3": {
+          "type": "featured_collection",
+          "settings": {}
+        }
+      },
+      "block_order": ["collection_1", "collection_2", "collection_3"],
+      "settings": {
+        "title": "The archive",
+        "heading_size": "h2",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "designers": {
+      "type": "featured-designers",
+      "blocks": {
+        "designer_louis_vuitton": {
+          "type": "designer",
+          "settings": {
+            "collection": "louis-vuitton"
+          }
+        },
+        "designer_gucci": {
+          "type": "designer",
+          "settings": {
+            "collection": "gucci"
+          }
+        },
+        "designer_chanel": {
+          "type": "designer",
+          "settings": {
+            "collection": "chanel"
+          }
+        },
+        "designer_dior": {
+          "type": "designer",
+          "settings": {
+            "collection": "dior"
+          }
+        },
+        "designer_prada": {
+          "type": "designer",
+          "settings": {
+            "collection": "prada"
+          }
+        },
+        "designer_fendi": {
+          "type": "designer",
+          "settings": {
+            "collection": "fendi"
+          }
+        }
+      },
+      "block_order": [
+        "designer_louis_vuitton",
+        "designer_gucci",
+        "designer_chanel",
+        "designer_dior",
+        "designer_prada",
+        "designer_fendi"
+      ],
+      "settings": {
+        "title": "Selected houses",
+        "heading_size": "h2",
+        "columns_desktop": 6,
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "story": {
+      "type": "image-with-text",
+      "blocks": {
+        "story_caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "The brand",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        },
+        "story_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Selected with intention",
+            "heading_size": "h1"
+          }
+        },
+        "story_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every piece in the archive is chosen for its design, its quality and the way it has aged. This is the beginning of a longer story — told one piece at a time.</p>",
+            "text_style": "body"
+          }
+        },
+        "story_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "About the brand",
+            "button_link": "shopify://pages/about",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": ["story_caption", "story_heading", "story_text", "story_button"],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "condition": {
+      "type": "image-with-text",
+      "blocks": {
+        "condition_caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Transparency",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        },
+        "condition_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Condition, clearly described",
+            "heading_size": "h1"
+          }
+        },
+        "condition_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vintage pieces have lived a life. Each item is photographed as it is, with detail shots and honest notes on wear — so you know exactly what you are buying.</p>",
+            "text_style": "body"
+          }
+        },
+        "condition_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read the condition guide",
+            "button_link": "shopify://pages/condition-guide",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": ["condition_caption", "condition_heading", "condition_text", "condition_button"],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
+    "authenticity": {
+      "type": "authenticity-process",
+      "disabled": true,
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {}
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {}
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {}
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3"],
+      "settings": {
+        "caption": "Authenticity",
+        "heading": "A considered approach to authenticity",
+        "heading_size": "h1",
+        "intro": "",
+        "color_scheme": "scheme-2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stay informed",
+            "heading_size": "h2"
+          }
+        },
+        "newsletter_text": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>An occasional note when new pieces enter the archive.</p>"
+          }
+        },
+        "newsletter_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": ["newsletter_heading", "newsletter_text", "newsletter_form"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero",
+    "new_arrivals",
+    "trust",
+    "archive",
+    "designers",
+    "story",
+    "condition",
+    "authenticity",
+    "newsletter"
   ]
 }

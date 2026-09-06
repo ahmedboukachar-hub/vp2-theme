@@ -1,0 +1,53 @@
+.featured-designers__heading {
+  margin: 0 0 2.5rem;
+}
+
+.featured-designers__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .featured-designers__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 2rem;
+  }
+}
+
+.featured-designers__link {
+  display: block;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+}
+
+.featured-designers__media {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.featured-designers__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-designers__name {
+  display: inline-block;
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13rem;
+  font-size: 1.2rem;
+  text-underline-offset: 0.4rem;
+}
+
+.featured-designers__link:hover .featured-designers__name,
+.featured-designers__link:focus-visible .featured-designers__name {
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--color-accent, var(--color-foreground)));
+}

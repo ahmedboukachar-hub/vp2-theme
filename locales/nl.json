@@ -1,5 +1,9 @@
 {
   "general": {
+    "breadcrumbs": {
+      "label": "Kruimelpad",
+      "home": "Home"
+    },
     "password_page": {
       "login_form_heading": "Ga winkel binnen met wachtwoord:",
       "login_password_button": "Ga naar binnen met wachtwoord",
@@ -168,6 +172,21 @@
       "inventory_low_stock_show_count": "Lage voorraad: nog maar {{ quantity }}",
       "inventory_out_of_stock": "Niet op voorraad",
       "sku": "SKU",
+      "specifications": {
+        "designer": "Designer",
+        "model": "Model",
+        "product_type": "Type",
+        "year_or_era": "Jaar / periode",
+        "condition": "Conditie",
+        "condition_notes": "Conditiedetails",
+        "material": "Materiaal",
+        "color": "Kleur",
+        "dimensions": "Afmetingen",
+        "inclusions": "Geleverd met",
+        "serial_or_date_code": "Serie- / datumcode",
+        "provenance": "Herkomst",
+        "authentication_notes": "Authenticatie"
+      },
       "inventory_out_of_stock_continue_selling": "Op voorraad",
       "volume_pricing": {
         "title": "Volumeprijsstelling",

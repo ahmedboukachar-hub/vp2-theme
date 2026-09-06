@@ -1,0 +1,242 @@
+{{ 'section-editorial-hero.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign desktop_image = section.settings.image
+  assign mobile_image = section.settings.image_mobile
+  if mobile_image == blank
+    assign mobile_image = desktop_image
+  endif
+
+  assign heading_tag = 'h2'
+  if template.name == 'index' and section.index == 1
+    assign heading_tag = 'h1'
+  endif
+-%}
+
+{%- style -%}
+  #EditorialHero-{{ section.id }} .editorial-hero__media::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+
+  {%- if section.settings.image_height == 'adapt' %}
+    #EditorialHero-{{ section.id }} .editorial-hero__media {
+      aspect-ratio: {{ mobile_image.aspect_ratio | default: 0.8 }};
+    }
+
+    @media screen and (min-width: 750px) {
+      #EditorialHero-{{ section.id }} .editorial-hero__media {
+        aspect-ratio: {{ desktop_image.aspect_ratio | default: 2.0 }};
+      }
+    }
+  {%- endif %}
+{%- endstyle -%}
+
+<div
+  id="EditorialHero-{{ section.id }}"
+  class="editorial-hero editorial-hero--content-{{ section.settings.desktop_content_position }}{% if section.settings.show_text_below_mobile %} editorial-hero--mobile-below{% endif %}{% unless section.settings.image_height == 'adapt' %} editorial-hero--height-{{ section.settings.image_height }}{% endunless %} color-{{ section.settings.color_scheme }}"
+>
+  <div class="editorial-hero__media">
+    {%- if desktop_image != blank -%}
+      <picture>
+        {%- if section.settings.image_mobile != blank -%}
+          <source
+            media="(max-width: 749px)"
+            srcset="
+              {{ mobile_image | image_url: width: 375 }} 375w,
+              {{ mobile_image | image_url: width: 550 }} 550w,
+              {{ mobile_image | image_url: width: 750 }} 750w,
+              {{ mobile_image | image_url: width: 1100 }} 1100w,
+              {{ mobile_image | image_url: width: 1500 }} 1500w
+            "
+            sizes="100vw"
+          >
+        {%- endif -%}
+        {{
+          desktop_image
+          | image_url: width: 3840
+          | image_tag:
+            loading: 'eager',
+            fetchpriority: 'high',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+            sizes: '100vw'
+        }}
+      </picture>
+    {%- else -%}
+      {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder' }}
+    {%- endif -%}
+  </div>
+
+  <div class="editorial-hero__content-wrapper page-width">
+    <div
+      class="editorial-hero__content{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+      {% endif %}
+    >
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="editorial-hero__eyebrow caption-with-letter-spacing">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <{{ heading_tag }} class="editorial-hero__heading inline-richtext {{ section.settings.heading_size }}">
+          {{- section.settings.heading -}}
+        </{{ heading_tag }}>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="editorial-hero__text rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+      {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
+        <div class="editorial-hero__buttons">
+          {%- if section.settings.button_label_1 != blank -%}
+            <a
+              {% if section.settings.button_link_1 == blank %}
+                role="link"
+                aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.button_link_1 }}"
+              {% endif %}
+              class="button"
+            >
+              {{- section.settings.button_label_1 | escape -}}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.button_label_2 != blank -%}
+            <a
+              {% if section.settings.button_link_2 == blank %}
+                role="link"
+                aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.button_link_2 }}"
+              {% endif %}
+              class="button button--secondary"
+            >
+              {{- section.settings.button_label_2 | escape -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Editorial hero",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Recommended: landscape, around 16:9."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile image",
+      "info": "Optional, shown on screens narrower than 750px. Recommended: portrait, 4:5."
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "label": "Height",
+      "options": [
+        { "value": "adapt", "label": "Adapt to image" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "label": "Image overlay opacity",
+      "min": 0,
+      "max": 90,
+      "step": 10,
+      "unit": "%",
+      "default": 30
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "label": "Desktop content position",
+      "options": [
+        { "value": "left", "label": "Bottom left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_below_mobile",
+      "label": "Show text below image on mobile",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Vintage & pre-owned designer pieces"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Curated vintage luxury"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "label": "First button label",
+      "default": "Explore the archive"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "First button link"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Second button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Second button link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "info": "Pick a scheme whose text stays readable on top of the image. On mobile the scheme colors the text panel below the image.",
+      "default": "scheme-3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Editorial hero"
+    }
+  ]
+}
+{% endschema %}

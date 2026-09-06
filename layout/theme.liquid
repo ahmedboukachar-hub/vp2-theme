@@ -123,7 +123,20 @@
         background-color: rgb(var(--color-background));
       }
 
+      .button:not(.button--secondary):not(.button--tertiary):not([disabled]):not([aria-disabled='true']):hover {
+        background-color: rgba(var(--color-button-hover), var(--alpha-button-background));
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .button:not(.button--secondary):not(.button--tertiary) {
+          transition: background-color 0.2s ease;
+        }
+      }
+
       :root {
+        --color-button-hover: {{ settings.button_hover_color.red }},{{ settings.button_hover_color.green }},{{ settings.button_hover_color.blue }};
+        --color-accent: {{ settings.accent_color.red }},{{ settings.accent_color.green }},{{ settings.accent_color.blue }};
+
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
@@ -339,6 +352,7 @@
       tabindex="-1"
       data-template="{{ template.name }}"
     >
+      {% render 'breadcrumbs' %}
       {{ content_for_layout }}
     </main>
 

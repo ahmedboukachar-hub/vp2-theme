@@ -1,5 +1,9 @@
 {
   "general": {
+    "breadcrumbs": {
+      "label": "Brotkrümelnavigation",
+      "home": "Startseite"
+    },
     "password_page": {
       "login_form_heading": "Shop mit Passwort betreten:",
       "login_password_button": "Mit Passwort betreten",
@@ -169,6 +173,21 @@
       "inventory_out_of_stock": "Nicht vorrätig",
       "inventory_out_of_stock_continue_selling": "Auf Lager",
       "sku": "SKU",
+      "specifications": {
+        "designer": "Designer",
+        "model": "Modell",
+        "product_type": "Typ",
+        "year_or_era": "Jahr / Ära",
+        "condition": "Zustand",
+        "condition_notes": "Zustandsdetails",
+        "material": "Material",
+        "color": "Farbe",
+        "dimensions": "Maße",
+        "inclusions": "Lieferumfang",
+        "serial_or_date_code": "Serien-/Datumscode",
+        "provenance": "Herkunft",
+        "authentication_notes": "Authentifizierung"
+      },
       "volume_pricing": {
         "title": "Volumenabhängige Preisgestaltung",
         "note": "Volumenabhängige Preisgestaltung verfügbar",

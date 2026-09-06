@@ -1,5 +1,9 @@
 {
   "general": {
+    "breadcrumbs": {
+      "label": "Fil d’Ariane",
+      "home": "Accueil"
+    },
     "password_page": {
       "login_form_heading": "Accéder à la boutique à l'aide d'un mot de passe :",
       "login_password_button": "Saisir avec un mot de passe",
@@ -169,6 +173,21 @@
       "inventory_low_stock": "Stock bas",
       "inventory_low_stock_show_count": "Stock bas : {{ quantity }} restant(s)",
       "sku": "SKU",
+      "specifications": {
+        "designer": "Créateur",
+        "model": "Modèle",
+        "product_type": "Type",
+        "year_or_era": "Année / époque",
+        "condition": "État",
+        "condition_notes": "Détails de l’état",
+        "material": "Matière",
+        "color": "Couleur",
+        "dimensions": "Dimensions",
+        "inclusions": "Accessoires inclus",
+        "serial_or_date_code": "Code série / date",
+        "provenance": "Provenance",
+        "authentication_notes": "Authentification"
+      },
       "inventory_out_of_stock": "En rupture de stock",
       "inventory_out_of_stock_continue_selling": "En stock",
       "volume_pricing": {

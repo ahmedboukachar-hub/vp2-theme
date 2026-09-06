@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "guide": {
+      "type": "collapsible-content",
+      "blocks": {
+        "row_grading": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How condition is graded",
+            "icon": "none",
+            "row_content": ""
+          }
+        },
+        "row_photography": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Photography and detail shots",
+            "icon": "none",
+            "row_content": ""
+          }
+        },
+        "row_wear": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What to expect from vintage",
+            "icon": "none",
+            "row_content": ""
+          }
+        }
+      },
+      "block_order": ["row_grading", "row_photography", "row_wear"],
+      "settings": {
+        "caption": "Transparency",
+        "heading": "Condition, clearly described",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "padding_top": 28,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": ["main", "guide"]
+}

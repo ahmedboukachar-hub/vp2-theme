@@ -1,0 +1,129 @@
+.editorial-hero {
+  position: relative;
+}
+
+.editorial-hero__media {
+  position: relative;
+  overflow: hidden;
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.editorial-hero--height-small .editorial-hero__media {
+  height: 32rem;
+}
+
+.editorial-hero--height-medium .editorial-hero__media {
+  height: 44rem;
+}
+
+.editorial-hero--height-large .editorial-hero__media {
+  height: 56rem;
+}
+
+@media screen and (min-width: 750px) {
+  .editorial-hero--height-small .editorial-hero__media {
+    height: 42vh;
+    height: 42svh;
+  }
+
+  .editorial-hero--height-medium .editorial-hero__media {
+    height: 56vh;
+    height: 56svh;
+  }
+
+  .editorial-hero--height-large .editorial-hero__media {
+    height: 72vh;
+    height: 72svh;
+  }
+}
+
+.editorial-hero__media > picture,
+.editorial-hero__media img,
+.editorial-hero__media svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.editorial-hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0);
+  pointer-events: none;
+}
+
+.editorial-hero__content-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.editorial-hero--content-center .editorial-hero__content-wrapper {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.editorial-hero__content {
+  max-width: 60rem;
+}
+
+.editorial-hero__eyebrow {
+  margin: 0 0 1.2rem;
+  opacity: 0.85;
+}
+
+.editorial-hero__heading {
+  margin: 0;
+}
+
+.editorial-hero__text {
+  margin-top: 1.5rem;
+}
+
+.editorial-hero__text > * {
+  margin: 0;
+}
+
+.editorial-hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.editorial-hero--content-center .editorial-hero__buttons {
+  justify-content: center;
+}
+
+@media screen and (max-width: 749px) {
+  .editorial-hero--mobile-below .editorial-hero__content-wrapper {
+    position: static;
+    display: block;
+    background: rgb(var(--color-background));
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .editorial-hero--mobile-below.editorial-hero--content-center .editorial-hero__content-wrapper {
+    text-align: center;
+  }
+
+  .editorial-hero--mobile-below .editorial-hero__content {
+    max-width: none;
+  }
+
+  .editorial-hero__buttons .button {
+    width: 100%;
+  }
+
+  .editorial-hero--content-center .editorial-hero__buttons .button {
+    width: auto;
+  }
+}
