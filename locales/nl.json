@@ -367,6 +367,28 @@
       "success_body": "Bedankt. We nemen contact op als we je zoektocht echt verder kunnen helpen.",
       "closing": "Elk pre-owned stuk is uniek. Conditie, leeftijd, details en meegeleverde accessoires kunnen verschillen, zelfs binnen hetzelfde model. We beschrijven altijd het specifieke stuk dat we aanbieden.",
       "hidden_source": "Aanvraagtype"
+    },
+    "sell_to_us": {
+      "fields": {
+        "name": "Naam",
+        "email": "E-mail",
+        "country": "Land",
+        "item_type": "Type item",
+        "brand_and_model": "Merk en model",
+        "approximate_year": "Jaar of aankoopdatum (bij benadering)",
+        "condition_description": "Beschrijving van de conditie",
+        "included_accessories": "Meegeleverde accessoires",
+        "proof_of_purchase": "Aankoopbewijs, indien beschikbaar",
+        "asking_price": "Vraagprijs",
+        "preferred_contact": "Gewenste contactmethode",
+        "message": "Nog iets over het stuk?"
+      },
+      "serial": "Serie- of datumcode-informatie (optioneel)",
+      "serial_hint": "Deel hier geen volledige serie- of datumcode. Vermeld alleen of er een aanwezig is; als het nodig is vragen we veilig om details.",
+      "disclaimer": "Verstuur geen item voordat de verzendinstructies schriftelijk met ons zijn afgestemd.",
+      "submit": "Verstuur itemgegevens",
+      "success": "Bedankt. We hebben je inzending ontvangen en nemen contact op als we het stuk verder willen bespreken.",
+      "hidden_source": "Aanvraagtype"
     }
   },
   "sections": {

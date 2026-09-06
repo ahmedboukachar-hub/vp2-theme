@@ -367,6 +367,28 @@
       "success_body": "Vielen Dank. Wir melden uns, wenn wir Ihre Suche sinnvoll unterstützen können.",
       "closing": "Jedes Pre-Owned-Stück ist individuell. Zustand, Alter, Details und Zubehör können variieren, selbst innerhalb desselben Modells. Wir beschreiben stets das konkret angebotene Stück.",
       "hidden_source": "Anfragetyp"
+    },
+    "sell_to_us": {
+      "fields": {
+        "name": "Name",
+        "email": "E-Mail",
+        "country": "Land",
+        "item_type": "Art des Artikels",
+        "brand_and_model": "Marke und Modell",
+        "approximate_year": "Ungefähres Jahr oder Kaufdatum",
+        "condition_description": "Beschreibung des Zustands",
+        "included_accessories": "Mitgeliefertes Zubehör",
+        "proof_of_purchase": "Kaufbeleg, falls vorhanden",
+        "asking_price": "Preisvorstellung",
+        "preferred_contact": "Bevorzugte Kontaktmethode",
+        "message": "Sonst noch etwas zu dem Stück?"
+      },
+      "serial": "Serien- oder Datumscode-Informationen (optional)",
+      "serial_hint": "Bitte teilen Sie hier keinen vollständigen Serien- oder Datumscode. Geben Sie nur an, ob einer vorhanden ist; Details erfragen wir bei Bedarf auf sicherem Weg.",
+      "disclaimer": "Senden Sie keinen Artikel ein, bevor die Versandanweisungen schriftlich mit uns abgestimmt wurden.",
+      "submit": "Artikeldetails senden",
+      "success": "Vielen Dank. Wir haben Ihre Einsendung erhalten und melden uns, wenn wir das Stück näher besprechen möchten.",
+      "hidden_source": "Anfragetyp"
     }
   },
   "sections": {

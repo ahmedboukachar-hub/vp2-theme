@@ -367,6 +367,28 @@
       "success_body": "Thank you. We will contact you if we can meaningfully help with your search.",
       "closing": "Every pre-owned piece is individual. Condition, age, details and inclusions can vary, even within the same model. We will always describe the specific piece offered.",
       "hidden_source": "Request type"
+    },
+    "sell_to_us": {
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "country": "Country",
+        "item_type": "Item type",
+        "brand_and_model": "Brand and model",
+        "approximate_year": "Approximate year or purchase date",
+        "condition_description": "Condition description",
+        "included_accessories": "Included accessories",
+        "proof_of_purchase": "Proof of purchase, if available",
+        "asking_price": "Asking price",
+        "preferred_contact": "Preferred contact method",
+        "message": "Anything else about the piece?"
+      },
+      "serial": "Serial or date-code information (optional)",
+      "serial_hint": "Please do not share a complete serial or date code here. Mention only whether one is present; we will ask for details securely if needed.",
+      "disclaimer": "Do not send an item until shipping instructions have been agreed with us in writing.",
+      "submit": "Submit item details",
+      "success": "Thank you. We have received your submission and will contact you if we would like to discuss the piece further.",
+      "hidden_source": "Request type"
     }
   },
   "sections": {

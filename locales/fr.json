@@ -376,6 +376,28 @@
       "success_body": "Merci. Nous vous contacterons si nous pouvons réellement vous aider dans votre recherche.",
       "closing": "Chaque pièce de seconde main est unique. L’état, l’âge, les détails et les accessoires peuvent varier, même au sein d’un même modèle. Nous décrivons toujours la pièce précise proposée.",
       "hidden_source": "Type de demande"
+    },
+    "sell_to_us": {
+      "fields": {
+        "name": "Nom",
+        "email": "E-mail",
+        "country": "Pays",
+        "item_type": "Type d’article",
+        "brand_and_model": "Marque et modèle",
+        "approximate_year": "Année approximative ou date d’achat",
+        "condition_description": "Description de l’état",
+        "included_accessories": "Accessoires inclus",
+        "proof_of_purchase": "Preuve d’achat, si disponible",
+        "asking_price": "Prix souhaité",
+        "preferred_contact": "Mode de contact préféré",
+        "message": "Autre chose sur la pièce ?"
+      },
+      "serial": "Informations sur le code série ou date (facultatif)",
+      "serial_hint": "Ne partagez pas ici un code série ou date complet. Indiquez seulement s’il est présent ; nous demanderons les détails de manière sécurisée si nécessaire.",
+      "disclaimer": "N’envoyez aucun article avant que les instructions d’expédition aient été convenues avec nous par écrit.",
+      "submit": "Envoyer les détails de l’article",
+      "success": "Merci. Nous avons bien reçu votre demande et vous contacterons si nous souhaitons en discuter davantage.",
+      "hidden_source": "Type de demande"
     }
   },
   "sections": {

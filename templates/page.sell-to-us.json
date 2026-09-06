@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "sell-to-us-form",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": ["main"]
+}
