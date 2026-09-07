@@ -28,6 +28,46 @@ attribution (https://www.pexels.com/license/), evidence date 2026-09-06.
 | pexels-shop-window-leather-bags-14806252.jpg | About story image; homepage curation statement; buying-guide article | Pexels 14806252 | High-end leather bags in shop window (showroom setting) | no | not identifiable | no (licensed) | showroom atmosphere | **recommended** when owned photography exists (bags unbranded) |
 | pexels-vintage-bag-contents-3777932.jpg | Sell to Us banner; size-guide article | Pexels 3777932 | Open, used vintage leather bag with belongings | no | no | no (licensed) | "offer your piece" context | optional |
 
+## Batch 4 — owner-supplied, 2026-09-07
+
+Nine photos supplied by the store owner in chat. Same licence caveat as
+batch 1: the owner confirms usage rights before public launch (⚠). All
+were checked against §36.3 before use; three of the twelve supplied were
+rejected (below).
+
+| File | Section/page | Depicts | Face | 3rd-party product | Owned | Replace? |
+| --- | --- | --- | --- | --- | --- | --- |
+| owner-lv-speedy-warm-light.jpg | Louis Vuitton collection image; homepage curation statement | Light monogram Speedy on a brass stand, warm light | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-gucci-halfmoon-coat.jpg | Gucci collection image | Beige GG canvas half-moon bag held against a wool coat | no | yes (Gucci) | confirmation required ⚠ | optional |
+| owner-lv-trunk-detail.jpg | The Archive collection image | Vintage monogram trunk: worn strap, brass catch, patina | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-gucci-marmont-studio.jpg | Gucci popularity guide articles (en + nl) | Black quilted GG Marmont camera bag, studio | no | yes (Gucci) | confirmation required ⚠ | optional |
+| owner-lv-speedy-street.jpg | Speedy 30 guide article | Reverse monogram Speedy carried on the street, from behind | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-pochette-walking.jpg | Find a Bag banner | Monogram shoulder bag carried while walking, from above | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-keepall-travel.jpg | Designers page banner | Monogram travel bag carried by its handles | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-lockme-knit.jpg | Wishlist banner | Small black grained leather backpack on a knit jumper | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-backpack-dusk.jpg | Journal landing banner | Monogram denim backpack carried at dusk, from behind | no | yes (LV) | confirmation required ⚠ | optional |
+
+Rejected from this batch (uploaded nowhere, not in Files):
+
+| Image | Rejection reason |
+| --- | --- |
+| Miniature bags in a cabinet with a toy parrot | depicts miniature/replica bags — could mislead about what is stocked; styling conflicts with the catalogue system |
+| Boutique window with trunk and quilted bag | a designer boutique storefront implies authorised-retailer status (§36.3) |
+| Bag in a red-lit boutique window | same storefront issue, plus resolution/colour treatment conflicts with the palette |
+
+Superseded by batch 4 and no longer active: `editorial-lv-shopper-flowers.jpg`
+(LV collection), `pexels-gucci-shopping-bag-16255110.jpg` (Gucci collection —
+still used on the Gucci Jackie guide), `editorial-lv-boxes-tulips.jpg`
+(Archive — still used on the vintage-vs-pre-owned article),
+`pexels-gucci-dust-bag-still-life-12901704.jpg`,
+`editorial-monogram-bags-flatlay.jpg` on the Speedy guide (still the homepage
+hero), and `pexels-shop-window-leather-bags-14806252.jpg` on the homepage
+curation statement (still the About story image).
+
+**Correction:** `pexels-handbag-selection-shelf-9327162.jpg` was listed below
+as removed from the Find a Bag banner, but the banner still carried it until
+batch 4 replaced it. The rejection now matches the templates.
+
 ## Rejected / retired from active use (§36.3) — files remain in Shopify Files
 
 | File | Was used as | Rejection reason |
@@ -42,9 +82,9 @@ attribution (https://www.pexels.com/license/), evidence date 2026-09-06.
 | pexels-handbag-selection-shelf-9327162.jpg | Find a Bag banner | generic unbranded modern bags next to designer content |
 | pexels-canvas-tote-warm-light-6310184.jpg | Wishlist banner | generic unnamed tote (§36.4) |
 
-Pages whose banner was removed rather than replaced (deliberate minimal
-state per §36.5): Contact, FAQ*, Designers, Journal landing, Find a Bag,
-Wishlist. (*FAQ keeps the white gift bag — quiet packaging still-life.)
+Pages that kept a deliberate minimal state (no banner): Contact. FAQ keeps
+the white gift bag — a quiet packaging still-life. Designers, Journal
+landing, Wishlist and Find a Bag received batch-4 imagery.
 
 ## Rules applied
 
