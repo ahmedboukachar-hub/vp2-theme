@@ -1,0 +1,60 @@
+{
+  "sections": {
+    "curation": {
+      "type": "image-with-text",
+      "blocks": {
+        "curation_caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our point of view",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        },
+        "curation_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Chosen individually. Described honestly.",
+            "heading_size": "h1"
+          }
+        },
+        "curation_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pre-owned luxury is personal. Every piece has its own materials, proportions and signs of wear. We present those details clearly, so you can choose the bag that feels right for you.</p>",
+            "text_style": "body"
+          }
+        },
+        "curation_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "How we curate",
+            "button_link": "shopify://pages/our-curation",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "curation_caption",
+        "curation_heading",
+        "curation_text",
+        "curation_button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "curation"
+  ]
+}
