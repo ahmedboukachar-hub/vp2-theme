@@ -12,21 +12,21 @@ attribution (https://www.pexels.com/license/), evidence date 2026-09-06.
 
 | File | Section/page | Source | Depicts | Face | 3rd-party product | Owned | Approved use | Replace? |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| editorial-monogram-bags-flatlay.jpg | Homepage hero (split, image side) | owner batch ⚠ | Three pre-owned LV monogram bags, honest patina | no | yes (LV, naturally occurring) | confirmation required | hero editorial | when owned photography exists |
+| editorial-monogram-bags-flatlay.jpg | Homepage hero (split, image side); Speedy 30 guide article | owner batch ⚠ | Three pre-owned LV monogram bags, honest patina | no | yes (LV, naturally occurring) | confirmation required | hero editorial | when owned photography exists |
 | editorial-crossbody-street.jpg | LV Journal articles; Bag Size Guide banner | owner batch ⚠ | LV crossbody worn, shoulders-down | no | yes (LV) | confirmation required | editorial/scale | when owned photography exists |
 | editorial-backpack-flowers.jpg | All Bags collection image | owner batch ⚠ | LV mini backpack with roses | no | yes (LV) | confirmation required | collection banner | optional |
-| editorial-lv-bag-tulips.jpg | New Arrivals collection image | owner batch ⚠ | LV gift bag with tulips (packaging) | no | yes (LV packaging) | confirmation required | collection banner | optional |
+| editorial-lv-bag-tulips.jpg | New Arrivals collection image; Noé guide article | owner batch ⚠ | LV gift bag with tulips (packaging) | no | yes (LV packaging) | confirmation required | collection banner | optional |
 | editorial-lv-shopper-flowers.jpg | Louis Vuitton collection image | owner batch ⚠ | LV shopper + monogram bag corner | no | yes (LV packaging) | confirmation required | collection banner | optional |
-| editorial-lv-boxes-tulips.jpg | Archive collection image | Pexels 30986842 (confirmed) | LV boxes with tulips (packaging) | no | yes (LV packaging) | no (licensed) | collection banner | optional |
+| editorial-lv-boxes-tulips.jpg | Archive collection image; vintage-vs-pre-owned article | Pexels 30986842 (confirmed) | LV boxes with tulips (packaging) | no | yes (LV packaging) | no (licensed) | collection banner | optional |
 | editorial-pouch-in-hand.jpg | Accessories collection image | owner batch ⚠ | Hand holding LV giant-monogram pouch | no (hand/torso only) | yes (LV) | confirmation required | collection banner | optional |
-| pexels-gucci-shopping-bag-16255110.jpg | Gucci collection image | Pexels 16255110 | Gucci shopping bag (packaging) | no | yes (Gucci packaging) | no (licensed) | collection banner | optional |
+| pexels-gucci-shopping-bag-16255110.jpg | Gucci collection image; Gucci Jackie guide article | Pexels 16255110 | Gucci shopping bag (packaging) | no | yes (Gucci packaging) | no (licensed) | collection banner | optional |
 | pexels-gucci-dust-bag-still-life-12901704.jpg | Gucci Journal articles | Pexels 12901704 | Gucci dust bag with accessories | no | yes (Gucci dust bag) | no (licensed) | article feature | optional |
-| pexels-leather-grain-seam-30989203.jpg | Condition Guide banner; Authenticity banner | Pexels 30989203 | Leather grain + stitched seam close-up | no | no | no (licensed) | material/inspection texture | optional |
+| pexels-leather-grain-seam-30989203.jpg | Condition Guide banner; Authenticity banner; condition-description article | Pexels 30989203 | Leather grain + stitched seam close-up | no | no | no (licensed) | material/inspection texture | optional |
 | pexels-leather-workshop-tools-4452603.jpg | Care Guide banner | Pexels 4452603 | Leather-craft tools on workbench | no | no | no (licensed) | care/craft context | optional |
 | pexels-gift-boxes-beige-5872362.jpg | Shipping & Returns banner | Pexels 5872362 | Gift boxes with ribbons (packaging) | no | no | no (licensed) | packaging/delivery context | optional |
 | pexels-white-gift-bag-7670677.jpg | FAQ banner | Pexels 7670677 | Minimal gift bag (elegant storage) | no | no | no (licensed) | quiet service context | optional |
-| pexels-shop-window-leather-bags-14806252.jpg | About story image; homepage curation statement | Pexels 14806252 | High-end leather bags in shop window (showroom setting) | no | not identifiable | no (licensed) | showroom atmosphere | **recommended** when owned photography exists (bags unbranded) |
-| pexels-vintage-bag-contents-3777932.jpg | Sell to Us banner | Pexels 3777932 | Open, used vintage leather bag with belongings | no | no | no (licensed) | "offer your piece" context | optional |
+| pexels-shop-window-leather-bags-14806252.jpg | About story image; homepage curation statement; buying-guide article | Pexels 14806252 | High-end leather bags in shop window (showroom setting) | no | not identifiable | no (licensed) | showroom atmosphere | **recommended** when owned photography exists (bags unbranded) |
+| pexels-vintage-bag-contents-3777932.jpg | Sell to Us banner; size-guide article | Pexels 3777932 | Open, used vintage leather bag with belongings | no | no | no (licensed) | "offer your piece" context | optional |
 
 ## Rejected / retired from active use (§36.3) — files remain in Shopify Files
 
