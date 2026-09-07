@@ -1,0 +1,158 @@
+{
+  "sections": {
+    "new_arrivals": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Recently found",
+        "heading_size": "h2",
+        "description": "Newly added pieces, each available only once.",
+        "show_description": true,
+        "collection": "new-arrivals",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "padding_top": 96,
+        "padding_bottom": 72
+      }
+    },
+    "curation": {
+      "type": "image-with-text",
+      "blocks": {
+        "curation_caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our point of view",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        },
+        "curation_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Chosen individually. Described honestly.",
+            "heading_size": "h1"
+          }
+        },
+        "curation_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pre-owned luxury is personal. Every piece has its own materials, proportions and signs of wear. We present those details clearly, so you can choose the bag that feels right for you.</p>",
+            "text_style": "body"
+          }
+        },
+        "curation_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "How we curate",
+            "button_link": "shopify://pages/our-curation",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "curation_caption",
+        "curation_heading",
+        "curation_text",
+        "curation_button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "designers": {
+      "type": "featured-designers",
+      "blocks": {
+        "designer_louis_vuitton": {
+          "type": "designer",
+          "settings": {
+            "collection": "louis-vuitton"
+          }
+        },
+        "designer_gucci": {
+          "type": "designer",
+          "settings": {
+            "collection": "gucci"
+          }
+        },
+        "designer_jacquemus": {
+          "type": "designer",
+          "settings": {
+            "collection": "jacquemus"
+          }
+        }
+      },
+      "block_order": [
+        "designer_louis_vuitton",
+        "designer_gucci",
+        "designer_jacquemus"
+      ],
+      "settings": {
+        "title": "Explore the houses",
+        "heading_size": "h2",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The next piece may not return.",
+            "heading_size": "h2"
+          }
+        },
+        "newsletter_text": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Receive new arrivals and occasional notes on the bags we love.</p>"
+          }
+        },
+        "newsletter_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "newsletter_heading",
+        "newsletter_text",
+        "newsletter_form"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "new_arrivals",
+    "curation",
+    "designers",
+    "newsletter"
+  ]
+}
