@@ -61,7 +61,7 @@
       "settings": {
         "title": "Recently found",
         "heading_size": "h2",
-        "description": "Newly added pieces, each available only once.",
+        "description": "<p>Newly added pieces, each available only once.</p>",
         "show_description": true,
         "collection": "new-arrivals",
         "products_to_show": 4,
