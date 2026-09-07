@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "proof": {
+      "type": "trust-strip",
+      "blocks": {
+        "proof_pieces": {
+          "type": "item",
+          "settings": {
+            "heading": "Individual pieces"
+          }
+        },
+        "proof_condition": {
+          "type": "item",
+          "settings": {
+            "heading": "Detailed condition notes"
+          }
+        },
+        "proof_questions": {
+          "type": "item",
+          "settings": {
+            "heading": "Questions welcomed"
+          }
+        },
+        "proof_delivery": {
+          "type": "item",
+          "settings": {
+            "heading": "Delivery options shown at checkout"
+          }
+        }
+      },
+      "block_order": [
+        "proof_pieces",
+        "proof_condition",
+        "proof_questions",
+        "proof_delivery"
+      ],
+      "settings": {
+        "show_borders": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "find_a_bag": {
+      "type": "service-panel",
+      "settings": {
+        "eyebrow": "Personal sourcing",
+        "heading": "Looking for a particular piece?",
+        "heading_size": "h1",
+        "text": "<p>Tell us the house, model, colour or era you have in mind. We will keep your request in view as we source new pieces.</p>",
+        "button_label": "Start a search",
+        "button_link": "shopify://pages/find-a-bag",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "archive": {
+      "type": "archive-feature",
+      "settings": {
+        "eyebrow": "Past pieces",
+        "heading": "From the archive",
+        "heading_size": "h1",
+        "text": "<p>A record of pieces that have passed through our collection — and a place to discover what we may be able to source again.</p>",
+        "collection": "archive",
+        "products_to_show": 3,
+        "button_label": "Explore the archive",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "journal": {
+      "type": "journal-feature",
+      "settings": {
+        "blog": "journal",
+        "eyebrow": "Notes from the archive",
+        "heading": "Stories, details and buying guides",
+        "heading_size": "h1",
+        "button_label": "Visit the Journal",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "proof",
+    "find_a_bag",
+    "archive",
+    "journal"
+  ]
+}
