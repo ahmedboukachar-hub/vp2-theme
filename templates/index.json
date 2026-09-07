@@ -21,33 +21,34 @@
         "proof_pieces": {
           "type": "item",
           "settings": {
-            "heading": "Individual pieces",
-            "text": ""
+            "heading": "Individual pieces"
           }
         },
         "proof_condition": {
           "type": "item",
           "settings": {
-            "heading": "Detailed condition notes",
-            "text": ""
+            "heading": "Detailed condition notes"
           }
         },
         "proof_questions": {
           "type": "item",
           "settings": {
-            "heading": "Questions welcomed",
-            "text": ""
+            "heading": "Questions welcomed"
           }
         },
         "proof_delivery": {
           "type": "item",
           "settings": {
-            "heading": "Delivery options shown at checkout",
-            "text": ""
+            "heading": "Delivery options shown at checkout"
           }
         }
       },
-      "block_order": ["proof_pieces", "proof_condition", "proof_questions", "proof_delivery"],
+      "block_order": [
+        "proof_pieces",
+        "proof_condition",
+        "proof_questions",
+        "proof_delivery"
+      ],
       "settings": {
         "show_borders": true,
         "color_scheme": "scheme-1",
@@ -115,7 +116,12 @@
           }
         }
       },
-      "block_order": ["curation_caption", "curation_heading", "curation_text", "curation_button"],
+      "block_order": [
+        "curation_caption",
+        "curation_heading",
+        "curation_text",
+        "curation_button"
+      ],
       "settings": {
         "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg",
         "height": "adapt",
@@ -151,7 +157,11 @@
           }
         }
       },
-      "block_order": ["designer_louis_vuitton", "designer_gucci", "designer_jacquemus"],
+      "block_order": [
+        "designer_louis_vuitton",
+        "designer_gucci",
+        "designer_jacquemus"
+      ],
       "settings": {
         "title": "Explore the houses",
         "heading_size": "h2",
@@ -222,7 +232,11 @@
           "settings": {}
         }
       },
-      "block_order": ["newsletter_heading", "newsletter_text", "newsletter_form"],
+      "block_order": [
+        "newsletter_heading",
+        "newsletter_text",
+        "newsletter_form"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "full_width": true,
@@ -243,4 +257,3 @@
     "newsletter"
   ]
 }
-
