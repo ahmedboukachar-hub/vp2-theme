@@ -1,77 +1,39 @@
 {
   "sections": {
-    "banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "page-hero",
       "settings": {
+        "eyebrow": "Our approach",
+        "heading": "Every piece deserves a closer look.",
         "image": "shopify://shop_images/pexels-leather-grain-seam-30989203.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "show_text_below": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "image_behavior": "none"
+        "image_ratio": "landscape",
+        "color_scheme": "scheme-4"
       }
     },
     "main": {
       "type": "main-page",
       "settings": {
+        "show_title": false,
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 64
       }
     },
-    "faq": {
-      "type": "collapsible-content",
-      "blocks": {
-        "row_review": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How pieces are reviewed",
-            "icon": "none",
-            "row_content": ""
-          }
-        },
-        "row_documentation": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Documentation and receipts",
-            "icon": "none",
-            "row_content": ""
-          }
-        },
-        "row_concerns": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "If something isn't right",
-            "icon": "none",
-            "row_content": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_review",
-        "row_documentation",
-        "row_concerns"
-      ],
+    "closing": {
+      "type": "service-panel",
       "settings": {
-        "caption": "Authenticity",
-        "heading": "A considered approach to authenticity",
-        "heading_size": "h1",
-        "heading_alignment": "left",
-        "layout": "none",
-        "color_scheme": "scheme-1",
-        "open_first_collapsible_row": true,
-        "padding_top": 28,
-        "padding_bottom": 52
+        "eyebrow": "",
+        "heading": "Understanding condition",
+        "heading_size": "h2",
+        "text": "<p>Our condition grades are a starting point; the photographs and individual notes describe the exact piece.</p>",
+        "button_label": "Read the condition guide",
+        "button_link": "shopify://pages/condition-guide",
+        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
-    "banner",
+    "hero",
     "main",
-    "faq"
+    "closing"
   ]
 }

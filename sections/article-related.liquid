@@ -1,0 +1,68 @@
+{{ 'component-journal-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-article-related.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign related = '' | split: ''
+  for other in blog.articles
+    if other.id != article.id and related.size < 3
+      assign related = related | concat: other
+    endif
+  endfor
+-%}
+
+<div class="article-related color-{{ section.settings.color_scheme }} gradient vp-section">
+  <div class="vp-width">
+    {%- if related.size > 0 -%}
+      <h2 class="vp-heading-section article-related__heading">
+        {{- section.settings.heading | escape -}}
+      </h2>
+      <ul class="article-related__grid" role="list">
+        {%- for other in related -%}
+          <li>
+            {% render 'journal-card',
+              article: other,
+              variant: 'grid',
+              show_excerpt: false,
+              sizes: '(min-width: 990px) 30vw, 100vw'
+            %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if section.settings.cta_heading != blank -%}
+      <div class="article-related__cta">
+        <h2 class="vp-heading-section">{{ section.settings.cta_heading | escape }}</h2>
+        {%- if section.settings.cta_text != blank -%}
+          <div class="vp-lead rte">{{ section.settings.cta_text }}</div>
+        {%- endif -%}
+        {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
+          <div class="vp-actions">
+            <a href="{{ section.settings.cta_link }}" class="button">{{ section.settings.cta_label | escape }}</a>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Related reading",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Continue reading" },
+    { "type": "text", "id": "cta_heading", "label": "CTA heading", "default": "Looking for a particular model?" },
+    {
+      "type": "richtext",
+      "id": "cta_text",
+      "label": "CTA text",
+      "default": "<p>Share the designer, model or era you have in mind and use our Find a Bag request to guide our sourcing.</p>"
+    },
+    { "type": "text", "id": "cta_label", "label": "CTA button label", "default": "Start a search request" },
+    { "type": "url", "id": "cta_link", "label": "CTA link" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-3" }
+  ],
+  "presets": [{ "name": "Related reading" }]
+}
+{% endschema %}

@@ -122,7 +122,11 @@
       "min_read": {
         "one": "{{ count }} min de lecture",
         "other": "{{ count }} min de lecture"
-      }
+      },
+      "read_article": "Lire l'article",
+      "topics": "Thèmes",
+      "all_topics": "Tous les articles",
+      "empty": "Il n'y a pas encore d'articles ici."
     }
   },
   "onboarding": {
@@ -179,7 +183,8 @@
         "load_image": "Charger l'image {{ index }} dans la galerie",
         "load_model": "Charger le modèle 3D {{ index }} dans la galerie",
         "load_video": "Lire la vidéo {{ index }} dans la galerie",
-        "image_available": "L'image {{ index }} est maintenant disponible dans la galerie"
+        "image_available": "L'image {{ index }} est maintenant disponible dans la galerie",
+        "photography_pending": "Photographies à venir"
       },
       "nested_label": "{{ title }} pour {{ parent_title }}",
       "view_full_details": "Afficher tous les détails",
@@ -531,7 +536,9 @@
       "find_similar": "Trouver une pièce similaire",
       "explore_available": "Explorer les sacs disponibles",
       "empty_heading": "L’archive prend forme",
-      "empty_body": "Les pièces précédemment sélectionnées apparaîtront ici."
+      "empty_body": "Les pièces précédemment sélectionnées apparaîtront ici.",
+      "previously_sourced": "Précédemment trouvée",
+      "found_new_home": "Cette pièce a trouvé un nouveau foyer"
     },
     "drop_signup": {
       "heading": "Soyez informé des nouvelles pièces en premier",
@@ -539,6 +546,9 @@
       "email_placeholder": "Adresse e-mail",
       "submit": "Rejoindre la liste",
       "success": "Merci. Vous êtes sur la liste."
+    },
+    "featured_designers": {
+      "explore": "Découvrir {{ designer }}"
     }
   },
   "localization": {

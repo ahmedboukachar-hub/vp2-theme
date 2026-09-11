@@ -1,59 +1,39 @@
 {
   "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "eyebrow": "About",
+        "heading": "A considered approach to pieces with a past.",
+        "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg",
+        "image_ratio": "portrait",
+        "color_scheme": "scheme-1"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
+        "show_title": false,
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 64
       }
     },
-    "story": {
-      "type": "image-with-text",
-      "blocks": {
-        "caption": {
-          "type": "caption",
-          "settings": {
-            "caption": "The brand",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "small"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Selected with intention",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "caption",
-        "heading",
-        "text"
-      ],
+    "closing": {
+      "type": "service-panel",
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-1",
-        "padding_top": 28,
-        "padding_bottom": 52,
-        "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg"
+        "eyebrow": "",
+        "heading": "Discover the current selection.",
+        "heading_size": "h2",
+        "text": "<p>Newly added vintage and pre-owned pieces, each available only once.</p>",
+        "button_label": "Shop new arrivals",
+        "button_link": "shopify://collections/new-arrivals",
+        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
+    "hero",
     "main",
-    "story"
+    "closing"
   ]
 }

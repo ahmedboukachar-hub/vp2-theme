@@ -1,6 +1,10 @@
-/* Design tokens + small global refinements for the storefront system.
+/* ==========================================================================
+   Custom design system — "the private archive"
    Loaded after base.css. Colours and fonts stay in Theme Editor settings;
-   these tokens cover rhythm, measure, borders and motion only. */
+   this file owns rhythm, scale, measure, surfaces and component treatments.
+   Namespaced with vp- where it introduces new components; a small number of
+   deliberate overrides widen or rescale Dawn primitives.
+   ========================================================================== */
 
 :root {
   /* spacing rhythm */
@@ -8,13 +12,27 @@
   --vp-space-xs: 1.6rem;
   --vp-space-s: 2.4rem;
   --vp-space-m: 4rem;
-  --vp-space-l: 5.6rem;
+  --vp-space-l: 6.4rem;
   --vp-space-xl: 9.6rem;
-  --vp-space-2xl: 14.4rem;
+  --vp-space-2xl: 12.8rem;
 
-  /* content measure */
+  /* container + measure */
+  --vp-container-max: 144rem;
+  --vp-gutter: 2rem;
   --vp-measure-text: 72rem;
   --vp-measure-lead: 60rem;
+  --vp-measure-article: 70rem;
+
+  /* fluid type scale (root = 10px) */
+  --vp-type-hero: clamp(4rem, 6.4vw, 7.2rem);
+  --vp-type-display: clamp(3.4rem, 4.6vw, 5.6rem);
+  --vp-type-section: clamp(3rem, 3.4vw, 4.6rem);
+  --vp-type-editorial: clamp(3.2rem, 4vw, 5.4rem);
+  --vp-type-lead-story: clamp(2.8rem, 3vw, 4.2rem);
+  --vp-type-sub: clamp(2.2rem, 2vw, 2.8rem);
+  --vp-type-body-lead: clamp(1.7rem, 1.2vw, 2rem);
+  --vp-type-body: 1.7rem;
+  --vp-type-eyebrow: 1.2rem;
 
   /* structure */
   --vp-border: 1px solid rgba(var(--color-foreground), 0.12);
@@ -27,74 +45,297 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :root {
-    --vp-duration: 0ms;
-  }
+  :root { --vp-duration: 0ms; }
 }
 
-/* ---- product card refinement (mobile legibility, §36.7) ---- */
-
-.card__information .caption-with-letter-spacing {
-  font-size: 1.2rem;
-  letter-spacing: 0.08rem;
+@media screen and (min-width: 750px) {
+  :root { --vp-gutter: 5rem; }
 }
 
-.card__heading {
+/* Wider editorial canvas than Dawn's default, applied consistently so custom
+   and Dawn-derived sections align on the same grid. */
+.page-width,
+.vp-width {
+  max-width: var(--vp-container-max);
+  margin: 0 auto;
+}
+
+.vp-width {
+  padding-inline: var(--vp-gutter);
+}
+
+/* --------------------------------------------------------------------------
+   Typographic scale — more confident than Dawn's defaults
+   -------------------------------------------------------------------------- */
+
+.vp-eyebrow {
+  display: block;
+  margin: 0 0 1.6rem;
+  font-family: var(--font-body-family);
+  font-size: var(--vp-type-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: rgba(var(--color-foreground), 0.62);
+}
+
+.vp-heading-hero { font-size: var(--vp-type-hero); }
+.vp-heading-display { font-size: var(--vp-type-display); }
+.vp-heading-section { font-size: var(--vp-type-section); }
+.vp-heading-editorial { font-size: var(--vp-type-editorial); }
+
+.vp-heading-hero,
+.vp-heading-display,
+.vp-heading-section,
+.vp-heading-editorial {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+.vp-lead {
+  max-width: var(--vp-measure-lead);
+  margin: 2rem 0 0;
+  font-size: var(--vp-type-body-lead);
+  line-height: 1.6;
+  color: rgba(var(--color-foreground), 0.82);
+}
+
+.vp-lead > *:first-child { margin-top: 0; }
+.vp-lead > *:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Section rhythm
+   -------------------------------------------------------------------------- */
+
+.vp-section {
+  padding-block: var(--vp-space-l);
+}
+
+@media screen and (min-width: 750px) {
+  .vp-section { padding-block: var(--vp-space-xl); }
+}
+
+.vp-section--tight { padding-block: var(--vp-space-m); }
+
+.vp-section__header {
+  max-width: var(--vp-measure-text);
+  margin-bottom: var(--vp-space-m);
+}
+
+/* --------------------------------------------------------------------------
+   Actions
+   -------------------------------------------------------------------------- */
+
+.vp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.6rem 2.4rem;
+  margin-top: var(--vp-space-s);
+}
+
+.vp-actions .button { min-height: 4.8rem; }
+
+/* Secondary action stays clearly visible rather than fading into body text. */
+.vp-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 4.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.45);
+  transition: border-color var(--vp-duration) var(--vp-ease);
+}
+
+.vp-link:hover,
+.vp-link:focus-visible {
+  border-bottom-color: rgb(var(--color-foreground));
+}
+
+.vp-link--arrow::after {
+  content: '\2192';
+  margin-left: 0.8rem;
+  transition: transform var(--vp-duration) var(--vp-ease);
+}
+
+.vp-link--arrow:hover::after { transform: translateX(0.3rem); }
+
+/* --------------------------------------------------------------------------
+   Rich text — secondary pages must not read as raw Shopify rich text
+   -------------------------------------------------------------------------- */
+
+.vp-rte {
+  max-width: var(--vp-measure-article);
+  font-size: var(--vp-type-body);
+  line-height: 1.7;
+}
+
+.vp-rte > * + * { margin-top: 1.6rem; }
+
+.vp-rte h2 {
+  margin-top: var(--vp-space-l);
+  margin-bottom: 1.2rem;
+  font-size: var(--vp-type-sub);
+  line-height: 1.2;
+  letter-spacing: -0.008em;
+}
+
+.vp-rte h3 {
+  margin-top: var(--vp-space-m);
+  margin-bottom: 0.8rem;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.vp-rte h2 + p,
+.vp-rte h3 + p { margin-top: 0.8rem; }
+
+.vp-rte ul,
+.vp-rte ol { padding-left: 2.2rem; }
+
+.vp-rte li + li { margin-top: 0.6rem; }
+
+.vp-rte a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(var(--color-foreground), 0.4);
+}
+
+.vp-rte a:hover { text-decoration-color: currentColor; }
+
+.vp-rte blockquote {
+  margin: var(--vp-space-m) 0;
+  padding-left: 2.4rem;
+  border-left: 2px solid rgba(var(--color-foreground), 0.25);
+  font-family: var(--font-heading-family);
+  font-size: var(--vp-type-sub);
   line-height: 1.35;
 }
 
-@media screen and (max-width: 749px) {
-  .card__information .card__heading {
-    font-size: 1.6rem;
-  }
-
-  .card-information .price {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
+.vp-rte table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
 }
 
-/* verified differentiator line: material · condition */
+.vp-rte th,
+.vp-rte td {
+  padding: 1.2rem 1.6rem 1.2rem 0;
+  border-bottom: var(--vp-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.vp-rte th { font-weight: 600; }
+
+.vp-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --------------------------------------------------------------------------
+   Media
+   -------------------------------------------------------------------------- */
+
+.vp-media {
+  position: relative;
+  overflow: hidden;
+  background: rgba(var(--color-foreground), 0.05);
+}
+
+.vp-media > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vp-media--4x5 { aspect-ratio: 4 / 5; }
+.vp-media--3x2 { aspect-ratio: 3 / 2; }
+.vp-media--1x1 { aspect-ratio: 1 / 1; }
+
+.vp-media--zoom > img {
+  transition: transform 400ms var(--vp-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vp-media--zoom > img { transition: none; }
+}
+
+a:hover .vp-media--zoom > img { transform: scale(1.02); }
+
+/* --------------------------------------------------------------------------
+   Product cards — clean commercial surfaces, legible on mobile
+   -------------------------------------------------------------------------- */
+
+.card__information .caption-with-letter-spacing {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.card__heading {
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+
+/* Product names stay to two lines so grids keep an even baseline. */
+.card__heading a {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .card__meta-line {
-  margin-top: 0.2rem;
+  margin-top: 0.4rem;
   font-size: 1.3rem;
   color: rgba(var(--color-foreground), 0.72);
 }
 
+.card-information .price {
+  margin-top: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
 @media screen and (max-width: 749px) {
-  .card__meta-line {
-    font-size: 1.2rem;
-  }
+  .card__information .card__heading { font-size: 1.7rem; }
+  .card__meta-line { font-size: 1.2rem; }
+  .card-information .price { font-size: 1.5rem; }
 }
 
-/* keep sold cards fully readable, only slightly muted */
-.card-wrapper.card--sold-archive .card__media {
-  opacity: 0.92;
-}
+.card-wrapper.card--sold-archive .card__media { opacity: 0.94; }
 
-/* ---- filter & sort tap targets (§36.7) ---- */
+/* --------------------------------------------------------------------------
+   Filters, search and tap targets
+   -------------------------------------------------------------------------- */
 
 .mobile-facets__open,
 .facets__summary,
 .facet-filters__sort {
-  min-height: 44px;
+  min-height: 4.4rem;
 }
 
-.mobile-facets__open {
-  font-size: 1.5rem;
-}
+.mobile-facets__open { font-size: 1.5rem; }
 
-/* ---- popular searches in the search overlay ---- */
-
-.search-popular {
-  margin-top: 1.6rem;
-}
+.search-popular { margin-top: 1.6rem; }
 
 .search-popular__label {
   display: block;
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.6);
 }
@@ -111,7 +352,7 @@
 .search-popular__list a {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
+  min-height: 4.4rem;
   padding: 0 1.4rem;
   border: var(--vp-border);
   border-radius: var(--vp-radius);
@@ -123,14 +364,4 @@
 .search-popular__list a:hover,
 .search-popular__list a:focus-visible {
   border-color: rgba(var(--color-foreground), 0.55);
-}
-
-/* ---- footer refinements ---- */
-
-.footer__meta-note {
-  max-width: var(--vp-measure-text);
-  margin: 1.2rem auto 0;
-  font-size: 1.2rem;
-  color: rgba(var(--color-foreground), 0.65);
-  text-align: center;
 }

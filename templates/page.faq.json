@@ -1,31 +1,33 @@
 {
   "sections": {
-    "banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "page-hero",
       "settings": {
-        "image": "shopify://shop_images/pexels-white-gift-bag-7670677.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "show_text_below": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "image_behavior": "none"
+        "eyebrow": "FAQ",
+        "heading": "Questions, answered clearly.",
+        "color_scheme": "scheme-1"
       }
     },
     "main": {
       "type": "faq-page",
+      "settings": {}
+    },
+    "closing": {
+      "type": "service-panel",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 52
+        "eyebrow": "",
+        "heading": "Question about a particular bag?",
+        "heading_size": "h2",
+        "text": "<p>Include its product name or inventory reference and we will answer personally.</p>",
+        "button_label": "Contact us",
+        "button_link": "shopify://pages/contact",
+        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
-    "banner",
-    "main"
+    "hero",
+    "main",
+    "closing"
   ]
 }

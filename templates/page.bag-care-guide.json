@@ -1,31 +1,39 @@
 {
   "sections": {
-    "banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "page-hero",
       "settings": {
+        "eyebrow": "Preserving your piece",
+        "heading": "Caring for a pre-owned bag.",
         "image": "shopify://shop_images/pexels-leather-workshop-tools-4452603.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "show_text_below": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "image_behavior": "none"
+        "image_ratio": "landscape",
+        "color_scheme": "scheme-1"
       }
     },
     "main": {
       "type": "main-page",
       "settings": {
+        "show_title": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 64
+      }
+    },
+    "closing": {
+      "type": "service-panel",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Explore available pieces",
+        "heading_size": "h2",
+        "text": "<p>Vintage and pre-owned bags, each documented individually.</p>",
+        "button_label": "Explore all bags",
+        "button_link": "shopify://collections/all-bags",
+        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
-    "banner",
-    "main"
+    "hero",
+    "main",
+    "closing"
   ]
 }

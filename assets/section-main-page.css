@@ -21,3 +21,10 @@
   width: 52.5rem;
   height: 52.5rem;
 }
+
+/* The page title uses the custom display scale; body content is held to a
+   readable measure by .vp-rte. */
+.main-page-title {
+  margin-bottom: var(--vp-space-m);
+  max-width: 20ch;
+}

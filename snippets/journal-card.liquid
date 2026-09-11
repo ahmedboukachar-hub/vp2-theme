@@ -1,0 +1,69 @@
+{% comment %}
+  Renders one Journal card in the editorial system.
+
+  Accepts:
+  - article: {Object} Article Liquid object (required)
+  - variant: {String} 'lead' or 'secondary' (default: 'secondary')
+  - show_excerpt: {Boolean} show the standfirst (default: true for lead)
+  - heading_class: {String} optional override for the headline class
+  - sizes: {String} image sizes attribute
+{% endcomment %}
+
+{%- liquid
+  assign variant = variant | default: 'secondary'
+  assign words = article.content | strip_html | split: ' ' | size
+  assign minutes = words | divided_by: 200
+  if minutes < 1
+    assign minutes = 1
+  endif
+  assign topic = article.tags | first
+  if heading_class == blank
+    if variant == 'lead'
+      assign heading_class = 'journal-card__title journal-card__title--lead'
+    else
+      assign heading_class = 'journal-card__title'
+    endif
+  endif
+-%}
+
+<article class="journal-card journal-card--{{ variant }}">
+  <a class="journal-card__link" href="{{ article.url }}">
+    {%- if article.image -%}
+      <div class="journal-card__media vp-media vp-media--zoom{% if variant == 'lead' %} vp-media--3x2{% else %} vp-media--1x1{% endif %}">
+        {{
+          article.image
+          | image_url: width: 1600
+          | image_tag:
+            loading: 'lazy',
+            widths: '300, 450, 600, 900, 1200, 1600',
+            sizes: sizes | default: '(min-width: 990px) 45vw, 100vw',
+            alt: article.image.alt | escape
+        }}
+      </div>
+    {%- endif -%}
+
+    <div class="journal-card__info">
+      {%- if topic != blank -%}
+        <span class="vp-eyebrow journal-card__topic">{{ topic | escape }}</span>
+      {%- endif -%}
+
+      <h3 class="{{ heading_class }}">{{ article.title | escape }}</h3>
+
+      {%- if show_excerpt != false and article.excerpt_or_content != blank -%}
+        <p class="journal-card__excerpt">
+          {{- article.excerpt_or_content | strip_html | truncatewords: 26 -}}
+        </p>
+      {%- endif -%}
+
+      <p class="journal-card__meta">
+        <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+          {{- article.published_at | time_tag: format: 'date' | strip_html -}}
+        </time>
+        <span aria-hidden="true">·</span>
+        {{ 'blogs.article.min_read' | t: count: minutes }}
+      </p>
+
+      <span class="vp-link vp-link--arrow journal-card__read">{{ 'blogs.article.read_article' | t }}</span>
+    </div>
+  </a>
+</article>

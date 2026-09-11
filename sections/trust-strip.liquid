@@ -1,121 +1,74 @@
 {{ 'section-trust-strip.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  #TrustStrip-{{ section.id }} .trust-strip__inner {
+    padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
+    #TrustStrip-{{ section.id }} .trust-strip__inner {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 {%- endstyle -%}
 
-<div class="trust-strip color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_borders %} trust-strip--bordered{% endif %}">
-  <div class="page-width section-{{ section.id }}-padding">
-    <ul class="trust-strip__list" role="list">
-      {%- for block in section.blocks -%}
-        <li class="trust-strip__item" {{ block.shopify_attributes }}>
-          {%- if block.settings.heading != blank -%}
-            <h2 class="trust-strip__heading h5">{{ block.settings.heading | escape }}</h2>
-          {%- endif -%}
-          {%- if block.settings.text != blank -%}
-            <div class="trust-strip__text rte">{{ block.settings.text }}</div>
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
-    </ul>
+{%- if section.blocks.size > 0 -%}
+  <div id="TrustStrip-{{ section.id }}" class="trust-strip color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_borders %} trust-strip--bordered{% endif %}">
+    <div class="vp-width trust-strip__inner">
+      <ul class="trust-strip__list" role="list">
+        {%- for block in section.blocks -%}
+          <li class="trust-strip__item" {{ block.shopify_attributes }}>
+            {%- if block.settings.heading != blank -%}
+              <h2 class="trust-strip__heading">{{ block.settings.heading | escape }}</h2>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <div class="trust-strip__text rte">{{ block.settings.text }}</div>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- if section.settings.link_label != blank and section.settings.link_url != blank -%}
+        <p class="trust-strip__link-row">
+          <a href="{{ section.settings.link_url }}" class="vp-link vp-link--arrow">
+            {{- section.settings.link_label | escape -}}
+          </a>
+        </p>
+      {%- endif -%}
+    </div>
   </div>
-</div>
+{%- endif -%}
 
 {% schema %}
 {
-  "name": "Trust strip",
+  "name": "Proof strip",
   "tag": "section",
-  "class": "section",
   "max_blocks": 4,
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "disabled_on": { "groups": ["header", "footer"] },
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_borders",
-      "label": "Show top and bottom border",
-      "default": true
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Top padding",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Bottom padding",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "default": 36
-    }
+    { "type": "checkbox", "id": "show_borders", "label": "Show top and bottom rules", "default": true },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "How we select our pieces" },
+    { "type": "url", "id": "link_url", "label": "Link" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-3" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 56 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 56 }
   ],
   "blocks": [
     {
       "type": "item",
-      "name": "Item",
+      "name": "Fact",
       "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "Carefully curated"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text"
-        }
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Individually selected" },
+        { "type": "richtext", "id": "text", "label": "Text" }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Trust strip",
-      "blocks": [
-        {
-          "type": "item",
-          "settings": {
-            "heading": "Carefully curated"
-          }
-        },
-        {
-          "type": "item",
-          "settings": {
-            "heading": "Condition, clearly described"
-          }
-        },
-        {
-          "type": "item",
-          "settings": {
-            "heading": "Secure checkout"
-          }
-        }
-      ]
+      "name": "Proof strip",
+      "blocks": [{ "type": "item" }, { "type": "item" }, { "type": "item" }]
     }
   ]
 }

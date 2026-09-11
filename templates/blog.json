@@ -1,36 +1,19 @@
 {
   "sections": {
-    "banner": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify://shop_images/owner-lv-backpack-dusk.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "show_text_below": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "image_behavior": "none"
-      }
-    },
     "main": {
-      "type": "main-blog",
+      "type": "journal-index",
       "settings": {
-        "layout": "collage",
-        "show_image": true,
-        "image_height": "medium",
-        "show_date": true,
-        "show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "eyebrow": "The Journal",
+        "heading": "Icons, details and the stories they carry.",
+        "intro": "<p>Explore the design history, practical details and distinctive character of the bags we collect, source and admire.</p>",
+        "feature_first_article": true,
+        "show_topics": true,
+        "articles_per_page": 12,
+        "color_scheme": "scheme-1"
       }
     }
   },
   "order": [
-    "banner",
     "main"
   ]
 }
