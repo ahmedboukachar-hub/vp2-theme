@@ -18,8 +18,6 @@
           "type": "announcement",
           "settings": {
             "text": "A considered collection of vintage and pre-owned designer pieces.",
-            "text_alignment": "center",
-            "color_scheme": "scheme-1",
             "link": ""
           }
         }
