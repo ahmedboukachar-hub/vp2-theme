@@ -1,31 +1,22 @@
 {
   "sections": {
-    "banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "page-hero",
       "settings": {
+        "eyebrow": "Find a bag",
+        "heading": "Tell us what you are looking for.",
         "image": "shopify://shop_images/owner-lv-pochette-walking.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "show_text_below": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "image_behavior": "none"
+        "image_ratio": "landscape",
+        "color_scheme": "scheme-1"
       }
     },
     "main": {
       "type": "find-a-bag-form",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 52
-      }
+      "settings": {}
     }
   },
   "order": [
-    "banner",
+    "hero",
     "main"
   ]
 }

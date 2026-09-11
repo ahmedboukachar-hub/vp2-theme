@@ -6,105 +6,69 @@
 .split-hero__copy {
   display: flex;
   align-items: center;
-  padding: var(--vp-space-l, 5.6rem) 2.4rem;
+  padding: var(--vp-space-l) var(--vp-gutter);
 }
 
 .split-hero__copy-inner {
-  max-width: 52rem;
-  margin: 0 auto;
   width: 100%;
-}
-
-.split-hero__eyebrow {
-  margin: 0 0 1.2rem;
-  opacity: 0.8;
-}
-
-.split-hero__heading {
-  margin: 0;
-}
-
-.split-hero__text {
-  margin-top: 1.6rem;
-  max-width: var(--vp-measure-lead, 60rem);
-}
-
-.split-hero__text > * {
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 1.55;
+  max-width: 56rem;
+  margin: 0 auto;
 }
 
 .split-hero__actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.4rem;
-  margin-top: 2.8rem;
-}
-
-.split-hero__link {
-  font-size: 1.5rem;
+  margin-top: var(--vp-space-m);
 }
 
 .split-hero__media {
-  position: relative;
-  overflow: hidden;
   background: rgba(var(--color-foreground), 0.05);
 }
 
-.split-hero__media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* mobile: copy first, then a 4:5 image; primary CTA near full width */
+/* Mobile: copy first, then a 4:5 image; primary CTA near full width so the
+   secondary link stays a distinct, still-visible second action. */
 @media screen and (max-width: 749px) {
-  .split-hero__media {
-    aspect-ratio: 4 / 5;
-  }
+  .split-hero__media { aspect-ratio: 4 / 5; }
 
   .split-hero--no-image .split-hero__media {
     aspect-ratio: auto;
-    min-height: 6rem;
+    min-height: 4rem;
+  }
+
+  .split-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.6rem;
   }
 
   .split-hero__button {
     width: 100%;
     justify-content: center;
   }
+
+  .split-hero__actions .vp-link { align-self: flex-start; }
 }
 
 @media screen and (min-width: 750px) {
   .split-hero {
     flex-direction: row;
-    min-height: min(78vh, 90rem);
+    align-items: stretch;
+    min-height: clamp(65rem, 78vh, 82rem);
   }
 
   .split-hero__copy {
-    flex: 0 0 42%;
-    padding: var(--vp-space-xl, 9.6rem) clamp(3.2rem, 5vw, 8rem);
+    flex: 0 0 46%;
+    padding: var(--vp-space-xl) clamp(4rem, 5vw, 8rem);
   }
 
-  /* copy sits slightly below optical centre */
   .split-hero__copy-inner {
     margin: auto;
-    transform: translateY(4%);
+    transform: translateY(3%);
   }
 
   .split-hero__media {
-    flex: 1 1 58%;
+    flex: 1 1 54%;
   }
 
   .split-hero--no-image .split-hero__media {
     background: rgba(var(--color-foreground), 0.04);
-  }
-
-  .split-hero__actions {
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem 2.4rem;
   }
 }

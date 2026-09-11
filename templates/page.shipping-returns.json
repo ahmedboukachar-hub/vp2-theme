@@ -1,30 +1,34 @@
 {
   "sections": {
-    "banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "page-hero",
       "settings": {
-        "image": "shopify://shop_images/pexels-gift-boxes-beige-5872362.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "show_text_below": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "image_behavior": "none"
+        "eyebrow": "Delivery & returns",
+        "heading": "Clear information, before you order.",
+        "color_scheme": "scheme-1"
       }
     },
     "main": {
       "type": "main-page",
       "settings": {
+        "show_title": false,
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 64
       }
     },
     "info": {
       "type": "collapsible-content",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently asked",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "padding_top": 28,
+        "padding_bottom": 52
+      },
       "blocks": {
         "row_shipping": {
           "type": "collapsible_row",
@@ -64,23 +68,25 @@
         "row_returns",
         "row_payment",
         "row_contact"
-      ],
+      ]
+    },
+    "closing": {
+      "type": "service-panel",
       "settings": {
-        "caption": "",
-        "heading": "",
-        "heading_size": "h1",
-        "heading_alignment": "left",
-        "layout": "none",
-        "color_scheme": "scheme-1",
-        "open_first_collapsible_row": true,
-        "padding_top": 28,
-        "padding_bottom": 52
+        "eyebrow": "",
+        "heading": "Still have a question?",
+        "heading_size": "h2",
+        "text": "<p>Ask about a particular piece, an existing order or one of our services.</p>",
+        "button_label": "Contact us",
+        "button_link": "shopify://pages/contact",
+        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
-    "banner",
+    "hero",
     "main",
-    "info"
+    "info",
+    "closing"
   ]
 }

@@ -121,7 +121,11 @@
       "min_read": {
         "one": "{{ count }} min read",
         "other": "{{ count }} min read"
-      }
+      },
+      "read_article": "Read article",
+      "topics": "Topics",
+      "all_topics": "All stories",
+      "empty": "There are no stories here yet."
     }
   },
   "onboarding": {
@@ -166,7 +170,8 @@
         "image_available": "Image {{ index }} is now available in gallery view",
         "open_media": "Open media {{ index }} in modal",
         "play_model": "Play 3D Viewer",
-        "play_video": "Play video"
+        "play_video": "Play video",
+        "photography_pending": "Photography pending"
       },
       "nested_label": "{{ title }} for {{ parent_title }}",
       "quantity": {
@@ -519,7 +524,9 @@
       "find_similar": "Find a similar piece",
       "explore_available": "Explore available bags",
       "empty_heading": "The archive is taking shape",
-      "empty_body": "Previously curated pieces will appear here."
+      "empty_body": "Previously curated pieces will appear here.",
+      "previously_sourced": "Previously sourced",
+      "found_new_home": "This piece has found a new home"
     },
     "drop_signup": {
       "heading": "Hear about new pieces first",
@@ -527,6 +534,9 @@
       "email_placeholder": "Email address",
       "submit": "Join the list",
       "success": "Thank you. You are on the list."
+    },
+    "featured_designers": {
+      "explore": "Explore {{ designer }}"
     }
   },
   "localization": {

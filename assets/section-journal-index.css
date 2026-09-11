@@ -1,0 +1,91 @@
+.journal-index {
+  padding-block: var(--vp-space-l) var(--vp-space-xl);
+}
+
+.journal-index__hero {
+  max-width: 92rem;
+  margin-bottom: var(--vp-space-l);
+}
+
+.journal-index__intro { margin-top: 2.4rem; }
+
+.journal-index__topics {
+  margin-bottom: var(--vp-space-l);
+  padding-bottom: var(--vp-space-s);
+  border-bottom: var(--vp-border);
+}
+
+.journal-index__topics ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 2.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.journal-index__topic {
+  display: inline-flex;
+  align-items: center;
+  min-height: 4.4rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.65);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color var(--vp-duration) var(--vp-ease);
+}
+
+.journal-index__topic:hover { color: rgb(var(--color-foreground)); }
+
+.journal-index__topic--active {
+  color: rgb(var(--color-foreground));
+  border-bottom-color: rgb(var(--color-foreground));
+}
+
+.journal-index__feature {
+  padding-bottom: var(--vp-space-l);
+  margin-bottom: var(--vp-space-l);
+  border-bottom: var(--vp-border);
+}
+
+.journal-index__feature-title {
+  font-size: var(--vp-type-editorial);
+  line-height: 1.05;
+}
+
+.journal-index__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--vp-space-m);
+}
+
+.journal-index__empty {
+  max-width: var(--vp-measure-lead);
+  font-size: var(--vp-type-body-lead);
+}
+
+@media screen and (min-width: 750px) {
+  .journal-index__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (min-width: 990px) {
+  .journal-index__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--vp-space-l) var(--vp-space-m);
+  }
+
+  /* The featured story uses an asymmetric composition: oversized image left,
+     headline and standfirst held to a readable column on the right. */
+  .journal-index__feature .journal-card__link {
+    display: grid;
+    grid-template-columns: 62fr 38fr;
+    gap: var(--vp-space-m);
+    align-items: center;
+  }
+
+  .journal-index__feature .journal-card__info { padding-top: 0; }
+}

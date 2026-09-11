@@ -1,0 +1,126 @@
+{{ 'component-journal-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-journal-index.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign per_page = section.settings.articles_per_page
+  assign feature_first = section.settings.feature_first_article
+-%}
+
+<div class="journal-index color-{{ section.settings.color_scheme }} gradient">
+  <div class="vp-width">
+    <header class="journal-index__hero">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="vp-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- endif -%}
+      <h1 class="vp-heading-display">
+        {{- section.settings.heading | default: blog.title | escape -}}
+      </h1>
+      {%- if section.settings.intro != blank -%}
+        <div class="vp-lead rte journal-index__intro">{{ section.settings.intro }}</div>
+      {%- endif -%}
+    </header>
+
+    {%- if blog.all_tags.size > 0 and section.settings.show_topics -%}
+      <nav class="journal-index__topics" aria-label="{{ 'blogs.article.topics' | t }}">
+        <ul role="list">
+          <li>
+            <a
+              href="{{ blog.url }}"
+              class="journal-index__topic{% if current_tags == blank %} journal-index__topic--active{% endif %}"
+              {% if current_tags == blank %}aria-current="page"{% endif %}
+            >
+              {{- 'blogs.article.all_topics' | t -}}
+            </a>
+          </li>
+          {%- for tag in blog.all_tags -%}
+            <li>
+              <a
+                href="{{ blog.url }}/tagged/{{ tag | handleize }}"
+                class="journal-index__topic{% if current_tags contains tag %} journal-index__topic--active{% endif %}"
+                {% if current_tags contains tag %}aria-current="page"{% endif %}
+              >
+                {{- tag | escape -}}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endif -%}
+
+    {%- paginate blog.articles by per_page -%}
+      {%- if blog.articles.size == 0 -%}
+        <p class="journal-index__empty">{{ 'blogs.article.empty' | t }}</p>
+      {%- else -%}
+        {%- liquid
+          assign show_feature = false
+          if feature_first and paginate.current_page == 1 and current_tags == blank
+            assign show_feature = true
+          endif
+        -%}
+
+        {%- if show_feature -%}
+          <div class="journal-index__feature">
+            {% render 'journal-card',
+              article: blog.articles.first,
+              variant: 'lead',
+              heading_class: 'journal-card__title journal-index__feature-title',
+              sizes: '(min-width: 990px) 62vw, 100vw'
+            %}
+          </div>
+        {%- endif -%}
+
+        <ul class="journal-index__grid" role="list">
+          {%- for article in blog.articles -%}
+            {%- if show_feature and forloop.first -%}
+              {%- continue -%}
+            {%- endif -%}
+            <li class="journal-index__item">
+              {% render 'journal-card',
+                article: article,
+                variant: 'grid',
+                sizes: '(min-width: 990px) 30vw, 100vw'
+              %}
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        {%- if paginate.pages > 1 -%}
+          {% render 'pagination', paginate: paginate, anchor: '' %}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Journal index",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Journal" },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Leave empty to use the blog title.",
+      "default": "Icons, details and the stories they carry."
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Introduction",
+      "default": "<p>Explore the design history, practical details and distinctive character of the bags we collect, source and admire.</p>"
+    },
+    { "type": "checkbox", "id": "feature_first_article", "label": "Feature the most recent article", "default": true },
+    {
+      "type": "checkbox",
+      "id": "show_topics",
+      "label": "Show topic navigation",
+      "info": "Uses the article tags that actually exist. Hidden when the blog has no tags.",
+      "default": true
+    },
+    { "type": "range", "id": "articles_per_page", "label": "Articles per page", "min": 6, "max": 24, "step": 3, "default": 12 },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
+  ]
+}
+{% endschema %}

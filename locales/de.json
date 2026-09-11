@@ -121,7 +121,11 @@
       "min_read": {
         "one": "{{ count }} Min. Lesezeit",
         "other": "{{ count }} Min. Lesezeit"
-      }
+      },
+      "read_article": "Beitrag lesen",
+      "topics": "Themen",
+      "all_topics": "Alle Beiträge",
+      "empty": "Hier gibt es noch keine Beiträge."
     }
   },
   "onboarding": {
@@ -177,7 +181,8 @@
         "load_image": "Bild {{ index }} in Galerieansicht laden",
         "load_model": "3D-Modell {{ index }} in Galerieansicht laden",
         "load_video": "Video {{ index }} in Galerieansicht abspielen",
-        "image_available": "Bild {{ index }} ist nun in der Galerieansicht verfügbar"
+        "image_available": "Bild {{ index }} ist nun in der Galerieansicht verfügbar",
+        "photography_pending": "Fotografie folgt"
       },
       "nested_label": "{{ title }} für {{ parent_title }}",
       "view_full_details": "Vollständige Details anzeigen",
@@ -519,7 +524,9 @@
       "find_similar": "Ein ähnliches Stück finden",
       "explore_available": "Verfügbare Taschen entdecken",
       "empty_heading": "Das Archiv nimmt Gestalt an",
-      "empty_body": "Zuvor kuratierte Stücke erscheinen hier."
+      "empty_body": "Zuvor kuratierte Stücke erscheinen hier.",
+      "previously_sourced": "Zuvor gefunden",
+      "found_new_home": "Dieses Stück hat ein neues Zuhause gefunden"
     },
     "drop_signup": {
       "heading": "Erfahren Sie zuerst von neuen Stücken",
@@ -527,6 +534,9 @@
       "email_placeholder": "E-Mail-Adresse",
       "submit": "In die Liste eintragen",
       "success": "Vielen Dank. Sie stehen auf der Liste."
+    },
+    "featured_designers": {
+      "explore": "{{ designer }} entdecken"
     }
   },
   "localization": {

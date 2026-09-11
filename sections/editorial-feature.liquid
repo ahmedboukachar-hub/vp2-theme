@@ -1,0 +1,81 @@
+{{ 'section-editorial-feature.css' | asset_url | stylesheet_tag }}
+
+<div class="editorial-feature color-{{ section.settings.color_scheme }} gradient{% if section.settings.layout == 'text_first' %} editorial-feature--text-first{% endif %}">
+  <div class="editorial-feature__media vp-media">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 2200
+        | image_tag:
+          loading: 'lazy',
+          widths: '375, 550, 750, 1100, 1500, 1800, 2200',
+          sizes: '(min-width: 750px) 58vw, 100vw'
+      }}
+    {%- endif -%}
+  </div>
+
+  <div class="editorial-feature__copy">
+    <div class="editorial-feature__copy-inner{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="vp-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="vp-heading-editorial inline-richtext">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="vp-lead rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <div class="vp-actions">
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button"
+          >
+            {{- section.settings.button_label | escape -}}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Editorial feature",
+  "tag": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "A single decisive editorial section. Pair it with a dark colour scheme to break a run of pale sections."
+    },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Desktop layout",
+      "options": [
+        { "value": "image_first", "label": "Image left" },
+        { "value": "text_first", "label": "Image right" }
+      ],
+      "default": "image_first"
+    },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The selection" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Chosen with a collector’s eye." },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>We look beyond the name alone. Each piece is considered for its design, condition and the character it has developed over time.</p>"
+    },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Discover our approach" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-4" }
+  ],
+  "presets": [{ "name": "Editorial feature" }]
+}
+{% endschema %}

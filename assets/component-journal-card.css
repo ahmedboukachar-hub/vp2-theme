@@ -1,0 +1,76 @@
+.journal-card__link {
+  display: block;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+}
+
+.journal-card__info { padding-top: 1.6rem; }
+
+.journal-card__topic { margin-bottom: 0.8rem; }
+
+.journal-card__title {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(2rem, 2.2vw, 2.8rem);
+  line-height: 1.18;
+  letter-spacing: -0.008em;
+  text-wrap: balance;
+}
+
+.journal-card__title--lead {
+  font-size: var(--vp-type-lead-story);
+  line-height: 1.08;
+}
+
+.journal-card__link:hover .journal-card__title {
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 1px;
+}
+
+.journal-card__excerpt {
+  margin: 1.2rem 0 0;
+  max-width: 56rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: rgba(var(--color-foreground), 0.78);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.journal-card__meta {
+  margin: 1.2rem 0 0;
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.journal-card__read {
+  margin-top: 1.2rem;
+  min-height: 0;
+  font-size: 1.4rem;
+  border-bottom-color: rgba(var(--color-foreground), 0.3);
+}
+
+.journal-card__link:hover .journal-card__read,
+.journal-card__link:focus-visible .journal-card__read {
+  border-bottom-color: rgb(var(--color-foreground));
+}
+
+/* Secondary cards read as compact editorial rows on small screens. */
+@media screen and (max-width: 749px) {
+  .journal-card--secondary .journal-card__link {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 1.6rem;
+    align-items: start;
+  }
+
+  .journal-card--secondary .journal-card__info { padding-top: 0; }
+  .journal-card--secondary .journal-card__meta { margin-top: 0.8rem; }
+  .journal-card--secondary .journal-card__read { display: none; }
+}
+
+/* Grid cards keep one consistent ratio across the Journal index. */
+.journal-card--grid .journal-card__media { aspect-ratio: 4 / 5; }

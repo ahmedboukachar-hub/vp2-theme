@@ -1,0 +1,20 @@
+.article-related__heading { margin-bottom: var(--vp-space-m); }
+
+.article-related__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--vp-space-m);
+}
+
+.article-related__cta {
+  margin-top: var(--vp-space-xl);
+  padding-top: var(--vp-space-l);
+  border-top: var(--vp-border);
+  max-width: var(--vp-measure-text);
+}
+
+@media screen and (min-width: 750px) {
+  .article-related__grid { grid-template-columns: repeat(3, 1fr); }
+}

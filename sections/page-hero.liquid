@@ -1,0 +1,81 @@
+{{ 'section-page-hero.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading = section.settings.heading | default: page.title
+  assign has_media = false
+  if section.settings.image != blank
+    assign has_media = true
+  endif
+-%}
+
+<div class="page-hero color-{{ section.settings.color_scheme }} gradient{% if has_media %} page-hero--with-media{% endif %}">
+  <div class="vp-width page-hero__inner">
+    <div class="page-hero__copy">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="vp-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- endif -%}
+      {%- if heading != blank -%}
+        <h1 class="vp-heading-display page-hero__title">{{ heading | escape }}</h1>
+      {%- endif -%}
+      {%- if section.settings.intro != blank -%}
+        <div class="vp-lead rte page-hero__intro">{{ section.settings.intro }}</div>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+        <div class="vp-actions">
+          <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label | escape }}</a>
+          {%- if section.settings.link_label != blank and section.settings.link_url != blank -%}
+            <a href="{{ section.settings.link_url }}" class="vp-link vp-link--arrow">
+              {{- section.settings.link_label | escape -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if has_media -%}
+      <div class="page-hero__media vp-media{% if section.settings.image_ratio == 'portrait' %} vp-media--4x5{% else %} vp-media--3x2{% endif %}">
+        {{
+          section.settings.image
+          | image_url: width: 1800
+          | image_tag:
+            loading: 'eager',
+            widths: '375, 550, 750, 1100, 1400, 1800',
+            sizes: '(min-width: 750px) 42vw, 100vw'
+        }}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Typography-led page opening. Leave the heading empty to use the page title. Keep the introduction empty when the page content already opens with one."
+    },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "intro", "label": "Introduction" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "options": [
+        { "value": "portrait", "label": "Portrait (4:5)" },
+        { "value": "landscape", "label": "Landscape (3:2)" }
+      ],
+      "default": "portrait"
+    },
+    { "type": "text", "id": "button_label", "label": "Button label" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "text", "id": "link_label", "label": "Text link label" },
+    { "type": "url", "id": "link_url", "label": "Text link" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
+  ],
+  "presets": [{ "name": "Page hero" }]
+}
+{% endschema %}

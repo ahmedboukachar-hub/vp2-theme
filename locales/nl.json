@@ -121,7 +121,11 @@
       "min_read": {
         "one": "{{ count }} min leestijd",
         "other": "{{ count }} min leestijd"
-      }
+      },
+      "read_article": "Lees het artikel",
+      "topics": "Onderwerpen",
+      "all_topics": "Alle verhalen",
+      "empty": "Hier staan nog geen verhalen."
     }
   },
   "onboarding": {
@@ -177,7 +181,8 @@
         "load_image": "Afbeelding {{ index }} laden in gallery-weergave",
         "load_model": "3D-model {{ index }} laden in gallery-weergave",
         "load_video": "Video {{ index }} afspelen in gallery-weergave",
-        "image_available": "Afbeelding {{ index }} is nu beschikbaar in gallery-weergave"
+        "image_available": "Afbeelding {{ index }} is nu beschikbaar in gallery-weergave",
+        "photography_pending": "Fotografie volgt"
       },
       "nested_label": "{{ title }} voor {{ parent_title }}",
       "view_full_details": "Alle details bekijken",
@@ -519,7 +524,9 @@
       "find_similar": "Vind een vergelijkbaar stuk",
       "explore_available": "Ontdek beschikbare tassen",
       "empty_heading": "Het archief krijgt vorm",
-      "empty_body": "Eerder gecureerde stukken verschijnen hier."
+      "empty_body": "Eerder gecureerde stukken verschijnen hier.",
+      "previously_sourced": "Eerder gevonden",
+      "found_new_home": "Dit stuk heeft een nieuw thuis gevonden"
     },
     "drop_signup": {
       "heading": "Hoor als eerste over nieuwe stukken",
@@ -527,6 +534,9 @@
       "email_placeholder": "E-mailadres",
       "submit": "Schrijf je in",
       "success": "Bedankt. Je staat op de lijst."
+    },
+    "featured_designers": {
+      "explore": "Ontdek {{ designer }}"
     }
   },
   "localization": {

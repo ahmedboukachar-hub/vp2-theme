@@ -4,56 +4,53 @@
       "type": "editorial-split-hero",
       "settings": {
         "image": "shopify://shop_images/editorial-monogram-bags-flatlay.jpg",
-        "eyebrow": "The latest edit",
-        "heading": "Rare pieces, chosen with care.",
-        "heading_size": "h1",
+        "eyebrow": "Curated vintage & pre-owned",
+        "heading": "Iconic bags, chosen one by one.",
         "text": "<p>A considered collection of vintage and pre-owned designer bags, selected for their character, condition and enduring appeal.</p>",
         "button_label": "Shop new arrivals",
         "button_link": "shopify://collections/new-arrivals",
-        "link_label": "Explore all bags",
-        "link_url": "shopify://collections/all-bags",
-        "color_scheme": "scheme-2"
+        "link_label": "Explore designers",
+        "link_url": "shopify://pages/designers",
+        "color_scheme": "scheme-1"
       }
     },
     "proof": {
       "type": "trust-strip",
       "blocks": {
-        "proof_pieces": {
+        "proof_selected": {
           "type": "item",
           "settings": {
-            "heading": "Individual pieces"
+            "heading": "Individually selected",
+            "text": "<p>Every piece is chosen for its design, condition and individual character.</p>"
           }
         },
-        "proof_condition": {
+        "proof_documented": {
           "type": "item",
           "settings": {
-            "heading": "Detailed condition notes"
+            "heading": "Honestly documented",
+            "text": "<p>Visible signs of wear are described clearly and photographed in detail.</p>"
           }
         },
-        "proof_questions": {
+        "proof_exact": {
           "type": "item",
           "settings": {
-            "heading": "Questions welcomed"
-          }
-        },
-        "proof_delivery": {
-          "type": "item",
-          "settings": {
-            "heading": "Delivery options shown at checkout"
+            "heading": "The exact piece shown",
+            "text": "<p>You receive the unique item presented in the photographs.</p>"
           }
         }
       },
       "block_order": [
-        "proof_pieces",
-        "proof_condition",
-        "proof_questions",
-        "proof_delivery"
+        "proof_selected",
+        "proof_documented",
+        "proof_exact"
       ],
       "settings": {
         "show_borders": true,
-        "color_scheme": "scheme-1",
-        "padding_top": 24,
-        "padding_bottom": 24
+        "link_label": "How we select our pieces",
+        "link_url": "shopify://pages/our-curation",
+        "color_scheme": "scheme-3",
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "new_arrivals": {
@@ -66,7 +63,7 @@
         "collection": "new-arrivals",
         "products_to_show": 4,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "outline",
@@ -79,60 +76,7 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "padding_top": 96,
-        "padding_bottom": 72
-      }
-    },
-    "curation": {
-      "type": "image-with-text",
-      "blocks": {
-        "curation_caption": {
-          "type": "caption",
-          "settings": {
-            "caption": "Our point of view",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "small"
-          }
-        },
-        "curation_heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Chosen individually. Described honestly.",
-            "heading_size": "h1"
-          }
-        },
-        "curation_text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pre-owned luxury is personal. Every piece has its own materials, proportions and signs of wear. We present those details clearly, so you can choose the bag that feels right for you.</p>",
-            "text_style": "body"
-          }
-        },
-        "curation_button": {
-          "type": "button",
-          "settings": {
-            "button_label": "How we curate",
-            "button_link": "shopify://pages/our-curation",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "curation_caption",
-        "curation_heading",
-        "curation_text",
-        "curation_button"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/owner-lv-speedy-warm-light.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-1",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 96
       }
     },
     "designers": {
@@ -149,26 +93,30 @@
           "settings": {
             "collection": "gucci"
           }
-        },
-        "designer_jacquemus": {
-          "type": "designer",
-          "settings": {
-            "collection": "jacquemus"
-          }
         }
       },
       "block_order": [
         "designer_louis_vuitton",
-        "designer_gucci",
-        "designer_jacquemus"
+        "designer_gucci"
       ],
       "settings": {
-        "title": "Explore the houses",
-        "heading_size": "h2",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-1",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "eyebrow": "The houses",
+        "title": "Houses that shaped the modern handbag.",
+        "columns_desktop": "2",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "editorial": {
+      "type": "editorial-feature",
+      "settings": {
+        "image": "shopify://shop_images/owner-lv-backpack-dusk.jpg",
+        "layout": "image_first",
+        "eyebrow": "The selection",
+        "heading": "Chosen with a collector’s eye.",
+        "text": "<p>We look beyond the name alone. Each piece is considered for its design, condition and the character it has developed over time.</p>",
+        "button_label": "Discover our approach",
+        "button_link": "shopify://pages/authenticity",
+        "color_scheme": "scheme-4"
       }
     },
     "find_a_bag": {
@@ -177,8 +125,8 @@
         "eyebrow": "Personal sourcing",
         "heading": "Looking for a particular piece?",
         "heading_size": "h1",
-        "text": "<p>Tell us the house, model, colour or era you have in mind. We will keep your request in view as we source new pieces.</p>",
-        "button_label": "Start a search",
+        "text": "<p>Tell us which designer, model or era you are searching for. We will use your request to guide our sourcing—without promising availability or a delivery date.</p>",
+        "button_label": "Start a search request",
         "button_link": "shopify://pages/find-a-bag",
         "color_scheme": "scheme-2"
       }
@@ -186,29 +134,25 @@
     "archive": {
       "type": "archive-feature",
       "settings": {
-        "eyebrow": "Past pieces",
+        "eyebrow": "Previously sourced",
         "heading": "From the archive",
-        "heading_size": "h1",
-        "text": "<p>A record of pieces that have passed through our collection — and a place to discover what we may be able to source again.</p>",
+        "text": "<p>A record of pieces previously selected and since placed with new owners. Looking for something similar? Share the designer and model with us through Find a Bag.</p>",
         "collection": "archive",
         "products_to_show": 3,
+        "show_price": false,
         "button_label": "Explore the archive",
-        "color_scheme": "scheme-1",
-        "padding_top": 96,
-        "padding_bottom": 96
+        "color_scheme": "scheme-1"
       }
     },
     "journal": {
       "type": "journal-feature",
       "settings": {
         "blog": "journal",
-        "eyebrow": "Notes from the archive",
-        "heading": "Stories, details and buying guides",
-        "heading_size": "h1",
-        "button_label": "Visit the Journal",
-        "color_scheme": "scheme-1",
-        "padding_top": 96,
-        "padding_bottom": 96
+        "eyebrow": "The Journal",
+        "heading": "Stories behind the pieces.",
+        "text": "<p>Guides to iconic models, materials, condition and care—created to help you choose with confidence and appreciate what makes each piece endure.</p>",
+        "button_label": "Explore the Journal",
+        "color_scheme": "scheme-3"
       }
     },
     "newsletter": {
@@ -217,14 +161,14 @@
         "newsletter_heading": {
           "type": "heading",
           "settings": {
-            "heading": "The next piece may not return.",
+            "heading": "New pieces, thoughtfully shared.",
             "heading_size": "h2"
           }
         },
         "newsletter_text": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Receive new arrivals and occasional notes on the bags we love.</p>"
+            "text": "<p>Receive occasional updates when new bags arrive, along with stories and practical guides from the Journal.</p>"
           }
         },
         "newsletter_form": {
@@ -238,10 +182,10 @@
         "newsletter_form"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 72,
-        "padding_bottom": 72
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     }
   },
@@ -249,8 +193,8 @@
     "hero",
     "proof",
     "new_arrivals",
-    "curation",
     "designers",
+    "editorial",
     "find_a_bag",
     "archive",
     "journal",

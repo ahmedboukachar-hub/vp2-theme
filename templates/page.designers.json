@@ -1,89 +1,74 @@
 {
   "sections": {
-    "banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "page-hero",
       "settings": {
+        "eyebrow": "Designers",
+        "heading": "Houses that shaped the modern handbag.",
         "image": "shopify://shop_images/owner-lv-keepall-travel.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "show_text_below": true,
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "image_behavior": "none"
+        "image_ratio": "landscape",
+        "color_scheme": "scheme-1"
       }
     },
     "main": {
       "type": "main-page",
       "settings": {
+        "show_title": false,
         "padding_top": 36,
-        "padding_bottom": 8
+        "padding_bottom": 24
       }
     },
     "designers": {
       "type": "featured-designers",
       "blocks": {
-        "louis-vuitton": {
+        "designer_louis_vuitton": {
           "type": "designer",
           "settings": {
             "collection": "louis-vuitton"
           }
         },
-        "gucci": {
+        "designer_gucci": {
           "type": "designer",
           "settings": {
             "collection": "gucci"
           }
         },
-        "chanel": {
+        "designer_jacquemus": {
           "type": "designer",
           "settings": {
-            "collection": "chanel"
-          }
-        },
-        "dior": {
-          "type": "designer",
-          "settings": {
-            "collection": "dior"
-          }
-        },
-        "prada": {
-          "type": "designer",
-          "settings": {
-            "collection": "prada"
-          }
-        },
-        "fendi": {
-          "type": "designer",
-          "settings": {
-            "collection": "fendi"
+            "collection": "jacquemus"
           }
         }
       },
       "block_order": [
-        "louis-vuitton",
-        "gucci",
-        "chanel",
-        "dior",
-        "prada",
-        "fendi"
+        "designer_louis_vuitton",
+        "designer_gucci",
+        "designer_jacquemus"
       ],
       "settings": {
+        "eyebrow": "",
         "title": "",
+        "columns_desktop": "3",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "closing": {
+      "type": "service-panel",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Looking for a particular piece?",
         "heading_size": "h2",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-1",
-        "padding_top": 8,
-        "padding_bottom": 52
+        "text": "<p>Tell us which designer, model or era you are searching for.</p>",
+        "button_label": "Start a search request",
+        "button_link": "shopify://pages/find-a-bag",
+        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
-    "banner",
+    "hero",
     "main",
-    "designers"
+    "designers",
+    "closing"
   ]
 }

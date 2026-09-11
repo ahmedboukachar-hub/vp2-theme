@@ -42,10 +42,10 @@ rejected (below).
 | owner-lv-trunk-detail.jpg | The Archive collection image | Vintage monogram trunk: worn strap, brass catch, patina | no | yes (LV) | confirmation required ⚠ | optional |
 | owner-gucci-marmont-studio.jpg | Gucci popularity guide articles (en + nl) | Black quilted GG Marmont camera bag, studio | no | yes (Gucci) | confirmation required ⚠ | optional |
 | owner-lv-speedy-street.jpg | Speedy 30 guide article | Reverse monogram Speedy carried on the street, from behind | no | yes (LV) | confirmation required ⚠ | optional |
-| owner-lv-pochette-walking.jpg | Find a Bag banner | Monogram shoulder bag carried while walking, from above | no | yes (LV) | confirmation required ⚠ | optional |
-| owner-lv-keepall-travel.jpg | Designers page banner | Monogram travel bag carried by its handles | no | yes (LV) | confirmation required ⚠ | optional |
-| owner-lv-lockme-knit.jpg | Wishlist banner | Small black grained leather backpack on a knit jumper | no | yes (LV) | confirmation required ⚠ | optional |
-| owner-lv-backpack-dusk.jpg | Journal landing banner | Monogram denim backpack carried at dusk, from behind | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-pochette-walking.jpg | Find a Bag page hero | Monogram shoulder bag carried while walking, from above | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-keepall-travel.jpg | Designers page hero | Monogram travel bag carried by its handles | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-lockme-knit.jpg | not currently placed (Wishlist hero is typography-led) | Small black grained leather backpack on a knit jumper | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-backpack-dusk.jpg | Homepage dark editorial section | Monogram denim backpack carried at dusk, from behind | no | yes (LV) | confirmation required ⚠ | optional |
 
 Rejected from this batch (uploaded nowhere, not in Files):
 
@@ -93,3 +93,30 @@ landing, Wishlist and Find a Bag received batch-4 imagery.
 - No designer campaign imagery or decorative logo use; designer marks
   appear only naturally on depicted products/packaging.
 - Alt text is descriptive and makes no availability or authenticity claims.
+
+
+## Batch 5 — placement changes, visual refinement phase (2026-09-11)
+
+No new images were licensed or uploaded. The refinement phase replaced page
+banners with typography-led page heroes, so several images moved or were
+retired from active placement:
+
+| File | Now used as | Note |
+| --- | --- | --- |
+| owner-lv-backpack-dusk.jpg | Homepage dark editorial section | dusk tonality suits the near-black surface; freed by the Journal index hero being typography-led |
+| owner-lv-trunk-detail.jpg | The Archive collection image only | deliberately not reused elsewhere |
+| owner-lv-keepall-travel.jpg | Designers page hero | |
+| owner-lv-pochette-walking.jpg | Find a Bag page hero | |
+| pexels-vintage-bag-contents-3777932.jpg | Sell to Us page hero | |
+| pexels-leather-grain-seam-30989203.jpg | Our Approach page hero (dark) + Condition Guide article | macro material detail, per the brief |
+| pexels-leather-workshop-tools-4452603.jpg | Care Guide page hero | |
+| editorial-crossbody-street.jpg | Bag Size Guide page hero + LV Journal articles | |
+| pexels-shop-window-leather-bags-14806252.jpg | About page hero | replacement still recommended once owned photography exists |
+| owner-lv-speedy-warm-light.jpg | Louis Vuitton collection image | no longer on the homepage (the curation section was replaced by the dark editorial section) |
+| owner-lv-lockme-knit.jpg | not placed | Wishlist now opens with a typography-led hero |
+| pexels-gift-boxes-beige-5872362.jpg | not placed | Shipping & Returns is now typography-led and scannable, per the brief |
+| pexels-white-gift-bag-7670677.jpg | not placed | FAQ needs no hero image, per the brief |
+| pexels-writing-letter-6918482.jpg | not placed | Contact remains typography-led |
+
+Pages that are deliberately typography-led (no hero image): Condition Guide,
+FAQ, Contact, Shipping & Returns, Our Curation, Wishlist, Journal index.
