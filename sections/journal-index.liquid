@@ -48,13 +48,28 @@
             </a>
           </li>
           {%- for tag in blog.all_tags -%}
+            {%- liquid
+              assign tag_handle = tag | handleize
+              case tag_handle
+                when 'buying-guides'
+                  assign tag_label = 'blogs.article.topic_buying_guides' | t
+                when 'bag-care'
+                  assign tag_label = 'blogs.article.topic_bag_care' | t
+                when 'designer-stories'
+                  assign tag_label = 'blogs.article.topic_designer_stories' | t
+                when 'collecting-vintage'
+                  assign tag_label = 'blogs.article.topic_collecting_vintage' | t
+                else
+                  assign tag_label = tag | replace: '-', ' ' | capitalize
+              endcase
+            -%}
             <li>
               <a
                 href="{{ blog.url }}/tagged/{{ tag | handleize }}"
                 class="journal-index__topic{% if current_tags contains tag %} journal-index__topic--active{% endif %}"
                 {% if current_tags contains tag %}aria-current="page"{% endif %}
               >
-                {%- render 'journal-topic-label', topic: tag -%}
+                {{- tag_label | escape -}}
               </a>
             </li>
           {%- endfor -%}
