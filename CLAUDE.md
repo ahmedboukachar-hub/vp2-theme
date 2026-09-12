@@ -37,6 +37,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Never publish to Shopify automatically.
 - One-time exception: the documentation commit that established this file was allowed directly on `main`.
 
+## Multi-agent coordination
+
+ChatGPT/Codex also actively works on this website. Claude Code and Codex must treat the GitHub remote—not an earlier chat, local checkout or handoff report—as the source of truth.
+
+At the start of every task:
+
+- Run `git fetch origin --prune`, then read both `CLAUDE.md` and `AGENTS.md`.
+- Record the current branch, `origin/main` commit SHA and `git status`; inspect the recent `origin/main` log and all open pull requests.
+- Check whether another agent branch or pull request touches the same files. Do not duplicate or overwrite concurrent work.
+- Start from the latest `origin/main` on a unique task branch. Never continue an old branch without first comparing it with current `origin/main`.
+- Remember that Shopify Theme Editor or GitHub sync can create legitimate commits on `main`; preserve and investigate unfamiliar changes.
+
+Immediately before committing and again before requesting a merge:
+
+- Fetch the remote again and compare the task branch with current `origin/main`.
+- If `main` or overlapping files changed, inspect and reconcile safely; stop and ask the user when intent is ambiguous.
+- Never force-push or rewrite another agent's branch.
+- Report the base SHA, head SHA, branch, files changed, validations run, open-PR status and any unresolved overlap.
+
 ## Technical quality
 
 Every future change must:
