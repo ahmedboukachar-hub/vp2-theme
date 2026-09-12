@@ -104,3 +104,48 @@
   font-size: 1.3rem;
   color: rgba(var(--color-foreground), 0.65);
 }
+
+.archive-feature:not(.vp-section) .archive-feature__header {
+  display: block;
+  max-width: 68rem;
+}
+
+.archive-feature:not(.vp-section) .archive-feature__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--vp-space-m);
+}
+
+.archive-feature:not(.vp-section) .archive-feature__grid > .grid__item {
+  width: 100%;
+  max-width: none;
+}
+
+.archive-feature:not(.vp-section) .wishlist-button,
+.archive-feature:not(.vp-section) .price {
+  display: none;
+}
+
+.archive-feature:not(.vp-section) .card__heading {
+  font-family: var(--font-heading-family);
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  line-height: 1.2;
+}
+
+.archive-feature:not(.vp-section) .card-information > .caption-with-letter-spacing {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 749px) {
+  .archive-feature:not(.vp-section) .archive-feature__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--vp-space-s) var(--vp-space-xs);
+  }
+
+  .archive-feature:not(.vp-section) .archive-feature__grid > .grid__item:nth-child(n + 3) {
+    display: none;
+  }
+}
