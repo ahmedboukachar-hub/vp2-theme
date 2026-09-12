@@ -326,6 +326,27 @@
   margin-right: 0.2rem;
 }
 
+.localization-language-marker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.localization-flag {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  margin-inline-end: 0.6rem;
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.localization-language-marker .localization-flag {
+  margin-inline-end: 0;
+}
+
 .disclosure__link:hover .localization-form__currency,
 .disclosure__link:focus-visible .localization-form__currency,
 .disclosure__link:focus .localization-form__currency {

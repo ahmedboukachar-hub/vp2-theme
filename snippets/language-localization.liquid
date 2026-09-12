@@ -1,9 +1,24 @@
-{%- comment -%}
-  Renders the language picker for the localization form
+{% doc %}
+  Renders the language picker for a localization form.
 
-  Accepts:
-    - localPosition: pass in the position in which the form is coming up to create specific IDs
-{%- endcomment -%}
+  @param {string} localPosition - Unique prefix for the disclosure IDs.
+{% enddoc %}
+
+{%- liquid
+  assign current_language_code = localization.language.iso_code | split: '-' | first | downcase
+  case current_language_code
+    when 'en'
+      assign current_language_flag = '🇬🇧'
+    when 'nl'
+      assign current_language_flag = '🇳🇱'
+    when 'de'
+      assign current_language_flag = '🇩🇪'
+    when 'fr'
+      assign current_language_flag = '🇫🇷'
+    else
+      assign current_language_flag = '🌐'
+  endcase
+-%}
 
 <div class="disclosure">
   <button
@@ -13,12 +28,28 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
+    <span class="localization-flag" aria-hidden="true">{{ current_language_flag }}</span>
     <span>{{ localization.language.endonym_name | capitalize }}</span>
     {{ 'icon-caret.svg' | inline_asset_content }}
   </button>
   <div class="disclosure__list-wrapper language-selector" hidden>
     <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
       {%- for language in localization.available_languages -%}
+        {%- liquid
+          assign language_code = language.iso_code | split: '-' | first | downcase
+          case language_code
+            when 'en'
+              assign language_flag = '🇬🇧'
+            when 'nl'
+              assign language_flag = '🇳🇱'
+            when 'de'
+              assign language_flag = '🇩🇪'
+            when 'fr'
+              assign language_flag = '🇫🇷'
+            else
+              assign language_flag = '🌐'
+          endcase
+        -%}
         <li class="disclosure__item" tabindex="-1">
           <a
             class="link link--text disclosure__link caption-large focus-inset"
@@ -30,12 +61,15 @@
             {% endif %}
             data-value="{{ language.iso_code }}"
           >
-            <span
-              {% if language.iso_code != localization.language.iso_code %}
-                class="visibility-hidden"
-              {% endif %}
-            >
-              {{- 'icon-checkmark.svg' | inline_asset_content -}}
+            <span class="localization-language-marker">
+              <span
+                {% if language.iso_code != localization.language.iso_code %}
+                  class="visibility-hidden"
+                {% endif %}
+              >
+                {{- 'icon-checkmark.svg' | inline_asset_content -}}
+              </span>
+              <span class="localization-flag" aria-hidden="true">{{ language_flag }}</span>
             </span>
             <span>
               {{ language.endonym_name | capitalize }}
