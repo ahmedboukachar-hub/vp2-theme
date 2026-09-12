@@ -1,0 +1,21 @@
+{% doc %}
+  Renders a localized editorial label for a Journal tag.
+
+  @param {string} topic - The article tag.
+
+  @example
+  {% render 'journal-topic-label', topic: article.tags.first %}
+{% enddoc %}
+
+{%- case topic | handleize -%}
+  {%- when 'buying-guides' -%}
+    {{- 'blogs.article.topic_buying_guides' | t -}}
+  {%- when 'bag-care' -%}
+    {{- 'blogs.article.topic_bag_care' | t -}}
+  {%- when 'designer-stories' -%}
+    {{- 'blogs.article.topic_designer_stories' | t -}}
+  {%- when 'collecting-vintage' -%}
+    {{- 'blogs.article.topic_collecting_vintage' | t -}}
+  {%- else -%}
+    {{- topic | replace: '-', ' ' | capitalize | escape -}}
+{%- endcase -%}

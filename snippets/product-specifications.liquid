@@ -1,21 +1,22 @@
-{% comment %}
-  Renders product specifications from metafields in the "custom" namespace.
-  Fields without a value — or without a metafield definition — are skipped,
-  so the block is safe to enable before any definitions exist.
+{% doc %}
+  Renders available product specifications from the custom metafield namespace.
 
-  Accepts:
-  - product: {Object} Product Liquid object
-  - block: {Object} The "specifications" block of the main-product section
+  @param {object} product - The product to describe.
+  @param {object} block - The specifications block.
 
-  Usage:
+  @example
   {% render 'product-specifications', product: product, block: block %}
-{% endcomment %}
+{% enddoc %}
 
 {{ 'component-product-specifications.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign spec_keys = 'designer,model,product_type,year_or_era,condition,material,color,dimensions,serial_or_date_code,inclusions' | split: ','
   assign note_keys = 'condition_notes,provenance,authentication_notes' | split: ','
+  assign specifications_heading = block.settings.heading
+  if specifications_heading == 'Details & condition'
+    assign specifications_heading = 'products.product.details_heading' | t
+  endif
 -%}
 
 {%- capture spec_rows -%}
@@ -46,8 +47,8 @@
 
 {%- if spec_rows != blank or note_rows != blank -%}
   <div class="product-specifications quick-add-hidden" {{ block.shopify_attributes }}>
-    {%- if block.settings.heading != blank -%}
-      <h2 class="product-specifications__heading h4 inline-richtext">{{ block.settings.heading }}</h2>
+    {%- if specifications_heading != blank -%}
+      <h2 class="product-specifications__heading h4 inline-richtext">{{ specifications_heading }}</h2>
     {%- endif -%}
     {%- if spec_rows != blank -%}
       <dl class="product-specifications__list">

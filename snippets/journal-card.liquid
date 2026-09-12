@@ -1,13 +1,15 @@
-{% comment %}
+{% doc %}
   Renders one Journal card in the editorial system.
 
-  Accepts:
-  - article: {Object} Article Liquid object (required)
-  - variant: {String} 'lead' or 'secondary' (default: 'secondary')
-  - show_excerpt: {Boolean} show the standfirst (default: true for lead)
-  - heading_class: {String} optional override for the headline class
-  - sizes: {String} image sizes attribute
-{% endcomment %}
+  @param {object} article - The article to render.
+  @param {string} [variant] - Lead, secondary or grid.
+  @param {boolean} [show_excerpt] - Whether to show the standfirst.
+  @param {string} [heading_class] - Optional headline class override.
+  @param {string} [sizes] - Responsive image sizes value.
+
+  @example
+  {% render 'journal-card', article: article, variant: 'lead' %}
+{% enddoc %}
 
 {%- liquid
   assign variant = variant | default: 'secondary'
@@ -44,7 +46,7 @@
 
     <div class="journal-card__info">
       {%- if topic != blank -%}
-        <span class="vp-eyebrow journal-card__topic">{{ topic | escape }}</span>
+        <span class="vp-eyebrow journal-card__topic">{% render 'journal-topic-label', topic: topic %}</span>
       {%- endif -%}
 
       <h3 class="{{ heading_class }}">{{ article.title | escape }}</h3>

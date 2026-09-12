@@ -78,7 +78,11 @@
       "requires_js": "Votre wishlist nécessite JavaScript pour afficher les pièces enregistrées."
     },
     "footer": {
-      "non_affiliation": "{{ shop_name }} est un revendeur indépendant et n'est affilié à aucune des maisons de créateurs présentées sur ce site. Toutes les marques restent la propriété de leurs détenteurs respectifs."
+      "non_affiliation": "{{ shop_name }} est un revendeur indépendant et n'est affilié à aucune des maisons de créateurs présentées sur ce site. Toutes les marques restent la propriété de leurs détenteurs respectifs.",
+      "group_shop": "Boutique",
+      "group_discover": "Découvrir",
+      "group_services": "Services",
+      "group_customer_care": "Service client"
     }
   },
   "newsletter": {
@@ -130,7 +134,14 @@
       "read_article": "Lire l'article",
       "topics": "Thèmes",
       "all_topics": "Tous les articles",
-      "empty": "Il n'y a pas encore d'articles ici."
+      "empty": "Il n'y a pas encore d'articles ici.",
+      "index_eyebrow": "Le Journal",
+      "index_heading": "Icônes, détails et histoires qu’elles portent.",
+      "index_intro": "<p>Découvrez l’histoire du design, les détails pratiques et le caractère distinctif des sacs que nous collectionnons, recherchons et admirons.</p>",
+      "topic_buying_guides": "Guides d’achat",
+      "topic_bag_care": "Entretien & état",
+      "topic_designer_stories": "Histoires de créateurs",
+      "topic_collecting_vintage": "Collectionner le vintage"
     }
   },
   "onboarding": {
@@ -164,6 +175,7 @@
         "unit_price": "Prix unitaire"
       },
       "share": "Partager ce produit",
+      "details_heading": "Détails & état",
       "sold_out": "Épuisé",
       "unavailable": "Non disponible(s)",
       "vendor": "Fournisseur",
@@ -314,6 +326,20 @@
     }
   },
   "templates": {
+    "page_hero": {
+      "about_eyebrow": "À propos",
+      "about_heading": "Une approche réfléchie des pièces qui ont une histoire.",
+      "authenticity_eyebrow": "Notre approche",
+      "authenticity_heading": "Chaque pièce mérite un examen attentif."
+    },
+    "page_cta": {
+      "about_heading": "Découvrez la sélection actuelle.",
+      "about_text": "<p>Des pièces vintage et pre-owned récemment ajoutées, chacune disponible en un seul exemplaire.</p>",
+      "about_button": "Découvrir les nouveautés",
+      "authenticity_heading": "Comprendre l’état",
+      "authenticity_text": "<p>Nos grades d’état constituent un point de départ ; les photos et notes individuelles décrivent la pièce exacte.</p>",
+      "authenticity_button": "Lire le guide des états"
+    },
     "search": {
       "no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l'orthographe ou utilisez un autre mot ou une autre expression.",
       "results_with_count": {

@@ -33,15 +33,20 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.65);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: color var(--vp-duration) var(--vp-ease);
+  padding-inline: 1.4rem;
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  transition: color var(--vp-duration) var(--vp-ease), border-color var(--vp-duration) var(--vp-ease), background-color var(--vp-duration) var(--vp-ease);
 }
 
-.journal-index__topic:hover { color: rgb(var(--color-foreground)); }
+.journal-index__topic:hover {
+  color: rgb(var(--color-foreground));
+  border-color: rgba(var(--color-foreground), 0.55);
+}
 
 .journal-index__topic--active {
-  color: rgb(var(--color-foreground));
-  border-bottom-color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+  background: rgb(var(--color-foreground));
+  border-color: rgb(var(--color-foreground));
 }
 
 .journal-index__feature {

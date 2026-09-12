@@ -85,13 +85,25 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <product-component view-event-payload="{{ product | standard_event_data: 'view', context: 'page' | escape }}">
     <div class="page-width">
-      <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+      <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col grid--2-col-tablet{% if product.media.size == 0 %} product--placeholder-media{% endif %}">
         <div class="grid__item product__media-wrapper">
           {%- if section.settings.show_test_label and product.tags contains 'vp2-test-data' -%}
             {{ 'component-inspection.css' | asset_url | stylesheet_tag }}
             <span class="product-test-label">{{ 'products.product.test_label' | t }}</span>
           {%- endif -%}
-          {% render 'product-media-gallery', variant_images: variant_images %}
+          {%- if product.media.size > 0 -%}
+            {% render 'product-media-gallery', variant_images: variant_images %}
+          {%- else -%}
+            <div class="product__media-placeholder" aria-hidden="true">
+              <svg class="product__media-placeholder-mark" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M43 66.5h74l8 61H35l8-61Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M58 67c0-17.7 8.8-30 22-30s22 12.3 22 30" stroke="currentColor" stroke-width="2"/>
+                <path d="M35 102h90" stroke="currentColor" stroke-width="1" opacity=".35"/>
+              </svg>
+              <span class="product__media-placeholder-designer">{{ product.vendor | escape }}</span>
+              <span class="product__media-placeholder-label">{{ 'products.product.image_pending' | t }}</span>
+            </div>
+          {%- endif -%}
         </div>
         <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           <section
@@ -503,7 +515,11 @@
                 {%- when 'share' -%}
                   {% liquid
                     assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
-                    render 'share-button', block: block, share_link: share_url
+                    assign share_label = block.settings.share_label
+                    if share_label == 'Share'
+                      assign share_label = 'products.product.share' | t
+                    endif
+                    render 'share-button', block: block, share_link: share_url, share_label: share_label, section_id: section.id
                   %}
 
                 {%- when 'disclosures' -%}
@@ -771,14 +787,6 @@
         </script>
         <script src="{{ 'product-model.js' | asset_url }}" defer></script>
       {%- endif -%}
-
-      {%- liquid
-        if product.selected_or_first_available_variant.featured_media
-          assign seo_media = product.selected_or_first_available_variant.featured_media
-        else
-          assign seo_media = product.featured_media
-        endif
-      -%}
 
       <script type="application/ld+json">
         {{ product | structured_data }}

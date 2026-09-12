@@ -78,7 +78,11 @@
       "requires_js": "Your wishlist needs JavaScript to display saved pieces."
     },
     "footer": {
-      "non_affiliation": "{{ shop_name }} is an independent reseller and is not affiliated with the designer houses featured on this website. All trademarks remain the property of their respective owners."
+      "non_affiliation": "{{ shop_name }} is an independent reseller and is not affiliated with the designer houses featured on this website. All trademarks remain the property of their respective owners.",
+      "group_shop": "Shop",
+      "group_discover": "Discover",
+      "group_services": "Services",
+      "group_customer_care": "Customer care"
     }
   },
   "newsletter": {
@@ -129,7 +133,14 @@
       "read_article": "Read article",
       "topics": "Topics",
       "all_topics": "All stories",
-      "empty": "There are no stories here yet."
+      "empty": "There are no stories here yet.",
+      "index_eyebrow": "The Journal",
+      "index_heading": "Icons, details and the stories they carry.",
+      "index_intro": "<p>Explore the design history, practical details and distinctive character of the bags we collect, source and admire.</p>",
+      "topic_buying_guides": "Buying guides",
+      "topic_bag_care": "Care & condition",
+      "topic_designer_stories": "Designer stories",
+      "topic_collecting_vintage": "Collecting vintage"
     }
   },
   "onboarding": {
@@ -215,6 +226,7 @@
         "unit_price": "Unit price"
       },
       "share": "Share this product",
+      "details_heading": "Details & condition",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
@@ -310,6 +322,20 @@
     }
   },
   "templates": {
+    "page_hero": {
+      "about_eyebrow": "About",
+      "about_heading": "A considered approach to pieces with a past.",
+      "authenticity_eyebrow": "Our approach",
+      "authenticity_heading": "Every piece deserves a closer look."
+    },
+    "page_cta": {
+      "about_heading": "Discover the current selection.",
+      "about_text": "<p>Newly added vintage and pre-owned pieces, each available only once.</p>",
+      "about_button": "Shop new arrivals",
+      "authenticity_heading": "Understanding condition",
+      "authenticity_text": "<p>Our condition grades are a starting point; the photographs and individual notes describe the exact piece.</p>",
+      "authenticity_button": "Read the condition guide"
+    },
     "search": {
       "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
       "page": "Page",
