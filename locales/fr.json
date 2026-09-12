@@ -11,6 +11,10 @@
       "login_form_password_placeholder": "Votre mot de passe",
       "login_form_error": "Mot de passe incorrect !",
       "login_form_submit": "Saisir",
+      "eyebrow": "Une nouvelle destination pour le luxe vintage",
+      "hero_heading": "Des pièces rares, choisies avec attention.",
+      "hero_body": "Nous préparons une sélection de sacs de créateurs vintage et pre-owned, choisis pour leur caractère, leur état et leur allure durable.",
+      "newsletter_note": "Des nouvelles occasionnelles sur les nouvelles pièces. Pas de promotions constantes.",
       "admin_link_html": "La boutique vous appartient-elle ? <a href=\"/admin\" class=\"link underlined-link\">Se connecter ici</a>",
       "powered_by_shopify_html": "Cette boutique sera propulsée par {{ shopify }}"
     },
@@ -226,6 +230,7 @@
       "duties_included": "Frais de douane inclus.",
       "duties_and_taxes_included": "Frais de douane et taxes inclus.",
       "test_label": "Produit test — fiche fictive",
+      "image_pending": "Photographies en préparation",
       "recently_viewed": "Récemment consultés",
       "condition_report": {
         "heading": "Rapport d’état",
