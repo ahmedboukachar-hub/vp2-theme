@@ -11,6 +11,10 @@
       "login_form_password_placeholder": "Dein Passwort",
       "login_form_error": "Falsches Passwort!",
       "login_form_submit": "Eingeben",
+      "eyebrow": "Eine neue Adresse für Vintage-Luxus",
+      "hero_heading": "Seltene Stücke, mit Bedacht gewählt.",
+      "hero_body": "Wir bereiten eine kuratierte Auswahl an Vintage- und Pre-owned-Designertaschen vor, ausgewählt nach Charakter, Zustand und zeitloser Ausstrahlung.",
+      "newsletter_note": "Gelegentliche Neuigkeiten zu neuen Stücken. Keine ständigen Aktionen.",
       "admin_link_html": "Bist du der Shop-Inhaber? <a href=\"/admin\" class=\"link underlined-link\">Hier einloggen</a>",
       "powered_by_shopify_html": "Dieser Shop wird unterstützt von {{ shopify }}"
     },
@@ -225,6 +229,7 @@
       "duties_included": "Inkl. Zollgebühren.",
       "duties_and_taxes_included": "Inkl. Zollgebühren und Steuern.",
       "test_label": "Testprodukt — fiktive Anzeige",
+      "image_pending": "Fotografie in Vorbereitung",
       "recently_viewed": "Zuletzt angesehen",
       "condition_report": {
         "heading": "Zustandsbericht",

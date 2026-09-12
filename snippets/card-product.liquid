@@ -54,7 +54,7 @@
       <div
         class="
           card card--{{ settings.card_style }}
-          {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
+          {% if card_product.featured_media %} card--media{% else %} card--media card--placeholder{% endif %}
           {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
           {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
           {% if extend_height %} card--extend-height{% endif %}
@@ -64,7 +64,7 @@
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         <div
-          class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+          class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
           style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
         >
           {%- if card_product.featured_media -%}
@@ -113,6 +113,18 @@
                     height="{{ card_product.media[1].height }}"
                   >
                 {%- endif -%}
+              </div>
+            </div>
+          {%- else -%}
+            <div class="card__media card__media--placeholder" aria-hidden="true">
+              <div class="media vp-product-placeholder">
+                <svg class="vp-product-placeholder__mark" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M43 66.5h74l8 61H35l8-61Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M58 67c0-17.7 8.8-30 22-30s22 12.3 22 30" stroke="currentColor" stroke-width="2"/>
+                  <path d="M35 102h90" stroke="currentColor" stroke-width="1" opacity=".35"/>
+                </svg>
+                <span class="vp-product-placeholder__designer">{{ card_product.vendor | escape }}</span>
+                <span class="vp-product-placeholder__label">{{ 'products.product.image_pending' | t }}</span>
               </div>
             </div>
           {%- endif -%}

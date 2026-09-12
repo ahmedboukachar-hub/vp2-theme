@@ -11,6 +11,10 @@
       "login_form_password_placeholder": "Je wachtwoord",
       "login_form_error": "Wachtwoord onjuist!",
       "login_form_submit": "Invoeren",
+      "eyebrow": "Een nieuwe bestemming voor vintage luxury",
+      "hero_heading": "Zeldzame stukken, met aandacht gekozen.",
+      "hero_body": "We werken aan een gecureerde selectie vintage en pre-owned designertassen, gekozen om hun karakter, conditie en blijvende aantrekkingskracht.",
+      "newsletter_note": "Af en toe bericht over nieuwe stukken. Geen constante aanbiedingen.",
       "admin_link_html": "Ben je de winkeleigenaar? <a href=\"/admin\" class=\"link underlined-link\">Log hier in</a>",
       "powered_by_shopify_html": "Deze winkel wordt door {{ shopify }} aangedreven"
     },
@@ -225,6 +229,7 @@
       "duties_included": "Douanerechten inbegrepen.",
       "duties_and_taxes_included": "Douanerechten en belastingen inbegrepen.",
       "test_label": "Testproduct — fictieve listing",
+      "image_pending": "Fotografie wordt voorbereid",
       "recently_viewed": "Recent bekeken",
       "condition_report": {
         "heading": "Conditierapport",
