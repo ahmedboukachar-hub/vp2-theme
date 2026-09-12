@@ -13,11 +13,7 @@ mechanisms — no external services, no external libraries, no server redirects.
 3. **Browser/device languages** — `navigator.languages` (fallback
    `navigator.language`), regional variants normalised (`de-AT → de`,
    `fr-CA → fr`, `nl-BE → nl`, `en-* → en`); the first published language wins.
-4. **Location (cautious fallback only)** — Shopify's own
-   `browsing_context_suggestions.json` endpoint; mapping NL→nl, DE→de, AT→de,
-   FR→fr. Multilingual countries (BE, CH, LU, CA, …) are deliberately not
-   mapped and resolve to English.
-5. **English** as final fallback.
+4. **English** as final fallback when no published browser language matches.
 
 Only the language is changed. Country, Market, currency and tax context are
 never touched.
@@ -45,26 +41,20 @@ stays the same product). No manual locale-URL rewriting, no 301s.
 One neutral `localStorage` key: **`locale-preference`**
 
 ```json
-{ "v": 1, "locale": "de", "source": "auto" | "manual", "via": "browser", "ts": 1757155200000, "noticePending": true }
+{ "v": 1, "locale": "de", "source": "auto" | "manual", "via": "browser", "ts": 1757155200000 }
 ```
 
 Contains only the language code, the source of the decision, and a
 version/timestamp. No personal data, no IP address, no tracking; not used for
 analytics or marketing. Clearing site data resets the behaviour.
 
-## Confirmation notice
-
-After an actual automatic switch, a one-time dismissible notice appears
-(locale keys `localization.auto_notice_*` in en/nl/de/fr): `role="status"`,
-keyboard operable, non-modal, no animation (reduced-motion safe), with a
-button that opens/focuses the native language selector. It never returns after
-being shown once.
-
 ## Theme Editor settings ("Language detection")
 
 - `enable_auto_language_detection` (default on)
-- `enable_location_fallback` (default on)
-- `show_language_notice` (default on)
+
+Automatic detection is intentionally silent: there is no location suggestion
+and no confirmation popup. The visible language selector remains available in
+the header, mobile menu and footer, with flags and native language names.
 
 Defaults apply to the existing theme through `settings_schema.json` defaults;
 `config/settings_data.json` is untouched.
