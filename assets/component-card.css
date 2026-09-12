@@ -147,6 +147,23 @@
   color: rgba(var(--color-foreground), 0.42);
 }
 
+/* Dawn absolutely positions every direct child of .media; placeholders need a real flex stack. */
+.card .vp-product-placeholder > .vp-product-placeholder__mark,
+.card .vp-product-placeholder > .vp-product-placeholder__designer,
+.card .vp-product-placeholder > .vp-product-placeholder__label {
+  position: static;
+  height: auto;
+}
+
+.card .vp-product-placeholder > .vp-product-placeholder__mark {
+  width: clamp(6.4rem, 32%, 11rem);
+}
+
+.card .vp-product-placeholder > .vp-product-placeholder__designer,
+.card .vp-product-placeholder > .vp-product-placeholder__label {
+  width: auto;
+}
+
 .vp-product-placeholder__designer {
   font-family: var(--font-heading-family);
   font-size: clamp(1.7rem, 2vw, 2.2rem);
