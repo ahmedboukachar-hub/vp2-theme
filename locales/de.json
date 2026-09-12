@@ -63,7 +63,7 @@
       "of": "von",
       "next_slide": "Nach rechts schieben",
       "previous_slide": "Nach links schieben",
-      "name": "Slider"
+      "name": "Karussell"
     },
     "wishlist": {
       "link_label": "Wunschliste",
@@ -81,7 +81,7 @@
       "non_affiliation": "{{ shop_name }} ist ein unabhängiger Wiederverkäufer und steht in keiner Verbindung zu den auf dieser Website vorgestellten Designerhäusern. Alle Marken bleiben Eigentum ihrer jeweiligen Inhaber.",
       "group_shop": "Shop",
       "group_discover": "Entdecken",
-      "group_services": "Services",
+      "group_services": "Service",
       "group_customer_care": "Kundenservice"
     }
   },
@@ -151,7 +151,7 @@
     "product": {
       "add_to_cart": "In den Warenkorb legen",
       "description": "Beschreibung",
-      "on_sale": "Sale",
+      "on_sale": "Reduziert",
       "quantity": {
         "label": "Anzahl",
         "input_label": "Anzahl von {{ product }}",
@@ -295,8 +295,8 @@
       "clear_all": "Alle entfernen",
       "from": "Von",
       "filter_and_sort": "Filtern und sortieren",
-      "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "filter_by_label": "Filtern nach:",
+      "filter_button": "Filtern",
       "filters_selected": {
         "one": "{{ count }} ausgewählt",
         "other": "{{ count }} ausgewählt"
@@ -633,7 +633,7 @@
       "guest_continue": "Fortfahren",
       "guest_title": "Als Gast fortsetzen",
       "password": "Passwort",
-      "title": "Login",
+      "title": "Anmelden",
       "sign_in": "Anmelden",
       "submit": "Senden",
       "alternate_provider_separator": "oder"

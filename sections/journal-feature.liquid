@@ -21,33 +21,35 @@
           {%- endif -%}
         </div>
         {%- if section.settings.button_label != blank -%}
-          <a href="{{ journal.url }}" class="vp-link vp-link--arrow journal-feature__cta">
+          <a href="{{ journal.url }}" class="button button--secondary journal-feature__cta">
             {{- section.settings.button_label | escape -}}
           </a>
         {%- endif -%}
       </div>
 
       <div class="journal-feature__grid">
-        {%- for article in journal.articles limit: 3 -%}
-          {%- if forloop.first -%}
-            <div class="journal-feature__lead">
-              {% render 'journal-card',
-                article: article,
-                variant: 'lead',
-                sizes: '(min-width: 990px) 60vw, 100vw'
-              %}
-            </div>
-          {%- else -%}
-            {%- if forloop.index == 2 -%}<div class="journal-feature__secondary">{%- endif -%}
+        <div class="journal-feature__lead">
+          {% render 'journal-card',
+            article: journal.articles.first,
+            variant: 'lead',
+            index: 1,
+            sizes: '(min-width: 990px) 60vw, 100vw'
+          %}
+        </div>
+        {%- if journal.articles_count > 1 -%}
+          <div class="journal-feature__secondary">
+            {%- for article in journal.articles offset: 1 limit: 2 -%}
+              {%- assign editorial_index = forloop.index | plus: 1 -%}
             {% render 'journal-card',
               article: article,
               variant: 'secondary',
+              index: editorial_index,
               show_excerpt: false,
               sizes: '(min-width: 990px) 18vw, 40vw'
             %}
-            {%- if forloop.last -%}</div>{%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -61,15 +63,15 @@
   "settings": [
     { "type": "blog", "id": "blog", "label": "Blog" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Journal" },
-    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Stories behind the pieces." },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "The stories behind the bags." },
     {
       "type": "richtext",
       "id": "text",
       "label": "Introduction",
-      "default": "<p>Guides to iconic models, materials, condition and care—created to help you choose with confidence and appreciate what makes each piece endure.</p>"
+      "default": "<p>Buying guides, model histories and practical advice on condition and care—written for collectors and first-time buyers.</p>"
     },
-    { "type": "text", "id": "button_label", "label": "Link label", "default": "Explore the Journal" },
-    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-3" }
+    { "type": "text", "id": "button_label", "label": "Link label", "default": "Read the Journal" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-4" }
   ],
   "presets": [{ "name": "Journal feature" }]
 }

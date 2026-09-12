@@ -139,7 +139,21 @@
   margin-top: var(--vp-space-s);
 }
 
-.vp-actions .button { min-height: 4.8rem; }
+.vp-actions .button,
+.service-panel__actions .button,
+.archive-actions__buttons .button {
+  min-inline-size: 22rem;
+  min-height: 5.2rem;
+  padding-inline: 3.2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .vp-actions .button,
+  .service-panel__actions .button,
+  .archive-actions__buttons .button {
+    width: 100%;
+  }
+}
 
 /* Secondary action stays clearly visible rather than fading into body text. */
 .vp-link {

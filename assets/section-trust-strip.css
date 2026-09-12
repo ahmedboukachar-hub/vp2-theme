@@ -16,43 +16,87 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: var(--vp-space-s);
+  gap: 0;
+}
+
+.trust-strip__item {
+  display: grid;
+  grid-template-columns: 3.6rem minmax(0, 1fr);
+  gap: 1.6rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.12);
+}
+
+.trust-strip__item:first-child {
+  padding-top: 0;
+}
+
+.trust-strip__item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.trust-strip__number {
+  padding-top: 0.25rem;
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: rgba(var(--color-foreground), 0.48);
 }
 
 .trust-strip__heading {
   margin: 0;
-  font-family: var(--font-body-family);
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  line-height: 1.4;
+  font-family: var(--font-heading-family);
+  font-size: clamp(2rem, 2.2vw, 2.6rem);
+  font-weight: var(--font-heading-weight);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
 }
 
 .trust-strip__text {
-  margin-top: 0.8rem;
+  margin-top: 0.6rem;
   max-width: 38rem;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  color: rgba(var(--color-foreground), 0.78);
+  font-size: 1.45rem;
+  line-height: 1.55;
+  color: rgba(var(--color-foreground), 0.7);
 }
 
 .trust-strip__text > * { margin: 0; }
 
 .trust-strip__link-row {
-  margin: var(--vp-space-s) 0 0;
+  margin: 2.4rem 0 0 5.2rem;
 }
 
 @media screen and (min-width: 750px) {
   .trust-strip__list {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--vp-space-m);
+    gap: 0;
+  }
+
+  .trust-strip__item {
+    display: block;
+    padding: 0 var(--vp-space-m);
+    border-bottom: 0;
+  }
+
+  .trust-strip__item:first-child {
+    padding-left: 0;
+  }
+
+  .trust-strip__item:last-child {
+    padding-right: 0;
   }
 
   .trust-strip__item + .trust-strip__item {
-    padding-left: var(--vp-space-m);
     border-left: 1px solid rgba(var(--color-foreground), 0.1);
   }
 
-  .trust-strip__link-row { margin-top: var(--vp-space-m); }
+  .trust-strip__number {
+    display: block;
+    margin-bottom: 2.4rem;
+  }
+
+  .trust-strip__link-row {
+    margin: var(--vp-space-m) 0 0;
+  }
 }
