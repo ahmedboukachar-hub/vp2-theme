@@ -19,6 +19,19 @@
     assign minutes = 1
   endif
   assign topic = article.tags | first
+  assign topic_handle = topic | handleize
+  case topic_handle
+    when 'buying-guides'
+      assign topic_label = 'blogs.article.topic_buying_guides' | t
+    when 'bag-care'
+      assign topic_label = 'blogs.article.topic_bag_care' | t
+    when 'designer-stories'
+      assign topic_label = 'blogs.article.topic_designer_stories' | t
+    when 'collecting-vintage'
+      assign topic_label = 'blogs.article.topic_collecting_vintage' | t
+    else
+      assign topic_label = topic | replace: '-', ' ' | capitalize
+  endcase
   if heading_class == blank
     if variant == 'lead'
       assign heading_class = 'journal-card__title journal-card__title--lead'
@@ -46,7 +59,7 @@
 
     <div class="journal-card__info">
       {%- if topic != blank -%}
-        <span class="vp-eyebrow journal-card__topic">{% render 'journal-topic-label', topic: topic %}</span>
+        <span class="vp-eyebrow journal-card__topic">{{ topic_label | escape }}</span>
       {%- endif -%}
 
       <h3 class="{{ heading_class }}">{{ article.title | escape }}</h3>
