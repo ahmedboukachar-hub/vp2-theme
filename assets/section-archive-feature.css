@@ -133,10 +133,7 @@
 }
 
 .archive-feature:not(.vp-section) .card-information > .caption-with-letter-spacing {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  display: none;
 }
 
 @media screen and (max-width: 749px) {
