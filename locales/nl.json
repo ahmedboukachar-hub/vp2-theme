@@ -2,7 +2,7 @@
   "general": {
     "breadcrumbs": {
       "label": "Kruimelpad",
-      "home": "Home"
+      "home": "Startpagina"
     },
     "password_page": {
       "login_form_heading": "Ga winkel binnen met wachtwoord:",
@@ -66,22 +66,22 @@
       "name": "Schuifregelaar"
     },
     "wishlist": {
-      "link_label": "Wishlist",
-      "add": "Bewaar in wishlist",
-      "remove": "Verwijder uit wishlist",
+      "link_label": "Verlanglijst",
+      "add": "Bewaar in je verlanglijst",
+      "remove": "Verwijder uit je verlanglijst",
       "remove_short": "Verwijderen",
       "intro": "Bewaar de stukken waar je op terug wilt komen op één plek.",
-      "empty_heading": "Je wishlist is leeg",
+      "empty_heading": "Je verlanglijst is leeg",
       "empty_body": "Bewaar een stuk om er later naar terug te keren.",
       "empty_cta": "Ontdek alle tassen",
       "unavailable": "Niet meer beschikbaar",
-      "requires_js": "Je wishlist heeft JavaScript nodig om bewaarde stukken te tonen."
+      "requires_js": "Je verlanglijst heeft JavaScript nodig om bewaarde stukken te tonen."
     },
     "footer": {
       "non_affiliation": "{{ shop_name }} is een onafhankelijke wederverkoper en is niet verbonden aan de designerhuizen op deze website. Alle merknamen blijven eigendom van hun respectievelijke eigenaren.",
       "group_shop": "Winkelen",
       "group_discover": "Ontdekken",
-      "group_services": "Services",
+      "group_services": "Diensten",
       "group_customer_care": "Klantenservice"
     }
   },
@@ -295,8 +295,8 @@
       "clear_all": "Alles verwijderen",
       "from": "Van",
       "filter_and_sort": "Filteren en sorteren",
-      "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "filter_by_label": "Filteren op:",
+      "filter_button": "Filteren",
       "filters_selected": {
         "one": "{{ count }} geselecteerd",
         "other": "{{ count }} geselecteerd"

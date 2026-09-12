@@ -4,6 +4,7 @@
   @param {object} article - The article to render.
   @param {string} [variant] - Lead, secondary or grid.
   @param {boolean} [show_excerpt] - Whether to show the standfirst.
+  @param {number} [index] - Optional editorial position.
   @param {string} [heading_class] - Optional headline class override.
   @param {string} [sizes] - Responsive image sizes value.
 
@@ -58,6 +59,9 @@
     {%- endif -%}
 
     <div class="journal-card__info">
+      {%- if index != blank -%}
+        <span class="journal-card__number" aria-hidden="true">0{{ index }}</span>
+      {%- endif -%}
       {%- if topic != blank -%}
         <span class="vp-eyebrow journal-card__topic">{{ topic_label | escape }}</span>
       {%- endif -%}
