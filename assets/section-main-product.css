@@ -15,6 +15,44 @@ product-info {
   margin: 0 auto;
 }
 
+.product__media-placeholder {
+  display: flex;
+  min-height: min(74rem, 78vh);
+  aspect-ratio: 4 / 5;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 4rem;
+  background: rgba(var(--color-foreground), 0.055);
+  color: rgba(var(--color-foreground), 0.42);
+  text-align: center;
+}
+
+.product__media-placeholder-mark {
+  width: clamp(8rem, 11vw, 14rem);
+  height: auto;
+}
+
+.product__media-placeholder-designer {
+  font-family: var(--font-heading-family);
+  font-size: clamp(2.2rem, 2.2vw, 3.4rem);
+  line-height: 1.1;
+}
+
+.product__media-placeholder-label {
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 749px) {
+  .product__media-placeholder {
+    min-height: auto;
+    margin-bottom: 2.4rem;
+  }
+}
+
 .product__media-wrapper {
   padding-left: 0;
 }

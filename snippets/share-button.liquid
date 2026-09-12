@@ -1,40 +1,40 @@
-{% comment %}
-  Renders share button.
-  Accepts:
-  - block: {Object} passes in the block information.
-  - share_link: {String} url to be added to the input the user will get/copy.
+{% doc %}
+  Renders a share button.
 
-  Usage:
-  {% render 'share-button',
-    block: block,
-    share_link: share_url
-  %}
-{% endcomment %}
+  @param {object} block - The parent block.
+  @param {string} share_link - The URL to share.
+  @param {string} [share_label] - Localized button label.
+  @param {string} [section_id] - The parent section ID.
+
+  @example
+  {% render 'share-button', block: block, share_link: share_url, share_label: share_label, section_id: section.id %}
+{% enddoc %}
+{%- assign share_context_id = section_id | default: block.id -%}
 <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 
-<share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
+<share-button id="Share-{{ share_context_id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
   <button class="share-button__button hidden">
     <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span>
-    {{ block.settings.share_label | escape }}
+    {{ share_label | default: block.settings.share_label | escape }}
   </button>
-  <details id="Details-{{ block.id }}-{{ section.id }}">
+  <details id="Details-{{ block.id }}-{{ share_context_id }}">
     <summary class="share-button__button">
       <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span>
-      {{ block.settings.share_label | escape }}
+      {{ share_label | default: block.settings.share_label | escape }}
     </summary>
     <div class="share-button__fallback motion-reduce">
       <div class="field">
-        <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status"> </span>
+        <span id="ShareMessage-{{ share_context_id }}" class="share-button__message hidden" role="status"> </span>
         <input
           type="text"
           class="field__input"
-          id="ShareUrl-{{ section.id }}"
+          id="ShareUrl-{{ share_context_id }}"
           value="{{ share_link }}"
           placeholder="{{ 'general.share.share_url' | t }}"
           onclick="this.select();"
           readonly
         >
-        <label class="field__label" for="ShareUrl-{{ section.id }}">{{ 'general.share.share_url' | t }}</label>
+        <label class="field__label" for="ShareUrl-{{ share_context_id }}">{{ 'general.share.share_url' | t }}</label>
       </div>
       <button class="share-button__close hidden">
         <span class="svg-wrapper">

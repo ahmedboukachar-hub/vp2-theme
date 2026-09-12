@@ -285,6 +285,8 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
 }
 
 .card__heading {
+  font-family: var(--font-heading-family);
+  font-size: clamp(1.7rem, 1.5vw, 2.1rem);
   line-height: 1.3;
   letter-spacing: -0.005em;
 }

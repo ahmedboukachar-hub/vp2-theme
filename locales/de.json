@@ -78,7 +78,11 @@
       "requires_js": "Ihre Wunschliste benötigt JavaScript, um gespeicherte Stücke anzuzeigen."
     },
     "footer": {
-      "non_affiliation": "{{ shop_name }} ist ein unabhängiger Wiederverkäufer und steht in keiner Verbindung zu den auf dieser Website vorgestellten Designerhäusern. Alle Marken bleiben Eigentum ihrer jeweiligen Inhaber."
+      "non_affiliation": "{{ shop_name }} ist ein unabhängiger Wiederverkäufer und steht in keiner Verbindung zu den auf dieser Website vorgestellten Designerhäusern. Alle Marken bleiben Eigentum ihrer jeweiligen Inhaber.",
+      "group_shop": "Shop",
+      "group_discover": "Entdecken",
+      "group_services": "Services",
+      "group_customer_care": "Kundenservice"
     }
   },
   "newsletter": {
@@ -129,7 +133,14 @@
       "read_article": "Beitrag lesen",
       "topics": "Themen",
       "all_topics": "Alle Beiträge",
-      "empty": "Hier gibt es noch keine Beiträge."
+      "empty": "Hier gibt es noch keine Beiträge.",
+      "index_eyebrow": "Das Journal",
+      "index_heading": "Ikonen, Details und die Geschichten, die sie tragen.",
+      "index_intro": "<p>Entdecken Sie Designgeschichte, praktische Details und den unverwechselbaren Charakter der Taschen, die wir sammeln, suchen und bewundern.</p>",
+      "topic_buying_guides": "Kaufratgeber",
+      "topic_bag_care": "Pflege & Zustand",
+      "topic_designer_stories": "Designer-Geschichten",
+      "topic_collecting_vintage": "Vintage sammeln"
     }
   },
   "onboarding": {
@@ -162,6 +173,7 @@
         "unit_price": "Grundpreis"
       },
       "share": "Dieses Produkt teilen",
+      "details_heading": "Details & Zustand",
       "sold_out": "Ausverkauft",
       "unavailable": "Nicht verfügbar",
       "vendor": "Anbieter",
@@ -310,6 +322,20 @@
     }
   },
   "templates": {
+    "page_hero": {
+      "about_eyebrow": "Über uns",
+      "about_heading": "Ein durchdachter Blick auf Stücke mit Vergangenheit.",
+      "authenticity_eyebrow": "Unser Ansatz",
+      "authenticity_heading": "Jedes Stück verdient einen genaueren Blick."
+    },
+    "page_cta": {
+      "about_heading": "Entdecken Sie die aktuelle Auswahl.",
+      "about_text": "<p>Neu hinzugefügte Vintage- und Pre-owned-Stücke, jeweils nur einmal verfügbar.</p>",
+      "about_button": "Neuheiten entdecken",
+      "authenticity_heading": "Zustand verstehen",
+      "authenticity_text": "<p>Unsere Zustandsbewertungen sind ein Ausgangspunkt; Fotos und individuelle Hinweise beschreiben das konkrete Stück.</p>",
+      "authenticity_button": "Zustandsratgeber lesen"
+    },
     "search": {
       "no_results": "Keine Ergebnisse gefunden für \"{{ terms }}\". Überprüfe die Schreibweise oder versuche es mit einer anderen Suchanfrage.",
       "results_with_count": {

@@ -95,10 +95,22 @@
 
             {%- when 'link_list' -%}
               {%- if block.settings.menu != blank -%}
+                {%- liquid
+                  assign footer_heading = block.settings.heading | default: block.settings.menu.title
+                  if footer_heading == 'Shop'
+                    assign footer_heading = 'general.footer.group_shop' | t
+                  elsif footer_heading == 'Discover'
+                    assign footer_heading = 'general.footer.group_discover' | t
+                  elsif footer_heading == 'Services'
+                    assign footer_heading = 'general.footer.group_services' | t
+                  elsif footer_heading == 'Customer care'
+                    assign footer_heading = 'general.footer.group_customer_care' | t
+                  endif
+                -%}
                 <details class="footer__group" open {{ block.shopify_attributes }}>
                   <summary class="footer__group-summary">
                     <span class="footer__group-heading">
-                      {{- block.settings.heading | default: block.settings.menu.title | escape -}}
+                      {{- footer_heading | escape -}}
                     </span>
                     <span class="footer__group-icon" aria-hidden="true">
                       {{- 'icon-caret.svg' | inline_asset_content -}}

@@ -139,6 +139,7 @@
         "text": "<p>A record of pieces previously selected and since placed with new owners. Looking for something similar? Share the designer and model with us through Find a Bag.</p>",
         "collection": "archive",
         "products_to_show": 3,
+        "show_price": false,
         "button_label": "Explore the archive",
         "color_scheme": "scheme-1"
       }

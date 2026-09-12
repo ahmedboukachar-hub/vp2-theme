@@ -48,7 +48,11 @@
                   }}
                 {%- else -%}
                   <span class="archive-feature__placeholder">
-                    {{- 'products.product.media.photography_pending' | t -}}
+                    <svg class="archive-feature__placeholder-mark" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M43 66.5h74l8 61H35l8-61Z" stroke="currentColor" stroke-width="2"/>
+                      <path d="M58 67c0-17.7 8.8-30 22-30s22 12.3 22 30" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>{{- 'products.product.image_pending' | t -}}</span>
                   </span>
                 {%- endif -%}
                 <span class="archive-feature__flag">{{ 'sections.archive.previously_sourced' | t }}</span>
@@ -61,7 +65,7 @@
                 {%- if section.settings.show_price -%}
                   <span class="archive-feature__price">{{ product.price | money }}</span>
                 {%- endif -%}
-                <span class="archive-feature__state">{{ 'sections.archive.found_new_home' | t }}</span>
+                <span class="archive-feature__state">{{ 'sections.archive.find_similar' | t }}</span>
               </div>
             </a>
           </li>

@@ -78,7 +78,11 @@
       "requires_js": "Je wishlist heeft JavaScript nodig om bewaarde stukken te tonen."
     },
     "footer": {
-      "non_affiliation": "{{ shop_name }} is een onafhankelijke wederverkoper en is niet verbonden aan de designerhuizen op deze website. Alle merknamen blijven eigendom van hun respectievelijke eigenaren."
+      "non_affiliation": "{{ shop_name }} is een onafhankelijke wederverkoper en is niet verbonden aan de designerhuizen op deze website. Alle merknamen blijven eigendom van hun respectievelijke eigenaren.",
+      "group_shop": "Winkelen",
+      "group_discover": "Ontdekken",
+      "group_services": "Services",
+      "group_customer_care": "Klantenservice"
     }
   },
   "newsletter": {
@@ -129,7 +133,14 @@
       "read_article": "Lees het artikel",
       "topics": "Onderwerpen",
       "all_topics": "Alle verhalen",
-      "empty": "Hier staan nog geen verhalen."
+      "empty": "Hier staan nog geen verhalen.",
+      "index_eyebrow": "Het Journal",
+      "index_heading": "Iconen, details en de verhalen die ze dragen.",
+      "index_intro": "<p>Ontdek de ontwerpgeschiedenis, praktische details en het eigen karakter van de tassen die we verzamelen, zoeken en bewonderen.</p>",
+      "topic_buying_guides": "Koopgidsen",
+      "topic_bag_care": "Verzorging & conditie",
+      "topic_designer_stories": "Designerverhalen",
+      "topic_collecting_vintage": "Vintage verzamelen"
     }
   },
   "onboarding": {
@@ -162,6 +173,7 @@
         "unit_price": "Eenheidsprijs"
       },
       "share": "Dit product delen",
+      "details_heading": "Details & conditie",
       "sold_out": "Uitverkocht",
       "unavailable": "Niet beschikbaar",
       "vendor": "Verkoper",
@@ -310,6 +322,20 @@
     }
   },
   "templates": {
+    "page_hero": {
+      "about_eyebrow": "Over ons",
+      "about_heading": "Een doordachte benadering van stukken met een verleden.",
+      "authenticity_eyebrow": "Onze aanpak",
+      "authenticity_heading": "Elk stuk verdient een nadere blik."
+    },
+    "page_cta": {
+      "about_heading": "Bekijk de huidige selectie.",
+      "about_text": "<p>Nieuw toegevoegde vintage en pre-owned stukken, elk slechts één keer beschikbaar.</p>",
+      "about_button": "Bekijk nieuw binnen",
+      "authenticity_heading": "Conditie begrijpen",
+      "authenticity_text": "<p>Onze conditiegradaties zijn een startpunt; de foto’s en individuele notities beschrijven het exacte stuk.</p>",
+      "authenticity_button": "Lees de conditiegids"
+    },
     "search": {
       "no_results": "Geen resultaten gevonden voor “{{ terms }}”. Controleer de spelling of gebruik een ander woord of een andere zin.",
       "results_with_count": {

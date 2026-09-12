@@ -1,21 +1,39 @@
 {{ 'section-service-panel.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign panel_heading = section.settings.heading
+  assign panel_text = section.settings.text
+  assign panel_button = section.settings.button_label
+
+  if request.locale.iso_code != 'en'
+    if page.handle == 'about' and panel_heading == 'Discover the current selection.'
+      assign panel_heading = 'templates.page_cta.about_heading' | t
+      assign panel_text = 'templates.page_cta.about_text' | t
+      assign panel_button = 'templates.page_cta.about_button' | t
+    elsif page.handle == 'authenticity' and panel_heading == 'Understanding condition'
+      assign panel_heading = 'templates.page_cta.authenticity_heading' | t
+      assign panel_text = 'templates.page_cta.authenticity_text' | t
+      assign panel_button = 'templates.page_cta.authenticity_button' | t
+    endif
+  endif
+-%}
+
 <div class="service-panel color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width">
     <div class="service-panel__inner{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {%- if section.settings.eyebrow != blank -%}
         <p class="service-panel__eyebrow caption-with-letter-spacing">{{ section.settings.eyebrow | escape }}</p>
       {%- endif -%}
-      {%- if section.settings.heading != blank -%}
+      {%- if panel_heading != blank -%}
         <h2 class="service-panel__heading inline-richtext {{ section.settings.heading_size }}">
-          {{- section.settings.heading -}}
+          {{- panel_heading -}}
         </h2>
       {%- endif -%}
-      {%- if section.settings.text != blank -%}
-        <div class="service-panel__text rte">{{ section.settings.text }}</div>
+      {%- if panel_text != blank -%}
+        <div class="service-panel__text rte">{{ panel_text }}</div>
       {%- endif -%}
       <div class="service-panel__actions">
-        {%- if section.settings.button_label != blank -%}
+        {%- if panel_button != blank -%}
           <a
             {% if section.settings.button_link == blank %}
               role="link"
@@ -25,7 +43,7 @@
             {% endif %}
             class="button"
           >
-            {{- section.settings.button_label | escape -}}
+            {{- panel_button | escape -}}
           </a>
         {%- endif -%}
         {%- if section.settings.link_label != blank and section.settings.link_url != blank -%}

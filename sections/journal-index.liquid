@@ -4,19 +4,34 @@
 {%- liquid
   assign per_page = section.settings.articles_per_page
   assign feature_first = section.settings.feature_first_article
+  assign journal_eyebrow = section.settings.eyebrow
+  assign journal_heading = section.settings.heading | default: blog.title
+  assign journal_intro = section.settings.intro
+
+  if request.locale.iso_code != 'en'
+    if journal_eyebrow == 'The Journal'
+      assign journal_eyebrow = 'blogs.article.index_eyebrow' | t
+    endif
+    if journal_heading == 'Icons, details and the stories they carry.'
+      assign journal_heading = 'blogs.article.index_heading' | t
+    endif
+    if journal_intro contains 'Explore the design history'
+      assign journal_intro = 'blogs.article.index_intro' | t
+    endif
+  endif
 -%}
 
 <div class="journal-index color-{{ section.settings.color_scheme }} gradient">
   <div class="vp-width">
     <header class="journal-index__hero">
-      {%- if section.settings.eyebrow != blank -%}
-        <span class="vp-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- if journal_eyebrow != blank -%}
+        <span class="vp-eyebrow">{{ journal_eyebrow | escape }}</span>
       {%- endif -%}
       <h1 class="vp-heading-display">
-        {{- section.settings.heading | default: blog.title | escape -}}
+        {{- journal_heading | escape -}}
       </h1>
-      {%- if section.settings.intro != blank -%}
-        <div class="vp-lead rte journal-index__intro">{{ section.settings.intro }}</div>
+      {%- if journal_intro != blank -%}
+        <div class="vp-lead rte journal-index__intro">{{ journal_intro }}</div>
       {%- endif -%}
     </header>
 
@@ -39,7 +54,7 @@
                 class="journal-index__topic{% if current_tags contains tag %} journal-index__topic--active{% endif %}"
                 {% if current_tags contains tag %}aria-current="page"{% endif %}
               >
-                {{- tag | escape -}}
+                {%- render 'journal-topic-label', topic: tag -%}
               </a>
             </li>
           {%- endfor -%}

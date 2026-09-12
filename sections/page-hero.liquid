@@ -2,17 +2,36 @@
 
 {%- liquid
   assign heading = section.settings.heading | default: page.title
+  assign eyebrow = section.settings.eyebrow
   assign has_media = false
   if section.settings.image != blank
     assign has_media = true
+  endif
+
+  if request.locale.iso_code != 'en'
+    if page.handle == 'about'
+      if eyebrow == 'About'
+        assign eyebrow = 'templates.page_hero.about_eyebrow' | t
+      endif
+      if heading == 'A considered approach to pieces with a past.'
+        assign heading = 'templates.page_hero.about_heading' | t
+      endif
+    elsif page.handle == 'authenticity'
+      if eyebrow == 'Our approach'
+        assign eyebrow = 'templates.page_hero.authenticity_eyebrow' | t
+      endif
+      if heading == 'Every piece deserves a closer look.'
+        assign heading = 'templates.page_hero.authenticity_heading' | t
+      endif
+    endif
   endif
 -%}
 
 <div class="page-hero color-{{ section.settings.color_scheme }} gradient{% if has_media %} page-hero--with-media{% endif %}">
   <div class="vp-width page-hero__inner">
     <div class="page-hero__copy">
-      {%- if section.settings.eyebrow != blank -%}
-        <span class="vp-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- if eyebrow != blank -%}
+        <span class="vp-eyebrow">{{ eyebrow | escape }}</span>
       {%- endif -%}
       {%- if heading != blank -%}
         <h1 class="vp-heading-display page-hero__title">{{ heading | escape }}</h1>
