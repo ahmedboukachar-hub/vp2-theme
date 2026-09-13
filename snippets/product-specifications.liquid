@@ -26,7 +26,7 @@
       {%- assign label_key = 'products.product.specifications.' | append: key -%}
       <div class="product-specifications__row">
         <dt>{{ label_key | t }}</dt>
-        <dd>{{ value | escape }}</dd>
+        <dd>{% render 'product-value', value: value %}</dd>
       </div>
     {%- endif -%}
   {%- endfor -%}

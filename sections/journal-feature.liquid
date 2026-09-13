@@ -3,6 +3,9 @@
 
 {%- liquid
   assign journal = blogs[section.settings.blog]
+  assign lead_article = section.settings.lead_article | default: journal.articles.first
+  assign second_article = section.settings.second_article
+  assign third_article = section.settings.third_article
 -%}
 
 {%- if journal != blank and journal.articles_count > 0 -%}
@@ -30,26 +33,29 @@
       <div class="journal-feature__grid">
         <div class="journal-feature__lead">
           {% render 'journal-card',
-            article: journal.articles.first,
+            article: lead_article,
             variant: 'lead',
             index: 1,
-            sizes: '(min-width: 990px) 60vw, 100vw'
+            sizes: '(min-width: 990px) 55vw, 100vw'
           %}
         </div>
-        {%- if journal.articles_count > 1 -%}
-          <div class="journal-feature__secondary">
-            {%- for article in journal.articles offset: 1 limit: 2 -%}
-              {%- assign editorial_index = forloop.index | plus: 1 -%}
-            {% render 'journal-card',
-              article: article,
-              variant: 'secondary',
-              index: editorial_index,
-              show_excerpt: false,
-              sizes: '(min-width: 990px) 18vw, 40vw'
-            %}
+        <div class="journal-feature__secondary">
+          {%- if second_article != blank and second_article.id != lead_article.id -%}
+            {% render 'journal-card', article: second_article, variant: 'secondary', show_excerpt: false, sizes: '150px' %}
+          {%- endif -%}
+          {%- if third_article != blank and third_article.id != lead_article.id and third_article.id != second_article.id -%}
+            {% render 'journal-card', article: third_article, variant: 'secondary', show_excerpt: false, sizes: '150px' %}
+          {%- endif -%}
+          {%- if second_article == blank and third_article == blank -%}
+            {%- assign fallback_count = 0 -%}
+            {%- for item in journal.articles -%}
+              {%- if item.id == lead_article.id -%}{%- continue -%}{%- endif -%}
+              {% render 'journal-card', article: item, variant: 'secondary', show_excerpt: false, sizes: '150px' %}
+              {%- assign fallback_count = fallback_count | plus: 1 -%}
+              {%- if fallback_count == 2 -%}{%- break -%}{%- endif -%}
             {%- endfor -%}
-          </div>
-        {%- endif -%}
+          {%- endif -%}
+        </div>
       </div>
     </div>
   </div>
@@ -62,6 +68,9 @@
   "disabled_on": { "groups": ["header", "footer"] },
   "settings": [
     { "type": "blog", "id": "blog", "label": "Blog" },
+    { "type": "article", "id": "lead_article", "label": "Featured article" },
+    { "type": "article", "id": "second_article", "label": "Second article" },
+    { "type": "article", "id": "third_article", "label": "Third article" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Journal" },
     { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "The stories behind the bags." },
     {
@@ -71,7 +80,7 @@
       "default": "<p>Buying guides, model histories and practical advice on condition and care—written for collectors and first-time buyers.</p>"
     },
     { "type": "text", "id": "button_label", "label": "Link label", "default": "Read the Journal" },
-    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-4" }
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-2" }
   ],
   "presets": [{ "name": "Journal feature" }]
 }

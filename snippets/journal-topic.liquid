@@ -1,0 +1,12 @@
+{% doc %}
+  Renders a translated editorial category, escaping custom tags once.
+  @param {string} topic - Article tag.
+{% enddoc %}
+{%- assign topic_handle = topic | handleize -%}
+{%- case topic_handle -%}
+  {%- when 'buying-guides' -%}{{ 'blogs.article.topic_buying_guides' | t }}
+  {%- when 'bag-care' -%}{{ 'blogs.article.topic_bag_care' | t }}
+  {%- when 'designer-stories' -%}{{ 'blogs.article.topic_designer_stories' | t }}
+  {%- when 'collecting-vintage' -%}{{ 'blogs.article.topic_collecting_vintage' | t }}
+  {%- else -%}{{ topic | replace: '-', ' ' | capitalize | escape }}
+{%- endcase -%}

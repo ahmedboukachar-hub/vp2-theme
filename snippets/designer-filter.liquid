@@ -1,0 +1,44 @@
+{% doc %}
+  Provides server-side designer tag filtering until native vendor facets are enabled.
+  @param {collection} collection - Current collection.
+{% enddoc %}
+{%- liquid
+  assign native_vendor = false
+  for filter in collection.filters
+    if filter.param_name == 'filter.p.vendor'
+      assign native_vendor = true
+    endif
+  endfor
+  assign designer_count = 0
+  assign current_designer = ''
+  for vendor in collection.all_vendors
+    assign designer_tag = vendor | handleize | prepend: 'designer-'
+    if collection.all_tags contains designer_tag
+      assign designer_count = designer_count | plus: 1
+      if current_tags contains designer_tag
+        assign current_designer = vendor
+      endif
+    endif
+  endfor
+-%}
+{%- if native_vendor == false and designer_count > 1 or current_designer != blank -%}
+  <div class="designer-filter page-width">
+    <details class="designer-filter__disclosure">
+      <summary class="designer-filter__summary">
+        <span>{{ 'products.facets.designer' | t }}</span>
+        <strong>{% if current_designer != blank %}{{ current_designer | escape }}{% else %}{{ 'products.facets.all_designers' | t }}{% endif %}</strong>
+        <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+      </summary>
+      <ul class="designer-filter__options" role="list">
+        <li><a href="{{ collection.url }}" {% if current_designer == blank %}aria-current="true"{% endif %}>{{ 'products.facets.all_designers' | t }}</a></li>
+        {%- for vendor in collection.all_vendors -%}
+          {%- assign designer_tag = vendor | handleize | prepend: 'designer-' -%}
+          {%- if collection.all_tags contains designer_tag -%}
+            <li><a href="{{ collection.url }}/{{ designer_tag }}" {% if vendor == current_designer %}aria-current="true"{% endif %}>{{ vendor | escape }}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </details>
+    {%- if current_designer != blank -%}<a class="designer-filter__reset" href="{{ collection.url }}">{{ 'products.facets.clear_designer' | t }}</a>{%- endif -%}
+  </div>
+{%- endif -%}

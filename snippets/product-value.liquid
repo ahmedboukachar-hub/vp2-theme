@@ -1,0 +1,14 @@
+{% doc %}
+  Translates known catalogue values, preserving unrecognised descriptions.
+  @param {string} value - Original or already translated product value.
+{% enddoc %}
+{%- liquid
+  assign normalized = value | handleize | replace: '-', '_'
+  assign known_values = 'brown,black,beige,shoulder_bag,top_handle_bag,crossbody_bag,travel_bag,accessory,leather,monogram_canvas,gg_canvas,matelasse_chevron_leather,excellent,very_good,good,fair' | split: ','
+  if known_values contains normalized
+    assign translation_key = 'products.values.' | append: normalized
+    echo translation_key | t
+  else
+    echo value | escape
+  endif
+-%}

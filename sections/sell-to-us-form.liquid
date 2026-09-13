@@ -32,7 +32,7 @@
 {%- endstyle -%}
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>
+  {%- if section.index == 1 -%}<h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>{%- endif -%}
   <div class="rte">{{ page.content }}</div>
 
   {%- form 'contact', id: 'SellToUsForm', class: 'sell-to-us__form' -%}

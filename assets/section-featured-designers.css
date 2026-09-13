@@ -46,3 +46,7 @@
   .featured-designers__list--3 { grid-template-columns: repeat(3, 1fr); }
   .featured-designers__list { gap: var(--vp-space-l); }
 }
+
+.featured-designers__media { aspect-ratio: 4 / 3; }
+.featured-designers__media.vp-media > img { position:absolute; inset:0; }
+@media screen and (min-width:750px) { .featured-designers.vp-section { padding-block:6.4rem; } }

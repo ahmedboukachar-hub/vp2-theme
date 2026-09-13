@@ -1,3 +1,4 @@
+{{ 'component-designer-filter.css' | asset_url | stylesheet_tag }}
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -121,7 +122,14 @@
                     class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                     {{ block.shopify_attributes }}
                   >
-                    {{- block.settings.text -}}
+                    {%- if block.settings.text == product.vendor and product.vendor != blank -%}
+                      {%- assign designer_tag = product.vendor | handleize | prepend: 'designer-' -%}
+                      {%- assign designer_collection = collections['all-bags'] -%}
+                      {%- if product.tags contains 'accessory' -%}{%- assign designer_collection = collections['accessories'] -%}{%- endif -%}
+                      {%- if product.tags contains designer_tag and designer_collection != blank -%}
+                        <a class="product__designer-link" href="{{ designer_collection.url }}/{{ designer_tag }}">{{ product.vendor | escape }}</a>
+                      {%- else -%}{{ product.vendor | link_to_vendor }}{%- endif -%}
+                    {%- else -%}{{- block.settings.text -}}{%- endif -%}
                   </p>
                 {%- when 'title' -%}
                   <div class="product__title" {{ block.shopify_attributes }}>
@@ -271,6 +279,7 @@
                     </details>
                   </div>
                 {%- when 'quantity_selector' -%}
+                  {%- if product.tags contains 'bag' and product.has_only_default_variant and product.selected_or_first_available_variant.inventory_quantity <= 1 -%}{%- continue -%}{%- endif -%}
                   <div
                     id="Quantity-Form-{{ section.id }}"
                     class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"

@@ -4,13 +4,13 @@
       "type": "editorial-split-hero",
       "settings": {
         "image": "shopify://shop_images/editorial-monogram-bags-flatlay.jpg",
-        "eyebrow": "Curated vintage & pre-owned",
-        "heading": "Iconic bags, chosen one by one.",
-        "text": "<p>A considered collection of vintage and pre-owned designer bags, selected for their character, condition and enduring appeal.</p>",
+        "eyebrow": "Vintage & pre-owned designer bags",
+        "heading": "Vintage icons. Individual character.",
+        "text": "<p>Explore pre-owned designer bags from Louis Vuitton, Gucci and more. Discover the piece that feels like yours.</p>",
         "button_label": "Shop new arrivals",
         "button_link": "shopify://collections/new-arrivals",
-        "link_label": "Explore designers",
-        "link_url": "shopify://pages/designers",
+        "link_label": "Explore all bags",
+        "link_url": "shopify://collections/all-bags",
         "color_scheme": "scheme-1"
       }
     },
@@ -20,22 +20,22 @@
         "proof_selected": {
           "type": "item",
           "settings": {
-            "heading": "Selected one by one",
-            "text": "<p>Chosen for design, condition and enduring relevance.</p>"
+            "heading": "Individual pieces",
+            "text": "<p>Discover the character of each pre-owned bag.</p>"
           }
         },
         "proof_documented": {
           "type": "item",
           "settings": {
-            "heading": "Condition, clearly shown",
-            "text": "<p>Every visible sign of wear is described and photographed.</p>"
+            "heading": "A closer look",
+            "text": "<p>Ask us about condition, details or measurements.</p>"
           }
         },
         "proof_exact": {
           "type": "item",
           "settings": {
-            "heading": "The exact piece pictured",
-            "text": "<p>What you see is the unique item you receive.</p>"
+            "heading": "Personal advice",
+            "text": "<p>Questions about a bag? Get in touch.</p>"
           }
         }
       },
@@ -46,11 +46,11 @@
       ],
       "settings": {
         "show_borders": true,
-        "link_label": "Our selection standards",
-        "link_url": "shopify://pages/our-curation",
+        "link_label": "",
+        "link_url": "",
         "color_scheme": "scheme-3",
-        "padding_top": 56,
-        "padding_bottom": 56
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "new_arrivals": {
@@ -59,7 +59,7 @@
         "title": "New arrivals",
         "heading_size": "h2",
         "description": "<p>Recently added vintage and pre-owned designer bags. Each is a one-off.</p>",
-        "show_description": true,
+        "show_description": false,
         "collection": "new-arrivals",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -75,8 +75,8 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 96,
-        "padding_bottom": 96
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "designers": {
@@ -101,7 +101,7 @@
       ],
       "settings": {
         "eyebrow": "The houses",
-        "title": "Houses that shaped the modern handbag.",
+        "title": "Explore the designers.",
         "columns_desktop": "2",
         "color_scheme": "scheme-1"
       }
@@ -115,8 +115,8 @@
         "heading": "Chosen with a collector’s eye.",
         "text": "<p>We look beyond the name alone. Each piece is considered for its design, condition and the character it has developed over time.</p>",
         "button_label": "Discover our approach",
-        "button_link": "shopify://pages/authenticity",
-        "color_scheme": "scheme-4"
+        "button_link": "shopify://pages/our-curation",
+        "color_scheme": "scheme-3"
       }
     },
     "find_a_bag": {
@@ -125,10 +125,10 @@
         "eyebrow": "Personal sourcing",
         "heading": "Looking for a particular piece?",
         "heading_size": "h1",
-        "text": "<p>Tell us which designer, model or era you are searching for. We will use your request to guide our sourcing—without promising availability or a delivery date.</p>",
+        "text": "<p>Tell us the designer, model and details you have in mind. We will use your request to guide our search.</p>",
         "button_label": "Start a search request",
         "button_link": "shopify://pages/find-a-bag",
-        "color_scheme": "scheme-2"
+        "color_scheme": "scheme-1"
       }
     },
     "archive": {
@@ -142,7 +142,8 @@
         "show_price": false,
         "button_label": "Explore the archive",
         "color_scheme": "scheme-1"
-      }
+      },
+      "disabled": true
     },
     "journal": {
       "type": "journal-feature",
@@ -152,7 +153,10 @@
         "heading": "The stories behind the bags.",
         "text": "<p>Buying guides, model histories and practical advice on condition and care—written for collectors and first-time buyers.</p>",
         "button_label": "Read the Journal",
-        "color_scheme": "scheme-4"
+        "color_scheme": "scheme-2",
+        "lead_article": "journal/louis-vuitton-speedy-30-guide",
+        "second_article": "journal/most-popular-gucci-bags",
+        "third_article": "journal/how-we-describe-the-condition-of-a-pre-owned-bag"
       }
     },
     "newsletter": {
@@ -195,9 +199,9 @@
     "new_arrivals",
     "designers",
     "editorial",
+    "journal",
     "find_a_bag",
     "archive",
-    "journal",
     "newsletter"
   ]
 }
