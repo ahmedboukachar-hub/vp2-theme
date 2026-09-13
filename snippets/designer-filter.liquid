@@ -21,8 +21,9 @@
     endif
   endfor
 -%}
-{%- if native_vendor == false and designer_count > 1 or current_designer != blank -%}
-  <div class="designer-filter page-width">
+<div class="designer-filter page-width" data-designer-count="{{ designer_count }}" data-native-vendor="{{ native_vendor }}" data-vendor-count="{{ collection.all_vendors.size }}" data-tag-count="{{ collection.all_tags.size }}">
+{%- unless native_vendor -%}
+{%- if designer_count > 1 or current_designer != blank -%}
     <details class="designer-filter__disclosure">
       <summary class="designer-filter__summary">
         <span>{{ 'products.facets.designer' | t }}</span>
@@ -40,5 +41,6 @@
       </ul>
     </details>
     {%- if current_designer != blank -%}<a class="designer-filter__reset" href="{{ collection.url }}">{{ 'products.facets.clear_designer' | t }}</a>{%- endif -%}
-  </div>
 {%- endif -%}
+{%- endunless -%}
+</div>
