@@ -59,10 +59,15 @@
 
 @media screen and (min-width: 990px) {
   .journal-feature__grid {
-    grid-template-columns: minmax(0, 1.7fr) minmax(30rem, 0.8fr);
-    gap: clamp(4rem, 6vw, 9rem);
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(3.2rem, 4vw, 5.6rem);
     align-items: start;
   }
 
   .journal-feature__secondary { padding-top: 0.4rem; }
 }
+
+.journal-feature.vp-section { padding-block:6.4rem; }
+.journal-feature__header { margin-bottom:3.2rem; }
+.journal-feature__grid { padding-top:3.2rem; }
+@media screen and (max-width:749px) { .journal-feature.vp-section { padding-block:4rem; } }

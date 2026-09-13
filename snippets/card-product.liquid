@@ -202,9 +202,9 @@
               -%}
               {%- if card_material != blank or card_condition != blank -%}
                 <div class="card__meta-line">
-                  {%- if card_material != blank -%}{{ card_material | escape }}{%- endif -%}
+                  {%- if card_material != blank -%}{% render 'product-value', value: card_material %}{%- endif -%}
                   {%- if card_material != blank and card_condition != blank %} &middot; {% endif -%}
-                  {%- if card_condition != blank -%}{{ card_condition | escape }}{%- endif -%}
+                  {%- if card_condition != blank -%}{% render 'product-value', value: card_condition %}{%- endif -%}
                 </div>
               {%- endif -%}
 

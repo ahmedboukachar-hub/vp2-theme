@@ -93,10 +93,14 @@
 
   .trust-strip__number {
     display: block;
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.2rem;
   }
 
   .trust-strip__link-row {
     margin: var(--vp-space-m) 0 0;
   }
 }
+
+.trust-strip__number { display:none; }
+.trust-strip__item { grid-template-columns:minmax(0,1fr); gap:0; }
+.trust-strip__link-row { margin:1.6rem 0 0; }

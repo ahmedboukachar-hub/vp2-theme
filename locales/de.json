@@ -318,7 +318,28 @@
       "filter_selected_accessibility": "{{ type }} ({{ count }} Filter ausgewählt)",
       "show_more": "Mehr anzeigen",
       "show_less": "Weniger anzeigen",
-      "filter_and_operator_subtitle": "Allen entsprechen"
+      "filter_and_operator_subtitle": "Allen entsprechen",
+      "designer": "Designer",
+      "all_designers": "Alle Designer",
+      "clear_designer": "Designerauswahl löschen"
+    },
+    "values": {
+      "brown": "Braun",
+      "black": "Schwarz",
+      "beige": "Beige",
+      "shoulder_bag": "Schultertasche",
+      "top_handle_bag": "Henkeltasche",
+      "crossbody_bag": "Umhängetasche",
+      "travel_bag": "Reisetasche",
+      "accessory": "Accessoire",
+      "leather": "Leder",
+      "monogram_canvas": "Monogram-Canvas",
+      "gg_canvas": "GG-Canvas",
+      "matelasse_chevron_leather": "Leder mit Chevron-Steppung",
+      "excellent": "Ausgezeichnet",
+      "very_good": "Sehr gut",
+      "good": "Gut",
+      "fair": "Akzeptabel"
     }
   },
   "templates": {
@@ -415,7 +436,8 @@
       "success_heading": "Ihre Anfrage ist eingegangen",
       "success_body": "Vielen Dank. Wir melden uns, wenn wir Ihre Suche sinnvoll unterstützen können.",
       "closing": "Jedes Pre-Owned-Stück ist individuell. Zustand, Alter, Details und Zubehör können variieren, selbst innerhalb desselben Modells. Wir beschreiben stets das konkret angebotene Stück.",
-      "hidden_source": "Anfragetyp"
+      "hidden_source": "Anfragetyp",
+      "optional_details": "Weitere Wünsche (optional)"
     },
     "sell_to_us": {
       "fields": {

@@ -5,7 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
+    {%- assign designer_selection = '' -%}
+    {%- if collection != blank -%}
+      {%- for vendor in collection.all_vendors -%}
+        {%- assign designer_tag = vendor | handleize | prepend: 'designer-' -%}
+        {%- if current_tags contains designer_tag -%}{%- assign designer_selection = vendor -%}{%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- if designer_selection != blank -%}
+      <link rel="canonical" href="{{ request.origin }}{{ collection.url }}">
+      <meta name="robots" content="noindex,follow">
+    {%- else -%}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {%- endif -%}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -17,7 +29,7 @@
 
     <title>
       {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if designer_selection != blank %} &ndash; {{ designer_selection | escape }}{% elsif current_tags %} &ndash; {{ current_tags | join: ', ' | escape }}{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>

@@ -195,7 +195,13 @@
         {%- if section.settings.show_policy -%}
           <ul class="footer__policies list-unstyled">
             {%- for policy in shop.policies -%}
-              {%- if policy != blank -%}
+              {%- assign policy_in_menu = false -%}
+              {%- for footer_block in section.blocks -%}
+                {%- for link in footer_block.settings.menu.links -%}
+                  {%- if link.url contains policy.url -%}{%- assign policy_in_menu = true -%}{%- endif -%}
+                {%- endfor -%}
+              {%- endfor -%}
+              {%- if policy != blank and policy_in_menu == false -%}
                 <li>
                   <a href="{{ policy.url }}" class="footer__link">{{ policy.title | escape }}</a>
                 </li>

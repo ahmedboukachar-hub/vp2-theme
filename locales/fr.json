@@ -322,7 +322,28 @@
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtres sélectionnés)",
       "show_more": "Afficher plus",
       "show_less": "Afficher moins",
-      "filter_and_operator_subtitle": "Tout associer"
+      "filter_and_operator_subtitle": "Tout associer",
+      "designer": "Maison",
+      "all_designers": "Toutes les maisons",
+      "clear_designer": "Effacer la sélection"
+    },
+    "values": {
+      "brown": "Marron",
+      "black": "Noir",
+      "beige": "Beige",
+      "shoulder_bag": "Sac porté épaule",
+      "top_handle_bag": "Sac à main",
+      "crossbody_bag": "Sac bandoulière",
+      "travel_bag": "Sac de voyage",
+      "accessory": "Accessoire",
+      "leather": "Cuir",
+      "monogram_canvas": "Toile Monogram",
+      "gg_canvas": "Toile GG",
+      "matelasse_chevron_leather": "Cuir matelassé à chevrons",
+      "excellent": "Excellent",
+      "very_good": "Très bon",
+      "good": "Bon",
+      "fair": "Correct"
     }
   },
   "templates": {
@@ -424,7 +445,8 @@
       "success_heading": "Votre demande a bien été reçue",
       "success_body": "Merci. Nous vous contacterons si nous pouvons réellement vous aider dans votre recherche.",
       "closing": "Chaque pièce de seconde main est unique. L’état, l’âge, les détails et les accessoires peuvent varier, même au sein d’un même modèle. Nous décrivons toujours la pièce précise proposée.",
-      "hidden_source": "Type de demande"
+      "hidden_source": "Type de demande",
+      "optional_details": "Autres préférences (facultatif)"
     },
     "sell_to_us": {
       "fields": {

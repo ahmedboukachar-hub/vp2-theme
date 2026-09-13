@@ -14,7 +14,7 @@
     <header class="article-page__header">
       {%- if topic != blank and section.settings.show_topic -%}
         <a class="vp-eyebrow article-page__topic" href="{{ blog.url }}/tagged/{{ topic | handleize }}">
-          {{- topic | escape -}}
+          {% render 'journal-topic', topic: topic %}
         </a>
       {%- endif -%}
 

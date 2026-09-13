@@ -1,0 +1,542 @@
+[
+  {
+    "prefix": "section.index.json.hero.eyebrow",
+    "locale": "nl",
+    "value": "Vintage en pre-owned designertassen"
+  },
+  {
+    "prefix": "section.index.json.hero.eyebrow",
+    "locale": "de",
+    "value": "Vintage- und Pre-owned-Designertaschen"
+  },
+  {
+    "prefix": "section.index.json.hero.eyebrow",
+    "locale": "fr",
+    "value": "Sacs de créateur vintage et de seconde main"
+  },
+  {
+    "prefix": "section.index.json.hero.heading",
+    "locale": "nl",
+    "value": "Iconische tassen. Elk met een eigen karakter."
+  },
+  {
+    "prefix": "section.index.json.hero.heading",
+    "locale": "de",
+    "value": "Vintage-Ikonen. Individueller Charakter."
+  },
+  {
+    "prefix": "section.index.json.hero.heading",
+    "locale": "fr",
+    "value": "Des sacs iconiques. Un caractère unique."
+  },
+  {
+    "prefix": "section.index.json.hero.text",
+    "locale": "nl",
+    "value": "<p>Ontdek vintage en pre-owned designertassen van Louis Vuitton, Gucci en meer. Vind de tas die bij je past.</p>"
+  },
+  {
+    "prefix": "section.index.json.hero.text",
+    "locale": "de",
+    "value": "<p>Entdecken Sie Pre-owned-Designertaschen von Louis Vuitton, Gucci und weiteren Modehäusern. Finden Sie das Stück, das zu Ihnen passt.</p>"
+  },
+  {
+    "prefix": "section.index.json.hero.text",
+    "locale": "fr",
+    "value": "<p>Découvrez des sacs de créateur de seconde main signés Louis Vuitton, Gucci et bien plus. Trouvez celui qui vous ressemble.</p>"
+  },
+  {
+    "prefix": "section.index.json.hero.button_label",
+    "locale": "nl",
+    "value": "Bekijk de nieuwste tassen"
+  },
+  {
+    "prefix": "section.index.json.hero.button_label",
+    "locale": "de",
+    "value": "Neuheiten entdecken"
+  },
+  {
+    "prefix": "section.index.json.hero.button_label",
+    "locale": "fr",
+    "value": "Découvrir les nouveautés"
+  },
+  {
+    "prefix": "section.index.json.hero.link_label",
+    "locale": "nl",
+    "value": "Ontdek alle tassen"
+  },
+  {
+    "prefix": "section.index.json.hero.link_label",
+    "locale": "de",
+    "value": "Alle Taschen entdecken"
+  },
+  {
+    "prefix": "section.index.json.hero.link_label",
+    "locale": "fr",
+    "value": "Voir tous les sacs"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_selected.heading",
+    "locale": "nl",
+    "value": "Elk stuk is anders"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_selected.heading",
+    "locale": "de",
+    "value": "Individuelle Stücke"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_selected.heading",
+    "locale": "fr",
+    "value": "Chaque pièce est unique"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_selected.text",
+    "locale": "nl",
+    "value": "<p>Ontdek het eigen karakter van elke pre-owned tas.</p>"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_selected.text",
+    "locale": "de",
+    "value": "<p>Entdecken Sie den eigenen Charakter jeder Pre-owned-Tasche.</p>"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_selected.text",
+    "locale": "fr",
+    "value": "<p>Découvrez le caractère de chaque sac de seconde main.</p>"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_documented.heading",
+    "locale": "nl",
+    "value": "Bekijk de details"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_documented.heading",
+    "locale": "de",
+    "value": "Ein genauerer Blick"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_documented.heading",
+    "locale": "fr",
+    "value": "Le sens du détail"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_documented.text",
+    "locale": "nl",
+    "value": "<p>Vraag ons naar de conditie, details of afmetingen.</p>"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_documented.text",
+    "locale": "de",
+    "value": "<p>Fragen Sie uns nach Zustand, Details oder Maßen.</p>"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_documented.text",
+    "locale": "fr",
+    "value": "<p>Posez-nous vos questions sur l’état, les détails ou les dimensions.</p>"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_exact.heading",
+    "locale": "nl",
+    "value": "Persoonlijk advies"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_exact.heading",
+    "locale": "de",
+    "value": "Persönliche Beratung"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_exact.heading",
+    "locale": "fr",
+    "value": "Un conseil personnalisé"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_exact.text",
+    "locale": "nl",
+    "value": "<p>Een vraag over een tas? Neem contact op.</p>"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_exact.text",
+    "locale": "de",
+    "value": "<p>Fragen zu einer Tasche? Schreiben Sie uns.</p>"
+  },
+  {
+    "prefix": "section.index.json.proof.proof_exact.text",
+    "locale": "fr",
+    "value": "<p>Une question sur un sac ? Contactez-nous.</p>"
+  },
+  {
+    "prefix": "section.index.json.designers.title",
+    "locale": "nl",
+    "value": "Ontdek de designers."
+  },
+  {
+    "prefix": "section.index.json.designers.title",
+    "locale": "de",
+    "value": "Entdecken Sie die Designer."
+  },
+  {
+    "prefix": "section.index.json.designers.title",
+    "locale": "fr",
+    "value": "Découvrez les maisons."
+  },
+  {
+    "prefix": "section.index.json.find_a_bag.text",
+    "locale": "nl",
+    "value": "<p>Vertel ons welke designer, welk model en welke details je zoekt. Met jouw wensen gaan we gericht op zoek.</p>"
+  },
+  {
+    "prefix": "section.index.json.find_a_bag.text",
+    "locale": "de",
+    "value": "<p>Verraten Sie uns den Designer, das Modell und die gewünschten Details. Ihre Wünsche geben unserer Suche die Richtung.</p>"
+  },
+  {
+    "prefix": "section.index.json.find_a_bag.text",
+    "locale": "fr",
+    "value": "<p>Indiquez-nous la maison, le modèle et les détails recherchés. Vos préférences guideront notre recherche.</p>"
+  },
+  {
+    "prefix": "general.password_page.hero_body",
+    "locale": "nl",
+    "value": "We werken aan een selectie vintage en pre-owned designertassen, gekozen om hun karakter, conditie en tijdloze uitstraling."
+  },
+  {
+    "prefix": "products.facets.product_count.one",
+    "locale": "nl",
+    "value": "{{ product_count }} van {{ count }} producten"
+  },
+  {
+    "prefix": "products.facets.product_count.other",
+    "locale": "nl",
+    "value": "{{ product_count }} van {{ count }} producten"
+  },
+  {
+    "prefix": "products.facets.designer",
+    "locale": "nl",
+    "value": "Designer"
+  },
+  {
+    "prefix": "products.facets.all_designers",
+    "locale": "nl",
+    "value": "Alle designers"
+  },
+  {
+    "prefix": "products.facets.clear_designer",
+    "locale": "nl",
+    "value": "Wis designerkeuze"
+  },
+  {
+    "prefix": "products.values.brown",
+    "locale": "nl",
+    "value": "Bruin"
+  },
+  {
+    "prefix": "products.values.black",
+    "locale": "nl",
+    "value": "Zwart"
+  },
+  {
+    "prefix": "products.values.beige",
+    "locale": "nl",
+    "value": "Beige"
+  },
+  {
+    "prefix": "products.values.shoulder_bag",
+    "locale": "nl",
+    "value": "Schoudertas"
+  },
+  {
+    "prefix": "products.values.top_handle_bag",
+    "locale": "nl",
+    "value": "Handtas"
+  },
+  {
+    "prefix": "products.values.crossbody_bag",
+    "locale": "nl",
+    "value": "Crossbodytas"
+  },
+  {
+    "prefix": "products.values.travel_bag",
+    "locale": "nl",
+    "value": "Reistas"
+  },
+  {
+    "prefix": "products.values.accessory",
+    "locale": "nl",
+    "value": "Accessoire"
+  },
+  {
+    "prefix": "products.values.leather",
+    "locale": "nl",
+    "value": "Leer"
+  },
+  {
+    "prefix": "products.values.monogram_canvas",
+    "locale": "nl",
+    "value": "Monogramcanvas"
+  },
+  {
+    "prefix": "products.values.gg_canvas",
+    "locale": "nl",
+    "value": "GG-canvas"
+  },
+  {
+    "prefix": "products.values.matelasse_chevron_leather",
+    "locale": "nl",
+    "value": "Leer met chevronstiksel"
+  },
+  {
+    "prefix": "products.values.excellent",
+    "locale": "nl",
+    "value": "Uitstekend"
+  },
+  {
+    "prefix": "products.values.very_good",
+    "locale": "nl",
+    "value": "Zeer goed"
+  },
+  {
+    "prefix": "products.values.good",
+    "locale": "nl",
+    "value": "Goed"
+  },
+  {
+    "prefix": "products.values.fair",
+    "locale": "nl",
+    "value": "Redelijk"
+  },
+  {
+    "prefix": "templates.page_cta.about_button",
+    "locale": "nl",
+    "value": "Bekijk de nieuwste tassen"
+  },
+  {
+    "prefix": "templates.contact.form.comment",
+    "locale": "nl",
+    "value": "Je bericht"
+  },
+  {
+    "prefix": "templates.contact.form.send",
+    "locale": "nl",
+    "value": "Verstuur je bericht"
+  },
+  {
+    "prefix": "templates.404.cta_new_arrivals",
+    "locale": "nl",
+    "value": "Bekijk de nieuwste tassen"
+  },
+  {
+    "prefix": "templates.find_a_bag.optional_details",
+    "locale": "nl",
+    "value": "Meer voorkeuren (optioneel)"
+  },
+  {
+    "prefix": "sections.archive.empty_body",
+    "locale": "nl",
+    "value": "Hier vind je binnenkort eerder verkochte stukken."
+  },
+  {
+    "prefix": "sections.drop_signup.body",
+    "locale": "nl",
+    "value": "Ontvang af en toe een bericht over nieuwe designertassen en praktische gidsen uit het Journal."
+  },
+  {
+    "prefix": "products.facets.designer",
+    "locale": "de",
+    "value": "Designer"
+  },
+  {
+    "prefix": "products.facets.all_designers",
+    "locale": "de",
+    "value": "Alle Designer"
+  },
+  {
+    "prefix": "products.facets.clear_designer",
+    "locale": "de",
+    "value": "Designerauswahl löschen"
+  },
+  {
+    "prefix": "products.values.brown",
+    "locale": "de",
+    "value": "Braun"
+  },
+  {
+    "prefix": "products.values.black",
+    "locale": "de",
+    "value": "Schwarz"
+  },
+  {
+    "prefix": "products.values.beige",
+    "locale": "de",
+    "value": "Beige"
+  },
+  {
+    "prefix": "products.values.shoulder_bag",
+    "locale": "de",
+    "value": "Schultertasche"
+  },
+  {
+    "prefix": "products.values.top_handle_bag",
+    "locale": "de",
+    "value": "Henkeltasche"
+  },
+  {
+    "prefix": "products.values.crossbody_bag",
+    "locale": "de",
+    "value": "Umhängetasche"
+  },
+  {
+    "prefix": "products.values.travel_bag",
+    "locale": "de",
+    "value": "Reisetasche"
+  },
+  {
+    "prefix": "products.values.accessory",
+    "locale": "de",
+    "value": "Accessoire"
+  },
+  {
+    "prefix": "products.values.leather",
+    "locale": "de",
+    "value": "Leder"
+  },
+  {
+    "prefix": "products.values.monogram_canvas",
+    "locale": "de",
+    "value": "Monogram-Canvas"
+  },
+  {
+    "prefix": "products.values.gg_canvas",
+    "locale": "de",
+    "value": "GG-Canvas"
+  },
+  {
+    "prefix": "products.values.matelasse_chevron_leather",
+    "locale": "de",
+    "value": "Leder mit Chevron-Steppung"
+  },
+  {
+    "prefix": "products.values.excellent",
+    "locale": "de",
+    "value": "Ausgezeichnet"
+  },
+  {
+    "prefix": "products.values.very_good",
+    "locale": "de",
+    "value": "Sehr gut"
+  },
+  {
+    "prefix": "products.values.good",
+    "locale": "de",
+    "value": "Gut"
+  },
+  {
+    "prefix": "products.values.fair",
+    "locale": "de",
+    "value": "Akzeptabel"
+  },
+  {
+    "prefix": "templates.find_a_bag.optional_details",
+    "locale": "de",
+    "value": "Weitere Wünsche (optional)"
+  },
+  {
+    "prefix": "products.facets.designer",
+    "locale": "fr",
+    "value": "Maison"
+  },
+  {
+    "prefix": "products.facets.all_designers",
+    "locale": "fr",
+    "value": "Toutes les maisons"
+  },
+  {
+    "prefix": "products.facets.clear_designer",
+    "locale": "fr",
+    "value": "Effacer la sélection"
+  },
+  {
+    "prefix": "products.values.brown",
+    "locale": "fr",
+    "value": "Marron"
+  },
+  {
+    "prefix": "products.values.black",
+    "locale": "fr",
+    "value": "Noir"
+  },
+  {
+    "prefix": "products.values.beige",
+    "locale": "fr",
+    "value": "Beige"
+  },
+  {
+    "prefix": "products.values.shoulder_bag",
+    "locale": "fr",
+    "value": "Sac porté épaule"
+  },
+  {
+    "prefix": "products.values.top_handle_bag",
+    "locale": "fr",
+    "value": "Sac à main"
+  },
+  {
+    "prefix": "products.values.crossbody_bag",
+    "locale": "fr",
+    "value": "Sac bandoulière"
+  },
+  {
+    "prefix": "products.values.travel_bag",
+    "locale": "fr",
+    "value": "Sac de voyage"
+  },
+  {
+    "prefix": "products.values.accessory",
+    "locale": "fr",
+    "value": "Accessoire"
+  },
+  {
+    "prefix": "products.values.leather",
+    "locale": "fr",
+    "value": "Cuir"
+  },
+  {
+    "prefix": "products.values.monogram_canvas",
+    "locale": "fr",
+    "value": "Toile Monogram"
+  },
+  {
+    "prefix": "products.values.gg_canvas",
+    "locale": "fr",
+    "value": "Toile GG"
+  },
+  {
+    "prefix": "products.values.matelasse_chevron_leather",
+    "locale": "fr",
+    "value": "Cuir matelassé à chevrons"
+  },
+  {
+    "prefix": "products.values.excellent",
+    "locale": "fr",
+    "value": "Excellent"
+  },
+  {
+    "prefix": "products.values.very_good",
+    "locale": "fr",
+    "value": "Très bon"
+  },
+  {
+    "prefix": "products.values.good",
+    "locale": "fr",
+    "value": "Bon"
+  },
+  {
+    "prefix": "products.values.fair",
+    "locale": "fr",
+    "value": "Correct"
+  },
+  {
+    "prefix": "templates.find_a_bag.optional_details",
+    "locale": "fr",
+    "value": "Autres préférences (facultatif)"
+  }
+]

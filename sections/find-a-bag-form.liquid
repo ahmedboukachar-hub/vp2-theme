@@ -36,10 +36,12 @@
     border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
     font-style: italic;
   }
+  .find-a-bag__preferences { margin:2.4rem 0; border-block:1px solid rgba(var(--color-foreground),.15); }
+  .find-a-bag__preferences summary { padding:1.6rem 0; min-height:5.2rem; cursor:pointer; }
 {%- endstyle -%}
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>
+  {%- if section.index == 1 -%}<h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>{%- endif -%}
   <div class="rte">{{ page.content }}</div>
 
   {%- form 'contact', id: 'FindABagForm', class: 'find-a-bag__form' -%}
@@ -59,7 +61,7 @@
       <input type="hidden" name="contact[{{ 'templates.find_a_bag.hidden_source' | t }}]" value="Find a Bag">
 
       {%- liquid
-        assign text_fields = 'name,country,designer,model_or_style,preferred_size,preferred_colour,preferred_material,preferred_era,minimum_condition,maximum_budget,currency,flexible_details,reference_link' | split: ','
+        assign text_fields = 'name,designer,model_or_style,maximum_budget,currency' | split: ','
       -%}
 
       <div class="field">
@@ -98,6 +100,18 @@
           <label for="FindABag-{{ field_key }}" class="field__label">{{ field_label }}</label>
         </div>
       {%- endfor -%}
+      <details class="find-a-bag__preferences">
+        <summary>{{ 'templates.find_a_bag.optional_details' | t }}</summary>
+        {%- assign extra_fields = 'country,preferred_size,preferred_colour,preferred_material,preferred_era,minimum_condition,flexible_details,reference_link' | split: ',' -%}
+        {%- for field_key in extra_fields -%}
+          {%- assign field_label_key = 'templates.find_a_bag.fields.' | append: field_key -%}
+          {%- assign field_label = field_label_key | t -%}
+          <div class="field">
+            <input type="text" id="FindABag-{{ field_key }}" name="contact[{{ field_label }}]" class="field__input" placeholder="{{ field_label }}">
+            <label for="FindABag-{{ field_key }}" class="field__label">{{ field_label }}</label>
+          </div>
+        {%- endfor -%}
+      </details>
       <div class="field">
         <textarea rows="5" id="FindABag-notes" name="contact[body]" class="text-area field__input" placeholder="{{ 'templates.find_a_bag.fields.notes' | t }}">{{ form.body }}</textarea>
         <label for="FindABag-notes" class="form__label field__label">{{ 'templates.find_a_bag.fields.notes' | t }}</label>

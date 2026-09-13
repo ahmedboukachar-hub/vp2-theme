@@ -318,7 +318,28 @@
       "sort_button": "Sort",
       "sort_by_label": "Sort by:",
       "to": "To",
-      "clear_filter": "Remove filter"
+      "clear_filter": "Remove filter",
+      "designer": "Designer",
+      "all_designers": "All designers",
+      "clear_designer": "Clear designer"
+    },
+    "values": {
+      "brown": "Brown",
+      "black": "Black",
+      "beige": "Beige",
+      "shoulder_bag": "Shoulder bag",
+      "top_handle_bag": "Top-handle bag",
+      "crossbody_bag": "Crossbody bag",
+      "travel_bag": "Travel bag",
+      "accessory": "Accessory",
+      "leather": "Leather",
+      "monogram_canvas": "Monogram canvas",
+      "gg_canvas": "GG canvas",
+      "matelasse_chevron_leather": "Matelassé chevron leather",
+      "excellent": "Excellent",
+      "very_good": "Very good",
+      "good": "Good",
+      "fair": "Fair"
     }
   },
   "templates": {
@@ -415,7 +436,8 @@
       "success_heading": "Your request has been received",
       "success_body": "Thank you. We will contact you if we can meaningfully help with your search.",
       "closing": "Every pre-owned piece is individual. Condition, age, details and inclusions can vary, even within the same model. We will always describe the specific piece offered.",
-      "hidden_source": "Request type"
+      "hidden_source": "Request type",
+      "optional_details": "More preferences (optional)"
     },
     "sell_to_us": {
       "fields": {
