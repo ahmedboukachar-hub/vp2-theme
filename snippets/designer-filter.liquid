@@ -9,21 +9,18 @@
       assign native_vendor = true
     endif
   endfor
-  assign designer_count = 0
+  assign designer_count = collection.all_vendors.size
   assign current_designer = ''
   for vendor in collection.all_vendors
     assign designer_tag = vendor | handleize | prepend: 'designer-'
-    if collection.all_tags contains designer_tag
-      assign designer_count = designer_count | plus: 1
-      if current_tags contains designer_tag
-        assign current_designer = vendor
-      endif
+    if current_tags contains designer_tag
+      assign current_designer = vendor
     endif
   endfor
 -%}
-<div class="designer-filter page-width" data-designer-count="{{ designer_count }}" data-native-vendor="{{ native_vendor }}" data-vendor-count="{{ collection.all_vendors.size }}" data-tag-count="{{ collection.all_tags.size }}">
 {%- unless native_vendor -%}
 {%- if designer_count > 1 or current_designer != blank -%}
+  <div class="designer-filter page-width">
     <details class="designer-filter__disclosure">
       <summary class="designer-filter__summary">
         <span>{{ 'products.facets.designer' | t }}</span>
@@ -34,13 +31,11 @@
         <li><a href="{{ collection.url }}" {% if current_designer == blank %}aria-current="true"{% endif %}>{{ 'products.facets.all_designers' | t }}</a></li>
         {%- for vendor in collection.all_vendors -%}
           {%- assign designer_tag = vendor | handleize | prepend: 'designer-' -%}
-          {%- if collection.all_tags contains designer_tag -%}
             <li><a href="{{ collection.url }}/{{ designer_tag }}" {% if vendor == current_designer %}aria-current="true"{% endif %}>{{ vendor | escape }}</a></li>
-          {%- endif -%}
         {%- endfor -%}
       </ul>
     </details>
     {%- if current_designer != blank -%}<a class="designer-filter__reset" href="{{ collection.url }}">{{ 'products.facets.clear_designer' | t }}</a>{%- endif -%}
+  </div>
 {%- endif -%}
 {%- endunless -%}
-</div>
