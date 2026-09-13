@@ -1,0 +1,962 @@
+[
+  {
+    "sku": "VP-B001",
+    "sourceHandle": "louis-vuitton-looping-pm",
+    "targetHandle": "louis-vuitton-looping-pm",
+    "sourceImage": {
+      "created_at": "2026-03-31T16:29:54+02:00",
+      "height": 1536,
+      "id": 81328573317457,
+      "position": 1,
+      "product_id": 10585335005521,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/looping_1_juiste_foto1.jpg?v=1774967428",
+      "updated_at": "2026-03-31T16:30:28+02:00",
+      "variant_ids": [],
+      "width": 1024
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Looping PM — a pre-owned shoulder bag in Monogram canvas.</p><p>A brown shoulder bag with the model's characteristic curved shoulder strap and leather details.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838379769915",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Looping PM",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574237755",
+          "inventoryQuantity": 1,
+          "price": "560.00",
+          "sku": "VP-B001",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B002",
+    "sourceHandle": "louis-vuitton-alma-30",
+    "targetHandle": "louis-vuitton-alma-30",
+    "sourceImage": {
+      "created_at": "2026-08-29T16:00:47+02:00",
+      "height": 1200,
+      "id": 84724094828881,
+      "position": 1,
+      "product_id": 11077106172241,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/alma12.avif?v=1788012050",
+      "updated_at": "2026-08-29T16:00:50+02:00",
+      "variant_ids": [],
+      "width": 1200
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Alma 30 — a pre-owned top-handle bag in Monogram canvas.</p><p>Finished with natural vachetta leather details and gold-tone hardware.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838379868219",
+      "images": [],
+      "productType": "Top-handle bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Alma 30",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574303291",
+          "inventoryQuantity": 1,
+          "price": "575.00",
+          "sku": "VP-B002",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B003",
+    "sourceHandle": "naamloos-23jul_22-48-54",
+    "targetHandle": "jacquemus-le-grand-bambino-brown",
+    "sourceImage": {
+      "created_at": "2026-07-23T22:56:35+02:00",
+      "height": 2208,
+      "id": 84037480022353,
+      "position": 1,
+      "product_id": 10965318500689,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/IMG-4571.jpg?v=1784840199",
+      "updated_at": "2026-07-23T22:56:39+02:00",
+      "variant_ids": [],
+      "width": 1242
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Jacquemus Le Grand Bambino — a pre-owned top-handle bag in leather.</p><p>Brown leather with gold-tone details; carried by hand or crossbody with the shoulder strap.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838379966523",
+      "images": [],
+      "productType": "Top-handle bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Jacquemus Le Grand Bambino",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574401595",
+          "inventoryQuantity": 1,
+          "price": "485.00",
+          "sku": "VP-B003",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Jacquemus"
+    }
+  },
+  {
+    "sku": "VP-B004",
+    "sourceHandle": "jacquemus-le-grand-bambino",
+    "targetHandle": "jacquemus-le-grand-bambino-black",
+    "sourceImage": {
+      "created_at": "2026-07-23T22:44:43+02:00",
+      "height": 5712,
+      "id": 84037347574097,
+      "position": 1,
+      "product_id": 10965314044241,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/IMG-4580.heic?v=1784839489",
+      "updated_at": "2026-07-23T22:44:49+02:00",
+      "variant_ids": [],
+      "width": 4284
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Jacquemus Le Grand Bambino — a pre-owned top-handle bag in leather.</p><p>Black leather with gold-tone details; carried by hand or crossbody with the shoulder strap.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380064827",
+      "images": [],
+      "productType": "Top-handle bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Jacquemus Le Grand Bambino",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574499899",
+          "inventoryQuantity": 1,
+          "price": "485.00",
+          "sku": "VP-B004",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Jacquemus"
+    }
+  },
+  {
+    "sku": "VP-B005",
+    "sourceHandle": "louis-vuitton-saumur-30",
+    "targetHandle": "louis-vuitton-saumur-30",
+    "sourceImage": {
+      "created_at": "2026-08-29T15:11:42+02:00",
+      "height": 1536,
+      "id": 84723276317009,
+      "position": 1,
+      "product_id": 10923921080657,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/saumur_99.jpg?v=1788009106",
+      "updated_at": "2026-08-29T15:11:46+02:00",
+      "variant_ids": [],
+      "width": 2048
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Saumur 30 — a pre-owned crossbody bag in Monogram canvas.</p><p>A double-sided, equestrian-inspired crossbody design with leather trim.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380163131",
+      "images": [],
+      "productType": "Crossbody bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Saumur 30",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574598203",
+          "inventoryQuantity": 1,
+          "price": "425.00",
+          "sku": "VP-B005",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B006",
+    "sourceHandle": "louis-vuitton-keepall-60-monogram",
+    "targetHandle": "louis-vuitton-keepall-60",
+    "sourceImage": {
+      "created_at": "2026-07-05T21:29:13+02:00",
+      "height": 3024,
+      "id": 83646040342865,
+      "position": 1,
+      "product_id": 10923876024657,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/keepall1_aac566dc-3fff-4dd2-9e2a-65136867337f.jpg?v=1783279757",
+      "updated_at": "2026-07-05T21:29:17+02:00",
+      "variant_ids": [],
+      "width": 4032
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Keepall 60 — a pre-owned travel bag in Monogram canvas.</p><p>A soft travel duffle with natural cowhide leather trim.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380261435",
+      "images": [],
+      "productType": "Travel bag",
+      "status": "ACTIVE",
+      "tags": [
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "sold-archive"
+      ],
+      "title": "Louis Vuitton Keepall 60",
+      "totalInventory": 0,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574696507",
+          "inventoryQuantity": 0,
+          "price": "600.00",
+          "sku": "VP-B006",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B007",
+    "sourceHandle": "gucci-gg-marmont-shoulder-bag-matelasse-leer",
+    "targetHandle": "gucci-gg-marmont-shoulder-bag",
+    "sourceImage": {
+      "created_at": "2026-06-16T21:20:24+02:00",
+      "height": 2000,
+      "id": 83262853644625,
+      "position": 1,
+      "product_id": 10873008488785,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/gucci_reddddd.jpg?v=1781637627",
+      "updated_at": "2026-06-16T21:20:27+02:00",
+      "variant_ids": [],
+      "width": 2000
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Gucci GG Marmont — a pre-owned shoulder bag in matelassé chevron leather.</p><p>Finished with antique gold-tone Double G hardware; a compact model that can also be worn crossbody.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380359739",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Gucci GG Marmont Shoulder Bag",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574794811",
+          "inventoryQuantity": 1,
+          "price": "650.00",
+          "sku": "VP-B007",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Gucci"
+    }
+  },
+  {
+    "sku": "VP-B008",
+    "sourceHandle": "louis-vuitton-speedy-30-met-slotje-kopie",
+    "targetHandle": "louis-vuitton-speedy-30-01",
+    "sourceImage": {
+      "created_at": "2026-04-13T20:24:26+02:00",
+      "height": 1024,
+      "id": 81644066996561,
+      "position": 1,
+      "product_id": 10749763584337,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/speedy30-2.2.png?v=1776104671",
+      "updated_at": "2026-04-13T20:24:31+02:00",
+      "variant_ids": [],
+      "width": 1024
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Speedy 30 — a pre-owned top-handle bag in Monogram canvas.</p><p>With warm cognac-toned vachetta leather details.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380458043",
+      "images": [],
+      "productType": "Top-handle bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Speedy 30",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574893115",
+          "inventoryQuantity": 1,
+          "price": "495.00",
+          "sku": "VP-B008",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B009",
+    "sourceHandle": "louis-vuitton-speedy-30-kopie",
+    "targetHandle": "louis-vuitton-speedy-30-02",
+    "sourceImage": {
+      "created_at": "2026-04-13T20:09:03+02:00",
+      "height": 1024,
+      "id": 81643766579537,
+      "position": 1,
+      "product_id": 10749744480593,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/lvspeedyslotje1.png?v=1776103747",
+      "updated_at": "2026-04-13T20:09:07+02:00",
+      "variant_ids": [],
+      "width": 1024
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Speedy 30 — a pre-owned top-handle bag in Monogram canvas.</p><p>The padlock is included; the key is not.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380556347",
+      "images": [],
+      "productType": "Top-handle bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Speedy 30",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130574991419",
+          "inventoryQuantity": 1,
+          "price": "550.00",
+          "sku": "VP-B009",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B010",
+    "sourceHandle": "louise-vuitton-speedy-30",
+    "targetHandle": "louis-vuitton-speedy-30-03",
+    "sourceImage": {
+      "created_at": "2026-03-23T21:50:47+01:00",
+      "height": 1024,
+      "id": 81134520893777,
+      "position": 1,
+      "product_id": 10718196072785,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/voorkantspeedyy.png?v=1774299051",
+      "updated_at": "2026-03-23T21:50:51+01:00",
+      "variant_ids": [],
+      "width": 1536
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Speedy 30 — a pre-owned top-handle bag in Monogram canvas.</p><p>With vachetta leather details and gold-tone hardware.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380654651",
+      "images": [],
+      "productType": "Top-handle bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Speedy 30",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575122491",
+          "inventoryQuantity": 1,
+          "price": "520.00",
+          "sku": "VP-B010",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B011",
+    "sourceHandle": "louis-vuitton-pochette-accessoires",
+    "targetHandle": "louis-vuitton-pochette-accessoires",
+    "sourceImage": {
+      "created_at": "2026-03-23T14:49:00+01:00",
+      "height": 900,
+      "id": 81128404746577,
+      "position": 1,
+      "product_id": 10717531439441,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/pochettelv2.jpg?v=1774273742",
+      "updated_at": "2026-03-23T14:49:02+01:00",
+      "variant_ids": [],
+      "width": 900
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Pochette Accessoires — a pre-owned shoulder bag in Monogram canvas.</p><p>A slim zipped pouch with natural vachetta leather details.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380752955",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Pochette Accessoires",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575220795",
+          "inventoryQuantity": 1,
+          "price": "498.00",
+          "sku": "VP-B011",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B012",
+    "sourceHandle": "gucci-jackie-bag",
+    "targetHandle": "gucci-jackie-bag",
+    "sourceImage": {
+      "created_at": "2026-08-29T15:42:29+02:00",
+      "height": 1435,
+      "id": 84723879838033,
+      "position": 1,
+      "product_id": 10717567975761,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/gucci_jackie.png?v=1788010954",
+      "updated_at": "2026-08-29T15:42:34+02:00",
+      "variant_ids": [],
+      "width": 1096
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Gucci Jackie — a pre-owned shoulder bag in GG canvas.</p><p>Beige GG canvas with leather details and the model's characteristic piston closure.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380851259",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Gucci Jackie Bag",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575319099",
+          "inventoryQuantity": 1,
+          "price": "575.00",
+          "sku": "VP-B012",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Gucci"
+    }
+  },
+  {
+    "sku": "VP-B013",
+    "sourceHandle": "louise-vuitton-sac-noe-petit-kopie",
+    "targetHandle": "louis-vuitton-petit-noe-01",
+    "sourceImage": {
+      "created_at": "2026-01-27T19:30:01+01:00",
+      "height": 1200,
+      "id": 79750562939217,
+      "position": 1,
+      "product_id": 10603701403985,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/tasbakkathuis5.jpg?v=1769538604",
+      "updated_at": "2026-01-27T19:30:04+01:00",
+      "variant_ids": [],
+      "width": 800
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Petit Noé — a pre-owned shoulder bag in Monogram canvas.</p><p>A bucket-shaped design with drawstring closure, vachetta leather details and an adjustable shoulder strap.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838380949563",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Petit Noé",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575417403",
+          "inventoryQuantity": 1,
+          "price": "540.00",
+          "sku": "VP-B013",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B014",
+    "sourceHandle": "sac-noe",
+    "targetHandle": "louis-vuitton-petit-noe-02",
+    "sourceImage": {
+      "created_at": "2026-01-25T16:02:37+01:00",
+      "height": 1536,
+      "id": 79702132261201,
+      "position": 1,
+      "product_id": 10598793150801,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/ChatGPTImageJan25_2026at03_59_35PM.png?v=1769353361",
+      "updated_at": "2026-01-25T16:02:41+01:00",
+      "variant_ids": [],
+      "width": 1024
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Petit Noé — a pre-owned shoulder bag in Monogram canvas.</p><p>A bucket-shaped design with drawstring closure, vachetta leather details and an adjustable shoulder strap.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838381047867",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "available",
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Louis Vuitton Petit Noé",
+      "totalInventory": 1,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575515707",
+          "inventoryQuantity": 1,
+          "price": "580.00",
+          "sku": "VP-B014",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B015",
+    "sourceHandle": "louise-vuitton-sac-noe-petit",
+    "targetHandle": "louis-vuitton-petit-noe-03",
+    "sourceImage": {
+      "created_at": "2026-01-25T16:38:39+01:00",
+      "height": 800,
+      "id": 79702759702865,
+      "position": 1,
+      "product_id": 10598843547985,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/sac2noe10.jpg?v=1769355641",
+      "updated_at": "2026-01-25T16:40:41+01:00",
+      "variant_ids": [],
+      "width": 800
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Petit Noé — a pre-owned shoulder bag in Monogram canvas.</p><p>A bucket-shaped design with drawstring closure, vachetta leather details and an adjustable shoulder strap.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838381113403",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "sold-archive"
+      ],
+      "title": "Louis Vuitton Petit Noé",
+      "totalInventory": 0,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575581243",
+          "inventoryQuantity": 0,
+          "price": "565.00",
+          "sku": "VP-B015",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B016",
+    "sourceHandle": "louise-vuitton-looping-gm-kopie",
+    "targetHandle": "louis-vuitton-looping-gm-01",
+    "sourceImage": {
+      "created_at": "2026-02-01T22:21:37+01:00",
+      "height": 1200,
+      "id": 79867926741329,
+      "position": 1,
+      "product_id": 10612629274961,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/tasnadiavoorkantwit.jpg?v=1769980900",
+      "updated_at": "2026-02-01T22:21:40+01:00",
+      "variant_ids": [],
+      "width": 800
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Looping GM — a pre-owned shoulder bag in Monogram canvas.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838381211707",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "sold-archive"
+      ],
+      "title": "Louis Vuitton Looping GM",
+      "totalInventory": 0,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575679547",
+          "inventoryQuantity": 0,
+          "price": "495.00",
+          "sku": "VP-B016",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B017",
+    "sourceHandle": "louise-vuitton-looping-gm",
+    "targetHandle": "louis-vuitton-looping-gm-02",
+    "sourceImage": {
+      "created_at": "2026-03-31T17:58:09+02:00",
+      "height": 1536,
+      "id": 81329599545681,
+      "position": 1,
+      "product_id": 10598958563665,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/looping_recht.jpg?v=1774972719",
+      "updated_at": "2026-03-31T17:58:39+02:00",
+      "variant_ids": [],
+      "width": 1024
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Louis Vuitton Looping GM — a pre-owned shoulder bag in Monogram canvas.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838381310011",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "sold-archive"
+      ],
+      "title": "Louis Vuitton Looping GM",
+      "totalInventory": 0,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575777851",
+          "inventoryQuantity": 0,
+          "price": "615.00",
+          "sku": "VP-B017",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-B018",
+    "sourceHandle": "gucci-gg-schouder-tas",
+    "targetHandle": "gucci-gg-shoulder-bag",
+    "sourceImage": {
+      "created_at": "2026-01-27T19:22:51+01:00",
+      "height": 1200,
+      "id": 79750438846801,
+      "position": 1,
+      "product_id": 10603613978961,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/gucci5.jpg?v=1769538174",
+      "updated_at": "2026-01-27T19:22:54+01:00",
+      "variant_ids": [],
+      "width": 800
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>Gucci GG Shoulder Bag — a pre-owned shoulder bag.</p><p>A soft black shoulder bag with an all-over monogram print.</p><p>Individual signs of wear and included accessories will be documented in the condition report before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838381408315",
+      "images": [],
+      "productType": "Shoulder bag",
+      "status": "ACTIVE",
+      "tags": [
+        "bag",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "sold-archive"
+      ],
+      "title": "Gucci GG Shoulder Bag",
+      "totalInventory": 0,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575876155",
+          "inventoryQuantity": 0,
+          "price": "425.00",
+          "sku": "VP-B018",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Gucci"
+    }
+  },
+  {
+    "sku": "VP-A001",
+    "sourceHandle": "louise-vuitton-strap",
+    "targetHandle": "louis-vuitton-shoulder-strap",
+    "sourceImage": {
+      "created_at": "2026-03-30T20:21:02+02:00",
+      "height": 1536,
+      "id": 81306796589393,
+      "position": 1,
+      "product_id": 10727340245329,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/strap.jpg?v=1774894865",
+      "updated_at": "2026-03-30T20:21:05+02:00",
+      "variant_ids": [],
+      "width": 1024
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>A pre-owned Louis Vuitton shoulder strap. Details of this specific piece will be documented before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838381473851",
+      "images": [],
+      "productType": "Accessory",
+      "status": "ACTIVE",
+      "tags": [
+        "accessory",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "sold-archive"
+      ],
+      "title": "Louis Vuitton Shoulder Strap",
+      "totalInventory": 0,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130575941691",
+          "inventoryQuantity": 0,
+          "price": "420.00",
+          "sku": "VP-A001",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-A002",
+    "sourceHandle": "louise-vuitton-accesoires",
+    "targetHandle": "louis-vuitton-accessory-unidentified",
+    "sourceImage": {
+      "created_at": "2026-03-31T20:38:57+02:00",
+      "height": 1536,
+      "id": 81331966050641,
+      "position": 1,
+      "product_id": 10727341949265,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/sleutel_c66572d3-25d4-4d33-b5bf-3e36587fed54.jpg?v=1774982339",
+      "updated_at": "2026-03-31T20:38:59+02:00",
+      "variant_ids": [],
+      "width": 1024
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>A sold pre-owned Louis Vuitton accessory from the previous catalogue. The exact item type has not yet been identified and must be confirmed before this record can be published.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838381572155",
+      "images": [],
+      "productType": "Accessory",
+      "status": "DRAFT",
+      "tags": [
+        "accessory",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "publication-blocked",
+        "sold-archive"
+      ],
+      "title": "Louis Vuitton Accessory (to be identified)",
+      "totalInventory": 0,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130576039995",
+          "inventoryQuantity": 0,
+          "price": "49.00",
+          "sku": "VP-A002",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Louis Vuitton"
+    }
+  },
+  {
+    "sku": "VP-A003",
+    "sourceHandle": "organizer-ideaal-voor-de-louise-vuitton-sac-noe",
+    "targetHandle": "bag-organizer",
+    "sourceImage": {
+      "created_at": "2026-02-01T21:55:22+01:00",
+      "height": 1536,
+      "id": 79867445346641,
+      "position": 1,
+      "product_id": 10612601225553,
+      "src": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/ChatGPTImageFeb1_2026at09_46_54PM.png?v=1769979326",
+      "updated_at": "2026-02-01T21:55:26+01:00",
+      "variant_ids": [],
+      "width": 1024
+    },
+    "before": {
+      "currencyCode": "EUR",
+      "descriptionHtml": "<p>A practical bag organizer intended for bucket-shaped bags such as the Petit Noé. It adds structure and keeps contents tidy; exact fit and measurements will be confirmed before publication.</p>",
+      "featuredImageUrl": null,
+      "id": "gid://shopify/Product/7838381670459",
+      "images": [],
+      "productType": "Accessory",
+      "status": "ACTIVE",
+      "tags": [
+        "accessory",
+        "available",
+        "images-pending",
+        "migration-review",
+        "migration-vintagepareltje",
+        "new-arrival"
+      ],
+      "title": "Bag Organizer",
+      "totalInventory": 4,
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/44130576138299",
+          "inventoryQuantity": 4,
+          "price": "14.95",
+          "sku": "VP-A003",
+          "title": "Default Title"
+        }
+      ],
+      "vendor": "Unbranded"
+    }
+  }
+]

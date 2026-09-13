@@ -356,6 +356,20 @@
   width: 100%;
 }
 
+.product-card-wrapper .card__media {
+  background: #fff;
+}
+
+.product-card-wrapper .card__media .media > img {
+  object-fit: contain;
+  padding: clamp(8px, 3%, 16px);
+  box-sizing: border-box;
+}
+
+.product-card-wrapper.card-wrapper:hover .card .card__media .media.media--hover-effect > img {
+  transform: none;
+}
+
 .card__inner:not(.ratio) > .card__content {
   height: 100%;
 }
