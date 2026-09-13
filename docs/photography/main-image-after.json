@@ -1,0 +1,383 @@
+{
+  "verifiedAt": "2026-09-13",
+  "products": [
+    {
+      "sku": "VP-B001",
+      "productId": "gid://shopify/Product/7838379769915",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/looping_1_juiste_foto1.jpg?v=1774967428",
+      "images": [
+        {
+          "altText": "Louis Vuitton Looping PM",
+          "mediaId": "gid://shopify/MediaImage/27702720921659",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-looping-pm-main-vp-b001.jpg?v=1789269962"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-looping-pm-main-vp-b001.jpg?v=1789269962",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B002",
+      "productId": "gid://shopify/Product/7838379868219",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/alma12.avif?v=1788012050",
+      "images": [
+        {
+          "altText": "Louis Vuitton Alma 30",
+          "mediaId": "gid://shopify/MediaImage/27702721282107",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-alma-30-main-vp-b002.jpg?v=1789269982"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-alma-30-main-vp-b002.jpg?v=1789269982",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B003",
+      "productId": "gid://shopify/Product/7838379966523",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/IMG-4571.jpg?v=1784840199",
+      "images": [
+        {
+          "altText": "Jacquemus Le Grand Bambino — brown leather",
+          "mediaId": "gid://shopify/MediaImage/27702722297915",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/jacquemus-le-grand-bambino-brown-main-vp-b003.jpg?v=1789270002"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/jacquemus-le-grand-bambino-brown-main-vp-b003.jpg?v=1789270002",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B004",
+      "productId": "gid://shopify/Product/7838380064827",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/IMG-4580.heic?v=1784839489",
+      "images": [
+        {
+          "altText": "Jacquemus Le Grand Bambino — black leather",
+          "mediaId": "gid://shopify/MediaImage/27702723149883",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/jacquemus-le-grand-bambino-black-main-vp-b004.jpg?v=1789270023"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/jacquemus-le-grand-bambino-black-main-vp-b004.jpg?v=1789270023",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B005",
+      "productId": "gid://shopify/Product/7838380163131",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/saumur_99.jpg?v=1788009106",
+      "images": [
+        {
+          "altText": "Louis Vuitton Saumur 30",
+          "mediaId": "gid://shopify/MediaImage/27702724788283",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-saumur-30-main-vp-b005.jpg?v=1789270069"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-saumur-30-main-vp-b005.jpg?v=1789270069",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B006",
+      "productId": "gid://shopify/Product/7838380261435",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/keepall1_aac566dc-3fff-4dd2-9e2a-65136867337f.jpg?v=1783279757",
+      "images": [
+        {
+          "altText": "Louis Vuitton Keepall 60",
+          "mediaId": "gid://shopify/MediaImage/27702725181499",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-keepall-60-main-vp-b006.jpg?v=1789270089"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-keepall-60-main-vp-b006.jpg?v=1789270089",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B007",
+      "productId": "gid://shopify/Product/7838380359739",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/gucci_reddddd.jpg?v=1781637627",
+      "images": [
+        {
+          "altText": "Gucci GG Marmont Shoulder Bag",
+          "mediaId": "gid://shopify/MediaImage/27702726819899",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/gucci-gg-marmont-shoulder-bag-main-vp-b007.jpg?v=1789270107"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/gucci-gg-marmont-shoulder-bag-main-vp-b007.jpg?v=1789270107",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B008",
+      "productId": "gid://shopify/Product/7838380458043",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/speedy30-2.2.png?v=1776104671",
+      "images": [
+        {
+          "altText": "Louis Vuitton Speedy 30",
+          "mediaId": "gid://shopify/MediaImage/27702727213115",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-speedy-30-01-main-vp-b008.png?v=1789270125"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-speedy-30-01-main-vp-b008.png?v=1789270125",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B009",
+      "productId": "gid://shopify/Product/7838380556347",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/lvspeedyslotje1.png?v=1776103747",
+      "images": [
+        {
+          "altText": "Louis Vuitton Speedy 30",
+          "mediaId": "gid://shopify/MediaImage/27702728556603",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-speedy-30-02-main-vp-b009.png?v=1789270143"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-speedy-30-02-main-vp-b009.png?v=1789270143",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B010",
+      "productId": "gid://shopify/Product/7838380654651",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/voorkantspeedyy.png?v=1774299051",
+      "images": [
+        {
+          "altText": "Louis Vuitton Speedy 30",
+          "mediaId": "gid://shopify/MediaImage/27702729474107",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-speedy-30-03-main-vp-b010.png?v=1789270163"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-speedy-30-03-main-vp-b010.png?v=1789270163",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B011",
+      "productId": "gid://shopify/Product/7838380752955",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/pochettelv2.jpg?v=1774273742",
+      "images": [
+        {
+          "altText": "Louis Vuitton Pochette Accessoires",
+          "mediaId": "gid://shopify/MediaImage/27702729965627",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-pochette-accessoires-main-vp-b011.jpg?v=1789270182"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-pochette-accessoires-main-vp-b011.jpg?v=1789270182",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B012",
+      "productId": "gid://shopify/Product/7838380851259",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/gucci_jackie.png?v=1788010954",
+      "images": [
+        {
+          "altText": "Gucci Jackie Bag",
+          "mediaId": "gid://shopify/MediaImage/27702730260539",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/gucci-jackie-bag-main-vp-b012.png?v=1789270201"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/gucci-jackie-bag-main-vp-b012.png?v=1789270201",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B013",
+      "productId": "gid://shopify/Product/7838380949563",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/tasbakkathuis5.jpg?v=1769538604",
+      "images": [
+        {
+          "altText": "Louis Vuitton Petit Noé",
+          "mediaId": "gid://shopify/MediaImage/27702731669563",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-petit-noe-01-main-vp-b013.jpg?v=1789270225"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-petit-noe-01-main-vp-b013.jpg?v=1789270225",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B014",
+      "productId": "gid://shopify/Product/7838381047867",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/ChatGPTImageJan25_2026at03_59_35PM.png?v=1769353361",
+      "images": [
+        {
+          "altText": "Louis Vuitton Petit Noé",
+          "mediaId": "gid://shopify/MediaImage/27702733209659",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-petit-noe-02-main-vp-b014.png?v=1789270246"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-petit-noe-02-main-vp-b014.png?v=1789270246",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B015",
+      "productId": "gid://shopify/Product/7838381113403",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/sac2noe10.jpg?v=1769355641",
+      "images": [
+        {
+          "altText": "Louis Vuitton Petit Noé",
+          "mediaId": "gid://shopify/MediaImage/27702734159931",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-petit-noe-03-main-vp-b015.jpg?v=1789270261"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-petit-noe-03-main-vp-b015.jpg?v=1789270261",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B016",
+      "productId": "gid://shopify/Product/7838381211707",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/tasnadiavoorkantwit.jpg?v=1769980900",
+      "images": [
+        {
+          "altText": "Louis Vuitton Looping GM",
+          "mediaId": "gid://shopify/MediaImage/27702734553147",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-looping-gm-01-main-vp-b016.jpg?v=1789270278"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-looping-gm-01-main-vp-b016.jpg?v=1789270278",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B017",
+      "productId": "gid://shopify/Product/7838381310011",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/looping_recht.jpg?v=1774972719",
+      "images": [
+        {
+          "altText": "Louis Vuitton Looping GM",
+          "mediaId": "gid://shopify/MediaImage/27702735667259",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-looping-gm-02-main-vp-b017.jpg?v=1789270297"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-looping-gm-02-main-vp-b017.jpg?v=1789270297",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-B018",
+      "productId": "gid://shopify/Product/7838381408315",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/gucci5.jpg?v=1769538174",
+      "images": [
+        {
+          "altText": "Gucci GG Shoulder Bag",
+          "mediaId": "gid://shopify/MediaImage/27702736683067",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/gucci-gg-shoulder-bag-main-vp-b018.jpg?v=1789270322"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/gucci-gg-shoulder-bag-main-vp-b018.jpg?v=1789270322",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-A001",
+      "productId": "gid://shopify/Product/7838381473851",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/strap.jpg?v=1774894865",
+      "images": [
+        {
+          "altText": "Louis Vuitton Shoulder Strap",
+          "mediaId": "gid://shopify/MediaImage/27702737010747",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-shoulder-strap-main-vp-a001.jpg?v=1789270341"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-shoulder-strap-main-vp-a001.jpg?v=1789270341",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-A002",
+      "productId": "gid://shopify/Product/7838381572155",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/sleutel_c66572d3-25d4-4d33-b5bf-3e36587fed54.jpg?v=1774982339",
+      "images": [
+        {
+          "altText": "Louis Vuitton Accessory (to be identified)",
+          "mediaId": "gid://shopify/MediaImage/27702738911291",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-accessory-unidentified-main-vp-a002.jpg?v=1789270361"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/louis-vuitton-accessory-unidentified-main-vp-a002.jpg?v=1789270361",
+      "status": "DRAFT",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    },
+    {
+      "sku": "VP-A003",
+      "productId": "gid://shopify/Product/7838381670459",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1000/1121/3137/files/ChatGPTImageFeb1_2026at09_46_54PM.png?v=1769979326",
+      "images": [
+        {
+          "altText": "Bag Organizer",
+          "mediaId": "gid://shopify/MediaImage/27702739402811",
+          "url": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/bag-organizer-main-vp-a003.png?v=1789270381"
+        }
+      ],
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/0694/8660/8443/files/bag-organizer-main-vp-a003.png?v=1789270381",
+      "status": "ACTIVE",
+      "imageCount": 1,
+      "featuredMatches": true,
+      "skuMatches": true,
+      "commercialFieldsUnchanged": true
+    }
+  ]
+}

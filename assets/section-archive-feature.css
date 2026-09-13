@@ -40,6 +40,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #fff;
+}
+
+.archive-feature__media.vp-media > img {
+  object-fit: contain;
+  padding: clamp(8px, 3%, 16px);
+  box-sizing: border-box;
+}
+
+.archive-feature__link:hover .archive-feature__media.vp-media--zoom > img {
+  transform: none;
 }
 
 .archive-feature__placeholder {
