@@ -211,7 +211,7 @@
       },
       "nested_label": "{{ title }} für {{ parent_title }}",
       "view_full_details": "Vollständige Details anzeigen",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Versand</a> wird beim Checkout berechnet",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Kostenloser Versand</a>.",
       "choose_options": "Optionen auswählen",
       "choose_product_options": "Optionen für {{ product_name }} auswählen",
       "value_unavailable": "{{ option_value }} – nicht verfügbar",
@@ -263,7 +263,7 @@
       },
       "shipping_card": {
         "heading": "Versand & Rückgabe",
-        "body": "Verfügbare Versandoptionen und Kosten werden im Checkout angezeigt. Bitte lesen Sie vor der Bestellung unsere Informationen zu Versand und Rückgabe.",
+        "body": "Wir versenden jede Bestellung kostenlos, ohne Mindestbestellwert. Bitte lesen Sie vor der Bestellung unsere Informationen zu Versand und Rückgabe.",
         "link": "Versand & Rückgabe ansehen"
       },
       "enquiry": {
@@ -505,14 +505,14 @@
       },
       "estimated_total": "Geschätzte Gesamtkosten",
       "new_estimated_total": "Neuer geschätzter Gesamtbetrag",
-      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Inkl. Zollgebühren und Steuern. Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
-      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Inkl. Zollgebühren und Steuern. Rabatte und Versand werden beim Checkout berechnet.",
-      "taxes_included_shipping_at_checkout_with_policy_html": "Inkl. Steuern. Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
-      "taxes_included_shipping_at_checkout_without_policy": "Inkl. Steuern. Rabatte und Versand werden beim Checkout berechnet.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Inkl. Zollgebühren. Steuern, Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Inkl. Zollgebühren. Steuern, Rabatte und Versand werden beim Checkout berechnet.",
-      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Steuern, Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
-      "taxes_at_checkout_shipping_at_checkout_without_policy": "Steuern, Rabatte und Versand werden beim Checkout berechnet."
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Zollgebühren und Steuern enthalten. Rabatte werden an der Kasse berechnet. <a href=\"{{ link }}\">Kostenloser Versand</a>.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Zollgebühren und Steuern enthalten. Rabatte werden an der Kasse berechnet. Kostenloser Versand.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Steuern enthalten. Rabatte werden an der Kasse berechnet. <a href=\"{{ link }}\">Kostenloser Versand</a>.",
+      "taxes_included_shipping_at_checkout_without_policy": "Steuern enthalten. Rabatte werden an der Kasse berechnet. Kostenloser Versand.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Zollgebühren enthalten. Steuern und Rabatte werden an der Kasse berechnet. <a href=\"{{ link }}\">Kostenloser Versand</a>.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Zollgebühren enthalten. Steuern und Rabatte werden an der Kasse berechnet. Kostenloser Versand.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Steuern und Rabatte werden an der Kasse berechnet. <a href=\"{{ link }}\">Kostenloser Versand</a>.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Steuern und Rabatte werden an der Kasse berechnet. Kostenloser Versand."
     },
     "footer": {
       "payment": "Zahlungsmethoden"

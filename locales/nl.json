@@ -211,7 +211,7 @@
       },
       "nested_label": "{{ title }} voor {{ parent_title }}",
       "view_full_details": "Alle details bekijken",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten</a> worden berekend bij de checkout.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Gratis verzending</a>.",
       "choose_options": "Opties kiezen",
       "choose_product_options": "Opties kiezen voor {{ product_name }}",
       "value_unavailable": "{{ option_value }} - Niet beschikbaar",
@@ -263,7 +263,7 @@
       },
       "shipping_card": {
         "heading": "Verzending & retouren",
-        "body": "Beschikbare verzendopties en kosten zie je bij het afrekenen. Bekijk vóór het bestellen onze informatie over verzending en retouren.",
+        "body": "Je bestelling wordt gratis verzonden, zonder minimumbedrag. Bekijk vóór het bestellen onze informatie over verzending en retouren.",
         "link": "Bekijk verzending & retouren"
       },
       "enquiry": {
@@ -505,14 +505,14 @@
       },
       "estimated_total": "Geschat totaal",
       "new_estimated_total": "Nieuw geschat totaal",
-      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Douanerechten en belastingen inbegrepen. Kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
-      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Douanerechten en belastingen inbegrepen. Kortingen en verzending worden bij de checkout berekend.",
-      "taxes_included_shipping_at_checkout_with_policy_html": "Belastingen inbegrepen. Kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
-      "taxes_included_shipping_at_checkout_without_policy": "Belastingen inbegrepen. Kortingen en verzending worden bij de checkout berekend.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Douanerechten inbegrepen. Belastingen, kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Douanerechten inbegrepen. Belastingen, kortingen en verzending worden bij de checkout berekend.",
-      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Belastingen, kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
-      "taxes_at_checkout_shipping_at_checkout_without_policy": "Belastingen, kortingen en verzending worden bij de checkout berekend."
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Douanerechten en belastingen inbegrepen. Kortingen worden bij het afrekenen berekend. <a href=\"{{ link }}\">Gratis verzending</a>.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Douanerechten en belastingen inbegrepen. Kortingen worden bij het afrekenen berekend. Gratis verzending.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Belastingen inbegrepen. Kortingen worden bij het afrekenen berekend. <a href=\"{{ link }}\">Gratis verzending</a>.",
+      "taxes_included_shipping_at_checkout_without_policy": "Belastingen inbegrepen. Kortingen worden bij het afrekenen berekend. Gratis verzending.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Douanerechten inbegrepen. Belastingen en kortingen worden bij het afrekenen berekend. <a href=\"{{ link }}\">Gratis verzending</a>.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Douanerechten inbegrepen. Belastingen en kortingen worden bij het afrekenen berekend. Gratis verzending.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Belastingen en kortingen worden bij het afrekenen berekend. <a href=\"{{ link }}\">Gratis verzending</a>.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Belastingen en kortingen worden bij het afrekenen berekend. Gratis verzending."
     },
     "footer": {
       "payment": "Betaalmethoden"
