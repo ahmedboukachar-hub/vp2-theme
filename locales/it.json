@@ -8,7 +8,11 @@
       "login_form_error": "Password errata!",
       "login_form_submit": "Accedi",
       "admin_link_html": "Sei il proprietario del negozio? <a href=\"/admin\" class=\"link underlined-link\">Accedi qui</a>",
-      "powered_by_shopify_html": "Questo negozio sarà ospitato su {{ shopify }}"
+      "powered_by_shopify_html": "Questo negozio sarà ospitato su {{ shopify }}",
+      "eyebrow": "Una nuova destinazione per il lusso vintage",
+      "hero_heading": "Pezzi rari, da scegliere con calma.",
+      "hero_body": "Stiamo preparando una selezione di borse firmate vintage e di seconda mano, scelte per il carattere, le condizioni e il fascino senza tempo.",
+      "newsletter_note": "Aggiornamenti occasionali sui nuovi arrivi. Nessuna promozione continua."
     },
     "social": {
       "alt_text": {
@@ -37,7 +41,8 @@
     },
     "search": {
       "search": "Cerca",
-      "reset": "Cancella termine ricerca"
+      "reset": "Cancella termine ricerca",
+      "popular_searches": "Ricerche più frequenti"
     },
     "cart": {
       "view": "Visualizza carrello ({{ count }})",
@@ -55,6 +60,29 @@
       "next_slide": "Scorri verso destra",
       "previous_slide": "Scorri verso sinistra",
       "name": "Cursore"
+    },
+    "breadcrumbs": {
+      "label": "Percorso di navigazione",
+      "home": "Home"
+    },
+    "wishlist": {
+      "link_label": "Lista dei desideri",
+      "add": "Salva nella lista dei desideri",
+      "remove": "Rimuovi dalla lista dei desideri",
+      "remove_short": "Rimuovi",
+      "intro": "Raccogli in un unico posto i pezzi che desideri rivedere.",
+      "empty_heading": "La tua lista dei desideri è vuota",
+      "empty_body": "Salva un pezzo per ritrovarlo in seguito.",
+      "empty_cta": "Scopri tutte le borse",
+      "unavailable": "Non più disponibile",
+      "requires_js": "Per visualizzare i pezzi salvati nella lista dei desideri è necessario JavaScript."
+    },
+    "footer": {
+      "non_affiliation": "{{ shop_name }} è un rivenditore indipendente e non è affiliato alle maison presenti su questo sito. Tutti i marchi appartengono ai rispettivi titolari.",
+      "group_shop": "Acquista",
+      "group_discover": "Scopri",
+      "group_services": "Servizi",
+      "group_customer_care": "Servizio clienti"
     }
   },
   "newsletter": {
@@ -98,7 +126,22 @@
       "back_to_blog": "Torna al blog",
       "share": "Condividi questo articolo",
       "success": "Il tuo commento è stato pubblicato! Grazie!",
-      "success_moderated": "Il tuo commento è stato pubblicato. Lo pubblicheremo fra poco, il nostro blog è soggetto a moderazione."
+      "success_moderated": "Il tuo commento è stato pubblicato. Lo pubblicheremo fra poco, il nostro blog è soggetto a moderazione.",
+      "min_read": {
+        "one": "{{ count }} min di lettura",
+        "other": "{{ count }} min di lettura"
+      },
+      "read_article": "Leggi l'articolo",
+      "topics": "Argomenti",
+      "all_topics": "Tutti gli articoli",
+      "empty": "Non ci sono ancora articoli.",
+      "index_eyebrow": "Il Journal",
+      "index_heading": "Icone, dettagli e le storie che custodiscono.",
+      "index_intro": "Scopri la storia del design, i dettagli pratici e il carattere delle borse che collezioniamo, cerchiamo e ammiriamo.",
+      "topic_buying_guides": "Guide all'acquisto",
+      "topic_bag_care": "Cura e condizioni",
+      "topic_designer_stories": "Storie delle maison",
+      "topic_collecting_vintage": "Collezionare vintage"
     }
   },
   "onboarding": {
@@ -154,11 +197,12 @@
         "load_image": "Carica immagine {{ index }} in visualizzazione galleria",
         "load_model": "Carica modello 3D {{ index }} in visualizzazione galleria",
         "load_video": "Riproduci video {{ index }} in visualizzazione galleria",
-        "image_available": "L'immagine {{ index }} è ora disponibile in visualizzazione galleria"
+        "image_available": "L'immagine {{ index }} è ora disponibile in visualizzazione galleria",
+        "photography_pending": "Fotografie in arrivo"
       },
       "nested_label": "{{ title }} per {{ parent_title }}",
       "view_full_details": "Visualizza dettagli completi",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Spese di spedizione</a> calcolate al check-out.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Spedizione gratuita</a>.",
       "choose_options": "Scegli opzioni",
       "choose_product_options": "Scegli opzioni per {{ product_name }}",
       "value_unavailable": "{{ option_value }} - Non disponibile",
@@ -180,7 +224,68 @@
       "product_variants": "Varianti di prodotto",
       "taxes_included": "Imposte incluse.",
       "duties_included": "Dazi inclusi.",
-      "duties_and_taxes_included": "Dazi e imposte inclusi."
+      "duties_and_taxes_included": "Dazi e imposte inclusi.",
+      "specifications": {
+        "designer": "Maison",
+        "model": "Modello",
+        "product_type": "Tipologia",
+        "year_or_era": "Anno / epoca",
+        "condition": "Condizioni",
+        "condition_notes": "Note sulle condizioni",
+        "material": "Materiale",
+        "color": "Colore",
+        "dimensions": "Dimensioni",
+        "inclusions": "In dotazione",
+        "serial_or_date_code": "Numero di serie / codice data",
+        "provenance": "Provenienza",
+        "authentication_notes": "Autenticazione"
+      },
+      "details_heading": "Dettagli e condizioni",
+      "test_label": "Prodotto di prova — scheda provvisoria",
+      "image_pending": "Fotografie in preparazione",
+      "recently_viewed": "Visti di recente",
+      "condition_report": {
+        "heading": "Stato del pezzo",
+        "issues_heading": "Segni di usura",
+        "guide_link": "Leggi la nostra guida alle condizioni"
+      },
+      "what_fits": {
+        "heading": "Cosa può contenere",
+        "size_guide_link": "Consulta la guida alle dimensioni delle borse"
+      },
+      "shipping_card": {
+        "heading": "Spedizioni e resi",
+        "body": "Spedizione gratuita su ogni ordine, senza importo minimo. Consulta le informazioni su spedizioni e resi prima di ordinare.",
+        "link": "Consulta spedizioni e resi"
+      },
+      "enquiry": {
+        "button": "Chiedi informazioni su questo pezzo",
+        "heading": "Domande su questo pezzo?",
+        "intro": "Siamo a disposizione per ulteriori dettagli sulle condizioni, le dimensioni o la consegna.",
+        "name": "Nome",
+        "email": "Email",
+        "country": "Paese",
+        "topic_label": "Cosa desideri sapere?",
+        "topic_condition": "Condizioni",
+        "topic_dimensions": "Dimensioni",
+        "topic_authentication": "Autenticazione",
+        "topic_shipping": "Spedizione",
+        "topic_other": "Altro",
+        "message": "Messaggio",
+        "submit": "Invia la richiesta",
+        "success": "Grazie. La tua richiesta è stata inviata.",
+        "error": "Non è stato possibile inviare la richiesta. Controlla i campi e riprova.",
+        "hidden_product": "Prodotto",
+        "hidden_url": "URL del prodotto"
+      },
+      "sold": {
+        "badge": "Venduto",
+        "heading": "Questo pezzo ha trovato una nuova casa.",
+        "find_similar": "Trova un pezzo simile",
+        "join_drop": "Scopri i prossimi arrivi",
+        "sourcing_link": "Raccontaci cosa stai cercando"
+      },
+      "curators_note_heading": "Perché questo pezzo"
     },
     "modal": {
       "label": "Galleria contenuti multimediali"
@@ -217,7 +322,28 @@
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtri selezionati)",
       "show_more": "Mostra di più",
       "show_less": "Mostra di meno",
-      "filter_and_operator_subtitle": "Seleziona tutte"
+      "filter_and_operator_subtitle": "Seleziona tutte",
+      "designer": "Maison",
+      "all_designers": "Tutte le maison",
+      "clear_designer": "Rimuovi il filtro maison"
+    },
+    "values": {
+      "brown": "Marrone",
+      "black": "Nero",
+      "beige": "Beige",
+      "shoulder_bag": "Borsa a spalla",
+      "top_handle_bag": "Borsa a mano",
+      "crossbody_bag": "Borsa a tracolla",
+      "travel_bag": "Borsa da viaggio",
+      "accessory": "Accessorio",
+      "leather": "Pelle",
+      "monogram_canvas": "Tela Monogram",
+      "gg_canvas": "Tela GG",
+      "matelasse_chevron_leather": "Pelle matelassé a chevron",
+      "excellent": "Eccellenti",
+      "very_good": "Ottime",
+      "good": "Buone",
+      "fair": "Discrete"
     }
   },
   "templates": {
@@ -253,7 +379,11 @@
         "one": "{{ count }} suggerimento",
         "other": "{{ count }} suggerimenti",
         "many": "{{ count }} suggerimenti"
-      }
+      },
+      "empty_heading": "Non abbiamo trovato un pezzo corrispondente",
+      "empty_body": "Prova una ricerca più ampia, scopri tutte le borse o raccontaci cosa stai cercando.",
+      "empty_cta_all": "Scopri tutte le borse",
+      "empty_cta_find": "Trova una borsa"
     },
     "cart": {
       "cart": "Carrello"
@@ -272,7 +402,73 @@
     },
     "404": {
       "title": "Pagina non trovata",
-      "subtext": "404"
+      "subtext": "404",
+      "eyebrow": "Non trovato",
+      "body": "Il pezzo o la pagina potrebbero essere stati spostati. Scopri gli ultimi arrivi, esplora l'archivio o cerca per maison e modello.",
+      "cta_new_arrivals": "Acquista i nuovi arrivi",
+      "cta_archive": "Esplora l'archivio"
+    },
+    "page_hero": {
+      "about_eyebrow": "Chi siamo",
+      "about_heading": "Una scelta attenta di pezzi con un passato.",
+      "authenticity_eyebrow": "Il nostro approccio",
+      "authenticity_heading": "Ogni pezzo merita uno sguardo più attento."
+    },
+    "page_cta": {
+      "about_heading": "Scopri la selezione attuale.",
+      "about_text": "<p>Pezzi vintage e di seconda mano appena arrivati, ciascuno disponibile in un solo esemplare.</p>",
+      "about_button": "Acquista i nuovi arrivi",
+      "authenticity_heading": "Comprendere le condizioni",
+      "authenticity_text": "<p>Le nostre valutazioni delle condizioni sono un punto di partenza; le fotografie e le note individuali descrivono il pezzo specifico.</p>",
+      "authenticity_button": "Leggi la guida alle condizioni"
+    },
+    "find_a_bag": {
+      "fields": {
+        "name": "Nome",
+        "email": "Email",
+        "country": "Paese",
+        "designer": "Maison",
+        "model_or_style": "Modello o stile",
+        "preferred_size": "Dimensione preferita",
+        "preferred_colour": "Colore preferito",
+        "preferred_material": "Materiale preferito",
+        "preferred_era": "Epoca preferita",
+        "minimum_condition": "Condizioni minime",
+        "maximum_budget": "Budget massimo",
+        "currency": "Valuta",
+        "flexible_details": "Su quali dettagli sei flessibile?",
+        "reference_link": "Link di riferimento (facoltativo)",
+        "notes": "Altro che dovremmo sapere?"
+      },
+      "consent": "Useremo questi dati per rispondere alla tua richiesta. Non costituisce una prenotazione né un accordo di acquisto.",
+      "submit": "Invia la mia richiesta",
+      "success_heading": "Abbiamo ricevuto la tua richiesta",
+      "success_body": "Grazie. Ti contatteremo se potremo aiutarti concretamente nella ricerca.",
+      "closing": "Ogni pezzo di seconda mano è unico. Condizioni, età, dettagli e accessori inclusi possono variare anche all'interno dello stesso modello. Descriveremo sempre il pezzo specifico proposto.",
+      "hidden_source": "Tipo di richiesta",
+      "optional_details": "Altre preferenze (facoltativo)"
+    },
+    "sell_to_us": {
+      "fields": {
+        "name": "Nome",
+        "email": "Email",
+        "country": "Paese",
+        "item_type": "Tipo di articolo",
+        "brand_and_model": "Marchio e modello",
+        "approximate_year": "Anno o data di acquisto approssimativi",
+        "condition_description": "Descrizione delle condizioni",
+        "included_accessories": "Accessori inclusi",
+        "proof_of_purchase": "Prova di acquisto, se disponibile",
+        "asking_price": "Prezzo richiesto",
+        "preferred_contact": "Metodo di contatto preferito",
+        "message": "Altre informazioni sul pezzo?"
+      },
+      "serial": "Informazioni sul numero di serie o codice data (facoltativo)",
+      "serial_hint": "Non condividere qui il numero di serie o il codice data completo. Indica soltanto se è presente; se necessario, ti chiederemo i dettagli tramite un canale sicuro.",
+      "disclaimer": "Non inviare un articolo finché non avremo concordato per iscritto le istruzioni di spedizione.",
+      "submit": "Invia i dettagli dell'articolo",
+      "success": "Grazie. Abbiamo ricevuto la tua proposta e ti contatteremo se desideriamo approfondire i dettagli del pezzo.",
+      "hidden_source": "Tipo di richiesta"
     }
   },
   "sections": {
@@ -310,14 +506,14 @@
       },
       "estimated_total": "Totale stimato",
       "new_estimated_total": "Nuovo totale stimato",
-      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Dazi e imposte inclusi. Sconti e <a href=\"{{ link }}\">spedizione</a> calcolati al check-out.",
-      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Dazi e imposte inclusi. Sconti e spedizione calcolati al check-out.",
-      "taxes_included_shipping_at_checkout_with_policy_html": "Imposte incluse. Sconti e <a href=\"{{ link }}\">spedizione</a> calcolati al check-out.",
-      "taxes_included_shipping_at_checkout_without_policy": "Imposte incluse. Sconti e spedizione calcolati al check-out.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Dazi inclusi. Imposte, sconti e <a href=\"{{ link }}\">spedizione</a> calcolati al check-out.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Dazi inclusi. Imposte, sconti e spedizione calcolati al check-out.",
-      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Imposte, sconti e <a href=\"{{ link }}\">spedizione</a> calcolati al check-out.",
-      "taxes_at_checkout_shipping_at_checkout_without_policy": "Imposte, sconti e spedizione calcolati al check-out."
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Dazi e imposte inclusi. Gli sconti vengono calcolati al momento del pagamento. <a href=\"{{ link }}\">Spedizione gratuita</a>.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Dazi e imposte inclusi. Gli sconti vengono calcolati al momento del pagamento. Spedizione gratuita.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Imposte incluse. Gli sconti vengono calcolati al momento del pagamento. <a href=\"{{ link }}\">Spedizione gratuita</a>.",
+      "taxes_included_shipping_at_checkout_without_policy": "Imposte incluse. Gli sconti vengono calcolati al momento del pagamento. Spedizione gratuita.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Dazi inclusi. Imposte e sconti vengono calcolati al momento del pagamento. <a href=\"{{ link }}\">Spedizione gratuita</a>.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Dazi inclusi. Imposte e sconti vengono calcolati al momento del pagamento. Spedizione gratuita.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Imposte e sconti vengono calcolati al momento del pagamento. <a href=\"{{ link }}\">Spedizione gratuita</a>.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Imposte e sconti vengono calcolati al momento del pagamento. Spedizione gratuita."
     },
     "footer": {
       "payment": "Metodi di pagamento"
@@ -387,6 +583,25 @@
       "min_error": "Questo articolo ha un minimo di {{ min }}",
       "max_error": "Questo articolo ha un massimo di {{ max }}",
       "step_error": "Puoi aggiungere questo articolo solo in incrementi di {{ step }}"
+    },
+    "archive": {
+      "sourcing_note": "Hai visto un pezzo che ti è sfuggito? Condividilo con noi e raccontaci cosa stai cercando. Non possiamo promettere una corrispondenza esatta, ma la tua richiesta può orientare le ricerche future.",
+      "find_similar": "Trova un pezzo simile",
+      "explore_available": "Scopri le borse disponibili",
+      "empty_heading": "L'archivio sta prendendo forma",
+      "empty_body": "Qui compariranno i pezzi selezionati in passato.",
+      "previously_sourced": "Selezionato in passato",
+      "found_new_home": "Questo pezzo ha trovato una nuova casa"
+    },
+    "drop_signup": {
+      "heading": "Scopri per primo i nuovi pezzi",
+      "body": "Ricevi aggiornamenti occasionali all'arrivo di nuove borse selezionate. Nessuna promozione continua.",
+      "email_placeholder": "Indirizzo email",
+      "submit": "Iscriviti",
+      "success": "Grazie. Sei nella lista."
+    },
+    "featured_designers": {
+      "explore": "Scopri {{ designer }}"
     }
   },
   "localization": {
@@ -396,7 +611,13 @@
     "update_country": "Aggiorna paese/area geografica",
     "search": "Cerca",
     "popular_countries_regions": "Paesi/aree geografiche popolari",
-    "country_results_count": "{{ count }} paesi/aree geografiche trovati"
+    "country_results_count": "{{ count }} paesi/aree geografiche trovati",
+    "auto_notice_message": "Mostriamo questo sito in italiano in base alle tue impostazioni di lingua.",
+    "auto_notice_change": "Cambia",
+    "auto_notice_dismiss": "Chiudi",
+    "banner_prompt": "Preferisci visualizzare questo negozio in {{ language }}?",
+    "banner_accept": "Cambia lingua",
+    "banner_dismiss": "Continua in italiano"
   },
   "customer": {
     "account": {
