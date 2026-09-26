@@ -9,15 +9,6 @@
   padding-top: 1.8rem;
 }
 
-.journal-card__number {
-  display: block;
-  margin-bottom: 1.2rem;
-  font-family: var(--font-heading-family);
-  font-size: 1.4rem;
-  line-height: 1;
-  color: rgba(var(--color-foreground), 0.48);
-}
-
 .journal-card__topic { margin-bottom: 0.8rem; }
 
 .journal-card__title {
@@ -85,7 +76,6 @@
   }
 
   .journal-card--secondary .journal-card__info { padding-top: 0; }
-  .journal-card--secondary .journal-card__number { margin-bottom: 0.8rem; }
   .journal-card--secondary .journal-card__meta { margin-top: 0.8rem; }
   .journal-card--secondary .journal-card__read { display: none; }
 }
@@ -111,9 +101,7 @@
   }
 }
 
-/* Grid cards keep one consistent ratio across the Journal index. */
-.journal-card--grid .journal-card__media { aspect-ratio: 4 / 5; }
+/* Grid cards keep one consistent landscape ratio across the Journal index. */
+.journal-card--grid .journal-card__media { aspect-ratio: 3 / 2; }
 
-.journal-card__media.vp-media > img { position:absolute; inset:0; }
-.journal-card__number { display:none; }
-.journal-card--grid .journal-card__media { aspect-ratio:3 / 2; }
+.journal-card__media.vp-media > img { position: absolute; inset: 0; }

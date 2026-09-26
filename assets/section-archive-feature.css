@@ -63,7 +63,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  color: rgba(var(--color-foreground), 0.5);
+  color: rgba(var(--color-foreground), 0.66);
 }
 
 .archive-feature__placeholder-mark {

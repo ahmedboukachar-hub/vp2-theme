@@ -174,7 +174,7 @@
   font-size: 1.1rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(var(--color-foreground), 0.52);
+  color: rgba(var(--color-foreground), 0.66);
 }
 
 .card--media .card__inner .card__content {

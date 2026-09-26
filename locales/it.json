@@ -620,13 +620,7 @@
     "update_country": "Aggiorna paese/area geografica",
     "search": "Cerca",
     "popular_countries_regions": "Paesi/aree geografiche popolari",
-    "country_results_count": "{{ count }} paesi/aree geografiche trovati",
-    "auto_notice_message": "Mostriamo questo sito in italiano in base alle tue impostazioni di lingua.",
-    "auto_notice_change": "Cambia",
-    "auto_notice_dismiss": "Chiudi",
-    "banner_prompt": "Preferisci visualizzare questo negozio in {{ language }}?",
-    "banner_accept": "Cambia lingua",
-    "banner_dismiss": "Continua in italiano"
+    "country_results_count": "{{ count }} paesi/aree geografiche trovati"
   },
   "customer": {
     "account": {

@@ -1,5 +1,14 @@
 {
   "settings_schema": {
+    "brand": {
+      "name": "Brand",
+      "settings": {
+        "brand_display_name": {
+          "label": "Nome del negozio",
+          "info": "Mostrato nell’header, nel footer e nelle anteprime di ricerca del tema. Il branding del checkout Shopify e delle e-mail si configura separatamente."
+        }
+      }
+    },
     "colors": {
       "name": "Colori",
       "settings": {

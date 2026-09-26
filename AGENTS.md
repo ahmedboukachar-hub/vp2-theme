@@ -31,3 +31,7 @@ Before committing and before requesting a merge:
 5. Report base SHA, head SHA, branch, files changed, validation results, PR status and remaining conflicts or decisions.
 
 Shopify Theme Editor changes can arrive on `main` through GitHub sync. Treat unfamiliar remote changes as legitimate until verified otherwise.
+
+## Shopify sync pitfalls
+
+See "Shopify GitHub-sync pitfalls" in `CLAUDE.md`. In short: invalid JSON templates or section groups are skipped silently (verify live files after merging), default-valued settings are dropped on sync-back, synced JSON files carry a `/* … */` header that must be stripped before parsing, and theme code only reaches the store through a merge to `main`.

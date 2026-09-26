@@ -1,5 +1,14 @@
 {
   "settings_schema": {
+    "brand": {
+      "name": "Marque",
+      "settings": {
+        "brand_display_name": {
+          "label": "Nom de la boutique",
+          "info": "Affiché dans l’en-tête, le pied de page et les aperçus de recherche du thème. L’identité du paiement Shopify et des e-mails se configure séparément."
+        }
+      }
+    },
     "colors": {
       "name": "Couleurs",
       "settings": {

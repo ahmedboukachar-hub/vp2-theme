@@ -1,5 +1,14 @@
 {
   "settings_schema": {
+    "brand": {
+      "name": "Brand",
+      "settings": {
+        "brand_display_name": {
+          "label": "Storefront name",
+          "info": "Shown in the theme header, footer and search previews. Shopify checkout and email branding is configured separately."
+        }
+      }
+    },
     "global": {
       "settings": {
         "header__border": {

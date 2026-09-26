@@ -140,3 +140,27 @@ static columns. Keyboard and screen-reader behaviour is the browser's own
 disclosure semantics. The language/region control and the legal row sit
 outside the groups. The newsletter moved to the homepage so the footer stays
 short on mobile.
+
+---
+
+# Current state (2026-09-26)
+
+The refinement pull requests merged between 12 and 26 September changed the
+surface distribution described above. This section records what is live.
+
+- Homepage order: hero → New arrivals (white) → designers (off-white) →
+  editorial statement (**white**, scheme-3, no longer near-black) → Journal
+  (stone, scheme-2) → Find a Bag (off-white) → newsletter. The proof strip was
+  removed from `templates/index.json` (section file kept) and the archive
+  teaser is `disabled` there.
+- The footer uses scheme-2 (stone). scheme-4 is not used on the homepage.
+- Hero copy comes from the `brand.hero.*` locale keys when `use_brand_copy`
+  is on; the section settings are the fallback.
+- Brand name: `settings.brand_display_name` (Theme settings → Brand), fallback
+  "La Retrouvée". The document title, Open Graph and Twitter titles use it on
+  the homepage instead of the technical store name.
+- The language selector shows flag emoji with native language names; the
+  country selector was removed.
+- The dark editorial interruption and the archive teaser described above are
+  no longer on the homepage. Restoring them is a merchant decision.
+

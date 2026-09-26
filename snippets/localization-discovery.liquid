@@ -32,9 +32,7 @@
       "primaryLocale": {{ primary_locale_code | json }},
       "availableLocales": [{% for language in localization.available_languages %}{{ language.iso_code | split: '-' | first | downcase | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
       "rootUrl": {{ routes.root_url | json }},
-      "autoDetect": {{ settings.enable_auto_language_detection | json }},
-      "locationFallback": false,
-      "showNotice": false
+      "autoDetect": {{ settings.enable_auto_language_detection | json }}
     }
   </script>
 

@@ -144,7 +144,7 @@
           >
         {%- endif %}
       </div>
-      <h2>{{ brand_name }}</h2>
+      <h2>{{ brand_name | escape }}</h2>
       <div class="gift-card__text-wrapper">
         <p class="gift-card__text">{{ 'gift_cards.issued.how_to_use_gift_card' | t }}</p>
       </div>

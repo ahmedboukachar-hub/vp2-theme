@@ -20,7 +20,6 @@
       <ul class="trust-strip__list" role="list">
         {%- for block in section.blocks -%}
           <li class="trust-strip__item" {{ block.shopify_attributes }}>
-            <span class="trust-strip__number" aria-hidden="true">0{{ forloop.index }}</span>
             <div class="trust-strip__content">
               {%- if block.settings.heading != blank -%}
                 <h2 class="trust-strip__heading">{{ block.settings.heading | escape }}</h2>
