@@ -1,0 +1,16 @@
+.designer-filter__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.designer-filter__link[aria-current='true'] {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.designer-filter .facets__reset {
+  display: inline-block;
+  margin: 1rem 2rem;
+}

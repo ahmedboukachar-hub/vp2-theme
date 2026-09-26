@@ -112,6 +112,9 @@
               </div>
             {%- endif -%}
 
+            {%- if template.name == 'collection' -%}
+              {% render 'designer-filter', collection: results, layout: 'desktop', filter_type: filter_type, section_id: section.id %}
+            {%- endif -%}
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
             {%- for filter in results.filters -%}
@@ -513,6 +516,9 @@
               class="mobile-facets__main has-submenu gradient"
             >
               {%- if enable_filtering -%}
+                {%- if template.name == 'collection' -%}
+                  {% render 'designer-filter', collection: results, layout: 'mobile', filter_type: filter_type, section_id: section.id %}
+                {%- endif -%}
                 {%- for filter in results.filters -%}
                   {% liquid
                     assign presentation = filter.presentation | default: default_presentation
