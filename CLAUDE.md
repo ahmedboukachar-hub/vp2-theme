@@ -85,6 +85,7 @@ The storefront brand is La Retrouvée (with accent). Keep `laretrouvee` for tech
 - **Inspiration:** international luxury fashion with a subtle European and North African sensibility.
 - **Visual:** calm compositions, generous whitespace, strong product photography, understated luxury.
 - **Provisional color world:** ivory, warm stone, taupe, espresso, and deep black, with at most one muted accent color. Do not commit to final color codes yet.
+- **Surfaces (owner decision, 2026-09-26):** near-black is text only, never a background surface; the owner found the black homepage section too harsh. The homepage carries exactly one warm-dark interruption, the Espresso scheme (`scheme-6`, `#4E3F36` with ivory text), on the editorial section. Stone (`scheme-2`) is the soft rest point, white (`scheme-3`) carries product grids and the newsletter, ivory (`scheme-1`) is the canvas, the footer stays stone. Full rationale and the section-by-section rhythm: `docs/design/design-system.md`, "Homepage colour rhythm".
 - **Typography:** an elegant editorial serif for character, paired with a highly readable sans-serif for navigation and product information.
 - **Imagery:** authentic product shots, detail photos, and honest representation of condition and wear; avoid heavy retouching and generic stock imagery.
 - **UX:** product-first, calm, and uncluttered; avoid loud banners, fake scarcity, excessive pop-ups, and discount aesthetics.

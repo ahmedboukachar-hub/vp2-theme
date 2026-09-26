@@ -87,7 +87,7 @@
         "text": "<p>We look beyond the name alone. Each piece is considered for its design, condition and the character it has developed over time.</p>",
         "button_label": "Discover our approach",
         "button_link": "shopify://pages/our-curation",
-        "color_scheme": "scheme-3"
+        "color_scheme": "scheme-6"
       }
     },
     "find_a_bag": {
@@ -156,7 +156,7 @@
         "newsletter_form"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "full_width": false,
         "padding_top": 64,
         "padding_bottom": 64
