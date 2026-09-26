@@ -32,6 +32,10 @@ Before committing and before requesting a merge:
 
 Shopify Theme Editor changes can arrive on `main` through GitHub sync. Treat unfamiliar remote changes as legitimate until verified otherwise.
 
+## Design decisions
+
+Colour surfaces, homepage rhythm and other visual decisions the owner has taken are recorded in `docs/design/design-system.md` (latest: "Homepage colour rhythm", 2026-09-26) and summarised under "Brand identity" in `CLAUDE.md`. Do not reintroduce near-black surfaces or move the homepage sections between colour schemes without a new owner decision.
+
 ## Shopify sync pitfalls
 
 See "Shopify GitHub-sync pitfalls" in `CLAUDE.md`. In short: invalid JSON templates or section groups are skipped silently (verify live files after merging), default-valued settings are dropped on sync-back, synced JSON files carry a `/* … */` header that must be stripped before parsing, and theme code only reaches the store through a merge to `main`.

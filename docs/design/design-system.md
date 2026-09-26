@@ -164,3 +164,53 @@ surface distribution described above. This section records what is live.
 - The dark editorial interruption and the archive teaser described above are
   no longer on the homepage. Restoring them is a merchant decision.
 
+---
+
+# Homepage colour rhythm (owner decision, 2026-09-26)
+
+**Decision.** The owner found the near-black editorial section (scheme-4) too
+much contrast and had it removed. The replacement is one warm-dark
+interruption instead of none: a new **Espresso** scheme, chosen from four
+candidates (espresso, taupe, deep stone, oxblood) on a side-by-side mock-up of
+the whole homepage.
+
+**Espresso scheme (`scheme-6`, `config/settings_data.json`, preset "Dawn"):**
+
+| Role | Value |
+| --- | --- |
+| background | `#4E3F36` |
+| text | `#F7F3EC` |
+| button | `#F7F3EC` |
+| button_label | `#4E3F36` |
+| secondary_button_label | `#F7F3EC` |
+| shadow | `#1D1A18` |
+
+Contrast ivory on espresso is about 9:1, comfortably above AA for body text.
+
+**Homepage rhythm, top to bottom (`templates/index.json`):**
+
+| Section | Scheme | Surface |
+| --- | --- | --- |
+| hero | scheme-1 | ivory |
+| new_arrivals | scheme-3 | white |
+| designers | scheme-1 | ivory |
+| editorial | **scheme-6** | espresso, the one dark interruption |
+| journal | scheme-2 | stone |
+| find_a_bag | scheme-1 | ivory |
+| newsletter | scheme-3 | white |
+| footer (`sections/footer-group.json`) | scheme-2 | stone |
+
+Rules that follow from this:
+
+- scheme-4 (near-black) is not used as a surface anywhere on the storefront;
+  it remains the text colour of the light schemes.
+- Exactly one espresso section per page. Do not add a second dark surface,
+  and do not put product cards or the cart on it.
+- Stone appears twice (Journal, footer) and is the soft rest point between
+  ivory and white; avoid two stone sections back to back.
+- Changing this rhythm is an owner decision, not a refinement.
+
+Superseded: the "Colour roles and distribution" table above (scheme-4 as
+"editorial interruption + footer") and the "Current state (2026-09-26)" note
+that scheme-4 was unused. This section is authoritative.
+
