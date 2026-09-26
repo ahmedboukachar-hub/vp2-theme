@@ -175,8 +175,6 @@
 }
 
 @media screen and (max-width: 749px) {
-  .footer__policies { display: none; }
-
   .footer__bottom {
     gap: 1.2rem;
     padding-top: 2.4rem;

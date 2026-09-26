@@ -56,6 +56,13 @@ Immediately before committing and again before requesting a merge:
 - Never force-push or rewrite another agent's branch.
 - Report the base SHA, head SHA, branch, files changed, validations run, open-PR status and any unresolved overlap.
 
+Shopify GitHub-sync pitfalls (verified on this store):
+
+- Sync silently skips a JSON template or section group that fails validation: a `richtext` value without an HTML tag, a setting id or block type missing from the section schema, or an invalid `select` value. No error surfaces anywhere. After every merge, verify the live file through the Admin REST `assets.json` endpoint.
+- Sync drops settings whose value equals the schema default, so the sync-back commit shows a permanent repo↔live diff. Do not write default-valued settings into templates or section groups when it can be avoided.
+- The sync-back commit prefixes JSON files with a `/* … */` comment header. Strip it before parsing; do not remove it by hand.
+- `themeCreate`, `themeFilesUpsert` and `themePublish` return ACCESS_DENIED for the connected app, and REST asset writes to a git-connected theme return 404. Theme code reaches the store only through a merge to `main`.
+
 ## Technical quality
 
 Every future change must:

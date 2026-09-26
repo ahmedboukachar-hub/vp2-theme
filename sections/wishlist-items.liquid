@@ -16,7 +16,13 @@
 {%- endstyle -%}
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>
+  {%- liquid
+    assign heading_tag = 'h1'
+    if section.index > 1
+      assign heading_tag = 'h2'
+    endif
+  -%}
+  <{{ heading_tag }} class="main-page-title page-title h0">{{ page.title | escape }}</{{ heading_tag }}>
   <p class="wishlist-items__intro">{{ 'general.wishlist.intro' | t }}</p>
 
   <noscript>

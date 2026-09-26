@@ -617,13 +617,7 @@
     "update_country": "Land/Region aktualisieren",
     "search": "Suchen",
     "popular_countries_regions": "Beliebte Länder/Regionen",
-    "country_results_count": "{{ count }} Länder/Regionen gefunden",
-    "auto_notice_message": "Wir zeigen diese Website auf Deutsch basierend auf deinen Spracheinstellungen.",
-    "auto_notice_change": "Ändern",
-    "auto_notice_dismiss": "Schließen",
-    "banner_prompt": "Möchten Sie diesen Shop lieber auf {{ language }} ansehen?",
-    "banner_accept": "Sprache wechseln",
-    "banner_dismiss": "Bei Deutsch bleiben"
+    "country_results_count": "{{ count }} Länder/Regionen gefunden"
   },
   "customer": {
     "account": {

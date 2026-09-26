@@ -11,12 +11,10 @@ to a client, or upgrade to a paid Shopify plan.
 
 ## Launch blockers
 
-1. **Remove or draft the test products.** The six `[TEST ONLY]` products
-   (tag `vp2-test-data`) are ACTIVE and published to the Online Store channel
-   for template and checkout testing. Before a paid plan or transfer they must
-   be set to DRAFT or deleted. They are fully identifiable by title prefix,
-   tag, test description, fictional `TEST-*` SKUs and labelled placeholder
-   images.
+1. **Test products.** Resolved: the `[TEST ONLY]` products are gone. The
+   catalogue holds the 21 migrated items (20 published, 1 draft), all still
+   tagged `images-pending` and `migration-review` until owned photography and
+   condition reports land.
 2. **Staging workflow.** During this phase `main` syncs directly to the
    published theme. Before commercial launch a release workflow must exist:
    - a `staging` branch created from `main`;
@@ -28,34 +26,32 @@ to a client, or upgrade to a paid Shopify plan.
    - release = merge `staging` → `main` (never direct pushes to `main`);
    - rollback = revert the release commit on `main` (the GitHub sync restores
      the previous theme state) or republish the previous theme.
-3. **Currency, address, Markets, shipping.** Still US/USD defaults. Required
-   target state: Dutch business address, EUR store currency, English as source
-   language with nl/de/fr translations, international selling via Shopify
-   Markets. Requires the owner's real business address and decisions on
-   shipping countries and rates first. Shipping rates currently visible are
-   unreviewed Shopify defaults.
-
-   **Currency gate (redesign §36.8), verified 2026-09-06:** shop currency is
-   `USD` with **zero orders**, so the base currency can still be changed
-   safely. The change is an Admin-only action (no supported API mutation);
-   the theme must not fake it with Liquid/JS. Owner click path:
-   **Shopify admin → Settings → General → Store defaults → Currency
-   display → change store currency to EUR → Save.** After changing:
-   review each migrated product's price (values were EUR-intended, no
-   conversion needed — verify per product), then check Markets, shipping
-   rates, taxes and a test checkout. The 20 published migrated products
-   currently display EUR-intended numbers as USD; they were published on
-   the owner's explicit earlier instruction and remain published, but this
-   is the top presentation blocker: either apply the two-click currency
-   change above or ask for the products to be set back to draft.
-4. **Legal & policies.** Only a Privacy Policy exists. Terms, refund policy,
-   company details, cookie/consent setup and other legal texts must be added
-   before launch (footer intentionally does not link to missing policies).
+3. **Currency, Markets, shipping.** Verified 2026-09-26: store currency is
+   EUR, Markets are NL (primary) and Europe, and the general shipping profile
+   has three zones (Netherlands, Rest of World and a leftover US "Domestic"
+   zone), each with a single "Free shipping" method at €0. The theme states
+   "Free shipping" on product pages and on Shipping & Returns, which matches
+   this configuration. Still open: confirm free worldwide shipping as a
+   commercial decision, remove the US zone if unintended, set the business
+   address and taxes, and pass a complete test checkout.
+4. **Legal & policies.** Shipping, refund, terms of service and legal notice
+   exist as published policies whose first heading reads "OPERATIONAL DRAFT
+   (requires legal review before use)"; the privacy policy is Shopify-managed.
+   All are linked from the footer, so the draft markers are visible to anyone
+   with the storefront password. Legal review, then remove the markers.
 5. **Payments.** No real payment providers are configured; checkout works in
    test mode only. Configure providers only after the plan/transfer decision.
-6. **Real content.** Replace placeholder imagery with owned photography, add
-   genuine inventory with real prices, and finalise brand name, domain, logo
-   and definitive colours/typography.
+6. **Real content.** The brand name (La Retrouvée) is chosen and lives in the
+   theme setting `brand_display_name`. Still open: owned photography for the
+   available pieces (announced), condition reports, dimensions and inclusions
+   per product, logo, domain and definitive colours/typography.
+8. **Store name and password page.** `shop.name` is still `vp2-dev`. The
+   theme substitutes the brand name in the header, footer, document titles
+   and social previews, but Shopify uses the store name in checkout,
+   notification emails and on the platform password page. While the store is
+   a development store, Shopify serves its own password page instead of the
+   theme's `password` template, so the theme's password design is not visible
+   yet. Admin action: Settings → General → Store details → Store name.
 7. **Dutch migration drafts.** The two unpublished Dutch draft articles
    (`populairste-louis-vuitton-tassen`, `populairste-gucci-tassen`) are kept
    as migration backups; delete them only with explicit owner approval.

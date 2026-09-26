@@ -27,12 +27,19 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {%- liquid
+      assign brand_name = settings.brand_display_name | default: 'La Retrouvée'
+      assign document_title = page_title
+      if request.page_type == 'index' and page_title == shop.name
+        assign brand_tagline = 'brand.hero.eyebrow' | t
+        assign document_title = brand_name | append: ' &ndash; ' | append: brand_tagline
+      endif
+    -%}
     <title>
-      {{ page_title }}
+      {{ document_title }}
       {%- if designer_selection != blank %} &ndash; {{ designer_selection | escape }}{% elsif current_tags %} &ndash; {{ current_tags | join: ', ' | escape }}{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- assign brand_name = settings.brand_display_name | default: 'La Retrouvée' -%}
-      {%- unless page_title contains brand_name %} &ndash; {{ brand_name | escape }}{% endunless -%}
+      {%- unless document_title contains brand_name %} &ndash; {{ brand_name | escape }}{% endunless -%}
     </title>
 
     {% if page_description %}

@@ -1,5 +1,14 @@
 {
   "settings_schema": {
+    "brand": {
+      "name": "Marca",
+      "settings": {
+        "brand_display_name": {
+          "label": "Nombre de la tienda",
+          "info": "Se muestra en el encabezado, el pie de página y las vistas previas de búsqueda del tema. La marca del checkout de Shopify y de los correos se configura por separado."
+        }
+      }
+    },
     "colors": {
       "name": "Colores",
       "settings": {

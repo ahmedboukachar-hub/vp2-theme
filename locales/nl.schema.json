@@ -1,5 +1,14 @@
 {
   "settings_schema": {
+    "brand": {
+      "name": "Merk",
+      "settings": {
+        "brand_display_name": {
+          "label": "Naam van de winkel",
+          "info": "Wordt getoond in de header, footer en zoekvoorvertoningen van het thema. De branding van de Shopify-checkout en e-mails stel je apart in."
+        }
+      }
+    },
     "colors": {
       "name": "Kleuren",
       "settings": {
