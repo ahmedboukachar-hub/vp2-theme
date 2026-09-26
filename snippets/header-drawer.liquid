@@ -1,7 +1,6 @@
 {% doc %}
   Renders a header drawer menu for mobile and desktop.
 
-  @param {boolean} [show_country_selector] - Whether to render the country selector in the drawer.
   @param {boolean} [show_language_selector] - Whether to render the language selector in the drawer.
   @param {boolean} [show_social_links] - Whether to render social links list in the drawer.
 
@@ -147,33 +146,18 @@
             </ul>
           </nav>
           <div class="menu-drawer__utility-links">
-            {%- if show_country_selector or show_language_selector -%}
+            {%- if show_language_selector -%}
               <div class="menu-drawer__localization header-localization">
-                {%- if show_country_selector -%}
-                  <localization-form>
-                    {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
-                      <div>
-                        <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
-                          {{ 'localization.country_label' | t }}
-                        </h2>
-                        {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {% endif %}
-
-                {%- if show_language_selector -%}
-                  <localization-form>
-                    {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
-                      <div>
-                        <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
-                          {{ 'localization.language_label' | t }}
-                        </h2>
-                        {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {%- endif -%}
+                <localization-form>
+                  {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
+                    <div>
+                      <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
+                        {{ 'localization.language_label' | t }}
+                      </h2>
+                      {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
+                    </div>
+                  {%- endform -%}
+                </localization-form>
               </div>
             {%- endif -%}
             {% if show_social_links %}
