@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Shopify Online Store 2.0 theme based on Dawn v16 (plain Liquid/CSS/JS, no build step).
 - Connected to a Shopify development store via GitHub sync: commits on `main` sync to the store, and Theme Editor changes can sync back as commits.
 - The store will become an international webshop for curated vintage and pre-owned designer items.
-- The current store name is a working title only; the final brand name has not been chosen yet.
+- The storefront brand is La Retrouvée. The development store name remains a technical placeholder; legal, payments and account branding require separate verification.
 
 ## Directory structure
 
@@ -26,7 +26,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Never force-push, run destructive Git commands, or discard existing changes.
 - Never commit API keys, tokens, passwords, or other secrets.
 - Do not change products, prices, inventory, orders, blogs, or Shopify pages from this theme repository.
-- Do not hardcode a final brand name, domain, or logo while the brand name is undecided.
+- Use the theme setting `brand_display_name` for storefront branding. Do not hardcode the development store name or assume legal or payments branding has changed.
 - Prefer Shopify settings, blocks, metafields, and locale files over hardcoded content.
 
 ## Git workflow
@@ -70,7 +70,7 @@ Every future change must:
 
 ## Brand identity
 
-Refer to the project as "the brand" or "the store" — never invent a name.
+The storefront brand is La Retrouvée (with accent). Keep `laretrouvee` for technical identifiers.
 
 - **Category:** curated vintage and pre-owned luxury, initially focused on authenticated designer handbags.
 - **Positioning:** a specialized luxury curator — not a thrift store, discounter, or busy marketplace.
@@ -85,4 +85,4 @@ Refer to the project as "the brand" or "the store" — never invent a name.
 - **Tone of voice:** knowledgeable, calm, personal, and confident — never exaggerated, clichéd, or obviously AI-written.
 - **Language strategy:** English is the source language for new international content; Dutch is fully maintained as a translation; the structure must support later expansion to German and French.
 - **Terminology:** use "pre-owned", "vintage", "archive", and "authenticated" precisely; do not lean on "pre-loved" as a marketing cliché.
-- The final name, logo, exact colors, fonts, and tagline will be decided later and must not be invented or hardcoded.
+- The brand name and source line are chosen; logo execution, legal clearance, domain and exact palette require review. Source line: "Found again. Chosen for what comes next."

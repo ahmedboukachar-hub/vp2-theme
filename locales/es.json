@@ -108,6 +108,15 @@
     "collapsible_content_title": "Contenido desplegable",
     "complementary_products": "Productos complementarios"
   },
+  "brand": {
+    "hero": {
+      "eyebrow": "Piezas de diseñador de segunda mano seleccionadas",
+      "heading": "Redescubiertas. Elegidas para lo que viene.",
+      "intro": "Una cuidada selección de bolsos y accesorios de diseñador de segunda mano.",
+      "primary": "Explorar todos los bolsos",
+      "secondary": "Ver novedades"
+    }
+  },
   "blogs": {
     "article": {
       "blog": "Blog",

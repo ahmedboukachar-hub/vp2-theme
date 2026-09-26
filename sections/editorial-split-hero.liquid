@@ -5,6 +5,18 @@
   if template.name == 'index' and section.index == 1
     assign heading_tag = 'h1'
   endif
+  if section.settings.use_brand_copy
+    assign hero_eyebrow = 'brand.hero.eyebrow' | t
+    assign hero_heading = 'brand.hero.heading' | t
+    assign hero_intro = 'brand.hero.intro' | t
+    assign primary_label = 'brand.hero.primary' | t
+    assign secondary_label = 'brand.hero.secondary' | t
+  else
+    assign hero_eyebrow = section.settings.eyebrow
+    assign hero_heading = section.settings.heading
+    assign primary_label = section.settings.button_label
+    assign secondary_label = section.settings.link_label
+  endif
 -%}
 
 <div
@@ -13,17 +25,19 @@
 >
   <div class="split-hero__copy">
     <div class="split-hero__copy-inner{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      {%- if section.settings.eyebrow != blank -%}
-        <span class="vp-eyebrow">{{ section.settings.eyebrow | escape }}</span>
+      {%- if hero_eyebrow != blank -%}
+        <span class="vp-eyebrow">{{ hero_eyebrow | escape }}</span>
       {%- endif -%}
-      {%- if section.settings.heading != blank -%}
-        <{{ heading_tag }} class="vp-heading-hero inline-richtext">{{ section.settings.heading }}</{{ heading_tag }}>
+      {%- if hero_heading != blank -%}
+        <{{ heading_tag }} class="vp-heading-hero inline-richtext">{% if section.settings.use_brand_copy %}{{ hero_heading | escape }}{% else %}{{ hero_heading }}{% endif %}</{{ heading_tag }}>
       {%- endif -%}
-      {%- if section.settings.text != blank -%}
+      {%- if section.settings.use_brand_copy -%}
+        <div class="vp-lead rte"><p>{{ hero_intro | escape }}</p></div>
+      {%- elsif section.settings.text != blank -%}
         <div class="vp-lead rte">{{ section.settings.text }}</div>
       {%- endif -%}
       <div class="vp-actions split-hero__actions">
-        {%- if section.settings.button_label != blank -%}
+        {%- if primary_label != blank -%}
           <a
             {% if section.settings.button_link == blank %}
               role="link" aria-disabled="true"
@@ -32,12 +46,12 @@
             {% endif %}
             class="button split-hero__button"
           >
-            {{- section.settings.button_label | escape -}}
+            {{- primary_label | escape -}}
           </a>
         {%- endif -%}
-        {%- if section.settings.link_label != blank and section.settings.link_url != blank -%}
+        {%- if secondary_label != blank and section.settings.link_url != blank -%}
           <a href="{{ section.settings.link_url }}" class="button button--secondary split-hero__button">
-            {{- section.settings.link_label | escape -}}
+            {{- secondary_label | escape -}}
           </a>
         {%- endif -%}
       </div>
@@ -71,6 +85,7 @@
       "label": "Image",
       "info": "One strong editorial image of a real piece, cropped edge to edge. Leave empty for a deliberate typographic hero on a neutral field."
     },
+    { "type": "checkbox", "id": "use_brand_copy", "label": "Use translated brand copy for this hero", "default": false },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Curated vintage & pre-owned" },
     {
       "type": "inline_richtext",

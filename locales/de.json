@@ -117,6 +117,15 @@
     "collapsible_content_title": "Einklappbarer Inhalt",
     "complementary_products": "Ergänzende Produkte"
   },
+  "brand": {
+    "hero": {
+      "eyebrow": "Ausgewählte Pre-owned-Designerstücke",
+      "heading": "Wiedergefunden. Ausgewählt für das, was kommt.",
+      "intro": "Eine sorgfältig zusammengestellte Auswahl an Pre-owned-Designertaschen und Accessoires.",
+      "primary": "Alle Taschen entdecken",
+      "secondary": "Neu eingetroffen"
+    }
+  },
   "blogs": {
     "article": {
       "blog": "Blog",

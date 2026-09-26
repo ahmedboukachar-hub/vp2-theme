@@ -108,6 +108,15 @@
     "collapsible_content_title": "Contenuto comprimibile",
     "complementary_products": "Prodotti complementari"
   },
+  "brand": {
+    "hero": {
+      "eyebrow": "Pezzi firmati pre-owned selezionati",
+      "heading": "Ritrovati. Scelti per il prossimo capitolo.",
+      "intro": "Una selezione curata di borse e accessori firmati pre-owned.",
+      "primary": "Scopri tutte le borse",
+      "secondary": "Scopri i nuovi arrivi"
+    }
+  },
   "blogs": {
     "article": {
       "blog": "Blog",

@@ -117,6 +117,15 @@
     "collapsible_content_title": "Collapsible content",
     "complementary_products": "Complementary products"
   },
+  "brand": {
+    "hero": {
+      "eyebrow": "Curated pre-owned designer pieces",
+      "heading": "Found again. Chosen for what comes next.",
+      "intro": "A considered collection of pre-owned designer bags and accessories.",
+      "primary": "Explore all bags",
+      "secondary": "Shop new arrivals"
+    }
+  },
   "blogs": {
     "article": {
       "blog": "Blog",

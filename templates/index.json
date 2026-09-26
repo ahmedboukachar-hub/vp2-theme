@@ -16,10 +16,11 @@
         "eyebrow": "Vintage & pre-owned designer bags",
         "heading": "Vintage icons. Individual character.",
         "text": "<p>Explore pre-owned designer bags from Louis Vuitton, Gucci and more. Discover the piece that feels like yours.</p>",
-        "button_label": "Shop new arrivals",
-        "button_link": "shopify://collections/new-arrivals",
-        "link_label": "Explore all bags",
-        "link_url": "shopify://collections/all-bags",
+        "button_label": "Explore all bags",
+        "button_link": "shopify://collections/all-bags",
+        "link_label": "Shop new arrivals",
+        "link_url": "shopify://collections/new-arrivals",
+        "use_brand_copy": true,
         "color_scheme": "scheme-1"
       }
     },
