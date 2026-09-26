@@ -8,6 +8,18 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Brand",
+    "settings": [
+      {
+        "type": "text",
+        "id": "brand_display_name",
+        "label": "Storefront name",
+        "default": "La Retrouvée",
+        "info": "Shown in the theme header, footer and search previews. Shopify checkout and email branding is configured separately."
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

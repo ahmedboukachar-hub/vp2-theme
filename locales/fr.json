@@ -117,6 +117,15 @@
     "collapsible_content_title": "Contenu réductible",
     "complementary_products": "Produits complémentaires"
   },
+  "brand": {
+    "hero": {
+      "eyebrow": "Pièces de créateur de seconde main sélectionnées",
+      "heading": "Retrouvées. Choisies pour la suite.",
+      "intro": "Une sélection attentive de sacs et accessoires de créateur de seconde main.",
+      "primary": "Découvrir tous les sacs",
+      "secondary": "Voir les nouveautés"
+    }
+  },
   "blogs": {
     "article": {
       "blog": "Blog",

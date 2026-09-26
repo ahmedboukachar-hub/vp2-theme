@@ -1,3 +1,4 @@
+{%- assign brand_name = settings.brand_display_name | default: 'La Retrouvée' -%}
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
@@ -189,7 +190,7 @@
 
       <div class="footer__legal">
         <small class="footer__copyright">
-          &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}
+          &copy; {{ 'now' | date: '%Y' }}, {{ brand_name | link_to: routes.root_url }}
         </small>
 
         {%- if section.settings.show_policy -%}
@@ -211,7 +212,7 @@
         {%- endif -%}
       </div>
 
-      <p class="footer__note">{{ 'general.footer.non_affiliation' | t: shop_name: shop.name }}</p>
+      <p class="footer__note">{{ 'general.footer.non_affiliation' | t: shop_name: brand_name }}</p>
 
       {%- if section.settings.payment_enable and shop.enabled_payment_types != empty -%}
         <div class="footer__payment">

@@ -117,6 +117,15 @@
     "collapsible_content_title": "Inklapbare content",
     "complementary_products": "Aanvullende producten"
   },
+  "brand": {
+    "hero": {
+      "eyebrow": "Geselecteerde pre-owned designerstukken",
+      "heading": "Opnieuw gevonden. Gekozen voor wat volgt.",
+      "intro": "Een zorgvuldig samengestelde collectie pre-owned designertassen en accessoires.",
+      "primary": "Bekijk alle tassen",
+      "secondary": "Bekijk nieuw binnen"
+    }
+  },
   "blogs": {
     "article": {
       "blog": "Blog",
