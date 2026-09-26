@@ -52,6 +52,20 @@
     min-height: clamp(52rem, 66vh, 64rem);
   }
 
+  .split-hero__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .split-hero__actions .button {
+    width: 100%;
+    min-inline-size: 0;
+    padding-inline: 1.6rem;
+    white-space: normal;
+    text-align: center;
+  }
+
   .split-hero__copy {
     flex: 0 0 46%;
     padding: 5.6rem clamp(3.2rem, 4vw, 6.4rem);
