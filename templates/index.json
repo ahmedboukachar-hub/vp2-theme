@@ -24,45 +24,6 @@
         "color_scheme": "scheme-1"
       }
     },
-    "proof": {
-      "type": "trust-strip",
-      "blocks": {
-        "proof_selected": {
-          "type": "item",
-          "settings": {
-            "heading": "Individual pieces",
-            "text": "<p>Discover the character of each pre-owned bag.</p>"
-          }
-        },
-        "proof_documented": {
-          "type": "item",
-          "settings": {
-            "heading": "A closer look",
-            "text": "<p>Ask us about condition, details or measurements.</p>"
-          }
-        },
-        "proof_exact": {
-          "type": "item",
-          "settings": {
-            "heading": "Personal advice",
-            "text": "<p>Questions about a bag? Get in touch.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "proof_selected",
-        "proof_documented",
-        "proof_exact"
-      ],
-      "settings": {
-        "show_borders": true,
-        "link_label": "",
-        "link_url": "",
-        "color_scheme": "scheme-3",
-        "padding_top": 24,
-        "padding_bottom": 24
-      }
-    },
     "new_arrivals": {
       "type": "featured-collection",
       "settings": {
@@ -204,7 +165,6 @@
   },
   "order": [
     "hero",
-    "proof",
     "new_arrivals",
     "designers",
     "editorial",
