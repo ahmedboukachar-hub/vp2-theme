@@ -7,13 +7,13 @@
   assign panel_link = section.settings.link_label
 
   if request.locale.iso_code != 'en'
+    if page.handle == 'about' and panel_link == 'How we assess each piece'
+      assign panel_link = 'templates.page_cta.about_trust_link' | t
+    endif
     if page.handle == 'about' and panel_heading == 'Discover the current selection.'
       assign panel_heading = 'templates.page_cta.about_heading' | t
       assign panel_text = 'templates.page_cta.about_text' | t
       assign panel_button = 'templates.page_cta.about_button' | t
-      if panel_link == 'How we assess each piece'
-        assign panel_link = 'templates.page_cta.about_trust_link' | t
-      endif
     elsif page.handle == 'authenticity' and panel_heading == 'Understanding condition'
       assign panel_heading = 'templates.page_cta.authenticity_heading' | t
       assign panel_text = 'templates.page_cta.authenticity_text' | t
