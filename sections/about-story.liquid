@@ -1,0 +1,43 @@
+{{ 'section-about-story.css' | asset_url | stylesheet_tag }}
+
+<div class="about-story color-{{ section.settings.color_scheme }} gradient">
+  <div class="vp-width">
+    <div class="about-story__opening">
+      <p class="vp-eyebrow">{{ 'templates.about_story.eyebrow' | t }}</p>
+      <h2 class="vp-heading-display">{{ 'templates.about_story.heading' | t }}</h2>
+      <div class="about-story__lead rte">{{ 'templates.about_story.intro' | t }}</div>
+    </div>
+    <div class="about-story__chapters">
+      <div class="about-story__chapter">
+        <span class="about-story__number" aria-hidden="true">01</span>
+        <h3>{{ 'templates.about_story.selection_heading' | t }}</h3>
+        <p>{{ 'templates.about_story.selection_text' | t }}</p>
+      </div>
+      <div class="about-story__chapter">
+        <span class="about-story__number" aria-hidden="true">02</span>
+        <h3>{{ 'templates.about_story.detail_heading' | t }}</h3>
+        <p>{{ 'templates.about_story.detail_text' | t }}</p>
+      </div>
+      <div class="about-story__chapter">
+        <span class="about-story__number" aria-hidden="true">03</span>
+        <h3>{{ 'templates.about_story.next_heading' | t }}</h3>
+        <p>{{ 'templates.about_story.next_text' | t }}</p>
+      </div>
+    </div>
+    <div class="about-story__links">
+      <a class="vp-link vp-link--arrow" href="{{ pages['our-curation'].url }}">{{ 'templates.about_story.curation_link' | t }}</a>
+      <a class="vp-link vp-link--arrow" href="{{ pages['contact'].url }}">{{ 'templates.about_story.contact_link' | t }}</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About story",
+  "tag": "section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
+  ],
+  "presets": [{ "name": "About story" }]
+}
+{% endschema %}

@@ -36,7 +36,19 @@
     </header>
 
     {%- if blog.all_tags.size > 0 and section.settings.show_topics -%}
-      <nav class="journal-index__topics" aria-label="{{ 'blogs.article.topics' | t }}">
+      <details class="journal-index__topics">
+        <summary class="journal-index__topics-trigger">
+          <span>{{ 'blogs.article.topics' | t }}</span>
+          <span class="journal-index__topics-current">
+            {%- if current_tags == blank -%}
+              {{ 'blogs.article.all_topics' | t }}
+            {%- else -%}
+              {% render 'journal-topic', topic: current_tags.first %}
+            {%- endif -%}
+          </span>
+          <span class="journal-index__topics-chevron" aria-hidden="true">⌄</span>
+        </summary>
+        <nav class="journal-index__topics-list" aria-label="{{ 'blogs.article.topics' | t }}">
         <ul role="list">
           <li>
             <a
@@ -48,6 +60,8 @@
             </a>
           </li>
           {%- for tag in blog.all_tags -%}
+            {%- assign tag_key = tag | downcase -%}
+            {%- if tag_key == 'guide' or tag_key == 'sizing' -%}{%- continue -%}{%- endif -%}
             <li>
               <a
                 href="{{ blog.url }}/tagged/{{ tag | handleize }}"
@@ -59,7 +73,8 @@
             </li>
           {%- endfor -%}
         </ul>
-      </nav>
+        </nav>
+      </details>
     {%- endif -%}
 
     {%- paginate blog.articles by per_page -%}

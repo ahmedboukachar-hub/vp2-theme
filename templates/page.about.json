@@ -5,17 +5,15 @@
       "settings": {
         "eyebrow": "About",
         "heading": "A considered approach to pieces with a past.",
-        "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg",
+        "image": "shopify://shop_images/owner-lv-lockme-knit.jpg",
         "image_ratio": "portrait",
         "color_scheme": "scheme-1"
       }
     },
     "main": {
-      "type": "main-page",
+      "type": "about-story",
       "settings": {
-        "show_title": false,
-        "padding_top": 36,
-        "padding_bottom": 64
+        "color_scheme": "scheme-1"
       }
     },
     "closing": {

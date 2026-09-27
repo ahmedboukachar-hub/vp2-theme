@@ -479,6 +479,19 @@
       "submit": "Enviar los detalles del artículo",
       "success": "Gracias. Hemos recibido tu propuesta y te contactaremos si queremos hablar más sobre la pieza.",
       "hidden_source": "Tipo de solicitud"
+    },
+    "about_story": {
+      "eyebrow": "Nuestra mirada",
+      "heading": "Encontrados para volver a llevarlos.",
+      "intro": "La Retrouvée reúne bolsos de diseñador vintage y de segunda mano elegidos por su diseño, estado y carácter propio. Una pieza puede tener historia y encontrar su lugar en el presente.",
+      "selection_heading": "Elegidos uno a uno",
+      "selection_text": "Un nombre conocido nunca cuenta toda la historia. Observamos la forma, los materiales y los detalles de cada pieza antes de incorporarla a la selección. Cada bolso se presenta como una pieza individual.",
+      "detail_heading": "Mostrados con claridad",
+      "detail_text": "Las fotos y la descripción corresponden al bolso que recibirás. Describimos las señales de uso visibles, indicamos las medidas cuando están disponibles y respondemos a tus preguntas.",
+      "next_heading": "Para un nuevo capítulo",
+      "next_text": "El bolso adecuado es el que querrás usar. Nuestra selección reúne piezas para llevar, cuidar y volver a descubrir.",
+      "curation_link": "Descubre nuestra selección",
+      "contact_link": "Haznos una pregunta"
     }
   },
   "sections": {

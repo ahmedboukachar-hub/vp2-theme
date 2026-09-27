@@ -488,6 +488,19 @@
       "submit": "Envoyer les détails de l’article",
       "success": "Merci. Nous avons bien reçu votre demande et vous contacterons si nous souhaitons en discuter davantage.",
       "hidden_source": "Type de demande"
+    },
+    "about_story": {
+      "eyebrow": "Notre regard",
+      "heading": "Retrouvés pour être portés à nouveau.",
+      "intro": "La Retrouvée réunit des sacs de créateurs vintage et de seconde main, choisis pour leur ligne, leur état et leur caractère singulier. Une pièce peut avoir une histoire et trouver naturellement sa place aujourd’hui.",
+      "selection_heading": "Choisis un à un",
+      "selection_text": "Un grand nom ne raconte jamais toute l’histoire. Nous examinons la forme, les matières et les détails de chaque pièce avant de l’intégrer à la sélection. Chaque sac est présenté comme une pièce unique.",
+      "detail_heading": "Présentés avec clarté",
+      "detail_text": "Les photos et la description correspondent au sac que vous recevrez. Nous décrivons les traces d’usage visibles, indiquons les mesures lorsqu’elles sont disponibles et répondons à vos questions.",
+      "next_heading": "Pour un nouveau chapitre",
+      "next_text": "Le bon sac donne envie d’être porté. Notre sélection réunit des pièces faites pour vivre, être entretenues et être retrouvées.",
+      "curation_link": "Découvrir notre sélection",
+      "contact_link": "Nous poser une question"
     }
   },
   "sections": {
