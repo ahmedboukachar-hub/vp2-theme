@@ -1,0 +1,14 @@
+.about-story { padding-block: var(--vp-space-l) var(--vp-space-xl); }
+.about-story__opening { max-width: 88rem; margin-bottom: var(--vp-space-l); }
+.about-story__opening h2 { max-width: 17ch; margin: 1.2rem 0 2.4rem; }
+.about-story__lead { max-width: var(--vp-measure-lead); font-size: var(--vp-type-body-lead); line-height: 1.5; }
+.about-story__chapters { border-top: var(--vp-border); }
+.about-story__chapter { display: grid; grid-template-columns: 3.2rem 1fr; gap: .6rem 1.6rem; padding-block: 2.6rem; border-bottom: var(--vp-border); }
+.about-story__number { font-size: 1.2rem; letter-spacing: .12em; opacity: .58; padding-top: .5rem; }
+.about-story__chapter h3 { font-size: clamp(2.6rem, 3vw, 4rem); line-height: 1.1; margin: 0; }
+.about-story__chapter p { grid-column: 2; max-width: 58rem; margin: 0; line-height: 1.6; }
+.about-story__links { display: flex; flex-wrap: wrap; gap: 1.6rem 3rem; padding-top: 3rem; }
+@media screen and (min-width: 750px) {
+  .about-story__chapter { grid-template-columns: 4rem minmax(22rem, .8fr) minmax(0, 1fr); align-items: start; gap: 2.4rem; padding-block: 3.2rem; }
+  .about-story__chapter p { grid-column: 3; }
+}

@@ -479,6 +479,19 @@
       "submit": "Submit item details",
       "success": "Thank you. We have received your submission and will contact you if we would like to discuss the piece further.",
       "hidden_source": "Request type"
+    },
+    "about_story": {
+      "eyebrow": "Our point of view",
+      "heading": "Made to be found again.",
+      "intro": "La Retrouvée brings together vintage and pre-owned designer bags chosen for their design, condition and individual character. A piece can carry a history and still feel entirely at home in the present. We make room for both.",
+      "selection_heading": "Chosen individually",
+      "selection_text": "A familiar name alone is never the whole story. We consider the shape, materials and details of every piece before it joins the selection. Each bag is offered as an individual object, not as an interchangeable example of a model.",
+      "detail_heading": "Seen clearly",
+      "detail_text": "The photographs and description belong to the exact bag you receive. We describe visible wear, give measurements where available and welcome questions about details that matter to you.",
+      "next_heading": "Ready for a new chapter",
+      "next_text": "The right bag is one you will want to use. Our collection is deliberately considered, with pieces that deserve to be worn, cared for and found again.",
+      "curation_link": "Explore our curation",
+      "contact_link": "Ask us a question"
     }
   },
   "sections": {
