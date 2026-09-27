@@ -7,6 +7,10 @@
   assign journal_eyebrow = section.settings.eyebrow
   assign journal_heading = section.settings.heading | default: blog.title
   assign journal_intro = section.settings.intro
+  assign journal_topics = blog.all_tags
+  if journal_topics == blank
+    assign journal_topics = 'buying-guides,bag-care,gucci,louis-vuitton' | split: ','
+  endif
 
   if request.locale.iso_code != 'en'
     if journal_eyebrow == 'The Journal'
@@ -35,7 +39,7 @@
       {%- endif -%}
     </header>
 
-    {%- if blog.all_tags.size > 0 and section.settings.show_topics -%}
+    {%- if section.settings.show_topics -%}
       <details class="journal-index__topics">
         <summary class="journal-index__topics-trigger">
           <span>{{ 'blogs.article.topics' | t }}</span>
@@ -59,7 +63,7 @@
               {{- 'blogs.article.all_topics' | t -}}
             </a>
           </li>
-          {%- for tag in blog.all_tags -%}
+          {%- for tag in journal_topics -%}
             {%- assign tag_key = tag | downcase -%}
             {%- if tag_key == 'guide' or tag_key == 'sizing' -%}{%- continue -%}{%- endif -%}
             <li>
