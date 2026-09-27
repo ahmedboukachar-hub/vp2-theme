@@ -15,6 +15,10 @@
   max-width: var(--vp-measure-text);
 }
 
+.article-related__cta--solo {
+  margin-top: 0;
+}
+
 @media screen and (min-width: 750px) {
   .article-related__grid { grid-template-columns: repeat(3, 1fr); }
 }
