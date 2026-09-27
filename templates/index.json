@@ -38,7 +38,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "outline",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -74,7 +74,7 @@
         "eyebrow": "The houses",
         "title": "Explore the designers.",
         "columns_desktop": "2",
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-3"
       }
     },
     "editorial": {
