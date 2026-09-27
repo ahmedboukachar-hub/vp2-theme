@@ -13,11 +13,6 @@
 
 {%- liquid
   assign variant = variant | default: 'secondary'
-  assign words = article.content | strip_html | split: ' ' | size
-  assign minutes = words | divided_by: 200
-  if minutes < 1
-    assign minutes = 1
-  endif
   assign topic = article.tags | first
   if heading_class == blank
     if variant == 'lead'
@@ -56,14 +51,6 @@
           {{- article.excerpt_or_content | strip_html | truncatewords: 26 -}}
         </p>
       {%- endif -%}
-
-      <p class="journal-card__meta">
-        <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
-          {{- article.published_at | time_tag: format: 'date' | strip_html -}}
-        </time>
-        <span aria-hidden="true">·</span>
-        {{ 'blogs.article.min_read' | t: count: minutes }}
-      </p>
 
       <span class="vp-link vp-link--arrow journal-card__read">{{ 'blogs.article.read_article' | t }}</span>
     </div>

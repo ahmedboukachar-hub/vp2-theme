@@ -280,7 +280,6 @@
                   >
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
-                        {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
                         {% render 'card-product',
                           card_product: item,
                           media_aspect_ratio: section.settings.image_ratio,
@@ -297,7 +296,6 @@
                         {% render 'article-card',
                           article: item,
                           show_image: true,
-                          show_date: section.settings.article_show_date,
                           show_author: section.settings.article_show_author,
                           show_badge: true,
                           media_aspect_ratio: 1,
@@ -497,12 +495,6 @@
     {
       "type": "header",
       "content": "t:sections.main-search.settings.header__2.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "article_show_date",
-      "default": true,
-      "label": "t:sections.main-search.settings.article_show_date.label"
     },
     {
       "type": "checkbox",

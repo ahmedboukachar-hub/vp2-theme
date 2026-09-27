@@ -34,13 +34,6 @@
 
 .article-page__standfirst > * { margin: 0; }
 
-.article-page__meta {
-  margin: 2rem 0 0;
-  font-size: 1.3rem;
-  letter-spacing: 0.04em;
-  color: rgba(var(--color-foreground), 0.6);
-}
-
 .article-page__lead {
   margin-block: var(--vp-space-l);
 }

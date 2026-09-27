@@ -1,17 +1,11 @@
 {{ 'section-main-article.css' | asset_url | stylesheet_tag }}
 
-{%- liquid
-  assign words = article.content | strip_html | split: ' ' | size
-  assign minutes = words | divided_by: 200
-  if minutes < 1
-    assign minutes = 1
-  endif
-  assign topic = article.tags | first
--%}
+{%- assign topic = article.tags | first -%}
 
 <article class="article-page color-{{ section.settings.color_scheme }} gradient" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="vp-width">
     <header class="article-page__header">
+      <meta itemprop="datePublished" content="{{ article.published_at | date: '%Y-%m-%d' }}">
       {%- if topic != blank and section.settings.show_topic -%}
         <a class="vp-eyebrow article-page__topic" href="{{ blog.url }}/tagged/{{ topic | handleize }}">
           {% render 'journal-topic', topic: topic %}
@@ -24,15 +18,6 @@
         <div class="article-page__standfirst rte">{{ article.excerpt }}</div>
       {%- endif -%}
 
-      <p class="article-page__meta">
-        <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}" itemprop="datePublished">
-          {{- article.published_at | time_tag: format: 'date' | strip_html -}}
-        </time>
-        {%- if section.settings.show_reading_time -%}
-          <span aria-hidden="true">·</span>
-          {{ 'blogs.article.min_read' | t: count: minutes }}
-        {%- endif -%}
-      </p>
     </header>
   </div>
 
@@ -77,13 +62,6 @@
   "settings": [
     { "type": "checkbox", "id": "show_topic", "label": "Show the article topic", "default": true },
     { "type": "checkbox", "id": "show_image", "label": "Show the lead image", "default": true },
-    {
-      "type": "checkbox",
-      "id": "show_reading_time",
-      "label": "Show reading time",
-      "info": "Calculated from the actual article length.",
-      "default": true
-    },
     { "type": "checkbox", "id": "show_share", "label": "Show the share button", "default": false },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
   ]
