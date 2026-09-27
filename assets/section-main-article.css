@@ -83,6 +83,7 @@
 
   .article-page__intro--with-media .article-page__title {
     font-size: clamp(3.4rem, 3.8vw, 4.8rem);
+    margin-inline: 0;
   }
 
   .article-page__intro--with-media .article-page__standfirst { margin-left: 0; }
