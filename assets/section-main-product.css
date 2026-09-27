@@ -57,6 +57,43 @@ product-info {
   padding-left: 0;
 }
 
+/* The original Marmont detail photos contain a white centre on an ivory canvas.
+   Darken blends only the light background into the matching canvas; the darker
+   leather, stitches, wear and hardware keep their original photographed pixels. */
+.product-media-container:has(
+    .product__media img:is(
+        [src*='gucci-gg-marmont-red-rear-1600x2000'],
+        [src*='gucci-gg-marmont-red-base-1600x2000'],
+        [src*='gucci-gg-marmont-red-side-1600x2000'],
+        [src*='gucci-gg-marmont-red-flap-1600x2000']
+      )
+  ),
+.product-media-modal__content > *:has(
+    img:is(
+        [src*='gucci-gg-marmont-red-rear-1600x2000'],
+        [src*='gucci-gg-marmont-red-base-1600x2000'],
+        [src*='gucci-gg-marmont-red-side-1600x2000'],
+        [src*='gucci-gg-marmont-red-flap-1600x2000']
+      )
+  ) {
+  background: #f8f4eb;
+}
+
+.product-media-container .product__media img:is(
+    [src*='gucci-gg-marmont-red-rear-1600x2000'],
+    [src*='gucci-gg-marmont-red-base-1600x2000'],
+    [src*='gucci-gg-marmont-red-side-1600x2000'],
+    [src*='gucci-gg-marmont-red-flap-1600x2000']
+  ),
+.product-media-modal__content img:is(
+    [src*='gucci-gg-marmont-red-rear-1600x2000'],
+    [src*='gucci-gg-marmont-red-base-1600x2000'],
+    [src*='gucci-gg-marmont-red-side-1600x2000'],
+    [src*='gucci-gg-marmont-red-flap-1600x2000']
+  ) {
+  mix-blend-mode: darken;
+}
+
 @media screen and (min-width: 750px) {
   .product__column-sticky {
     display: block;
