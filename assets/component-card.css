@@ -366,6 +366,12 @@
   box-sizing: border-box;
 }
 
+/* The Marmont studio image includes its own ivory canvas; fill its card frame. */
+.product-card-wrapper .card__media .media > img[src*='gucci-gg-marmont-red-studio-hero'] {
+  object-fit: cover;
+  padding: 0;
+}
+
 .product-card-wrapper.card-wrapper:hover .card .card__media .media.media--hover-effect > img {
   transform: none;
 }
