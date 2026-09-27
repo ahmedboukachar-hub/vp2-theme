@@ -3,7 +3,7 @@
 {%- assign topic = article.tags | first -%}
 
 <article class="article-page color-{{ section.settings.color_scheme }} gradient" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="vp-width">
+  <div class="vp-width article-page__intro{% if article.image and section.settings.show_image %} article-page__intro--with-media{% endif %}">
     <header class="article-page__header">
       <meta itemprop="datePublished" content="{{ article.published_at | date: '%Y-%m-%d' }}">
       {%- if topic != blank and section.settings.show_topic -%}
@@ -17,29 +17,23 @@
       {%- if article.excerpt != blank -%}
         <div class="article-page__standfirst rte">{{ article.excerpt }}</div>
       {%- endif -%}
-
     </header>
-  </div>
-
-  {%- if article.image and section.settings.show_image -%}
-    <div class="article-page__lead">
-      <div class="vp-width">
-        <div class="article-page__lead-media vp-media vp-media--3x2">
-          {{
-            article.image
-            | image_url: width: 2400
-            | image_tag:
-              loading: 'eager',
-              fetchpriority: 'high',
-              widths: '550, 750, 1100, 1500, 1800, 2200, 2400',
-              sizes: '(min-width: 1440px) 1400px, 100vw',
-              itemprop: 'image',
-              alt: article.image.alt | escape
-          }}
-        </div>
+    {%- if article.image and section.settings.show_image -%}
+      <div class="article-page__lead-media vp-media vp-media--3x2">
+        {{
+          article.image
+          | image_url: width: 1800
+          | image_tag:
+            loading: 'eager',
+            fetchpriority: 'high',
+            widths: '375, 550, 750, 1100, 1400, 1800',
+            sizes: '(min-width: 750px) 42vw, 100vw',
+            itemprop: 'image',
+            alt: article.image.alt | escape
+        }}
       </div>
-    </div>
-  {%- endif -%}
+    {%- endif -%}
+  </div>
 
   <div class="vp-width">
     <div class="article-page__body vp-rte rte" itemprop="articleBody">
