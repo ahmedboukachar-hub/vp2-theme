@@ -120,3 +120,17 @@ retired from active placement:
 
 Pages that are deliberately typography-led (no hero image): Condition Guide,
 FAQ, Contact, Shipping & Returns, Our Curation, Wishlist, Journal index.
+
+## Batch 6 — owner-supplied Dior collection image (2026-09-30)
+
+| File | Section/page | Depicts | Face | 3rd-party product | Owned | Replace? |
+| --- | --- | --- | --- | --- | --- | --- |
+| owner-dior-vibe-bowling-white.jpg | Dior collection image | White Dior bowling bag with embossed Oblique motif, gold-tone trim and "Christian Dior Paris" lettering, on a white display shelf | no | yes (Dior, naturally on the product) | confirmation required ⚠ | optional |
+
+Note: the setting reads as a boutique display (sculpted white wall, shelf),
+which the §36.3 rule treats cautiously because a designer boutique can imply
+authorised-retailer status. The owner chose this image explicitly for the Dior
+collection; it shows a single product, not a storefront or shop sign, and is
+used only as a collection banner, never as product photography. Revisit when
+owned photography of a Dior piece exists.
+

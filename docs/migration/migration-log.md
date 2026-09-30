@@ -128,3 +128,21 @@ condition remarks from the old listing) plus the standard closing sentence.
 Catalogue after this delta: 25 migrated products (24 published, VP-A002 still
 draft); 16 available bags + 1 accessory; 8 archived pieces.
 
+### Galleries and the Dior banner (same day)
+
+Owner-instructed: the remaining old-store photographs were added to the
+migrated products that still carried only their main image (owner's own
+photos, imported unchanged, appended after the existing media so the main
+image stays first). The image already used as main, per
+`docs/photography/main-image-after.json`, was skipped. Result: 122 gallery
+images added across 19 products, all READY, none failed; the catalogue now
+holds 180 product images. Skipped: `gucci-gg-marmont-shoulder-bag` (gallery
+already rebuilt with six media on 27 September), `louis-vuitton-shoulder-strap`
+and `louis-vuitton-accessory-unidentified` (one source image each).
+`images-pending` stays on every product until owned studio photography lands.
+
+The Dior collection received an owner-supplied banner
+(`owner-dior-vibe-bowling-white.jpg`, see image register batch 6) and Dior was
+added to the Designers page as a fourth house (`templates/page.designers.json`,
+two columns).
+
