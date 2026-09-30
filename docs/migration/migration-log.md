@@ -87,3 +87,44 @@ the EUR/Markets migration · removal of the `migration-review` and
 `images-pending` tags · for VP-A002 additionally: item identification.
 The same list is stored on each product in `internal.migration_note`
 (admin-only, never rendered).
+
+---
+
+## Delta 2026-09-30 — four new pieces, one sold
+
+Owner-instructed re-check of the public old-store catalogue (29 products, up
+from 25). Raw data: `vintagepareltje-delta-20260930.json`. Same conventions as
+above; created directly as **ACTIVE + Online Store** because the migrated
+catalogue is already live on the password-protected test store. Photographs
+are the owner's own old-store images, imported unchanged (first image = main),
+so `images-pending` stays until owned studio photography replaces them.
+
+| Old handle | New handle | Ref/SKU | Price | Status | Images |
+| --- | --- | --- | --- | --- | --- |
+| louis-vuitton-looping-gm-monogram-canvas | louis-vuitton-looping-gm-03 | VP-B019 | €650 | available, new-arrival | 9 |
+| louis-vuitton-neverfull | louis-vuitton-neverfull | VP-B020 | €850 | available, new-arrival; size (MM/GM) not stated in source — confirm | 5 |
+| saddle-triple-zip-pouch | dior-saddle-triple-zip-pouch | VP-B021 | €750 | available, new-arrival; source names the strap black in the text and blue in the details — confirm | 12 |
+| louis-vuitton-looping | louis-vuitton-looping-pm-02 | VP-B022 | €640 | sold-archive (sold on the old store before migration) | 8 |
+
+Status change: **VP-B001 `louis-vuitton-looping-pm`** is listed as sold on the
+old store (`available: false`) and was moved to `sold-archive` here, inventory
+set to 0, note appended to `internal.migration_note`. VP-B022 may be the
+"second Looping PM" seed item that was unresolved in September; not merged,
+treated as its own physical piece.
+
+New house: **Dior** (vendor `Dior`, tag `designer-dior`). Created the smart
+collection `dior` (`VENDOR = Dior AND TAG = available`, sort newest first,
+published, description translated nl/de/fr/it/es) and added "Dior" under
+Designers in the main menu, preserving every existing menu-item id so link
+translations stay intact. The Designers page copy ("we begin with Louis
+Vuitton and Gucci, and the circle will widen") still holds and was not edited.
+No collection image yet (the image register governs non-product imagery).
+
+Translations registered per new product: `body_html` and `product_type` in
+nl/de/fr/it/es, `title` in it/es (identical), matching the existing catalogue.
+Bodies contain only source-supported facts (materials, hardware, pockets,
+condition remarks from the old listing) plus the standard closing sentence.
+
+Catalogue after this delta: 25 migrated products (24 published, VP-A002 still
+draft); 16 available bags + 1 accessory; 8 archived pieces.
+
