@@ -38,17 +38,24 @@
           "settings": {
             "collection": "jacquemus"
           }
+        },
+        "designer_dior": {
+          "type": "designer",
+          "settings": {
+            "collection": "dior"
+          }
         }
       },
       "block_order": [
         "designer_louis_vuitton",
         "designer_gucci",
-        "designer_jacquemus"
+        "designer_jacquemus",
+        "designer_dior"
       ],
       "settings": {
         "eyebrow": "",
         "title": "",
-        "columns_desktop": "3",
+        "columns_desktop": "2",
         "color_scheme": "scheme-3"
       }
     },
