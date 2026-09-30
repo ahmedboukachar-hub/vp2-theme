@@ -102,13 +102,14 @@ so `images-pending` stays until owned studio photography replaces them.
 | Old handle | New handle | Ref/SKU | Price | Status | Images |
 | --- | --- | --- | --- | --- | --- |
 | louis-vuitton-looping-gm-monogram-canvas | louis-vuitton-looping-gm-03 | VP-B019 | €650 | available, new-arrival | 9 |
-| louis-vuitton-neverfull | louis-vuitton-neverfull | VP-B020 | €850 | available, new-arrival; size (MM/GM) not stated in source — confirm | 5 |
-| saddle-triple-zip-pouch | dior-saddle-triple-zip-pouch | VP-B021 | €750 | available, new-arrival; source names the strap black in the text and blue in the details — confirm | 12 |
+| louis-vuitton-neverfull | louis-vuitton-neverfull | VP-B020 | €850 | available, new-arrival; size MM (owner confirmation 2026-09-30; title and model updated) | 5 |
+| saddle-triple-zip-pouch | dior-saddle-triple-zip-pouch | VP-B021 | €750 | available, new-arrival; strap is blue leather (owner confirmation 2026-09-30; body updated in six languages) | 12 |
 | louis-vuitton-looping | louis-vuitton-looping-pm-02 | VP-B022 | €640 | sold-archive (sold on the old store before migration) | 8 |
 
 Status change: **VP-B001 `louis-vuitton-looping-pm`** is listed as sold on the
 old store (`available: false`) and was moved to `sold-archive` here, inventory
-set to 0, note appended to `internal.migration_note`. VP-B022 may be the
+set to 0, note appended to `internal.migration_note`; the owner confirmed the
+sale on 2026-09-30. VP-B022 may be the
 "second Looping PM" seed item that was unresolved in September; not merged,
 treated as its own physical piece.
 
