@@ -7,6 +7,10 @@
   assign journal_eyebrow = section.settings.eyebrow
   assign journal_heading = section.settings.heading | default: blog.title
   assign journal_intro = section.settings.intro
+  assign journal_topics = blog.all_tags
+  if journal_topics == blank
+    assign journal_topics = 'buying-guides,bag-care,gucci,louis-vuitton' | split: ','
+  endif
 
   if request.locale.iso_code != 'en'
     if journal_eyebrow == 'The Journal'
@@ -35,8 +39,20 @@
       {%- endif -%}
     </header>
 
-    {%- if blog.all_tags.size > 0 and section.settings.show_topics -%}
-      <nav class="journal-index__topics" aria-label="{{ 'blogs.article.topics' | t }}">
+    {%- if section.settings.show_topics -%}
+      <details class="journal-index__topics">
+        <summary class="journal-index__topics-trigger">
+          <span>{{ 'blogs.article.topics' | t }}</span>
+          <span class="journal-index__topics-current">
+            {%- if current_tags == blank -%}
+              {{ 'blogs.article.all_topics' | t }}
+            {%- else -%}
+              {% render 'journal-topic', topic: current_tags.first %}
+            {%- endif -%}
+          </span>
+          <span class="journal-index__topics-chevron" aria-hidden="true">⌄</span>
+        </summary>
+        <nav class="journal-index__topics-list" aria-label="{{ 'blogs.article.topics' | t }}">
         <ul role="list">
           <li>
             <a
@@ -47,7 +63,9 @@
               {{- 'blogs.article.all_topics' | t -}}
             </a>
           </li>
-          {%- for tag in blog.all_tags -%}
+          {%- for tag in journal_topics -%}
+            {%- assign tag_key = tag | downcase -%}
+            {%- if tag_key == 'guide' or tag_key == 'sizing' -%}{%- continue -%}{%- endif -%}
             <li>
               <a
                 href="{{ blog.url }}/tagged/{{ tag | handleize }}"
@@ -59,7 +77,8 @@
             </li>
           {%- endfor -%}
         </ul>
-      </nav>
+        </nav>
+      </details>
     {%- endif -%}
 
     {%- paginate blog.articles by per_page -%}

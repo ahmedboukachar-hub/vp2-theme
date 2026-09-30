@@ -5,7 +5,6 @@
       "settings": {
         "show_topic": true,
         "show_image": true,
-        "show_reading_time": true,
         "show_share": false,
         "color_scheme": "scheme-1"
       }

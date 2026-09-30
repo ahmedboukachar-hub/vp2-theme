@@ -427,6 +427,7 @@
       "about_heading": "Scopri la selezione attuale.",
       "about_text": "<p>Pezzi vintage e di seconda mano appena arrivati, ciascuno disponibile in un solo esemplare.</p>",
       "about_button": "Acquista i nuovi arrivi",
+      "about_trust_link": "Come valutiamo ogni pezzo",
       "authenticity_heading": "Comprendere le condizioni",
       "authenticity_text": "<p>Le nostre valutazioni delle condizioni sono un punto di partenza; le fotografie e le note individuali descrivono il pezzo specifico.</p>",
       "authenticity_button": "Leggi la guida alle condizioni"
@@ -478,6 +479,19 @@
       "submit": "Invia i dettagli dell'articolo",
       "success": "Grazie. Abbiamo ricevuto la tua proposta e ti contatteremo se desideriamo approfondire i dettagli del pezzo.",
       "hidden_source": "Tipo di richiesta"
+    },
+    "about_story": {
+      "eyebrow": "Il nostro punto di vista",
+      "heading": "Ritrovate per essere indossate ancora.",
+      "intro": "La Retrouvée riunisce borse firmate vintage e pre-owned, scelte per il design, le condizioni e il carattere unico. Un pezzo può avere una storia e trovare il suo posto nel presente.",
+      "selection_heading": "Scelte una per una",
+      "selection_text": "Un nome celebre non racconta tutta la storia. Osserviamo forma, materiali e dettagli di ogni pezzo prima di inserirlo nella selezione. Ogni borsa è proposta come esemplare unico.",
+      "detail_heading": "Mostrate con chiarezza",
+      "detail_text": "Le foto e la descrizione riguardano proprio la borsa che riceverai. Descriviamo i segni d’uso visibili, indichiamo le misure quando disponibili e rispondiamo alle tue domande.",
+      "next_heading": "Per un nuovo capitolo",
+      "next_text": "La borsa giusta è quella che desideri usare. La nostra selezione riunisce pezzi da indossare, curare e ritrovare.",
+      "curation_link": "Scopri la selezione",
+      "contact_link": "Fai una domanda"
     }
   },
   "sections": {

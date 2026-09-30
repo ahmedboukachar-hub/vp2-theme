@@ -1,17 +1,11 @@
 {{ 'section-main-article.css' | asset_url | stylesheet_tag }}
 
-{%- liquid
-  assign words = article.content | strip_html | split: ' ' | size
-  assign minutes = words | divided_by: 200
-  if minutes < 1
-    assign minutes = 1
-  endif
-  assign topic = article.tags | first
--%}
+{%- assign topic = article.tags | first -%}
 
 <article class="article-page color-{{ section.settings.color_scheme }} gradient" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="vp-width">
+  <div class="vp-width article-page__intro{% if article.image and section.settings.show_image %} article-page__intro--with-media{% endif %}">
     <header class="article-page__header">
+      <meta itemprop="datePublished" content="{{ article.published_at | date: '%Y-%m-%d' }}">
       {%- if topic != blank and section.settings.show_topic -%}
         <a class="vp-eyebrow article-page__topic" href="{{ blog.url }}/tagged/{{ topic | handleize }}">
           {% render 'journal-topic', topic: topic %}
@@ -23,38 +17,23 @@
       {%- if article.excerpt != blank -%}
         <div class="article-page__standfirst rte">{{ article.excerpt }}</div>
       {%- endif -%}
-
-      <p class="article-page__meta">
-        <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}" itemprop="datePublished">
-          {{- article.published_at | time_tag: format: 'date' | strip_html -}}
-        </time>
-        {%- if section.settings.show_reading_time -%}
-          <span aria-hidden="true">·</span>
-          {{ 'blogs.article.min_read' | t: count: minutes }}
-        {%- endif -%}
-      </p>
     </header>
-  </div>
-
-  {%- if article.image and section.settings.show_image -%}
-    <div class="article-page__lead">
-      <div class="vp-width">
-        <div class="article-page__lead-media vp-media vp-media--3x2">
-          {{
-            article.image
-            | image_url: width: 2400
-            | image_tag:
-              loading: 'eager',
-              fetchpriority: 'high',
-              widths: '550, 750, 1100, 1500, 1800, 2200, 2400',
-              sizes: '(min-width: 1440px) 1400px, 100vw',
-              itemprop: 'image',
-              alt: article.image.alt | escape
-          }}
-        </div>
+    {%- if article.image and section.settings.show_image -%}
+      <div class="article-page__lead-media vp-media vp-media--3x2">
+        {{
+          article.image
+          | image_url: width: 1800
+          | image_tag:
+            loading: 'eager',
+            fetchpriority: 'high',
+            widths: '375, 550, 750, 1100, 1400, 1800',
+            sizes: '(min-width: 750px) 42vw, 100vw',
+            itemprop: 'image',
+            alt: article.image.alt | escape
+        }}
       </div>
-    </div>
-  {%- endif -%}
+    {%- endif -%}
+  </div>
 
   <div class="vp-width">
     <div class="article-page__body vp-rte rte" itemprop="articleBody">
@@ -77,13 +56,6 @@
   "settings": [
     { "type": "checkbox", "id": "show_topic", "label": "Show the article topic", "default": true },
     { "type": "checkbox", "id": "show_image", "label": "Show the lead image", "default": true },
-    {
-      "type": "checkbox",
-      "id": "show_reading_time",
-      "label": "Show reading time",
-      "info": "Calculated from the actual article length.",
-      "default": true
-    },
     { "type": "checkbox", "id": "show_share", "label": "Show the share button", "default": false },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
   ]

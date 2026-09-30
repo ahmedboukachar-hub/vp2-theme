@@ -366,6 +366,12 @@
   box-sizing: border-box;
 }
 
+/* Studio images include their own ivory canvas; fill the product card frame. */
+.product-card-wrapper .card__media .media > img[src*='studio-hero'] {
+  object-fit: cover;
+  padding: 0;
+}
+
 .product-card-wrapper.card-wrapper:hover .card .card__media .media.media--hover-effect > img {
   transform: none;
 }

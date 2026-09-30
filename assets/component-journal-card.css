@@ -44,12 +44,6 @@
   overflow: hidden;
 }
 
-.journal-card__meta {
-  margin: 1.2rem 0 0;
-  font-size: 1.3rem;
-  color: rgba(var(--color-foreground), 0.6);
-}
-
 .journal-card__read {
   margin-top: 1.2rem;
   min-height: 0;
@@ -76,7 +70,6 @@
   }
 
   .journal-card--secondary .journal-card__info { padding-top: 0; }
-  .journal-card--secondary .journal-card__meta { margin-top: 0.8rem; }
   .journal-card--secondary .journal-card__read { display: none; }
 }
 

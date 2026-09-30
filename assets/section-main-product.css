@@ -57,6 +57,43 @@ product-info {
   padding-left: 0;
 }
 
+/* The original Marmont detail photos contain a white centre on an ivory canvas.
+   Darken blends only the light background into the matching canvas; the darker
+   leather, stitches, wear and hardware keep their original photographed pixels. */
+.product-media-container:has(
+    .product__media img:is(
+        [src*='marmont-red-rear-gallery-v2'],
+        [src*='marmont-red-base-gallery-v2'],
+        [src*='marmont-red-side-gallery-v2'],
+        [src*='marmont-red-flap-gallery-v2']
+      )
+  ),
+.product-media-modal__content > *:has(
+    img:is(
+        [src*='marmont-red-rear-gallery-v2'],
+        [src*='marmont-red-base-gallery-v2'],
+        [src*='marmont-red-side-gallery-v2'],
+        [src*='marmont-red-flap-gallery-v2']
+      )
+  ) {
+  background: #f8f4eb;
+}
+
+.product-media-container .product__media img:is(
+    [src*='marmont-red-rear-gallery-v2'],
+    [src*='marmont-red-base-gallery-v2'],
+    [src*='marmont-red-side-gallery-v2'],
+    [src*='marmont-red-flap-gallery-v2']
+  ),
+.product-media-modal__content img:is(
+    [src*='marmont-red-rear-gallery-v2'],
+    [src*='marmont-red-base-gallery-v2'],
+    [src*='marmont-red-side-gallery-v2'],
+    [src*='marmont-red-flap-gallery-v2']
+  ) {
+  mix-blend-mode: darken;
+}
+
 @media screen and (min-width: 750px) {
   .product__column-sticky {
     display: block;

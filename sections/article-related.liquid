@@ -2,22 +2,26 @@
 {{ 'section-article-related.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  assign related = '' | split: ''
+  assign related_count = 0
   for other in blog.articles
-    if other.id != article.id and related.size < 3
-      assign related = related | concat: other
+    if other.id != article.id
+      assign related_count = related_count | plus: 1
+      if related_count == 3
+        break
+      endif
     endif
   endfor
 -%}
 
 <div class="article-related color-{{ section.settings.color_scheme }} gradient vp-section">
   <div class="vp-width">
-    {%- if related.size > 0 -%}
+    {%- if related_count > 0 -%}
       <h2 class="vp-heading-section article-related__heading">
         {{- section.settings.heading | escape -}}
       </h2>
       <ul class="article-related__grid" role="list">
-        {%- for other in related -%}
+        {%- for other in blog.articles -%}
+          {%- if other.id == article.id -%}{%- continue -%}{%- endif -%}
           <li>
             {% render 'journal-card',
               article: other,
@@ -26,12 +30,14 @@
               sizes: '(min-width: 990px) 30vw, 100vw'
             %}
           </li>
+          {%- assign displayed_count = displayed_count | plus: 1 -%}
+          {%- if displayed_count == 3 -%}{%- break -%}{%- endif -%}
         {%- endfor -%}
       </ul>
     {%- endif -%}
 
     {%- if section.settings.cta_heading != blank -%}
-      <div class="article-related__cta">
+      <div class="article-related__cta{% if related_count == 0 %} article-related__cta--solo{% endif %}">
         <h2 class="vp-heading-section">{{ section.settings.cta_heading | escape }}</h2>
         {%- if section.settings.cta_text != blank -%}
           <div class="vp-lead rte">{{ section.settings.cta_text }}</div>

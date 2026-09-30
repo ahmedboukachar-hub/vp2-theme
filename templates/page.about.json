@@ -5,17 +5,15 @@
       "settings": {
         "eyebrow": "About",
         "heading": "A considered approach to pieces with a past.",
-        "image": "shopify://shop_images/pexels-shop-window-leather-bags-14806252.jpg",
+        "image": "shopify://shop_images/owner-lv-lockme-knit.jpg",
         "image_ratio": "portrait",
         "color_scheme": "scheme-1"
       }
     },
     "main": {
-      "type": "main-page",
+      "type": "about-story",
       "settings": {
-        "show_title": false,
-        "padding_top": 36,
-        "padding_bottom": 64
+        "color_scheme": "scheme-1"
       }
     },
     "closing": {
@@ -27,6 +25,8 @@
         "text": "<p>Newly added vintage and pre-owned pieces, each available only once.</p>",
         "button_label": "Shop new arrivals",
         "button_link": "shopify://collections/new-arrivals",
+        "link_label": "How we assess each piece",
+        "link_url": "shopify://pages/authenticity",
         "color_scheme": "scheme-2"
       }
     }

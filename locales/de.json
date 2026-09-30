@@ -371,6 +371,7 @@
       "about_heading": "Entdecken Sie die aktuelle Auswahl.",
       "about_text": "<p>Neu hinzugefügte Vintage- und Pre-owned-Stücke, jeweils nur einmal verfügbar.</p>",
       "about_button": "Neuheiten entdecken",
+      "about_trust_link": "So prüfen wir jedes Stück",
       "authenticity_heading": "Zustand verstehen",
       "authenticity_text": "<p>Unsere Zustandsbewertungen sind ein Ausgangspunkt; Fotos und individuelle Hinweise beschreiben das konkrete Stück.</p>",
       "authenticity_button": "Zustandsratgeber lesen"
@@ -478,6 +479,19 @@
       "submit": "Artikeldetails senden",
       "success": "Vielen Dank. Wir haben Ihre Einsendung erhalten und melden uns, wenn wir das Stück näher besprechen möchten.",
       "hidden_source": "Anfragetyp"
+    },
+    "about_story": {
+      "eyebrow": "Unsere Sicht",
+      "heading": "Gefunden, um wieder getragen zu werden.",
+      "intro": "La Retrouvée vereint Vintage- und Pre-owned-Designertaschen, ausgewählt nach Gestaltung, Zustand und eigenem Charakter. Ein Stück kann eine Geschichte haben und dennoch ganz in die Gegenwart passen.",
+      "selection_heading": "Einzeln ausgewählt",
+      "selection_text": "Ein bekannter Name erzählt nie die ganze Geschichte. Wir betrachten Form, Material und Details jedes Stücks, bevor es Teil der Auswahl wird. Jede Tasche wird als einzelnes Stück angeboten.",
+      "detail_heading": "Klar gezeigt",
+      "detail_text": "Die Fotos und die Beschreibung zeigen genau die Tasche, die Sie erhalten. Wir beschreiben sichtbare Gebrauchsspuren, nennen Maße, soweit verfügbar, und beantworten Fragen zu den Details, die Ihnen wichtig sind.",
+      "next_heading": "Für ein neues Kapitel",
+      "next_text": "Die richtige Tasche möchte man tragen. Unsere bewusst zusammengestellte Auswahl umfasst Stücke, die genutzt, gepflegt und wiederentdeckt werden sollen.",
+      "curation_link": "Unsere Auswahl entdecken",
+      "contact_link": "Frage stellen"
     }
   },
   "sections": {

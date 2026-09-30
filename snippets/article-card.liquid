@@ -7,7 +7,6 @@
   - media_aspect_ratio: {String} The setting changes the aspect ratio of the article image, if shown
   - media_height: {String} The setting changes the height of the article image. Overrides media_aspect_ratio.
   - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
-  - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
   - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
   - show_badge: {String} The setting either show the blog badge or not.
   - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
@@ -80,14 +79,11 @@
                 {{ article.title | truncate: 50 | escape }}
               </a>
             </h3>
-            <div class="article-card__info caption-with-letter-spacing h5">
-              {%- if show_date -%}
-                <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
-              {%- endif -%}
-              {%- if show_author -%}
+            {%- if show_author -%}
+              <div class="article-card__info caption-with-letter-spacing h5">
                 <span>{{ article.author }}</span>
-              {%- endif -%}
-            </div>
+              </div>
+            {%- endif -%}
             {%- if show_excerpt -%}
               {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
                 <p class="article-card__excerpt rte-width">
@@ -119,14 +115,11 @@
               {{ article.title | truncate: 50 | escape }}
             </a>
           </h3>
-          <div class="article-card__info caption-with-letter-spacing h5">
-            {%- if show_date -%}
-              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
-            {%- endif -%}
-            {%- if show_author -%}
+          {%- if show_author -%}
+            <div class="article-card__info caption-with-letter-spacing h5">
               <span>{{ article.author }}</span>
-            {%- endif -%}
-          </div>
+            </div>
+          {%- endif -%}
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
               <p class="article-card__excerpt rte-width">

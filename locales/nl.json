@@ -371,6 +371,7 @@
       "about_heading": "Bekijk de huidige selectie.",
       "about_text": "<p>Nieuw toegevoegde vintage en pre-owned stukken, elk slechts één keer beschikbaar.</p>",
       "about_button": "Bekijk de nieuwste tassen",
+      "about_trust_link": "Hoe wij elk stuk beoordelen",
       "authenticity_heading": "Conditie begrijpen",
       "authenticity_text": "<p>Onze conditiegradaties zijn een startpunt; de foto’s en individuele notities beschrijven het exacte stuk.</p>",
       "authenticity_button": "Lees de conditiegids"
@@ -478,6 +479,19 @@
       "submit": "Verstuur itemgegevens",
       "success": "Bedankt. We hebben je inzending ontvangen en nemen contact op als we het stuk verder willen bespreken.",
       "hidden_source": "Aanvraagtype"
+    },
+    "about_story": {
+      "eyebrow": "Onze visie",
+      "heading": "Gevonden om opnieuw te dragen.",
+      "intro": "La Retrouvée brengt vintage en pre-owned designertassen samen, geselecteerd op ontwerp, conditie en eigen karakter. Een tas kan een verleden hebben en toch helemaal bij het heden passen. Beide krijgen hier de ruimte.",
+      "selection_heading": "Stuk voor stuk gekozen",
+      "selection_text": "Een bekende naam vertelt nooit het hele verhaal. We kijken naar de vorm, materialen en details voordat een tas in de selectie komt. Elk exemplaar wordt als een uniek stuk aangeboden.",
+      "detail_heading": "Eerlijk in beeld",
+      "detail_text": "De foto’s en beschrijving horen bij precies de tas die je ontvangt. We beschrijven zichtbare gebruikssporen, vermelden afmetingen waar beschikbaar en beantwoorden graag vragen over details die voor jou belangrijk zijn.",
+      "next_heading": "Voor een volgend hoofdstuk",
+      "next_text": "De juiste tas wil je blijven dragen. Onze collectie is bewust samengesteld uit stukken die het verdienen om gebruikt, verzorgd en opnieuw gevonden te worden.",
+      "curation_link": "Ontdek onze selectie",
+      "contact_link": "Stel ons een vraag"
     }
   },
   "sections": {
