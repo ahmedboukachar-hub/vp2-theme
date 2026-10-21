@@ -44,7 +44,7 @@ not delete them before redirects exist.
 | --- | --- | --- | --- |
 | 33 | Louis Vuitton Neverfull guide (`louis-vuitton-neverfull-guide`) | **live** 2026-10-21, EN + nl/de/fr/it/es | sizes table, 2013 update, vachetta wear list, date codes; sources cited; links LV collection, size guide, condition guide, Speedy guide, LV overview |
 | 34 | Dior Saddle guide (`dior-saddle-guide`) | **live** 2026-10-21, EN + nl/de/fr/it/es | 2000 original vs 2018 revival vs pouches table, Oblique, triple-zip pouch, wear list; sources cited; links Dior collection, condition guide, Find a Bag |
-| — | Alma, Pochette Accessoires, Saumur, Looping and GG Marmont guides | **live** (added 27 Sep by Codex) | **gap:** only a partial NL translation (title/body/summary), no DE/FR/IT/ES and no meta title/description in any language. Needs a translation pass before the language strategy is met. |
+| — | Alma, Pochette Accessoires, Saumur, Looping and GG Marmont guides | **live** (added 27 Sep by Codex); translation pass completed 2026-10-21 | Now EN + nl/de/fr/it/es for title, body, summary, meta title and meta description. The de/fr/it/es bodies follow the English structure and links one to one; the existing NL title/body/summary were kept and only NL meta data was added. |
 
 ## Tier 2 (briefs only — do not generate thin content to reach a count)
 
