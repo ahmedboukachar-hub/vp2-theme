@@ -14,7 +14,7 @@
   assign spec_keys = 'designer,model,product_type,year_or_era,condition,material,color,dimensions,serial_or_date_code,inclusions' | split: ','
   assign note_keys = 'condition_notes,provenance,authentication_notes' | split: ','
   assign specifications_heading = block.settings.heading
-  if specifications_heading == 'Details & condition'
+  if specifications_heading == blank
     assign specifications_heading = 'products.product.details_heading' | t
   endif
 -%}

@@ -1943,6 +1943,13 @@
               "options__3": {
                 "label": "Uppercase"
               }
+            },
+            "bags_collection": {
+              "label": "Bags collection for the designer link",
+              "info": "The designer name links to this collection filtered by the designer tag. Leave empty to link to Shopify's vendor page."
+            },
+            "accessories_collection": {
+              "label": "Accessories collection for the designer link"
             }
           }
         },

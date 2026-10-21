@@ -123,8 +123,8 @@
                   >
                     {%- if block.settings.text == product.vendor and product.vendor != blank -%}
                       {%- assign designer_tag = product.vendor | handleize | prepend: 'designer-' -%}
-                      {%- assign designer_collection = collections['all-bags'] -%}
-                      {%- if product.tags contains 'accessory' -%}{%- assign designer_collection = collections['accessories'] -%}{%- endif -%}
+                      {%- assign designer_collection = block.settings.bags_collection -%}
+                      {%- if product.tags contains 'accessory' and block.settings.accessories_collection != blank -%}{%- assign designer_collection = block.settings.accessories_collection -%}{%- endif -%}
                       {%- if product.tags contains designer_tag and designer_collection != blank -%}
                         <a class="product__designer-link" href="{{ designer_collection.url }}/{{ designer_tag }}">{{ product.vendor | escape }}</a>
                       {%- else -%}{{ product.vendor | link_to_vendor }}{%- endif -%}
@@ -524,7 +524,7 @@
                   {% liquid
                     assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                     assign share_label = block.settings.share_label
-                    if share_label == 'Share'
+                    if share_label == blank
                       assign share_label = 'products.product.share' | t
                     endif
                     render 'share-button', block: block, share_link: share_url, share_label: share_label, section_id: section.id
@@ -921,6 +921,17 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "collection",
+          "id": "bags_collection",
+          "label": "t:sections.main-product.blocks.text.settings.bags_collection.label",
+          "info": "t:sections.main-product.blocks.text.settings.bags_collection.info"
+        },
+        {
+          "type": "collection",
+          "id": "accessories_collection",
+          "label": "t:sections.main-product.blocks.text.settings.accessories_collection.label"
         }
       ]
     },

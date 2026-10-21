@@ -1638,6 +1638,13 @@
               "options__3": {
                 "label": "Großbuchstaben"
               }
+            },
+            "bags_collection": {
+              "label": "Taschenkollektion für den Designer-Link",
+              "info": "Der Designername verlinkt auf diese Kollektion, gefiltert nach dem Designer-Tag. Leer lassen, um auf die Shopify-Herstellerseite zu verlinken."
+            },
+            "accessories_collection": {
+              "label": "Accessoire-Kollektion für den Designer-Link"
             }
           }
         },

@@ -1639,6 +1639,13 @@
               "options__3": {
                 "label": "Mayúscula"
               }
+            },
+            "bags_collection": {
+              "label": "Colección de bolsos para el enlace de la firma",
+              "info": "El nombre de la firma enlaza a esta colección filtrada por la etiqueta de la firma. Déjalo vacío para enlazar a la página de proveedor de Shopify."
+            },
+            "accessories_collection": {
+              "label": "Colección de accesorios para el enlace de la firma"
             }
           }
         },
