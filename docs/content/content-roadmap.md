@@ -38,6 +38,14 @@ register the NL text as a translation on the EN article, add DE/FR
 translations, then unpublish the separate NL articles with redirects. Do
 not delete them before redirects exist.
 
+## Added since the roadmap was written
+
+| # | Article | Status | Notes |
+| --- | --- | --- | --- |
+| 33 | Louis Vuitton Neverfull guide (`louis-vuitton-neverfull-guide`) | **live** 2026-10-21, EN + nl/de/fr/it/es | sizes table, 2013 update, vachetta wear list, date codes; sources cited; links LV collection, size guide, condition guide, Speedy guide, LV overview |
+| 34 | Dior Saddle guide (`dior-saddle-guide`) | **live** 2026-10-21, EN + nl/de/fr/it/es | 2000 original vs 2018 revival vs pouches table, Oblique, triple-zip pouch, wear list; sources cited; links Dior collection, condition guide, Find a Bag |
+| — | Alma, Pochette Accessoires, Saumur, Looping and GG Marmont guides | **live** (added 27 Sep by Codex) | **gap:** only a partial NL translation (title/body/summary), no DE/FR/IT/ES and no meta title/description in any language. Needs a translation pass before the language strategy is met. |
+
 ## Tier 2 (briefs only — do not generate thin content to reach a count)
 
 13. Looping PM vs Looping GM · 14. Alma 30 guide · 15. Pochette
