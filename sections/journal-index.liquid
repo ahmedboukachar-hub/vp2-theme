@@ -8,21 +8,6 @@
   assign journal_heading = section.settings.heading | default: blog.title
   assign journal_intro = section.settings.intro
   assign journal_topics = blog.all_tags
-  if journal_topics == blank
-    assign journal_topics = 'buying-guides,bag-care,gucci,louis-vuitton' | split: ','
-  endif
-
-  if request.locale.iso_code != 'en'
-    if journal_eyebrow == 'The Journal'
-      assign journal_eyebrow = 'blogs.article.index_eyebrow' | t
-    endif
-    if journal_heading == 'Icons, details and the stories they carry.'
-      assign journal_heading = 'blogs.article.index_heading' | t
-    endif
-    if journal_intro contains 'Explore the design history'
-      assign journal_intro = 'blogs.article.index_intro' | t
-    endif
-  endif
 -%}
 
 <div class="journal-index color-{{ section.settings.color_scheme }} gradient">

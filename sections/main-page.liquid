@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="vp-width section-{{ section.id }}-padding{% if page.handle == 'our-curation' %} main-page--principles{% endif %}">
+<div class="vp-width section-{{ section.id }}-padding{% if section.settings.principles_layout %} main-page--principles{% endif %}">
   {%- if section.settings.show_title -%}
     <h1 class="main-page-title page-title vp-heading-display{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ page.title | escape }}
@@ -37,6 +37,13 @@
       "label": "Show the page title",
       "info": "Turn this off when a Page hero section above already provides the H1.",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "principles_layout",
+      "label": "Two-column principles layout",
+      "info": "Places each H2 beside its paragraph on desktop. Used by the Our Curation page.",
+      "default": false
     },
     {
       "type": "header",

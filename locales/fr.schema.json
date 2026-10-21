@@ -1638,6 +1638,13 @@
               "options__3": {
                 "label": "Majuscule"
               }
+            },
+            "bags_collection": {
+              "label": "Collection de sacs pour le lien créateur",
+              "info": "Le nom du créateur renvoie vers cette collection filtrée par l’étiquette du créateur. Laisser vide pour renvoyer vers la page fournisseur de Shopify."
+            },
+            "accessories_collection": {
+              "label": "Collection d’accessoires pour le lien créateur"
             }
           }
         },

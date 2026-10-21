@@ -1639,6 +1639,13 @@
               "options__3": {
                 "label": "Maiuscolo"
               }
+            },
+            "bags_collection": {
+              "label": "Collezione di borse per il link del designer",
+              "info": "Il nome del designer rimanda a questa collezione filtrata per il tag del designer. Lascia vuoto per rimandare alla pagina fornitore di Shopify."
+            },
+            "accessories_collection": {
+              "label": "Collezione di accessori per il link del designer"
             }
           }
         },

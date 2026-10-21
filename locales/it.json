@@ -78,11 +78,7 @@
       "requires_js": "Per visualizzare i pezzi salvati nella lista dei desideri è necessario JavaScript."
     },
     "footer": {
-      "non_affiliation": "{{ shop_name }} è un rivenditore indipendente e non è affiliato alle maison presenti su questo sito. Tutti i marchi appartengono ai rispettivi titolari.",
-      "group_shop": "Acquista",
-      "group_discover": "Scopri",
-      "group_services": "Servizi",
-      "group_customer_care": "Servizio clienti"
+      "non_affiliation": "{{ shop_name }} è un rivenditore indipendente e non è affiliato alle maison presenti su questo sito. Tutti i marchi appartengono ai rispettivi titolari."
     }
   },
   "newsletter": {
@@ -144,9 +140,6 @@
       "topics": "Argomenti",
       "all_topics": "Tutti gli articoli",
       "empty": "Non ci sono ancora articoli.",
-      "index_eyebrow": "Il Journal",
-      "index_heading": "Icone, dettagli e le storie che custodiscono.",
-      "index_intro": "Scopri la storia del design, i dettagli pratici e il carattere delle borse che collezioniamo, cerchiamo e ammiriamo.",
       "topic_buying_guides": "Guide all'acquisto",
       "topic_bag_care": "Cura e condizioni",
       "topic_designer_stories": "Storie delle maison",
@@ -416,21 +409,6 @@
       "body": "Il pezzo o la pagina potrebbero essere stati spostati. Scopri gli ultimi arrivi, esplora l'archivio o cerca per maison e modello.",
       "cta_new_arrivals": "Acquista i nuovi arrivi",
       "cta_archive": "Esplora l'archivio"
-    },
-    "page_hero": {
-      "about_eyebrow": "Chi siamo",
-      "about_heading": "Una scelta attenta di pezzi con un passato.",
-      "authenticity_eyebrow": "Il nostro approccio",
-      "authenticity_heading": "Ogni pezzo merita uno sguardo più attento."
-    },
-    "page_cta": {
-      "about_heading": "Scopri la selezione attuale.",
-      "about_text": "<p>Pezzi vintage e di seconda mano appena arrivati, ciascuno disponibile in un solo esemplare.</p>",
-      "about_button": "Acquista i nuovi arrivi",
-      "about_trust_link": "Come valutiamo ogni pezzo",
-      "authenticity_heading": "Comprendere le condizioni",
-      "authenticity_text": "<p>Le nostre valutazioni delle condizioni sono un punto di partenza; le fotografie e le note individuali descrivono il pezzo specifico.</p>",
-      "authenticity_button": "Leggi la guida alle condizioni"
     },
     "find_a_bag": {
       "fields": {

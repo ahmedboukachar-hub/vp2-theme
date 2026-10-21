@@ -1639,6 +1639,13 @@
               "options__3": {
                 "label": "Hoofdletters"
               }
+            },
+            "bags_collection": {
+              "label": "Tassencollectie voor de designerlink",
+              "info": "De designernaam linkt naar deze collectie, gefilterd op de designertag. Laat leeg om naar de vendorpagina van Shopify te linken."
+            },
+            "accessories_collection": {
+              "label": "Accessoirecollectie voor de designerlink"
             }
           }
         },

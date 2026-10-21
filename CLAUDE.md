@@ -63,6 +63,13 @@ Shopify GitHub-sync pitfalls (verified on this store):
 - The sync-back commit prefixes JSON files with a `/* … */` comment header. Strip it before parsing; do not remove it by hand.
 - `themeCreate`, `themeFilesUpsert` and `themePublish` return ACCESS_DENIED for the connected app, and REST asset writes to a git-connected theme return 404. Theme code reaches the store only through a merge to `main`.
 
+Translating section copy (headings, eyebrows, intros, button labels in JSON templates and section groups):
+
+- Use Shopify's native theme-content translations: register values per locale with `translationsRegister` on the `ONLINE_STORE_THEME_JSON_TEMPLATE` / `ONLINE_STORE_THEME_SECTION_GROUP` resources (keys look like `section.page.about.json.hero.heading:<digest>`). Liquid then simply outputs `section.settings.heading` and receives the translated value. See `docs/translations.md`.
+- Never translate in Liquid by comparing a setting value with its English default (`if heading == 'About' … | t`) or by branching on `request.locale`. A Theme Editor edit silently disables such a translation and `en-GB` breaks the check.
+- When an English setting value changes, its translation digest changes and the translations must be re-registered; verify the live page in at least NL after merging copy changes.
+- Collection handles, page handles and tags do not belong in Liquid. Use a section or block setting (`collection`, `page`, checkbox) and set it in the template; the only hardcoded identifiers are the catalogue tags documented in `docs/taxonomy.md` (`bag`, `accessory`, `available`, `sold-archive`, `new-arrival`, `designer-*`).
+
 ## Technical quality
 
 Every future change must:

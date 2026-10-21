@@ -78,11 +78,7 @@
       "requires_js": "La lista de deseos necesita JavaScript para mostrar las piezas guardadas."
     },
     "footer": {
-      "non_affiliation": "{{ shop_name }} es un revendedor independiente y no está afiliado a las firmas que aparecen en este sitio web. Todas las marcas pertenecen a sus respectivos titulares.",
-      "group_shop": "Comprar",
-      "group_discover": "Descubrir",
-      "group_services": "Servicios",
-      "group_customer_care": "Atención al cliente"
+      "non_affiliation": "{{ shop_name }} es un revendedor independiente y no está afiliado a las firmas que aparecen en este sitio web. Todas las marcas pertenecen a sus respectivos titulares."
     }
   },
   "newsletter": {
@@ -144,9 +140,6 @@
       "topics": "Temas",
       "all_topics": "Todos los artículos",
       "empty": "Todavía no hay artículos.",
-      "index_eyebrow": "El Journal",
-      "index_heading": "Iconos, detalles y las historias que guardan.",
-      "index_intro": "Descubre la historia del diseño, los detalles prácticos y el carácter de los bolsos que coleccionamos, buscamos y admiramos.",
       "topic_buying_guides": "Guías de compra",
       "topic_bag_care": "Cuidado y estado",
       "topic_designer_stories": "Historias de las firmas",
@@ -416,21 +409,6 @@
       "body": "Es posible que la pieza o la página haya cambiado de ubicación. Descubre las últimas novedades, explora el archivo o busca por firma y modelo.",
       "cta_new_arrivals": "Comprar novedades",
       "cta_archive": "Explorar el archivo"
-    },
-    "page_hero": {
-      "about_eyebrow": "Sobre nosotros",
-      "about_heading": "Una selección cuidada de piezas con historia.",
-      "authenticity_eyebrow": "Nuestro enfoque",
-      "authenticity_heading": "Cada pieza merece una mirada más atenta."
-    },
-    "page_cta": {
-      "about_heading": "Descubre la selección actual.",
-      "about_text": "<p>Piezas vintage y de segunda mano recién incorporadas, cada una disponible en un único ejemplar.</p>",
-      "about_button": "Comprar novedades",
-      "about_trust_link": "Cómo evaluamos cada pieza",
-      "authenticity_heading": "Comprender el estado",
-      "authenticity_text": "<p>Nuestras categorías de estado son un punto de partida; las fotografías y las notas individuales describen la pieza concreta.</p>",
-      "authenticity_button": "Leer la guía de estado"
     },
     "find_a_bag": {
       "fields": {
