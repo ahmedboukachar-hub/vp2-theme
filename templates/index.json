@@ -39,7 +39,7 @@
         "show_view_all": true,
         "view_all_style": "outline",
         "color_scheme": "scheme-1",
-        "image_ratio": "portrait",
+        "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
