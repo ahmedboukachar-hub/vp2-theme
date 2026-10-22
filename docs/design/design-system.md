@@ -214,3 +214,12 @@ Superseded: the "Colour roles and distribution" table above (scheme-4 as
 "editorial interruption + footer") and the "Current state (2026-09-26)" note
 that scheme-4 was unused. This section is authoritative.
 
+### Houses section hierarchy (2026-10-22)
+
+Owner decision: Louis Vuitton and Gucci are the core of the catalogue, so the
+homepage houses section shows them as two large cards and Dior and Jacquemus
+as two small cards side by side beneath them. Implemented as a block setting
+`size` (large = two grid tracks, small = one) on `featured-designers`; the
+Designers page keeps four large cards. An `image_position` block setting
+chooses which part of a portrait-cropped image to keep.
+

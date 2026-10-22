@@ -30,9 +30,17 @@
             endif
             assign designer_name = block.settings.title | default: designer_collection.title
           -%}
-          <li class="featured-designers__item" {{ block.shopify_attributes }}>
+          {%- liquid
+            assign card_size = block.settings.size | default: 'large'
+            assign card_sizes = '(min-width: 990px) 46vw, 100vw'
+            if card_size == 'small'
+              assign card_sizes = '(min-width: 990px) 22vw, 50vw'
+            endif
+            assign focus = block.settings.image_position | default: 'center'
+          -%}
+          <li class="featured-designers__item featured-designers__item--{{ card_size }}" {{ block.shopify_attributes }}>
             <a class="featured-designers__link" href="{{ designer_collection.url }}">
-              <div class="featured-designers__media vp-media vp-media--4x5 vp-media--zoom">
+              <div class="featured-designers__media vp-media vp-media--4x5 vp-media--zoom" style="--vp-media-position: center {{ focus }};">
                 {%- if designer_collection.featured_image != blank -%}
                   {{
                     designer_collection.featured_image
@@ -40,7 +48,7 @@
                     | image_tag:
                       loading: 'lazy',
                       widths: '400, 600, 800, 1100, 1400, 1600',
-                      sizes: '(min-width: 990px) 46vw, 100vw',
+                      sizes: card_sizes,
                       alt: designer_collection.featured_image.alt | default: designer_name
                   }}
                 {%- endif -%}
@@ -73,15 +81,15 @@
       "id": "columns_desktop",
       "label": "Cards per row on desktop",
       "options": [
-        { "value": "2", "label": "2 — large editorial cards" },
-        { "value": "3", "label": "3" }
+        { "value": "2", "label": "2 large cards per row (small cards: 4 per row)" },
+        { "value": "3", "label": "3 large cards per row (small cards: 6 per row)" }
       ],
       "default": "2"
     },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
     {
       "type": "paragraph",
-      "content": "Only designers with a linked, existing collection are shown. Use your own collection imagery (recommended ratio 4:5) — no brand logos."
+      "content": "Only designers with a linked, existing collection are shown. Use your own collection imagery (cropped to 4:5) — no brand logos. Mark secondary houses as small cards; two small cards share one large card's width."
     }
   ],
   "blocks": [
@@ -90,7 +98,29 @@
       "name": "Designer",
       "settings": [
         { "type": "collection", "id": "collection", "label": "Collection" },
-        { "type": "text", "id": "title", "label": "Name override" }
+        { "type": "text", "id": "title", "label": "Name override" },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Card size",
+          "options": [
+            { "value": "large", "label": "Large" },
+            { "value": "small", "label": "Small (half width, two side by side)" }
+          ],
+          "default": "large"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image focus",
+          "info": "Which part of the image to keep when it is cropped to 4:5.",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "center", "label": "Centre" },
+            { "value": "bottom", "label": "Bottom" }
+          ],
+          "default": "center"
+        }
       ]
     }
   ],

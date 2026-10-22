@@ -51,8 +51,9 @@
   border-bottom-color: rgba(var(--color-foreground), 0.3);
 }
 
+/* Lead stories carry portrait bag photographs: a square keeps the piece in frame. */
 .journal-card--lead .journal-card__media {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1 / 1;
 }
 
 .journal-card__link:hover .journal-card__read,
@@ -94,7 +95,7 @@
   }
 }
 
-/* Grid cards keep one consistent landscape ratio across the Journal index. */
-.journal-card--grid .journal-card__media { aspect-ratio: 3 / 2; }
+/* Grid cards keep one consistent portrait ratio across the Journal index. */
+.journal-card--grid .journal-card__media { aspect-ratio: 4 / 5; }
 
 .journal-card__media.vp-media > img { position: absolute; inset: 0; }
