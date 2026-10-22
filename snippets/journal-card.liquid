@@ -26,7 +26,7 @@
 <article class="journal-card journal-card--{{ variant }}">
   <a class="journal-card__link" href="{{ article.url }}">
     {%- if article.image -%}
-      <div class="journal-card__media vp-media vp-media--zoom{% if variant == 'lead' %} vp-media--3x2{% else %} vp-media--1x1{% endif %}">
+      <div class="journal-card__media vp-media vp-media--zoom{% if variant == 'lead' %} vp-media--1x1{% elsif variant == 'grid' %} vp-media--4x5{% else %} vp-media--1x1{% endif %}">
         {{
           article.image
           | image_url: width: 1600

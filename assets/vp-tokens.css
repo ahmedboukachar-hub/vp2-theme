@@ -283,6 +283,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: var(--vp-media-position, center center);
 }
 
 .vp-media--4x5 { aspect-ratio: 4 / 5; }

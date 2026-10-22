@@ -134,3 +134,23 @@ collection; it shows a single product, not a storefront or shop sign, and is
 used only as a collection banner, never as product photography. Revisit when
 owned photography of a Dior piece exists.
 
+## Batch 7 — collection imagery and cropping review (2026-10-22)
+
+The collection images had drifted from this register: Louis Vuitton showed
+the LV shopping bag with flowers and Gucci the rejected books flat-lay. Reset:
+
+| Collection | Image | Note |
+| --- | --- | --- |
+| Louis Vuitton | owner-lv-speedy-warm-light.jpg | per batch 4; portrait, piece centred, fits 4:5 |
+| Gucci | owner-gucci-halfmoon-coat.jpg | per batch 4; landscape, piece centred, the 4:5 crop keeps bag and hands |
+| Dior | owner-dior-vibe-bowling-white.jpg | batch 6 |
+| Jacquemus | owner-jacquemus-bambino-black-crop.jpg | **new:** 4:5 crop of the owner's own product photograph of the black Le Grand Bambino (VP-B004) on its dust bag; strap and tag visible at the bottom. Interim until an editorial Jacquemus photograph exists; replace recommended |
+
+Cropping rules applied in the theme on the same day: every card and hero
+box uses `object-fit: cover` with an optional per-block focus (top / centre /
+bottom) through `--vp-media-position`; house cards are 4:5, Journal lead
+stories 1:1 and Journal grid cards 4:5 because the article images are
+portrait bag photographs; the editorial section is square on mobile; the
+collection banner box is taller (32rem mobile, 36rem desktop); the About
+hero is set to landscape to match its image.
+

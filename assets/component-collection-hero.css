@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 749px) {
   .collection-hero__image-container {
-    height: 20rem;
+    height: 32rem;
   }
 }
 
@@ -93,6 +93,6 @@
     align-self: stretch;
     flex: 1 0 50%;
     margin-left: 3rem;
-    min-height: 20rem;
+    min-height: 36rem;
   }
 }
