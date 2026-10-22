@@ -248,7 +248,6 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "taxes_included": "Taxes included.",
-      "margin_scheme": "Sold under the margin scheme for second-hand goods; VAT is not shown separately.",
       "duties_included": "Duties included.",
       "duties_and_taxes_included": "Duties and taxes included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Free shipping</a>.",

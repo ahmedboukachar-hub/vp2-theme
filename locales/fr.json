@@ -250,7 +250,6 @@
         "price_at_each_html": "à {{ price }}/pièce"
       },
       "taxes_included": "Taxes incluses.",
-      "margin_scheme": "Vendu sous le régime de la marge pour les biens d’occasion ; la TVA n’est pas indiquée séparément.",
       "duties_included": "Frais de douane inclus.",
       "duties_and_taxes_included": "Frais de douane et taxes inclus.",
       "test_label": "Produit test — fiche fictive",
