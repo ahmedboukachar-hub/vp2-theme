@@ -225,6 +225,7 @@
       },
       "product_variants": "Varianti di prodotto",
       "taxes_included": "Imposte incluse.",
+      "margin_scheme": "Venduto in regime del margine per beni usati; l’IVA non è indicata separatamente.",
       "duties_included": "Dazi inclusi.",
       "duties_and_taxes_included": "Dazi e imposte inclusi.",
       "specifications": {

@@ -43,6 +43,7 @@ Internal only (namespace `internal`, no storefront access):
 | `bag` | General product marker (reserved for future automation) |
 | `new-arrival` | Feeds the New Arrivals smart collection; remove after ±30 days |
 | `vp2-test-data` | Marks fictional test products for later deletion |
+| `btw` / `marge` | VAT scheme of the piece, from the owner's bookkeeping: `btw` = sold with VAT (variant taxable), `marge` = margin scheme for second-hand goods (variant not taxable, no VAT shown). Mirrors `custom.vat_scheme` (`standard` / `margin`), which drives the product-page note and must drive the invoice text. |
 
 Do not use tags for facts that belong in metafields.
 

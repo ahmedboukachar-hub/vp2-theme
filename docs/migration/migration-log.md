@@ -167,3 +167,11 @@ they are the owner's own records and rank above the public endpoints.
 Catalogue after this delta: 26 migrated products (25 published, VP-A002 draft);
 14 available bags + 1 accessory; 11 archived pieces.
 
+### VAT classification (2026-10-22)
+
+From the owner's bookkeeping sheet: `custom.vat_scheme` + tag set on 18
+products (11 `standard`/`btw`, 7 `margin`/`marge`); variant `taxable` set
+accordingly. Eight products are not in the sheet and remain unclassified
+(see `docs/launch-readiness.md` item 8). The sheet itself contains purchase
+prices and is deliberately not stored in this repository.
+
