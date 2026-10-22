@@ -2,7 +2,9 @@
   "current": "Dawn",
   "presets": {
     "Dawn": {
-      "logo_width": 90,
+      "logo": "shopify://shop_images/la-retrouvee-02_compact_header_logo-transparent.png",
+      "logo_width": 220,
+      "favicon": "shopify://shop_images/la-retrouvee-04_favicon-transparent.png",
       "customer_account_menu": "customer-account-main-menu",
       "color_schemes": {
         "scheme-1": {
