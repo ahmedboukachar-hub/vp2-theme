@@ -147,3 +147,23 @@ The Dior collection received an owner-supplied banner
 added to the Designers page as a fourth house (`templates/page.designers.json`,
 two columns).
 
+---
+
+## Delta 2026-10-22 — owner catalogue files
+
+The owner supplied two exports of the old store (`owner-catalogue-20261022/`:
+a Shopify product CSV and an Excel overview with sheets Beschikbaar, Verkocht,
+Cadeaubonnen, Foto's). Both were reconciled against the development store;
+they are the owner's own records and rank above the public endpoints.
+
+| Finding | Action |
+| --- | --- |
+| `gucci-gg-canvas-hobo-schouder-tas` (Gucci GG Canvas Princy Hobo, €520, available, 9 images, published on the old store 2026-10-18) was not in the development store | imported as **VP-B023 `gucci-gg-canvas-princy-hobo`**, ACTIVE + Online Store, tags `bag designer-gucci available new-arrival` + migration tags, `custom.inclusions` = dust bag (source), translations nl/de/fr/it/es, 9 owner photographs |
+| Alma 30 (VP-B002), Neverfull MM (VP-B020) and Speedy 30 №2 (VP-B009) are listed under Verkocht and as draft with inventory 0 in the CSV, but were still available here | moved to `sold-archive`, inventory 0, note appended to `internal.migration_note` |
+| All other availability states and prices match | none |
+| The files carry no VAT/margin-scheme information (every row `Variant Taxable = TRUE`) | the VAT/margin classification is still open; see the owner's list when it arrives |
+| Gift cards (sheet Cadeaubonnen, 4 items) | still not migrated; business decision pending as before |
+
+Catalogue after this delta: 26 migrated products (25 published, VP-A002 draft);
+14 available bags + 1 accessory; 11 archived pieces.
+
