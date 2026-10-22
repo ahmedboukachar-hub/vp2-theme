@@ -673,3 +673,22 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+
+/* La Retrouvée — consistent square product tiles, including mobile. */
+.product-card-wrapper .card__inner.ratio,
+.product-card-wrapper .card__inner {
+  --ratio-percent: 100% !important;
+}
+.product-card-wrapper .card__media {
+  margin: 0;
+  width: 100%;
+  background: #f6f2ec;
+}
+.product-card-wrapper .card__media .media > img {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
