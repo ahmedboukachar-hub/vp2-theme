@@ -22,7 +22,7 @@
     "name": {{ product.title | json }},
     "url": {{ product_url | json }},
     {%- if product.description != blank %}
-    "description": {{ product.description | strip_html | strip_newlines | truncate: 5000 | json }},
+    "description": {{ product.description | replace: '</p>', ' </p>' | replace: '</li>', ' </li>' | replace: '</h2>', ' </h2>' | replace: '</h3>', ' </h3>' | replace: '<br', ' <br' | strip_html | strip_newlines | strip | truncate: 5000 | json }},
     {%- endif %}
     "image": [
       {%- for media in product.media -%}
