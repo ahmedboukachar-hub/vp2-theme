@@ -328,7 +328,7 @@
       "reset": "Réinitialiser",
       "sort_button": "Trier",
       "sort_by_label": "Trier par :",
-      "to": "Destination",
+      "to": "À",
       "clear_filter": "Supprimer le filtre",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtres sélectionnés)",
       "show_more": "Afficher plus",
@@ -460,7 +460,7 @@
         "preferred_contact": "Mode de contact préféré",
         "message": "Autre chose sur la pièce ?"
       },
-      "serial": "Informations sur le code série ou date (facultatif)",
+      "serial": "Code de série ou date (facultatif)",
       "serial_hint": "Ne partagez pas ici un code série ou date complet. Indiquez seulement s’il est présent ; nous demanderons les détails de manière sécurisée si nécessaire.",
       "disclaimer": "N’envoyez aucun article avant que les instructions d’expédition aient été convenues avec nous par écrit.",
       "submit": "Envoyer les détails de l’article",

@@ -64,6 +64,12 @@
   padding-inline: var(--vp-gutter);
 }
 
+/* Dawn's narrow container (forms, FAQ, wishlist) keeps its reading width;
+   the wider canvas above must not stretch it edge to edge on desktop. */
+@media screen and (min-width: 990px) {
+  .page-width.page-width--narrow { max-width: 72.6rem; }
+}
+
 /* --------------------------------------------------------------------------
    Typographic scale — more confident than Dawn's defaults
    -------------------------------------------------------------------------- */
@@ -201,7 +207,10 @@
   max-width: var(--vp-measure-article);
   font-size: var(--vp-type-body);
   line-height: 1.7;
+  overflow-wrap: break-word;
 }
+
+.vp-rte a { overflow-wrap: anywhere; }
 
 .vp-rte > * + * { margin-top: 1.6rem; }
 
@@ -263,9 +272,36 @@
 
 .vp-rte th { font-weight: 600; }
 
+/* Content tables (articles, guides): natural column widths and light rules
+   instead of Dawn's fixed, boxed grid. Wide tables scroll inside their own
+   container on small screens instead of widening the page. */
+.vp-rte table:not([class]) {
+  table-layout: auto;
+  border-style: none;
+  box-shadow: none;
+}
+
+.vp-rte table:not([class]) th,
+.vp-rte table:not([class]) td {
+  padding: 1.2rem 1.6rem 1.2rem 0;
+  border: 0;
+  border-bottom: var(--vp-border);
+}
+
 .vp-table-scroll {
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.vp-table-scroll:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.3rem;
+}
+
+@media screen and (max-width: 749px) {
+  .vp-table-scroll table:not([class]) th,
+  .vp-table-scroll table:not([class]) td { min-width: 13rem; }
 }
 
 /* --------------------------------------------------------------------------
@@ -358,6 +394,43 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
 .mobile-facets__open { font-size: 1.5rem; }
 
 .search-popular { margin-top: 1.6rem; }
+
+/* The popular-search row gets its own line under the field. Dawn's modal
+   is a single centred flex row, which squeezed the input on phones. */
+.search-modal:has(.search-popular) {
+  bottom: auto;
+  height: auto;
+}
+
+.search-modal__content:has(.search-popular) {
+  flex-wrap: wrap;
+  align-content: center;
+  height: auto;
+  min-height: 100%;
+  padding-top: 1.2rem;
+  padding-bottom: 1.6rem;
+}
+
+.search-modal__content .search-modal__form { order: 0; }
+.search-modal__content .search-modal__close-button { order: 1; }
+
+.search-modal__content .search-popular {
+  order: 2;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 989px) {
+  .search-modal__content:has(.search-popular) .search-modal__close-button { top: 1.2rem; }
+}
+
+@media screen and (min-width: 990px) {
+  .search-modal__content .search-popular {
+    flex-basis: 74.2rem;
+    max-width: 74.2rem;
+    margin-right: 4.9rem;
+  }
+}
 
 .search-popular__label {
   display: block;

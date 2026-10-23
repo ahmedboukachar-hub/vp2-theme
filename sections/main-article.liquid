@@ -37,7 +37,7 @@
 
   <div class="vp-width">
     <div class="article-page__body vp-rte rte" itemprop="articleBody">
-      {{ article.content }}
+      {{ article.content | replace: '<table', '<div class="vp-table-scroll" tabindex="0"><table' | replace: '</table>', '</table></div>' }}
     </div>
 
     {%- if section.settings.show_share -%}

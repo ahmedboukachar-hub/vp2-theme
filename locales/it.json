@@ -451,7 +451,7 @@
         "preferred_contact": "Metodo di contatto preferito",
         "message": "Altre informazioni sul pezzo?"
       },
-      "serial": "Informazioni sul numero di serie o codice data (facoltativo)",
+      "serial": "Seriale o codice data (facoltativo)",
       "serial_hint": "Non condividere qui il numero di serie o il codice data completo. Indica soltanto se è presente; se necessario, ti chiederemo i dettagli tramite un canale sicuro.",
       "disclaimer": "Non inviare un articolo finché non avremo concordato per iscritto le istruzioni di spedizione.",
       "submit": "Invia i dettagli dell'articolo",

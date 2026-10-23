@@ -319,7 +319,7 @@
       "reset": "Restablecer",
       "sort_button": "Ordenar",
       "sort_by_label": "Ordenar por:",
-      "to": "Para",
+      "to": "Hasta",
       "clear_filter": "Eliminar filtro",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtros seleccionados)",
       "show_more": "Mostrar más",
@@ -451,7 +451,7 @@
         "preferred_contact": "Medio de contacto preferido",
         "message": "¿Algo más sobre la pieza?"
       },
-      "serial": "Información sobre el número de serie o código de fecha (opcional)",
+      "serial": "Código de serie o fecha (opcional)",
       "serial_hint": "No compartas aquí el número de serie ni el código de fecha completo. Indica solo si existe; te pediremos los detalles por un canal seguro si es necesario.",
       "disclaimer": "No envíes ningún artículo hasta que hayamos acordado por escrito las instrucciones de envío.",
       "submit": "Enviar los detalles del artículo",

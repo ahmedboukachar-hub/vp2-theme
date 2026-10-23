@@ -21,7 +21,7 @@
     </h1>
   {%- endif -%}
   <div class="vp-rte rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    {{ page.content }}
+    {{ page.content | replace: '<table', '<div class="vp-table-scroll" tabindex="0"><table' | replace: '</table>', '</table></div>' }}
   </div>
 </div>
 

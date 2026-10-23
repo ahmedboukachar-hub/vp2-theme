@@ -142,6 +142,8 @@
   color: rgba(var(--color-foreground), 0.7);
 }
 
+.footer__copyright { font-size: inherit; }
+
 .footer__policies {
   display: flex;
   flex-wrap: wrap;

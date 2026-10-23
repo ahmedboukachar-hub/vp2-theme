@@ -451,7 +451,7 @@
         "preferred_contact": "Preferred contact method",
         "message": "Anything else about the piece?"
       },
-      "serial": "Serial or date-code information (optional)",
+      "serial": "Serial or date code (optional)",
       "serial_hint": "Please do not share a complete serial or date code here. Mention only whether one is present; we will ask for details securely if needed.",
       "disclaimer": "Do not send an item until shipping instructions have been agreed with us in writing.",
       "submit": "Submit item details",
