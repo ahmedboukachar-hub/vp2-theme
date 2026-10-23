@@ -75,6 +75,7 @@
       "name": "Slider"
     },
     "wishlist": {
+      "removed_notice": "{{ title }} has been removed from your wishlist.",
       "link_label": "Wishlist",
       "add": "Save to wishlist",
       "remove": "Remove from wishlist",
@@ -87,6 +88,7 @@
       "requires_js": "Your wishlist needs JavaScript to display saved pieces."
     },
     "footer": {
+      "navigation_label": "Footer navigation",
       "non_affiliation": "{{ shop_name }} is an independent reseller and is not affiliated with the designer houses featured on this website. All trademarks remain the property of their respective owners."
     }
   },
@@ -96,6 +98,10 @@
     "button_label": "Subscribe"
   },
   "accessibility": {
+    "heading_articles": "Articles",
+    "heading_houses": "Houses",
+    "heading_collections": "All collections",
+    "heading_pieces": "Pieces",
     "skip_to_text": "Skip to content",
     "skip_to_product_info": "Skip to product information",
     "close": "Close",
@@ -124,7 +130,7 @@
   },
   "blogs": {
     "article": {
-      "blog": "Blog",
+      "blog": "Journal",
       "read_more_title": "Read more: {{ title }}",
       "comments": {
         "one": "{{ count }} comment",

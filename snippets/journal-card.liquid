@@ -28,10 +28,11 @@
 {%- liquid
   assign img_loading = loading | default: 'lazy'
   assign img_priority = fetchpriority | default: 'auto'
+  assign card_title_id = 'JournalCard-' | append: article.id | append: '-' | append: variant
 -%}
 
 <article class="journal-card journal-card--{{ variant }}">
-  <a class="journal-card__link" href="{{ article.url }}">
+  <a class="journal-card__link" href="{{ article.url }}" aria-labelledby="{{ card_title_id }}">
     {%- if article.image -%}
       <div class="journal-card__media vp-media vp-media--zoom{% if variant == 'lead' %} vp-media--1x1{% elsif variant == 'grid' %} vp-media--4x5{% else %} vp-media--1x1{% endif %}">
         {{
@@ -42,7 +43,7 @@
             fetchpriority: img_priority,
             widths: '300, 450, 600, 900, 1200, 1600',
             sizes: sizes | default: '(min-width: 990px) 45vw, 100vw',
-            alt: article.image.alt | escape
+            alt: ''
         }}
       </div>
     {%- endif -%}
@@ -52,7 +53,7 @@
         <span class="vp-eyebrow journal-card__topic">{% render 'journal-topic', topic: topic %}</span>
       {%- endif -%}
 
-      <h3 class="{{ heading_class }}">{{ article.title | escape }}</h3>
+      <h3 class="{{ heading_class }}" id="{{ card_title_id }}">{{ article.title | escape }}</h3>
 
       {%- if show_excerpt != false and article.excerpt_or_content != blank -%}
         <p class="journal-card__excerpt">
@@ -60,7 +61,7 @@
         </p>
       {%- endif -%}
 
-      <span class="vp-link vp-link--arrow journal-card__read">{{ 'blogs.article.read_article' | t }}</span>
+      <span class="vp-link vp-link--arrow journal-card__read" aria-hidden="true">{{ 'blogs.article.read_article' | t }}</span>
     </div>
   </a>
 </article>

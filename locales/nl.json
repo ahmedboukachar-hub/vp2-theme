@@ -75,6 +75,7 @@
       "name": "Schuifregelaar"
     },
     "wishlist": {
+      "removed_notice": "{{ title }} is uit je verlanglijst verwijderd.",
       "link_label": "Verlanglijst",
       "add": "Bewaar in je verlanglijst",
       "remove": "Verwijder uit je verlanglijst",
@@ -87,6 +88,7 @@
       "requires_js": "Je verlanglijst heeft JavaScript nodig om bewaarde stukken te tonen."
     },
     "footer": {
+      "navigation_label": "Navigatie in de footer",
       "non_affiliation": "{{ shop_name }} is een onafhankelijke wederverkoper en is niet verbonden aan de designerhuizen op deze website. Alle merknamen blijven eigendom van hun respectievelijke eigenaren."
     }
   },
@@ -96,6 +98,10 @@
     "button_label": "Abonneren"
   },
   "accessibility": {
+    "heading_articles": "Artikelen",
+    "heading_houses": "Modehuizen",
+    "heading_collections": "Alle collecties",
+    "heading_pieces": "Stukken",
     "skip_to_text": "Meteen naar de content",
     "close": "Sluiten",
     "unit_price_separator": "per",
@@ -124,7 +130,7 @@
   },
   "blogs": {
     "article": {
-      "blog": "Blog",
+      "blog": "Journal",
       "read_more_title": "Lees verder: {{ title }}",
       "comments": {
         "one": "{{ count }} reactie",
@@ -201,14 +207,14 @@
         "refresh": "Vernieuwen"
       },
       "media": {
-        "open_media": "Media {{ index }} openen in modaal",
+        "open_media": "Afbeelding {{ index }} vergroten",
         "play_model": "3D-viewer afspelen",
         "play_video": "Video afspelen",
-        "gallery_viewer": "Gallery-weergave",
-        "load_image": "Afbeelding {{ index }} laden in gallery-weergave",
-        "load_model": "3D-model {{ index }} laden in gallery-weergave",
-        "load_video": "Video {{ index }} afspelen in gallery-weergave",
-        "image_available": "Afbeelding {{ index }} is nu beschikbaar in gallery-weergave",
+        "gallery_viewer": "Galerijweergave",
+        "load_image": "Afbeelding {{ index }} laden in galerijweergave",
+        "load_model": "3D-model {{ index }} laden in galerijweergave",
+        "load_video": "Video {{ index }} afspelen in galerijweergave",
+        "image_available": "Afbeelding {{ index }} is nu beschikbaar in galerijweergave",
         "photography_pending": "Fotografie volgt"
       },
       "nested_label": "{{ title }} voor {{ parent_title }}",

@@ -66,6 +66,7 @@
       "home": "Inicio"
     },
     "wishlist": {
+      "removed_notice": "{{ title }} se ha eliminado de la lista de deseos.",
       "link_label": "Lista de deseos",
       "add": "Guardar en la lista de deseos",
       "remove": "Eliminar de la lista de deseos",
@@ -78,6 +79,7 @@
       "requires_js": "La lista de deseos necesita JavaScript para mostrar las piezas guardadas."
     },
     "footer": {
+      "navigation_label": "Navegación del pie de página",
       "non_affiliation": "{{ shop_name }} es un revendedor independiente y no está afiliado a las firmas que aparecen en este sitio web. Todas las marcas pertenecen a sus respectivos titulares."
     }
   },
@@ -87,6 +89,10 @@
     "button_label": "Suscribirse"
   },
   "accessibility": {
+    "heading_articles": "Artículos",
+    "heading_houses": "Casas",
+    "heading_collections": "Todas las colecciones",
+    "heading_pieces": "Piezas",
     "skip_to_text": "Ir directamente al contenido",
     "close": "Cerrar",
     "unit_price_separator": "por",
@@ -115,7 +121,7 @@
   },
   "blogs": {
     "article": {
-      "blog": "Blog",
+      "blog": "Journal",
       "read_more_title": "Más información: {{ title }}",
       "comments": {
         "one": "{{ count }} comentario",

@@ -149,6 +149,9 @@
               class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
             >
               <div class="loading-overlay gradient"></div>
+              {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
+                <h2 class="visually-hidden">{{ 'accessibility.heading_pieces' | t }}</h2>
+              {%- endunless -%}
               <ul
                 id="product-grid"
                 data-id="{{ section.id }}"
@@ -161,7 +164,7 @@
                 {% assign skip_card_product_styles = false %}
                 {%- for product in collection.products -%}
                   {% assign lazy_load = false %}
-                  {%- if forloop.index > 2 -%}
+                  {%- if forloop.index > section.settings.columns_desktop -%}
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
                   <li

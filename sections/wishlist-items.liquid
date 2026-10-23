@@ -33,9 +33,12 @@
     class="wishlist-items no-js-hidden"
     data-root-url="{{ routes.root_url }}"
     data-money-format="{{ shop.money_format | escape }}"
+    data-remove-label="{{ 'general.wishlist.remove' | t | escape }}"
+    data-removed-notice="{{ 'general.wishlist.removed_notice' | t: title: '[title]' | escape }}"
   >
+    <p class="visually-hidden" role="status" data-wishlist-status></p>
     <div class="wishlist-items__empty" data-wishlist-empty hidden>
-      <h2 class="h3">{{ 'general.wishlist.empty_heading' | t }}</h2>
+      <h2 class="h3" tabindex="-1" data-wishlist-empty-heading>{{ 'general.wishlist.empty_heading' | t }}</h2>
       <p>{{ 'general.wishlist.empty_body' | t }}</p>
       <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button">{{ 'general.wishlist.empty_cta' | t }}</a>
     </div>

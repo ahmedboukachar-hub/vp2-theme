@@ -114,6 +114,22 @@
             if (this.grid) this.grid.innerHTML = '';
             return;
           }
+          // Removing a piece only drops its card, so focus and scroll position stay put.
+          if (this.grid && this.grid.children.length) {
+            var handles = items.map(function (item) {
+              return item.handle;
+            });
+            Array.prototype.slice.call(this.grid.querySelectorAll('[data-wishlist-card]')).forEach(function (card) {
+              if (handles.indexOf(card.dataset.handle) === -1) card.remove();
+            });
+            var rendered = Array.prototype.slice.call(this.grid.querySelectorAll('[data-wishlist-card]')).map(function (card) {
+              return card.dataset.handle;
+            });
+            var missing = items.some(function (item) {
+              return rendered.indexOf(item.handle) === -1;
+            });
+            if (!missing) return;
+          }
           this.renderItems(items.slice(0, 50));
         }
 
@@ -153,7 +169,11 @@
           var unavailable = fragment.querySelector('[data-wishlist-unavailable]');
           var remove = fragment.querySelector('[data-wishlist-remove]');
 
-          title.textContent = product ? product.title : saved.title || saved.handle;
+          var element = this;
+          var titleText = product ? product.title : saved.title || saved.handle;
+          card.dataset.handle = saved.handle;
+          title.textContent = titleText;
+          if (this.dataset.removeLabel) remove.setAttribute('aria-label', this.dataset.removeLabel + ': ' + titleText);
           if (product) {
             link.href = product.url;
             price.textContent = formatMoney(product.price, this.dataset.moneyFormat);
@@ -162,7 +182,7 @@
               if (product.featured_image.indexOf('?') === -1) {
                 image.src = product.featured_image + '?width=600';
               }
-              image.alt = product.title;
+              image.alt = '';
             } else {
               image.remove();
             }
@@ -175,11 +195,17 @@
           }
 
           remove.addEventListener('click', function () {
+            var currentCard = remove.closest('[data-wishlist-card]');
+            var next = currentCard && (currentCard.nextElementSibling || currentCard.previousElementSibling);
+            var focusTarget = next ? next.querySelector('a[href], button') : element.querySelector('[data-wishlist-empty-heading]');
             writeItems(
               readItems().filter(function (item) {
                 return item.handle !== saved.handle;
               })
             );
+            var status = element.querySelector('[data-wishlist-status]');
+            if (status && element.dataset.removedNotice) status.textContent = element.dataset.removedNotice.replace('[title]', titleText);
+            if (focusTarget) focusTarget.focus();
           });
           return fragment;
         }

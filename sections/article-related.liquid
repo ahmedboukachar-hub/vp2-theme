@@ -20,6 +20,7 @@
         {{- section.settings.heading | escape -}}
       </h2>
       <ul class="article-related__grid" role="list">
+        {%- assign displayed_count = 0 -%}
         {%- for other in blog.articles -%}
           {%- if other.id == article.id -%}{%- continue -%}{%- endif -%}
           <li>

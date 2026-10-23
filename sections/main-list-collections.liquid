@@ -24,6 +24,7 @@
     endif
   -%}
   {%- paginate collections by paginate_by -%}
+    <h2 class="visually-hidden">{{ 'accessibility.heading_collections' | t }}</h2>
     <ul
       class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
       role="list"

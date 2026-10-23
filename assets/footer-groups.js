@@ -16,8 +16,24 @@
   function sync(event) {
     groups.forEach((group) => {
       group.open = event.matches;
+      const summary = group.querySelector('summary');
+      if (!summary) return;
+      // On wide screens the columns are static: keep the titles out of the tab order.
+      if (event.matches) {
+        summary.setAttribute('tabindex', '-1');
+      } else {
+        summary.removeAttribute('tabindex');
+      }
     });
   }
+
+  groups.forEach((group) => {
+    const summary = group.querySelector('summary');
+    if (!summary) return;
+    summary.addEventListener('click', (event) => {
+      if (wide.matches) event.preventDefault();
+    });
+  });
 
   sync(wide);
   wide.addEventListener('change', sync);
