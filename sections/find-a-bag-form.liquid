@@ -84,7 +84,10 @@
             aria-describedby="FindABag-email-error"
           {% endif %}
         >
-        <label for="FindABag-email" class="field__label">{{ 'templates.find_a_bag.fields.email' | t }}</label>
+        <label for="FindABag-email" class="field__label">
+          {{- 'templates.find_a_bag.fields.email' | t }}
+          <span aria-hidden="true">*</span></label
+        >
         {%- if form.errors contains 'email' -%}
           <small id="FindABag-email-error" class="contact__field-error">
             {{ form.errors.translated_fields.email | capitalize }}
@@ -107,7 +110,7 @@
           {%- assign field_label_key = 'templates.find_a_bag.fields.' | append: field_key -%}
           {%- assign field_label = field_label_key | t -%}
           <div class="field">
-            <input type="text" id="FindABag-{{ field_key }}" name="contact[{{ field_label }}]" class="field__input" placeholder="{{ field_label }}">
+            <input type="text" id="FindABag-{{ field_key }}" name="contact[{{ field_label }}]" class="field__input"{% if field_key == 'country' %} autocomplete="country-name"{% endif %} placeholder="{{ field_label }}">
             <label for="FindABag-{{ field_key }}" class="field__label">{{ field_label }}</label>
           </div>
         {%- endfor -%}
@@ -117,7 +120,8 @@
         <label for="FindABag-notes" class="form__label field__label">{{ 'templates.find_a_bag.fields.notes' | t }}</label>
       </div>
 
-      <p class="find-a-bag__consent">{{ 'templates.find_a_bag.consent' | t }}</p>
+      {%- assign consent_text = 'templates.find_a_bag.consent' | t -%}
+      {% render 'form-privacy-note', text: consent_text, class: 'find-a-bag__consent' %}
       <button type="submit" class="button">{{ 'templates.find_a_bag.submit' | t }}</button>
     {%- endif -%}
   {%- endform -%}

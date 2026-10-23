@@ -2,8 +2,8 @@
   Privacy-friendly "Recently viewed" (browser-local, no tracking, no external
   requests). Storage: localStorage key 'recently-viewed-items' — [handle,...],
   newest first, max 8 stored, max 4 shown. Product data is fetched lazily via
-  the shop's own /products/<handle>.js endpoints when the section nears the
-  viewport. See docs/wishlist-and-recently-viewed.md.
+  the shop's own /products/<handle>.js endpoints once the page has loaded
+  (idle time). See docs/wishlist-and-recently-viewed.md.
 */
 (function () {
   'use strict';
@@ -53,24 +53,35 @@
             return;
           }
 
-          if ('IntersectionObserver' in window) {
-            var element = this;
-            this.observer = new IntersectionObserver(
-              function (entries) {
-                if (entries[0].isIntersecting) {
-                  element.observer.disconnect();
+          // The element stays hidden until it has cards, so it cannot be
+          // observed for intersection. Load once the page itself has finished
+          // loading, in idle time: the section sits above the footer, so it
+          // is almost always unhidden off-screen.
+          var element = this;
+          var start = function () {
+            if ('requestIdleCallback' in window) {
+              window.requestIdleCallback(
+                function () {
                   element.load();
-                }
-              },
-              { rootMargin: '200px' }
-            );
-            this.observer.observe(this);
+                },
+                { timeout: 2000 }
+              );
+            } else {
+              window.setTimeout(function () {
+                element.load();
+              }, 1500);
+            }
+          };
+          if (document.readyState === 'complete') {
+            start();
           } else {
-            this.load();
+            window.addEventListener('load', start, { once: true });
           }
         }
 
         load() {
+          if (this.loadStarted || !this.isConnected) return;
+          this.loadStarted = true;
           var element = this;
           Promise.all(
             this.handles.map(function (handle) {

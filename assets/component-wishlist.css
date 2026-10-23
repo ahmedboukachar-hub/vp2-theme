@@ -40,8 +40,16 @@
 }
 
 .card-wrapper .wishlist-button__toggle {
+  position: relative;
   background-color: rgba(var(--color-background), 0.85);
   border-radius: 50%;
+}
+
+/* 44px tap target around the 36px disc, without enlarging the disc. */
+.card-wrapper .wishlist-button__toggle::after {
+  content: '';
+  position: absolute;
+  inset: -0.4rem;
 }
 
 /* Wishlist page */
@@ -77,6 +85,13 @@
   border-radius: 0.2rem;
 }
 
+/* Placeholder card (image not requested yet): reserve the image box so the
+   grid does not grow when the product data arrives. */
+.wishlist-card__media:has(img:not([src])) {
+  display: block;
+  aspect-ratio: 4 / 5;
+}
+
 .wishlist-card__title {
   margin: 1rem 0 0.3rem;
   font-weight: var(--font-body-weight);
@@ -93,6 +108,10 @@
   letter-spacing: 0.06rem;
   text-transform: uppercase;
   opacity: 0.7;
+}
+
+.wishlist-card__unavailable[hidden] {
+  display: none;
 }
 
 .wishlist-card--unavailable .wishlist-card__title {

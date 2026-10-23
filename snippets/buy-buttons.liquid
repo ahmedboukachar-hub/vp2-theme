@@ -114,12 +114,20 @@
     </div>
   {%- endif -%}
 
-  {%- if show_pickup_availability -%}
+  {%- liquid
+    assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true
+    assign render_pickup_availability = show_pickup_availability
+    comment
+      A single-variant product cannot switch to a variant with pickup, so the
+      pickup block, its stylesheet and its script are skipped when that one
+      variant has no pickup location.
+    endcomment
+    if product.variants.size == 1 and pick_up_availabilities.size == 0
+      assign render_pickup_availability = false
+    endif
+  -%}
+  {%- if render_pickup_availability -%}
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
-
-    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
-      | where: 'pick_up_enabled', true
-    -%}
 
     <pickup-availability
       class="product__pickup-availabilities quick-add-hidden"

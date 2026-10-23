@@ -17,7 +17,7 @@
       "home": "Accueil"
     },
     "password_page": {
-      "login_form_heading": "Accéder à la boutique à l'aide d'un mot de passe :",
+      "login_form_heading": "Accéder à la boutique à l’aide d’un mot de passe :",
       "login_password_button": "Saisir avec un mot de passe",
       "login_form_password_label": "Mot de passe",
       "login_form_password_placeholder": "Votre mot de passe",
@@ -25,8 +25,7 @@
       "login_form_submit": "Saisir",
       "eyebrow": "Une nouvelle destination pour le luxe vintage",
       "hero_heading": "Des pièces rares, choisies avec attention.",
-      "hero_body": "Nous préparons une sélection de sacs de créateurs vintage et pre-owned, choisis pour leur caractère, leur état et leur allure durable.",
-      "newsletter_note": "Des nouvelles occasionnelles sur les nouvelles pièces. Pas de promotions constantes.",
+      "hero_body": "Nous préparons une sélection de sacs de créateurs vintage et de seconde main, choisis pour leur caractère, leur état et leur allure durable.",
       "admin_link_html": "La boutique vous appartient-elle ? <a href=\"/admin\" class=\"link underlined-link\">Se connecter ici</a>",
       "powered_by_shopify_html": "Cette boutique sera propulsée par {{ shopify }}"
     },
@@ -92,13 +91,18 @@
     },
     "footer": {
       "navigation_label": "Navigation du pied de page",
-      "non_affiliation": "{{ shop_name }} est un revendeur indépendant et n'est affilié à aucune des maisons de créateurs présentées sur ce site. Toutes les marques restent la propriété de leurs détenteurs respectifs."
+      "non_affiliation": "{{ shop_name }} est un revendeur indépendant et n’est affilié à aucune des maisons de créateurs présentées sur ce site. Toutes les marques restent la propriété de leurs détenteurs respectifs."
+    },
+    "forms": {
+      "privacy_note": "Nous utilisons ces informations pour vous répondre.",
+      "privacy_link": "Politique de confidentialité"
     }
   },
   "newsletter": {
-    "label": "E-mail",
-    "success": "Merci de votre inscription",
-    "button_label": "S'inscrire"
+    "label": "Adresse e-mail",
+    "success": "Merci. Vous êtes sur la liste.",
+    "button_label": "S’inscrire",
+    "privacy_note": "Des e-mails occasionnels sur les nouvelles pièces. Vous pouvez vous désinscrire à tout moment."
   },
   "accessibility": {
     "heading_articles": "Articles",
@@ -110,9 +114,9 @@
     "unit_price_separator": "par",
     "vendor": "Fournisseur :",
     "error": "Erreur",
-    "refresh_page": "Le choix d'une sélection entraîne l'actualisation de la page entière.",
+    "refresh_page": "Le choix d’une sélection entraîne l’actualisation de la page entière.",
     "link_messages": {
-      "new_window": "S'ouvre dans une nouvelle fenêtre.",
+      "new_window": "S’ouvre dans une nouvelle fenêtre.",
       "external": "Ouvre un site web externe."
     },
     "loading": "Chargement en cours...",
@@ -140,7 +144,7 @@
         "other": "{{ count }} commentaires",
         "many": "{{ count }} commentaires"
       },
-      "moderated": "Veuillez noter que les commentaires doivent être approuvés avant d'être publiés.",
+      "moderated": "Veuillez noter que les commentaires doivent être approuvés avant d’être publiés.",
       "comment_form_title": "Laisser un commentaire",
       "name": "Nom",
       "email": "E-mail",
@@ -154,10 +158,10 @@
         "one": "{{ count }} min de lecture",
         "other": "{{ count }} min de lecture"
       },
-      "read_article": "Lire l'article",
+      "read_article": "Lire l’article",
       "topics": "Thèmes",
       "all_topics": "Tous les articles",
-      "empty": "Il n'y a pas encore d'articles ici.",
+      "empty": "Il n’y a pas encore d’articles ici.",
       "topic_buying_guides": "Guides d’achat",
       "topic_bag_care": "Entretien & état",
       "topic_designer_stories": "Histoires de créateurs",
@@ -196,15 +200,16 @@
       },
       "share": "Partager ce produit",
       "details_heading": "Détails & état",
+      "details_only_heading": "Détails",
       "sold_out": "Épuisé",
       "unavailable": "Non disponible(s)",
       "vendor": "Fournisseur",
       "video_exit_message": "{{ title }} ouvre la vidéo en plein écran dans la même fenêtre.",
       "xr_button": "Afficher dans son espace",
-      "xr_button_label": "Affichage dans votre espace, charge l'article dans une fenêtre de réalité augmentée",
+      "xr_button_label": "Affichage dans votre espace, charge l’article dans une fenêtre de réalité augmentée",
       "pickup_availability": {
         "view_store_info": "Afficher les informations de la boutique",
-        "check_other_stores": "Vérifier la disponibilité dans d'autres boutiques",
+        "check_other_stores": "Vérifier la disponibilité dans d’autres boutiques",
         "pick_up_available": "Service de retrait disponible",
         "pick_up_available_at_html": "Service de retrait disponible à <span class=\"color-foreground\">{{ location_name }}</span>",
         "pick_up_unavailable_at_html": "Service de retrait non disponible actuellement à <span class=\"color-foreground\">{{ location_name }}</span>",
@@ -216,10 +221,10 @@
         "play_model": "Lire la visionneuse 3D",
         "play_video": "Lire la vidéo",
         "gallery_viewer": "Visionneuse de la galerie",
-        "load_image": "Charger l'image {{ index }} dans la galerie",
+        "load_image": "Charger l’image {{ index }} dans la galerie",
         "load_model": "Charger le modèle 3D {{ index }} dans la galerie",
         "load_video": "Lire la vidéo {{ index }} dans la galerie",
-        "image_available": "L'image {{ index }} est maintenant disponible dans la galerie",
+        "image_available": "L’image {{ index }} est maintenant disponible dans la galerie",
         "photography_pending": "Photographies à venir"
       },
       "nested_label": "{{ title }} pour {{ parent_title }}",
@@ -386,7 +391,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l'orthographe ou utilisez un autre mot ou une autre expression.",
+      "no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l’orthographe ou utilisez un autre mot ou une autre expression.",
       "results_with_count": {
         "one": "{{ count }} résultat",
         "other": "{{ count }} résultats",
@@ -431,9 +436,9 @@
         "name": "Nom",
         "email": "E-mail",
         "phone": "Numéro de téléphone",
-        "comment": "Commentaire",
-        "send": "Envoyer",
-        "post_success": "Merci de nous avoir contactés. Nous vous répondrons dès que possible.",
+        "comment": "Message",
+        "send": "Envoyer le message",
+        "post_success": "Merci. Nous avons bien reçu votre message et vous répondrons personnellement.",
         "error_heading": "Veuillez ajuster les éléments suivants :",
         "title": "Formulaire de contact"
       }
@@ -461,7 +466,7 @@
         "maximum_budget": "Budget maximum",
         "currency": "Devise",
         "flexible_details": "Quels détails sont flexibles ?",
-        "reference_link": "Lien de référence (facultatif)",
+        "reference_link": "Lien de référence",
         "notes": "Autre chose à nous signaler ?"
       },
       "consent": "Nous utiliserons ces informations pour répondre à votre demande. Ceci ne constitue ni une réservation ni un contrat d’achat.",
@@ -487,7 +492,7 @@
         "preferred_contact": "Mode de contact préféré",
         "message": "Autre chose sur la pièce ?"
       },
-      "serial": "Code de série ou date (facultatif)",
+      "serial": "Code de série ou date",
       "serial_hint": "Ne partagez pas ici un code série ou date complet. Indiquez seulement s’il est présent ; nous demanderons les détails de manière sécurisée si nécessaire.",
       "disclaimer": "N’envoyez aucun article avant que les instructions d’expédition aient été convenues avec nous par écrit.",
       "submit": "Envoyer les détails de l’article",
@@ -632,13 +637,13 @@
     },
     "drop_signup": {
       "heading": "Soyez informé des nouvelles pièces en premier",
-      "body": "Recevez des nouvelles occasionnelles lorsque de nouveaux sacs rejoignent la sélection. Pas de promotions incessantes.",
+      "body": "Recevez des nouvelles occasionnelles lorsque de nouveaux sacs rejoignent la sélection.",
       "email_placeholder": "Adresse e-mail",
-      "submit": "Rejoindre la liste",
+      "submit": "S’inscrire",
       "success": "Merci. Vous êtes sur la liste."
     },
     "featured_designers": {
-      "explore": "Découvrir {{ designer }}"
+      "explore": "Voir la collection"
     }
   },
   "localization": {
@@ -663,13 +668,13 @@
       "password": "Mot de passe",
       "password_confirm": "Confirmer le mot de passe",
       "submit": "Activer le compte",
-      "cancel": "Décliner l'invitation"
+      "cancel": "Décliner l’invitation"
     },
     "addresses": {
       "title": "Adresses",
       "default": "Par défaut",
       "add_new": "Ajouter une nouvelle adresse",
-      "edit_address": "Modifier l'adresse",
+      "edit_address": "Modifier l’adresse",
       "first_name": "Prénom",
       "last_name": "Nom de famille",
       "company": "Entreprise",
@@ -681,8 +686,8 @@
       "zip": "Code postal",
       "phone": "Téléphone",
       "set_default": "Définir comme adresse par défaut",
-      "add": "Ajouter l'adresse",
-      "update": "Mettre à jour l'adresse",
+      "add": "Ajouter l’adresse",
+      "update": "Mettre à jour l’adresse",
       "cancel": "Annuler",
       "edit": "Modifier",
       "delete": "Supprimer",
@@ -696,7 +701,7 @@
       "email": "E-mail",
       "forgot_password": "Mot de passe oublié ?",
       "guest_continue": "Continuer",
-      "guest_title": "Continuer en tant qu'invité(e)",
+      "guest_title": "Continuer en tant qu’invité(e)",
       "password": "Mot de passe",
       "title": "Connexion",
       "sign_in": "Connexion",
@@ -711,7 +716,7 @@
       "payment_status": "Statut des paiements",
       "fulfillment_status": "Statut du traitement de la commande",
       "total": "Total",
-      "none": "Vous n'avez encore passé aucune commande."
+      "none": "Vous n’avez encore passé aucune commande."
     },
     "recover_password": {
       "title": "Réinitialiser son mot de passe",
@@ -740,7 +745,7 @@
       "cancelled_reason": "Motif : {{ reason }}",
       "billing_address": "Adresse de facturation",
       "payment_status": "Statut de paiement",
-      "shipping_address": "Adresse d'expédition",
+      "shipping_address": "Adresse d’expédition",
       "fulfillment_status": "Statut du traitement de la commande",
       "discount": "Réduction",
       "shipping": "Expédition",
@@ -751,7 +756,7 @@
       "quantity": "Quantité",
       "total": "Total",
       "fulfilled_at_html": "Traitée le {{ date }}",
-      "track_shipment": "Suivre l'envoi",
+      "track_shipment": "Suivre l’envoi",
       "tracking_url": "Lien de suivi",
       "tracking_company": "Transporteur",
       "tracking_number": "Numéro de suivi",
@@ -762,7 +767,7 @@
   },
   "gift_cards": {
     "issued": {
-      "title": "Voici le solde de votre carte‑cadeau {{ shop }} d'une valeur de {{ value }} !",
+      "title": "Voici le solde de votre carte‑cadeau {{ shop }} d’une valeur de {{ value }} !",
       "subtext": "Votre carte-cadeau",
       "gift_card_code": "Code de la carte-cadeau",
       "shop_link": "Visiter la boutique en ligne",

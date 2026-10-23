@@ -26,7 +26,6 @@
       "eyebrow": "A new destination for vintage luxury",
       "hero_heading": "Rare pieces, considered slowly.",
       "hero_body": "We are preparing a curated edit of vintage and pre-owned designer bags, chosen for character, condition and enduring appeal.",
-      "newsletter_note": "Occasional notes about new pieces. No constant promotions.",
       "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
@@ -93,12 +92,17 @@
     "footer": {
       "navigation_label": "Footer navigation",
       "non_affiliation": "{{ shop_name }} is an independent reseller and is not affiliated with the designer houses featured on this website. All trademarks remain the property of their respective owners."
+    },
+    "forms": {
+      "privacy_note": "We use these details to reply to you.",
+      "privacy_link": "Privacy policy"
     }
   },
   "newsletter": {
-    "label": "Email",
-    "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "label": "Email address",
+    "success": "Thank you. You are on the list.",
+    "button_label": "Subscribe",
+    "privacy_note": "Occasional emails about new pieces. Unsubscribe at any time."
   },
   "accessibility": {
     "heading_articles": "Articles",
@@ -188,7 +192,7 @@
         "condition": "Condition",
         "condition_notes": "Condition notes",
         "material": "Material",
-        "color": "Color",
+        "color": "Colour",
         "dimensions": "Dimensions",
         "inclusions": "Includes",
         "serial_or_date_code": "Serial / date code",
@@ -247,6 +251,7 @@
       },
       "share": "Share this product",
       "details_heading": "Details & condition",
+      "details_only_heading": "Details",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
@@ -369,7 +374,7 @@
       "grey": "Grey",
       "tote_bag": "Tote bag",
       "shoulder_strap": "Shoulder strap",
-      "bag_organizer": "Bag organizer",
+      "bag_organizer": "Bag organiser",
       "gg_shoulder_bag": "GG Shoulder Bag",
       "dior_oblique_canvas": "Dior Oblique canvas",
       "unbranded": "Unbranded",
@@ -423,9 +428,9 @@
         "name": "Name",
         "email": "Email",
         "phone": "Phone number",
-        "comment": "Comment",
-        "send": "Send",
-        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "comment": "Message",
+        "send": "Send message",
+        "post_success": "Thank you. We have received your message and will reply personally.",
         "error_heading": "Please adjust the following:"
       }
     },
@@ -452,7 +457,7 @@
         "maximum_budget": "Maximum budget",
         "currency": "Currency",
         "flexible_details": "Which details are flexible?",
-        "reference_link": "Reference link (optional)",
+        "reference_link": "Reference link",
         "notes": "Anything else we should know?"
       },
       "consent": "We will use these details to respond to your request. This is not a reservation or purchase agreement.",
@@ -478,7 +483,7 @@
         "preferred_contact": "Preferred contact method",
         "message": "Anything else about the piece?"
       },
-      "serial": "Serial or date code (optional)",
+      "serial": "Serial or date code",
       "serial_hint": "Please do not share a complete serial or date code here. Mention only whether one is present; we will ask for details securely if needed.",
       "disclaimer": "Do not send an item until shipping instructions have been agreed with us in writing.",
       "submit": "Submit item details",
@@ -620,13 +625,13 @@
     },
     "drop_signup": {
       "heading": "Hear about new pieces first",
-      "body": "Receive occasional updates when newly curated bags arrive. No constant promotions.",
+      "body": "Receive occasional updates when newly curated bags arrive.",
       "email_placeholder": "Email address",
-      "submit": "Join the list",
+      "submit": "Subscribe",
       "success": "Thank you. You are on the list."
     },
     "featured_designers": {
-      "explore": "Explore {{ designer }}"
+      "explore": "View the collection"
     }
   },
   "localization": {

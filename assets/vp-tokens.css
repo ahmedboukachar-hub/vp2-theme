@@ -361,6 +361,12 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
   overflow: hidden;
 }
 
+/* On the two-column grids a one-line name would otherwise lift its card's
+   meta line and price above its neighbour's, so both lines are reserved. */
+@media screen and (max-width: 989px) {
+  .card > .card__content .card__heading { min-height: calc(2 * 1.3em); }
+}
+
 .card__meta-line {
   margin-top: 0.4rem;
   font-size: 1.3rem;

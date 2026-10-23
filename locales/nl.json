@@ -26,7 +26,6 @@
       "eyebrow": "Een nieuwe bestemming voor vintage luxury",
       "hero_heading": "Zeldzame stukken, met aandacht gekozen.",
       "hero_body": "We werken aan een selectie vintage en pre-owned designertassen, gekozen om hun karakter, conditie en tijdloze uitstraling.",
-      "newsletter_note": "Af en toe bericht over nieuwe stukken. Geen constante aanbiedingen.",
       "admin_link_html": "Ben je de winkeleigenaar? <a href=\"/admin\" class=\"link underlined-link\">Log hier in</a>",
       "powered_by_shopify_html": "Deze winkel wordt door {{ shopify }} aangedreven"
     },
@@ -93,12 +92,17 @@
     "footer": {
       "navigation_label": "Navigatie in de footer",
       "non_affiliation": "{{ shop_name }} is een onafhankelijke wederverkoper en is niet verbonden aan de designerhuizen op deze website. Alle merknamen blijven eigendom van hun respectievelijke eigenaren."
+    },
+    "forms": {
+      "privacy_note": "We gebruiken deze gegevens om je te antwoorden.",
+      "privacy_link": "Privacybeleid"
     }
   },
   "newsletter": {
-    "label": "E‑mail",
-    "success": "Bedankt voor het abonneren",
-    "button_label": "Abonneren"
+    "label": "E-mailadres",
+    "success": "Bedankt. Je staat op de lijst.",
+    "button_label": "Abonneren",
+    "privacy_note": "Af en toe een e-mail over nieuwe stukken. Je kunt je altijd afmelden."
   },
   "accessibility": {
     "heading_articles": "Artikelen",
@@ -124,7 +128,7 @@
   },
   "brand": {
     "hero": {
-      "eyebrow": "Geselecteerde pre-owned designerstukken",
+      "eyebrow": "Uitgekozen pre-owned designerstukken",
       "heading": "Opnieuw gevonden. Gekozen voor wat volgt.",
       "intro": "Een zorgvuldig samengestelde collectie pre-owned designertassen en accessoires.",
       "primary": "Bekijk alle tassen",
@@ -193,7 +197,8 @@
         "unit_price": "Eenheidsprijs"
       },
       "share": "Dit product delen",
-      "details_heading": "Details & conditie",
+      "details_heading": "Details en conditie",
+      "details_only_heading": "Details",
       "sold_out": "Uitverkocht",
       "unavailable": "Niet beschikbaar",
       "vendor": "Verkoper",
@@ -424,7 +429,7 @@
         "phone": "Telefoonnummer",
         "comment": "Je bericht",
         "send": "Verstuur je bericht",
-        "post_success": "Bedankt dat je contact met ons hebt opgenomen. Je hoort zo snel mogelijk van ons.",
+        "post_success": "Bedankt. We hebben je bericht ontvangen en antwoorden persoonlijk.",
         "error_heading": "Pas het volgende aan:",
         "title": "Contactformulier"
       }
@@ -452,7 +457,7 @@
         "maximum_budget": "Maximaal budget",
         "currency": "Valuta",
         "flexible_details": "Welke details zijn flexibel?",
-        "reference_link": "Referentielink (optioneel)",
+        "reference_link": "Referentielink",
         "notes": "Is er nog iets dat we moeten weten?"
       },
       "consent": "We gebruiken deze gegevens om op je aanvraag te reageren. Dit is geen reservering of koopovereenkomst.",
@@ -478,7 +483,7 @@
         "preferred_contact": "Gewenste contactmethode",
         "message": "Nog iets over het stuk?"
       },
-      "serial": "Serie- of datumcode (optioneel)",
+      "serial": "Serie- of datumcode",
       "serial_hint": "Deel hier geen volledige serie- of datumcode. Vermeld alleen of er een aanwezig is; als het nodig is vragen we veilig om details.",
       "disclaimer": "Verstuur geen item voordat de verzendinstructies schriftelijk met ons zijn afgestemd.",
       "submit": "Verstuur itemgegevens",
@@ -620,13 +625,13 @@
     },
     "drop_signup": {
       "heading": "Hoor als eerste over nieuwe stukken",
-      "body": "Ontvang af en toe een bericht over nieuwe designertassen en praktische gidsen uit het Journal.",
+      "body": "Ontvang af en toe een bericht wanneer er nieuwe designertassen binnenkomen.",
       "email_placeholder": "E-mailadres",
-      "submit": "Schrijf je in",
+      "submit": "Abonneren",
       "success": "Bedankt. Je staat op de lijst."
     },
     "featured_designers": {
-      "explore": "Ontdek {{ designer }}"
+      "explore": "Bekijk de collectie"
     }
   },
   "localization": {

@@ -48,3 +48,11 @@
     margin: 0 0 0 1rem;
   }
 }
+
+.newsletter-form__privacy {
+  width: 100%;
+  max-width: 36rem;
+  margin: 1.5rem auto 0;
+  font-size: 1.3rem;
+  opacity: 0.85;
+}

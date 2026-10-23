@@ -27,12 +27,15 @@
   assign card_max_width = 1340 | divided_by: card_columns
 -%}
 {%- unless skip_styles -%}
-  {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-  {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
-
+  {%- if show_rating -%}
+    {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
-  {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
-  {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
+  {%- if quick_add == 'bulk' -%}
+    {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+    {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
+    {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
 {%- endunless -%}
 {%- if card_product and card_product != empty -%}
   {%- liquid
@@ -202,15 +205,21 @@
               {%- endif -%}
 
               {%- liquid
-                # verified differentiators only: material · condition (hidden when empty)
+                # verified differentiators only: material · condition, else year or era, else colour (hidden when empty)
                 assign card_material = card_product.metafields.custom.material.value
-                assign card_condition = card_product.metafields.custom.condition.value
+                assign card_detail = card_product.metafields.custom.condition.value
+                if card_detail == blank
+                  assign card_detail = card_product.metafields.custom.year_or_era.value
+                endif
+                if card_detail == blank
+                  assign card_detail = card_product.metafields.custom.color.value
+                endif
               -%}
-              {%- if card_material != blank or card_condition != blank -%}
+              {%- if card_material != blank or card_detail != blank -%}
                 <div class="card__meta-line">
                   {%- if card_material != blank -%}{% render 'product-value', value: card_material %}{%- endif -%}
-                  {%- if card_material != blank and card_condition != blank %} &middot; {% endif -%}
-                  {%- if card_condition != blank -%}{% render 'product-value', value: card_condition %}{%- endif -%}
+                  {%- if card_material != blank and card_detail != blank %} &middot; {% endif -%}
+                  {%- if card_detail != blank -%}{% render 'product-value', value: card_detail %}{%- endif -%}
                 </div>
               {%- endif -%}
 
