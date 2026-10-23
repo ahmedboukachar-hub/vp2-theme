@@ -22,7 +22,9 @@
       assign heading_tag = 'h2'
     endif
   -%}
+  {%- if section.settings.show_title -%}
   <{{ heading_tag }} class="main-page-title page-title h0">{{ page.title | escape }}</{{ heading_tag }}>
+  {%- endif -%}
   <p class="wishlist-items__intro">{{ 'general.wishlist.intro' | t }}</p>
 
   <noscript>
@@ -65,6 +67,13 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show page title",
+      "info": "Turn off when a page hero above already shows the title.",
+      "default": true
+    },
     {
       "type": "paragraph",
       "content": "Renders the browser-local wishlist. Items are stored only in the visitor's browser and do not sync between devices."

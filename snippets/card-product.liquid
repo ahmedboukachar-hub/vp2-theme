@@ -55,7 +55,7 @@
   <product-component view-event-payload="{{ card_product | standard_event_data: 'view', context: product_view_context | escape }}">
     <div class="card-wrapper product-card-wrapper underline-links-hover{% if card_is_sold_archive %} card--sold-archive{% endif %}">
       {%- unless skip_wishlist_button -%}
-        {% render 'wishlist-button', wishlist_product: card_product %}
+        {%- unless card_is_sold_archive -%}{% render 'wishlist-button', wishlist_product: card_product %}{%- endunless -%}
       {%- endunless -%}
       <div
         class="

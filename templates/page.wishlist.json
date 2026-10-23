@@ -10,7 +10,9 @@
     },
     "main": {
       "type": "wishlist-items",
-      "settings": {}
+      "settings": {
+        "show_title": false
+      }
     },
     "recently-viewed": {
       "type": "recently-viewed",

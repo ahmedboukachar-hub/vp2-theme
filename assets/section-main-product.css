@@ -1596,3 +1596,10 @@ a.product__text {
 .product__media-list .product-media-container.media-type-image.constrain-height.media-fit-contain {
   width: 100%;
 }
+
+/* Product information never drops below 12px (designer line, shipping note). */
+.product__info-container .caption,
+.product__info-container .caption-with-letter-spacing,
+.product__tax {
+  font-size: max(1.2rem, 1em);
+}

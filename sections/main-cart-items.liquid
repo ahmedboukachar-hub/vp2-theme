@@ -32,14 +32,14 @@
   <div class="page-width">
     <div class="title-wrapper-with-link">
       <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
-      <a href="{{ routes.all_products_collection_url }}" class="underlined-link">
+      <a href="{{ section.settings.continue_collection.url | default: routes.all_products_collection_url }}" class="underlined-link">
         {{- 'general.continue_shopping' | t -}}
       </a>
     </div>
 
     <div class="cart__warnings">
       <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
-      <a href="{{ routes.all_products_collection_url }}" class="button">
+      <a href="{{ section.settings.continue_collection.url | default: routes.all_products_collection_url }}" class="button">
         {{ 'general.continue_shopping' | t }}
       </a>
 
@@ -273,8 +273,16 @@
                                 data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                 min="0"
                                 data-min="{{ item.variant.quantity_rule.min }}"
-                                {% if item.variant.quantity_rule.max != null %}
-                                  max="{{ item.variant.quantity_rule.max }}"
+                                {%- liquid
+                                  assign line_max = item.variant.quantity_rule.max
+                                  if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' and item.variant.inventory_quantity > 0
+                                    if line_max == null or item.variant.inventory_quantity < line_max
+                                      assign line_max = item.variant.inventory_quantity
+                                    endif
+                                  endif
+                                -%}
+                                {% if line_max != null %}
+                                  max="{{ line_max }}"
                                 {% endif %}
                                 step="{{ item.variant.quantity_rule.increment }}"
                                 {% # theme-check-enable %}
@@ -472,6 +480,12 @@
 {
   "name": "t:sections.main-cart-items.name",
   "settings": [
+    {
+      "type": "collection",
+      "id": "continue_collection",
+      "label": "Continue shopping collection",
+      "info": "Where \"Continue shopping\" leads. Falls back to all products."
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
