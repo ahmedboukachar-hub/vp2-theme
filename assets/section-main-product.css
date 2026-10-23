@@ -1598,8 +1598,8 @@ a.product__text {
 }
 
 /* Product information never drops below 12px (designer line, shipping note). */
-.product__info-container .caption,
+.product__info-container .caption:not(.caption-large),
 .product__info-container .caption-with-letter-spacing,
 .product__tax {
-  font-size: max(1.2rem, 1em);
+  font-size: 1.2rem;
 }
