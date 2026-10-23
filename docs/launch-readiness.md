@@ -35,22 +35,23 @@ to a client, or upgrade to a paid Shopify plan.
    this configuration. Still open: confirm free worldwide shipping as a
    commercial decision, remove the US zone if unintended, set the business
    address and taxes, and pass a complete test checkout.
-4. **Legal & policies.** Shipping, refund, terms of service and legal notice
-   exist as published policies whose first heading reads "OPERATIONAL DRAFT
-   (requires legal review before use)"; the privacy policy is Shopify-managed.
-   All are linked from the footer, so the draft markers are visible to anyone
-   with the storefront password. Legal review, then remove the markers.
-   Business identity filled 2026-10-23 by owner instruction, in all six
-   languages: La Retrouvée is stated as part of Vintage Pareltje (legal notice
-   and terms only, never on storefront pages), KvK 42004969, VAT
-   NL005427896B52, info@vintagepareltje.com, +31 6 4371 5013, Mon–Sat
-   09:00–17:00, address Joke Smitlaan 44, 2104 TG Heemstede (the Shopify store
-   address; vintagepareltje.com publishes no address). Still open in the drafts:
-   who pays return shipping, processing time, carriers and destinations,
-   duties outside the EU, the margin-scheme clause, ADR/ODR references and
-   the authenticity dispute procedure. The Shopify-managed privacy policy
-   still names `vp2-dev` and the store contact email until the store name and
-   customer email are changed in Admin (item 9).
+4. **Legal & policies.** Made official 2026-10-23 by owner instruction after the
+   owner's own review: the "OPERATIONAL DRAFT" headings, status notes and all
+   placeholders are removed from the legal notice, terms, refund and shipping
+   policies in all six languages (each body now starts at H2, so the page has
+   one H1). Business identity: La Retrouvée as part of Vintage Pareltje (legal
+   notice and terms only, never on storefront pages), KvK 42004969, VAT
+   NL005427896B52, info@laretrouvee.com, +31 6 4371 5013, Mon–Sat 09:00–17:00,
+   Joke Smitlaan 44, 2104 TG Heemstede (the Shopify store address;
+   vintagepareltje.com publishes none). Terms: returns within the statutory
+   14 days, return costs for the customer, free shipping, dispatch as soon as
+   possible after payment (no fixed number of days), non-EU duties payable by
+   the recipient unless checkout states otherwise, a neutral margin-scheme
+   sentence in the terms. The legal notice also carries an owner-approved
+   "Use of artificial intelligence" section. Open: the mailbox
+   info@laretrouvee.com must exist before launch (the policies already point
+   to it); the Shopify-managed privacy policy still names `vp2-dev` and the
+   old store email until item 9 is done.
 5. **Payments.** No real payment providers are configured; checkout works in
    test mode only. Configure providers only after the plan/transfer decision.
 6. **Real content.** The brand name (La Retrouvée) is chosen and lives in the
@@ -65,10 +66,12 @@ to a client, or upgrade to a paid Shopify plan.
    a development store, Shopify serves its own password page instead of the
    theme's `password` template, so the theme's password design is not visible
    yet. Admin action: Settings → General → Store details → Store name.
-   After the switch to `laretrouvee.com`, the Europe market is still bound to
-   a web presence on `vp2-dev.myshopify.com`, so country-specific hreflang
-   alternates point to the old domain. Admin action: Settings → Markets →
-   Europe → domain `laretrouvee.com`.
+   Also set the store contact and sender email to info@laretrouvee.com once
+   the mailbox exists (Settings → General and Settings → Notifications); the
+   privacy policy, checkout and order emails take both values from there.
+   The Europe market was moved to the `laretrouvee.com` web presence on
+   2026-10-23 (owner approval): every hreflang now points to the new domain
+   and `vp2-dev.myshopify.com` redirects there with a 301.
 7. **Dutch migration drafts.** The two unpublished Dutch draft articles
    (`populairste-louis-vuitton-tassen`, `populairste-gucci-tassen`) are kept
    as migration backups; delete them only with explicit owner approval.
