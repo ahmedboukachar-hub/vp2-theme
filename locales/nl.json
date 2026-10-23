@@ -45,7 +45,7 @@
         "tiktok": "TikTok"
       }
     },
-    "continue_shopping": "Terugkeren naar winkel",
+    "continue_shopping": "Verder winkelen",
     "pagination": {
       "label": "Paginering",
       "page": "Pagina {{ number }}",
@@ -324,12 +324,12 @@
       "reset": "Opnieuw instellen",
       "sort_button": "Sorteren",
       "sort_by_label": "Sorteer op:",
-      "to": "Aan",
+      "to": "Tot",
       "clear_filter": "Filter verwijderen",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filters geselecteerd)",
       "show_more": "Meer weergeven",
       "show_less": "Minder weergeven",
-      "filter_and_operator_subtitle": "Alles matchen",
+      "filter_and_operator_subtitle": "Voldoet aan alles",
       "designer": "Designer",
       "all_designers": "Alle designers",
       "clear_designer": "Wis designerkeuze"
@@ -451,7 +451,7 @@
         "preferred_contact": "Gewenste contactmethode",
         "message": "Nog iets over het stuk?"
       },
-      "serial": "Serie- of datumcode-informatie (optioneel)",
+      "serial": "Serie- of datumcode (optioneel)",
       "serial_hint": "Deel hier geen volledige serie- of datumcode. Vermeld alleen of er een aanwezig is; als het nodig is vragen we veilig om details.",
       "disclaimer": "Verstuur geen item voordat de verzendinstructies schriftelijk met ons zijn afgestemd.",
       "submit": "Verstuur itemgegevens",

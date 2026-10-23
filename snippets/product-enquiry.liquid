@@ -100,7 +100,9 @@
               <option value="{{ 'products.product.enquiry.topic_shipping' | t }}">{{ 'products.product.enquiry.topic_shipping' | t }}</option>
               <option value="{{ 'products.product.enquiry.topic_other' | t }}">{{ 'products.product.enquiry.topic_other' | t }}</option>
             </select>
-            {{ 'icon-caret.svg' | inline_asset_content }}
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
           </div>
         </div>
         <div class="field">

@@ -170,7 +170,7 @@
 
       <div class="footer__legal">
         <small class="footer__copyright">
-          &copy; {{ 'now' | date: '%Y' }}, {{ brand_name | link_to: routes.root_url }}
+          &copy; {{ 'now' | date: '%Y' }}, {{ brand_name | escape }}
         </small>
 
         {%- if section.settings.show_policy -%}

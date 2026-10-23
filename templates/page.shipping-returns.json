@@ -16,60 +16,6 @@
         "padding_bottom": 64
       }
     },
-    "info": {
-      "type": "collapsible-content",
-      "settings": {
-        "caption": "",
-        "heading": "Frequently asked",
-        "heading_size": "h1",
-        "heading_alignment": "left",
-        "layout": "none",
-        "color_scheme": "scheme-1",
-        "open_first_collapsible_row": true,
-        "padding_top": 28,
-        "padding_bottom": 52
-      },
-      "blocks": {
-        "row_shipping": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Shipping",
-            "icon": "none",
-            "row_content": ""
-          }
-        },
-        "row_returns": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Returns",
-            "icon": "none",
-            "row_content": ""
-          }
-        },
-        "row_payment": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Payment and security",
-            "icon": "none",
-            "row_content": ""
-          }
-        },
-        "row_contact": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Questions",
-            "icon": "none",
-            "row_content": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_shipping",
-        "row_returns",
-        "row_payment",
-        "row_contact"
-      ]
-    },
     "closing": {
       "type": "service-panel",
       "settings": {
@@ -86,7 +32,6 @@
   "order": [
     "hero",
     "main",
-    "info",
     "closing"
   ]
 }
