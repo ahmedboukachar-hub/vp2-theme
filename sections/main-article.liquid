@@ -6,8 +6,8 @@
   <div class="vp-width article-page__intro{% if article.image and section.settings.show_image %} article-page__intro--with-media{% endif %}">
     <header class="article-page__header">
       {%- assign article_brand = settings.brand_display_name | default: shop.name -%}
-      <meta itemprop="datePublished" content="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%z' }}">
-      <meta itemprop="dateModified" content="{{ article.updated_at | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+      <meta itemprop="datePublished" content="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
+      <meta itemprop="dateModified" content="{{ article.updated_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
       <link itemprop="mainEntityOfPage" href="{{ canonical_url }}">
       <span itemprop="author" itemscope itemtype="https://schema.org/Organization" hidden>
         <meta itemprop="name" content="{{ article_brand | escape }}">
