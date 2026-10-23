@@ -1,6 +1,7 @@
 # Launch readiness
 
-The development store `vp2-dev.myshopify.com` is deliberately used as a **live
+The development store `vp2-dev.myshopify.com` (primary domain `laretrouvee.com`
+since 2026-10-23) is deliberately used as a **live
 test environment** during this phase: test content is visible on the published
 development theme, by explicit owner decision. The store sits behind the
 Shopify development-store password and runs on a partner development plan, so
@@ -39,6 +40,17 @@ to a client, or upgrade to a paid Shopify plan.
    (requires legal review before use)"; the privacy policy is Shopify-managed.
    All are linked from the footer, so the draft markers are visible to anyone
    with the storefront password. Legal review, then remove the markers.
+   Business identity filled 2026-10-23 by owner instruction, in all six
+   languages: La Retrouvée is stated as part of Vintage Pareltje (legal notice
+   and terms only, never on storefront pages), KvK 42004969, VAT
+   NL005427896B52, info@vintagepareltje.com, +31 6 4371 5013, Mon–Sat
+   09:00–17:00, address Joke Smitlaan 44, 2104 TG Heemstede (the Shopify store
+   address; vintagepareltje.com publishes no address). Still open in the drafts:
+   who pays return shipping, processing time, carriers and destinations,
+   duties outside the EU, the margin-scheme clause, ADR/ODR references and
+   the authenticity dispute procedure. The Shopify-managed privacy policy
+   still names `vp2-dev` and the store contact email until the store name and
+   customer email are changed in Admin (item 9).
 5. **Payments.** No real payment providers are configured; checkout works in
    test mode only. Configure providers only after the plan/transfer decision.
 6. **Real content.** The brand name (La Retrouvée) is chosen and lives in the
@@ -53,6 +65,10 @@ to a client, or upgrade to a paid Shopify plan.
    a development store, Shopify serves its own password page instead of the
    theme's `password` template, so the theme's password design is not visible
    yet. Admin action: Settings → General → Store details → Store name.
+   After the switch to `laretrouvee.com`, the Europe market is still bound to
+   a web presence on `vp2-dev.myshopify.com`, so country-specific hreflang
+   alternates point to the old domain. Admin action: Settings → Markets →
+   Europe → domain `laretrouvee.com`.
 7. **Dutch migration drafts.** The two unpublished Dutch draft articles
    (`populairste-louis-vuitton-tassen`, `populairste-gucci-tassen`) are kept
    as migration backups; delete them only with explicit owner approval.

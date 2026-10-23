@@ -1,6 +1,7 @@
 # Human visual review — 30-minute route
 
-All URLs are behind the store password on `vp2-dev.myshopify.com`.
+All URLs are behind the store password on `laretrouvee.com` (the old
+`vp2-dev.myshopify.com` address still works).
 Prefix `/nl`, `/de` or `/fr` to any URL for that language. Automated
 checks (Theme Check, JSON, translations, API state) are done; **this human
 pass is required and has not been performed by code.**
