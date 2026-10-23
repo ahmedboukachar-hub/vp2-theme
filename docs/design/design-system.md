@@ -216,7 +216,7 @@ Contrast ivory on espresso is about 9:1, comfortably above AA for body text.
 | journal | scheme-2 | stone |
 | find_a_bag | scheme-1 | ivory |
 | archive | scheme-1 | ivory (section currently disabled) |
-| newsletter | scheme-3 | white |
+| newsletter | scheme-3 | white, full-width band (owner decision 2026-10-23) |
 | footer (`sections/footer-group.json`) | scheme-2 | stone |
 
 Product grids on collection, search and product pages also sit on the ivory
@@ -232,6 +232,10 @@ Rules that follow from this:
   and do not put product cards or the cart on it.
 - Stone appears twice (Journal, footer) and is the soft rest point between
   ivory and white; avoid two stone sections back to back.
+- Closing panels above the stone footer (the `service-panel` on content pages,
+  `drop-signup` on New arrivals) are white (scheme-3), or ivory (scheme-1) where
+  the section above is already white, as on Designers (owner decision
+  2026-10-23).
 - Changing this rhythm is an owner decision, not a refinement.
 
 Superseded: the "Colour roles and distribution" table above (scheme-4 as

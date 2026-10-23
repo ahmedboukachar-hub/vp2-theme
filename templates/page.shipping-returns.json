@@ -25,7 +25,7 @@
         "text": "<p>Ask about a particular piece, an existing order or one of our services.</p>",
         "button_label": "Contact us",
         "button_link": "shopify://pages/contact",
-        "color_scheme": "scheme-2"
+        "color_scheme": "scheme-3"
       }
     }
   },

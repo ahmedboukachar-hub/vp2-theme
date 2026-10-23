@@ -27,7 +27,7 @@
         "text": "<p>Each listing shows the measurements of that individual bag.</p>",
         "button_label": "Explore all bags",
         "button_link": "shopify://collections/all-bags",
-        "color_scheme": "scheme-2"
+        "color_scheme": "scheme-3"
       }
     }
   },

@@ -68,7 +68,7 @@
         "text": "<p>Tell us which designer, model or era you are searching for.</p>",
         "button_label": "Start a search request",
         "button_link": "shopify://pages/find-a-bag",
-        "color_scheme": "scheme-2"
+        "color_scheme": "scheme-1"
       }
     }
   },
