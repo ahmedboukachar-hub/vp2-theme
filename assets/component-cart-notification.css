@@ -95,6 +95,19 @@
   margin-top: 1rem;
 }
 
+/* 'Continue shopping' is a 2rem-tall text button: a transparent overlay gives
+   it a 4.4rem touch target without moving anything. It stays inside the 1rem
+   gap above and the popup's bottom padding. */
+.cart-notification__links > .link {
+  position: relative;
+}
+
+.cart-notification__links > .link::after {
+  content: '';
+  position: absolute;
+  inset: -1rem 0 -1.4rem;
+}
+
 .cart-notification-product {
   align-items: flex-start;
   display: flex;

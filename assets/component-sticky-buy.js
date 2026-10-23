@@ -19,11 +19,19 @@ if (!customElements.get('sticky-buy-bar')) {
           button.click();
         });
 
-        this.intersectionObserver = new IntersectionObserver((entries) => {
-          const entry = entries[0];
-          const scrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
-          this.classList.toggle('sticky-buy--visible', scrolledPast);
-        });
+        // The root extends far below the viewport, so the anchor only stops
+        // intersecting once it is above the viewport top. Any jump across that
+        // edge (anchor link, scroll restoration, scrollTo(0, 0)) then fires a
+        // callback, which a viewport-sized root misses when the anchor goes
+        // straight from above the viewport to below it.
+        this.intersectionObserver = new IntersectionObserver(
+          (entries) => {
+            const entry = entries[entries.length - 1];
+            const scrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+            this.classList.toggle('sticky-buy--visible', scrolledPast);
+          },
+          { rootMargin: '0px 0px 100000px 0px' }
+        );
         this.observedAnchor = null;
         this.observeAnchor();
 

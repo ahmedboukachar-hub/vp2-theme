@@ -1,4 +1,8 @@
+/* Full width so the page-width box does not shrink to its content and centre
+   inside the flex column of .content-for-layout; the trail then lines up
+   with left-aligned page titles. */
 .breadcrumbs {
+  width: 100%;
   margin-top: 1.5rem;
 }
 
@@ -45,8 +49,10 @@
   max-width: 60vw;
 }
 
+/* Phones: keep the way back (Home / Journal, Home / collection) and drop the
+   current title instead, which the page's H1 repeats right below. */
 @media screen and (max-width: 479px) {
-  .breadcrumbs__item--collapsible {
+  .breadcrumbs__item--collapsible + .breadcrumbs__item {
     display: none;
   }
 }

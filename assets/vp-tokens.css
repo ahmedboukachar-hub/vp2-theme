@@ -150,7 +150,8 @@
 .archive-actions__buttons .button,
 .archive-feature__footer .button,
 .collection__view-all .button,
-.journal-feature__cta {
+.journal-feature__cta,
+.template-404__actions .button {
   min-inline-size: 22rem;
   min-height: 5.2rem;
   padding-inline: 3.2rem;
@@ -161,7 +162,11 @@
   .service-panel__actions .button,
   .archive-actions__buttons .button,
   .archive-feature__footer .button,
-  .journal-feature__cta {
+  .journal-feature__cta,
+  .template-404__actions .button,
+  .find-a-bag__form .button[type='submit'],
+  .sell-to-us__form .button[type='submit'],
+  .contact__button .button {
     width: 100%;
   }
 
@@ -397,6 +402,25 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
   min-height: 4.4rem;
 }
 
+/* Horizontal filters: centre each label and its caret in the 4.4rem target,
+   on the same line as "Filter:" (Dawn placed the label at the top and the
+   absolutely positioned caret lower down). */
+.facets__disclosure > .facets__summary {
+  padding-right: 0;
+}
+
+.facets__disclosure > .facets__summary > div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 4.4rem;
+}
+
+.facets__disclosure > .facets__summary .icon-caret {
+  position: static;
+  flex-shrink: 0;
+}
+
 .mobile-facets__open { font-size: 1.5rem; }
 
 .search-popular { margin-top: 1.6rem; }
@@ -493,6 +517,27 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
 
 @media screen and (min-width: 750px) {
   .header__heading-link .brand-wordmark { font-size: clamp(2rem, 2.4vw, 2.8rem); }
+}
+
+/* Mobile and tablet: centre the logo on the page, not between the two left
+   icons (menu, search) and the three right ones. Dawn's four-column grid for
+   this case gives the logo whatever is left, which put it about 25px left of
+   centre. The search shares the menu's cell instead, offset past the menu as
+   Dawn does for its top-center drawer layout. */
+@media screen and (max-width: 989px) {
+  .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) {
+    grid-template-areas: 'left-icons heading icons';
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) > header-drawer {
+    grid-area: left-icons;
+  }
+
+  .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) > .header__search {
+    grid-area: left-icons;
+    margin-left: 3.2rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
