@@ -131,6 +131,13 @@ Retired from use: Dawn's `image-banner` as a page header (replaced by
 `page-hero`), Dawn's blog listing markup, the homepage `image-with-text`
 curation block (superseded by the dark editorial section).
 
+## Announcement bar (owner decision, 2026-10-23)
+
+The announcement bar is disabled (`"disabled": true` in
+`sections/header-group.json`): it repeated the hero line and read as a stock
+Shopify element. Its content is kept, so it can be switched back on in the
+Theme Editor; do not re-enable it without the owner.
+
 ## Footer behaviour
 
 Link groups render as native `<details open>`, so without JavaScript every
