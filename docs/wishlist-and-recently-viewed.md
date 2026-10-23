@@ -23,7 +23,7 @@ without changing the UI.
 | Key | Contents | Notes |
 | --- | --- | --- |
 | `wishlist-items` | `[{handle, id, title, url}]` | Product identifiers only; title/url kept so removed products can still be labelled "No longer available". |
-| `recently-viewed-items` | `[handle, …]` (max 8) | Product handles only, newest first; max 4 shown. |
+| `recently-viewed-items` | `[handle, …]` (max 8) | Product handles only, newest first; max 3 shown (one row of three cards). |
 | `locale-preference` | language choice | See docs/localization-discovery.md. |
 
 No personal data, no IP addresses, no analytics or marketing use.

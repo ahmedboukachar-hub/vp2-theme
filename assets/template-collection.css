@@ -1,9 +1,6 @@
-@media screen and (max-width: 749px) {
-  .collection .grid__item:only-child {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
+/* A lone product keeps the normal card width (Dawn stretches it to the full
+   row on phones, which upscales its image); the grid rhythm stays the same
+   for one piece or many. */
 
 @media screen and (max-width: 989px) {
   .collection .slider.slider--tablet {

@@ -1547,27 +1547,49 @@ a.product__text {
 }
 
 
-/* La Retrouvée: all product gallery images, including hero, share a square frame. */
+/* La Retrouvée: every gallery image, including the first, sits in a square
+   frame and shows the whole photo: a photo of another shape is centred on the
+   photo ground instead of being cropped (owner decision 2026-10-23; the
+   template's 'Media fit' is 'contain', 'cover' would fill the square). */
 .product__media-list .product-media-container.media-type-image {
   --aspect-ratio: 1 !important;
   --preview-ratio: 1 !important;
   --ratio-percent: 100% !important;
-  width: 100%;
 }
-.product__media-list .product-media-container.media-type-image .media,
-.product__media-list .product-media-container.media-type-image.constrain-height .media {
-  padding-top: 100% !important;
-  height: auto !important;
-  background: var(--vp-media-ground, #f6f2ec);
-}
-.product__media-list .product-media-container.media-type-image .media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
+.product__media-list .product-media-container.media-type-image,
 .product__media-list .product-media-container.media-type-image.constrain-height.media-fit-contain {
   width: 100%;
+}
+.product__media-list .product-media-container.media-type-image.constrain-height .media {
+  padding-top: 100%;
+}
+.product__media-list .product-media-container.media-type-image .media {
+  background: var(--vp-media-ground, #fcf9f5);
+}
+.product__media-list .product-media-container.media-type-image.media-fit-contain .media img {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* The thumbnails show the whole photo too, on the same ground. */
+.product__media-wrapper .thumbnail {
+  background-color: var(--vp-media-ground, #fcf9f5);
+}
+.product__media-wrapper .thumbnail img {
+  object-fit: contain;
+}
+
+/* 'Constrain to screen height' on desktop: the gallery (square photo plus
+   thumbnail strip) is at most as wide as the window is tall minus the header
+   and the strip, so the whole photo and the start of the strip show on the
+   first screen, and the sticky gallery fits the window while the information
+   column scrolls past it. Phones and tablets keep the full-width square. */
+@media screen and (min-width: 990px) {
+  .product__media-wrapper media-gallery:has(.constrain-height) {
+    display: block;
+    max-width: max(48rem, calc(100vh - 30rem));
+    margin-inline: auto;
+  }
 }
 
 /* Product information never drops below 12px (designer line, shipping note). */

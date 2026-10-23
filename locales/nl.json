@@ -81,6 +81,8 @@
       "link_label": "Verlanglijst",
       "add": "Bewaar in je verlanglijst",
       "remove": "Verwijder uit je verlanglijst",
+      "save": "Bewaren",
+      "saved": "Bewaard",
       "remove_short": "Verwijderen",
       "intro": "Bewaar de stukken waar je op terug wilt komen op één plek.",
       "empty_heading": "Je verlanglijst is leeg",
@@ -96,6 +98,9 @@
     "forms": {
       "privacy_note": "We gebruiken deze gegevens om je te antwoorden.",
       "privacy_link": "Privacybeleid"
+    },
+    "navigation": {
+      "view_all": "Bekijk alles"
     }
   },
   "newsletter": {
@@ -165,7 +170,10 @@
       "topic_buying_guides": "Koopgidsen",
       "topic_bag_care": "Verzorging & conditie",
       "topic_designer_stories": "Designerverhalen",
-      "topic_collecting_vintage": "Vintage verzamelen"
+      "topic_collecting_vintage": "Vintage verzamelen",
+      "topic_model_guides": "Modelgidsen",
+      "topic_buying_advice": "Koopadvies",
+      "topic_classics_by_house": "Klassiekers per modehuis"
     }
   },
   "onboarding": {
@@ -259,7 +267,9 @@
         "inclusions": "Geleverd met",
         "serial_or_date_code": "Serie- / datumcode",
         "provenance": "Herkomst",
-        "authentication_notes": "Authenticatie"
+        "authentication_notes": "Authenticatie",
+        "compatible_models": "Geschikt voor",
+        "compatible_accessories": "Geschikt voor deze tas"
       },
       "inventory_out_of_stock_continue_selling": "Op voorraad",
       "volume_pricing": {
@@ -472,10 +482,11 @@
       "consent": "We gebruiken deze gegevens om op je aanvraag te reageren. Dit is geen reservering of koopovereenkomst.",
       "submit": "Verstuur mijn aanvraag",
       "success_heading": "Je aanvraag is ontvangen",
-      "success_body": "Bedankt. We nemen contact op als we je zoektocht echt verder kunnen helpen.",
+      "success_body": "Bedankt. We bevestigen je aanvraag per e-mail en houden die voor ogen terwijl we nieuwe stukken zoeken. Vinden we een tas die past, dan laten we het je weten.",
       "closing": "Elk pre-owned stuk is uniek. Conditie, leeftijd, details en meegeleverde accessoires kunnen verschillen, zelfs binnen hetzelfde model. We beschrijven altijd het specifieke stuk dat we aanbieden.",
       "hidden_source": "Aanvraagtype",
-      "optional_details": "Meer voorkeuren (optioneel)"
+      "optional_details": "Meer voorkeuren (optioneel)",
+      "no_preference": "Geen voorkeur"
     },
     "sell_to_us": {
       "fields": {
@@ -496,13 +507,22 @@
       "serial_hint": "Deel hier geen volledige serie- of datumcode. Vermeld alleen of er een aanwezig is; als het nodig is vragen we veilig om details.",
       "disclaimer": "Verstuur geen item voordat de verzendinstructies schriftelijk met ons zijn afgestemd.",
       "submit": "Verstuur itemgegevens",
-      "success": "Bedankt. We hebben je inzending ontvangen en nemen contact op als we het stuk verder willen bespreken.",
-      "hidden_source": "Aanvraagtype"
+      "success": "Bedankt. We hebben de gegevens van je stuk ontvangen en sturen je per e-mail instructies om foto’s te delen.",
+      "hidden_source": "Aanvraagtype",
+      "about_you": "Over jou",
+      "about_piece": "Over het stuk",
+      "contact_phone": "Telefoon",
+      "item_types": {
+        "bag": "Tas",
+        "small_leather_good": "Kleine lederwaren",
+        "accessory": "Accessoire",
+        "other": "Anders"
+      }
     },
     "about_story": {
       "eyebrow": "Onze visie",
       "heading": "Gevonden om opnieuw te dragen.",
-      "intro": "La Retrouvée brengt vintage en pre-owned designertassen samen, geselecteerd op ontwerp, conditie en eigen karakter. Een tas kan een verleden hebben en toch helemaal bij het heden passen. Beide krijgen hier de ruimte.",
+      "intro": "La Retrouvée brengt vintage en pre-owned designertassen samen, geselecteerd op ontwerp, conditie en eigen karakter. Een tas kan een verleden hebben en toch helemaal bij het heden passen. Beide krijgen hier de ruimte. Elk stuk wordt vanuit Europa verzonden, zonder douanekosten binnen de EU.",
       "selection_heading": "Stuk voor stuk gekozen",
       "selection_text": "Een bekende naam vertelt nooit het hele verhaal. We kijken naar de vorm, materialen en details voordat een tas in de selectie komt. Elk exemplaar wordt als een uniek stuk aangeboden.",
       "detail_heading": "Eerlijk in beeld",
@@ -641,6 +661,10 @@
     },
     "featured_designers": {
       "explore": "Bekijk de collectie"
+    },
+    "collection_houses": {
+      "heading": "Bekijk per modehuis",
+      "heading_other": "Andere modehuizen"
     }
   },
   "localization": {

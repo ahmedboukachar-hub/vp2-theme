@@ -4,26 +4,6 @@
   @param {string} localPosition - Unique prefix for the disclosure IDs.
 {% enddoc %}
 
-{%- liquid
-  assign current_language_code = localization.language.iso_code | split: '-' | first | downcase
-  case current_language_code
-    when 'en'
-      assign current_language_flag = '🇬🇧'
-    when 'nl'
-      assign current_language_flag = '🇳🇱'
-    when 'de'
-      assign current_language_flag = '🇩🇪'
-    when 'fr'
-      assign current_language_flag = '🇫🇷'
-    when 'it'
-      assign current_language_flag = '🇮🇹'
-    when 'es'
-      assign current_language_flag = '🇪🇸'
-    else
-      assign current_language_flag = '🌐'
-  endcase
--%}
-
 <div class="disclosure">
   <button
     type="button"
@@ -32,32 +12,15 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span class="localization-flag" aria-hidden="true">{{ current_language_flag }}</span>
+    <span class="localization-flag" aria-hidden="true">
+      {%- render 'language-flag', language: localization.language.iso_code -%}
+    </span>
     <span>{{ localization.language.endonym_name | capitalize }}</span>
     {{ 'icon-caret.svg' | inline_asset_content }}
   </button>
   <div class="disclosure__list-wrapper language-selector" hidden>
     <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
       {%- for language in localization.available_languages -%}
-        {%- liquid
-          assign language_code = language.iso_code | split: '-' | first | downcase
-          case language_code
-            when 'en'
-              assign language_flag = '🇬🇧'
-            when 'nl'
-              assign language_flag = '🇳🇱'
-            when 'de'
-              assign language_flag = '🇩🇪'
-            when 'fr'
-              assign language_flag = '🇫🇷'
-            when 'it'
-              assign language_flag = '🇮🇹'
-            when 'es'
-              assign language_flag = '🇪🇸'
-            else
-              assign language_flag = '🌐'
-          endcase
-        -%}
         <li class="disclosure__item" tabindex="-1">
           <a
             class="link link--text disclosure__link caption-large focus-inset"
@@ -77,7 +40,9 @@
               >
                 {{- 'icon-checkmark.svg' | inline_asset_content -}}
               </span>
-              <span class="localization-flag" aria-hidden="true">{{ language_flag }}</span>
+              <span class="localization-flag" aria-hidden="true">
+                {%- render 'language-flag', language: language.iso_code -%}
+              </span>
             </span>
             <span>
               {{ language.endonym_name | capitalize }}

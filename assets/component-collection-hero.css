@@ -96,3 +96,27 @@
     min-height: 36rem;
   }
 }
+
+/* The image sits in a <picture> when it is shown on desktop only. */
+.collection-hero__image-container > picture > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Phones: a desktop-only image is hidden and the banner tightens to title and
+   description, so the first row of products shows in the first screen. */
+@media screen and (max-width: 749px) {
+  .collection-hero--image-desktop-only .collection-hero__image-container {
+    display: none;
+  }
+
+  .collection-hero--image-desktop-only .collection-hero__inner {
+    padding-bottom: 0;
+  }
+
+  .collection-hero--image-desktop-only .collection-hero__text-wrapper {
+    padding: 2.4rem 0 0.8rem;
+  }
+}

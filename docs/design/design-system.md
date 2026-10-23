@@ -17,10 +17,10 @@ intimate showroom than to a high-volume marketplace.
 
 Colours and fonts stay in Theme Editor settings (colour schemes, Cormorant
 display + Inter UI) and `settings_data.json` is untouched. The one fixed
-colour in code is the photo ground `--vp-media-ground` (`#f6f2ec`, in
-`vp-tokens.css`) behind product photographs in cards and the product gallery;
-the wishlist and archive-teaser tiles still use a white ground until the card
-shape is decided.
+colour in code is the photo ground `--vp-media-ground` (`#fcf9f5`, in
+`vp-tokens.css`): the warm white measured on the current product photos,
+behind product photographs in cards (including Recently viewed and the
+wishlist), the product gallery and its thumbnails, and the cart.
 
 ## Layout rules
 
@@ -36,8 +36,22 @@ shape is decided.
   (owner decision 2026-10-23).
 
 - Editorial max width: theme `page-width` (Dawn setting).
-- Product cards: 4:5 media, 3 columns desktop, 2 on mobile (1 below 480px
-  in custom grids).
+- Product photos (owner decision 2026-10-23): cards, the product gallery
+  and its thumbnails, and cart thumbnails use a 1:1 frame that shows the
+  whole photo (`object-fit: contain`) on the photo ground. A photo of another
+  shape is centred on the ground, never cropped; a square photo on the same
+  warm white fills the frame edge to edge. See
+  `docs/design/photography-brief.md` for the matching shoot.
+- Product gallery on desktop: with "Constrain to screen height" on, the
+  gallery (square photo plus thumbnail strip) is at most the window height
+  minus 30rem wide, so the whole photo and the start of the strip show on
+  the first screen and the sticky gallery stays in view while the
+  information column scrolls. The buy column uses Dawn's "medium" media size
+  (55/45), so long titles and the specification table have room.
+- Product rows (owner decision 2026-10-23): 3 columns on desktop
+  everywhere (collections, search, "You may also like", Recently viewed,
+  the wishlist and New arrivals), 2 on mobile (1 below 480px in custom
+  grids).
 - Section spacing 96px desktop / 72px reduced / ~0.75× on mobile.
 - Borders over shadows; no large drop shadows anywhere in new components.
 - Buttons ≥ 48px height (Dawn default + `min-height` guards for
@@ -68,7 +82,7 @@ section, the product gallery and info, the collection banner and first
 products) does not reveal on load (owner decision 2026-10-23). Second exception, owner decision
 2026-10-23: "You may also like" and "Recently viewed" on product pages use
 Dawn's slider below 990px (one swipeable row with a peek of the next card,
-prev/next buttons and a counter); on desktop they stay a four-column grid.
+prev/next buttons and a counter); on desktop they stay a three-column grid.
 
 ## Components added in this phase
 
@@ -193,7 +207,7 @@ surface distribution described above. This section records what is live.
 - Brand name: `settings.brand_display_name` (Theme settings → Brand), fallback
   "La Retrouvée". The document title, Open Graph and Twitter titles use it on
   the homepage instead of the technical store name.
-- The language selector shows flag emoji with native language names; the
+- The language selector shows small inline SVG flags (snippets/language-flag.liquid; emoji showed as letter pairs on Windows) with native language names; the
   country selector was removed.
 - The dark editorial interruption and the archive teaser described above are
   no longer on the homepage. Restoring them is a merchant decision.
@@ -263,7 +277,9 @@ that scheme-4 was unused. This section is authoritative.
 Owner decision: Louis Vuitton and Gucci are the core of the catalogue, so the
 homepage houses section shows them as two large cards and Dior and Jacquemus
 as two small cards side by side beneath them. Implemented as a block setting
-`size` (large = two grid tracks, small = one) on `featured-designers`; the
+`size` (large = two grid tracks, small = one; since 2026-10-23 the two small
+cards each span two of the four tracks so the row is always full, with a
+square photo on tablets and a horizontal card from 990px) on `featured-designers`; the
 Designers page keeps four large cards. An `image_position` block setting
 chooses which part of a portrait-cropped image to keep.
 

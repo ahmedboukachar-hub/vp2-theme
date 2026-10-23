@@ -280,7 +280,7 @@
                   {% render 'product-enquiry', product: product, block: block %}
                 {%- when 'wishlist_button' -%}
                   <div class="product__wishlist quick-add-hidden" {{ block.shopify_attributes }}>
-                    {%- unless is_sold_archive -%}{% render 'wishlist-button', wishlist_product: product %}{%- endunless -%}
+                    {%- unless is_sold_archive -%}{% render 'wishlist-button', wishlist_product: product, show_label: true %}{%- endunless -%}
                   </div>
                 {%- when 'collapsible_tab' -%}
                   <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
@@ -965,7 +965,7 @@
       "settings": [
         {
           "type": "paragraph",
-          "content": "Browser-local wishlist heart button."
+          "content": "Browser-local wishlist: a quiet heart with a visible Save / Saved label."
         }
       ]
     },
@@ -1228,11 +1228,11 @@
           "type": "inline_richtext",
           "id": "heading",
           "label": "Heading",
-          "info": "Leave empty to use the translated default: \"Details & condition\" when the piece has a condition, otherwise \"Details\"."
+          "info": "Leave empty to use the translated default: \"Details & condition\" when the table shows a condition or condition notes, otherwise \"Details\". The condition grade is left out of the table when the Condition report block shows it."
         },
         {
           "type": "paragraph",
-          "content": "Shows product metafields from the \"custom\" namespace: designer, model, product_type, year_or_era, condition, condition_notes, material, color, dimensions, inclusions, serial_or_date_code, provenance, authentication_notes. Empty fields are hidden."
+          "content": "Shows product metafields from the \"custom\" namespace: designer, model, product_type, year_or_era, condition, condition_notes, material, color, dimensions, inclusions, serial_or_date_code, provenance, authentication_notes. Empty fields are hidden. Accessories with compatible_models get a \"Fits\" row linking to a search for each model; a bag lists the available accessories (from the accessories collection on the designer text block) whose compatible_models name its designer and model."
         }
       ]
     },

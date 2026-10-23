@@ -61,7 +61,12 @@
                     id="SortBy"
                     aria-describedby="a11y-refresh-page-message"
                   >
+                    {%- assign collection_sort_values = 'created-descending,price-ascending,price-descending' | split: ',' -%}
                     {%- for option in collection.sort_options -%}
+                      {%- comment -%} One-off pieces: newest and price only, as in snippets/facets.liquid. {%- endcomment -%}
+                      {%- unless collection_sort_values contains option.value or option.value == sort_by or option.value == collection.default_sort_by -%}
+                        {%- continue -%}
+                      {%- endunless -%}
                       <option
                         value="{{ option.value | escape }}"
                         {% if option.value == sort_by %}
@@ -108,9 +113,11 @@
         <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
         {%- liquid
           # One-piece collections skip the sort and filter bar: there is nothing to sort.
+          # Counted before filtering, so a filter or designer that narrows the
+          # list to one piece keeps the bar (and the way back) in place.
           assign show_facets = false
           if section.settings.enable_filtering or section.settings.enable_sorting
-            if collection.products_count > 1
+            if collection.all_products_count > 1
               assign show_facets = true
             endif
           endif

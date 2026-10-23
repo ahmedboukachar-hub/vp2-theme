@@ -26,18 +26,28 @@ and editorial slots use the licensed images in
 ## Art direction
 
 - Soft directional daylight or large diffused light.
-- Neutral warm-white/stone background, identical across the catalogue.
+- Neutral warm-white background, identical across the catalogue: about
+  `#fcf9f5`, the photo ground the theme puts around every product photo
+  (`--vp-media-ground` in `assets/vp-tokens.css`), so the photo and the
+  frame read as one surface.
 - Accurate colour and white balance; camera at product level.
 - No props for catalogue views — no flowers, perfume bottles or staged
   "Paris" styling. Editorial heroes may use stone, dark wood, linen or
   brushed metal sparingly; one bag remains the subject.
 - Preserve texture. Do not retouch wear away — wear belongs in the photos.
 - Keep text out of the photograph; negative space per planned crop.
-- Export high-resolution; Shopify CDN handles responsive formats.
+- Export high-resolution, catalogue photos at least 2048 × 2048 px (the
+  gallery frame is up to about 740px wide, so sharp on 2x screens and in the
+  zoom); Shopify CDN handles responsive formats.
 
 ## Ratios
 
-- Product cards: 4:5.
+- Catalogue (cards, product gallery, thumbnails, cart; owner decision
+  2026-10-23): shoot and export square, 1:1, on the warm-white background.
+  The theme shows every product photo whole in a square frame, so a square
+  photo fills it edge to edge; any other shape is centred with warm-white
+  bands and never cropped. Centre the bag with even margins, and frame
+  detail shots so the wear point sits in the middle.
 - Editorial: 3:2 landscape, 4:5 portrait, 1:1 detail — nothing else.
 
 ## File names and alt text

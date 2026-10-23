@@ -13,11 +13,29 @@
 {%- liquid
   assign spec_keys = 'designer,model,product_type,year_or_era,condition,material,color,dimensions,serial_or_date_code,inclusions' | split: ','
   assign note_keys = 'condition_notes,provenance,authentication_notes' | split: ','
+  assign condition_value = product.metafields.custom.condition | metafield_text
+  assign condition_notes_value = product.metafields.custom.condition_notes | metafield_text
+
+  # The condition report block already shows the grade, so the table does
+  # not repeat it (and is then titled "Details" unless condition notes follow).
+  assign condition_in_report = false
+  if condition_value != blank
+    for section_block in section.blocks
+      if section_block.type == 'condition_report'
+        assign condition_in_report = true
+        break
+      endif
+    endfor
+  endif
+
+  assign condition_in_table = false
+  if condition_value != blank and condition_in_report == false
+    assign condition_in_table = true
+  endif
+
   assign specifications_heading = block.settings.heading
   if specifications_heading == blank
-    assign condition_value = product.metafields.custom.condition | metafield_text
-    assign condition_notes_value = product.metafields.custom.condition_notes | metafield_text
-    if condition_value != blank or condition_notes_value != blank
+    if condition_in_table or condition_notes_value != blank
       assign specifications_heading = 'products.product.details_heading' | t
     else
       assign specifications_heading = 'products.product.details_only_heading' | t
@@ -27,6 +45,9 @@
 
 {%- capture spec_rows -%}
   {%- for key in spec_keys -%}
+    {%- if key == 'condition' and condition_in_report -%}
+      {%- continue -%}
+    {%- endif -%}
     {%- assign value = product.metafields.custom[key] | metafield_text -%}
     {%- if value != blank -%}
       {%- assign label_key = 'products.product.specifications.' | append: key -%}
@@ -36,6 +57,67 @@
       </div>
     {%- endif -%}
   {%- endfor -%}
+
+  {%- comment -%}
+    Compatibility. An accessory lists the bags it is made for in
+    custom.compatible_models ("Louis Vuitton Petit Noé"); each links to a
+    product search for that exact phrase (quoted, so it returns only that
+    model's pieces). A bag shows the available accessories whose
+    list names its designer and model (or the model alone), looked up in the
+    accessories collection chosen on the designer (text) block.
+  {%- endcomment -%}
+  {%- assign compatible_models = product.metafields.custom.compatible_models.value -%}
+  {%- if compatible_models != blank -%}
+    <div class="product-specifications__row">
+      <dt>{{ 'products.product.specifications.compatible_models' | t }}</dt>
+      <dd>
+        {%- for compatible_model in compatible_models -%}
+          {%- unless forloop.first %}, {% endunless -%}
+          {%- assign compatible_query = '"' | append: compatible_model | append: '"' -%}
+          <a href="{{ routes.search_url }}?q={{ compatible_query | url_encode }}&amp;type=product" class="link underlined-link">
+            {{- compatible_model | escape -}}
+          </a>
+        {%- endfor -%}
+      </dd>
+    </div>
+  {%- else -%}
+    {%- liquid
+      assign model_value = product.metafields.custom.model | metafield_text
+      assign accessories_collection = ''
+      if model_value != blank
+        for section_block in section.blocks
+          if section_block.type == 'text' and section_block.settings.accessories_collection != blank
+            assign accessories_collection = section_block.settings.accessories_collection
+            break
+          endif
+        endfor
+      endif
+    -%}
+    {%- if accessories_collection != blank -%}
+      {%- liquid
+        assign designer_value = product.metafields.custom.designer | metafield_text | default: product.vendor
+        assign full_model = designer_value | append: ' ' | append: model_value
+      -%}
+      {%- capture accessory_links -%}
+        {%- for accessory in accessories_collection.products limit: 50 -%}
+          {%- if accessory.id == product.id or accessory.available == false -%}
+            {%- continue -%}
+          {%- endif -%}
+          {%- assign accessory_fits = accessory.metafields.custom.compatible_models.value -%}
+          {%- if accessory_fits contains full_model or accessory_fits contains model_value -%}
+            <a href="{{ accessory.url }}" class="link underlined-link">{{ accessory.title | escape }}</a>,{{ ' ' }}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+      {%- assign accessory_links = accessory_links | strip | remove_last: ',' -%}
+      {%- if accessory_links != blank -%}
+        <div class="product-specifications__row">
+          <dt>{{ 'products.product.specifications.compatible_accessories' | t }}</dt>
+          <dd>{{ accessory_links }}</dd>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
 {%- endcapture -%}
 
 {%- capture note_rows -%}

@@ -3,13 +3,26 @@
 
 {%- style -%}
   @media screen and (max-width: 749px) {
-    .collection-hero--with-image .collection-hero__inner {
+    .collection-hero--with-image:not(.collection-hero--image-desktop-only) .collection-hero__inner {
       padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
     }
   }
 {%- endstyle -%}
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
+{%- liquid
+  assign show_image = false
+  if section.settings.show_collection_image and collection.image
+    assign show_image = true
+  endif
+  # Phones skip the image unless the merchant asks for it, so the first
+  # products show in the first screen.
+  assign image_desktop_only = false
+  if show_image and section.settings.show_collection_image_mobile == false
+    assign image_desktop_only = true
+  endif
+-%}
+
+<div class="collection-hero{% if show_image %} collection-hero--with-image{% endif %}{% if image_desktop_only %} collection-hero--image-desktop-only{% endif %} color-{{ section.settings.color_scheme }} gradient">
   {%- comment -%} No reveal animation: the banner is always the first thing on the page. {%- endcomment -%}
   <div class="collection-hero__inner page-width">
     <div class="collection-hero__text-wrapper">
@@ -23,8 +36,8 @@
       {%- endif -%}
     </div>
 
-    {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
+    {%- if show_image -%}
+      {%- capture hero_image -%}
         <img
           srcset="
             {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -42,6 +55,17 @@
           width="{{ collection.image.width }}"
           height="{{ collection.image.height }}"
         >
+      {%- endcapture -%}
+      <div class="collection-hero__image-container media gradient">
+        {%- if image_desktop_only -%}
+          {%- comment -%} The empty source for phones keeps them from downloading the hidden image. {%- endcomment -%}
+          <picture>
+            <source media="(max-width: 749px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+            {{ hero_image }}
+          </picture>
+        {%- else -%}
+          {{ hero_image }}
+        {%- endif -%}
       </div>
     {%- endif -%}
   </div>
@@ -67,6 +91,13 @@
       "id": "show_collection_image",
       "default": false,
       "label": "t:sections.main-collection-banner.settings.show_collection_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image_mobile",
+      "default": false,
+      "label": "Show collection image on phones",
+      "info": "Off: phones show the title and description only, so the first products appear in the first screen."
     },
     {
       "type": "color_scheme",

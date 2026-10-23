@@ -81,6 +81,8 @@
       "link_label": "Wishlist",
       "add": "Save to wishlist",
       "remove": "Remove from wishlist",
+      "save": "Save",
+      "saved": "Saved",
       "remove_short": "Remove",
       "intro": "Keep the pieces you would like to revisit in one place.",
       "empty_heading": "Your wishlist is empty",
@@ -96,6 +98,9 @@
     "forms": {
       "privacy_note": "We use these details to reply to you.",
       "privacy_link": "Privacy policy"
+    },
+    "navigation": {
+      "view_all": "View all"
     }
   },
   "newsletter": {
@@ -165,7 +170,10 @@
       "topic_buying_guides": "Buying guides",
       "topic_bag_care": "Care & condition",
       "topic_designer_stories": "Designer stories",
-      "topic_collecting_vintage": "Collecting vintage"
+      "topic_collecting_vintage": "Collecting vintage",
+      "topic_model_guides": "Model guides",
+      "topic_buying_advice": "Buying advice",
+      "topic_classics_by_house": "Classics by house"
     }
   },
   "onboarding": {
@@ -205,7 +213,9 @@
         "inclusions": "Includes",
         "serial_or_date_code": "Serial / date code",
         "provenance": "Provenance",
-        "authentication_notes": "Authentication"
+        "authentication_notes": "Authentication",
+        "compatible_models": "Fits",
+        "compatible_accessories": "Fits this bag"
       },
       "on_sale": "Sale",
       "product_variants": "Product variants",
@@ -472,10 +482,11 @@
       "consent": "We will use these details to respond to your request. This is not a reservation or purchase agreement.",
       "submit": "Submit my request",
       "success_heading": "Your request has been received",
-      "success_body": "Thank you. We will contact you if we can meaningfully help with your search.",
+      "success_body": "Thank you. We will confirm your request by email and keep it in view while we source new pieces. When we find a bag that matches, we will let you know.",
       "closing": "Every pre-owned piece is individual. Condition, age, details and inclusions can vary, even within the same model. We will always describe the specific piece offered.",
       "hidden_source": "Request type",
-      "optional_details": "More preferences (optional)"
+      "optional_details": "More preferences (optional)",
+      "no_preference": "No preference"
     },
     "sell_to_us": {
       "fields": {
@@ -496,13 +507,22 @@
       "serial_hint": "Please do not share a complete serial or date code here. Mention only whether one is present; we will ask for details securely if needed.",
       "disclaimer": "Do not send an item until shipping instructions have been agreed with us in writing.",
       "submit": "Submit item details",
-      "success": "Thank you. We have received your submission and will contact you if we would like to discuss the piece further.",
-      "hidden_source": "Request type"
+      "success": "Thank you. We have received the details of your piece and will reply by email with instructions for sharing photographs.",
+      "hidden_source": "Request type",
+      "about_you": "About you",
+      "about_piece": "About the piece",
+      "contact_phone": "Phone",
+      "item_types": {
+        "bag": "Bag",
+        "small_leather_good": "Small leather good",
+        "accessory": "Accessory",
+        "other": "Other"
+      }
     },
     "about_story": {
       "eyebrow": "Our point of view",
       "heading": "Made to be found again.",
-      "intro": "La Retrouvée brings together vintage and pre-owned designer bags chosen for their design, condition and individual character. A piece can carry a history and still feel entirely at home in the present. We make room for both.",
+      "intro": "La Retrouvée brings together vintage and pre-owned designer bags chosen for their design, condition and individual character. A piece can carry a history and still feel entirely at home in the present. We make room for both. Every piece ships from Europe, without customs fees within the EU.",
       "selection_heading": "Chosen individually",
       "selection_text": "A familiar name alone is never the whole story. We consider the shape, materials and details of every piece before it joins the selection. Each bag is offered as an individual object, not as an interchangeable example of a model.",
       "detail_heading": "Seen clearly",
@@ -641,6 +661,10 @@
     },
     "featured_designers": {
       "explore": "View the collection"
+    },
+    "collection_houses": {
+      "heading": "Browse by house",
+      "heading_other": "Other houses"
     }
   },
   "localization": {

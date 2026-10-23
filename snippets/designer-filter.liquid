@@ -1,9 +1,19 @@
 {% doc %}
-  Renders designer tag links inside the collection's regular facet controls.
+  Renders designer tag links inside the collection's regular facet controls,
+  styled like the other filters (checkbox, selected count, reset). Steps aside
+  when the native Vendor filter (Search & Discovery) is enabled.
+
+  Designers are tag pages (/collections/<handle>/designer-<vendor>), not
+  filter parameters, so selecting one is a link and its state comes from
+  current_tags. Counts are not shown: Liquid has no reliable per-designer count
+  for a paginated, tag-filtered collection (the native Vendor filter has them).
+
   @param {collection} collection - Current collection.
-  @param {string} layout - 'mobile' or 'desktop'.
-  @param {string} filter_type - Desktop facet layout.
-  @param {string} section_id - Unique identifier of the collection section.
+  @param {string} layout - 'mobile', 'desktop', 'pill' (active-filter pill, only
+    when a designer is selected) or 'current' (outputs the selected designer's
+    name, unescaped, or nothing).
+  @param {string} [filter_type] - Desktop facet layout.
+  @param {string} [section_id] - Unique identifier of the collection section.
 {% enddoc %}
 {%- liquid
   assign native_vendor = false
@@ -19,8 +29,32 @@
       assign current_designer = vendor
     endif
   endfor
+  assign selected_count = 0
+  if current_designer != blank
+    assign selected_count = 1
+  endif
 -%}
-{%- unless native_vendor -%}
+{%- if layout == 'current' -%}
+  {{- current_designer -}}
+{%- elsif layout == 'pill' -%}
+  {%- if current_designer != blank -%}
+    {%- comment -%}
+      Wrapped in .designer-filter so designer-filter.js keeps the sort order and
+      other filters; a plain link, because facet-remove reloads the current path.
+    {%- endcomment -%}
+    <span class="designer-filter designer-filter--pill">
+      <a href="{{ collection.url }}" class="active-facets__button active-facets__button--light">
+        <span class="active-facets__button-inner button button--tertiary">
+          {{ 'products.facets.designer' | t }}: {{ current_designer | escape }}
+          <span class="svg-wrapper">
+            {{- 'icon-close-small.svg' | inline_asset_content -}}
+          </span>
+          <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
+        </span>
+      </a>
+    </span>
+  {%- endif -%}
+{%- elsif native_vendor == false -%}
   {%- if collection.all_vendors.size > 1 or current_designer != blank -%}
     {%- if layout == 'mobile' -%}
       <details id="Details-Mobile-Designer-{{ section_id }}" class="mobile-facets__details designer-filter">
@@ -35,11 +69,24 @@
             {{ 'icon-arrow.svg' | inline_asset_content }}
             {{ 'products.facets.designer' | t }}
           </button>
-          <ul class="mobile-facets__list list-unstyled" role="list">
+          <ul class="facets-layout facets-layout-list facets-layout-list--text mobile-facets__list list-unstyled" role="list">
             {%- for vendor in collection.all_vendors -%}
               {%- assign designer_tag = vendor | handleize | prepend: 'designer-' -%}
               <li class="mobile-facets__item list-menu__item">
-                <a class="facets__label mobile-facets__label designer-filter__link{% if vendor == current_designer %} active{% endif %}" href="{{ collection.url }}/{{ designer_tag }}" {% if vendor == current_designer %}aria-current="true"{% endif %}>{{ vendor | escape }}</a>
+                <a
+                  class="facets__label mobile-facets__label designer-filter__link{% if vendor == current_designer %} active{% endif %}"
+                  href="{{ collection.url }}/{{ designer_tag }}"
+                  {% if vendor == current_designer %}
+                    aria-current="true"
+                  {% endif %}
+                >
+                  <span class="mobile-facets__highlight"></span>
+                  {{- 'square.svg' | inline_asset_content -}}
+                  {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  <span class="facet-checkbox__text">
+                    <span class="facet-checkbox__text-label">{{ vendor | escape }}</span>
+                  </span>
+                </a>
               </li>
             {%- endfor -%}
           </ul>
@@ -50,24 +97,53 @@
       </details>
     {%- else -%}
       <details id="Details-Designer-{{ section_id }}" class="designer-filter {% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %}facets__disclosure-vertical{% endif %}">
-        <summary class="facets__summary caption-large focus-offset">
+        <summary
+          class="facets__summary caption-large focus-offset"
+          aria-label="{{ 'products.facets.designer' | t }} ({{ 'products.facets.filters_selected' | t: count: selected_count }})"
+        >
           <div>
             <span class="facets__summary-label">{{ 'products.facets.designer' | t }}{% if filter_type == 'vertical' and current_designer != blank %} <span class="facets__selected">(1)</span>{% endif %}</span>
             {{ 'icon-caret.svg' | inline_asset_content }}
           </div>
         </summary>
         <div class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
-          <ul class="facets-layout facets-layout-list {% if filter_type == 'vertical' %}facets__list--vertical{% else %}facets__list{% endif %} list-unstyled" role="list">
+          {%- if filter_type != 'vertical' -%}
+            <div class="facets__header">
+              <div>
+                <span class="facets__selected">
+                  {{- 'products.facets.filters_selected' | t: count: selected_count -}}
+                </span>
+              </div>
+              <a class="facets__reset link underlined-link" href="{{ collection.url }}">{{ 'products.facets.reset' | t }}</a>
+            </div>
+          {%- endif -%}
+          <ul class="facets-layout facets-layout-list facets-layout-list--text {% if filter_type == 'vertical' %}facets__list--vertical{% else %}facets__list{% endif %} list-unstyled" role="list">
             {%- for vendor in collection.all_vendors -%}
               {%- assign designer_tag = vendor | handleize | prepend: 'designer-' -%}
               <li class="list-menu__item facets__item">
-                <a class="facets__label facet-checkbox designer-filter__link{% if vendor == current_designer %} active{% endif %}" href="{{ collection.url }}/{{ designer_tag }}" {% if vendor == current_designer %}aria-current="true"{% endif %}>{{ vendor | escape }}</a>
+                <a
+                  class="facets__label facet-checkbox designer-filter__link{% if vendor == current_designer %} active{% endif %}"
+                  href="{{ collection.url }}/{{ designer_tag }}"
+                  {% if vendor == current_designer %}
+                    aria-current="true"
+                  {% endif %}
+                >
+                  {{- 'square.svg' | inline_asset_content -}}
+                  <span class="svg-wrapper">
+                    {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  </span>
+                  <span class="facet-checkbox__text">
+                    <span class="facet-checkbox__text-label">{{ vendor | escape }}</span>
+                  </span>
+                </a>
               </li>
             {%- endfor -%}
           </ul>
-          <a class="facets__reset link underlined-link" href="{{ collection.url }}">{{ 'products.facets.reset' | t }}</a>
+          {%- if filter_type == 'vertical' and current_designer != blank -%}
+            <a class="facets__reset link underlined-link" href="{{ collection.url }}">{{ 'products.facets.reset' | t }}</a>
+          {%- endif -%}
         </div>
       </details>
     {%- endif -%}
   {%- endif -%}
-{%- endunless -%}
+{%- endif -%}

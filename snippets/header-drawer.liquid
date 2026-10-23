@@ -53,10 +53,28 @@
                             {{ link.title | escape }}
                           </button>
                           <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                            {%- if link.url contains '/blogs/' -%}
+                            {%- liquid
+                              # Like the desktop dropdown: a parent with its own landing page gets a
+                              # first "View all" entry ("All topics" for the Journal).
+                              assign show_view_all = false
+                              if link.url != blank and link.url != '#'
+                                assign show_view_all = true
+                                for childlink in link.links
+                                  if childlink.url == link.url
+                                    assign show_view_all = false
+                                    break
+                                  endif
+                                endfor
+                              endif
+                            -%}
+                            {%- if show_view_all -%}
                               <li>
                                 <a href="{{ link.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
-                                  {{ 'blogs.article.all_topics' | t }}
+                                  {%- if link.url contains '/blogs/' -%}
+                                    {{ 'blogs.article.all_topics' | t }}
+                                  {%- else -%}
+                                    {{ 'general.navigation.view_all' | t }}
+                                  {%- endif -%}
                                 </a>
                               </li>
                             {%- endif -%}

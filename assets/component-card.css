@@ -659,7 +659,9 @@
 }
 
 
-/* La Retrouvée — consistent square product tiles, including mobile. */
+/* La Retrouvée — consistent square product tiles, including mobile, that show
+   the whole photo: a photo of another shape sits centred on the photo ground
+   instead of being cropped (owner decision 2026-10-23). */
 .product-card-wrapper .card__inner.ratio,
 .product-card-wrapper .card__inner {
   --ratio-percent: 100% !important;
@@ -667,12 +669,12 @@
 .product-card-wrapper .card__media {
   margin: 0;
   width: 100%;
-  background: var(--vp-media-ground, #f6f2ec);
+  background: var(--vp-media-ground, #fcf9f5);
 }
 .product-card-wrapper .card__media .media > img {
   padding: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }

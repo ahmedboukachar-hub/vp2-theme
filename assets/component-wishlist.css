@@ -32,6 +32,42 @@
   border-radius: 50%;
 }
 
+/* Product page: a quiet text action, the heart followed by "Save" or "Saved"
+   (like Dawn's Share link), on a 44px tap target. */
+.wishlist-button--labelled .wishlist-button__toggle {
+  width: auto;
+  height: auto;
+  min-height: 4.4rem;
+  padding: 0;
+  gap: 0.8rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: rgb(var(--color-link));
+}
+
+.wishlist-button--labelled .svg-wrapper {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.wishlist-button--labelled .wishlist-button__toggle:hover .wishlist-button__label {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.wishlist-button--labelled .wishlist-button__toggle:focus-visible {
+  border-radius: 0;
+}
+
+.wishlist-button__label--saved,
+.wishlist-button--saved .wishlist-button__label--add {
+  display: none;
+}
+
+.wishlist-button--saved .wishlist-button__label--saved {
+  display: inline;
+}
+
 .card-wrapper > .wishlist-button {
   position: absolute;
   top: 0.8rem;

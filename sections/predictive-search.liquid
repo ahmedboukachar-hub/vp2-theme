@@ -151,7 +151,24 @@
                           height="{{ 50 | divided_by: product.featured_media.preview_image.aspect_ratio }}"
                         >
                       {%- endif -%}
-                      <div class="predictive-search__item-content{% unless settings.predictive_search_show_vendor or settings.predictive_search_show_price %} predictive-search__item-content--centered{% endunless %}">
+                      {%- liquid
+                        # One-off pieces share titles ("Louis Vuitton Speedy 30"), so each row
+                        # also gets the card's meta line (material · condition, year or colour)
+                        # and sold pieces say so instead of showing a price.
+                        assign result_is_sold = false
+                        if product.tags contains 'sold-archive' or product.available == false
+                          assign result_is_sold = true
+                        endif
+                        assign result_material = product.metafields.custom.material.value
+                        assign result_detail = product.metafields.custom.condition.value | default: product.metafields.custom.year_or_era.value | default: product.metafields.custom.color.value
+                        assign result_title_only = true
+                        if settings.predictive_search_show_vendor or settings.predictive_search_show_price or result_is_sold
+                          assign result_title_only = false
+                        elsif result_material != blank or result_detail != blank
+                          assign result_title_only = false
+                        endif
+                      -%}
+                      <div class="predictive-search__item-content{% if result_title_only %} predictive-search__item-content--centered{% endif %}">
                         {%- if settings.predictive_search_show_vendor -%}
                           <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
                           <div class="predictive-search__item-vendor caption-with-letter-spacing">
@@ -159,7 +176,20 @@
                           </div>
                         {%- endif -%}
                         <p class="predictive-search__item-heading h5">{{ product.title | escape }}</p>
-                        {%- if settings.predictive_search_show_price -%}
+                        {%- if result_material != blank or result_detail != blank -%}
+                          <p class="predictive-search__item-meta">
+                            {%- if result_material != blank -%}{% render 'product-value', value: result_material %}{%- endif -%}
+                            {%- if result_material != blank and result_detail != blank %} &middot; {% endif -%}
+                            {%- if result_detail != blank -%}{% render 'product-value', value: result_detail %}{%- endif -%}
+                          </p>
+                        {%- endif -%}
+                        {%- if result_is_sold -%}
+                          <p class="predictive-search__item-sold">
+                            <span class="badge color-{{ settings.sold_out_badge_color_scheme }}">
+                              {{- 'products.product.sold.badge' | t -}}
+                            </span>
+                          </p>
+                        {%- elsif settings.predictive_search_show_price -%}
                           {% render 'price', product: product, use_variant: true, show_badges: false %}
                         {%- endif -%}
                       </div>

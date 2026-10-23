@@ -81,6 +81,8 @@
       "link_label": "Wunschliste",
       "add": "Zur Wunschliste hinzufügen",
       "remove": "Von der Wunschliste entfernen",
+      "save": "Merken",
+      "saved": "Gemerkt",
       "remove_short": "Entfernen",
       "intro": "Bewahren Sie die Stücke, zu denen Sie zurückkehren möchten, an einem Ort auf.",
       "empty_heading": "Ihre Wunschliste ist leer",
@@ -96,6 +98,9 @@
     "forms": {
       "privacy_note": "Wir verwenden diese Angaben, um Ihnen zu antworten.",
       "privacy_link": "Datenschutzerklärung"
+    },
+    "navigation": {
+      "view_all": "Alle ansehen"
     }
   },
   "newsletter": {
@@ -165,7 +170,10 @@
       "topic_buying_guides": "Kaufratgeber",
       "topic_bag_care": "Pflege & Zustand",
       "topic_designer_stories": "Designer-Geschichten",
-      "topic_collecting_vintage": "Vintage sammeln"
+      "topic_collecting_vintage": "Vintage sammeln",
+      "topic_model_guides": "Modellratgeber",
+      "topic_buying_advice": "Kaufberatung",
+      "topic_classics_by_house": "Klassiker nach Modehaus"
     }
   },
   "onboarding": {
@@ -260,7 +268,9 @@
         "inclusions": "Lieferumfang",
         "serial_or_date_code": "Serien-/Datumscode",
         "provenance": "Herkunft",
-        "authentication_notes": "Authentifizierung"
+        "authentication_notes": "Authentifizierung",
+        "compatible_models": "Passend für",
+        "compatible_accessories": "Passend für diese Tasche"
       },
       "volume_pricing": {
         "title": "Volumenabhängige Preisgestaltung",
@@ -472,10 +482,11 @@
       "consent": "Wir verwenden diese Angaben, um auf Ihre Anfrage zu antworten. Dies ist keine Reservierung und kein Kaufvertrag.",
       "submit": "Anfrage absenden",
       "success_heading": "Ihre Anfrage ist eingegangen",
-      "success_body": "Vielen Dank. Wir melden uns, wenn wir Ihre Suche sinnvoll unterstützen können.",
+      "success_body": "Vielen Dank. Wir bestätigen Ihre Anfrage per E-Mail und behalten sie bei der Suche nach neuen Stücken im Blick. Sobald wir eine passende Tasche finden, melden wir uns bei Ihnen.",
       "closing": "Jedes Pre-owned-Stück ist individuell. Zustand, Alter, Details und Zubehör können variieren, selbst innerhalb desselben Modells. Wir beschreiben stets das konkret angebotene Stück.",
       "hidden_source": "Anfragetyp",
-      "optional_details": "Weitere Wünsche (optional)"
+      "optional_details": "Weitere Wünsche (optional)",
+      "no_preference": "Keine Präferenz"
     },
     "sell_to_us": {
       "fields": {
@@ -496,13 +507,22 @@
       "serial_hint": "Bitte teilen Sie hier keinen vollständigen Serien- oder Datumscode. Geben Sie nur an, ob einer vorhanden ist; Details erfragen wir bei Bedarf auf sicherem Weg.",
       "disclaimer": "Senden Sie keinen Artikel ein, bevor die Versandanweisungen schriftlich mit uns abgestimmt wurden.",
       "submit": "Artikeldetails senden",
-      "success": "Vielen Dank. Wir haben Ihre Einsendung erhalten und melden uns, wenn wir das Stück näher besprechen möchten.",
-      "hidden_source": "Anfragetyp"
+      "success": "Vielen Dank. Wir haben die Angaben zu Ihrem Stück erhalten und senden Ihnen per E-Mail eine Anleitung, wie Sie uns Fotos zukommen lassen.",
+      "hidden_source": "Anfragetyp",
+      "about_you": "Ihre Angaben",
+      "about_piece": "Über das Stück",
+      "contact_phone": "Telefon",
+      "item_types": {
+        "bag": "Tasche",
+        "small_leather_good": "Kleinlederware",
+        "accessory": "Accessoire",
+        "other": "Sonstiges"
+      }
     },
     "about_story": {
       "eyebrow": "Unsere Sicht",
       "heading": "Gefunden, um wieder getragen zu werden.",
-      "intro": "La Retrouvée vereint Vintage- und Pre-owned-Designertaschen, ausgewählt nach Gestaltung, Zustand und eigenem Charakter. Ein Stück kann eine Geschichte haben und dennoch ganz in die Gegenwart passen.",
+      "intro": "La Retrouvée vereint Vintage- und Pre-owned-Designertaschen, ausgewählt nach Gestaltung, Zustand und eigenem Charakter. Ein Stück kann eine Geschichte haben und dennoch ganz in die Gegenwart passen. Jedes Stück wird aus Europa versandt, ohne Zollgebühren innerhalb der EU.",
       "selection_heading": "Einzeln ausgewählt",
       "selection_text": "Ein bekannter Name erzählt nie die ganze Geschichte. Wir betrachten Form, Material und Details jedes Stücks, bevor es Teil der Auswahl wird. Jede Tasche wird als einzelnes Stück angeboten.",
       "detail_heading": "Klar gezeigt",
@@ -641,6 +661,10 @@
     },
     "featured_designers": {
       "explore": "Zur Kollektion"
+    },
+    "collection_houses": {
+      "heading": "Nach Modehaus entdecken",
+      "heading_other": "Weitere Modehäuser"
     }
   },
   "localization": {

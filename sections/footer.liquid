@@ -174,7 +174,7 @@
         </small>
 
         {%- if section.settings.show_policy -%}
-          <ul class="footer__policies list-unstyled">
+          {%- capture footer_policy_items -%}
             {%- for policy in shop.policies -%}
               {%- assign policy_in_menu = false -%}
               {%- for footer_block in section.blocks -%}
@@ -188,7 +188,13 @@
                 </li>
               {%- endif -%}
             {%- endfor -%}
-          </ul>
+          {%- endcapture -%}
+          {%- comment -%} Every policy may already sit in a footer menu; then skip the empty list. {%- endcomment -%}
+          {%- if footer_policy_items != blank -%}
+            <ul class="footer__policies list-unstyled">
+              {{- footer_policy_items -}}
+            </ul>
+          {%- endif -%}
         {%- endif -%}
       </div>
 

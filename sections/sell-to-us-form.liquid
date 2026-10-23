@@ -29,6 +29,52 @@
     font-size: 1.3rem;
     opacity: 0.85;
   }
+
+  .sell-to-us__group {
+    margin: 0 0 var(--vp-space-s);
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+
+  .sell-to-us__group + .sell-to-us__group {
+    padding-top: var(--vp-space-s);
+    border-top: var(--vp-border);
+  }
+
+  /* Floated, the legend sits inside the group like a heading instead of
+     on the group's top rule. */
+  .sell-to-us__legend {
+    float: left;
+    width: 100%;
+    margin-bottom: 1.6rem;
+    padding: 0;
+    font-family: var(--font-heading-family);
+    font-size: 2.2rem;
+    line-height: 1.25;
+  }
+
+  .sell-to-us__legend + * {
+    clear: both;
+  }
+
+  .sell-to-us__select {
+    margin-bottom: 1.5rem;
+  }
+
+  .sell-to-us__select .form__label {
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  .sell-to-us__form .select__select {
+    font-size: 1.6rem;
+    color: rgb(var(--color-foreground));
+  }
+
+  .sell-to-us__form .select .svg-wrapper {
+    right: 1.6rem;
+  }
 {%- endstyle -%}
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
@@ -51,57 +97,135 @@
 
       <input type="hidden" name="contact[{{ 'templates.sell_to_us.hidden_source' | t }}]" value="Sell to Us">
 
-      <div class="field">
-        <input type="text" id="SellToUs-name" name="contact[{{ 'templates.sell_to_us.fields.name' | t }}]" class="field__input" autocomplete="name" placeholder="{{ 'templates.sell_to_us.fields.name' | t }}">
-        <label for="SellToUs-name" class="field__label">{{ 'templates.sell_to_us.fields.name' | t }}</label>
-      </div>
-      <div class="field">
-        <input
-          type="email"
-          id="SellToUs-email"
-          name="contact[email]"
-          class="field__input"
-          value="{{ form.email }}"
-          autocomplete="email"
-          placeholder="{{ 'templates.sell_to_us.fields.email' | t }}"
-          required
-          aria-required="true"
-          {% if form.errors contains 'email' %}
-            aria-invalid="true"
-            aria-describedby="SellToUs-email-error"
-          {% endif %}
-        >
-        <label for="SellToUs-email" class="field__label">
-          {{- 'templates.sell_to_us.fields.email' | t }}
-          <span aria-hidden="true">*</span></label
-        >
-        {%- if form.errors contains 'email' -%}
-          <small id="SellToUs-email-error" class="contact__field-error">
-            {{ form.errors.translated_fields.email | capitalize }}
-            {{ form.errors.messages.email }}
-          </small>
-        {%- endif -%}
-      </div>
       {%- liquid
-        assign text_fields = 'country,item_type,brand_and_model,approximate_year,condition_description,included_accessories,proof_of_purchase,asking_price,preferred_contact' | split: ','
+        assign label_email = 'templates.sell_to_us.fields.email' | t
+        assign label_phone = 'templates.contact.form.phone' | t
+        assign label_contact = 'templates.sell_to_us.fields.preferred_contact' | t
+        assign label_item_type = 'templates.sell_to_us.fields.item_type' | t
+        assign label_brand = 'templates.sell_to_us.fields.brand_and_model' | t
+        assign label_serial = 'templates.sell_to_us.serial' | t
       -%}
-      {%- for field_key in text_fields -%}
-        {%- assign field_label_key = 'templates.sell_to_us.fields.' | append: field_key -%}
-        {%- assign field_label = field_label_key | t -%}
+
+      <fieldset class="sell-to-us__group">
+        <legend class="sell-to-us__legend">{{ 'templates.sell_to_us.about_you' | t }}</legend>
         <div class="field">
-          <input type="text" id="SellToUs-{{ field_key }}" name="contact[{{ field_label }}]" class="field__input"{% if field_key == 'country' %} autocomplete="country-name"{% endif %} placeholder="{{ field_label }}">
-          <label for="SellToUs-{{ field_key }}" class="field__label">{{ field_label }}</label>
+          <input type="text" id="SellToUs-name" name="contact[{{ 'templates.sell_to_us.fields.name' | t }}]" class="field__input" autocomplete="name" placeholder="{{ 'templates.sell_to_us.fields.name' | t }}">
+          <label for="SellToUs-name" class="field__label">{{ 'templates.sell_to_us.fields.name' | t }}</label>
         </div>
-      {%- endfor -%}
-      <div class="field">
-        <input type="text" id="SellToUs-serial" name="contact[{{ 'templates.sell_to_us.serial' | t }}]" class="field__input" placeholder="{{ 'templates.sell_to_us.serial' | t }}">
-        <label for="SellToUs-serial" class="field__label">{{ 'templates.sell_to_us.serial' | t }}</label>
-      </div>
-      <p class="sell-to-us__hint">{{ 'templates.sell_to_us.serial_hint' | t }}</p>
-      <div class="field">
-        <textarea rows="5" id="SellToUs-message" name="contact[body]" class="text-area field__input" placeholder="{{ 'templates.sell_to_us.fields.message' | t }}">{{ form.body }}</textarea>
-        <label for="SellToUs-message" class="form__label field__label">{{ 'templates.sell_to_us.fields.message' | t }}</label>
-      </div>
+        <div class="field">
+          <input
+            type="email"
+            id="SellToUs-email"
+            name="contact[email]"
+            class="field__input"
+            value="{{ form.email }}"
+            autocomplete="email"
+            placeholder="{{ label_email }}"
+            required
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="SellToUs-email-error"
+            {% endif %}
+          >
+          <label for="SellToUs-email" class="field__label">
+            {{- label_email }}
+            <span aria-hidden="true">*</span></label
+          >
+          {%- if form.errors contains 'email' -%}
+            <small id="SellToUs-email-error" class="contact__field-error">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </small>
+          {%- endif -%}
+        </div>
+        <div class="field">
+          <input type="tel" id="SellToUs-phone" name="contact[{{ label_phone }}]" class="field__input" autocomplete="tel" placeholder="{{ label_phone }}">
+          <label for="SellToUs-phone" class="field__label">{{ label_phone }}</label>
+        </div>
+        <div class="field">
+          <input type="text" id="SellToUs-country" name="contact[{{ 'templates.sell_to_us.fields.country' | t }}]" class="field__input" autocomplete="country-name" placeholder="{{ 'templates.sell_to_us.fields.country' | t }}">
+          <label for="SellToUs-country" class="field__label">{{ 'templates.sell_to_us.fields.country' | t }}</label>
+        </div>
+        <div class="sell-to-us__select">
+          <label for="SellToUs-preferred_contact" class="form__label">{{ label_contact }}</label>
+          <div class="select">
+            <select id="SellToUs-preferred_contact" name="contact[{{ label_contact }}]" class="select__select">
+              <option value="{{ label_email }}">{{ label_email }}</option>
+              <option value="{{ 'templates.sell_to_us.contact_phone' | t }}">{{ 'templates.sell_to_us.contact_phone' | t }}</option>
+            </select>
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="sell-to-us__group">
+        <legend class="sell-to-us__legend">{{ 'templates.sell_to_us.about_piece' | t }}</legend>
+        <div class="sell-to-us__select">
+          <label for="SellToUs-item_type" class="form__label">{{ label_item_type }}</label>
+          <div class="select">
+            <select id="SellToUs-item_type" name="contact[{{ label_item_type }}]" class="select__select">
+              {%- assign item_types = 'bag,small_leather_good,accessory,other' | split: ',' -%}
+              {%- for item_type in item_types -%}
+                {%- assign item_type_key = 'templates.sell_to_us.item_types.' | append: item_type -%}
+                <option value="{{ item_type_key | t }}">{{ item_type_key | t }}</option>
+              {%- endfor -%}
+            </select>
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <input
+            type="text"
+            id="SellToUs-brand_and_model"
+            name="contact[{{ label_brand }}]"
+            class="field__input"
+            placeholder="{{ label_brand }}"
+            required
+            aria-required="true"
+          >
+          <label for="SellToUs-brand_and_model" class="field__label">
+            {{- label_brand }}
+            <span aria-hidden="true">*</span></label
+          >
+        </div>
+        {%- assign text_fields = 'approximate_year,condition_description,included_accessories,proof_of_purchase,asking_price' | split: ',' -%}
+        {%- for field_key in text_fields -%}
+          {%- assign field_label_key = 'templates.sell_to_us.fields.' | append: field_key -%}
+          {%- assign field_label = field_label_key | t -%}
+          <div class="field">
+            {%- if field_key == 'condition_description' or field_key == 'included_accessories' -%}
+              <textarea rows="3" id="SellToUs-{{ field_key }}" name="contact[{{ field_label }}]" class="text-area field__input" placeholder="{{ field_label }}"></textarea>
+              <label for="SellToUs-{{ field_key }}" class="form__label field__label">{{ field_label }}</label>
+            {%- else -%}
+              <input
+                type="text"
+                id="SellToUs-{{ field_key }}"
+                name="contact[{{ field_label }}]"
+                class="field__input"
+                {% if field_key == 'asking_price' %}
+                  inputmode="decimal"
+                {% endif %}
+                placeholder="{{ field_label }}"
+              >
+              <label for="SellToUs-{{ field_key }}" class="field__label">{{ field_label }}</label>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+        <div class="field">
+          <input type="text" id="SellToUs-serial" name="contact[{{ label_serial }}]" class="field__input" placeholder="{{ label_serial }}" aria-describedby="SellToUs-serial-hint">
+          <label for="SellToUs-serial" class="field__label">{{ label_serial }}</label>
+        </div>
+        <p class="sell-to-us__hint" id="SellToUs-serial-hint">{{ 'templates.sell_to_us.serial_hint' | t }}</p>
+        <div class="field">
+          <textarea rows="5" id="SellToUs-message" name="contact[body]" class="text-area field__input" placeholder="{{ 'templates.sell_to_us.fields.message' | t }}">{{ form.body }}</textarea>
+          <label for="SellToUs-message" class="form__label field__label">{{ 'templates.sell_to_us.fields.message' | t }}</label>
+        </div>
+      </fieldset>
 
       <p class="sell-to-us__disclaimer">{{ 'templates.sell_to_us.disclaimer' | t }}</p>
       {% render 'form-privacy-note', class: 'sell-to-us__disclaimer' %}

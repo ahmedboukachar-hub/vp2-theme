@@ -1,0 +1,96 @@
+/* Policy pages (/policies/*). Shopify renders their markup itself
+   (.shopify-policy__container, __title, __body) with a centred title over a
+   left-aligned body. Loaded only when request.page_type == 'policy', this
+   gives them the frame of the other content pages: one left-aligned display
+   title on the left edge of a centred reading column, and the rich-text
+   rhythm of .vp-rte. It loads after Shopify's own policy stylesheet, so
+   rules of equal specificity win. Policy text itself is never touched. */
+
+.shopify-policy__container {
+  max-width: calc(var(--vp-measure-article) + 2 * var(--vp-gutter));
+  margin: 0 auto;
+  padding: var(--vp-space-l) var(--vp-gutter);
+}
+
+@media screen and (min-width: 750px) {
+  .shopify-policy__container {
+    padding-block: var(--vp-space-xl);
+  }
+}
+
+.shopify-policy__title {
+  margin-bottom: var(--vp-space-m);
+  text-align: left;
+}
+
+.shopify-policy__title h1 {
+  margin: 0;
+  font-size: var(--vp-type-display);
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+.shopify-policy__body .rte {
+  font-size: var(--vp-type-body);
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+.shopify-policy__body .rte a {
+  color: inherit;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(var(--color-foreground), 0.4);
+}
+
+.shopify-policy__body .rte a:hover {
+  text-decoration-color: currentColor;
+}
+
+.shopify-policy__body .rte h2 {
+  margin: var(--vp-space-l) 0 1.2rem;
+  font-size: var(--vp-type-sub);
+  line-height: 1.2;
+  letter-spacing: -0.008em;
+}
+
+.shopify-policy__body .rte h3 {
+  margin: var(--vp-space-m) 0 0.8rem;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.shopify-policy__body .rte > :first-child,
+.shopify-policy__body .rte > :first-child > :first-child {
+  margin-top: 0;
+}
+
+.shopify-policy__body .rte :is(h2, h3) + p {
+  margin-top: 0.8rem;
+}
+
+.shopify-policy__body .rte :is(ul, ol) {
+  padding-left: 2.2rem;
+  list-style-position: outside;
+}
+
+.shopify-policy__body .rte li + li {
+  margin-top: 0.6rem;
+}
+
+.shopify-policy__body .rte table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+  table-layout: auto;
+}
+
+.shopify-policy__body .rte :is(th, td) {
+  padding: 1.2rem 1.6rem 1.2rem 0;
+  border-bottom: var(--vp-border);
+  text-align: left;
+  vertical-align: top;
+}

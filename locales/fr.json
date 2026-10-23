@@ -81,6 +81,8 @@
       "link_label": "Favoris",
       "add": "Ajouter aux favoris",
       "remove": "Retirer des favoris",
+      "save": "Enregistrer",
+      "saved": "Enregistré",
       "remove_short": "Retirer",
       "intro": "Gardez au même endroit les pièces que vous souhaitez retrouver.",
       "empty_heading": "Vos favoris sont vides",
@@ -96,6 +98,9 @@
     "forms": {
       "privacy_note": "Nous utilisons ces informations pour vous répondre.",
       "privacy_link": "Politique de confidentialité"
+    },
+    "navigation": {
+      "view_all": "Tout voir"
     }
   },
   "newsletter": {
@@ -166,7 +171,10 @@
       "topic_buying_guides": "Guides d’achat",
       "topic_bag_care": "Entretien & état",
       "topic_designer_stories": "Histoires de créateurs",
-      "topic_collecting_vintage": "Collectionner le vintage"
+      "topic_collecting_vintage": "Collectionner le vintage",
+      "topic_model_guides": "Guides des modèles",
+      "topic_buying_advice": "Conseils d’achat",
+      "topic_classics_by_house": "Les classiques par maison"
     }
   },
   "onboarding": {
@@ -260,7 +268,9 @@
         "inclusions": "Accessoires inclus",
         "serial_or_date_code": "Code série / date",
         "provenance": "Provenance",
-        "authentication_notes": "Authentification"
+        "authentication_notes": "Authentification",
+        "compatible_models": "Compatible avec",
+        "compatible_accessories": "Compatible avec ce sac"
       },
       "inventory_out_of_stock": "En rupture de stock",
       "inventory_out_of_stock_continue_selling": "En stock",
@@ -481,10 +491,11 @@
       "consent": "Nous utiliserons ces informations pour répondre à votre demande. Ceci ne constitue ni une réservation ni un contrat d’achat.",
       "submit": "Envoyer ma demande",
       "success_heading": "Votre demande a bien été reçue",
-      "success_body": "Merci. Nous vous contacterons si nous pouvons réellement vous aider dans votre recherche.",
+      "success_body": "Merci. Nous vous confirmerons votre demande par e-mail et la garderons à l’esprit dans nos recherches de nouvelles pièces. Dès que nous trouverons un sac qui correspond, nous vous en informerons.",
       "closing": "Chaque pièce de seconde main est unique. L’état, l’âge, les détails et les accessoires peuvent varier, même au sein d’un même modèle. Nous décrivons toujours la pièce précise proposée.",
       "hidden_source": "Type de demande",
-      "optional_details": "Autres préférences (facultatif)"
+      "optional_details": "Autres préférences (facultatif)",
+      "no_preference": "Aucune préférence"
     },
     "sell_to_us": {
       "fields": {
@@ -505,13 +516,22 @@
       "serial_hint": "Ne partagez pas ici un code série ou date complet. Indiquez seulement s’il est présent ; nous demanderons les détails de manière sécurisée si nécessaire.",
       "disclaimer": "N’envoyez aucun article avant que les instructions d’expédition aient été convenues avec nous par écrit.",
       "submit": "Envoyer les détails de l’article",
-      "success": "Merci. Nous avons bien reçu votre demande et vous contacterons si nous souhaitons en discuter davantage.",
-      "hidden_source": "Type de demande"
+      "success": "Merci. Nous avons bien reçu les informations sur votre pièce et vous répondrons par e-mail avec les instructions pour partager des photographies.",
+      "hidden_source": "Type de demande",
+      "about_you": "Vos coordonnées",
+      "about_piece": "À propos de la pièce",
+      "contact_phone": "Téléphone",
+      "item_types": {
+        "bag": "Sac",
+        "small_leather_good": "Petite maroquinerie",
+        "accessory": "Accessoire",
+        "other": "Autre"
+      }
     },
     "about_story": {
       "eyebrow": "Notre regard",
       "heading": "Retrouvés pour être portés à nouveau.",
-      "intro": "La Retrouvée réunit des sacs de créateurs vintage et de seconde main, choisis pour leur ligne, leur état et leur caractère singulier. Une pièce peut avoir une histoire et trouver naturellement sa place aujourd’hui.",
+      "intro": "La Retrouvée réunit des sacs de créateurs vintage et de seconde main, choisis pour leur ligne, leur état et leur caractère singulier. Une pièce peut avoir une histoire et trouver naturellement sa place aujourd’hui. Chaque pièce est expédiée depuis l’Europe, sans frais de douane au sein de l’UE.",
       "selection_heading": "Choisis un à un",
       "selection_text": "Un grand nom ne raconte jamais toute l’histoire. Nous examinons la forme, les matières et les détails de chaque pièce avant de l’intégrer à la sélection. Chaque sac est présenté comme une pièce unique.",
       "detail_heading": "Présentés avec clarté",
@@ -653,6 +673,10 @@
     },
     "featured_designers": {
       "explore": "Voir la collection"
+    },
+    "collection_houses": {
+      "heading": "Parcourir par maison",
+      "heading_other": "Autres maisons"
     }
   },
   "localization": {

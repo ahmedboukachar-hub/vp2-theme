@@ -33,10 +33,21 @@
             assign designer_name = block.settings.title | default: designer_collection.title
           -%}
           {%- liquid
+            # Rendered image widths, matching the grid in section-featured-designers.css
+            # (1440px canvas, 5rem gutters and 6.4rem gaps from 750px; 1.5rem gutters
+            # and a 4rem gap below). On the two-up grid a small card is a horizontal
+            # card from 990px, its photo half the card width.
             assign card_size = block.settings.size | default: 'large'
-            assign card_sizes = '(min-width: 990px) 46vw, 100vw'
-            if card_size == 'small'
-              assign card_sizes = '(min-width: 990px) 22vw, 50vw'
+            if section.settings.columns_desktop == '3'
+              assign card_sizes = '(min-width: 1440px) 404px, (min-width: 750px) calc(33.3vw - 76px), calc(100vw - 30px)'
+              if card_size == 'small'
+                assign card_sizes = '(min-width: 1440px) 170px, (min-width: 750px) calc(16.7vw - 70px), calc(50vw - 35px)'
+              endif
+            else
+              assign card_sizes = '(min-width: 1440px) 638px, (min-width: 750px) calc(50vw - 82px), calc(100vw - 30px)'
+              if card_size == 'small'
+                assign card_sizes = '(min-width: 1440px) 307px, (min-width: 990px) calc(25vw - 53px), (min-width: 750px) calc(50vw - 82px), calc(50vw - 35px)'
+              endif
             endif
             assign focus = block.settings.image_position | default: 'center'
           -%}
@@ -83,7 +94,7 @@
       "id": "columns_desktop",
       "label": "Cards per row on desktop",
       "options": [
-        { "value": "2", "label": "2 large cards per row (small cards: 4 per row)" },
+        { "value": "2", "label": "2 large cards per row (small cards: 2 shorter cards per row)" },
         { "value": "3", "label": "3 large cards per row (small cards: 6 per row)" }
       ],
       "default": "2"
@@ -91,7 +102,7 @@
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
     {
       "type": "paragraph",
-      "content": "Only designers with a linked, existing collection are shown. Use your own collection imagery (cropped to 4:5) — no brand logos. Mark secondary houses as small cards; two small cards share one large card's width."
+      "content": "Only designers with a linked, existing collection are shown. Use your own collection imagery (cropped to 4:5) — no brand logos. Mark secondary houses as small cards: on phones two sit side by side, on larger screens they fill the row as shorter cards."
     }
   ],
   "blocks": [
@@ -107,7 +118,7 @@
           "label": "Card size",
           "options": [
             { "value": "large", "label": "Large" },
-            { "value": "small", "label": "Small (half width, two side by side)" }
+            { "value": "small", "label": "Small (shorter card, two side by side)" }
           ],
           "default": "large"
         },
