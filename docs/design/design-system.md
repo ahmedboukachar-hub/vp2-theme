@@ -24,6 +24,16 @@ shape is decided.
 
 ## Layout rules
 
+- Buttons (owner decision 2026-10-23): every call-to-action button has one
+  width, `--vp-button-width` (28rem) in `vp-tokens.css`, on tablet and
+  desktop; on phones buttons run the full column. On the product page all
+  actions (Buy it now, Add to cart, sold-state buttons, Ask about this
+  piece) fill the buy column, capped at 44rem. Exception: the two hero
+  buttons share the hero copy column side by side. Keep button labels short
+  enough to fit 28rem in every language (about 24 characters).
+- Product page: "Buy it now" stays the filled, most prominent button and
+  "Add to cart" the lighter one (owner decision 2026-10-23).
+
 - Editorial max width: theme `page-width` (Dawn setting).
 - Product cards: 4:5 media, 3 columns desktop, 2 on mobile (1 below 480px
   in custom grids).
