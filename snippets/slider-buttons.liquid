@@ -1,0 +1,40 @@
+{% doc %}
+  Dawn's previous/next buttons and page counter for a slider-component, for sliders whose
+  markup is not already inside a Dawn section (related products, recently viewed).
+
+  @param {string} slider_id - The id suffix of the slider list (the list id is "Slider-<slider_id>").
+  @param {number} [total] - Initial number of pages; the slider script corrects it on load.
+
+  @example
+  {% render 'slider-buttons', slider_id: section.id, total: 4 %}
+{% enddoc %}
+<div class="slider-buttons">
+  <button
+    type="button"
+    class="slider-button slider-button--prev"
+    name="previous"
+    aria-label="{{ 'general.slider.previous_slide' | t }}"
+    aria-controls="Slider-{{ slider_id }}"
+  >
+    <span class="svg-wrapper">
+      {{- 'icon-caret.svg' | inline_asset_content -}}
+    </span>
+  </button>
+  <div class="slider-counter caption">
+    <span class="slider-counter--current">1</span>
+    <span aria-hidden="true"> / </span>
+    <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+    <span class="slider-counter--total">{{ total | default: 1 }}</span>
+  </div>
+  <button
+    type="button"
+    class="slider-button slider-button--next"
+    name="next"
+    aria-label="{{ 'general.slider.next_slide' | t }}"
+    aria-controls="Slider-{{ slider_id }}"
+  >
+    <span class="svg-wrapper">
+      {{- 'icon-caret.svg' | inline_asset_content -}}
+    </span>
+  </button>
+</div>

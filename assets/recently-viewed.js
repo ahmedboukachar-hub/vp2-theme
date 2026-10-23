@@ -127,13 +127,27 @@
         renderCards(cards) {
           var grid = this.querySelector('[data-recently-viewed-grid]');
           if (!grid) return;
-          cards.forEach(function (html) {
+          var sectionId = this.dataset.sectionId || 'recently-viewed';
+          // Below 990px the grid shows two cards per row; with more cards it
+          // becomes Dawn's swipeable slider, like "You may also like".
+          var useSlider = cards.length > 2;
+          cards.forEach(function (html, index) {
             var item = document.createElement('li');
-            item.className = 'grid__item';
+            item.id = 'Slide-' + sectionId + '-' + (index + 1);
+            item.className = useSlider ? 'grid__item slider__slide' : 'grid__item';
             item.innerHTML = html;
             grid.appendChild(item);
           });
+          var slider = this.querySelector('slider-component');
+          var buttons = this.querySelector('.slider-buttons');
+          if (useSlider) {
+            grid.classList.add('slider', 'slider--tablet', 'grid--peek');
+            if (slider) slider.classList.remove('page-width');
+          } else if (buttons) {
+            buttons.remove();
+          }
           this.hidden = false;
+          if (useSlider && slider && typeof slider.resetPages === 'function') slider.resetPages();
         }
       }
     );
