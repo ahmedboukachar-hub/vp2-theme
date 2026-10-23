@@ -140,15 +140,14 @@
   }
 }
 
-/* Mobile: the enquiry trigger and its submit span the column like the buy
-   buttons above (same 44rem cap as .product-form__buttons). */
-@media screen and (max-width: 749px) {
-  .product-enquiry__summary,
-  .product-enquiry__content > .button {
-    display: flex;
-    width: 100%;
-    max-width: 44rem;
-  }
+/* The enquiry trigger and its submit span the column like the buy buttons
+   above (same 44rem cap as .product-form__buttons), so every button on the
+   product page has one width. */
+.product-enquiry__summary,
+.product-enquiry__content > .button {
+  display: flex;
+  width: 100%;
+  max-width: 44rem;
 }
 
 .product-enquiry__content .field,
@@ -190,12 +189,10 @@
   margin-bottom: 1rem;
 }
 
-/* Mobile: stacked, full-width buttons like the buy buttons they replace. */
-@media screen and (max-width: 749px) {
-  .product-sold-state__actions {
-    flex-direction: column;
-    max-width: 44rem;
-  }
+/* Stacked, column-wide buttons like the buy buttons they replace. */
+.product-sold-state__actions {
+  flex-direction: column;
+  max-width: 44rem;
 }
 
 .product-sold-state__sourcing {
