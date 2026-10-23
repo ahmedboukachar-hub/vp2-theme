@@ -2,6 +2,14 @@
   padding-block: var(--vp-space-l);
 }
 
+/* On phones a hero on the page canvas flows straight into the next
+   section, whose own top padding completes the gap; the full 6.4rem here
+   left a ~100px band between the hero and the first paragraph. Heroes on
+   their own colour band keep even padding. */
+@media screen and (max-width: 749px) {
+  .page-hero--canvas { padding-bottom: var(--vp-space-m); }
+}
+
 @media screen and (min-width: 750px) {
   .page-hero { padding-block: var(--vp-space-xl) var(--vp-space-l); }
 }
@@ -17,12 +25,12 @@
 
 .page-hero__intro { margin-top: 2.4rem; }
 
+/* The H1 keeps the display size with or without an image, so every
+   content page opens at the same title size. */
 @media screen and (min-width: 750px) {
   .page-hero--with-media .page-hero__inner {
     grid-template-columns: 56fr 42fr;
     gap: var(--vp-space-l);
     align-items: center;
   }
-
-  .page-hero--with-media .page-hero__title { font-size: clamp(3.4rem, 3.8vw, 4.8rem); }
 }

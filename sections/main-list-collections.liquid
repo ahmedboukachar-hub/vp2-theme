@@ -2,7 +2,8 @@
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
-  <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  {%- comment -%} The title and the first row show at once; lower rows reveal on scroll. {%- endcomment -%}
+  <h1 class="title title--primary vp-heading-display inline-richtext">
     {{ section.settings.title }}
   </h1>
   {%- liquid
@@ -31,9 +32,15 @@
     >
       {%- for collection in collections -%}
         {%- if collection.all_products_count == 0 -%}{%- continue -%}{%- endif -%}
+        {%- liquid
+          assign reveal = false
+          if settings.animations_reveal_on_scroll and forloop.index > section.settings.columns_desktop
+            assign reveal = true
+          endif
+        -%}
         <li
-          class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
+          class="collection-list__item grid__item{% if reveal %} scroll-trigger animate--slide-in{% endif %}"
+          {% if reveal %}
             data-cascade
             style="--animation-order: {{ forloop.index }};"
           {% endif %}
