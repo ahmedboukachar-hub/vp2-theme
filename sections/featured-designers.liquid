@@ -18,6 +18,8 @@
         {%- endif -%}
         {%- if section.settings.title != blank -%}
           <h2 class="vp-heading-section inline-richtext">{{ section.settings.title }}</h2>
+        {%- else -%}
+          <h2 class="visually-hidden">{{ 'accessibility.heading_houses' | t }}</h2>
         {%- endif -%}
       </div>
 
@@ -39,7 +41,7 @@
             assign focus = block.settings.image_position | default: 'center'
           -%}
           <li class="featured-designers__item featured-designers__item--{{ card_size }}" {{ block.shopify_attributes }}>
-            <a class="featured-designers__link" href="{{ designer_collection.url }}">
+            <a class="featured-designers__link" href="{{ designer_collection.url }}" aria-labelledby="FeaturedDesigner-{{ block.id }}">
               <div class="featured-designers__media vp-media vp-media--4x5 vp-media--zoom" style="--vp-media-position: center {{ focus }};">
                 {%- if designer_collection.featured_image != blank -%}
                   {{
@@ -49,13 +51,13 @@
                       loading: 'lazy',
                       widths: '400, 600, 800, 1100, 1400, 1600',
                       sizes: card_sizes,
-                      alt: designer_collection.featured_image.alt | default: designer_name
+                      alt: ''
                   }}
                 {%- endif -%}
               </div>
               <div class="featured-designers__info">
-                <h3 class="featured-designers__name">{{ designer_name | escape }}</h3>
-                <span class="vp-link vp-link--arrow featured-designers__cta">
+                <h3 class="featured-designers__name" id="FeaturedDesigner-{{ block.id }}">{{ designer_name | escape }}</h3>
+                <span class="vp-link vp-link--arrow featured-designers__cta" aria-hidden="true">
                   {{- 'sections.featured_designers.explore' | t: designer: designer_name -}}
                 </span>
               </div>

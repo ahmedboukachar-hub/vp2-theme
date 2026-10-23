@@ -66,6 +66,7 @@
       "home": "Home"
     },
     "wishlist": {
+      "removed_notice": "{{ title }} è stato rimosso dalla lista dei desideri.",
       "link_label": "Lista dei desideri",
       "add": "Salva nella lista dei desideri",
       "remove": "Rimuovi dalla lista dei desideri",
@@ -78,6 +79,7 @@
       "requires_js": "Per visualizzare i pezzi salvati nella lista dei desideri è necessario JavaScript."
     },
     "footer": {
+      "navigation_label": "Navigazione del piè di pagina",
       "non_affiliation": "{{ shop_name }} è un rivenditore indipendente e non è affiliato alle maison presenti su questo sito. Tutti i marchi appartengono ai rispettivi titolari."
     }
   },
@@ -87,6 +89,10 @@
     "button_label": "Iscriviti"
   },
   "accessibility": {
+    "heading_articles": "Articoli",
+    "heading_houses": "Maison",
+    "heading_collections": "Tutte le collezioni",
+    "heading_pieces": "Pezzi",
     "skip_to_text": "Vai direttamente ai contenuti",
     "close": "Chiudi",
     "unit_price_separator": "per",
@@ -115,7 +121,7 @@
   },
   "blogs": {
     "article": {
-      "blog": "Blog",
+      "blog": "Journal",
       "read_more_title": "Leggi di più: {{ title }}",
       "comments": {
         "one": "{{ count }} commento",

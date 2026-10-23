@@ -90,6 +90,7 @@
           </div>
         {%- endif -%}
 
+        <h2 class="visually-hidden">{{ 'accessibility.heading_articles' | t }}</h2>
         <ul class="journal-index__grid" role="list">
           {%- for article in blog.articles -%}
             {%- if show_feature and forloop.first -%}

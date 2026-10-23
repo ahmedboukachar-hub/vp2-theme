@@ -75,6 +75,7 @@
       "name": "Carrousel"
     },
     "wishlist": {
+      "removed_notice": "{{ title }} a été retiré des favoris.",
       "link_label": "Favoris",
       "add": "Ajouter aux favoris",
       "remove": "Retirer des favoris",
@@ -87,6 +88,7 @@
       "requires_js": "Vos favoris nécessitent JavaScript pour afficher les pièces enregistrées."
     },
     "footer": {
+      "navigation_label": "Navigation du pied de page",
       "non_affiliation": "{{ shop_name }} est un revendeur indépendant et n'est affilié à aucune des maisons de créateurs présentées sur ce site. Toutes les marques restent la propriété de leurs détenteurs respectifs."
     }
   },
@@ -96,6 +98,10 @@
     "button_label": "S'inscrire"
   },
   "accessibility": {
+    "heading_articles": "Articles",
+    "heading_houses": "Maisons",
+    "heading_collections": "Toutes les collections",
+    "heading_pieces": "Pièces",
     "skip_to_text": "Ignorer et passer au contenu",
     "close": "Fermer",
     "unit_price_separator": "par",
@@ -124,7 +130,7 @@
   },
   "blogs": {
     "article": {
-      "blog": "Blog",
+      "blog": "Journal",
       "read_more_title": "Lire la suite : {{ title }}",
       "comments": {
         "one": "{{ count }} commentaire",

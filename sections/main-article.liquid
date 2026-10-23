@@ -2,10 +2,26 @@
 
 {%- assign topic = article.tags | first -%}
 
-<article class="article-page color-{{ section.settings.color_scheme }} gradient" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article-page color-{{ section.settings.color_scheme }} gradient" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="vp-width article-page__intro{% if article.image and section.settings.show_image %} article-page__intro--with-media{% endif %}">
     <header class="article-page__header">
-      <meta itemprop="datePublished" content="{{ article.published_at | date: '%Y-%m-%d' }}">
+      {%- assign article_brand = settings.brand_display_name | default: shop.name -%}
+      <meta itemprop="datePublished" content="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+      <meta itemprop="dateModified" content="{{ article.updated_at | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+      <link itemprop="mainEntityOfPage" href="{{ canonical_url }}">
+      <span itemprop="author" itemscope itemtype="https://schema.org/Organization" hidden>
+        <meta itemprop="name" content="{{ article_brand | escape }}">
+        <link itemprop="url" href="{{ shop.url }}">
+      </span>
+      <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization" hidden>
+        <meta itemprop="name" content="{{ article_brand | escape }}">
+        <link itemprop="url" href="{{ shop.url }}">
+        {%- if settings.logo != blank -%}
+          <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <link itemprop="url" href="https:{{ settings.logo | image_url: width: 600 }}">
+          </span>
+        {%- endif -%}
+      </span>
       {%- if topic != blank and section.settings.show_topic -%}
         <a class="vp-eyebrow article-page__topic" href="{{ blog.url }}/tagged/{{ topic | handleize }}">
           {% render 'journal-topic', topic: topic %}

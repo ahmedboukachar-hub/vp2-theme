@@ -42,6 +42,10 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
+    {%- if request.page_type == 'cart' or template.suffix == 'wishlist' -%}
+      <meta name="robots" content="noindex, follow">
+    {%- endif -%}
+
     {% render 'meta-tags' %}
 
     <script type="module">

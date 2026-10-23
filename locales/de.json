@@ -75,6 +75,7 @@
       "name": "Karussell"
     },
     "wishlist": {
+      "removed_notice": "{{ title }} wurde von der Wunschliste entfernt.",
       "link_label": "Wunschliste",
       "add": "Zur Wunschliste hinzufügen",
       "remove": "Von der Wunschliste entfernen",
@@ -87,6 +88,7 @@
       "requires_js": "Ihre Wunschliste benötigt JavaScript, um gespeicherte Stücke anzuzeigen."
     },
     "footer": {
+      "navigation_label": "Navigation in der Fußzeile",
       "non_affiliation": "{{ shop_name }} ist ein unabhängiger Wiederverkäufer und steht in keiner Verbindung zu den auf dieser Website vorgestellten Designerhäusern. Alle Marken bleiben Eigentum ihrer jeweiligen Inhaber."
     }
   },
@@ -96,6 +98,10 @@
     "button_label": "Abonnieren"
   },
   "accessibility": {
+    "heading_articles": "Artikel",
+    "heading_houses": "Modehäuser",
+    "heading_collections": "Alle Kollektionen",
+    "heading_pieces": "Stücke",
     "skip_to_text": "Direkt zum Inhalt",
     "close": "Schließen",
     "unit_price_separator": "pro",
@@ -124,7 +130,7 @@
   },
   "blogs": {
     "article": {
-      "blog": "Blog",
+      "blog": "Journal",
       "read_more_title": "Weiterlesen: {{ title }}",
       "comments": {
         "one": "{{ count }} Kommentar",

@@ -88,7 +88,7 @@
     {%- endif -%}
 
     {%- if section.blocks.size > 0 -%}
-      <div class="footer__groups" data-footer-groups>
+      <div class="footer__groups" data-footer-groups role="navigation" aria-label="{{ 'general.footer.navigation_label' | t | escape }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
