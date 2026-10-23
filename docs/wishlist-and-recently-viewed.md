@@ -3,7 +3,10 @@
 Both features are progressive enhancements: the site works fully without them
 and without JavaScript. No account or login is required, and there is no
 tracking and no request to any external service — product data comes only from
-the shop's own `/products/<handle>.js` endpoints.
+the shop itself. The wishlist reads `/products/<handle>.js`; Recently viewed
+fetches each card through the Section Rendering API
+(`/products/<handle>?section_id=recently-viewed-card`), so it shows the theme's
+own product cards, identical to "You may also like".
 
 ## Important limitation (first version)
 

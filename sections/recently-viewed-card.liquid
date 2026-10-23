@@ -1,0 +1,25 @@
+{%- comment -%}
+  One product card for the product in context, fetched by assets/recently-viewed.js
+  through the Section Rendering API (/products/<handle>?section_id=recently-viewed-card),
+  so Recently viewed shows exactly the same cards as "You may also like". Not meant to
+  be added in the Theme Editor (no presets).
+{%- endcomment -%}
+{%- if product -%}
+  {% render 'card-product',
+    columns: 4,
+    card_product: product,
+    media_aspect_ratio: 'portrait',
+    image_shape: 'default',
+    show_secondary_image: true,
+    show_vendor: false,
+    show_rating: false,
+    product_view_context: 'recommendation'
+  %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Recently viewed card",
+  "settings": []
+}
+{% endschema %}

@@ -21,16 +21,9 @@
   data-root-url="{{ routes.root_url }}"
   hidden
 >
-  <h2 class="recently-viewed__heading h3">{{ 'products.product.recently_viewed' | t }}</h2>
-  <ul class="recently-viewed__grid list-unstyled" role="list" data-recently-viewed-grid></ul>
-  <template>
-    <li class="recently-viewed__card">
-      <a data-rv-link href="#" class="recently-viewed__link">
-        <img data-rv-image alt="" loading="lazy" width="600" height="750" class="recently-viewed__image">
-        <span data-rv-title class="recently-viewed__title"></span>
-      </a>
-    </li>
-  </template>
+  <h2 class="recently-viewed__heading h2">{{ 'products.product.recently_viewed' | t }}</h2>
+  {%- comment -%} Same grid and cards as "You may also like"; recently-viewed.js fills it. {%- endcomment -%}
+  <ul class="grid product-grid grid--4-col-desktop grid--2-col-tablet-down" role="list" data-recently-viewed-grid></ul>
 </recently-viewed>
 
 {% schema %}
