@@ -9,6 +9,9 @@
  */
 {
   "general": {
+    "meta": {
+      "home_description": "Sacs de créateurs vintage et de seconde main choisis avec soin : Louis Vuitton, Gucci, Dior. Authenticité vérifiée, livraison offerte, retours sous 14 jours."
+    },
     "breadcrumbs": {
       "label": "Fil d’Ariane",
       "home": "Accueil"
@@ -360,7 +363,25 @@
       "excellent": "Excellent",
       "very_good": "Très bon",
       "good": "Bon",
-      "fair": "Correct"
+      "fair": "Correct",
+      "red": "Rouge",
+      "blue": "Bleu",
+      "cream": "Crème",
+      "white": "Blanc",
+      "green": "Vert",
+      "pink": "Rose",
+      "grey": "Gris",
+      "tote_bag": "Cabas",
+      "shoulder_strap": "Bandoulière",
+      "bag_organizer": "Organisateur de sac",
+      "gg_shoulder_bag": "Sac porté épaule GG",
+      "dior_oblique_canvas": "Toile Dior Oblique",
+      "unbranded": "Sans marque",
+      "dust_bag": "Housse de protection",
+      "padlock_key_not_included": "Cadenas (clé non incluse)",
+      "evening_bag": "Sac du soir",
+      "epi_leather": "Cuir épi",
+      "padlock": "Cadenas"
     }
   },
   "templates": {

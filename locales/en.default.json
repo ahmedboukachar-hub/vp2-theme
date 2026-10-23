@@ -9,6 +9,9 @@
  */
 {
   "general": {
+    "meta": {
+      "home_description": "Curated vintage and pre-owned designer bags by Louis Vuitton, Gucci and Dior. Checked for authenticity, with free shipping and 14-day returns."
+    },
     "breadcrumbs": {
       "label": "Breadcrumb",
       "home": "Home"
@@ -356,7 +359,25 @@
       "excellent": "Excellent",
       "very_good": "Very good",
       "good": "Good",
-      "fair": "Fair"
+      "fair": "Fair",
+      "red": "Red",
+      "blue": "Blue",
+      "cream": "Cream",
+      "white": "White",
+      "green": "Green",
+      "pink": "Pink",
+      "grey": "Grey",
+      "tote_bag": "Tote bag",
+      "shoulder_strap": "Shoulder strap",
+      "bag_organizer": "Bag organizer",
+      "gg_shoulder_bag": "GG Shoulder Bag",
+      "dior_oblique_canvas": "Dior Oblique canvas",
+      "unbranded": "Unbranded",
+      "dust_bag": "Dust bag",
+      "padlock_key_not_included": "Padlock (key not included)",
+      "evening_bag": "Evening bag",
+      "epi_leather": "Epi leather",
+      "padlock": "Padlock"
     }
   },
   "templates": {

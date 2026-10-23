@@ -9,6 +9,9 @@
  */
 {
   "general": {
+    "meta": {
+      "home_description": "Ausgewählte Vintage- und Pre-owned-Designertaschen von Louis Vuitton, Gucci und Dior. Auf Echtheit geprüft, kostenloser Versand und 14 Tage Rückgaberecht."
+    },
     "breadcrumbs": {
       "label": "Brotkrümelnavigation",
       "home": "Startseite"
@@ -356,7 +359,25 @@
       "excellent": "Ausgezeichnet",
       "very_good": "Sehr gut",
       "good": "Gut",
-      "fair": "Akzeptabel"
+      "fair": "Akzeptabel",
+      "red": "Rot",
+      "blue": "Blau",
+      "cream": "Creme",
+      "white": "Weiß",
+      "green": "Grün",
+      "pink": "Rosa",
+      "grey": "Grau",
+      "tote_bag": "Shopper",
+      "shoulder_strap": "Schulterriemen",
+      "bag_organizer": "Taschenorganizer",
+      "gg_shoulder_bag": "GG-Schultertasche",
+      "dior_oblique_canvas": "Dior-Oblique-Canvas",
+      "unbranded": "Ohne Marke",
+      "dust_bag": "Staubbeutel",
+      "padlock_key_not_included": "Vorhängeschloss (ohne Schlüssel)",
+      "evening_bag": "Abendtasche",
+      "epi_leather": "Epi-Leder",
+      "padlock": "Vorhängeschloss"
     }
   },
   "templates": {

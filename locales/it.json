@@ -1,5 +1,8 @@
 {
   "general": {
+    "meta": {
+      "home_description": "Borse firmate vintage e di seconda mano scelte con cura: Louis Vuitton, Gucci, Dior. Autenticità verificata, spedizione gratuita e resi entro 14 giorni."
+    },
     "password_page": {
       "login_form_heading": "Accedi al negozio utilizzando la password:",
       "login_password_button": "Accedi utilizzando la password",
@@ -351,7 +354,25 @@
       "excellent": "Eccellenti",
       "very_good": "Ottime",
       "good": "Buone",
-      "fair": "Discrete"
+      "fair": "Discrete",
+      "red": "Rosso",
+      "blue": "Blu",
+      "cream": "Crema",
+      "white": "Bianco",
+      "green": "Verde",
+      "pink": "Rosa",
+      "grey": "Grigio",
+      "tote_bag": "Borsa tote",
+      "shoulder_strap": "Tracolla",
+      "bag_organizer": "Organizer per borsa",
+      "gg_shoulder_bag": "Borsa a spalla GG",
+      "dior_oblique_canvas": "Tela Dior Oblique",
+      "unbranded": "Senza marchio",
+      "dust_bag": "Sacchetto antipolvere",
+      "padlock_key_not_included": "Lucchetto (chiave non inclusa)",
+      "evening_bag": "Borsa da sera",
+      "epi_leather": "Pelle Epi",
+      "padlock": "Lucchetto"
     }
   },
   "templates": {

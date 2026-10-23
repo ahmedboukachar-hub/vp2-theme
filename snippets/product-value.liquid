@@ -1,14 +1,33 @@
 {% doc %}
   Translates known catalogue values, preserving unrecognised descriptions.
+  List values ("Padlock, Dust bag") and combined colours ("Blue/beige")
+  are translated per part.
   @param {string} value - Original or already translated product value.
 {% enddoc %}
 {%- liquid
-  assign normalized = value | handleize | replace: '-', '_'
-  assign known_values = 'brown,black,beige,shoulder_bag,top_handle_bag,crossbody_bag,travel_bag,accessory,leather,monogram_canvas,gg_canvas,matelasse_chevron_leather,excellent,very_good,good,fair' | split: ','
-  if known_values contains normalized
-    assign translation_key = 'products.values.' | append: normalized
-    echo translation_key | t
-  else
-    echo value | escape
-  endif
+  assign known_values = 'brown,black,beige,red,blue,cream,white,green,pink,grey,shoulder_bag,top_handle_bag,crossbody_bag,travel_bag,tote_bag,evening_bag,accessory,shoulder_strap,bag_organizer,gg_shoulder_bag,leather,monogram_canvas,gg_canvas,dior_oblique_canvas,epi_leather,matelasse_chevron_leather,excellent,very_good,good,fair,unbranded,dust_bag,padlock,padlock_key_not_included' | split: ','
+  assign items = value | split: ', '
+  for item in items
+    unless forloop.first
+      echo ', '
+    endunless
+    assign parts = item | split: '/'
+    for part in parts
+      unless forloop.first
+        echo '/'
+      endunless
+      assign normalized = part | handleize | replace: '-', '_'
+      if known_values contains normalized
+        assign translation_key = 'products.values.' | append: normalized
+        assign translated = translation_key | t
+        if forloop.first
+          echo translated
+        else
+          echo translated | downcase
+        endif
+      else
+        echo part | escape
+      endif
+    endfor
+  endfor
 -%}
