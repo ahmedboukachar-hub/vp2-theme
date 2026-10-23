@@ -18,7 +18,7 @@
         "eyebrow": "",
         "heading": "Question about a particular bag?",
         "heading_size": "h2",
-        "text": "<p>Include its product name or inventory reference and we will answer personally.</p>",
+        "text": "<p>Include the product name or a link to the listing and we will answer personally.</p>",
         "button_label": "Contact us",
         "button_link": "shopify://pages/contact",
         "color_scheme": "scheme-2"

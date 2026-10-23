@@ -214,3 +214,9 @@
   text-transform: uppercase;
   opacity: 0.8;
 }
+
+.product-enquiry__privacy {
+  margin: 0;
+  font-size: 1.3rem;
+  opacity: 0.85;
+}

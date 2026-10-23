@@ -92,6 +92,11 @@
   aspect-ratio: 4 / 5;
 }
 
+.wishlist-card__link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .wishlist-card__title {
   margin: 1rem 0 0.3rem;
   font-weight: var(--font-body-weight);

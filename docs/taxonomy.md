@@ -19,8 +19,8 @@ Single source of truth for how products are classified. Keep values controlled a
 | `designer` | single line | Mirrors `vendor`; shown in the specification block |
 | `model` | single line | Model or line name |
 | `product_type` | single line | Bag style; mirrors Shopify product type |
-| `year_or_era` | single line | Only when verified; otherwise empty |
-| `condition` | single line | `Excellent`, `Very Good`, `Good`, `Fair` — see the Condition Guide page |
+| `year_or_era` | single line | Only when verified; otherwise empty. A piece is called "vintage" only when it is at least 20 years old and its age is confirmed |
+| `condition` | single line | `Excellent`, `Very good`, `Good`, `Fair` (sentence case) — see the Condition guide page |
 | `condition_notes` | multi line | Honest, item-specific observations |
 | `material` | single line | e.g. `Monogram canvas`, `Epi leather` |
 | `color` | single line | Primary colour |

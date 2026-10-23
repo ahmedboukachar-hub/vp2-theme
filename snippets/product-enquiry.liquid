@@ -120,6 +120,7 @@
           >{{ form.body }}</textarea>
           <label for="{{ enquiry_id }}-message" class="form__label field__label">{{ 'products.product.enquiry.message' | t }}</label>
         </div>
+        {% render 'form-privacy-note', class: 'product-enquiry__privacy' %}
         <button type="submit" class="button">{{ 'products.product.enquiry.submit' | t }}</button>
       </div>
     </details>
