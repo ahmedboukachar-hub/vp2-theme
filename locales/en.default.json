@@ -158,6 +158,7 @@
         "other": "{{ count }} min read"
       },
       "read_article": "Read article",
+      "shop_this_model": "Shop this model",
       "topics": "Topics",
       "all_topics": "All stories",
       "empty": "There are no stories here yet.",
@@ -169,11 +170,18 @@
   },
   "onboarding": {
     "product_title": "Example product title",
-    "collection_title": "Your collection's name"
+    "collection_title": "Your collection’s name"
   },
   "products": {
     "product": {
       "add_to_cart": "Add to cart",
+      "in_cart": "In your cart",
+      "guide_links": {
+        "label": "Guides",
+        "condition": "How we grade condition",
+        "authenticity": "How we authenticate",
+        "model_guide": "Read our {{ model }} guide"
+      },
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
@@ -240,7 +248,7 @@
         "pick_up_available": "Pickup available",
         "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
         "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Couldn't load pickup availability",
+        "unavailable": "Couldn’t load pickup availability",
         "refresh": "Refresh"
       },
       "price": {
@@ -307,7 +315,8 @@
         "heading": "This piece has found a new home.",
         "find_similar": "Find something similar",
         "join_drop": "View new arrivals",
-        "sourcing_link": "Tell us what you are looking for"
+        "sourcing_link": "Tell us what you are looking for",
+        "alternatives_heading": "Available now"
       },
       "curators_note_heading": "Why this piece"
     },
@@ -730,12 +739,12 @@
       "payment_status": "Payment status",
       "fulfillment_status": "Fulfillment status",
       "total": "Total",
-      "none": "You haven't placed any orders yet."
+      "none": "You haven’t placed any orders yet."
     },
     "recover_password": {
       "title": "Reset your password",
       "subtext": "We will send you an email to reset your password",
-      "success": "We've sent you an email with a link to update your password."
+      "success": "We’ve sent you an email with a link to update your password."
     },
     "register": {
       "title": "Create account",
@@ -756,7 +765,7 @@
   "gift_cards": {
     "issued": {
       "how_to_use_gift_card": "Use the gift card code online or QR code in-store",
-      "title": "Here's your {{ value }} gift card balance for {{ shop }}!",
+      "title": "Here’s your {{ value }} gift card balance for {{ shop }}!",
       "subtext": "Your gift card",
       "gift_card_code": "Gift card code",
       "shop_link": "Visit online store",

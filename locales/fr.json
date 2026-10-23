@@ -159,6 +159,7 @@
         "other": "{{ count }} min de lecture"
       },
       "read_article": "Lire l’article",
+      "shop_this_model": "Ce modèle dans notre sélection",
       "topics": "Thèmes",
       "all_topics": "Tous les articles",
       "empty": "Il n’y a pas encore d’articles ici.",
@@ -175,6 +176,13 @@
   "products": {
     "product": {
       "add_to_cart": "Ajouter au panier",
+      "in_cart": "Dans votre panier",
+      "guide_links": {
+        "label": "Guides",
+        "condition": "Comment nous évaluons l’état",
+        "authenticity": "Comment nous vérifions l’authenticité",
+        "model_guide": "Consulter notre guide du {{ model }}"
+      },
       "description": "Description",
       "on_sale": "Promotion",
       "product_variants": "Variantes de produits",
@@ -308,7 +316,8 @@
         "heading": "Cette pièce a trouvé une nouvelle maison.",
         "find_similar": "Trouver une pièce similaire",
         "join_drop": "Voir les nouveautés",
-        "sourcing_link": "Dites-nous ce que vous recherchez"
+        "sourcing_link": "Dites-nous ce que vous recherchez",
+        "alternatives_heading": "Disponible maintenant"
       },
       "curators_note_heading": "Pourquoi cette pièce"
     },

@@ -118,7 +118,7 @@
             </div>
           {%- endif -%}
         </div>
-        <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
           <section
             id="ProductInfo-{{ section.id }}"
             class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
@@ -272,6 +272,8 @@
                   {% render 'product-condition-report', product: product, block: block %}
                 {%- when 'what_fits' -%}
                   {% render 'product-what-fits', product: product, block: block %}
+                {%- when 'guide_links' -%}
+                  {% render 'product-guide-links', product: product, block: block %}
                 {%- when 'shipping_card' -%}
                   {% render 'product-shipping-card', block: block %}
                 {%- when 'enquiry' -%}
@@ -897,6 +899,34 @@
           "id": "size_guide_page",
           "label": "Bag size guide page",
           "info": "The size guide link is hidden when no page is selected."
+        }
+      ]
+    },
+    {
+      "type": "guide_links",
+      "name": "Guide links",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "A quiet row of links: the Journal guide for this model, the condition guide and the authenticity page. Each link is hidden when its target is not set."
+        },
+        {
+          "type": "blog",
+          "id": "guides_blog",
+          "label": "Journal with model guides",
+          "info": "Links the article whose custom.models metafield lists this product's custom.model value (see docs/taxonomy.md)."
+        },
+        {
+          "type": "page",
+          "id": "condition_page",
+          "label": "Condition guide page",
+          "info": "Not repeated when the condition report already links to this page."
+        },
+        {
+          "type": "page",
+          "id": "authenticity_page",
+          "label": "Authenticity page"
         }
       ]
     },

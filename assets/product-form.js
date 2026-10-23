@@ -17,9 +17,91 @@ if (!customElements.get('product-form')) {
         this.hideErrors = this.dataset.hideErrors === 'true';
       }
 
+      connectedCallback() {
+        if (!this.dataset.inCartLabel) return;
+
+        // One-off pieces: keep "In your cart" in step with removals made in
+        // the cart drawer or on the cart page, and with pages restored from
+        // the back-forward cache.
+        this.cartUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
+          if (!event || event.source === 'product-form') return;
+          if (Array.isArray(event.cartData?.items)) {
+            this.applyCartItems(event.cartData.items);
+          } else {
+            this.refreshInCart();
+          }
+        });
+        this.variantChangeUnsubscriber = subscribe(PUB_SUB_EVENTS.variantChange, (event) => {
+          if (event?.data?.sectionId !== this.dataset.sectionId) return;
+          const form = event.data.html?.querySelector(`product-form[data-section-id="${this.dataset.sectionId}"]`);
+          this.dataset.inventoryMax = form?.dataset.inventoryMax || '';
+          this.setInCart(form?.dataset.inCart === 'true');
+        });
+        this.onPageShow = (event) => {
+          if (event.persisted) this.refreshInCart();
+        };
+        window.addEventListener('pageshow', this.onPageShow);
+      }
+
+      disconnectedCallback() {
+        this.cartUpdateUnsubscriber?.();
+        this.variantChangeUnsubscriber?.();
+        if (this.onPageShow) window.removeEventListener('pageshow', this.onPageShow);
+      }
+
+      get inventoryMax() {
+        return parseInt(this.dataset.inventoryMax, 10) || 0;
+      }
+
+      get inCart() {
+        return this.dataset.inCart === 'true';
+      }
+
+      setInCart(inCart) {
+        if (!this.dataset.inCartLabel) return;
+        this.dataset.inCart = inCart ? 'true' : 'false';
+        // A sold-out or unavailable variant keeps its own disabled label.
+        if (this.submitButton.hasAttribute('disabled')) return;
+        this.submitButtonText.textContent = inCart ? this.dataset.inCartLabel : window.variantStrings.addToCart;
+      }
+
+      applyCartItems(items) {
+        const variantId = String(this.variantIdInput.value);
+        const quantity = items
+          .filter((item) => String(item.variant_id ?? item.id) === variantId)
+          .reduce((total, item) => total + item.quantity, 0);
+        const inCart = this.inventoryMax > 0 && quantity >= this.inventoryMax;
+        this.setInCart(inCart);
+        return inCart;
+      }
+
+      refreshInCart() {
+        if (!this.inventoryMax) return Promise.resolve(false);
+        return fetch(`${routes.cart_url}.js`, { headers: { Accept: 'application/json' } })
+          .then((response) => response.json())
+          .then((cart) => (Array.isArray(cart?.items) ? this.applyCartItems(cart.items) : this.inCart))
+          .catch(() => this.inCart);
+      }
+
+      openCart() {
+        const cartDrawer = document.querySelector('cart-drawer');
+        if (cartDrawer && typeof cartDrawer.open === 'function' && !this.closest('quick-add-modal')) {
+          cartDrawer.open(this.submitButton);
+          return;
+        }
+        window.location = window.routes.cart_url;
+      }
+
       onSubmitHandler(evt) {
         evt.preventDefault();
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
+
+        // The only unit is already in the cart: open the cart instead of
+        // sending an add that the store would refuse.
+        if (this.inCart && !this.submitButton.hasAttribute('disabled')) {
+          this.openCart();
+          return;
+        }
 
         this.handleErrorMessage();
 
@@ -60,6 +142,15 @@ if (!customElements.get('product-form')) {
               this.dispatchCartErrorEvent(response.description || response.message, 'INVALID');
               linesUpdateDeferred?.reject(new Error(response.description || response.message));
 
+              // The add was refused because the piece is already in the cart
+              // (another tab, or a page restored from cache): show the cart
+              // state instead of an error.
+              if (this.inventoryMax) {
+                this.refreshInCart().then((inCart) => {
+                  if (inCart) this.handleErrorMessage();
+                });
+              }
+
               const soldOutMessage = this.submitButton.querySelector('.sold-out-message');
               if (!soldOutMessage) return;
               this.submitButton.setAttribute('aria-disabled', true);
@@ -74,6 +165,12 @@ if (!customElements.get('product-form')) {
             }
 
             this.resolveCartLinesUpdate(linesUpdateDeferred);
+
+            // The added line carries the variant's quantity now in the cart.
+            if (this.inventoryMax && String(response.variant_id ?? variantId) === String(variantId)) {
+              const quantityInCart = parseInt(response.quantity, 10) || quantity;
+              if (this.inventoryMax === 1 || quantityInCart >= this.inventoryMax) this.setInCart(true);
+            }
 
             const startMarker = CartPerformance.createStartingMarker('add:wait-for-subscribers');
             if (!this.error)
@@ -141,7 +238,8 @@ if (!customElements.get('product-form')) {
           if (text) this.submitButtonText.textContent = text;
         } else {
           this.submitButton.removeAttribute('disabled');
-          this.submitButtonText.textContent = window.variantStrings.addToCart;
+          this.submitButtonText.textContent =
+            this.inCart && this.dataset.inCartLabel ? this.dataset.inCartLabel : window.variantStrings.addToCart;
         }
       }
 

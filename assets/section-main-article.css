@@ -54,6 +54,28 @@
 /* Long-form reading refinements on top of the shared rich-text system. */
 .article-page__body table { margin-block: var(--vp-space-m); }
 
+/* Comparison tables (three or more columns) leave the 70rem reading measure
+   on desktop and take the width of the article header, so short facts stay on
+   one or two lines. Light horizontal rules only, as in the shared rich-text
+   tables; narrower screens keep the measure and scroll inside the wrapper. */
+@media screen and (min-width: 990px) {
+  .article-page__body .vp-table-scroll:has(> table tr > :nth-child(3)) {
+    --article-table-width: min(104rem, 100vw - 2 * var(--vp-gutter));
+    width: var(--article-table-width);
+    max-width: none;
+    margin-inline: calc((100% - var(--article-table-width)) / 2);
+  }
+
+  .article-page__body .vp-table-scroll:has(> table tr > :nth-child(3)) > table {
+    table-layout: auto;
+    box-shadow: none;
+  }
+
+  .article-page__body .vp-table-scroll:has(> table tr > :nth-child(3)) :is(th, td):last-child {
+    padding-right: 0;
+  }
+}
+
 .article-page__body img {
   display: block;
   width: 100%;
@@ -87,4 +109,24 @@
   }
 
   .article-page__intro--with-media .article-page__standfirst { margin-left: 0; }
+}
+
+/* "Shop this model" row after a Journal guide (article-related-products). */
+.article-products {
+  padding-bottom: var(--vp-space-l);
+}
+
+.article-products__inner {
+  max-width: 104rem;
+  margin: 0 auto;
+}
+
+.article-products__heading {
+  margin: 0 0 2.4rem;
+}
+
+@media screen and (min-width: 750px) {
+  .article-products {
+    padding-bottom: var(--vp-space-xl);
+  }
 }

@@ -9,6 +9,12 @@
         "color_scheme": "scheme-1"
       }
     },
+    "shop-model": {
+      "type": "article-related-products",
+      "settings": {
+        "collection": "all-bags"
+      }
+    },
     "related": {
       "type": "article-related",
       "settings": {
@@ -23,6 +29,7 @@
   },
   "order": [
     "main",
+    "shop-model",
     "related"
   ]
 }

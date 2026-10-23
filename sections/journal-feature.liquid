@@ -6,11 +6,14 @@
   assign lead_article = section.settings.lead_article | default: journal.articles.first
   assign second_article = section.settings.second_article
   assign third_article = section.settings.third_article
+  assign secondary_limit = section.settings.secondary_count | default: 4
+  assign secondary_rendered = 0
+  assign shown_ids = ',' | append: lead_article.id | append: ','
 -%}
 
 {%- if journal != blank and journal.articles_count > 0 -%}
   <div class="journal-feature vp-section color-{{ section.settings.color_scheme }} gradient">
-    <div class="vp-width">
+    <div class="vp-width journal-feature__inner">
       <div class="journal-feature__header">
         <div class="vp-section__header">
           {%- if section.settings.eyebrow != blank -%}
@@ -23,11 +26,6 @@
             <div class="vp-lead rte">{{ section.settings.text }}</div>
           {%- endif -%}
         </div>
-        {%- if section.settings.button_label != blank -%}
-          <a href="{{ journal.url }}" class="button button--secondary journal-feature__cta">
-            {{- section.settings.button_label | escape -}}
-          </a>
-        {%- endif -%}
       </div>
 
       <div class="journal-feature__grid">
@@ -41,21 +39,35 @@
         <div class="journal-feature__secondary">
           {%- if second_article != blank and second_article.id != lead_article.id -%}
             {% render 'journal-card', article: second_article, variant: 'secondary', show_excerpt: false, sizes: '150px' %}
+            {%- assign shown_ids = shown_ids | append: second_article.id | append: ',' -%}
+            {%- assign secondary_rendered = secondary_rendered | plus: 1 -%}
           {%- endif -%}
-          {%- if third_article != blank and third_article.id != lead_article.id and third_article.id != second_article.id -%}
+          {%- assign third_key = ',' | append: third_article.id | append: ',' -%}
+          {%- unless third_article == blank or shown_ids contains third_key -%}
             {% render 'journal-card', article: third_article, variant: 'secondary', show_excerpt: false, sizes: '150px' %}
-          {%- endif -%}
-          {%- if second_article == blank and third_article == blank -%}
-            {%- assign fallback_count = 0 -%}
+            {%- assign shown_ids = shown_ids | append: third_article.id | append: ',' -%}
+            {%- assign secondary_rendered = secondary_rendered | plus: 1 -%}
+          {%- endunless -%}
+          {%- comment -%} Fill the remaining rows with the newest stories not shown yet. {%- endcomment -%}
+          {%- if secondary_rendered < secondary_limit -%}
             {%- for item in journal.articles -%}
-              {%- if item.id == lead_article.id -%}{%- continue -%}{%- endif -%}
+              {%- assign item_key = ',' | append: item.id | append: ',' -%}
+              {%- if shown_ids contains item_key -%}{%- continue -%}{%- endif -%}
               {% render 'journal-card', article: item, variant: 'secondary', show_excerpt: false, sizes: '150px' %}
-              {%- assign fallback_count = fallback_count | plus: 1 -%}
-              {%- if fallback_count == 2 -%}{%- break -%}{%- endif -%}
+              {%- assign shown_ids = shown_ids | append: item.id | append: ',' -%}
+              {%- assign secondary_rendered = secondary_rendered | plus: 1 -%}
+              {%- if secondary_rendered >= secondary_limit -%}{%- break -%}{%- endif -%}
             {%- endfor -%}
           {%- endif -%}
         </div>
       </div>
+
+      {%- comment -%} After the stories in reading order; desktop places it beside the header. {%- endcomment -%}
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ journal.url }}" class="button button--secondary journal-feature__cta">
+          {{- section.settings.button_label | escape -}}
+        </a>
+      {%- endif -%}
     </div>
   </div>
 {%- endif -%}
@@ -70,6 +82,16 @@
     { "type": "article", "id": "lead_article", "label": "Featured article" },
     { "type": "article", "id": "second_article", "label": "Second article" },
     { "type": "article", "id": "third_article", "label": "Third article" },
+    {
+      "type": "range",
+      "id": "secondary_count",
+      "label": "Stories beside the featured article",
+      "info": "Empty places are filled with the newest stories. Phones and tablets show the first two.",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Journal" },
     { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "The stories behind the bags." },
     {

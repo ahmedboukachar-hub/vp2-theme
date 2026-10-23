@@ -63,7 +63,7 @@
                 {%- endif -%}
                 <span class="archive-feature__model">{{ model | escape }}</span>
                 {%- if section.settings.show_price -%}
-                  <span class="archive-feature__price">{{ product.price | money }}</span>
+                  <span class="archive-feature__price">{{ product.price | money_without_trailing_zeros }}</span>
                 {%- endif -%}
                 <span class="archive-feature__state">{{ 'sections.archive.find_similar' | t }}</span>
               </div>

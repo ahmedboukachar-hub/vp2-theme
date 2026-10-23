@@ -36,6 +36,20 @@ Internal only (namespace `internal`, no storefront access):
 | --- | --- | --- |
 | `serial_reference` | single line | Full serial/date code for internal records; never rendered |
 
+## Model guides (Journal articles ↔ products)
+
+Product pages link to the Journal guide for their model, and each guide shows the available pieces of that model ("Shop this model"). The link is made from data, never from handles in Liquid:
+
+| Owner | Metafield | Type | Value |
+| --- | --- | --- | --- |
+| Product | `custom.model` | single line | The model, as above (e.g. `Speedy 30`, `Petit Noé`, `Looping GM`) |
+| Article | `custom.models` | list of single lines | Every `custom.model` value the guide covers (e.g. `Looping PM`, `Looping GM`) |
+
+- A product matches a guide when its `custom.model` is in the article's `custom.models` list. Both sides are compared as handles, so case and spacing do not matter; copy the value as written on the product, accents included (`Neverfull MM` does not match `Neverfull`).
+- Product side: the main-product "Guide links" block (blog setting) links the first matching article. Article side: the "Shop this model" section (`sections/article-related-products.liquid`, collection setting) lists available pieces only; sold pieces are skipped and the row is hidden when none is available.
+- Give a model to one guide only. Overview articles (e.g. "most popular" lists) leave `custom.models` empty.
+- Create the article metafield definition with storefront access before filling it.
+
 ## Controlled tags (automation only)
 
 | Tag | Purpose |

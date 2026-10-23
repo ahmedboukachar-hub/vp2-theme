@@ -1,1 +1,6 @@
-{{ 'sections.cart.new_estimated_total' | t }}: {{ cart.total_price | money_with_currency }}
+{%- liquid
+  assign total_full = cart.total_price | money
+  assign total_short = cart.total_price | money_without_trailing_zeros
+  assign total_with_code = cart.total_price | money_with_currency | replace: total_full, total_short
+-%}
+{{ 'sections.cart.new_estimated_total' | t }}: {{ total_with_code }}
