@@ -1639,9 +1639,13 @@
                 "label": "Großbuchstaben"
               }
             },
+            "designer_collections": {
+              "label": "Designer-Kollektionen",
+              "info": "Der Designername verlinkt auf die Kollektion in dieser Liste, deren Produkte alle von diesem Designer stammen. „Ähnliches entdecken“ bei verkauften Stücken nutzt dieselbe Kollektion. Jedes neue Haus hier hinzufügen."
+            },
             "bags_collection": {
               "label": "Taschenkollektion für den Designer-Link",
-              "info": "Der Designername verlinkt auf diese Kollektion, gefiltert nach dem Designer-Tag. Leer lassen, um auf die Shopify-Herstellerseite zu verlinken."
+              "info": "Wird verwendet, wenn keine Designer-Kollektion passt: Der Designername verlinkt auf diese Kollektion, gefiltert nach dem Designer-Tag."
             },
             "accessories_collection": {
               "label": "Accessoire-Kollektion für den Designer-Link"
@@ -1694,6 +1698,20 @@
             "show_gift_card_recipient": {
               "label": " Optionen für Gutscheinversand",
               "info": "Kunden können eine persönliche Nachricht hinzufügen und den Versand planen. [Mehr Informationen](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            },
+            "sold_header": {
+              "content": "Verkaufte Stücke"
+            },
+            "sold_similar_collection": {
+              "label": "Ersatz für „Ähnliches entdecken“",
+              "info": "Wird verwendet, wenn keine Designer-Kollektion zum Stück passt (Designer-Kollektionen werden im Textblock mit dem Designernamen festgelegt). Leer: alle Produkte."
+            },
+            "sold_new_arrivals_collection": {
+              "label": "Kollektion für „Neuheiten ansehen“"
+            },
+            "sourcing_page": {
+              "label": "Seite für „Sagen Sie uns, was Sie suchen“",
+              "info": "Ausgeblendet, wenn keine Seite ausgewählt ist."
             }
           }
         },
@@ -2161,6 +2179,17 @@
           "options__2": {
             "label": "2"
           }
+        },
+        "header__empty_state": {
+          "content": "Keine Ergebnisse"
+        },
+        "empty_state_collection": {
+          "label": "Kollektion für die Hauptschaltfläche",
+          "info": "Wird angezeigt, wenn eine Suche nichts findet („Alle Taschen entdecken“). Leer: alle Produkte."
+        },
+        "empty_state_page": {
+          "label": "Seite für die zweite Schaltfläche",
+          "info": "Wird angezeigt, wenn eine Suche nichts findet („Eine Tasche finden“). Ausgeblendet, wenn keine Seite ausgewählt ist."
         }
       }
     },

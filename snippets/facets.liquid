@@ -195,13 +195,33 @@
                             assign inactive_filter_values = filter.values | where: 'active', false
                             assign sorted_values = active_filter_values | concat: inactive_filter_values
                           endif
+
+                          # Hide unselected values that match no products (such as
+                          # 'Out of stock (0)'), unless no value would remain.
+                          assign usable_values_count = 0
+                          for value in filter.values
+                            if value.count > 0 or value.active
+                              assign usable_values_count = usable_values_count | plus: 1
+                            endif
+                          endfor
+                          assign hide_empty_values = false
+                          assign shown_values_count = filter.values.size
+                          if usable_values_count > 0
+                            assign hide_empty_values = true
+                            assign shown_values_count = usable_values_count
+                          endif
+                          assign shown_index = 0
                         -%}
                         <ul
                           class="{{ visual_layout_class }}{% if filter_type == 'vertical' %} facets__list--vertical{% else %} facets__list{% endif %} list-unstyled"
                           role="list"
                         >
                           {%- for value in sorted_values -%}
+                            {%- if hide_empty_values and value.count == 0 and value.active == false -%}
+                              {%- continue -%}
+                            {%- endif -%}
                             {% liquid
+                              assign shown_index = shown_index | plus: 1
                               assign input_id = 'Filter-' | append: filter.param_name | escape | append: '-' | append: forloop.index
                               assign is_disabled = false
                               if value.count == 0 and value.active == false
@@ -227,7 +247,7 @@
                               </span>
                             {%- endcapture -%}
 
-                            <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                            <li class="list-menu__item facets__item{% if shown_index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               {%- if presentation == 'swatch' -%}
                                 <div class="{{ label_class }}">
                                   <div class="swatch-input-wrapper">
@@ -285,7 +305,7 @@
                           {%- endfor -%}
                         </ul>
                       </fieldset>
-                      {%- if filter.values.size > show_more_number and filter_type == 'vertical' -%}
+                      {%- if shown_values_count > show_more_number and filter_type == 'vertical' -%}
                         <show-more-button>
                           <button
                             class="button-show-more link underlined-link"
@@ -570,8 +590,21 @@
                                 assign inactive_filter_values = filter.values | where: 'active', false
                                 assign sorted_values = active_filter_values | concat: inactive_filter_values
                               endif
+
+                              # Hide unselected values that match no products, unless
+                              # no value would remain (same rule as the desktop list).
+                              assign hide_empty_values = false
+                              for value in filter.values
+                                if value.count > 0 or value.active
+                                  assign hide_empty_values = true
+                                  break
+                                endif
+                              endfor
                             -%}
                             {%- for value in sorted_values -%}
+                              {%- if hide_empty_values and value.count == 0 and value.active == false -%}
+                                {%- continue -%}
+                              {%- endif -%}
                               {% liquid
                                 assign input_id = 'Filter-' | append: filter.param_name | escape | append: '-mobile-' | append: forloop.index
                                 assign is_disabled = false

@@ -22,8 +22,8 @@
   </form>
 
   <div class="template-404__actions">
-    {%- assign new_arrivals = collections['new-arrivals'] -%}
-    {%- assign archive = collections['archive'] -%}
+    {%- assign new_arrivals = section.settings.new_arrivals_collection -%}
+    {%- assign archive = section.settings.archive_collection -%}
     <a
       href="{{ new_arrivals.url | default: routes.all_products_collection_url }}"
       class="button"
@@ -71,6 +71,20 @@
 {
   "name": "404 page",
   "tag": "section",
-  "class": "section"
+  "class": "section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "new_arrivals_collection",
+      "label": "Collection for 'Shop new arrivals'",
+      "info": "Empty: all products."
+    },
+    {
+      "type": "collection",
+      "id": "archive_collection",
+      "label": "Collection for 'Explore the archive'",
+      "info": "The button is hidden when no collection is selected."
+    }
+  ]
 }
 {% endschema %}

@@ -3,20 +3,25 @@
   'sold-archive' (taxonomy documented in docs/taxonomy.md). Inventory 0 alone
   does not trigger this: a piece can be temporarily unavailable or reserved.
 
+  Links come from the "buy_buttons" block settings. "Find something similar"
+  goes to the designer collection (designer_url, see
+  snippets/designer-collection-url.liquid) and otherwise to the block's
+  fallback collection.
+
   Accepts:
   - product: {Object} Product Liquid object
-  - block: {Object} The "buy_buttons" block (for shopify_attributes)
+  - block: {Object} The "buy_buttons" block (settings and shopify_attributes)
+  - designer_url: {String} Designer collection URL, blank when none matches
 {% endcomment %}
 
 {{ 'component-inspection.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  assign vendor_handle = product.vendor | handleize
-  assign vendor_collection = collections[vendor_handle]
-  assign similar_url = collections['all-bags'].url | default: routes.all_products_collection_url
-  if vendor_collection != blank and vendor_collection.products_count > 0
-    assign similar_url = vendor_collection.url
+  assign similar_url = block.settings.sold_similar_collection.url | default: routes.all_products_collection_url
+  if designer_url != blank
+    assign similar_url = designer_url
   endif
+  assign new_arrivals_url = block.settings.sold_new_arrivals_collection.url | default: routes.all_products_collection_url
 -%}
 
 <div class="product-sold-state quick-add-hidden" {{ block.shopify_attributes }}>
@@ -26,11 +31,13 @@
   <h2 class="product-sold-state__heading h4">{{ 'products.product.sold.heading' | t }}</h2>
   <div class="product-sold-state__actions">
     <a href="{{ similar_url }}" class="button">{{ 'products.product.sold.find_similar' | t }}</a>
-    <a href="{{ collections['new-arrivals'].url | default: routes.all_products_collection_url }}" class="button button--secondary">{{ 'products.product.sold.join_drop' | t }}</a>
+    <a href="{{ new_arrivals_url }}" class="button button--secondary">{{ 'products.product.sold.join_drop' | t }}</a>
   </div>
-  <p class="product-sold-state__sourcing">
-    <a href="{{ pages['find-a-bag'].url | default: '/pages/find-a-bag' }}" class="link underlined-link">
-      {{- 'products.product.sold.sourcing_link' | t -}}
-    </a>
-  </p>
+  {%- if block.settings.sourcing_page != blank -%}
+    <p class="product-sold-state__sourcing">
+      <a href="{{ block.settings.sourcing_page.url }}" class="link underlined-link">
+        {{- 'products.product.sold.sourcing_link' | t -}}
+      </a>
+    </p>
+  {%- endif -%}
 </div>

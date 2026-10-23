@@ -145,10 +145,12 @@
             <h2 class="h3">{{ 'templates.search.empty_heading' | t }}</h2>
             <p>{{ 'templates.search.empty_body' | t }}</p>
             <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
-              <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button">{{ 'templates.search.empty_cta_all' | t }}</a>
-              <a href="{{ pages['find-a-bag'].url | default: '/pages/find-a-bag' }}" class="button button--secondary">
-                {{- 'templates.search.empty_cta_find' | t -}}
-              </a>
+              <a href="{{ section.settings.empty_state_collection.url | default: routes.all_products_collection_url }}" class="button">{{ 'templates.search.empty_cta_all' | t }}</a>
+              {%- if section.settings.empty_state_page != blank -%}
+                <a href="{{ section.settings.empty_state_page.url }}" class="button button--secondary">
+                  {{- 'templates.search.empty_cta_find' | t -}}
+                </a>
+              {%- endif -%}
             </div>
           </div>
         {%- endif -%}
@@ -502,6 +504,22 @@
       "id": "article_show_author",
       "default": false,
       "label": "t:sections.main-search.settings.article_show_author.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-search.settings.header__empty_state.content"
+    },
+    {
+      "type": "collection",
+      "id": "empty_state_collection",
+      "label": "t:sections.main-search.settings.empty_state_collection.label",
+      "info": "t:sections.main-search.settings.empty_state_collection.info"
+    },
+    {
+      "type": "page",
+      "id": "empty_state_page",
+      "label": "t:sections.main-search.settings.empty_state_page.label",
+      "info": "t:sections.main-search.settings.empty_state_page.info"
     },
     {
       "type": "header",

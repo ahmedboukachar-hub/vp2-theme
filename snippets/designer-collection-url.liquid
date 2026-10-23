@@ -1,0 +1,18 @@
+{% doc %}
+  Outputs the URL of the designer (house) collection for a vendor, taken from
+  a list of collections the merchant picks in the Theme Editor. A collection
+  matches when all of its products come from that vendor, so no handles are
+  derived from the vendor name. Outputs nothing when no collection matches.
+
+  @param {string} vendor - Product vendor.
+  @param {object} designer_collections - Collection list setting to search.
+
+  @example
+  {% render 'designer-collection-url', vendor: product.vendor, designer_collections: block.settings.designer_collections %}
+{% enddoc %}
+{%- for designer_collection in designer_collections -%}
+  {%- if designer_collection.all_vendors.size == 1 and designer_collection.all_vendors contains vendor -%}
+    {{- designer_collection.url -}}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}

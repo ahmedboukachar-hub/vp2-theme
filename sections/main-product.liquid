@@ -46,6 +46,19 @@
     if product.tags contains 'sold-archive'
       assign is_sold_archive = true
     endif
+
+    # Designer collection for the vendor link and the sold state, picked from
+    # the designer_collections list on the vendor text block.
+    assign designer_collection_url = ''
+    for text_block in section.blocks
+      if text_block.type == 'text' and text_block.settings.designer_collections != blank
+        capture designer_collection_url
+          render 'designer-collection-url', vendor: product.vendor, designer_collections: text_block.settings.designer_collections
+        endcapture
+        break
+      endif
+    endfor
+    assign designer_collection_url = designer_collection_url | strip
   -%}
   {%- if section.settings.enable_sticky_mobile_buy and product.available and is_sold_archive == false -%}
     {{ 'component-sticky-buy.css' | asset_url | stylesheet_tag }}
@@ -125,7 +138,9 @@
                       {%- assign designer_tag = product.vendor | handleize | prepend: 'designer-' -%}
                       {%- assign designer_collection = block.settings.bags_collection -%}
                       {%- if product.tags contains 'accessory' and block.settings.accessories_collection != blank -%}{%- assign designer_collection = block.settings.accessories_collection -%}{%- endif -%}
-                      {%- if product.tags contains designer_tag and designer_collection != blank -%}
+                      {%- if designer_collection_url != blank -%}
+                        <a class="product__designer-link" href="{{ designer_collection_url }}">{{ product.vendor | escape }}</a>
+                      {%- elsif product.tags contains designer_tag and designer_collection != blank -%}
                         <a class="product__designer-link" href="{{ designer_collection.url }}/{{ designer_tag }}">{{ product.vendor | escape }}</a>
                       {%- else -%}{{ product.vendor | escape }}{%- endif -%}
                     {%- else -%}{{- block.settings.text -}}{%- endif -%}
@@ -563,7 +578,7 @@
                   %}
                 {%- when 'buy_buttons' -%}
                   {%- if is_sold_archive -%}
-                    {%- render 'product-sold-state', product: product, block: block -%}
+                    {%- render 'product-sold-state', product: product, block: block, designer_url: designer_collection_url -%}
                   {%- else -%}
                     {%- render 'buy-buttons',
                       block: block,
@@ -859,6 +874,12 @@
         {
           "type": "paragraph",
           "content": "Shows the condition grade, summary and individual signs of wear from product metafields. Hidden when no condition data exists."
+        },
+        {
+          "type": "page",
+          "id": "guide_page",
+          "label": "Condition guide page",
+          "info": "The guide link is hidden when no page is selected."
         }
       ]
     },
@@ -870,6 +891,12 @@
         {
           "type": "paragraph",
           "content": "Shows the custom.what_fits metafield with a link to the bag size guide. Hidden when empty."
+        },
+        {
+          "type": "page",
+          "id": "size_guide_page",
+          "label": "Bag size guide page",
+          "info": "The size guide link is hidden when no page is selected."
         }
       ]
     },
@@ -881,6 +908,12 @@
         {
           "type": "paragraph",
           "content": "Neutral shipping and returns card linking to the shipping information page."
+        },
+        {
+          "type": "page",
+          "id": "shipping_page",
+          "label": "Shipping & returns page",
+          "info": "The link is hidden when no page is selected."
         }
       ]
     },
@@ -935,6 +968,13 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "collection_list",
+          "id": "designer_collections",
+          "limit": 20,
+          "label": "t:sections.main-product.blocks.text.settings.designer_collections.label",
+          "info": "t:sections.main-product.blocks.text.settings.designer_collections.info"
         },
         {
           "type": "collection",
@@ -1095,6 +1135,27 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.main-product.blocks.buy_buttons.settings.sold_header.content"
+        },
+        {
+          "type": "collection",
+          "id": "sold_similar_collection",
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.sold_similar_collection.label",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.sold_similar_collection.info"
+        },
+        {
+          "type": "collection",
+          "id": "sold_new_arrivals_collection",
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.sold_new_arrivals_collection.label"
+        },
+        {
+          "type": "page",
+          "id": "sourcing_page",
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.sourcing_page.label",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.sourcing_page.info"
         }
       ]
     },

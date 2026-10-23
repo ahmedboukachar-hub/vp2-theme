@@ -25,8 +25,12 @@
       </div>
     </div>
     <div class="about-story__links">
-      <a class="vp-link vp-link--arrow" href="{{ pages['our-curation'].url }}">{{ 'templates.about_story.curation_link' | t }}</a>
-      <a class="vp-link vp-link--arrow" href="{{ pages['contact'].url }}">{{ 'templates.about_story.contact_link' | t }}</a>
+      {%- if section.settings.curation_page != blank %}
+      <a class="vp-link vp-link--arrow" href="{{ section.settings.curation_page.url }}">{{ 'templates.about_story.curation_link' | t }}</a>
+      {%- endif %}
+      {%- if section.settings.contact_page != blank %}
+      <a class="vp-link vp-link--arrow" href="{{ section.settings.contact_page.url }}">{{ 'templates.about_story.contact_link' | t }}</a>
+      {%- endif %}
     </div>
   </div>
 </div>
@@ -36,7 +40,9 @@
   "name": "About story",
   "tag": "section",
   "settings": [
-    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "page", "id": "curation_page", "label": "Page for 'Explore our curation'", "info": "The link is hidden when no page is selected." },
+    { "type": "page", "id": "contact_page", "label": "Page for 'Ask us a question'", "info": "The link is hidden when no page is selected." }
   ],
   "presets": [{ "name": "About story" }]
 }

@@ -3,7 +3,7 @@
     "hero": {
       "type": "page-hero",
       "settings": {
-        "eyebrow": "Delivery & returns",
+        "eyebrow": "Shipping & returns",
         "heading": "Clear information, before you order.",
         "color_scheme": "scheme-1"
       }

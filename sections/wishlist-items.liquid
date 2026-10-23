@@ -42,7 +42,7 @@
     <div class="wishlist-items__empty" data-wishlist-empty hidden>
       <h2 class="h3" tabindex="-1" data-wishlist-empty-heading>{{ 'general.wishlist.empty_heading' | t }}</h2>
       <p>{{ 'general.wishlist.empty_body' | t }}</p>
-      <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button">{{ 'general.wishlist.empty_cta' | t }}</a>
+      <a href="{{ section.settings.collection.url | default: routes.all_products_collection_url }}" class="button">{{ 'general.wishlist.empty_cta' | t }}</a>
     </div>
     <ul class="wishlist-items__grid list-unstyled" role="list" data-wishlist-grid hidden></ul>
     <template>
@@ -105,6 +105,12 @@
     {
       "type": "paragraph",
       "content": "Renders the browser-local wishlist. Items are stored only in the visitor's browser and do not sync between devices."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection for 'Explore all bags'",
+      "info": "Button shown when the wishlist is empty. Empty: all products."
     },
     {
       "type": "header",
