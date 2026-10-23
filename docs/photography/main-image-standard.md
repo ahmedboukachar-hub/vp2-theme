@@ -8,8 +8,9 @@ Never substitute another physical item of the same model.
 
 Prepare a truthful primary ecommerce photograph of this exact pre-owned item.
 Use a calm, product-first luxury composition, not an advertising illustration.
-Target a portrait 4:5 frame with the entire item visible, optically centred,
-comfortable margins and a clean neutral-white background. For future original
+Target a square 1:1 frame with the entire item visible, optically centred,
+comfortable margins and a warm-white background close to #fcf9f5 (the site
+shows every product photo whole inside a square frame on that ground). For future original
 photography, aim for approximately 80% of frame width, or 80% of frame height
 for taller silhouettes; never stretch the item to fit. Keep the lighting soft,
 neutral and repeatable, with a subtle real contact shadow. Use the same camera
