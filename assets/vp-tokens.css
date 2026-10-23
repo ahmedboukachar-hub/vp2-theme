@@ -16,9 +16,10 @@
   --vp-space-xl: 9.6rem;
   --vp-space-2xl: 12.8rem;
 
-  /* container + measure */
+  /* container + measure; the phone gutter matches Dawn's .page-width
+     (1.5rem) so custom and Dawn sections share one left edge */
   --vp-container-max: 144rem;
-  --vp-gutter: 2rem;
+  --vp-gutter: 1.5rem;
   --vp-measure-text: 72rem;
   --vp-measure-lead: 60rem;
   --vp-measure-article: 70rem;
@@ -99,6 +100,17 @@
   color: rgba(var(--color-foreground), 0.7);
 }
 
+/* One tracking for the serif headings. Dawn spaces h1–h5 out by
+   0.06rem × heading scale; the custom headings below are set slightly
+   tight. Large headings follow the custom setting, h4 is set solid, and
+   h5 keeps Dawn's value because it is paired with uppercase captions.
+   Class rules (eyebrows, captions, .text-body, component labels) still
+   override these element and size-class defaults. */
+h1, h2, h3,
+.h0, .h1, .h2, .h3 { letter-spacing: -0.01em; }
+
+h4, .h4 { letter-spacing: 0; }
+
 .vp-heading-hero { font-size: var(--vp-type-hero); }
 .vp-heading-display { font-size: var(--vp-type-display); }
 .vp-heading-section { font-size: var(--vp-type-section); }
@@ -114,6 +126,14 @@
   line-height: 1.04;
   letter-spacing: -0.012em;
   text-wrap: balance;
+}
+
+/* Dawn page titles set at the display size (collections list) keep
+   Dawn's own title margins. */
+.title--primary.vp-heading-display { margin: 4rem 0; }
+
+@media screen and (min-width: 990px) {
+  .title--primary.vp-heading-display { margin: 2rem 0; }
 }
 
 .vp-lead {
@@ -559,6 +579,64 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
   .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) > .header__search {
     grid-area: left-icons;
     margin-left: 3.2rem;
+  }
+}
+
+/* Phones: the account link lives in the menu drawer (header.liquid hides
+   the account icon below 750px when there is a menu), so menu + search on
+   the left balance wishlist + cart on the right. Dropping Dawn's 0.8rem
+   end padding puts the cart glyph as far from the edge as the menu glyph,
+   which keeps the logo on the page centre. The logo grows to 14rem and
+   gives way first on narrow phones, never the 44px icons. */
+@media screen and (max-width: 749px) {
+  .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) {
+    grid-template-columns: 1fr minmax(0, auto) 1fr;
+  }
+
+  .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) .header__icons {
+    padding-right: 0;
+  }
+
+  :where(.header--has-menu:not(.header--mobile-left)) .header__heading-logo-wrapper {
+    width: 14rem;
+    max-width: 100%;
+  }
+}
+
+/* Desktop header between 990 and 1365px. The middle-left layout (logo,
+   menu, language and icons in one bar) only has room for the six
+   top-level items from about 1280px, and from 1366px in Dutch. Below
+   1280px the menu gets its own full-width row under the logo and icons
+   (Dawn's top-left arrangement), aligned with the logo; the negative
+   bottom margin takes back the items' own 1.2rem padding so the bar stays
+   compact. From 1280 to 1365px the bar stays single, with tighter item
+   padding. Every item stays visible at every width. */
+@media screen and (min-width: 990px) and (max-width: 1279px) {
+  .header--middle-left.header--has-menu:not(.drawer-menu) {
+    grid-template-areas:
+      'heading icons'
+      'navigation navigation';
+    grid-template-columns: 1fr auto;
+  }
+
+  .header--middle-left.header--has-menu:not(.drawer-menu) .header__inline-menu {
+    margin-left: -1.2rem;
+    margin-bottom: -1.2rem;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1365px) {
+  .header--middle-left.header--has-menu:not(.drawer-menu) {
+    column-gap: 1.6rem;
+  }
+
+  .header--middle-left .header__inline-menu .header__menu-item {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .header--middle-left .header__inline-menu summary.header__menu-item {
+    padding-right: 2.2rem;
   }
 }
 

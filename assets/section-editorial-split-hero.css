@@ -19,6 +19,12 @@
   margin-top: var(--vp-space-m);
 }
 
+/* Each sentence of the heading wraps as one unit, so a line break falls
+   between sentences before it falls inside one. */
+.split-hero__sentence {
+  display: inline-block;
+}
+
 .split-hero__media {
   background: rgba(var(--color-foreground), 0.05);
 }

@@ -63,7 +63,9 @@ setting weight. Custom CSS refers to these variables instead of numeric
 non-essential motion disabled under `prefers-reduced-motion`. No carousels,
 parallax or scroll hijacking. One exception, owner decision 2026-10-22: the
 product gallery uses Dawn's thumbnail slider (`gallery_layout:
-thumbnail_slider` in `templates/product.json`). Second exception, owner decision
+thumbnail_slider` in `templates/product.json`). Content above the fold (the homepage hero when it is the first
+section, the product gallery and info, the collection banner and first
+products) does not reveal on load (owner decision 2026-10-23). Second exception, owner decision
 2026-10-23: "You may also like" and "Recently viewed" on product pages use
 Dawn's slider below 990px (one swipeable row with a peek of the next card,
 prev/next buttons and a counter); on desktop they stay a four-column grid.

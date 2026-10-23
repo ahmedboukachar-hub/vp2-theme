@@ -69,3 +69,17 @@
     margin-top: var(--vp-space-s);
   }
 }
+
+/* Find a Bag and Sell to Us: the form starts one spacing step below the
+   introduction instead of directly under its last line. */
+.find-a-bag__form,
+.sell-to-us__form {
+  margin-top: var(--vp-space-m);
+}
+
+@media screen and (max-width: 749px) {
+  .find-a-bag__form,
+  .sell-to-us__form {
+    margin-top: 3.2rem;
+  }
+}

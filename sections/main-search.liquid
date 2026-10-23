@@ -132,6 +132,44 @@
           </predictive-search>
         {%- endif -%}
       </div>
+      {%- unless search.performed -%}
+        {%- comment -%}
+          A blank /search (404 page, bookmarks, the header search without
+          JavaScript) suggests where to start: the popular searches from the
+          theme settings, shared with the search overlay, and the empty-state
+          collection and page chosen in this section.
+        {%- endcomment -%}
+        {%- assign popular_terms = settings.popular_searches | split: ',' -%}
+        <div class="template-search__suggestions">
+          {%- if popular_terms.size > 0 -%}
+            <nav class="search-popular" aria-label="{{ 'general.search.popular_searches' | t }}">
+              <span class="search-popular__label">{{ 'general.search.popular_searches' | t }}</span>
+              <ul class="search-popular__list" role="list">
+                {%- for term in popular_terms -%}
+                  {%- assign clean_term = term | strip -%}
+                  {%- if clean_term != blank -%}
+                    <li>
+                      <a href="{{ routes.search_url }}?q={{ clean_term | url_encode }}&options%5Bprefix%5D=last">
+                        {{- clean_term | escape -}}
+                      </a>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </nav>
+          {%- endif -%}
+          <div class="template-search__suggestion-actions">
+            <a href="{{ section.settings.empty_state_collection.url | default: routes.all_products_collection_url }}" class="button">
+              {{- 'templates.search.empty_cta_all' | t -}}
+            </a>
+            {%- if section.settings.empty_state_page != blank -%}
+              <a href="{{ section.settings.empty_state_page.url }}" class="button button--secondary">
+                {{- 'templates.search.empty_cta_find' | t -}}
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endunless -%}
       {%- if search.performed -%}
         {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
           {%- if search.results_count > 0 -%}

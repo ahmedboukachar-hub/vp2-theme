@@ -150,6 +150,7 @@
         "other": "{{ count }} min de lectura"
       },
       "read_article": "Leer el artículo",
+      "shop_this_model": "Este modelo en nuestra selección",
       "topics": "Temas",
       "all_topics": "Todos los artículos",
       "empty": "Todavía no hay artículos.",
@@ -166,6 +167,13 @@
   "products": {
     "product": {
       "add_to_cart": "Añadir al carrito",
+      "in_cart": "En tu carrito",
+      "guide_links": {
+        "label": "Guías",
+        "condition": "Cómo evaluamos el estado",
+        "authenticity": "Cómo verificamos la autenticidad",
+        "model_guide": "Leer nuestra guía del {{ model }}"
+      },
       "description": "Descripción",
       "on_sale": "Oferta",
       "quantity": {
@@ -299,7 +307,8 @@
         "heading": "Esta pieza ha encontrado un nuevo hogar.",
         "find_similar": "Encontrar una pieza similar",
         "join_drop": "Ver novedades",
-        "sourcing_link": "Cuéntanos qué estás buscando"
+        "sourcing_link": "Cuéntanos qué estás buscando",
+        "alternatives_heading": "Disponibles ahora"
       },
       "curators_note_heading": "Por qué esta pieza"
     },

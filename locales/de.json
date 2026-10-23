@@ -158,6 +158,7 @@
         "other": "{{ count }} Min. Lesezeit"
       },
       "read_article": "Beitrag lesen",
+      "shop_this_model": "Dieses Modell in unserer Auswahl",
       "topics": "Themen",
       "all_topics": "Alle Beiträge",
       "empty": "Hier gibt es noch keine Beiträge.",
@@ -174,6 +175,13 @@
   "products": {
     "product": {
       "add_to_cart": "In den Warenkorb legen",
+      "in_cart": "Im Warenkorb",
+      "guide_links": {
+        "label": "Ratgeber",
+        "condition": "So bewerten wir den Zustand",
+        "authenticity": "So prüfen wir die Echtheit",
+        "model_guide": "Unseren Ratgeber zur {{ model }} lesen"
+      },
       "description": "Beschreibung",
       "on_sale": "Reduziert",
       "quantity": {
@@ -307,7 +315,8 @@
         "heading": "Dieses Stück hat ein neues Zuhause gefunden.",
         "find_similar": "Ähnliches entdecken",
         "join_drop": "Neuheiten ansehen",
-        "sourcing_link": "Sagen Sie uns, was Sie suchen"
+        "sourcing_link": "Sagen Sie uns, was Sie suchen",
+        "alternatives_heading": "Jetzt verfügbar"
       },
       "curators_note_heading": "Warum dieses Stück"
     },

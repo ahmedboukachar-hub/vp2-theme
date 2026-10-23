@@ -1,0 +1,90 @@
+{% doc %}
+  Renders a quiet row of links to the guides a product page raises questions
+  about: the Journal guide for this model, the condition grading page and the
+  authenticity page. Each link is hidden when its target is not set.
+
+  The model guide is the first article in the chosen blog whose
+  `custom.models` metafield (list of single line text) contains the product's
+  `custom.model` value. Both are compared as handles, so case and spacing do
+  not matter. Convention documented in docs/taxonomy.md.
+
+  The condition guide link is left out when the condition report on the same
+  page already links to that page.
+
+  @param {object} product - The product.
+  @param {object} block - The "guide_links" block of main-product.
+
+  @example
+  {% render 'product-guide-links', product: product, block: block %}
+{% enddoc %}
+
+{%- liquid
+  assign condition_page = block.settings.condition_page
+  assign authenticity_page = block.settings.authenticity_page
+
+  assign show_condition_link = false
+  if condition_page != blank
+    assign show_condition_link = true
+    assign grade = product.metafields.custom.condition | metafield_text
+    assign summary = product.metafields.custom.condition_summary | metafield_text
+    assign issues = product.metafields.custom.condition_issues.value
+    if grade != blank or summary != blank or issues.size > 0
+      for report_block in section.blocks
+        if report_block.type == 'condition_report' and report_block.settings.guide_page.url == condition_page.url
+          assign show_condition_link = false
+          break
+        endif
+      endfor
+    endif
+  endif
+
+  assign model_guide = nil
+  assign model_name = product.metafields.custom.model | metafield_text
+  assign model_key = model_name | handleize
+  if model_key != blank and block.settings.guides_blog != blank
+    for guide_article in block.settings.guides_blog.articles
+      for covered_model in guide_article.metafields.custom.models.value
+        assign covered_key = covered_model | handleize
+        if covered_key == model_key
+          assign model_guide = guide_article
+          break
+        endif
+      endfor
+      if model_guide
+        break
+      endif
+    endfor
+  endif
+-%}
+
+{%- if model_guide or show_condition_link or authenticity_page != blank -%}
+  {{ 'component-inspection.css' | asset_url | stylesheet_tag }}
+  <ul
+    class="product-guide-links list-unstyled quick-add-hidden"
+    role="list"
+    aria-label="{{ 'products.product.guide_links.label' | t }}"
+    {{ block.shopify_attributes }}
+  >
+    {%- if model_guide -%}
+      <li>
+        <a href="{{ model_guide.url }}" class="link underlined-link">
+          {{- 'products.product.guide_links.model_guide' | t: model: model_name -}}
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if show_condition_link -%}
+      <li>
+        <a href="{{ condition_page.url }}" class="link underlined-link">
+          {{- 'products.product.guide_links.condition' | t -}}
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if authenticity_page != blank -%}
+      <li>
+        <a href="{{ authenticity_page.url }}" class="link underlined-link">
+          {{- 'products.product.guide_links.authenticity' | t -}}
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>
+{%- endif -%}

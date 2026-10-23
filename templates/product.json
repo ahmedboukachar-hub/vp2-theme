@@ -57,6 +57,14 @@
           "type": "specifications",
           "settings": {}
         },
+        "guide_links": {
+          "type": "guide_links",
+          "settings": {
+            "guides_blog": "journal",
+            "condition_page": "condition-guide",
+            "authenticity_page": "authenticity"
+          }
+        },
         "what_fits": {
           "type": "what_fits",
           "settings": {
@@ -98,6 +106,7 @@
         "curators_note",
         "condition_report",
         "specifications",
+        "guide_links",
         "what_fits",
         "shipping_card",
         "enquiry",

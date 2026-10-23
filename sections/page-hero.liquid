@@ -7,9 +7,19 @@
   if section.settings.image != blank
     assign has_media = true
   endif
+
+  comment
+    On the canvas scheme (the first scheme, which the page body uses) the
+    hero shares its background with the next section.
+  endcomment
+  assign canvas_scheme = settings.color_schemes | first
+  assign on_canvas = false
+  if section.settings.color_scheme.id == canvas_scheme.id
+    assign on_canvas = true
+  endif
 -%}
 
-<div class="page-hero color-{{ section.settings.color_scheme }} gradient{% if has_media %} page-hero--with-media{% endif %}">
+<div class="page-hero color-{{ section.settings.color_scheme }} gradient{% if has_media %} page-hero--with-media{% endif %}{% if on_canvas %} page-hero--canvas{% endif %}">
   <div class="vp-width page-hero__inner">
     <div class="page-hero__copy">
       {%- if eyebrow != blank -%}

@@ -5,9 +5,14 @@
   if template.name == 'index' and section.index == 1
     assign heading_tag = 'h1'
   endif
+  # The first section is in view on load, so its copy shows at once; a split hero further down keeps the reveal.
+  assign reveal_copy = false
+  if settings.animations_reveal_on_scroll and section.index > 1
+    assign reveal_copy = true
+  endif
   if section.settings.use_brand_copy
     assign hero_eyebrow = 'brand.hero.eyebrow' | t
-    assign hero_heading = 'brand.hero.heading' | t
+    assign hero_heading = 'brand.hero.heading' | t | escape
     assign hero_intro = 'brand.hero.intro' | t
     assign primary_label = 'brand.hero.primary' | t
     assign secondary_label = 'brand.hero.secondary' | t
@@ -24,12 +29,31 @@
   class="split-hero color-{{ section.settings.color_scheme }} gradient{% if section.settings.image == blank %} split-hero--no-image{% endif %}"
 >
   <div class="split-hero__copy">
-    <div class="split-hero__copy-inner{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="split-hero__copy-inner{% if reveal_copy %} scroll-trigger animate--slide-in{% endif %}">
       {%- if hero_eyebrow != blank -%}
         <span class="vp-eyebrow">{{ hero_eyebrow | escape }}</span>
       {%- endif -%}
       {%- if hero_heading != blank -%}
-        <{{ heading_tag }} class="vp-heading-hero inline-richtext">{% if section.settings.use_brand_copy %}{{ hero_heading | escape }}{% else %}{{ hero_heading }}{% endif %}</{{ heading_tag }}>
+        {%- liquid
+          # A plain-text heading of several sentences breaks between its sentences first, in every language.
+          assign split_sentences = false
+          unless hero_heading contains '<'
+            assign hero_sentences = hero_heading | split: '. '
+            if hero_sentences.size > 1
+              assign split_sentences = true
+            endif
+          endunless
+        -%}
+        <{{ heading_tag }} class="vp-heading-hero inline-richtext">
+          {%- if split_sentences -%}
+            {%- for sentence in hero_sentences -%}
+              <span class="split-hero__sentence">{{ sentence }}{% unless forloop.last %}.{% endunless %}</span>
+              {%- unless forloop.last %} {% endunless -%}
+            {%- endfor -%}
+          {%- else -%}
+            {{- hero_heading -}}
+          {%- endif -%}
+        </{{ heading_tag }}>
       {%- endif -%}
       {%- if section.settings.use_brand_copy -%}
         <div class="vp-lead rte"><p>{{ hero_intro | escape }}</p></div>

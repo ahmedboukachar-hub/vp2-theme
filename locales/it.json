@@ -93,7 +93,7 @@
     "label": "Indirizzo email",
     "success": "Grazie. Sei nella lista.",
     "button_label": "Iscriviti",
-    "privacy_note": "Email occasionali sui nuovi pezzi. Puoi annullare l'iscrizione in qualsiasi momento."
+    "privacy_note": "Email occasionali sui nuovi pezzi. Puoi annullare l’iscrizione in qualsiasi momento."
   },
   "accessibility": {
     "heading_articles": "Articoli",
@@ -149,11 +149,12 @@
         "one": "{{ count }} min di lettura",
         "other": "{{ count }} min di lettura"
       },
-      "read_article": "Leggi l'articolo",
+      "read_article": "Leggi l’articolo",
+      "shop_this_model": "Questo modello nella nostra selezione",
       "topics": "Argomenti",
       "all_topics": "Tutti gli articoli",
       "empty": "Non ci sono ancora articoli.",
-      "topic_buying_guides": "Guide all'acquisto",
+      "topic_buying_guides": "Guide all’acquisto",
       "topic_bag_care": "Cura e condizioni",
       "topic_designer_stories": "Storie delle maison",
       "topic_collecting_vintage": "Collezionare vintage"
@@ -166,6 +167,13 @@
   "products": {
     "product": {
       "add_to_cart": "Aggiungi al carrello",
+      "in_cart": "Nel carrello",
+      "guide_links": {
+        "label": "Guide",
+        "condition": "Come valutiamo le condizioni",
+        "authenticity": "Come verifichiamo l’autenticità",
+        "model_guide": "Leggi la nostra guida alla {{ model }}"
+      },
       "description": "Descrizione",
       "on_sale": "In offerta",
       "quantity": {
@@ -194,7 +202,7 @@
       "vendor": "Fornitore",
       "video_exit_message": "{{ title }} apre un video a schermo intero nella stessa finestra.",
       "xr_button": "Visualizza nel tuo spazio",
-      "xr_button_label": "Visualizza nel tuo spazio, carica l'articolo nella finestra della realtà aumentata",
+      "xr_button_label": "Visualizza nel tuo spazio, carica l’articolo nella finestra della realtà aumentata",
       "pickup_availability": {
         "view_store_info": "Visualizza i dettagli del negozio",
         "check_other_stores": "Verifica la disponibilità in altri negozi",
@@ -212,7 +220,7 @@
         "load_image": "Carica immagine {{ index }} in visualizzazione galleria",
         "load_model": "Carica modello 3D {{ index }} in visualizzazione galleria",
         "load_video": "Riproduci video {{ index }} in visualizzazione galleria",
-        "image_available": "L'immagine {{ index }} è ora disponibile in visualizzazione galleria",
+        "image_available": "L’immagine {{ index }} è ora disponibile in visualizzazione galleria",
         "photography_pending": "Fotografie in arrivo"
       },
       "nested_label": "{{ title }} per {{ parent_title }}",
@@ -299,7 +307,8 @@
         "heading": "Questo pezzo ha trovato una nuova casa.",
         "find_similar": "Trova un pezzo simile",
         "join_drop": "Scopri le novità",
-        "sourcing_link": "Raccontaci cosa stai cercando"
+        "sourcing_link": "Raccontaci cosa stai cercando",
+        "alternatives_heading": "Disponibili ora"
       },
       "curators_note_heading": "Perché questo pezzo"
     },
@@ -382,7 +391,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "Nessun risultato per \"{{ terms }}\". Controlla l'ortografia o usa una parola o una frase diversa.",
+      "no_results": "Nessun risultato per \"{{ terms }}\". Controlla l’ortografia o usa una parola o una frase diversa.",
       "page": "Pagina",
       "results_with_count": {
         "one": "{{ count }} risultato",
@@ -438,9 +447,9 @@
       "title": "Pagina non trovata",
       "subtext": "404",
       "eyebrow": "Non trovato",
-      "body": "Il pezzo o la pagina potrebbero essere stati spostati. Scopri gli ultimi arrivi, esplora l'archivio o cerca per maison e modello.",
+      "body": "Il pezzo o la pagina potrebbero essere stati spostati. Scopri gli ultimi arrivi, esplora l’archivio o cerca per maison e modello.",
       "cta_new_arrivals": "Acquista i nuovi arrivi",
-      "cta_archive": "Esplora l'archivio"
+      "cta_archive": "Esplora l’archivio"
     },
     "find_a_bag": {
       "fields": {
@@ -464,7 +473,7 @@
       "submit": "Invia la mia richiesta",
       "success_heading": "Abbiamo ricevuto la tua richiesta",
       "success_body": "Grazie. Ti contatteremo se potremo aiutarti concretamente nella ricerca.",
-      "closing": "Ogni pezzo di seconda mano è unico. Condizioni, età, dettagli e accessori inclusi possono variare anche all'interno dello stesso modello. Descriveremo sempre il pezzo specifico proposto.",
+      "closing": "Ogni pezzo di seconda mano è unico. Condizioni, età, dettagli e accessori inclusi possono variare anche all’interno dello stesso modello. Descriveremo sempre il pezzo specifico proposto.",
       "hidden_source": "Tipo di richiesta",
       "optional_details": "Altre preferenze (facoltativo)"
     },
@@ -486,7 +495,7 @@
       "serial": "Seriale o codice data",
       "serial_hint": "Non condividere qui il numero di serie o il codice data completo. Indica soltanto se è presente; se necessario, ti chiederemo i dettagli tramite un canale sicuro.",
       "disclaimer": "Non inviare un articolo finché non avremo concordato per iscritto le istruzioni di spedizione.",
-      "submit": "Invia i dettagli dell'articolo",
+      "submit": "Invia i dettagli dell’articolo",
       "success": "Grazie. Abbiamo ricevuto la tua proposta e ti contatteremo se desideriamo approfondire i dettagli del pezzo.",
       "hidden_source": "Tipo di richiesta"
     },
@@ -518,12 +527,12 @@
       "title": "Il tuo carrello",
       "caption": "Articoli nel carrello",
       "remove_title": "Rimuovi {{ title }}",
-      "note": "Istruzioni speciali per l'ordine",
+      "note": "Istruzioni speciali per l’ordine",
       "checkout": "Check-out",
       "empty": "Il tuo carrello è vuoto",
       "product_disclosure": "Informativa sul prodotto",
       "product_disclosures": "Informative sul prodotto",
-      "cart_error": "Si è verificato un errore durante l'aggiornamento del carrello. Riprova più tardi.",
+      "cart_error": "Si è verificato un errore durante l’aggiornamento del carrello. Riprova più tardi.",
       "cart_quantity_error_html": "Puoi aggiungere soltanto {{ quantity }} di questo articolo al tuo carrello.",
       "headings": {
         "product": "Prodotto",
@@ -554,7 +563,7 @@
     "featured_blog": {
       "view_all": "Visualizza tutto",
       "onboarding_title": "Articolo del blog",
-      "onboarding_content": "Offri ai clienti un riepilogo dell'articolo del blog"
+      "onboarding_content": "Offri ai clienti un riepilogo dell’articolo del blog"
     },
     "featured_collection": {
       "view_all": "Visualizza tutto",
@@ -621,14 +630,14 @@
       "sourcing_note": "Hai visto un pezzo che ti è sfuggito? Condividilo con noi e raccontaci cosa stai cercando. Non possiamo promettere una corrispondenza esatta, ma la tua richiesta può orientare le ricerche future.",
       "find_similar": "Trova un pezzo simile",
       "explore_available": "Scopri le borse disponibili",
-      "empty_heading": "L'archivio sta prendendo forma",
+      "empty_heading": "L’archivio sta prendendo forma",
       "empty_body": "Qui compariranno i pezzi selezionati in passato.",
       "previously_sourced": "Selezionato in passato",
       "found_new_home": "Questo pezzo ha trovato una nuova casa"
     },
     "drop_signup": {
       "heading": "Scopri per primo i nuovi pezzi",
-      "body": "Ricevi aggiornamenti occasionali all'arrivo di nuove borse selezionate.",
+      "body": "Ricevi aggiornamenti occasionali all’arrivo di nuove borse selezionate.",
       "email_placeholder": "Indirizzo email",
       "submit": "Iscriviti",
       "success": "Grazie. Sei nella lista."
@@ -651,14 +660,14 @@
       "title": "Account",
       "details": "Dettagli account",
       "view_addresses": "Visualizza indirizzi",
-      "return": "Ritorna ai dettagli dell'account"
+      "return": "Ritorna ai dettagli dell’account"
     },
     "activate_account": {
-      "title": "Attiva l'account",
+      "title": "Attiva l’account",
       "subtext": "Crea una password per attivare il tuo account.",
       "password": "Password",
       "password_confirm": "Conferma password",
-      "submit": "Attiva l'account",
+      "submit": "Attiva l’account",
       "cancel": "Rifiuta invito"
     },
     "addresses": {
@@ -737,8 +746,8 @@
     },
     "recover_password": {
       "title": "Reimposta la password",
-      "subtext": "Riceverai un'email per reimpostare la tua password",
-      "success": "Ti abbiamo inviato un'email con un link per aggiornare la password."
+      "subtext": "Riceverai un’email per reimpostare la tua password",
+      "success": "Ti abbiamo inviato un’email con un link per aggiornare la password."
     },
     "register": {
       "title": "Crea account",
@@ -749,7 +758,7 @@
       "submit": "Crea"
     },
     "reset_password": {
-      "title": "Reimposta la password dell'account",
+      "title": "Reimposta la password dell’account",
       "subtext": "Inserisci una nuova password",
       "password": "Password",
       "password_confirm": "Conferma password",

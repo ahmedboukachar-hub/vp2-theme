@@ -1,0 +1,120 @@
+{%- comment -%}
+  "Shop this model": available pieces of the model(s) a Journal guide
+  describes. The article lists its models in the custom.models metafield
+  (list of single line text); a product matches when its custom.model value
+  is in that list (compared as handles). Products come from the collection
+  chosen in the section, so no handles live in Liquid. Renders nothing when
+  the article lists no models or no matching piece is available.
+  Convention documented in docs/taxonomy.md.
+{%- endcomment -%}
+
+{%- liquid
+  assign shop_collection = section.settings.collection
+  assign model_keys = ','
+  for covered_model in article.metafields.custom.models.value
+    assign covered_key = covered_model | handleize
+    if covered_key != blank
+      assign model_keys = model_keys | append: covered_key | append: ','
+    endif
+  endfor
+  assign shown_count = 0
+-%}
+
+{%- if model_keys != ',' and shop_collection != blank -%}
+  {%- capture product_cards -%}
+    {%- paginate shop_collection.products by 250 -%}
+      {%- assign skip_card_product_styles = false -%}
+      {%- for candidate in shop_collection.products -%}
+        {%- if shown_count >= section.settings.products_to_show -%}
+          {%- break -%}
+        {%- endif -%}
+        {%- unless candidate.available -%}
+          {%- continue -%}
+        {%- endunless -%}
+        {%- assign candidate_model = candidate.metafields.custom.model | metafield_text | handleize -%}
+        {%- assign candidate_key = ',' | append: candidate_model | append: ',' -%}
+        {%- if candidate_model != blank and model_keys contains candidate_key -%}
+          {%- assign shown_count = shown_count | plus: 1 -%}
+          <li class="grid__item">
+            {% render 'card-product',
+              columns: 4,
+              card_product: candidate,
+              media_aspect_ratio: section.settings.image_ratio,
+              show_secondary_image: false,
+              show_vendor: false,
+              skip_styles: skip_card_product_styles,
+              product_view_context: 'recommendation'
+            %}
+          </li>
+          {%- assign skip_card_product_styles = true -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endpaginate -%}
+  {%- endcapture -%}
+
+  {%- if shown_count > 0 -%}
+    {{ 'component-card.css' | asset_url | stylesheet_tag }}
+    {{ 'component-price.css' | asset_url | stylesheet_tag }}
+    {{ 'section-main-article.css' | asset_url | stylesheet_tag }}
+    <div class="article-products color-{{ section.settings.color_scheme }} gradient">
+      <div class="vp-width">
+        <div class="article-products__inner">
+          <h2 class="article-products__heading h3">{{ 'blogs.article.shop_this_model' | t }}</h2>
+          <ul class="grid product-grid grid--2-col-tablet-down grid--4-col-desktop" role="list">
+            {{ product_cards }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Shop this model",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows available pieces whose custom.model value is listed in the article's custom.models metafield. Hidden when the article lists no models or none is available."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Products from",
+      "info": "Usually the collection with every bag and accessory."
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "label": "Maximum pieces"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        { "value": "adapt", "label": "Adapt to image" },
+        { "value": "portrait", "label": "Portrait" },
+        { "value": "square", "label": "Square" }
+      ],
+      "default": "portrait",
+      "label": "Image ratio"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["article"]
+  },
+  "presets": [{ "name": "Shop this model" }]
+}
+{% endschema %}

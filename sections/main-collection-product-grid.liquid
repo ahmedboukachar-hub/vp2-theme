@@ -132,12 +132,14 @@
           </aside>
         {%- endif -%}
 
+        {%- comment -%}
+          The grid container and the first row of products show at once; only
+          the rows below reveal on scroll, so the first products are not held
+          back on page load.
+        {%- endcomment -%}
         <div
-          class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="product-grid-container"
           id="ProductGridContainer"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-          {% endif %}
         >
           {%- if collection.products.size == 0 -%}
             <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
@@ -173,12 +175,16 @@
                 {% assign skip_card_product_styles = false %}
                 {%- for product in collection.products -%}
                   {% assign lazy_load = false %}
+                  {% assign reveal = false %}
                   {%- if forloop.index > section.settings.columns_desktop -%}
                     {%- assign lazy_load = true -%}
+                    {%- if settings.animations_reveal_on_scroll -%}
+                      {%- assign reveal = true -%}
+                    {%- endif -%}
                   {%- endif -%}
                   <li
-                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
+                    class="grid__item{% if reveal %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if reveal %}
                       data-cascade
                       style="--animation-order: {{ forloop.index }};"
                     {% endif %}

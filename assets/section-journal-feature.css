@@ -1,10 +1,5 @@
 .journal-feature__header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--vp-space-s);
-  margin-bottom: var(--vp-space-l);
+  margin-bottom: 3.2rem;
 }
 
 .journal-feature__header .vp-section__header { margin-bottom: 0; }
@@ -13,17 +8,24 @@
   max-width: 64rem;
 }
 
+/* The link to the Journal follows the stories in reading order. */
 .journal-feature__cta {
-  flex: 0 0 auto;
   min-width: var(--vp-button-width, 22rem);
   min-height: 5.2rem;
+  margin-top: 3.2rem;
 }
 
 .journal-feature__grid {
   display: grid;
   gap: var(--vp-space-l);
-  padding-top: var(--vp-space-m);
+  padding-top: 3.2rem;
   border-top: 1px solid rgba(var(--color-foreground), 0.24);
+}
+
+/* Lead stories are portrait photographs cropped to a square; a carried bag
+   sits below the middle of the frame, so keep the lower part in view. */
+.journal-feature__lead {
+  --vp-media-position: center 65%;
 }
 
 .journal-feature__secondary {
@@ -41,15 +43,21 @@
   border-top: 0;
 }
 
-@media screen and (max-width: 749px) {
-  .journal-feature__header {
-    display: block;
-    margin-bottom: var(--vp-space-m);
+/* Phones and tablets stack the stories: two rows under the lead story are enough. */
+@media screen and (max-width: 989px) {
+  .journal-feature__secondary .journal-card:nth-child(n + 3) {
+    display: none;
   }
 
+  .journal-feature__secondary .journal-card:nth-child(2),
+  .journal-feature__secondary .journal-card:last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 749px) {
   .journal-feature__cta {
     width: 100%;
-    margin-top: 2.4rem;
   }
 
   .journal-feature__grid {
@@ -57,8 +65,31 @@
   }
 }
 
+/* Desktop: the link sits beside the header, the stories span the full row below. */
 @media screen and (min-width: 990px) {
+  .journal-feature__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: var(--vp-space-s);
+    row-gap: 3.2rem;
+    align-items: end;
+  }
+
+  .journal-feature__header {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+
+  .journal-feature__cta {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
   .journal-feature__grid {
+    grid-column: 1 / -1;
+    grid-row: 2;
     grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
     gap: clamp(3.2rem, 4vw, 5.6rem);
     align-items: start;
@@ -67,7 +98,5 @@
   .journal-feature__secondary { padding-top: 0.4rem; }
 }
 
-.journal-feature.vp-section { padding-block:6.4rem; }
-.journal-feature__header { margin-bottom:3.2rem; }
-.journal-feature__grid { padding-top:3.2rem; }
-@media screen and (max-width:749px) { .journal-feature.vp-section { padding-block:4rem; } }
+.journal-feature.vp-section { padding-block: 6.4rem; }
+@media screen and (max-width: 749px) { .journal-feature.vp-section { padding-block: 4rem; } }

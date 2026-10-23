@@ -22,12 +22,31 @@
       if block.settings.show_dynamic_checkout and gift_card_recipient_feature_active == false
         assign show_dynamic_checkout = true
       endif
+
+      # One-off pieces: once every unit in stock is in the cart, the add button
+      # reads "In your cart" and opens the cart instead of adding again
+      # (product-form.js keeps this state in sync after adds and removals).
+      assign current_variant = product.selected_or_first_available_variant
+      assign inventory_max = ''
+      assign variant_in_cart = false
+      if current_variant.available and current_variant.inventory_management == 'shopify' and current_variant.inventory_policy == 'deny' and current_variant.inventory_quantity > 0
+        assign inventory_max = current_variant.inventory_quantity
+        assign variant_cart_qty = cart | item_count_for_variant: current_variant.id
+        if variant_cart_qty >= inventory_max
+          assign variant_in_cart = true
+        endif
+      endif
     -%}
 
     <product-form
       class="product-form"
       data-hide-errors="{{ gift_card_recipient_feature_active }}"
       data-section-id="{{ section.id }}"
+      data-in-cart-label="{{ 'products.product.in_cart' | t | escape }}"
+      {% if inventory_max != blank %}
+        data-inventory-max="{{ inventory_max }}"
+        data-in-cart="{{ variant_in_cart }}"
+      {% endif %}
     >
       <div class="product-form__error-message-wrapper" role="alert" hidden>
         <span class="svg-wrapper">
@@ -91,6 +110,8 @@
                 {{ 'products.product.unavailable' | t }}
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
+              {%- elsif variant_in_cart -%}
+                {{ 'products.product.in_cart' | t }}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}

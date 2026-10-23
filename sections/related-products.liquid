@@ -22,6 +22,88 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
+  {%- if product.tags contains 'sold-archive' -%}
+    {%- comment -%}
+      Shopify returns no recommendations for sold pieces, so a sold page would
+      end without anything buyable. Show up to three available pieces from the
+      collections this piece belongs to: the same designer first, then the
+      rest. Server-rendered; no collection handles involved.
+    {%- endcomment -%}
+    {%- liquid
+      assign alternatives_limit = 3
+      assign alternatives_count = 0
+      assign picked_ids = ','
+      assign skip_card_product_styles = false
+    -%}
+    {%- capture alternative_cards -%}
+      {%- for pass in (1..2) -%}
+        {%- for source_collection in product.collections -%}
+          {%- for candidate in source_collection.products -%}
+            {%- if alternatives_count >= alternatives_limit -%}
+              {%- break -%}
+            {%- endif -%}
+            {%- if candidate.available == false or candidate.id == product.id -%}
+              {%- continue -%}
+            {%- endif -%}
+            {%- if pass == 1 and candidate.vendor != product.vendor -%}
+              {%- continue -%}
+            {%- endif -%}
+            {%- assign candidate_key = ',' | append: candidate.id | append: ',' -%}
+            {%- if picked_ids contains candidate_key -%}
+              {%- continue -%}
+            {%- endif -%}
+            {%- assign picked_ids = picked_ids | append: candidate.id | append: ',' -%}
+            {%- assign alternatives_count = alternatives_count | plus: 1 -%}
+            <li id="Slide-{{ section.id }}-{{ alternatives_count }}" class="grid__item__ALT_SLIDE__">
+              {% render 'card-product',
+                columns: 3,
+                card_product: candidate,
+                media_aspect_ratio: section.settings.image_ratio,
+                image_shape: section.settings.image_shape,
+                show_secondary_image: section.settings.show_secondary_image,
+                show_vendor: section.settings.show_vendor,
+                show_rating: section.settings.show_rating,
+                skip_styles: skip_card_product_styles,
+                product_view_context: 'recommendation'
+              %}
+            </li>
+            {%- assign skip_card_product_styles = true -%}
+          {%- endfor -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- if alternatives_count > 0 -%}
+      {%- liquid
+        assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+        assign show_mobile_slider = false
+        assign alternative_slide_class = ''
+        if section.settings.swipe_on_mobile and alternatives_count > columns_mobile_int
+          assign show_mobile_slider = true
+          assign alternative_slide_class = ' slider__slide'
+        endif
+      -%}
+      <div class="related-products related-products--alternatives section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="page-width">
+          <h2 class="related-products__heading {{ section.settings.heading_size }}">
+            {{- 'products.product.sold.alternatives_heading' | t -}}
+          </h2>
+        </div>
+        <slider-component class="slider-mobile-gutter page-width-desktop{% unless show_mobile_slider %} page-width{% endunless %}">
+          <ul
+            id="Slider-{{ section.id }}"
+            class="grid product-grid grid--3-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
+            role="list"
+            aria-label="{{ 'general.slider.name' | t }}"
+          >
+            {{ alternative_cards | replace: '__ALT_SLIDE__', alternative_slide_class }}
+          </ul>
+          {%- if show_mobile_slider -%}
+            {% render 'slider-buttons', slider_id: section.id, total: alternatives_count %}
+          {%- endif -%}
+        </slider-component>
+      </div>
+    {%- endif -%}
+  {%- else -%}
   <product-recommendations
     class="related-products section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     data-url="{{ routes.product_recommendations_url }}?limit={{ section.settings.products_to_show }}"
@@ -76,6 +158,7 @@
       </slider-component>
     {% endif %}
   </product-recommendations>
+  {%- endif -%}
   {% if section.settings.image_shape == 'arch' %}
     {{ 'mask-arch.svg' | inline_asset_content }}
   {%- endif -%}

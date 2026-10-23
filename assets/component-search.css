@@ -72,3 +72,33 @@ input::-webkit-search-decoration {
 .template-search__results {
   position: relative;
 }
+
+/* Blank /search: popular searches and two starting points under the field. */
+.template-search__suggestions {
+  max-width: 74.1rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.template-search__suggestions .search-popular {
+  margin-top: 0;
+}
+
+.template-search__suggestion-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3.2rem;
+}
+
+.template-search__suggestion-actions .button {
+  min-inline-size: var(--vp-button-width);
+  min-height: 5.2rem;
+  padding-inline: 3.2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .template-search__suggestion-actions .button {
+    width: 100%;
+  }
+}
