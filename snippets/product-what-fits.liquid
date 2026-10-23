@@ -1,6 +1,7 @@
 {% comment %}
   Renders the "What fits inside" module from custom.what_fits (rich text).
   Renders nothing when the field is empty — no empty labels or placeholders.
+  The size guide link uses the page chosen in the block (hidden when none).
 
   Accepts:
   - product: {Object} Product Liquid object
@@ -16,10 +17,12 @@
   <div class="what-fits quick-add-hidden" {{ block.shopify_attributes }}>
     <h2 class="what-fits__heading h4">{{ 'products.product.what_fits.heading' | t }}</h2>
     <div class="what-fits__content rte">{{ what_fits }}</div>
-    <p class="what-fits__link">
-      <a href="{{ pages['bag-size-guide'].url | default: '/pages/bag-size-guide' }}" class="link underlined-link">
-        {{- 'products.product.what_fits.size_guide_link' | t -}}
-      </a>
-    </p>
+    {%- if block.settings.size_guide_page != blank -%}
+      <p class="what-fits__link">
+        <a href="{{ block.settings.size_guide_page.url }}" class="link underlined-link">
+          {{- 'products.product.what_fits.size_guide_link' | t -}}
+        </a>
+      </p>
+    {%- endif -%}
   </div>
 {%- endif -%}

@@ -12,7 +12,9 @@
       "type": "archive-actions",
       "settings": {
         "padding_top": 8,
-        "padding_bottom": 8
+        "padding_bottom": 8,
+        "sourcing_page": "find-a-bag",
+        "collection": "all-bags"
       }
     },
     "product-grid": {

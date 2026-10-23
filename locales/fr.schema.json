@@ -1639,9 +1639,13 @@
                 "label": "Majuscule"
               }
             },
+            "designer_collections": {
+              "label": "Collections des créateurs",
+              "info": "Le nom du créateur renvoie vers la collection de cette liste dont tous les produits viennent de ce créateur. « Trouver une pièce similaire » sur les pièces vendues utilise la même collection. Ajoutez ici chaque nouvelle maison."
+            },
             "bags_collection": {
               "label": "Collection de sacs pour le lien créateur",
-              "info": "Le nom du créateur renvoie vers cette collection filtrée par l’étiquette du créateur. Laisser vide pour renvoyer vers la page fournisseur de Shopify."
+              "info": "Utilisée si aucune collection de créateur ne correspond : le nom du créateur renvoie vers cette collection, filtrée par l’étiquette du créateur."
             },
             "accessories_collection": {
               "label": "Collection d’accessoires pour le lien créateur"
@@ -1694,6 +1698,20 @@
             "show_gift_card_recipient": {
               "label": " Options d’envoi de carte-cadeau",
               "info": "Les clients peuvent ajouter un message personnel et programmer la date d’envoi. [En savoir plus](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            },
+            "sold_header": {
+              "content": "Pièces vendues"
+            },
+            "sold_similar_collection": {
+              "label": "Solution de repli pour « Trouver une pièce similaire »",
+              "info": "Utilisée si aucune collection de créateur ne correspond à la pièce (les collections des créateurs se règlent dans le bloc de texte du nom du créateur). Vide : tous les produits."
+            },
+            "sold_new_arrivals_collection": {
+              "label": "Collection pour « Voir les nouveautés »"
+            },
+            "sourcing_page": {
+              "label": "Page pour « Dites-nous ce que vous recherchez »",
+              "info": "Masqué si aucune page n’est sélectionnée."
             }
           }
         },
@@ -2161,6 +2179,17 @@
           "options__2": {
             "label": "2"
           }
+        },
+        "header__empty_state": {
+          "content": "Aucun résultat"
+        },
+        "empty_state_collection": {
+          "label": "Collection du bouton principal",
+          "info": "Affiché lorsqu’une recherche ne trouve rien (« Explorer tous les sacs »). Vide : tous les produits."
+        },
+        "empty_state_page": {
+          "label": "Page du second bouton",
+          "info": "Affiché lorsqu’une recherche ne trouve rien (« Trouver un sac »). Masqué si aucune page n’est sélectionnée."
         }
       }
     },

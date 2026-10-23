@@ -30,10 +30,12 @@
     <div class="archive-actions">
       <p>{{ 'sections.archive.sourcing_note' | t }}</p>
       <div class="archive-actions__buttons">
-        <a href="{{ pages['find-a-bag'].url | default: '/pages/find-a-bag' }}" class="button">
+        {%- if section.settings.sourcing_page != blank %}
+        <a href="{{ section.settings.sourcing_page.url }}" class="button">
           {{- 'sections.archive.find_similar' | t -}}
         </a>
-        <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button button--secondary">
+        {%- endif %}
+        <a href="{{ section.settings.collection.url | default: routes.all_products_collection_url }}" class="button button--secondary">
           {{- 'sections.archive.explore_available' | t -}}
         </a>
       </div>
@@ -43,7 +45,7 @@
       <h2 class="h3">{{ 'sections.archive.empty_heading' | t }}</h2>
       <p>{{ 'sections.archive.empty_body' | t }}</p>
       <div class="archive-actions__buttons" style="justify-content: center;">
-        <a href="{{ collections['all-bags'].url | default: routes.all_products_collection_url }}" class="button">{{ 'sections.archive.explore_available' | t }}</a>
+        <a href="{{ section.settings.collection.url | default: routes.all_products_collection_url }}" class="button">{{ 'sections.archive.explore_available' | t }}</a>
       </div>
     </div>
   {%- endif -%}
@@ -58,6 +60,18 @@
     {
       "type": "paragraph",
       "content": "Sourcing CTAs for the Sold Archive, plus its empty state. Copy comes from locale files and is fully translated."
+    },
+    {
+      "type": "page",
+      "id": "sourcing_page",
+      "label": "Page for 'Find a similar piece'",
+      "info": "The button is hidden when no page is selected."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection for 'Explore available bags'",
+      "info": "Empty: all products."
     },
     {
       "type": "header",

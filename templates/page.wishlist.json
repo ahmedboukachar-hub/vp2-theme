@@ -11,7 +11,8 @@
     "main": {
       "type": "wishlist-items",
       "settings": {
-        "show_title": false
+        "show_title": false,
+        "collection": "all-bags"
       }
     },
     "recently-viewed": {

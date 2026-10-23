@@ -9,7 +9,13 @@
             "text": "{{ product.vendor }}",
             "bags_collection": "all-bags",
             "accessories_collection": "accessories",
-            "text_style": "uppercase"
+            "text_style": "uppercase",
+            "designer_collections": [
+              "louis-vuitton",
+              "gucci",
+              "jacquemus",
+              "dior"
+            ]
           }
         },
         "title": {
@@ -32,24 +38,36 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": true,
+            "sold_similar_collection": "all-bags",
+            "sold_new_arrivals_collection": "new-arrivals",
+            "sourcing_page": "find-a-bag"
           }
         },
         "description": {
           "type": "description"
         },
         "condition_report": {
-          "type": "condition_report"
+          "type": "condition_report",
+          "settings": {
+            "guide_page": "condition-guide"
+          }
         },
         "specifications": {
           "type": "specifications",
           "settings": {}
         },
         "what_fits": {
-          "type": "what_fits"
+          "type": "what_fits",
+          "settings": {
+            "size_guide_page": "bag-size-guide"
+          }
         },
         "shipping_card": {
-          "type": "shipping_card"
+          "type": "shipping_card",
+          "settings": {
+            "shipping_page": "shipping-returns"
+          }
         },
         "enquiry": {
           "type": "enquiry"

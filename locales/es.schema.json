@@ -1640,9 +1640,13 @@
                 "label": "Mayúscula"
               }
             },
+            "designer_collections": {
+              "label": "Colecciones de firmas",
+              "info": "El nombre de la firma enlaza a la colección de esta lista cuyos productos son todos de esa firma. «Encontrar una pieza similar» en las piezas vendidas usa la misma colección. Añade aquí cada nueva firma."
+            },
             "bags_collection": {
               "label": "Colección de bolsos para el enlace de la firma",
-              "info": "El nombre de la firma enlaza a esta colección filtrada por la etiqueta de la firma. Déjalo vacío para enlazar a la página de proveedor de Shopify."
+              "info": "Se usa cuando ninguna colección de firma coincide: el nombre de la firma enlaza a esta colección, filtrada por la etiqueta de la firma."
             },
             "accessories_collection": {
               "label": "Colección de accesorios para el enlace de la firma"
@@ -1695,6 +1699,20 @@
             "show_gift_card_recipient": {
               "label": " Opciones de envío de tarjeta de regalo",
               "info": "Los clientes pueden agregar un mensaje personal y programar la fecha de envío. [Más información](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            },
+            "sold_header": {
+              "content": "Piezas vendidas"
+            },
+            "sold_similar_collection": {
+              "label": "Alternativa para «Encontrar una pieza similar»",
+              "info": "Se usa cuando ninguna colección de firma coincide con la pieza (las colecciones de firmas se configuran en el bloque de texto con el nombre de la firma). Vacío: todos los productos."
+            },
+            "sold_new_arrivals_collection": {
+              "label": "Colección para «Ver novedades»"
+            },
+            "sourcing_page": {
+              "label": "Página para «Cuéntanos qué estás buscando»",
+              "info": "Oculto si no se selecciona ninguna página."
             }
           }
         },
@@ -2161,6 +2179,17 @@
           "options__2": {
             "label": "2"
           }
+        },
+        "header__empty_state": {
+          "content": "Sin resultados"
+        },
+        "empty_state_collection": {
+          "label": "Colección del botón principal",
+          "info": "Se muestra cuando una búsqueda no encuentra nada («Explorar todos los bolsos»). Vacío: todos los productos."
+        },
+        "empty_state_page": {
+          "label": "Página del segundo botón",
+          "info": "Se muestra cuando una búsqueda no encuentra nada («Encontrar un bolso»). Oculto si no se selecciona ninguna página."
         }
       }
     },

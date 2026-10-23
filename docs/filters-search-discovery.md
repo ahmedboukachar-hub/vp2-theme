@@ -35,5 +35,9 @@ Notes:
   hide automatically.
 - Keep filter labels translated in the app's own settings where offered;
   the theme renders whatever the Storefront API returns.
+- `snippets/facets.liquid` hides unselected filter values with a count of 0
+  (such as "Out of stock (0)" on the available-only listing collections).
+  Selected values always stay visible, and a filter whose values are all 0
+  keeps Dawn's disabled list so it never renders empty.
 - Do not create indexable filter-combination landing pages; filtered URLs
   stay parameterised and are not added to navigation or sitemaps.

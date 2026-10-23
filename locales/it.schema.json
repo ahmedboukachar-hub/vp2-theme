@@ -1640,9 +1640,13 @@
                 "label": "Maiuscolo"
               }
             },
+            "designer_collections": {
+              "label": "Collezioni dei designer",
+              "info": "Il nome del designer rimanda alla collezione di questo elenco i cui prodotti provengono tutti da quel designer. «Trova un pezzo simile» sui pezzi venduti usa la stessa collezione. Aggiungi qui ogni nuova maison."
+            },
             "bags_collection": {
               "label": "Collezione di borse per il link del designer",
-              "info": "Il nome del designer rimanda a questa collezione filtrata per il tag del designer. Lascia vuoto per rimandare alla pagina fornitore di Shopify."
+              "info": "Usata quando nessuna collezione del designer corrisponde: il nome del designer rimanda a questa collezione, filtrata per il tag del designer."
             },
             "accessories_collection": {
               "label": "Collezione di accessori per il link del designer"
@@ -1695,6 +1699,20 @@
             "show_gift_card_recipient": {
               "label": " Opzioni di invio del buono regalo",
               "info": "I clienti possono aggiungere un messaggio personale e pianificare la data di invio. [Maggiori informazioni](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            },
+            "sold_header": {
+              "content": "Pezzi venduti"
+            },
+            "sold_similar_collection": {
+              "label": "Alternativa per «Trova un pezzo simile»",
+              "info": "Usata quando nessuna collezione del designer corrisponde al pezzo (le collezioni dei designer si impostano nel blocco di testo con il nome del designer). Vuoto: tutti i prodotti."
+            },
+            "sold_new_arrivals_collection": {
+              "label": "Collezione per «Scopri le novità»"
+            },
+            "sourcing_page": {
+              "label": "Pagina per «Raccontaci cosa stai cercando»",
+              "info": "Nascosto se non è selezionata alcuna pagina."
             }
           }
         },
@@ -2161,6 +2179,17 @@
           "options__2": {
             "label": "2"
           }
+        },
+        "header__empty_state": {
+          "content": "Nessun risultato"
+        },
+        "empty_state_collection": {
+          "label": "Collezione per il pulsante principale",
+          "info": "Mostrato quando una ricerca non trova nulla («Scopri tutte le borse»). Vuoto: tutti i prodotti."
+        },
+        "empty_state_page": {
+          "label": "Pagina per il secondo pulsante",
+          "info": "Mostrato quando una ricerca non trova nulla («Trova una borsa»). Nascosto se non è selezionata alcuna pagina."
         }
       }
     },

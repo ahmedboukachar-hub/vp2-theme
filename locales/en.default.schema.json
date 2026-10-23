@@ -1944,9 +1944,13 @@
                 "label": "Uppercase"
               }
             },
+            "designer_collections": {
+              "label": "Designer collections",
+              "info": "The designer name links to the collection in this list whose products all come from that designer. 'Find something similar' on sold pieces uses the same collection. Add each new house here."
+            },
             "bags_collection": {
               "label": "Bags collection for the designer link",
-              "info": "The designer name links to this collection filtered by the designer tag. Leave empty to link to Shopify's vendor page."
+              "info": "Used when no designer collection matches: the designer name links to this collection, filtered by the designer tag."
             },
             "accessories_collection": {
               "label": "Accessories collection for the designer link"
@@ -2022,6 +2026,20 @@
             "show_gift_card_recipient": {
               "label": " Gift card sending options",
               "info": "Customers can add a personal message and schedule the send date. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            },
+            "sold_header": {
+              "content": "Sold pieces"
+            },
+            "sold_similar_collection": {
+              "label": "Fallback for 'Find something similar'",
+              "info": "Used when no designer collection matches the piece (designer collections are set on the designer name text block). Empty: all products."
+            },
+            "sold_new_arrivals_collection": {
+              "label": "Collection for 'View new arrivals'"
+            },
+            "sourcing_page": {
+              "label": "Page for 'Tell us what you are looking for'",
+              "info": "Hidden when no page is selected."
             }
           }
         },
@@ -2465,6 +2483,17 @@
         },
         "article_show_author": {
           "label": "Author"
+        },
+        "header__empty_state": {
+          "content": "No results"
+        },
+        "empty_state_collection": {
+          "label": "Collection for the main button",
+          "info": "Shown when a search finds nothing ('Explore all bags'). Empty: all products."
+        },
+        "empty_state_page": {
+          "label": "Page for the second button",
+          "info": "Shown when a search finds nothing ('Find a bag'). Hidden when no page is selected."
         }
       }
     },

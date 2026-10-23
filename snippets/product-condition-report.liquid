@@ -1,6 +1,7 @@
 {% comment %}
   Renders the condition report: grade, human summary, individual signs of
-  wear (condition_issue metaobjects) and a link to the Condition Guide.
+  wear (condition_issue metaobjects) and a link to the Condition Guide page
+  chosen in the block (hidden when none is chosen).
   Renders nothing when no condition data exists.
 
   Accepts:
@@ -70,10 +71,12 @@
       </ul>
     {%- endif -%}
 
-    <p class="condition-report__guide-link">
-      <a href="{{ pages['condition-guide'].url | default: '/pages/condition-guide' }}" class="link underlined-link">
-        {{- 'products.product.condition_report.guide_link' | t -}}
-      </a>
-    </p>
+    {%- if block.settings.guide_page != blank -%}
+      <p class="condition-report__guide-link">
+        <a href="{{ block.settings.guide_page.url }}" class="link underlined-link">
+          {{- 'products.product.condition_report.guide_link' | t -}}
+        </a>
+      </p>
+    {%- endif -%}
   </div>
 {%- endif -%}

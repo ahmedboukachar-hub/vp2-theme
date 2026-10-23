@@ -1640,9 +1640,13 @@
                 "label": "Hoofdletters"
               }
             },
+            "designer_collections": {
+              "label": "Designercollecties",
+              "info": "De designernaam linkt naar de collectie in deze lijst waarvan alle producten van die designer zijn. 'Vind iets vergelijkbaars' bij verkochte stukken gebruikt dezelfde collectie. Voeg elk nieuw huis hier toe."
+            },
             "bags_collection": {
               "label": "Tassencollectie voor de designerlink",
-              "info": "De designernaam linkt naar deze collectie, gefilterd op de designertag. Laat leeg om naar de vendorpagina van Shopify te linken."
+              "info": "Gebruikt als geen designercollectie past: de designernaam linkt naar deze collectie, gefilterd op de designertag."
             },
             "accessories_collection": {
               "label": "Accessoirecollectie voor de designerlink"
@@ -1695,6 +1699,20 @@
             "show_gift_card_recipient": {
               "label": " Opties voor het verzenden van cadeaubonnen",
               "info": "Klanten kunnen een persoonlijk bericht toevoegen en de verzenddatum plannen. [Meer informatie](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            },
+            "sold_header": {
+              "content": "Verkochte stukken"
+            },
+            "sold_similar_collection": {
+              "label": "Terugvaloptie voor 'Vind iets vergelijkbaars'",
+              "info": "Gebruikt als geen designercollectie bij het stuk past (designercollecties stel je in bij het tekstblok met de designernaam). Leeg: alle producten."
+            },
+            "sold_new_arrivals_collection": {
+              "label": "Collectie voor 'Bekijk nieuw binnen'"
+            },
+            "sourcing_page": {
+              "label": "Pagina voor 'Vertel ons wat je zoekt'",
+              "info": "Verborgen als er geen pagina is gekozen."
             }
           }
         },
@@ -2161,6 +2179,17 @@
           "options__2": {
             "label": "2"
           }
+        },
+        "header__empty_state": {
+          "content": "Geen resultaten"
+        },
+        "empty_state_collection": {
+          "label": "Collectie voor de hoofdknop",
+          "info": "Getoond als een zoekopdracht niets vindt ('Ontdek alle tassen'). Leeg: alle producten."
+        },
+        "empty_state_page": {
+          "label": "Pagina voor de tweede knop",
+          "info": "Getoond als een zoekopdracht niets vindt ('Vind een tas'). Verborgen als er geen pagina is gekozen."
         }
       }
     },

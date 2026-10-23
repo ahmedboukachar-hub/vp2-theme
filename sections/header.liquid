@@ -284,8 +284,8 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      {%- if section.settings.show_wishlist_link -%}
-        <a href="{{ pages['wishlist'].url | default: '/pages/wishlist' }}" class="header__icon header__icon--wishlist link focus-inset">
+      {%- if section.settings.show_wishlist_link and section.settings.wishlist_page != blank -%}
+        <a href="{{ section.settings.wishlist_page.url }}" class="header__icon header__icon--wishlist link focus-inset">
           <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
           <span class="visually-hidden">{{ 'general.wishlist.link_label' | t }}</span>
         </a>
@@ -631,6 +631,12 @@
       "default": true,
       "label": "Show wishlist link",
       "info": "Utility icon linking to the wishlist page."
+    },
+    {
+      "type": "page",
+      "id": "wishlist_page",
+      "label": "Wishlist page",
+      "info": "The wishlist icon is hidden when no page is selected."
     },
     {
       "type": "paragraph",
