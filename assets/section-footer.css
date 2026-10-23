@@ -68,7 +68,7 @@
   margin: 0;
   font-family: var(--font-body-family);
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: var(--font-body-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }

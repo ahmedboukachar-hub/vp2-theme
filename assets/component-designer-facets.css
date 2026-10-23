@@ -5,7 +5,7 @@
 }
 
 .designer-filter__link[aria-current='true'] {
-  font-weight: 600;
+  font-weight: var(--font-body-weight-bold);
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }

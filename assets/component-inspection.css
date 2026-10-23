@@ -75,7 +75,7 @@
 
 .condition-report__issue-title {
   margin: 0 0 0.2rem;
-  font-weight: 600;
+  font-weight: var(--font-body-weight-bold);
 }
 
 .condition-report__issue-area {

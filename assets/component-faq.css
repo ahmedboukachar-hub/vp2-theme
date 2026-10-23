@@ -20,8 +20,9 @@
   display: block;
   padding: 1.5rem 3rem 1.5rem 0;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: var(--font-body-weight-bold);
   list-style: none;
+  text-wrap: pretty;
 }
 
 .faq-content summary::-webkit-details-marker {
