@@ -31,8 +31,9 @@ shape is decided.
   piece) fill the buy column, capped at 44rem. Exception: the two hero
   buttons share the hero copy column side by side. Keep button labels short
   enough to fit 28rem in every language (about 24 characters).
-- Product page: "Buy it now" stays the filled, most prominent button and
-  "Add to cart" the lighter one (owner decision 2026-10-23).
+- Product page: "Buy it now" is the filled, most prominent button and sits
+  on top; "Add to cart" is the lighter one below it, in markup order too
+  (owner decision 2026-10-23).
 
 - Editorial max width: theme `page-width` (Dawn setting).
 - Product cards: 4:5 media, 3 columns desktop, 2 on mobile (1 below 480px

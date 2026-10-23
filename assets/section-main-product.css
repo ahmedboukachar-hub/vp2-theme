@@ -231,8 +231,18 @@ product-info {
   margin-bottom: 1rem;
 }
 
-.product-form__submit[aria-disabled='true'] + .shopify-payment-button .shopify-payment-button__button[disabled],
-.product-form__submit[disabled] + .shopify-payment-button .shopify-payment-button__button[disabled] {
+/* Buy it now sits above Add to cart (see buy-buttons.liquid). */
+.product-form__buttons .shopify-payment-button {
+  margin-bottom: 1rem;
+}
+
+/* Keep the space below the pair as it was when Add to cart came first. */
+.product-form__buttons .shopify-payment-button + .product-form__submit {
+  margin-bottom: 0;
+}
+
+.product-form__buttons:has(.product-form__submit[aria-disabled='true']) .shopify-payment-button__button[disabled],
+.product-form__buttons:has(.product-form__submit[disabled]) .shopify-payment-button__button[disabled] {
   cursor: not-allowed;
   opacity: 0.5;
 }
