@@ -71,6 +71,12 @@
   padding-inline: var(--vp-gutter);
 }
 
+/* Dawn's sliders drop page-width on phones and use page-width-desktop from
+   990px; give that the same wide canvas so slider rows line up with grids. */
+@media screen and (min-width: 990px) {
+  .page-width-desktop { max-width: var(--vp-container-max); }
+}
+
 /* Dawn's narrow container (forms, FAQ, wishlist) keeps its reading width;
    the wider canvas above must not stretch it edge to edge on desktop. */
 @media screen and (min-width: 990px) {
