@@ -3,10 +3,13 @@
 Both features are progressive enhancements: the site works fully without them
 and without JavaScript. No account or login is required, and there is no
 tracking and no request to any external service — product data comes only from
-the shop itself. The wishlist reads `/products/<handle>.js`; Recently viewed
-fetches each card through the Section Rendering API
-(`/products/<handle>?section_id=recently-viewed-card`), so it shows the theme's
-own product cards, identical to "You may also like".
+the shop itself. The wishlist page and Recently viewed both fetch each card
+through the Section Rendering API
+(`/products/<handle>?section_id=recently-viewed-card`), so they show the theme's
+own product cards, identical to "You may also like". On the wishlist page each
+saved piece gets a placeholder in the card's shape before first paint, which the
+fetched card replaces in place; a Remove button sits below every card, and
+un-hearting a card removes the piece as well.
 
 ## Important limitation (first version)
 

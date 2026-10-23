@@ -1,8 +1,10 @@
 /*
   Browser-local wishlist (progressive enhancement, no account, no tracking).
   Storage: localStorage key 'wishlist-items' — [{handle, id, title, url}].
-  This first version is browser-bound and does not sync between devices;
-  see docs/wishlist-and-recently-viewed.md.
+  The wishlist page fetches each saved piece's card through the Section
+  Rendering API (/products/<handle>?section_id=recently-viewed-card), like
+  Recently viewed. This first version is browser-bound and does not sync
+  between devices; see docs/wishlist-and-recently-viewed.md.
 */
 (function () {
   'use strict';
@@ -83,21 +85,45 @@
 
   // routes.root_url is '/' for the default language but '/nl' (no trailing
   // slash) for the others.
-  function productUrl(rootUrl, handle) {
+  function cardUrl(rootUrl, handle) {
     var root = rootUrl || '/';
     if (root.charAt(root.length - 1) !== '/') root += '/';
-    return root + 'products/' + encodeURIComponent(handle) + '.js';
+    return root + 'products/' + encodeURIComponent(handle) + '?section_id=recently-viewed-card';
   }
 
-  function formatMoney(cents, format) {
-    var amount = (cents / 100).toFixed(2);
-    var parts = amount.split('.');
-    var thousands = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    var value = thousands + '.' + parts[1];
-    if (/amount_with_comma_separator/.test(format)) {
-      value = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',' + parts[1];
+  // The response is the section wrapper with one rendered product card inside
+  // (the fragment Recently viewed uses too); null when the product is gone.
+  // Recently viewed can show the same piece on this page, so the card's ids
+  // (and the aria-labelledby references to them) get a prefix.
+  function parseCard(text) {
+    var doc = new DOMParser().parseFromString(text, 'text/html');
+    var section = doc.querySelector('.shopify-section');
+    if (!section || !section.querySelector('.card-wrapper')) return null;
+    var ids = {};
+    section.querySelectorAll('[id]').forEach(function (node) {
+      ids[node.id] = true;
+      node.id = 'Wishlist-' + node.id;
+    });
+    section.querySelectorAll('[aria-labelledby]').forEach(function (node) {
+      var refs = node.getAttribute('aria-labelledby').split(/\s+/).map(function (id) {
+        return ids[id] ? 'Wishlist-' + id : id;
+      });
+      node.setAttribute('aria-labelledby', refs.join(' '));
+    });
+    var heading = section.querySelector('.card__heading a');
+    return { html: section.innerHTML.trim(), title: heading ? heading.textContent.trim() : '' };
+  }
+
+  // First visible link in a card (its title), else its first visible button.
+  function focusTargetIn(card) {
+    var controls = card.querySelectorAll('a[href], button');
+    var fallback = null;
+    for (var i = 0; i < controls.length; i++) {
+      if (!controls[i].getClientRects().length) continue;
+      if (controls[i].tagName === 'A') return controls[i];
+      if (!fallback) fallback = controls[i];
     }
-    return (format || '{{amount}}').replace(/\{\{\s*amount[a-z_]*\s*\}\}/, value);
+    return fallback;
   }
 
   if (!customElements.get('wishlist-items')) {
@@ -108,17 +134,41 @@
           this.grid = this.querySelector('[data-wishlist-grid]');
           this.emptyState = this.querySelector('[data-wishlist-empty]');
           this.template = this.querySelector('template');
-          this.refresh = this.refresh.bind(this);
+          if (!this.initialised) {
+            this.initialised = true;
+            this.refresh = this.refresh.bind(this);
+            // Capture phase: runs before the card's own heart button handles the
+            // click, so refresh() knows which card the visitor acted in.
+            this.addEventListener('click', this.onClick.bind(this), true);
+          }
           document.addEventListener('wishlist:change', this.refresh);
           window.addEventListener('storage', this.refresh);
           this.refresh();
+        }
+
+        disconnectedCallback() {
+          document.removeEventListener('wishlist:change', this.refresh);
+          window.removeEventListener('storage', this.refresh);
         }
 
         cards() {
           return this.grid ? Array.prototype.slice.call(this.grid.querySelectorAll('[data-wishlist-card]')) : [];
         }
 
-        refresh() {
+        onClick(event) {
+          var card = event.target.closest('[data-wishlist-card]');
+          if (!card || !event.target.closest('[data-wishlist-remove], wishlist-button')) return;
+          this.actionCard = card;
+          if (!event.target.closest('[data-wishlist-remove]')) return;
+          var handle = card.dataset.handle;
+          writeItems(
+            readItems().filter(function (item) {
+              return item.handle !== handle;
+            })
+          );
+        }
+
+        refresh(event) {
           var items = readItems().slice(0, 50);
           if (this.emptyState) this.emptyState.hidden = items.length > 0;
           if (this.grid) this.grid.hidden = items.length === 0;
@@ -127,10 +177,11 @@
           var handles = items.map(function (item) {
             return item.handle;
           });
-          // Removing a piece only drops its card, so focus and scroll position stay put.
-          this.cards().forEach(function (card) {
-            if (handles.indexOf(card.dataset.handle) === -1) card.remove();
+          var removed = this.cards().filter(function (card) {
+            return handles.indexOf(card.dataset.handle) === -1;
           });
+          if (removed.length) this.removeCards(removed, !event || event.type !== 'storage');
+          this.actionCard = null;
           var rendered = this.cards().map(function (card) {
             return card.dataset.handle;
           });
@@ -144,43 +195,58 @@
           });
         }
 
+        // Removing a piece only drops its card, so the scroll position stays put.
+        // When the visitor removed it here (Remove or the card's heart), or focus
+        // was inside it, focus moves to the next piece, or to the empty-state
+        // heading when none are left.
+        removeCards(removed, announce) {
+          var active = document.activeElement;
+          var source = removed.filter(function (card) {
+            return card === this.actionCard || card.contains(active);
+          }, this)[0];
+          var focusTarget = null;
+          if (source) {
+            var next = source.nextElementSibling;
+            while (next && removed.indexOf(next) !== -1) next = next.nextElementSibling;
+            var previous = source.previousElementSibling;
+            while (previous && removed.indexOf(previous) !== -1) previous = previous.previousElementSibling;
+            var sibling = next || previous;
+            focusTarget = sibling ? focusTargetIn(sibling) : this.querySelector('[data-wishlist-empty-heading]');
+          }
+          var titles = removed.map(function (card) {
+            card.remove();
+            return card.dataset.title;
+          });
+          var status = this.querySelector('[data-wishlist-status]');
+          if (announce && status && this.dataset.removedNotice) {
+            status.textContent = this.dataset.removedNotice.replace('[title]', titles.join(', '));
+          }
+          if (focusTarget) focusTarget.focus();
+        }
+
         // Keep in step with the inline script in sections/wishlist-items.liquid.
         buildCard(saved) {
           var card = this.template.content.querySelector('[data-wishlist-card]').cloneNode(true);
+          var link = card.querySelector('[data-wishlist-link]');
           card.dataset.handle = saved.handle;
-          card.querySelector('[data-wishlist-title]').textContent = saved.title || saved.handle;
-          if (saved.url) card.querySelector('[data-wishlist-link]').setAttribute('href', saved.url);
+          card.dataset.title = saved.title || saved.handle;
+          link.textContent = card.dataset.title;
+          if (saved.url) link.setAttribute('href', saved.url);
           return card;
         }
 
         loadCard(card) {
           if (card.dataset.loaded) return;
           card.dataset.loaded = 'true';
+          this.labelRemove(card);
           var element = this;
-          var handle = card.dataset.handle;
-          var title = card.querySelector('[data-wishlist-title]');
-          var remove = card.querySelector('[data-wishlist-remove]');
-          this.labelRemove(remove, title.textContent);
-
-          remove.addEventListener('click', function () {
-            var next = card.nextElementSibling || card.previousElementSibling;
-            var focusTarget = next ? next.querySelector('a[href], button') : element.querySelector('[data-wishlist-empty-heading]');
-            writeItems(
-              readItems().filter(function (item) {
-                return item.handle !== handle;
-              })
-            );
-            var status = element.querySelector('[data-wishlist-status]');
-            if (status && element.dataset.removedNotice) status.textContent = element.dataset.removedNotice.replace('[title]', title.textContent);
-            if (focusTarget) focusTarget.focus();
-          });
-
           window
-            .fetch(productUrl(this.dataset.rootUrl, handle), {
-              headers: { Accept: 'application/json' },
-            })
+            .fetch(cardUrl(this.dataset.rootUrl, card.dataset.handle))
             .then(function (response) {
-              return response.ok ? response.json() : null;
+              return response.ok ? response.text() : null;
+            })
+            .then(function (text) {
+              return text ? parseCard(text) : null;
             })
             .catch(function () {
               return null;
@@ -190,39 +256,36 @@
             });
         }
 
-        labelRemove(remove, titleText) {
-          if (this.dataset.removeLabel) remove.setAttribute('aria-label', this.dataset.removeLabel + ': ' + titleText);
+        labelRemove(card) {
+          var remove = card.querySelector('[data-wishlist-remove]');
+          if (remove && this.dataset.removeLabel) remove.setAttribute('aria-label', this.dataset.removeLabel + ': ' + card.dataset.title);
         }
 
+        // Swaps the placeholder for the fetched card; the Remove button stays below it.
         fillCard(card, product) {
-          var link = card.querySelector('[data-wishlist-link]');
-          var title = card.querySelector('[data-wishlist-title]');
-          var price = card.querySelector('[data-wishlist-price]');
-          var image = card.querySelector('[data-wishlist-image]');
-          var unavailable = card.querySelector('[data-wishlist-unavailable]');
+          var placeholder = card.querySelector('[data-wishlist-placeholder]');
+          if (!placeholder || !card.isConnected) return;
 
           if (product) {
-            title.textContent = product.title;
-            this.labelRemove(card.querySelector('[data-wishlist-remove]'), product.title);
-            link.href = product.url;
-            if (price) price.textContent = formatMoney(product.price, this.dataset.moneyFormat);
-            if (image) {
-              if (product.featured_image) {
-                var src = product.featured_image;
-                image.src = src + (src.indexOf('?') === -1 ? '?width=600' : '&width=600');
-                image.alt = '';
-              } else {
-                image.remove();
-              }
+            var hadFocus = placeholder.contains(document.activeElement);
+            if (product.title) card.dataset.title = product.title;
+            placeholder.insertAdjacentHTML('beforebegin', product.html);
+            placeholder.remove();
+            this.labelRemove(card);
+            if (hadFocus) {
+              var target = focusTargetIn(card);
+              if (target) target.focus();
             }
-            if (unavailable) unavailable.remove();
-          } else {
-            link.removeAttribute('href');
-            if (price) price.remove();
-            if (image) image.remove();
-            if (unavailable) unavailable.hidden = false;
-            card.classList.add('wishlist-card--unavailable');
+            return;
           }
+
+          card.classList.add('wishlist-card--unavailable');
+          placeholder.querySelector('[data-wishlist-link]').removeAttribute('href');
+          placeholder.querySelectorAll('[data-wishlist-pending]').forEach(function (line) {
+            line.remove();
+          });
+          var unavailable = placeholder.querySelector('[data-wishlist-unavailable]');
+          if (unavailable) unavailable.hidden = false;
         }
       }
     );

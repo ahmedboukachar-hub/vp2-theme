@@ -1,4 +1,6 @@
 {{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'wishlist.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
@@ -15,7 +17,7 @@
   }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="page-width section-{{ section.id }}-padding">
   {%- liquid
     assign heading_tag = 'h1'
     if section.index > 1
@@ -34,7 +36,6 @@
   <wishlist-items
     class="wishlist-items no-js-hidden"
     data-root-url="{{ routes.root_url }}"
-    data-money-format="{% if settings.currency_code_enabled %}{{ shop.money_with_currency_format | escape }}{% else %}{{ shop.money_format | escape }}{% endif %}"
     data-remove-label="{{ 'general.wishlist.remove' | t | escape }}"
     data-removed-notice="{{ 'general.wishlist.removed_notice' | t: title: '[title]' | escape }}"
   >
@@ -44,15 +45,42 @@
       <p>{{ 'general.wishlist.empty_body' | t }}</p>
       <a href="{{ section.settings.collection.url | default: routes.all_products_collection_url }}" class="button">{{ 'general.wishlist.empty_cta' | t }}</a>
     </div>
-    <ul class="wishlist-items__grid list-unstyled" role="list" data-wishlist-grid hidden></ul>
+    {%- comment -%}
+      Same grid and cards as "You may also like" and Recently viewed: wishlist.js
+      fetches each card through the Section Rendering API
+      (/products/<handle>?section_id=recently-viewed-card) and swaps it in for
+      the placeholder below, which has the card's shape (square image box,
+      title, detail line, price) so nothing moves when the card arrives.
+    {%- endcomment -%}
+    <ul
+      class="wishlist-items__grid grid product-grid grid--4-col-desktop grid--2-col-tablet-down"
+      role="list"
+      data-wishlist-grid
+      hidden
+    ></ul>
     <template>
-      <li class="wishlist-card" data-wishlist-card>
-        <a data-wishlist-link href="#" class="wishlist-card__link">
-          <span class="wishlist-card__media"><img data-wishlist-image alt="" loading="lazy" width="600" height="750"></span>
-          <span data-wishlist-title class="wishlist-card__title"></span>
-        </a>
-        <span class="wishlist-card__unavailable" data-wishlist-unavailable hidden>{{ 'general.wishlist.unavailable' | t }}</span>
-        <p data-wishlist-price class="wishlist-card__price">&nbsp;</p>
+      <li class="grid__item wishlist-card" data-wishlist-card>
+        <div class="card-wrapper product-card-wrapper underline-links-hover" data-wishlist-placeholder>
+          <div class="card card--{{ settings.card_style }} card--media{% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+            <div class="card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio">
+              <div class="card__media"></div>
+            </div>
+            <div class="card__content">
+              <div class="card__information">
+                <h3 class="card__heading h5">
+                  <a class="full-unstyled-link" data-wishlist-link></a>
+                </h3>
+                <div class="card-information">
+                  <div class="card__meta-line" data-wishlist-pending>&nbsp;</div>
+                  <div class="price" data-wishlist-pending>&nbsp;</div>
+                  <span class="wishlist-card__unavailable" data-wishlist-unavailable hidden>
+                    {{- 'general.wishlist.unavailable' | t -}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <button type="button" class="wishlist-card__remove link underlined-link" data-wishlist-remove>
           {{- 'general.wishlist.remove_short' | t -}}
         </button>
@@ -76,9 +104,11 @@
           grid.hidden = items.length === 0;
           items.slice(0, 50).forEach(function (item) {
             var placeholder = card.cloneNode(true);
+            var link = placeholder.querySelector('[data-wishlist-link]');
             placeholder.dataset.handle = item.handle;
-            placeholder.querySelector('[data-wishlist-title]').textContent = item.title || item.handle;
-            if (item.url) placeholder.querySelector('[data-wishlist-link]').setAttribute('href', item.url);
+            placeholder.dataset.title = item.title || item.handle;
+            link.textContent = placeholder.dataset.title;
+            if (item.url) link.setAttribute('href', item.url);
             grid.appendChild(placeholder);
           });
         } catch (error) {

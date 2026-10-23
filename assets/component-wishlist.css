@@ -52,63 +52,37 @@
   inset: -0.4rem;
 }
 
-/* Wishlist page */
+/* Wishlist page: Dawn's product grid with the theme's own cards, fetched like
+   Recently viewed. Until a card arrives its placeholder borrows the card
+   classes (square image box, title, detail line, price), so the swap does not
+   move anything. */
+.wishlist-items__intro {
+  max-width: var(--vp-measure-text);
+}
+
 .wishlist-items__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  padding: 0;
-  margin: 2rem 0 0;
+  margin-top: 2rem;
 }
 
-@media screen and (min-width: 750px) {
-  .wishlist-items__grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
+.wishlist-items__grid[hidden] {
+  display: none;
 }
 
-.wishlist-card {
-  position: relative;
-  list-style: none;
-}
-
-.wishlist-card__media img {
-  width: 100%;
+/* Fetched cards sit in a block wrapper; give the placeholder the same auto
+   height, so its Remove button stays inside the grid item. */
+.wishlist-card .card-wrapper {
   height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: contain;
-  object-position: center;
-  padding: clamp(8px, 3%, 16px);
-  box-sizing: border-box;
-  background: #fff;
-  border-radius: 0.2rem;
 }
 
-/* Placeholder card (image not requested yet): reserve the image box so the
-   grid does not grow when the product data arrives. */
-.wishlist-card__media:has(img:not([src])) {
-  display: block;
-  aspect-ratio: 4 / 5;
-}
-
-.wishlist-card__link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.wishlist-card__title {
-  margin: 1rem 0 0.3rem;
-  font-weight: var(--font-body-weight);
-}
-
-.wishlist-card__price {
-  margin: 0 0 0.5rem;
+/* The card's own space below the price becomes the gap above Remove, so the
+   button reads with its card rather than with the row below. */
+.wishlist-card .card__information {
+  padding-bottom: 0.6rem;
 }
 
 .wishlist-card__unavailable {
-  display: inline-block;
-  margin: 0 0 0.5rem;
+  display: block;
+  margin-top: 0.4rem;
   font-size: 1.1rem;
   letter-spacing: 0.06rem;
   text-transform: uppercase;
@@ -119,11 +93,13 @@
   display: none;
 }
 
-.wishlist-card--unavailable .wishlist-card__title {
+.wishlist-card--unavailable .card__heading {
   opacity: 0.6;
 }
 
 .wishlist-card__remove {
+  display: block;
+  margin-bottom: 1.6rem;
   padding: 0;
   background: none;
   border: none;
@@ -132,7 +108,8 @@
 }
 
 .wishlist-items__empty {
-  margin: 2rem 0;
+  max-width: var(--vp-measure-text);
+  margin: 2rem auto;
   text-align: center;
 }
 
