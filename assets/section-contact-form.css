@@ -37,3 +37,9 @@
     grid-column-gap: 2rem;
   }
 }
+
+.contact__privacy {
+  margin: 0;
+  font-size: 1.3rem;
+  opacity: 0.85;
+}

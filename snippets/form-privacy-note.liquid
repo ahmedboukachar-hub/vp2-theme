@@ -1,0 +1,31 @@
+{% doc %}
+  Renders a short privacy note under a form that collects personal data. When the store
+  has a privacy policy (Settings > Policies), the note ends with a link to it.
+
+  @param {string} [kind] - 'newsletter' for email signups; any other value uses the general form note.
+  @param {string} [text] - Already translated text to show instead of the default note.
+  @param {string} [class] - Extra classes, so each form keeps its own caption style.
+
+  @example
+  {% render 'form-privacy-note', kind: 'newsletter', class: 'newsletter-form__privacy' %}
+{% enddoc %}
+
+{%- liquid
+  assign note_text = text
+  if note_text == blank
+    if kind == 'newsletter'
+      assign note_text = 'newsletter.privacy_note' | t
+    else
+      assign note_text = 'general.forms.privacy_note' | t
+    endif
+  endif
+-%}
+
+<p class="form-privacy-note{% if class != blank %} {{ class }}{% endif %}">
+  {{- note_text -}}
+  {%- if shop.privacy_policy != blank %}
+    <a href="{{ shop.privacy_policy.url }}" class="underlined-link">
+      {{- 'general.forms.privacy_link' | t -}}
+    </a>
+  {%- endif -%}
+</p>

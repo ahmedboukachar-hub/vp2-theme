@@ -75,7 +75,7 @@
 
 .condition-report__issue-title {
   margin: 0 0 0.2rem;
-  font-weight: 600;
+  font-weight: var(--font-body-weight-bold);
 }
 
 .condition-report__issue-area {
@@ -112,6 +112,43 @@
 
 .product-enquiry__disclosure[open] .product-enquiry__summary {
   margin-bottom: 1.5rem;
+}
+
+/* Open/closed cue: the caret turns over when the form is open. */
+.product-enquiry__summary {
+  gap: 1rem;
+}
+
+.product-enquiry__icon {
+  display: inline-flex;
+  transition: transform var(--vp-duration) var(--vp-ease);
+}
+
+.product-enquiry__summary .icon-caret {
+  position: static;
+  width: 1rem;
+  height: 0.6rem;
+}
+
+.product-enquiry__disclosure[open] .product-enquiry__icon {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-enquiry__icon {
+    transition: none;
+  }
+}
+
+/* Mobile: the enquiry trigger and its submit span the column like the buy
+   buttons above (same 44rem cap as .product-form__buttons). */
+@media screen and (max-width: 749px) {
+  .product-enquiry__summary,
+  .product-enquiry__content > .button {
+    display: flex;
+    width: 100%;
+    max-width: 44rem;
+  }
 }
 
 .product-enquiry__content .field,
@@ -153,6 +190,14 @@
   margin-bottom: 1rem;
 }
 
+/* Mobile: stacked, full-width buttons like the buy buttons they replace. */
+@media screen and (max-width: 749px) {
+  .product-sold-state__actions {
+    flex-direction: column;
+    max-width: 44rem;
+  }
+}
+
 .product-sold-state__sourcing {
   margin: 0;
 }
@@ -168,4 +213,10 @@
   letter-spacing: 0.06rem;
   text-transform: uppercase;
   opacity: 0.8;
+}
+
+.product-enquiry__privacy {
+  margin: 0;
+  font-size: 1.3rem;
+  opacity: 0.85;
 }

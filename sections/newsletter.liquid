@@ -113,6 +113,7 @@
                   {{- 'newsletter.success' | t }}
                 </h3>
               {%- endif -%}
+              {% render 'form-privacy-note', kind: 'newsletter', class: 'newsletter-form__privacy' %}
             {% endform %}
           </div>
       {%- endcase -%}

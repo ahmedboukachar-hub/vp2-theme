@@ -15,7 +15,13 @@
   assign note_keys = 'condition_notes,provenance,authentication_notes' | split: ','
   assign specifications_heading = block.settings.heading
   if specifications_heading == blank
-    assign specifications_heading = 'products.product.details_heading' | t
+    assign condition_value = product.metafields.custom.condition | metafield_text
+    assign condition_notes_value = product.metafields.custom.condition_notes | metafield_text
+    if condition_value != blank or condition_notes_value != blank
+      assign specifications_heading = 'products.product.details_heading' | t
+    else
+      assign specifications_heading = 'products.product.details_only_heading' | t
+    endif
   endif
 -%}
 

@@ -79,7 +79,7 @@
   padding: 0.4rem 1rem;
   background: rgb(var(--color-background));
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: var(--font-body-weight);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.8);

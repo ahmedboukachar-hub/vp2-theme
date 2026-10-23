@@ -23,6 +23,9 @@
     <details class="product-enquiry__disclosure" {% if form_state %}open{% endif %}>
       <summary class="product-enquiry__summary button button--secondary">
         <span>{{ 'products.product.enquiry.button' | t }}</span>
+        <span class="product-enquiry__icon" aria-hidden="true">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </span>
       </summary>
       <div class="product-enquiry__content">
         <h2 class="product-enquiry__heading h4">{{ 'products.product.enquiry.heading' | t }}</h2>
@@ -117,6 +120,7 @@
           >{{ form.body }}</textarea>
           <label for="{{ enquiry_id }}-message" class="form__label field__label">{{ 'products.product.enquiry.message' | t }}</label>
         </div>
+        {% render 'form-privacy-note', class: 'product-enquiry__privacy' %}
         <button type="submit" class="button">{{ 'products.product.enquiry.submit' | t }}</button>
       </div>
     </details>

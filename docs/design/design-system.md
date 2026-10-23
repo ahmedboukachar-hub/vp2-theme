@@ -15,9 +15,12 @@ intimate showroom than to a high-volume marketplace.
 | `--vp-radius` | 2px | imagery/cards near-square |
 | `--vp-duration` / `--vp-ease` | 200ms, ease-out-cubic | hover/disclosure; 0ms under reduced motion |
 
-Colours and fonts stay in Theme Editor settings (colour schemes 1–3,
-Cormorant display + Inter UI). No colour values are hardcoded in code and
-`settings_data.json` is untouched.
+Colours and fonts stay in Theme Editor settings (colour schemes, Cormorant
+display + Inter UI) and `settings_data.json` is untouched. The one fixed
+colour in code is the photo ground `--vp-media-ground` (`#f6f2ec`, in
+`vp-tokens.css`) behind product photographs in cards and the product gallery;
+the wishlist and archive-teaser tiles still use a white ground until the card
+shape is decided.
 
 ## Layout rules
 
@@ -32,17 +35,24 @@ Cormorant display + Inter UI). No colour values are hardcoded in code and
 ## Type
 
 Dawn's fluid heading scale (h0–h5) is retained; new sections choose from
-h1/h2 only. Uppercase is reserved for eyebrows/captions
-(`caption-with-letter-spacing`, 12–13px equivalent). Card typography on
-mobile: title 16px, vendor/eyebrow 12px, meta line 12–13px, price 15px
-medium (see `vp-tokens.css`).
+h1/h2 only. Uppercase is reserved for eyebrows (`.vp-eyebrow`, 12px, 0.14em
+tracking) and Dawn's functional captions. Card typography on mobile: title
+17px, vendor/eyebrow 12px, meta line 12px, price 15px regular (16px on
+desktop; see `vp-tokens.css`).
+
+Only the weights the theme loads are used: Inter regular and bold
+(`--font-body-weight`, `--font-body-weight-bold`) and Cormorant at its
+setting weight. Custom CSS refers to these variables instead of numeric
+500/600, which the browser would render as regular/bold anyway.
 
 ## Motion
 
 180–300ms transitions only (token default 200ms); one gentle reveal
 (`animations_reveal_on_scroll`, Dawn native) on editorial sections; all
 non-essential motion disabled under `prefers-reduced-motion`. No carousels,
-parallax or scroll hijacking.
+parallax or scroll hijacking. One exception, owner decision 2026-10-22: the
+product gallery uses Dawn's thumbnail slider (`gallery_layout:
+thumbnail_slider` in `templates/product.json`).
 
 ## Components added in this phase
 
@@ -54,7 +64,7 @@ parallax or scroll hijacking.
 | Journal feature | `sections/journal-feature.liquid` | 1 lead + 2 secondary article cards, honest reading time (H9) |
 | Curator's note | `snippets/product-curators-note.liquid` | PDP "Why this piece" from `custom.curators_note`, hidden when empty |
 | Popular searches | `snippets/header-search.liquid` | configurable terms in the search overlay (`settings.popular_searches`) |
-| Card meta line | `snippets/card-product.liquid` | verified differentiators: material · condition |
+| Card meta line | `snippets/card-product.liquid` | verified differentiators: material, then condition, else year or era, else colour (translated through `snippets/product-value.liquid`; hidden when empty) |
 
 Deprecated-but-preserved: `sections/editorial-hero.liquid` (full-bleed
 overlay hero) — no longer used on the homepage per §36.6, still available
@@ -155,7 +165,8 @@ short on mobile.
 The refinement pull requests merged between 12 and 26 September changed the
 surface distribution described above. This section records what is live.
 
-- Homepage order: hero → New arrivals (white) → designers (off-white) →
+- Homepage order: hero → New arrivals (off-white since #47, 2026-09-27) →
+  designers (white since #47) →
   editorial statement (**white**, scheme-3, no longer near-black) → Journal
   (stone, scheme-2) → Find a Bag (off-white) → newsletter. The proof strip was
   removed from `templates/index.json` (section file kept) and the archive
@@ -199,13 +210,19 @@ Contrast ivory on espresso is about 9:1, comfortably above AA for body text.
 | Section | Scheme | Surface |
 | --- | --- | --- |
 | hero | scheme-1 | ivory |
-| new_arrivals | scheme-3 | white |
-| designers | scheme-1 | ivory |
+| new_arrivals | scheme-1 | ivory (changed from white in #47, 2026-09-27) |
+| designers | scheme-3 | white (changed from ivory in #47, 2026-09-27) |
 | editorial | **scheme-6** | espresso, the one dark interruption |
 | journal | scheme-2 | stone |
 | find_a_bag | scheme-1 | ivory |
+| archive | scheme-1 | ivory (section currently disabled) |
 | newsletter | scheme-3 | white |
 | footer (`sections/footer-group.json`) | scheme-2 | stone |
+
+Product grids on collection, search and product pages also sit on the ivory
+canvas (scheme-1), with product photographs on the `--vp-media-ground` photo
+ground; see `docs/design/photography-brief.md` for the matching photo
+background.
 
 Rules that follow from this:
 

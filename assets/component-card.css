@@ -356,22 +356,6 @@
   width: 100%;
 }
 
-.product-card-wrapper .card__media {
-  background: #fff;
-}
-
-.product-card-wrapper .card__media .media > img {
-  object-fit: contain;
-  padding: clamp(8px, 3%, 16px);
-  box-sizing: border-box;
-}
-
-/* Studio images include their own ivory canvas; fill the product card frame. */
-.product-card-wrapper .card__media .media > img[src*='studio-hero'] {
-  object-fit: cover;
-  padding: 0;
-}
-
 .product-card-wrapper.card-wrapper:hover .card .card__media .media.media--hover-effect > img {
   transform: none;
 }
@@ -683,7 +667,7 @@
 .product-card-wrapper .card__media {
   margin: 0;
   width: 100%;
-  background: #f6f2ec;
+  background: var(--vp-media-ground, #f6f2ec);
 }
 .product-card-wrapper .card__media .media > img {
   padding: 0;

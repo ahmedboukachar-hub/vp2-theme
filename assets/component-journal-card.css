@@ -44,6 +44,13 @@
   overflow: hidden;
 }
 
+/* The lead story shows its whole summary, ending on its own full stop. */
+.journal-card--lead .journal-card__excerpt {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
 .journal-card__read {
   margin-top: 1.2rem;
   min-height: 0;

@@ -8,10 +8,15 @@
   gap: var(--vp-space-m);
 }
 
+/* The rule spans the full width of the grid above; only the copy keeps the
+   reading measure. */
 .article-related__cta {
   margin-top: var(--vp-space-xl);
   padding-top: var(--vp-space-l);
   border-top: var(--vp-border);
+}
+
+:where(.article-related__cta) > * {
   max-width: var(--vp-measure-text);
 }
 

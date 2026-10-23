@@ -39,6 +39,9 @@
   --vp-border-strong: 1px solid rgba(var(--color-foreground), 0.35);
   --vp-radius: 2px;
 
+  /* ground behind product photographs (cards and gallery) */
+  --vp-media-ground: #f6f2ec;
+
   /* motion */
   --vp-duration: 200ms;
   --vp-ease: cubic-bezier(0.33, 1, 0.68, 1);
@@ -79,7 +82,7 @@
   margin: 0 0 1.6rem;
   font-family: var(--font-body-family);
   font-size: var(--vp-type-eyebrow);
-  font-weight: 500;
+  font-weight: var(--font-body-weight);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   line-height: 1.4;
@@ -150,7 +153,8 @@
 .archive-actions__buttons .button,
 .archive-feature__footer .button,
 .collection__view-all .button,
-.journal-feature__cta {
+.journal-feature__cta,
+.template-404__actions .button {
   min-inline-size: 22rem;
   min-height: 5.2rem;
   padding-inline: 3.2rem;
@@ -161,7 +165,11 @@
   .service-panel__actions .button,
   .archive-actions__buttons .button,
   .archive-feature__footer .button,
-  .journal-feature__cta {
+  .journal-feature__cta,
+  .template-404__actions .button,
+  .find-a-bag__form .button[type='submit'],
+  .sell-to-us__form .button[type='submit'],
+  .contact__button .button {
     width: 100%;
   }
 
@@ -178,7 +186,7 @@
   align-items: center;
   min-height: 4.4rem;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: var(--font-body-weight);
   letter-spacing: 0.02em;
   color: rgb(var(--color-foreground));
   text-decoration: none;
@@ -270,7 +278,7 @@
   vertical-align: top;
 }
 
-.vp-rte th { font-weight: 600; }
+.vp-rte th { font-weight: var(--font-body-weight-bold); }
 
 /* Content tables (articles, guides): natural column widths and light rules
    instead of Dawn's fixed, boxed grid. Wide tables scroll inside their own
@@ -361,6 +369,12 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
   overflow: hidden;
 }
 
+/* On the two-column grids a one-line name would otherwise lift its card's
+   meta line and price above its neighbour's, so both lines are reserved. */
+@media screen and (max-width: 989px) {
+  .card > .card__content .card__heading { min-height: calc(2 * 1.3em); }
+}
+
 .card__meta-line {
   margin-top: 0.4rem;
   font-size: 1.3rem;
@@ -370,7 +384,7 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
 .card-information .price {
   margin-top: 0.6rem;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: var(--font-body-weight);
 }
 
 @media screen and (max-width: 749px) {
@@ -389,6 +403,25 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
 .facets__summary,
 .facet-filters__sort {
   min-height: 4.4rem;
+}
+
+/* Horizontal filters: centre each label and its caret in the 4.4rem target,
+   on the same line as "Filter:" (Dawn placed the label at the top and the
+   absolutely positioned caret lower down). */
+.facets__disclosure > .facets__summary {
+  padding-right: 0;
+}
+
+.facets__disclosure > .facets__summary > div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 4.4rem;
+}
+
+.facets__disclosure > .facets__summary .icon-caret {
+  position: static;
+  flex-shrink: 0;
 }
 
 .mobile-facets__open { font-size: 1.5rem; }
@@ -487,6 +520,29 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
 
 @media screen and (min-width: 750px) {
   .header__heading-link .brand-wordmark { font-size: clamp(2rem, 2.4vw, 2.8rem); }
+}
+
+/* Mobile and tablet: centre the logo on the page as far as the icons allow,
+   not between the two left icons (menu, search) and the three right ones.
+   Dawn's four-column grid for this case gives the logo whatever is left,
+   which put it about 25px left of centre on tablets. The search shares the
+   menu's cell instead, offset past the menu as Dawn does for its top-center
+   drawer layout. On a 390px phone the bar is full, so the logo stays where
+   it was. */
+@media screen and (max-width: 989px) {
+  .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) {
+    grid-template-areas: 'left-icons heading icons';
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) > header-drawer {
+    grid-area: left-icons;
+  }
+
+  .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) > .header__search {
+    grid-area: left-icons;
+    margin-left: 3.2rem;
+  }
 }
 
 /* --------------------------------------------------------------------------

@@ -14,8 +14,7 @@
       "powered_by_shopify_html": "Questo negozio sarà ospitato su {{ shopify }}",
       "eyebrow": "Una nuova destinazione per il lusso vintage",
       "hero_heading": "Pezzi rari, da scegliere con calma.",
-      "hero_body": "Stiamo preparando una selezione di borse firmate vintage e di seconda mano, scelte per il carattere, le condizioni e il fascino senza tempo.",
-      "newsletter_note": "Aggiornamenti occasionali sui nuovi arrivi. Nessuna promozione continua."
+      "hero_body": "Stiamo preparando una selezione di borse firmate vintage e di seconda mano, scelte per il carattere, le condizioni e il fascino senza tempo."
     },
     "social": {
       "alt_text": {
@@ -84,12 +83,17 @@
     "footer": {
       "navigation_label": "Navigazione del piè di pagina",
       "non_affiliation": "{{ shop_name }} è un rivenditore indipendente e non è affiliato alle maison presenti su questo sito. Tutti i marchi appartengono ai rispettivi titolari."
+    },
+    "forms": {
+      "privacy_note": "Usiamo questi dati per risponderti.",
+      "privacy_link": "Informativa sulla privacy"
     }
   },
   "newsletter": {
     "label": "Indirizzo email",
-    "success": "Grazie per l'iscrizione",
-    "button_label": "Iscriviti"
+    "success": "Grazie. Sei nella lista.",
+    "button_label": "Iscriviti",
+    "privacy_note": "Email occasionali sui nuovi pezzi. Puoi annullare l'iscrizione in qualsiasi momento."
   },
   "accessibility": {
     "heading_articles": "Articoli",
@@ -115,9 +119,9 @@
   },
   "brand": {
     "hero": {
-      "eyebrow": "Pezzi firmati pre-owned selezionati",
+      "eyebrow": "Pezzi firmati di seconda mano selezionati",
       "heading": "Ritrovati. Scelti per il prossimo capitolo.",
-      "intro": "Una selezione curata di borse e accessori firmati pre-owned.",
+      "intro": "Una selezione curata di borse e accessori firmati di seconda mano.",
       "primary": "Scopri tutte le borse",
       "secondary": "Scopri i nuovi arrivi"
     }
@@ -252,6 +256,7 @@
         "authentication_notes": "Autenticazione"
       },
       "details_heading": "Dettagli e condizioni",
+      "details_only_heading": "Dettagli",
       "test_label": "Prodotto di prova — scheda provvisoria",
       "image_pending": "Fotografie in preparazione",
       "recently_viewed": "Visti di recente",
@@ -422,9 +427,9 @@
         "name": "Nome",
         "email": "Indirizzo email",
         "phone": "Numero di telefono",
-        "comment": "Commenta",
-        "send": "Invia",
-        "post_success": "Grazie per averci contattato. Risponderemo il prima possibile.",
+        "comment": "Messaggio",
+        "send": "Invia messaggio",
+        "post_success": "Grazie. Abbiamo ricevuto il tuo messaggio e ti risponderemo personalmente.",
         "error_heading": "Correggi gli errori seguenti:",
         "title": "Modulo di contatto"
       }
@@ -452,7 +457,7 @@
         "maximum_budget": "Budget massimo",
         "currency": "Valuta",
         "flexible_details": "Su quali dettagli sei flessibile?",
-        "reference_link": "Link di riferimento (facoltativo)",
+        "reference_link": "Link di riferimento",
         "notes": "Altro che dovremmo sapere?"
       },
       "consent": "Useremo questi dati per rispondere alla tua richiesta. Non costituisce una prenotazione né un accordo di acquisto.",
@@ -478,7 +483,7 @@
         "preferred_contact": "Metodo di contatto preferito",
         "message": "Altre informazioni sul pezzo?"
       },
-      "serial": "Seriale o codice data (facoltativo)",
+      "serial": "Seriale o codice data",
       "serial_hint": "Non condividere qui il numero di serie o il codice data completo. Indica soltanto se è presente; se necessario, ti chiederemo i dettagli tramite un canale sicuro.",
       "disclaimer": "Non inviare un articolo finché non avremo concordato per iscritto le istruzioni di spedizione.",
       "submit": "Invia i dettagli dell'articolo",
@@ -488,7 +493,7 @@
     "about_story": {
       "eyebrow": "Il nostro punto di vista",
       "heading": "Ritrovate per essere indossate ancora.",
-      "intro": "La Retrouvée riunisce borse firmate vintage e pre-owned, scelte per il design, le condizioni e il carattere unico. Un pezzo può avere una storia e trovare il suo posto nel presente.",
+      "intro": "La Retrouvée riunisce borse firmate vintage e di seconda mano, scelte per il design, le condizioni e il carattere unico. Un pezzo può avere una storia e trovare il suo posto nel presente.",
       "selection_heading": "Scelte una per una",
       "selection_text": "Un nome celebre non racconta tutta la storia. Osserviamo forma, materiali e dettagli di ogni pezzo prima di inserirlo nella selezione. Ogni borsa è proposta come esemplare unico.",
       "detail_heading": "Mostrate con chiarezza",
@@ -623,13 +628,13 @@
     },
     "drop_signup": {
       "heading": "Scopri per primo i nuovi pezzi",
-      "body": "Ricevi aggiornamenti occasionali all'arrivo di nuove borse selezionate. Nessuna promozione continua.",
+      "body": "Ricevi aggiornamenti occasionali all'arrivo di nuove borse selezionate.",
       "email_placeholder": "Indirizzo email",
       "submit": "Iscriviti",
       "success": "Grazie. Sei nella lista."
     },
     "featured_designers": {
-      "explore": "Scopri {{ designer }}"
+      "explore": "Vedi la collezione"
     }
   },
   "localization": {

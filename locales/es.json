@@ -9,13 +9,12 @@
       "login_form_password_label": "Contraseña",
       "login_form_password_placeholder": "Tu contraseña",
       "login_form_error": "Contraseña incorrecta",
-      "login_form_submit": "Ingresar",
+      "login_form_submit": "Entrar",
       "admin_link_html": "¿Eres el propietario de la tienda? <a href=\"/admin\" class=\"link underlined-link\">Inicia sesión aquí</a>",
       "powered_by_shopify_html": "Esta tienda contará con tecnología Shopify {{ shopify }}",
       "eyebrow": "Un nuevo destino para el lujo vintage",
       "hero_heading": "Piezas singulares, elegidas con calma.",
-      "hero_body": "Estamos preparando una selección de bolsos de diseñador vintage y de segunda mano, elegidos por su carácter, estado y atractivo duradero.",
-      "newsletter_note": "Novedades ocasionales sobre nuevas piezas. Sin promociones constantes."
+      "hero_body": "Estamos preparando una selección de bolsos de diseñador vintage y de segunda mano, elegidos por su carácter, estado y atractivo duradero."
     },
     "social": {
       "alt_text": {
@@ -49,7 +48,7 @@
     },
     "cart": {
       "view": "Ver carrito ({{ count }})",
-      "item_added": "Artículo agregado a tu carrito",
+      "item_added": "Artículo añadido al carrito",
       "view_empty_cart": "Ver carrito"
     },
     "share": {
@@ -84,12 +83,17 @@
     "footer": {
       "navigation_label": "Navegación del pie de página",
       "non_affiliation": "{{ shop_name }} es un revendedor independiente y no está afiliado a las firmas que aparecen en este sitio web. Todas las marcas pertenecen a sus respectivos titulares."
+    },
+    "forms": {
+      "privacy_note": "Utilizamos estos datos para responderte.",
+      "privacy_link": "Política de privacidad"
     }
   },
   "newsletter": {
     "label": "Correo electrónico",
-    "success": "Gracias por suscribirte",
-    "button_label": "Suscribirse"
+    "success": "Gracias. Ya estás en la lista.",
+    "button_label": "Suscribirse",
+    "privacy_note": "Correos ocasionales sobre nuevas piezas. Puedes darte de baja en cualquier momento."
   },
   "accessibility": {
     "heading_articles": "Artículos",
@@ -161,7 +165,7 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Agregar al carrito",
+      "add_to_cart": "Añadir al carrito",
       "description": "Descripción",
       "on_sale": "Oferta",
       "quantity": {
@@ -194,10 +198,10 @@
       "pickup_availability": {
         "view_store_info": "Ver información de la tienda",
         "check_other_stores": "Verificar disponibilidad en otras tiendas",
-        "pick_up_available": "Retiro disponible",
-        "pick_up_available_at_html": "Retiro disponible en <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "No se pudo cargar la disponibilidad de retiro",
+        "pick_up_available": "Recogida disponible",
+        "pick_up_available_at_html": "Recogida disponible en <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Recogida no disponible actualmente en <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "No se pudo cargar la disponibilidad de recogida",
         "refresh": "Actualizar"
       },
       "media": {
@@ -252,6 +256,7 @@
         "authentication_notes": "Autenticación"
       },
       "details_heading": "Detalles y estado",
+      "details_only_heading": "Detalles",
       "test_label": "Producto de prueba — ficha provisional",
       "image_pending": "Fotografías en preparación",
       "recently_viewed": "Vistos recientemente",
@@ -422,9 +427,9 @@
         "name": "Nombre",
         "email": "Correo electrónico",
         "phone": "Número de teléfono",
-        "comment": "Comentario",
-        "send": "Enviar",
-        "post_success": "Gracias por contactarnos. Te responderemos lo antes posible.",
+        "comment": "Mensaje",
+        "send": "Enviar mensaje",
+        "post_success": "Gracias. Hemos recibido tu mensaje y te responderemos personalmente.",
         "error_heading": "Por favor, ajusta lo siguiente:",
         "title": "Formulario de contacto"
       }
@@ -452,7 +457,7 @@
         "maximum_budget": "Presupuesto máximo",
         "currency": "Moneda",
         "flexible_details": "¿En qué detalles tienes flexibilidad?",
-        "reference_link": "Enlace de referencia (opcional)",
+        "reference_link": "Enlace de referencia",
         "notes": "¿Algo más que debamos saber?"
       },
       "consent": "Utilizaremos estos datos para responder a tu solicitud. No constituye una reserva ni un acuerdo de compra.",
@@ -478,7 +483,7 @@
         "preferred_contact": "Medio de contacto preferido",
         "message": "¿Algo más sobre la pieza?"
       },
-      "serial": "Código de serie o fecha (opcional)",
+      "serial": "Código de serie o fecha",
       "serial_hint": "No compartas aquí el número de serie ni el código de fecha completo. Indica solo si existe; te pediremos los detalles por un canal seguro si es necesario.",
       "disclaimer": "No envíes ningún artículo hasta que hayamos acordado por escrito las instrucciones de envío.",
       "submit": "Enviar los detalles del artículo",
@@ -519,7 +524,7 @@
       "product_disclosure": "Aviso sobre el producto",
       "product_disclosures": "Avisos sobre el producto",
       "cart_error": "Hubo un error al actualizar tu carrito de compra. Inténtalo de nuevo.",
-      "cart_quantity_error_html": "Solo puedes agregar {{ quantity }} de este artículo a tu carrito.",
+      "cart_quantity_error_html": "Solo puedes añadir {{ quantity }} de este artículo a tu carrito.",
       "headings": {
         "product": "Producto",
         "price": "Precio",
@@ -593,9 +598,9 @@
       "variant": "Variante",
       "variant_total": "Total de variantes",
       "items_added": {
-        "one": "{{ quantity }} artículo agregado",
-        "other": "{{ quantity }} artículos agregados",
-        "many": "{{ quantity }} artículos agregados"
+        "one": "{{ quantity }} artículo añadido",
+        "other": "{{ quantity }} artículos añadidos",
+        "many": "{{ quantity }} artículos añadidos"
       },
       "items_removed": {
         "one": "{{ quantity }} artículo eliminado",
@@ -610,7 +615,7 @@
       "remove_all_single_item_confirmation": "¿Eliminar 1 artículo de tu carrito?",
       "min_error": "Este artículo tiene un mínimo de {{ min }}.",
       "max_error": "Este artículo tiene un máximo de {{ max }}.",
-      "step_error": "Solo puedes agregar este artículo en incrementos de {{ step }}"
+      "step_error": "Solo puedes añadir este artículo en incrementos de {{ step }}"
     },
     "archive": {
       "sourcing_note": "¿Has visto una pieza que se te escapó? Compártela con nosotros y cuéntanos qué estás buscando. No podemos prometer una coincidencia exacta, pero tu solicitud puede orientar futuras búsquedas.",
@@ -623,13 +628,13 @@
     },
     "drop_signup": {
       "heading": "Descubre las nuevas piezas antes que nadie",
-      "body": "Recibe novedades ocasionales cuando lleguen nuevos bolsos seleccionados. Sin promociones constantes.",
-      "email_placeholder": "Dirección de correo electrónico",
-      "submit": "Unirme a la lista",
+      "body": "Recibe novedades ocasionales cuando lleguen nuevos bolsos seleccionados.",
+      "email_placeholder": "Correo electrónico",
+      "submit": "Suscribirse",
       "success": "Gracias. Ya estás en la lista."
     },
     "featured_designers": {
-      "explore": "Explorar {{ designer }}"
+      "explore": "Ver la colección"
     }
   },
   "localization": {
@@ -659,7 +664,7 @@
     "addresses": {
       "title": "Direcciones",
       "default": "Predeterminada",
-      "add_new": "Agregar una nueva dirección",
+      "add_new": "Añadir una nueva dirección",
       "edit_address": "Editar dirección",
       "first_name": "Nombre",
       "last_name": "Apellido",
@@ -672,7 +677,7 @@
       "zip": "Código postal",
       "phone": "Teléfono",
       "set_default": "Establecer como dirección predeterminada",
-      "add": "Agregar dirección",
+      "add": "Añadir dirección",
       "update": "Actualizar dirección",
       "cancel": "Cancelar",
       "edit": "Editar",
@@ -757,7 +762,7 @@
       "subtext": "Tu tarjeta de regalo",
       "gift_card_code": "Código de tarjeta de regalo",
       "shop_link": "Visitar la tienda online",
-      "add_to_apple_wallet": "Agregar a Apple Wallet",
+      "add_to_apple_wallet": "Añadir a Apple Wallet",
       "qr_image_alt": "Código QR: escanea para canjear la tarjeta de regalo",
       "copy_code": "Copiar el código de la tarjeta de regalo",
       "expired": "Vencido",

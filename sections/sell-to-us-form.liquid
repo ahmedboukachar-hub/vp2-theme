@@ -71,7 +71,10 @@
             aria-describedby="SellToUs-email-error"
           {% endif %}
         >
-        <label for="SellToUs-email" class="field__label">{{ 'templates.sell_to_us.fields.email' | t }}</label>
+        <label for="SellToUs-email" class="field__label">
+          {{- 'templates.sell_to_us.fields.email' | t }}
+          <span aria-hidden="true">*</span></label
+        >
         {%- if form.errors contains 'email' -%}
           <small id="SellToUs-email-error" class="contact__field-error">
             {{ form.errors.translated_fields.email | capitalize }}
@@ -86,7 +89,7 @@
         {%- assign field_label_key = 'templates.sell_to_us.fields.' | append: field_key -%}
         {%- assign field_label = field_label_key | t -%}
         <div class="field">
-          <input type="text" id="SellToUs-{{ field_key }}" name="contact[{{ field_label }}]" class="field__input" placeholder="{{ field_label }}">
+          <input type="text" id="SellToUs-{{ field_key }}" name="contact[{{ field_label }}]" class="field__input"{% if field_key == 'country' %} autocomplete="country-name"{% endif %} placeholder="{{ field_label }}">
           <label for="SellToUs-{{ field_key }}" class="field__label">{{ field_label }}</label>
         </div>
       {%- endfor -%}
@@ -101,6 +104,7 @@
       </div>
 
       <p class="sell-to-us__disclaimer">{{ 'templates.sell_to_us.disclaimer' | t }}</p>
+      {% render 'form-privacy-note', class: 'sell-to-us__disclaimer' %}
       <button type="submit" class="button">{{ 'templates.sell_to_us.submit' | t }}</button>
     {%- endif -%}
   {%- endform -%}

@@ -34,7 +34,7 @@
   <wishlist-items
     class="wishlist-items no-js-hidden"
     data-root-url="{{ routes.root_url }}"
-    data-money-format="{{ shop.money_format | escape }}"
+    data-money-format="{% if settings.currency_code_enabled %}{{ shop.money_with_currency_format | escape }}{% else %}{{ shop.money_format | escape }}{% endif %}"
     data-remove-label="{{ 'general.wishlist.remove' | t | escape }}"
     data-removed-notice="{{ 'general.wishlist.removed_notice' | t: title: '[title]' | escape }}"
   >
@@ -48,16 +48,44 @@
     <template>
       <li class="wishlist-card" data-wishlist-card>
         <a data-wishlist-link href="#" class="wishlist-card__link">
-          <span class="wishlist-card__media"><img data-wishlist-image src="" alt="" loading="lazy" width="600" height="750"></span>
+          <span class="wishlist-card__media"><img data-wishlist-image alt="" loading="lazy" width="600" height="750"></span>
           <span data-wishlist-title class="wishlist-card__title"></span>
         </a>
-        <span class="wishlist-card__unavailable" data-wishlist-unavailable>{{ 'general.wishlist.unavailable' | t }}</span>
-        <p data-wishlist-price class="wishlist-card__price"></p>
+        <span class="wishlist-card__unavailable" data-wishlist-unavailable hidden>{{ 'general.wishlist.unavailable' | t }}</span>
+        <p data-wishlist-price class="wishlist-card__price">&nbsp;</p>
         <button type="button" class="wishlist-card__remove link underlined-link" data-wishlist-remove>
           {{- 'general.wishlist.remove_short' | t -}}
         </button>
       </li>
     </template>
+    {%- comment -%}
+      Shows the empty state or one placeholder card per saved piece before
+      first paint, so nothing below moves when wishlist.js fills them in.
+      Keep in step with buildCard() in assets/wishlist.js.
+    {%- endcomment -%}
+    <script>
+      (function () {
+        try {
+          var root = document.currentScript.parentNode;
+          var items = JSON.parse(window.localStorage.getItem('wishlist-items') || '[]');
+          if (!Array.isArray(items)) items = [];
+          var grid = root.querySelector('[data-wishlist-grid]');
+          if (grid.children.length) return;
+          var card = root.querySelector('template').content.querySelector('[data-wishlist-card]');
+          root.querySelector('[data-wishlist-empty]').hidden = items.length > 0;
+          grid.hidden = items.length === 0;
+          items.slice(0, 50).forEach(function (item) {
+            var placeholder = card.cloneNode(true);
+            placeholder.dataset.handle = item.handle;
+            placeholder.querySelector('[data-wishlist-title]').textContent = item.title || item.handle;
+            if (item.url) placeholder.querySelector('[data-wishlist-link]').setAttribute('href', item.url);
+            grid.appendChild(placeholder);
+          });
+        } catch (error) {
+          /* wishlist.js renders the list once it runs */
+        }
+      })();
+    </script>
   </wishlist-items>
 </div>
 

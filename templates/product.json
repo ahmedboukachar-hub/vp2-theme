@@ -43,9 +43,7 @@
         },
         "specifications": {
           "type": "specifications",
-          "settings": {
-            "heading": "Details & condition"
-          }
+          "settings": {}
         },
         "what_fits": {
           "type": "what_fits"
