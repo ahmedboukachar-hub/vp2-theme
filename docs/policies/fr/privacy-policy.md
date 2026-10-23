@@ -1,3 +1,5 @@
+<!-- NOT IN USE. The live privacy policy is Shopify-managed (automatic management on) and cannot be edited through the Admin API; it takes the store name and contact email from Settings → General. This file is the earlier draft, kept for reference only. -->
+
 # Politique de confidentialité — VERSION DE TRAVAIL (examen juridique requis avant utilisation)
 
 > Statut : version de travail alignée sur ce que fait réellement cette

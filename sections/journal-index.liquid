@@ -83,7 +83,9 @@
               article: blog.articles.first,
               variant: 'lead',
               heading_class: 'journal-card__title journal-index__feature-title',
-              sizes: '(min-width: 990px) 62vw, 100vw'
+              sizes: '(min-width: 990px) 62vw, 100vw',
+              loading: 'eager',
+              fetchpriority: 'high'
             %}
           </div>
         {%- endif -%}
@@ -93,11 +95,18 @@
             {%- if show_feature and forloop.first -%}
               {%- continue -%}
             {%- endif -%}
+            {%- liquid
+              assign grid_loading = 'lazy'
+              if show_feature == false and paginate.current_page == 1 and forloop.index <= 3
+                assign grid_loading = 'eager'
+              endif
+            -%}
             <li class="journal-index__item">
               {% render 'journal-card',
                 article: article,
                 variant: 'grid',
-                sizes: '(min-width: 990px) 30vw, 100vw'
+                sizes: '(min-width: 990px) 30vw, (min-width: 750px) 45vw, 100vw',
+                loading: grid_loading
               %}
             </li>
           {%- endfor -%}

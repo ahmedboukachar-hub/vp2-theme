@@ -1,3 +1,34 @@
+# La Retrouvée storefront theme
+
+Shopify theme for **La Retrouvée** (laretrouvee.com), an international shop for curated vintage and pre-owned designer bags. It is built on Dawn v16 with plain Liquid, CSS and JavaScript and has no build step. The Dawn README follows further down.
+
+## How changes reach the store
+
+- `main` is connected to the published theme through Shopify's GitHub sync. A merge to `main` goes live within a few minutes, so work on a branch and merge through a pull request.
+- Theme Editor edits sync back to `main` as commits. Pull before you start.
+- Store content lives in Shopify, not in this repo: products, pages, blog articles, policies, menus, Markets and translations. It is changed in the Admin or through the Admin API, and only with the owner's approval.
+- The store is still password-protected, but the primary domain `laretrouvee.com` is already set up. `vp2-dev.myshopify.com` redirects to it.
+
+## Read these before changing anything
+
+| File | What it holds |
+|---|---|
+| `CLAUDE.md`, `AGENTS.md` | Rules for Claude Code and ChatGPT/Codex, which both work on this repo: coordination, sync pitfalls, translation rules, brand identity |
+| `docs/launch-readiness.md` | What is done and what still blocks launch (owner and Admin items) |
+| `docs/qa/site-scan-2026-10-23.md` | Verified findings from the full site scan, with status; the working list for improvements |
+| `docs/design/design-system.md` | Tokens, components and the owner's design decisions (colour rhythm, houses grid, no black surfaces, announcement bar off) |
+| `docs/translations.md`, `docs/taxonomy.md` | How copy is translated (native theme-content translations) and which tags the theme may rely on |
+| `docs/policies/<locale>/` | Copies of the official live policies; Shopify is the source of truth |
+
+## Owner preferences in short
+
+- Keep the look as it is. Fix defects and improve code; propose visual changes before making them.
+- No VAT or margin wording on the storefront, only the total price.
+- La Retrouvée is part of Vintage Pareltje. Say so only in the legal notice and terms, never on storefront pages.
+- English is the source language and Dutch is fully maintained. DE, FR, IT and ES are published.
+
+---
+
 # Dawn
 
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)

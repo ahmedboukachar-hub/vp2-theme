@@ -1209,7 +1209,7 @@ class ProductRecommendations extends HTMLElement {
         observer.unobserve(this);
         this.loadRecommendations(productId);
       },
-      { rootMargin: '0px 0px 400px 0px' }
+      { rootMargin: '0px 0px 1600px 0px' }
     );
     this.observer.observe(this);
   }

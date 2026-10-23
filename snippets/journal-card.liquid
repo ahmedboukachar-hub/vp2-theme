@@ -6,6 +6,8 @@
   @param {boolean} [show_excerpt] - Whether to show the standfirst.
   @param {string} [heading_class] - Optional headline class override.
   @param {string} [sizes] - Responsive image sizes value.
+  @param {string} [loading] - Image loading mode, 'lazy' (default) or 'eager'.
+  @param {string} [fetchpriority] - Image fetch priority, 'auto' (default) or 'high'.
 
   @example
   {% render 'journal-card', article: article, variant: 'lead' %}
@@ -23,6 +25,11 @@
   endif
 -%}
 
+{%- liquid
+  assign img_loading = loading | default: 'lazy'
+  assign img_priority = fetchpriority | default: 'auto'
+-%}
+
 <article class="journal-card journal-card--{{ variant }}">
   <a class="journal-card__link" href="{{ article.url }}">
     {%- if article.image -%}
@@ -31,7 +38,8 @@
           article.image
           | image_url: width: 1600
           | image_tag:
-            loading: 'lazy',
+            loading: img_loading,
+            fetchpriority: img_priority,
             widths: '300, 450, 600, 900, 1200, 1600',
             sizes: sizes | default: '(min-width: 990px) 45vw, 100vw',
             alt: article.image.alt | escape
