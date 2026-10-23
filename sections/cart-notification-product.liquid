@@ -7,7 +7,7 @@
             src="{{ item.image | image_url: width: 140 }}"
             alt="{{ item.image.alt | escape }}"
             width="70"
-            height="{{ 70 | divided_by: item.image.aspect_ratio | ceil }}"
+            height="70"
             loading="lazy"
           >
         </div>

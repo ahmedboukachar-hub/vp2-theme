@@ -190,6 +190,24 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   font-size: 1.2rem;
 }
 
+/* Material · condition / colour line and the "Sold" badge, so pieces with
+   the same title can be told apart. */
+.predictive-search__item-meta {
+  margin: 0.3rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: rgba(var(--color-foreground), 0.72);
+}
+
+.predictive-search__item-sold {
+  margin: 0.5rem 0 0;
+  line-height: 1;
+}
+
+.predictive-search__item-sold .badge {
+  padding: 0.3rem 0.8rem 0.4rem;
+}
+
 .predictive-search__item-vendor + .predictive-search__item-heading,
 .predictive-search .price {
   margin-top: 0.5rem;

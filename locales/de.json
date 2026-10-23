@@ -81,6 +81,8 @@
       "link_label": "Wunschliste",
       "add": "Zur Wunschliste hinzufügen",
       "remove": "Von der Wunschliste entfernen",
+      "save": "Merken",
+      "saved": "Gemerkt",
       "remove_short": "Entfernen",
       "intro": "Bewahren Sie die Stücke, zu denen Sie zurückkehren möchten, an einem Ort auf.",
       "empty_heading": "Ihre Wunschliste ist leer",
@@ -260,7 +262,9 @@
         "inclusions": "Lieferumfang",
         "serial_or_date_code": "Serien-/Datumscode",
         "provenance": "Herkunft",
-        "authentication_notes": "Authentifizierung"
+        "authentication_notes": "Authentifizierung",
+        "compatible_models": "Passend für",
+        "compatible_accessories": "Passend für diese Tasche"
       },
       "volume_pricing": {
         "title": "Volumenabhängige Preisgestaltung",

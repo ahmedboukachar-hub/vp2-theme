@@ -8,19 +8,42 @@
   assign journal_heading = section.settings.heading | default: blog.title
   assign journal_intro = section.settings.intro
   assign journal_topics = blog.all_tags
+
+  # Every page of the unfiltered index opens with a lead story; the grid
+  # below it then holds `per_page` cards, a multiple of three, so each page
+  # ends on complete rows. Topic pages show the grid only.
+  assign show_feature = false
+  assign page_size = per_page
+  if feature_first and current_tags == blank
+    assign show_feature = true
+    assign page_size = per_page | plus: 1
+  endif
 -%}
+
+{%- if current_tags != blank -%}
+  {%- capture journal_topic -%}{% render 'journal-topic', topic: current_tags.first %}{%- endcapture -%}
+  {%- assign journal_topic = journal_topic | strip -%}
+{%- endif -%}
 
 <div class="journal-index color-{{ section.settings.color_scheme }} gradient">
   <div class="vp-width">
     <header class="journal-index__hero">
-      {%- if journal_eyebrow != blank -%}
-        <span class="vp-eyebrow">{{ journal_eyebrow | escape }}</span>
-      {%- endif -%}
-      <h1 class="vp-heading-display">
-        {{- journal_heading | escape -}}
-      </h1>
-      {%- if journal_intro != blank -%}
-        <div class="vp-lead rte journal-index__intro">{{ journal_intro }}</div>
+      {%- if journal_topic != blank -%}
+        {%- comment -%} Topic page: the topic is the page title; the eyebrow leads back to the whole Journal. {%- endcomment -%}
+        <a class="vp-eyebrow journal-index__back" href="{{ blog.url }}">
+          {{- journal_eyebrow | default: blog.title | escape -}}
+        </a>
+        <h1 class="vp-heading-display">{{ journal_topic }}</h1>
+      {%- else -%}
+        {%- if journal_eyebrow != blank -%}
+          <span class="vp-eyebrow">{{ journal_eyebrow | escape }}</span>
+        {%- endif -%}
+        <h1 class="vp-heading-display">
+          {{- journal_heading | escape -}}
+        </h1>
+        {%- if journal_intro != blank -%}
+          <div class="vp-lead rte journal-index__intro">{{ journal_intro }}</div>
+        {%- endif -%}
       {%- endif -%}
     </header>
 
@@ -32,7 +55,7 @@
             {%- if current_tags == blank -%}
               {{ 'blogs.article.all_topics' | t }}
             {%- else -%}
-              {% render 'journal-topic', topic: current_tags.first %}
+              {{ journal_topic }}
             {%- endif -%}
           </span>
           <span class="journal-index__topics-chevron" aria-hidden="true">⌄</span>
@@ -49,8 +72,6 @@
             </a>
           </li>
           {%- for tag in journal_topics -%}
-            {%- assign tag_key = tag | downcase -%}
-            {%- if tag_key == 'guide' or tag_key == 'sizing' -%}{%- continue -%}{%- endif -%}
             <li>
               <a
                 href="{{ blog.url }}/tagged/{{ tag | handleize }}"
@@ -66,23 +87,17 @@
       </details>
     {%- endif -%}
 
-    {%- paginate blog.articles by per_page -%}
+    {%- paginate blog.articles by page_size -%}
       {%- if blog.articles.size == 0 -%}
         <p class="journal-index__empty">{{ 'blogs.article.empty' | t }}</p>
       {%- else -%}
-        {%- liquid
-          assign show_feature = false
-          if feature_first and paginate.current_page == 1 and current_tags == blank
-            assign show_feature = true
-          endif
-        -%}
-
         {%- if show_feature -%}
           <div class="journal-index__feature">
             {% render 'journal-card',
               article: blog.articles.first,
               variant: 'lead',
               heading_class: 'journal-card__title journal-index__feature-title',
+              heading_tag: 'h2',
               sizes: '(min-width: 990px) 62vw, 100vw',
               loading: 'eager',
               fetchpriority: 'high'
@@ -90,7 +105,6 @@
           </div>
         {%- endif -%}
 
-        <h2 class="visually-hidden">{{ 'accessibility.heading_articles' | t }}</h2>
         <ul class="journal-index__grid" role="list">
           {%- for article in blog.articles -%}
             {%- if show_feature and forloop.first -%}
@@ -98,7 +112,7 @@
             {%- endif -%}
             {%- liquid
               assign grid_loading = 'lazy'
-              if show_feature == false and paginate.current_page == 1 and forloop.index <= 3
+              if show_feature == false and forloop.index <= 3
                 assign grid_loading = 'eager'
               endif
             -%}
@@ -106,6 +120,7 @@
               {% render 'journal-card',
                 article: article,
                 variant: 'grid',
+                heading_tag: 'h2',
                 sizes: '(min-width: 990px) 30vw, (min-width: 750px) 45vw, 100vw',
                 loading: grid_loading
               %}
@@ -140,7 +155,13 @@
       "label": "Introduction",
       "default": "<p>Explore the design history, practical details and distinctive character of the bags we collect, source and admire.</p>"
     },
-    { "type": "checkbox", "id": "feature_first_article", "label": "Feature the most recent article", "default": true },
+    {
+      "type": "checkbox",
+      "id": "feature_first_article",
+      "label": "Open each page with a lead story",
+      "info": "The newest article on each page is shown large above the grid. Not used on topic pages.",
+      "default": true
+    },
     {
       "type": "checkbox",
       "id": "show_topics",
@@ -148,7 +169,16 @@
       "info": "Uses the article tags that actually exist. Hidden when the blog has no tags.",
       "default": true
     },
-    { "type": "range", "id": "articles_per_page", "label": "Articles per page", "min": 6, "max": 24, "step": 3, "default": 12 },
+    {
+      "type": "range",
+      "id": "articles_per_page",
+      "label": "Grid articles per page",
+      "info": "The lead story comes on top, so every full page ends on complete rows.",
+      "min": 6,
+      "max": 24,
+      "step": 3,
+      "default": 12
+    },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
   ]
 }

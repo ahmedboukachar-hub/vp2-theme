@@ -1,0 +1,98 @@
+{%- comment -%}
+  Quiet onward row under a collection grid: links to the houses picked in the
+  Theme Editor, leaving out the collection being viewed, plus an optional link
+  to the Designers page. Renders nothing when no other house is linked.
+{%- endcomment -%}
+{%- liquid
+  assign other_houses = 0
+  assign current_is_house = false
+  for house in section.settings.collections
+    if house.id == collection.id
+      assign current_is_house = true
+    else
+      assign other_houses = other_houses | plus: 1
+    endif
+  endfor
+
+  assign heading = section.settings.heading
+  if heading == blank
+    if current_is_house
+      assign heading = 'sections.collection_houses.heading_other' | t
+    else
+      assign heading = 'sections.collection_houses.heading' | t
+    endif
+  endif
+-%}
+
+{%- if other_houses > 0 -%}
+  {{ 'section-collection-houses.css' | asset_url | stylesheet_tag }}
+
+  <div class="collection-houses color-{{ section.settings.color_scheme }} gradient">
+    <div class="collection-houses__inner page-width">
+      <div class="collection-houses__main">
+        <h2 class="collection-houses__heading vp-eyebrow" id="CollectionHouses-{{ section.id }}">
+          {{- heading | escape -}}
+        </h2>
+        <ul class="collection-houses__list list-unstyled" role="list" aria-labelledby="CollectionHouses-{{ section.id }}">
+          {%- for house in section.settings.collections -%}
+            {%- if house.id == collection.id -%}
+              {%- continue -%}
+            {%- endif -%}
+            <li>
+              <a class="collection-houses__link" href="{{ house.url }}">{{ house.title | escape }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- if section.settings.designers_page != blank -%}
+        <a class="vp-link vp-link--arrow collection-houses__all" href="{{ section.settings.designers_page.url }}">
+          {{- 'products.facets.all_designers' | t -}}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection houses",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": { "templates": ["collection"] },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Links to other houses under the product grid. The collection being viewed is left out automatically. With no heading, the heading reads 'Other houses' on a house collection and 'Browse by house' elsewhere, translated from the locale files."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Optional. Leave empty for the translated default."
+    },
+    {
+      "type": "collection_list",
+      "id": "collections",
+      "label": "Houses",
+      "limit": 8
+    },
+    {
+      "type": "page",
+      "id": "designers_page",
+      "label": "Designers page",
+      "info": "Linked as 'All designers'. Hidden when empty."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection houses"
+    }
+  ]
+}
+{% endschema %}

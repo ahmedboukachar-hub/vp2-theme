@@ -72,6 +72,8 @@
       "link_label": "Lista de deseos",
       "add": "Guardar en la lista de deseos",
       "remove": "Eliminar de la lista de deseos",
+      "save": "Guardar",
+      "saved": "Guardado",
       "remove_short": "Eliminar",
       "intro": "Guarda en un solo lugar las piezas que quieras volver a ver.",
       "empty_heading": "Tu lista de deseos está vacía",
@@ -261,7 +263,9 @@
         "inclusions": "Incluye",
         "serial_or_date_code": "Número de serie / código de fecha",
         "provenance": "Procedencia",
-        "authentication_notes": "Autenticación"
+        "authentication_notes": "Autenticación",
+        "compatible_models": "Compatible con",
+        "compatible_accessories": "Compatible con este bolso"
       },
       "details_heading": "Detalles y estado",
       "details_only_heading": "Detalles",

@@ -41,8 +41,12 @@
   border-bottom-color: rgb(var(--color-foreground));
 }
 
-/* Two-level grid: a large card spans two tracks, a small card one, so two
-   small houses sit side by side under one large house on every screen size. */
+/* Two-level grid. On phones a large card spans both tracks and a small card
+   one, so two small houses sit side by side under a large one. On the two-up
+   desktop grid (four tracks) a small card spans two tracks like a large card
+   and stays secondary by height instead: a square photo on tablets, a
+   horizontal card (4:5 photo, name beside it) from 990px. The pair always
+   fills its row. */
 .featured-designers__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .featured-designers__item--large { grid-column: span 2; }
 .featured-designers__item--small .featured-designers__name { font-size: clamp(1.8rem, 1.6vw, 2.4rem); }
@@ -73,6 +77,26 @@
   .featured-designers__list { gap: var(--vp-space-l); }
   .featured-designers__list--2 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .featured-designers__list--3 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .featured-designers__list--2 .featured-designers__item--small { grid-column: span 2; }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .featured-designers__list--2 .featured-designers__item--small .featured-designers__media { aspect-ratio: 1 / 1; }
+}
+
+@media screen and (min-width: 990px) {
+  .featured-designers__list--2 .featured-designers__item--small .featured-designers__link {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.4rem;
+    align-items: end;
+  }
+
+  .featured-designers__list--2 .featured-designers__item--small .featured-designers__info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0;
+  }
 }
 
 .featured-designers__media.vp-media > img { position: absolute; inset: 0; }

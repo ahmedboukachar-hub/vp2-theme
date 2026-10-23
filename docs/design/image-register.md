@@ -41,7 +41,7 @@ rejected (below).
 | owner-gucci-halfmoon-coat.jpg | Gucci collection image | Beige GG canvas half-moon bag held against a wool coat | no | yes (Gucci) | confirmation required ⚠ | optional |
 | owner-lv-trunk-detail.jpg | The Archive collection image | Vintage monogram trunk: worn strap, brass catch, patina | no | yes (LV) | confirmation required ⚠ | optional |
 | owner-gucci-marmont-studio.jpg | Gucci popularity guide articles (en + nl) | Black quilted GG Marmont camera bag, studio | no | yes (Gucci) | confirmation required ⚠ | optional |
-| owner-lv-speedy-street.jpg | Speedy 30 guide article | Reverse monogram Speedy carried on the street, from behind | no | yes (LV) | confirmation required ⚠ | optional |
+| owner-lv-speedy-street.jpg | not used (removed from the Speedy 30 guide on 2026-10-23: it showed a different variant than the text) | Reverse monogram Speedy carried on the street, from behind | no | yes (LV) | confirmation required ⚠ | optional |
 | owner-lv-pochette-walking.jpg | Find a Bag page hero | Monogram shoulder bag carried while walking, from above | no | yes (LV) | confirmation required ⚠ | optional |
 | owner-lv-keepall-travel.jpg | Designers page hero | Monogram travel bag carried by its handles | no | yes (LV) | confirmation required ⚠ | optional |
 | owner-lv-lockme-knit.jpg | not currently placed (Wishlist hero is typography-led) | Small black grained leather backpack on a knit jumper | no | yes (LV) | confirmation required ⚠ | optional |
@@ -154,3 +154,11 @@ portrait bag photographs; the editorial section is square on mobile; the
 collection banner box is taller (32rem mobile, 36rem desktop); the About
 hero is set to landscape to match its image.
 
+## Speedy 30 guide image (2026-10-23)
+
+`journal-speedy-30-monogram-landscape.png` (Files, MediaImage 29543016759355) is
+the store's own main photo of `louis-vuitton-speedy-30-01`, placed on a warm
+ivory canvas (#FBF9F5) at 2400×1600 so it fits the article's 3:2 frame and the
+homepage's square Journal lead card without cropping the bag. It replaced the
+street photo, which showed a strapped, studded variant that contradicted the
+text.

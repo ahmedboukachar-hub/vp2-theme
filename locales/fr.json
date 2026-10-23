@@ -81,6 +81,8 @@
       "link_label": "Favoris",
       "add": "Ajouter aux favoris",
       "remove": "Retirer des favoris",
+      "save": "Enregistrer",
+      "saved": "Enregistré",
       "remove_short": "Retirer",
       "intro": "Gardez au même endroit les pièces que vous souhaitez retrouver.",
       "empty_heading": "Vos favoris sont vides",
@@ -260,7 +262,9 @@
         "inclusions": "Accessoires inclus",
         "serial_or_date_code": "Code série / date",
         "provenance": "Provenance",
-        "authentication_notes": "Authentification"
+        "authentication_notes": "Authentification",
+        "compatible_models": "Compatible avec",
+        "compatible_accessories": "Compatible avec ce sac"
       },
       "inventory_out_of_stock": "En rupture de stock",
       "inventory_out_of_stock_continue_selling": "En stock",

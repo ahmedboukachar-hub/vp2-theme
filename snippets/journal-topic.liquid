@@ -1,9 +1,15 @@
 {% doc %}
   Renders a translated editorial category, escaping custom tags once.
+  An article's topic is its first tag. Shopify sorts tags alphabetically,
+  so topic tags (bag-models, buying-advice, classics-by-house, bag-care)
+  sort before the house tags (dior, gucci, louis-vuitton) they are paired with.
   @param {string} topic - Article tag.
 {% enddoc %}
 {%- assign topic_handle = topic | handleize -%}
 {%- case topic_handle -%}
+  {%- when 'bag-models' -%}{{ 'blogs.article.topic_model_guides' | t }}
+  {%- when 'buying-advice' -%}{{ 'blogs.article.topic_buying_advice' | t }}
+  {%- when 'classics-by-house' -%}{{ 'blogs.article.topic_classics_by_house' | t }}
   {%- when 'buying-guides' -%}{{ 'blogs.article.topic_buying_guides' | t }}
   {%- when 'bag-care' -%}{{ 'blogs.article.topic_bag_care' | t }}
   {%- when 'designer-stories' -%}{{ 'blogs.article.topic_designer_stories' | t }}

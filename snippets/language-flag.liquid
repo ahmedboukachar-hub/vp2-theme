@@ -1,0 +1,57 @@
+{% doc %}
+  Renders a small inline SVG flag for a storefront language, so the language
+  picker looks the same on every platform (Windows shows flag emoji as letter
+  pairs). Decorative: the language name next to it is the accessible label.
+  English uses the Union flag; unknown languages get a neutral globe.
+
+  @param {string} language - Language ISO code, e.g. 'en', 'nl' or 'pt-BR'.
+
+  @example
+  {% render 'language-flag', language: localization.language.iso_code %}
+{% enddoc %}
+
+{%- liquid
+  assign flag_code = language | split: '-' | first | downcase
+  assign flag_edge = '<rect width="100%" height="100%" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="2" vector-effect="non-scaling-stroke"/>'
+-%}
+
+{%- case flag_code -%}
+  {%- when 'en' -%}
+    <svg class="language-flag" width="20" height="14" viewBox="8.571 0 42.857 30" aria-hidden="true" focusable="false">
+      <rect width="60" height="30" fill="#012169"/>
+      <path d="M0 0 60 30M60 0 0 30" stroke="#fff" stroke-width="6"/>
+      <path d="M-.447.894 29.553 15.894M30.447 14.106 60.447 29.106M29.553 14.106 59.553-.894M30.447 15.894.447 30.894" stroke="#C8102E" stroke-width="2"/>
+      <path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/>
+      <path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/>
+      <rect x="8.571" width="42.857" height="30" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    </svg>
+  {%- when 'nl' -%}
+    <svg class="language-flag" width="20" height="14" viewBox="0 0 3 3" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <rect width="3" height="1" fill="#AE1C28"/><rect y="1" width="3" height="1" fill="#fff"/><rect y="2" width="3" height="1" fill="#21468B"/>
+      {{- flag_edge -}}
+    </svg>
+  {%- when 'de' -%}
+    <svg class="language-flag" width="20" height="14" viewBox="0 0 3 3" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <rect width="3" height="1" fill="#000"/><rect y="1" width="3" height="1" fill="#D00"/><rect y="2" width="3" height="1" fill="#FFCE00"/>
+      {{- flag_edge -}}
+    </svg>
+  {%- when 'fr' -%}
+    <svg class="language-flag" width="20" height="14" viewBox="0 0 3 3" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <rect width="1" height="3" fill="#0055A4"/><rect x="1" width="1" height="3" fill="#fff"/><rect x="2" width="1" height="3" fill="#EF4135"/>
+      {{- flag_edge -}}
+    </svg>
+  {%- when 'it' -%}
+    <svg class="language-flag" width="20" height="14" viewBox="0 0 3 3" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <rect width="1" height="3" fill="#009246"/><rect x="1" width="1" height="3" fill="#fff"/><rect x="2" width="1" height="3" fill="#CE2B37"/>
+      {{- flag_edge -}}
+    </svg>
+  {%- when 'es' -%}
+    <svg class="language-flag" width="20" height="14" viewBox="0 0 4 4" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <rect width="4" height="4" fill="#AA151B"/><rect y="1" width="4" height="2" fill="#F1BF00"/>
+      {{- flag_edge -}}
+    </svg>
+  {%- else -%}
+    <svg class="language-flag language-flag--globe" width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true" focusable="false">
+      <circle cx="10" cy="7" r="6.25"/><ellipse cx="10" cy="7" rx="2.6" ry="6.25"/><path d="M3.75 7h12.5"/>
+    </svg>
+{%- endcase -%}

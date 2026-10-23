@@ -72,6 +72,8 @@
       "link_label": "Lista dei desideri",
       "add": "Salva nella lista dei desideri",
       "remove": "Rimuovi dalla lista dei desideri",
+      "save": "Salva",
+      "saved": "Salvato",
       "remove_short": "Rimuovi",
       "intro": "Raccogli in un unico posto i pezzi che desideri rivedere.",
       "empty_heading": "La tua lista dei desideri è vuota",
@@ -261,7 +263,9 @@
         "inclusions": "In dotazione",
         "serial_or_date_code": "Numero di serie / codice data",
         "provenance": "Provenienza",
-        "authentication_notes": "Autenticazione"
+        "authentication_notes": "Autenticazione",
+        "compatible_models": "Compatibile con",
+        "compatible_accessories": "Compatibile con questa borsa"
       },
       "details_heading": "Dettagli e condizioni",
       "details_only_heading": "Dettagli",

@@ -29,6 +29,19 @@
   max-width: 20ch;
 }
 
+/* Reading pages (guides, shipping, contact): the text column is centred on
+   the canvas, the same axis as Journal articles, instead of hugging the left
+   edge and leaving the right half of a wide screen empty. A page title
+   rendered here starts on the column's left edge. */
+.main-page--measure .vp-rte {
+  margin-inline: auto;
+}
+
+.main-page--measure .main-page-title {
+  max-width: var(--vp-measure-article);
+  margin-inline: auto;
+}
+
 .main-page--principles .vp-rte {
   max-width: 112rem;
 }
@@ -46,8 +59,10 @@
     column-gap: var(--vp-space-m);
   }
 
+  /* The opening paragraph and a closing paragraph that does not belong to
+     a principle (one not directly after an H2) span both columns. */
   .main-page--principles .vp-rte > p:first-child,
-  .main-page--principles .vp-rte > p:last-child {
+  .main-page--principles .vp-rte > p:last-child:not(h2 + p) {
     grid-column: 1 / -1;
   }
 
@@ -65,7 +80,7 @@
     border-top: var(--vp-border);
   }
 
-  .main-page--principles .vp-rte > p:last-child {
+  .main-page--principles .vp-rte > p:last-child:not(h2 + p) {
     margin-top: var(--vp-space-s);
   }
 }

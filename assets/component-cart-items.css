@@ -44,9 +44,15 @@ cart-items .title-wrapper-with-link {
   content: none;
 }
 
+/* Square frame that shows the whole photo on the photo ground, like the
+   product cards and gallery, so every row has the same height (owner
+   decision 2026-10-23). Also used by the cart drawer. */
 .cart-item__image {
   height: auto;
   max-width: calc(10rem / var(--font-body-scale));
+  aspect-ratio: 1;
+  object-fit: contain;
+  background-color: var(--vp-media-ground, #fcf9f5);
 }
 
 @media screen and (min-width: 750px) {

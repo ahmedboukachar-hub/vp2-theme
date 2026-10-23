@@ -1,0 +1,64 @@
+/* Quiet onward row under a collection grid: a hairline, a small heading and
+   the house names set in the serif, with 'All designers' at the far end. */
+.collection-houses {
+  padding-bottom: var(--vp-space-l);
+}
+
+.collection-houses__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  padding-top: 3.2rem;
+  border-top: 1px solid rgba(var(--color-foreground), 0.12);
+}
+
+.collection-houses__heading {
+  margin-bottom: 0.8rem;
+}
+
+.collection-houses__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 3.2rem;
+  margin: 0;
+}
+
+.collection-houses__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 4.4rem;
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-size: var(--vp-type-sub);
+  line-height: 1.15;
+  color: rgb(var(--color-foreground));
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.4rem;
+  transition: text-decoration-color var(--vp-duration) var(--vp-ease);
+}
+
+.collection-houses__link:hover,
+.collection-houses__link:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+@media screen and (min-width: 750px) {
+  .collection-houses__inner {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 3.2rem;
+    padding-top: 4rem;
+  }
+
+  .collection-houses__list {
+    gap: 0 4.8rem;
+  }
+
+  .collection-houses__all {
+    flex-shrink: 0;
+  }
+}

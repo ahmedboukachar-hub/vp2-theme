@@ -323,6 +323,9 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'vp-tokens.css' | asset_url | stylesheet_tag }}
+    {%- if request.page_type == 'policy' -%}
+      {{ 'template-policy.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
     {{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 

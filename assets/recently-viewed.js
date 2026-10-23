@@ -1,7 +1,8 @@
 /*
   Privacy-friendly "Recently viewed" (browser-local, no tracking, no external
   requests). Storage: localStorage key 'recently-viewed-items' — [handle,...],
-  newest first, max 8 stored, max 4 shown. Once the page has loaded (idle time)
+  newest first, max 8 stored, max 3 shown (one desktop row of three, like
+  the other product rows). Once the page has loaded (idle time)
   each card is fetched from the shop itself through the Section Rendering API
   (/products/<handle>?section_id=recently-viewed-card), so the cards are the
   theme's own product cards. See docs/wishlist-and-recently-viewed.md.
@@ -11,7 +12,7 @@
 
   var STORAGE_KEY = 'recently-viewed-items';
   var MAX_STORED = 8;
-  var MAX_SHOWN = 4;
+  var MAX_SHOWN = 3;
 
   function readHandles() {
     try {

@@ -40,8 +40,10 @@
   --vp-border-strong: 1px solid rgba(var(--color-foreground), 0.35);
   --vp-radius: 2px;
 
-  /* ground behind product photographs (cards and gallery) */
-  --vp-media-ground: #f6f2ec;
+  /* ground behind product photographs (cards, gallery, thumbnails, cart):
+     the warm white of the product photo backgrounds, so a whole photo shown
+     in a square frame reads as one surface (owner decision 2026-10-23) */
+  --vp-media-ground: #fcf9f5;
 
   /* one width for every call-to-action button (owner decision 2026-10-23);
      phones use the full column instead */

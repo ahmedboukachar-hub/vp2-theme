@@ -5,6 +5,7 @@
   @param {string} [variant] - Lead, secondary or grid.
   @param {boolean} [show_excerpt] - Whether to show the standfirst.
   @param {string} [heading_class] - Optional headline class override.
+  @param {string} [heading_tag] - Headline element, 'h3' (default) or 'h2' where the card sits directly under the page H1.
   @param {string} [sizes] - Responsive image sizes value.
   @param {string} [loading] - Image loading mode, 'lazy' (default) or 'eager'.
   @param {string} [fetchpriority] - Image fetch priority, 'auto' (default) or 'high'.
@@ -15,6 +16,10 @@
 
 {%- liquid
   assign variant = variant | default: 'secondary'
+  assign title_tag = 'h3'
+  if heading_tag == 'h2'
+    assign title_tag = 'h2'
+  endif
   assign topic = article.tags | first
   if heading_class == blank
     if variant == 'lead'
@@ -53,7 +58,7 @@
         <span class="vp-eyebrow journal-card__topic">{% render 'journal-topic', topic: topic %}</span>
       {%- endif -%}
 
-      <h3 class="{{ heading_class }}" id="{{ card_title_id }}">{{ article.title | escape }}</h3>
+      <{{ title_tag }} class="{{ heading_class }}" id="{{ card_title_id }}">{{ article.title | escape }}</{{ title_tag }}>
 
       {%- if show_excerpt != false and article.excerpt_or_content != blank -%}
         <p class="journal-card__excerpt">

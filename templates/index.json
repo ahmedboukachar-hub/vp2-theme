@@ -28,11 +28,11 @@
       "type": "featured-collection",
       "settings": {
         "collection": "new-arrivals",
-        "products_to_show": 4,
+        "products_to_show": 6,
         "title": "New arrivals",
         "description": "<p>Recently added vintage and pre-owned designer bags. Each is a one-off.</p>",
         "show_description": false,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,

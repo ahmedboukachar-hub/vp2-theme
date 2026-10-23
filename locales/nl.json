@@ -81,6 +81,8 @@
       "link_label": "Verlanglijst",
       "add": "Bewaar in je verlanglijst",
       "remove": "Verwijder uit je verlanglijst",
+      "save": "Bewaren",
+      "saved": "Bewaard",
       "remove_short": "Verwijderen",
       "intro": "Bewaar de stukken waar je op terug wilt komen op één plek.",
       "empty_heading": "Je verlanglijst is leeg",
@@ -259,7 +261,9 @@
         "inclusions": "Geleverd met",
         "serial_or_date_code": "Serie- / datumcode",
         "provenance": "Herkomst",
-        "authentication_notes": "Authenticatie"
+        "authentication_notes": "Authenticatie",
+        "compatible_models": "Geschikt voor",
+        "compatible_accessories": "Geschikt voor deze tas"
       },
       "inventory_out_of_stock_continue_selling": "Op voorraad",
       "volume_pricing": {
