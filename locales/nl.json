@@ -9,6 +9,9 @@
  */
 {
   "general": {
+    "meta": {
+      "home_description": "Zorgvuldig geselecteerde vintage en pre-owned designertassen van Louis Vuitton, Gucci en Dior. Gecontroleerd op echtheid, gratis verzending en 14 dagen retour."
+    },
     "breadcrumbs": {
       "label": "Kruimelpad",
       "home": "Startpagina"
@@ -356,7 +359,25 @@
       "excellent": "Uitstekend",
       "very_good": "Zeer goed",
       "good": "Goed",
-      "fair": "Redelijk"
+      "fair": "Redelijk",
+      "red": "Rood",
+      "blue": "Blauw",
+      "cream": "Crème",
+      "white": "Wit",
+      "green": "Groen",
+      "pink": "Roze",
+      "grey": "Grijs",
+      "tote_bag": "Shopper",
+      "shoulder_strap": "Schouderriem",
+      "bag_organizer": "Tasorganizer",
+      "gg_shoulder_bag": "GG-schoudertas",
+      "dior_oblique_canvas": "Dior Oblique-canvas",
+      "unbranded": "Zonder merk",
+      "dust_bag": "Stofzak",
+      "padlock_key_not_included": "Hangslot (sleutel niet inbegrepen)",
+      "evening_bag": "Avondtas",
+      "epi_leather": "Epi-leer",
+      "padlock": "Hangslot"
     }
   },
   "templates": {

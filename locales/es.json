@@ -1,5 +1,8 @@
 {
   "general": {
+    "meta": {
+      "home_description": "Bolsos de diseñador vintage y de segunda mano elegidos con cuidado: Louis Vuitton, Gucci, Dior. Autenticidad verificada, envío gratuito y devoluciones en 14 días."
+    },
     "password_page": {
       "login_form_heading": "Entrar a la tienda usando contraseña:",
       "login_password_button": "Entrar usando contraseña",
@@ -351,7 +354,25 @@
       "excellent": "Excelente",
       "very_good": "Muy bueno",
       "good": "Bueno",
-      "fair": "Aceptable"
+      "fair": "Aceptable",
+      "red": "Rojo",
+      "blue": "Azul",
+      "cream": "Crema",
+      "white": "Blanco",
+      "green": "Verde",
+      "pink": "Rosa",
+      "grey": "Gris",
+      "tote_bag": "Bolso tote",
+      "shoulder_strap": "Correa de hombro",
+      "bag_organizer": "Organizador de bolso",
+      "gg_shoulder_bag": "Bolso de hombro GG",
+      "dior_oblique_canvas": "Lona Dior Oblique",
+      "unbranded": "Sin marca",
+      "dust_bag": "Bolsa guardapolvo",
+      "padlock_key_not_included": "Candado (llave no incluida)",
+      "evening_bag": "Bolso de noche",
+      "epi_leather": "Piel Epi",
+      "padlock": "Candado"
     }
   },
   "templates": {

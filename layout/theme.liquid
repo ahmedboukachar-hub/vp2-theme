@@ -38,15 +38,21 @@
       {%- unless document_title contains brand_name %} &ndash; {{ brand_name | escape }}{% endunless -%}
     </title>
 
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+    {%- liquid
+      assign meta_description = page_description
+      if meta_description == blank and request.page_type == 'index'
+        assign meta_description = 'general.meta.home_description' | t
+      endif
+    -%}
+    {% if meta_description != blank %}
+      <meta name="description" content="{{ meta_description | escape }}">
     {% endif %}
 
     {%- if request.page_type == 'cart' or template.suffix == 'wishlist' -%}
       <meta name="robots" content="noindex, follow">
     {%- endif -%}
 
-    {% render 'meta-tags' %}
+    {% render 'meta-tags', description: meta_description %}
 
     <script type="module">
       import * as StandardEvents from 'https://cdn.shopify.com/storefront/standard-events.js';

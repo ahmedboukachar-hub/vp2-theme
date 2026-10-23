@@ -6,7 +6,7 @@
 | Theme Editor labels | `locales/<lang>.schema.json` | same parity rule |
 | Section copy in JSON templates and section groups (hero headings, intros, CTA labels, footer group headings) | Shopify theme-content translations | `translationsRegister` on `ONLINE_STORE_THEME_JSON_TEMPLATE` and `ONLINE_STORE_THEME_SECTION_GROUP` resources; the Theme Editor's "Translate" view edits the same data |
 | Products, collections, pages, articles, menus, policies | Shopify resource translations | `translationsRegister` on the resource; see the migration scripts' `register_translations` helper |
-| Catalogue values (colour, material, type) | `snippets/product-value.liquid` + `products.values.*` locale keys | controlled vocabulary from `docs/taxonomy.md` |
+| Catalogue values (designer, model, type, colour, material, condition, inclusions) | `snippets/product-value.liquid` + `products.values.*` locale keys | controlled vocabulary from `docs/taxonomy.md`. Lists (`Padlock, Dust bag`) and combined colours (`Blue/beige`) are translated per part; an unknown value is shown unchanged. A new value needs its handle (`Dust bag` → `dust_bag`) in `known_values` and a key in all six locale files. Model names (Speedy 30, Jackie) stay as they are |
 
 ## Rules
 
