@@ -180,9 +180,16 @@ class PredictiveSearch extends SearchForm {
 
     const searchDeferred = this.dispatchSearchUpdateEvent(searchTerm);
 
-    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=predictive-search`, {
-      signal: this.abortController.signal,
-    })
+    // The type list replaces Shopify's default (which leaves out articles), so
+    // Journal guides appear next to pages in the first column.
+    fetch(
+      `${routes.predictive_search_url}?q=${encodeURIComponent(
+        searchTerm
+      )}&resources[type]=query,product,collection,page,article&section_id=predictive-search`,
+      {
+        signal: this.abortController.signal,
+      }
+    )
       .then((response) => {
         if (!response.ok) {
           var error = new Error(response.status);

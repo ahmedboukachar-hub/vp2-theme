@@ -21,6 +21,14 @@
     }
   }
 
+  // routes.root_url is '/' for the default language but '/nl' (no trailing
+  // slash) for the others.
+  function productUrl(rootUrl, handle) {
+    var root = rootUrl || '/';
+    if (root.charAt(root.length - 1) !== '/') root += '/';
+    return root + 'products/' + encodeURIComponent(handle) + '.js';
+  }
+
   function recordVisit(handle) {
     try {
       var handles = readHandles().filter(function (item) {
@@ -86,7 +94,7 @@
           Promise.all(
             this.handles.map(function (handle) {
               return window
-                .fetch(element.dataset.rootUrl + 'products/' + handle + '.js', {
+                .fetch(productUrl(element.dataset.rootUrl, handle), {
                   headers: { Accept: 'application/json' },
                 })
                 .then(function (response) {

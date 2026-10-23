@@ -207,13 +207,7 @@
               {%- liquid
                 # verified differentiators only: material · condition, else year or era, else colour (hidden when empty)
                 assign card_material = card_product.metafields.custom.material.value
-                assign card_detail = card_product.metafields.custom.condition.value
-                if card_detail == blank
-                  assign card_detail = card_product.metafields.custom.year_or_era.value
-                endif
-                if card_detail == blank
-                  assign card_detail = card_product.metafields.custom.color.value
-                endif
+                assign card_detail = card_product.metafields.custom.condition.value | default: card_product.metafields.custom.year_or_era.value | default: card_product.metafields.custom.color.value
               -%}
               {%- if card_material != blank or card_detail != blank -%}
                 <div class="card__meta-line">

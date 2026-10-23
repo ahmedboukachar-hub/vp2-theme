@@ -57,7 +57,12 @@
 
       {%- if show_excerpt != false and article.excerpt_or_content != blank -%}
         <p class="journal-card__excerpt">
-          {{- article.excerpt_or_content | strip_html | truncatewords: 26 -}}
+          {%- comment -%} A written summary is shown whole; only the article-body fallback is cut short. {%- endcomment -%}
+          {%- if article.excerpt != blank -%}
+            {{- article.excerpt | strip_html -}}
+          {%- else -%}
+            {{- article.content | strip_html | truncatewords: 26 -}}
+          {%- endif -%}
         </p>
       {%- endif -%}
 

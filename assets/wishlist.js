@@ -81,6 +81,14 @@
     );
   }
 
+  // routes.root_url is '/' for the default language but '/nl' (no trailing
+  // slash) for the others.
+  function productUrl(rootUrl, handle) {
+    var root = rootUrl || '/';
+    if (root.charAt(root.length - 1) !== '/') root += '/';
+    return root + 'products/' + encodeURIComponent(handle) + '.js';
+  }
+
   function formatMoney(cents, format) {
     var amount = (cents / 100).toFixed(2);
     var parts = amount.split('.');
@@ -168,7 +176,7 @@
           });
 
           window
-            .fetch(this.dataset.rootUrl + 'products/' + handle + '.js', {
+            .fetch(productUrl(this.dataset.rootUrl, handle), {
               headers: { Accept: 'application/json' },
             })
             .then(function (response) {

@@ -49,6 +49,26 @@
 .featured-designers__item--small .featured-designers__cta { font-size: 1.3rem; }
 .featured-designers__item--small .featured-designers__info { gap: 0.4rem 1.2rem; padding-top: 1.2rem; }
 
+/* Below desktop, card footers stack the name and its link instead of
+   wrapping differently per house (small cards on phones and tablets, large
+   cards on tablets), and a link label that wraps keeps its arrow on the last
+   word (text and arrow in one box, not two flex items). */
+@media screen and (max-width: 989px) {
+  .featured-designers__item--small .featured-designers__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .featured-designers__cta { display: inline; }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .featured-designers__item--large .featured-designers__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .featured-designers__list { gap: var(--vp-space-l); }
   .featured-designers__list--2 { grid-template-columns: repeat(4, minmax(0, 1fr)); }

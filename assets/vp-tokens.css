@@ -39,6 +39,9 @@
   --vp-border-strong: 1px solid rgba(var(--color-foreground), 0.35);
   --vp-radius: 2px;
 
+  /* ground behind product photographs (cards and gallery) */
+  --vp-media-ground: #f6f2ec;
+
   /* motion */
   --vp-duration: 200ms;
   --vp-ease: cubic-bezier(0.33, 1, 0.68, 1);
@@ -519,11 +522,13 @@ a:hover .vp-media--zoom > img { transform: scale(1.02); }
   .header__heading-link .brand-wordmark { font-size: clamp(2rem, 2.4vw, 2.8rem); }
 }
 
-/* Mobile and tablet: centre the logo on the page, not between the two left
-   icons (menu, search) and the three right ones. Dawn's four-column grid for
-   this case gives the logo whatever is left, which put it about 25px left of
-   centre. The search shares the menu's cell instead, offset past the menu as
-   Dawn does for its top-center drawer layout. */
+/* Mobile and tablet: centre the logo on the page as far as the icons allow,
+   not between the two left icons (menu, search) and the three right ones.
+   Dawn's four-column grid for this case gives the logo whatever is left,
+   which put it about 25px left of centre on tablets. The search shares the
+   menu's cell instead, offset past the menu as Dawn does for its top-center
+   drawer layout. On a 390px phone the bar is full, so the logo stays where
+   it was. */
 @media screen and (max-width: 989px) {
   .header--has-account.header--has-menu:not(.header--mobile-left):not(.header--has-app) {
     grid-template-areas: 'left-icons heading icons';

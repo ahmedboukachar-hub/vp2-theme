@@ -127,7 +127,7 @@
                       {%- if product.tags contains 'accessory' and block.settings.accessories_collection != blank -%}{%- assign designer_collection = block.settings.accessories_collection -%}{%- endif -%}
                       {%- if product.tags contains designer_tag and designer_collection != blank -%}
                         <a class="product__designer-link" href="{{ designer_collection.url }}/{{ designer_tag }}">{{ product.vendor | escape }}</a>
-                      {%- else -%}{{ product.vendor | link_to_vendor }}{%- endif -%}
+                      {%- else -%}{{ product.vendor | escape }}{%- endif -%}
                     {%- else -%}{{- block.settings.text -}}{%- endif -%}
                   </p>
                 {%- when 'title' -%}

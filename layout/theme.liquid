@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="">
+    {%- comment -%} Browser UI colour: the canvas background of the first colour scheme (the :root scheme). {%- endcomment -%}
+    {%- for scheme in settings.color_schemes limit: 1 -%}
+      <meta name="theme-color" content="{{ scheme.settings.background }}">
+    {%- endfor %}
     {%- assign designer_selection = '' -%}
     {%- if collection != blank -%}
       {%- for vendor in collection.all_vendors -%}

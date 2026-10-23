@@ -85,23 +85,31 @@
       "label": "Image",
       "info": "One strong editorial image of a real piece, cropped edge to edge. Leave empty for a deliberate typographic hero on a neutral field."
     },
-    { "type": "checkbox", "id": "use_brand_copy", "label": "Use translated brand copy for this hero", "default": false },
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Curated vintage & pre-owned" },
+    {
+      "type": "checkbox",
+      "id": "use_brand_copy",
+      "label": "Use translated brand copy for this hero",
+      "info": "The texts then come from the translated brand copy and the text fields are hidden; the links below stay editable.",
+      "default": false
+    },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Curated vintage & pre-owned", "visible_if": "{{ section.settings.use_brand_copy == false }}" },
     {
       "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "Iconic bags, chosen one by one."
+      "default": "Iconic bags, chosen one by one.",
+      "visible_if": "{{ section.settings.use_brand_copy == false }}"
     },
     {
       "type": "richtext",
       "id": "text",
       "label": "Text",
-      "default": "<p>A considered collection of vintage and pre-owned designer bags, selected for their character, condition and enduring appeal.</p>"
+      "default": "<p>A considered collection of vintage and pre-owned designer bags, selected for their character, condition and enduring appeal.</p>",
+      "visible_if": "{{ section.settings.use_brand_copy == false }}"
     },
-    { "type": "text", "id": "button_label", "label": "Primary button label", "default": "Shop new arrivals" },
+    { "type": "text", "id": "button_label", "label": "Primary button label", "default": "Shop new arrivals", "visible_if": "{{ section.settings.use_brand_copy == false }}" },
     { "type": "url", "id": "button_link", "label": "Primary button link" },
-    { "type": "text", "id": "link_label", "label": "Secondary link label", "default": "Explore designers" },
+    { "type": "text", "id": "link_label", "label": "Secondary link label", "default": "Explore designers", "visible_if": "{{ section.settings.use_brand_copy == false }}" },
     { "type": "url", "id": "link_url", "label": "Secondary link" },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
   ],
