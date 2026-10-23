@@ -26,6 +26,8 @@ Shopify theme for **La Retrouvée** (laretrouvee.com), an international shop for
 - No VAT or margin wording on the storefront, only the total price.
 - La Retrouvée is part of Vintage Pareltje. Say so only in the legal notice and terms, never on storefront pages.
 - English is the source language and Dutch is fully maintained. DE, FR, IT and ES are published.
+- Service promises the owner has made (2026-10-23): a personal reply within one working day, and a full refund of the purchase price if a piece we sold turns out not to be authentic (Authenticity page, on top of statutory rights). Do not add other promises without the owner.
+- Only carry out the owner's decisions they named by number or in words; never read a short "yes" as approval of a whole list.
 
 ---
 

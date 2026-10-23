@@ -430,7 +430,7 @@
         "phone": "Phone number",
         "comment": "Message",
         "send": "Send message",
-        "post_success": "Thank you. We have received your message and will reply personally.",
+        "post_success": "Thank you. We have received your message and will reply personally within one working day.",
         "error_heading": "Please adjust the following:"
       }
     },

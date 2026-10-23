@@ -429,7 +429,7 @@
         "phone": "Numero di telefono",
         "comment": "Messaggio",
         "send": "Invia messaggio",
-        "post_success": "Grazie. Abbiamo ricevuto il tuo messaggio e ti risponderemo personalmente.",
+        "post_success": "Grazie. Abbiamo ricevuto il tuo messaggio e ti risponderemo personalmente entro un giorno lavorativo.",
         "error_heading": "Correggi gli errori seguenti:",
         "title": "Modulo di contatto"
       }
