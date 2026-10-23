@@ -429,7 +429,7 @@
         "phone": "Telefonnummer",
         "comment": "Nachricht",
         "send": "Nachricht senden",
-        "post_success": "Vielen Dank. Wir haben Ihre Nachricht erhalten und antworten Ihnen persönlich.",
+        "post_success": "Vielen Dank. Wir haben Ihre Nachricht erhalten und antworten Ihnen innerhalb eines Werktags persönlich.",
         "error_heading": "Bitte passen Sie Folgendes an:",
         "title": "Kontaktformular"
       }

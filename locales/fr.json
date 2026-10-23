@@ -438,7 +438,7 @@
         "phone": "Numéro de téléphone",
         "comment": "Message",
         "send": "Envoyer le message",
-        "post_success": "Merci. Nous avons bien reçu votre message et vous répondrons personnellement.",
+        "post_success": "Merci. Nous avons bien reçu votre message et vous répondrons personnellement sous un jour ouvré.",
         "error_heading": "Veuillez ajuster les éléments suivants :",
         "title": "Formulaire de contact"
       }
