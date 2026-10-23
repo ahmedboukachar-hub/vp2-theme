@@ -285,7 +285,6 @@
       {%- endfor -%}
 
       {%- if section.settings.show_wishlist_link -%}
-        {{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
         <a href="{{ pages['wishlist'].url | default: '/pages/wishlist' }}" class="header__icon header__icon--wishlist link focus-inset">
           <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
           <span class="visually-hidden">{{ 'general.wishlist.link_label' | t }}</span>
@@ -453,24 +452,29 @@
 
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Organization",
     "name": {{ brand_name | json }},
     {% if settings.logo %}
       "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif %}
-    "sameAs": [
-      {{ settings.social_twitter_link | json }},
-      {{ settings.social_facebook_link | json }},
-      {{ settings.social_pinterest_link | json }},
-      {{ settings.social_instagram_link | json }},
-      {{ settings.social_tiktok_link | json }},
-      {{ settings.social_tumblr_link | json }},
-      {{ settings.social_snapchat_link | json }},
-      {{ settings.social_youtube_link | json }},
-      {{ settings.social_vimeo_link | json }}
-    ],
-    "url": {{ request.origin | append: page.url | json }}
+    {%- liquid
+      assign same_as = ''
+      assign social_links = settings.social_twitter_link | append: '|' | append: settings.social_facebook_link | append: '|' | append: settings.social_pinterest_link | append: '|' | append: settings.social_instagram_link | append: '|' | append: settings.social_tiktok_link | append: '|' | append: settings.social_tumblr_link | append: '|' | append: settings.social_snapchat_link | append: '|' | append: settings.social_youtube_link | append: '|' | append: settings.social_vimeo_link | split: '|'
+      for social_link in social_links
+        if social_link != blank
+          if same_as != blank
+            assign same_as = same_as | append: ','
+          endif
+          assign same_as = same_as | append: social_link
+        endif
+      endfor
+      assign same_as_list = same_as | split: ','
+    -%}
+    {%- if same_as_list.size > 0 -%}
+      "sameAs": {{ same_as_list | json }},
+    {%- endif -%}
+    "url": {{ shop.url | json }}
   }
 </script>
 

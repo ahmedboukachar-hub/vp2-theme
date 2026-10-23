@@ -23,10 +23,6 @@
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
-    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-    {%- endunless -%}
-
     {%- liquid
       assign brand_name = settings.brand_display_name | default: 'La Retrouvée'
       assign document_title = page_title
@@ -37,8 +33,8 @@
     -%}
     <title>
       {{ document_title }}
-      {%- if designer_selection != blank %} &ndash; {{ designer_selection | escape }}{% elsif current_tags %} &ndash; {{ current_tags | join: ', ' | escape }}{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- if designer_selection != blank %} &ndash; {{ designer_selection | escape }}{% elsif current_tags and request.page_type == 'blog' %} &ndash; {% render 'journal-topic', topic: current_tags.first %}{% elsif current_tags %} &ndash; {{ current_tags | join: ', ' | escape }}{% endif -%}
+      {%- if current_page != 1 %} &ndash; {{ 'general.pagination.page' | t: number: current_page }}{% endif -%}
       {%- unless document_title contains brand_name %} &ndash; {{ brand_name | escape }}{% endunless -%}
     </title>
 
@@ -78,6 +74,7 @@
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'standard-actions-override.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'wishlist.js' | asset_url }}" defer="defer"></script>
 
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
@@ -313,6 +310,7 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'vp-tokens.css' | asset_url | stylesheet_tag }}
+    {{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}

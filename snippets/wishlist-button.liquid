@@ -2,12 +2,11 @@
   Wishlist heart button (browser-local wishlist, no account, no tracking —
   see docs/wishlist-and-recently-viewed.md).
 
+  Its stylesheet and script are loaded once in layout/theme.liquid.
+
   Accepts:
   - wishlist_product: {Object} Product or card product Liquid object
 {% endcomment %}
-
-{{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'wishlist.js' | asset_url }}" defer="defer"></script>
 
 <wishlist-button
   class="wishlist-button no-js-hidden"
@@ -20,9 +19,9 @@
     type="button"
     class="wishlist-button__toggle"
     aria-pressed="false"
-    data-label-add="{{ 'general.wishlist.add' | t | escape }}"
-    data-label-remove="{{ 'general.wishlist.remove' | t | escape }}"
-    aria-label="{{ 'general.wishlist.add' | t | escape }}"
+    data-label-add="{{ 'general.wishlist.add' | t | escape }}: {{ wishlist_product.title | escape }}"
+    data-label-remove="{{ 'general.wishlist.remove' | t | escape }}: {{ wishlist_product.title | escape }}"
+    aria-label="{{ 'general.wishlist.add' | t | escape }}: {{ wishlist_product.title | escape }}"
   >
     <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
   </button>

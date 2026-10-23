@@ -1,0 +1,68 @@
+{% doc %}
+  Product structured data (schema.org/Product) for pre-owned pieces.
+  Replaces Dawn's generic `structured_data` output so search engines get the
+  item condition (used, for pieces tagged `bag`), every product photo, the
+  brand and one offer per variant.
+
+  @param {object} product - The product to describe.
+{% enddoc %}
+{%- liquid
+  assign product_url = request.origin | append: product.url
+  assign image_count = 0
+  assign is_used = false
+  if product.tags contains 'bag'
+    assign is_used = true
+  endif
+-%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": {{ product_url | append: '#product' | json }},
+    "name": {{ product.title | json }},
+    "url": {{ product_url | json }},
+    {%- if product.description != blank %}
+    "description": {{ product.description | strip_html | strip_newlines | truncate: 5000 | json }},
+    {%- endif %}
+    "image": [
+      {%- for media in product.media -%}
+        {%- if media.media_type == 'image' and image_count < 10 -%}
+          {%- if image_count > 0 -%},{%- endif -%}
+          {{ media | image_url: width: 1600 | prepend: 'https:' | json }}
+          {%- assign image_count = image_count | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    ],
+    {%- if product.vendor != blank %}
+    "brand": { "@type": "Brand", "name": {{ product.vendor | json }} },
+    {%- endif %}
+    {%- if is_used %}
+    "itemCondition": "https://schema.org/UsedCondition",
+    {%- endif %}
+    "offers": [
+      {%- for variant in product.variants -%}
+        {%- liquid
+          assign variant_url = product_url | append: '?variant=' | append: variant.id
+          if variant.available
+            assign availability = 'https://schema.org/InStock'
+          else
+            assign availability = 'https://schema.org/SoldOut'
+          endif
+        -%}
+        {
+          "@type": "Offer",
+          "url": {{ variant_url | json }},
+          {%- if variant.sku != blank %}
+          "sku": {{ variant.sku | json }},
+          {%- endif %}
+          "price": {{ variant.price | divided_by: 100.0 | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          {%- if is_used %}
+          "itemCondition": "https://schema.org/UsedCondition",
+          {%- endif %}
+          "availability": {{ availability | json }}
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  }
+</script>

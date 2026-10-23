@@ -61,3 +61,14 @@
     display: none;
   }
 }
+
+/* Keep focused fields and the end of the footer clear of the fixed bar. */
+@media screen and (max-width: 749px) {
+  html:has(.sticky-buy--visible) {
+    scroll-padding-bottom: calc(6.4rem + env(safe-area-inset-bottom));
+  }
+
+  body:has(.sticky-buy) footer.footer {
+    padding-bottom: calc(6.4rem + env(safe-area-inset-bottom));
+  }
+}
