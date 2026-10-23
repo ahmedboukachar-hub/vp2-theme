@@ -1,4 +1,5 @@
 {{ 'component-recently-viewed.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'recently-viewed.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
@@ -16,14 +17,30 @@
 {%- endstyle -%}
 
 <recently-viewed
-  class="recently-viewed page-width section-{{ section.id }}-padding no-js-hidden"
+  class="recently-viewed section-{{ section.id }}-padding no-js-hidden"
   data-current-handle="{{ product.handle }}"
   data-root-url="{{ routes.root_url }}"
+  data-section-id="{{ section.id }}"
   hidden
 >
-  <h2 class="recently-viewed__heading h2">{{ 'products.product.recently_viewed' | t }}</h2>
-  {%- comment -%} Same grid and cards as "You may also like"; recently-viewed.js fills it. {%- endcomment -%}
-  <ul class="grid product-grid grid--4-col-desktop grid--2-col-tablet-down" role="list" data-recently-viewed-grid></ul>
+  <div class="page-width">
+    <h2 class="recently-viewed__heading h2">{{ 'products.product.recently_viewed' | t }}</h2>
+  </div>
+  {%- comment -%}
+    Same grid, cards and slider as "You may also like". recently-viewed.js fills the
+    list and turns it into a swipeable row below 990px when there are more cards
+    than fit next to each other; otherwise it drops the slider buttons.
+  {%- endcomment -%}
+  <slider-component class="slider-mobile-gutter page-width-desktop page-width">
+    <ul
+      id="Slider-{{ section.id }}"
+      class="grid product-grid grid--4-col-desktop grid--2-col-tablet-down"
+      role="list"
+      aria-label="{{ 'general.slider.name' | t }}"
+      data-recently-viewed-grid
+    ></ul>
+    {% render 'slider-buttons', slider_id: section.id %}
+  </slider-component>
 </recently-viewed>
 
 {% schema %}
