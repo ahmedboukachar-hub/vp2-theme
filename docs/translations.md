@@ -13,7 +13,7 @@
 1. Liquid outputs the setting; it never guesses the language. No `request.locale` branches, no comparisons with English defaults.
 2. A changed English setting value invalidates its translations (digest mismatch). Re-register after copy edits and check the NL page.
 3. Section settings that drive translation-dependent copy should have no `default` equal to the live value, or the GitHub sync drops them (see the sync pitfalls in `CLAUDE.md`).
-4. Coverage check (read-only): list `translatableResources` for both theme resource types and flag text keys without a translation in any of the five secondary locales. As of 2026-10-21 every text key is covered.
+4. Coverage check (read-only): list `translatableResources` for both theme resource types and flag text keys without a translation in any of the five secondary locales. Also list ARTICLE, PAGE and PRODUCT translations with `outdated: true` (the English source changed after translating); before a content release there should be none. As of 2026-10-21 every text key is covered.
 
 ## Register, terminology and typography
 
