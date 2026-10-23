@@ -26,8 +26,9 @@
     {%- comment -%}
       Shopify returns no recommendations for sold pieces, so a sold page would
       end without anything buyable. Show up to three available pieces from the
-      collections this piece belongs to: the same designer first, then the
-      rest. Server-rendered; no collection handles involved.
+      whole catalogue (Shopify's built-in all-products collection; sold pieces
+      often sit only in the archive): the same designer first, then the rest.
+      Server-rendered; no merchant collection handles involved.
     {%- endcomment -%}
     {%- liquid
       assign alternatives_limit = 3
@@ -37,38 +38,36 @@
     -%}
     {%- capture alternative_cards -%}
       {%- for pass in (1..2) -%}
-        {%- for source_collection in product.collections -%}
-          {%- for candidate in source_collection.products -%}
-            {%- if alternatives_count >= alternatives_limit -%}
-              {%- break -%}
-            {%- endif -%}
-            {%- if candidate.available == false or candidate.id == product.id -%}
-              {%- continue -%}
-            {%- endif -%}
-            {%- if pass == 1 and candidate.vendor != product.vendor -%}
-              {%- continue -%}
-            {%- endif -%}
-            {%- assign candidate_key = ',' | append: candidate.id | append: ',' -%}
-            {%- if picked_ids contains candidate_key -%}
-              {%- continue -%}
-            {%- endif -%}
-            {%- assign picked_ids = picked_ids | append: candidate.id | append: ',' -%}
-            {%- assign alternatives_count = alternatives_count | plus: 1 -%}
-            <li id="Slide-{{ section.id }}-{{ alternatives_count }}" class="grid__item__ALT_SLIDE__">
-              {% render 'card-product',
-                columns: 3,
-                card_product: candidate,
-                media_aspect_ratio: section.settings.image_ratio,
-                image_shape: section.settings.image_shape,
-                show_secondary_image: section.settings.show_secondary_image,
-                show_vendor: section.settings.show_vendor,
-                show_rating: section.settings.show_rating,
-                skip_styles: skip_card_product_styles,
-                product_view_context: 'recommendation'
-              %}
-            </li>
-            {%- assign skip_card_product_styles = true -%}
-          {%- endfor -%}
+        {%- for candidate in collections.all.products -%}
+          {%- if alternatives_count >= alternatives_limit -%}
+            {%- break -%}
+          {%- endif -%}
+          {%- if candidate.available == false or candidate.id == product.id -%}
+            {%- continue -%}
+          {%- endif -%}
+          {%- if pass == 1 and candidate.vendor != product.vendor -%}
+            {%- continue -%}
+          {%- endif -%}
+          {%- assign candidate_key = ',' | append: candidate.id | append: ',' -%}
+          {%- if picked_ids contains candidate_key -%}
+            {%- continue -%}
+          {%- endif -%}
+          {%- assign picked_ids = picked_ids | append: candidate.id | append: ',' -%}
+          {%- assign alternatives_count = alternatives_count | plus: 1 -%}
+          <li id="Slide-{{ section.id }}-{{ alternatives_count }}" class="grid__item__ALT_SLIDE__">
+            {% render 'card-product',
+              columns: 3,
+              card_product: candidate,
+              media_aspect_ratio: section.settings.image_ratio,
+              image_shape: section.settings.image_shape,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              skip_styles: skip_card_product_styles,
+              product_view_context: 'recommendation'
+            %}
+          </li>
+          {%- assign skip_card_product_styles = true -%}
         {%- endfor -%}
       {%- endfor -%}
     {%- endcapture -%}
