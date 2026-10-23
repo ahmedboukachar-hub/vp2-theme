@@ -1,9 +1,10 @@
 /*
   Privacy-friendly "Recently viewed" (browser-local, no tracking, no external
   requests). Storage: localStorage key 'recently-viewed-items' — [handle,...],
-  newest first, max 8 stored, max 4 shown. Product data is fetched lazily via
-  the shop's own /products/<handle>.js endpoints once the page has loaded
-  (idle time). See docs/wishlist-and-recently-viewed.md.
+  newest first, max 8 stored, max 4 shown. Once the page has loaded (idle time)
+  each card is fetched from the shop itself through the Section Rendering API
+  (/products/<handle>?section_id=recently-viewed-card), so the cards are the
+  theme's own product cards. See docs/wishlist-and-recently-viewed.md.
 */
 (function () {
   'use strict';
@@ -23,10 +24,18 @@
 
   // routes.root_url is '/' for the default language but '/nl' (no trailing
   // slash) for the others.
-  function productUrl(rootUrl, handle) {
+  function cardUrl(rootUrl, handle) {
     var root = rootUrl || '/';
     if (root.charAt(root.length - 1) !== '/') root += '/';
-    return root + 'products/' + encodeURIComponent(handle) + '.js';
+    return root + 'products/' + encodeURIComponent(handle) + '?section_id=recently-viewed-card';
+  }
+
+  // The response is the section wrapper with one rendered product card inside.
+  function cardHtml(text) {
+    var doc = new DOMParser().parseFromString(text, 'text/html');
+    var section = doc.querySelector('.shopify-section');
+    var html = section ? section.innerHTML.trim() : '';
+    return html.indexOf('card') === -1 ? null : html;
   }
 
   function recordVisit(handle) {
@@ -94,50 +103,37 @@
           Promise.all(
             this.handles.map(function (handle) {
               return window
-                .fetch(productUrl(element.dataset.rootUrl, handle), {
-                  headers: { Accept: 'application/json' },
-                })
+                .fetch(cardUrl(element.dataset.rootUrl, handle))
                 .then(function (response) {
-                  return response.ok ? response.json() : null;
+                  return response.ok ? response.text() : null;
+                })
+                .then(function (text) {
+                  return text ? cardHtml(text) : null;
                 })
                 .catch(function () {
                   return null;
                 });
             })
-          ).then(function (products) {
-            var available = products.filter(function (product) {
-              return product && product.url;
-            });
+          ).then(function (cards) {
+            var available = cards.filter(Boolean);
             if (available.length === 0) {
               element.remove();
               return;
             }
-            element.renderProducts(available);
+            element.renderCards(available);
           });
         }
 
-        renderProducts(products) {
+        renderCards(cards) {
           var grid = this.querySelector('[data-recently-viewed-grid]');
-          var template = this.querySelector('template');
-          if (!grid || !template) return;
-          var element = this;
-          products.forEach(function (product) {
-            var fragment = template.content.cloneNode(true);
-            var link = fragment.querySelector('[data-rv-link]');
-            var title = fragment.querySelector('[data-rv-title]');
-            var image = fragment.querySelector('[data-rv-image]');
-            link.href = product.url;
-            title.textContent = product.title;
-            if (product.featured_image) {
-              var src = product.featured_image;
-              image.src = src + (src.indexOf('?') === -1 ? '?width=600' : '&width=600');
-              image.alt = product.title;
-            } else {
-              image.remove();
-            }
-            grid.appendChild(fragment);
+          if (!grid) return;
+          cards.forEach(function (html) {
+            var item = document.createElement('li');
+            item.className = 'grid__item';
+            item.innerHTML = html;
+            grid.appendChild(item);
           });
-          element.hidden = false;
+          this.hidden = false;
         }
       }
     );

@@ -61,6 +61,7 @@ Shopify GitHub-sync pitfalls (verified on this store):
 - Sync silently skips a JSON template or section group that fails validation: a `richtext` value without an HTML tag, a setting id or block type missing from the section schema, or an invalid `select` value. No error surfaces anywhere. After every merge, verify the live file through the Admin REST `assets.json` endpoint.
 - Sync drops settings whose value equals the schema default, so the sync-back commit shows a permanent repo↔live diff. Do not write default-valued settings into templates or section groups when it can be avoided.
 - The sync-back commit prefixes JSON files with a `/* … */` comment header. Strip it before parsing; do not remove it by hand.
+- When one PR adds a setting to a section schema and also writes its value into a template or section group, the sync can validate the JSON against the old schema and skip it silently (seen with `header-group.json` in #86: the wishlist icon disappeared). After merging, read the JSON back through `assets.json`; if the value is missing, touch the JSON file in a follow-up PR so it syncs against the new schema.
 - `themeCreate`, `themeFilesUpsert` and `themePublish` return ACCESS_DENIED for the connected app, and REST asset writes to a git-connected theme return 404. Theme code reaches the store only through a merge to `main`.
 
 Translating section copy (headings, eyebrows, intros, button labels in JSON templates and section groups):
