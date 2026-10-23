@@ -31,6 +31,10 @@
     when 'page'
       assign current_title = page.title
   endcase
+  # Policy pages have no page object; Shopify's page_title is the policy title.
+  if request.page_type == 'policy'
+    assign current_title = page_title
+  endif
 -%}
 
 {%- if current_title != blank -%}

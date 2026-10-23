@@ -54,7 +54,7 @@ analytics or marketing. Clearing site data resets the behaviour.
 
 Automatic detection is intentionally silent: there is no location suggestion
 and no confirmation popup. The visible language selector remains available in
-the header, mobile menu and footer, with flags and native language names.
+the header, mobile menu and footer, with inline SVG flags and native language names.
 
 Defaults apply to the existing theme through `settings_schema.json` defaults;
 `config/settings_data.json` is untouched.

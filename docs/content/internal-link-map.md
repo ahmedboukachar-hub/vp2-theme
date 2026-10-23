@@ -10,11 +10,11 @@ same commercial link into every paragraph.
 | --- | --- |
 | Homepage hero | New Arrivals (primary CTA), All Bags (secondary link) |
 | Homepage curation statement | Our Curation |
-| Homepage designers module | LV / Gucci collections (Designers page: LV / Gucci / Jacquemus / Dior) |
+| Homepage designers module | LV / Gucci collections (Designers page: LV / Gucci / Dior / Jacquemus) |
 | Homepage Find a Bag panel | Find a Bag |
 | Homepage archive module | The Archive |
 | Homepage journal module | Journal + 3 latest articles |
-| Header | New Arrivals, Bags (All Bags, Accessories), Designers (LV/Gucci/Jacquemus/Dior), The Archive, Journal (+3 guides), Services (Find a Bag, Sell to Us, Contact) |
+| Header | New Arrivals, Bags (All Bags, Accessories), Designers (LV/Gucci/Dior/Jacquemus), The Archive, Journal (+3 guides), Services (Find a Bag, Sell to Us, Contact) |
 | Footer Shop | New Arrivals, All Bags, Designers, Accessories, The Archive |
 | Footer Discover | About, Our Curation, Condition Guide, Bag Size Guide, Care Guide, Journal |
 | Footer Services | Find a Bag, Sell to Us, Contact, FAQ |

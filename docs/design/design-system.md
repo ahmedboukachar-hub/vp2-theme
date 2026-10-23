@@ -207,7 +207,7 @@ surface distribution described above. This section records what is live.
 - Brand name: `settings.brand_display_name` (Theme settings → Brand), fallback
   "La Retrouvée". The document title, Open Graph and Twitter titles use it on
   the homepage instead of the technical store name.
-- The language selector shows flag emoji with native language names; the
+- The language selector shows small inline SVG flags (snippets/language-flag.liquid; emoji showed as letter pairs on Windows) with native language names; the
   country selector was removed.
 - The dark editorial interruption and the archive teaser described above are
   no longer on the homepage. Restoring them is a merchant decision.
@@ -277,7 +277,9 @@ that scheme-4 was unused. This section is authoritative.
 Owner decision: Louis Vuitton and Gucci are the core of the catalogue, so the
 homepage houses section shows them as two large cards and Dior and Jacquemus
 as two small cards side by side beneath them. Implemented as a block setting
-`size` (large = two grid tracks, small = one) on `featured-designers`; the
+`size` (large = two grid tracks, small = one; since 2026-10-23 the two small
+cards each span two of the four tracks so the row is always full, with a
+square photo on tablets and a horizontal card from 990px) on `featured-designers`; the
 Designers page keeps four large cards. An `image_position` block setting
 chooses which part of a portrait-cropped image to keep.
 

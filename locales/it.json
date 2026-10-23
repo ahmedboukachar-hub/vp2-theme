@@ -89,6 +89,9 @@
     "forms": {
       "privacy_note": "Usiamo questi dati per risponderti.",
       "privacy_link": "Informativa sulla privacy"
+    },
+    "navigation": {
+      "view_all": "Vedi tutto"
     }
   },
   "newsletter": {
@@ -159,7 +162,10 @@
       "topic_buying_guides": "Guide all’acquisto",
       "topic_bag_care": "Cura e condizioni",
       "topic_designer_stories": "Storie delle maison",
-      "topic_collecting_vintage": "Collezionare vintage"
+      "topic_collecting_vintage": "Collezionare vintage",
+      "topic_model_guides": "Guide ai modelli",
+      "topic_buying_advice": "Consigli per l’acquisto",
+      "topic_classics_by_house": "I classici per maison"
     }
   },
   "onboarding": {
@@ -476,10 +482,11 @@
       "consent": "Useremo questi dati per rispondere alla tua richiesta. Non costituisce una prenotazione né un accordo di acquisto.",
       "submit": "Invia la mia richiesta",
       "success_heading": "Abbiamo ricevuto la tua richiesta",
-      "success_body": "Grazie. Ti contatteremo se potremo aiutarti concretamente nella ricerca.",
+      "success_body": "Grazie. Ti confermeremo la richiesta via email e la terremo presente mentre cerchiamo nuovi pezzi. Quando troveremo una borsa adatta, ti avviseremo.",
       "closing": "Ogni pezzo di seconda mano è unico. Condizioni, età, dettagli e accessori inclusi possono variare anche all’interno dello stesso modello. Descriveremo sempre il pezzo specifico proposto.",
       "hidden_source": "Tipo di richiesta",
-      "optional_details": "Altre preferenze (facoltativo)"
+      "optional_details": "Altre preferenze (facoltativo)",
+      "no_preference": "Nessuna preferenza"
     },
     "sell_to_us": {
       "fields": {
@@ -500,13 +507,22 @@
       "serial_hint": "Non condividere qui il numero di serie o il codice data completo. Indica soltanto se è presente; se necessario, ti chiederemo i dettagli tramite un canale sicuro.",
       "disclaimer": "Non inviare un articolo finché non avremo concordato per iscritto le istruzioni di spedizione.",
       "submit": "Invia i dettagli dell’articolo",
-      "success": "Grazie. Abbiamo ricevuto la tua proposta e ti contatteremo se desideriamo approfondire i dettagli del pezzo.",
-      "hidden_source": "Tipo di richiesta"
+      "success": "Grazie. Abbiamo ricevuto i dettagli del tuo pezzo e ti risponderemo via email con le istruzioni per condividere le fotografie.",
+      "hidden_source": "Tipo di richiesta",
+      "about_you": "I tuoi dati",
+      "about_piece": "Informazioni sul pezzo",
+      "contact_phone": "Telefono",
+      "item_types": {
+        "bag": "Borsa",
+        "small_leather_good": "Piccola pelletteria",
+        "accessory": "Accessorio",
+        "other": "Altro"
+      }
     },
     "about_story": {
       "eyebrow": "Il nostro punto di vista",
       "heading": "Ritrovate per essere indossate ancora.",
-      "intro": "La Retrouvée riunisce borse firmate vintage e di seconda mano, scelte per il design, le condizioni e il carattere unico. Un pezzo può avere una storia e trovare il suo posto nel presente.",
+      "intro": "La Retrouvée riunisce borse firmate vintage e di seconda mano, scelte per il design, le condizioni e il carattere unico. Un pezzo può avere una storia e trovare il suo posto nel presente. Ogni pezzo viene spedito dall’Europa, senza costi doganali all’interno dell’UE.",
       "selection_heading": "Scelte una per una",
       "selection_text": "Un nome celebre non racconta tutta la storia. Osserviamo forma, materiali e dettagli di ogni pezzo prima di inserirlo nella selezione. Ogni borsa è proposta come esemplare unico.",
       "detail_heading": "Mostrate con chiarezza",
@@ -648,6 +664,10 @@
     },
     "featured_designers": {
       "explore": "Vedi la collezione"
+    },
+    "collection_houses": {
+      "heading": "Esplora per maison",
+      "heading_other": "Altre maison"
     }
   },
   "localization": {

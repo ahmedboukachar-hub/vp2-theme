@@ -31,6 +31,34 @@
                 role="list"
                 tabindex="-1"
               >
+                {%- liquid
+                  # A parent that has its own landing page (Journal, Designers) gets a first
+                  # "View all" entry, unless one of its children already links there.
+                  assign show_view_all = false
+                  if link.url != blank and link.url != '#'
+                    assign show_view_all = true
+                    for childlink in link.links
+                      if childlink.url == link.url
+                        assign show_view_all = false
+                        break
+                      endif
+                    endfor
+                  endif
+                -%}
+                {%- if show_view_all -%}
+                  <li>
+                    <a
+                      id="HeaderMenu-{{ link.handle }}-view-all"
+                      href="{{ link.url }}"
+                      class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if link.current %} list-menu__item--active{% endif %}"
+                      {% if link.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {{ 'general.navigation.view_all' | t }}
+                    </a>
+                  </li>
+                {%- endif -%}
                 {%- for childlink in link.links -%}
                   <li>
                     {%- if childlink.links == blank -%}

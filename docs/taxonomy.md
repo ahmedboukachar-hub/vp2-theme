@@ -71,3 +71,13 @@ Do not use tags for facts that belong in metafields.
 | `gucci` | Smart | vendor = `Gucci` |
 
 Future SEO collections (shoulder bags, crossbody, tote, top-handle, evening, travel, archive, price ranges, decades) are intentionally **not** created until real inventory makes them meaningful; base them on `product_type` or metafield rules, not free-form tags.
+
+## Journal topics (2026-10-23)
+
+The first Journal article tag in alphabetical order is the article's topic
+(`snippets/journal-topic.liquid` maps it to a translated label). Topic tags:
+`bag-models` (model guides), `buying-advice`, `classics-by-house` (the two
+"most popular" hubs). House tags (`dior`, `gucci`, `louis-vuitton`) stay on
+articles for related-article matching and must sort after the topic tag.
+Article metafield `custom.models` (list of text) names the product models a
+guide covers; it links guides and product pages (see the product-guide links).
