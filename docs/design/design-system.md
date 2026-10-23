@@ -48,9 +48,10 @@ wishlist), the product gallery and its thumbnails, and the cart.
   the first screen and the sticky gallery stays in view while the
   information column scrolls. The buy column uses Dawn's "medium" media size
   (55/45), so long titles and the specification table have room.
-- Product rows: 3 columns on desktop everywhere (collections, search,
-  "You may also like", Recently viewed, the wishlist and New arrivals),
-  2 on mobile (1 below 480px in custom grids).
+- Product rows (owner decision 2026-10-23): 3 columns on desktop
+  everywhere (collections, search, "You may also like", Recently viewed,
+  the wishlist and New arrivals), 2 on mobile (1 below 480px in custom
+  grids).
 - Section spacing 96px desktop / 72px reduced / ~0.75× on mobile.
 - Borders over shadows; no large drop shadows anywhere in new components.
 - Buttons ≥ 48px height (Dawn default + `min-height` guards for

@@ -38,6 +38,27 @@
   }
   .find-a-bag__preferences { margin:2.4rem 0; border-block:1px solid rgba(var(--color-foreground),.15); }
   .find-a-bag__preferences summary { padding:1.6rem 0; min-height:5.2rem; cursor:pointer; }
+
+  .find-a-bag__budget {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .find-a-bag__budget .field {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+
+  .find-a-bag__currency {
+    flex: 0 0 12rem;
+    width: 12rem;
+  }
+
+  .find-a-bag__form .select__select {
+    font-size: 1.6rem;
+    color: rgb(var(--color-foreground));
+  }
 {%- endstyle -%}
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
@@ -61,7 +82,12 @@
       <input type="hidden" name="contact[{{ 'templates.find_a_bag.hidden_source' | t }}]" value="Find a Bag">
 
       {%- liquid
-        assign text_fields = 'name,designer,model_or_style,maximum_budget,currency' | split: ','
+        assign label_designer = 'templates.find_a_bag.fields.designer' | t
+        assign label_model = 'templates.find_a_bag.fields.model_or_style' | t
+        assign label_budget = 'templates.find_a_bag.fields.maximum_budget' | t
+        assign label_currency = 'templates.find_a_bag.fields.currency' | t
+        assign label_condition = 'templates.find_a_bag.fields.minimum_condition' | t
+        assign selected_currency = cart.currency.iso_code | default: 'EUR'
       -%}
 
       <div class="field">
@@ -95,18 +121,79 @@
           </small>
         {%- endif -%}
       </div>
-      {%- for field_key in text_fields offset: 1 -%}
-        {%- assign field_label_key = 'templates.find_a_bag.fields.' | append: field_key -%}
-        {%- assign field_label = field_label_key | t -%}
+      <div class="field">
+        <input
+          type="text"
+          id="FindABag-designer"
+          name="contact[{{ label_designer }}]"
+          class="field__input"
+          list="FindABag-designers"
+          autocomplete="off"
+          placeholder="{{ label_designer }}"
+        >
+        <label for="FindABag-designer" class="field__label">{{ label_designer }}</label>
+        {%- comment -%} Suggestions only: any house can still be typed. {%- endcomment -%}
+        <datalist id="FindABag-designers">
+          {%- for vendor in shop.vendors -%}
+            {%- assign vendor_key = vendor | handleize -%}
+            {%- if vendor_key == 'unbranded' -%}{%- continue -%}{%- endif -%}
+            <option value="{{ vendor | escape }}"></option>
+          {%- endfor -%}
+        </datalist>
+      </div>
+      <div class="field">
+        <input type="text" id="FindABag-model_or_style" name="contact[{{ label_model }}]" class="field__input" placeholder="{{ label_model }}">
+        <label for="FindABag-model_or_style" class="field__label">{{ label_model }}</label>
+      </div>
+      <div class="find-a-bag__budget">
         <div class="field">
-          <input type="text" id="FindABag-{{ field_key }}" name="contact[{{ field_label }}]" class="field__input" placeholder="{{ field_label }}">
-          <label for="FindABag-{{ field_key }}" class="field__label">{{ field_label }}</label>
+          <input
+            type="text"
+            inputmode="numeric"
+            id="FindABag-maximum_budget"
+            name="contact[{{ label_budget }}]"
+            class="field__input"
+            autocomplete="off"
+            placeholder="{{ label_budget }}"
+          >
+          <label for="FindABag-maximum_budget" class="field__label">{{ label_budget }}</label>
         </div>
-      {%- endfor -%}
+        <div class="select find-a-bag__currency">
+          <label for="FindABag-currency" class="visually-hidden">{{ label_currency }}</label>
+          <select id="FindABag-currency" name="contact[{{ label_currency }}]" class="select__select">
+            <option value="EUR"{% if selected_currency == 'EUR' %} selected{% endif %}>EUR €</option>
+            <option value="GBP"{% if selected_currency == 'GBP' %} selected{% endif %}>GBP £</option>
+            <option value="CHF"{% if selected_currency == 'CHF' %} selected{% endif %}>CHF</option>
+            <option value="USD"{% if selected_currency == 'USD' %} selected{% endif %}>USD $</option>
+          </select>
+          <span class="svg-wrapper">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+        </div>
+      </div>
       <details class="find-a-bag__preferences">
         <summary>{{ 'templates.find_a_bag.optional_details' | t }}</summary>
         {%- assign extra_fields = 'country,preferred_size,preferred_colour,preferred_material,preferred_era,minimum_condition,flexible_details,reference_link' | split: ',' -%}
         {%- for field_key in extra_fields -%}
+          {%- if field_key == 'minimum_condition' -%}
+            {%- comment -%} The four condition grades of the catalogue (docs/taxonomy.md). {%- endcomment -%}
+            <div class="find-a-bag__field">
+              <label for="FindABag-minimum_condition" class="form__label">{{ label_condition }}</label>
+              <div class="select">
+                <select id="FindABag-minimum_condition" name="contact[{{ label_condition }}]" class="select__select">
+                  <option value="{{ 'templates.find_a_bag.no_preference' | t }}">{{ 'templates.find_a_bag.no_preference' | t }}</option>
+                  <option value="{{ 'products.values.excellent' | t }}">{{ 'products.values.excellent' | t }}</option>
+                  <option value="{{ 'products.values.very_good' | t }}">{{ 'products.values.very_good' | t }}</option>
+                  <option value="{{ 'products.values.good' | t }}">{{ 'products.values.good' | t }}</option>
+                  <option value="{{ 'products.values.fair' | t }}">{{ 'products.values.fair' | t }}</option>
+                </select>
+                <span class="svg-wrapper">
+                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                </span>
+              </div>
+            </div>
+            {%- continue -%}
+          {%- endif -%}
           {%- assign field_label_key = 'templates.find_a_bag.fields.' | append: field_key -%}
           {%- assign field_label = field_label_key | t -%}
           <div class="field">

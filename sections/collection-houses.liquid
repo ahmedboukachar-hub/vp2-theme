@@ -28,27 +28,29 @@
   {{ 'section-collection-houses.css' | asset_url | stylesheet_tag }}
 
   <div class="collection-houses color-{{ section.settings.color_scheme }} gradient">
-    <div class="collection-houses__inner page-width">
-      <div class="collection-houses__main">
-        <h2 class="collection-houses__heading vp-eyebrow" id="CollectionHouses-{{ section.id }}">
-          {{- heading | escape -}}
-        </h2>
-        <ul class="collection-houses__list list-unstyled" role="list" aria-labelledby="CollectionHouses-{{ section.id }}">
-          {%- for house in section.settings.collections -%}
-            {%- if house.id == collection.id -%}
-              {%- continue -%}
-            {%- endif -%}
-            <li>
-              <a class="collection-houses__link" href="{{ house.url }}">{{ house.title | escape }}</a>
-            </li>
-          {%- endfor -%}
-        </ul>
+    <div class="page-width">
+      <div class="collection-houses__inner">
+        <div class="collection-houses__main">
+          <h2 class="collection-houses__heading vp-eyebrow" id="CollectionHouses-{{ section.id }}">
+            {{- heading | escape -}}
+          </h2>
+          <ul class="collection-houses__list list-unstyled" role="list" aria-labelledby="CollectionHouses-{{ section.id }}">
+            {%- for house in section.settings.collections -%}
+              {%- if house.id == collection.id -%}
+                {%- continue -%}
+              {%- endif -%}
+              <li>
+                <a class="collection-houses__link" href="{{ house.url }}">{{ house.title | escape }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+        {%- if section.settings.designers_page != blank -%}
+          <a class="vp-link vp-link--arrow collection-houses__all" href="{{ section.settings.designers_page.url }}">
+            {{- 'products.facets.all_designers' | t -}}
+          </a>
+        {%- endif -%}
       </div>
-      {%- if section.settings.designers_page != blank -%}
-        <a class="vp-link vp-link--arrow collection-houses__all" href="{{ section.settings.designers_page.url }}">
-          {{- 'products.facets.all_designers' | t -}}
-        </a>
-      {%- endif -%}
     </div>
   </div>
 {%- endif -%}

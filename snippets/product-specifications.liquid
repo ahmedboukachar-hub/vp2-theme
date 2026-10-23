@@ -60,8 +60,9 @@
 
   {%- comment -%}
     Compatibility. An accessory lists the bags it is made for in
-    custom.compatible_models ("Louis Vuitton Petit Noé"); each links to the
-    product search for that model. A bag shows the available accessories whose
+    custom.compatible_models ("Louis Vuitton Petit Noé"); each links to a
+    product search for that exact phrase (quoted, so it returns only that
+    model's pieces). A bag shows the available accessories whose
     list names its designer and model (or the model alone), looked up in the
     accessories collection chosen on the designer (text) block.
   {%- endcomment -%}
@@ -72,7 +73,8 @@
       <dd>
         {%- for compatible_model in compatible_models -%}
           {%- unless forloop.first %}, {% endunless -%}
-          <a href="{{ routes.search_url }}?q={{ compatible_model | url_encode }}&amp;type=product" class="link underlined-link">
+          {%- assign compatible_query = '"' | append: compatible_model | append: '"' -%}
+          <a href="{{ routes.search_url }}?q={{ compatible_query | url_encode }}&amp;type=product" class="link underlined-link">
             {{- compatible_model | escape -}}
           </a>
         {%- endfor -%}

@@ -1,7 +1,8 @@
 {% comment %}
   Renders the condition report: grade, human summary, individual signs of
   wear (condition_issue metaobjects) and a link to the Condition Guide page
-  chosen in the block (hidden when none is chosen).
+  chosen in the block (hidden when none is chosen). The grade is translated
+  like the specifications table, which then leaves it out.
   Renders nothing when no condition data exists.
 
   Accepts:
@@ -25,7 +26,7 @@
         <span class="condition-report__grade-label caption-with-letter-spacing">
           {{- 'products.product.specifications.condition' | t -}}
         </span>
-        <span class="condition-report__grade-value h5">{{ grade | escape }}</span>
+        <span class="condition-report__grade-value h5">{% render 'product-value', value: grade %}</span>
       </p>
     {%- endif -%}
 
