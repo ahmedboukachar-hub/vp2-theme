@@ -26,7 +26,7 @@
 }
 
 .breadcrumbs__link {
-  color: rgba(var(--color-foreground), 0.6);
+  color: rgba(var(--color-foreground), 0.7);
   text-decoration: none;
   text-underline-offset: 0.3rem;
 }

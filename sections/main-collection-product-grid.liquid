@@ -106,7 +106,16 @@
       <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
         {{ 'component-facets.css' | asset_url | stylesheet_tag }}
         <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
-        {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+        {%- liquid
+          # One-piece collections skip the sort and filter bar: there is nothing to sort.
+          assign show_facets = false
+          if section.settings.enable_filtering or section.settings.enable_sorting
+            if collection.products_count > 1
+              assign show_facets = true
+            endif
+          endif
+        -%}
+        {%- if show_facets -%}
           <aside
             aria-labelledby="verticalTitle"
             class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
@@ -149,7 +158,7 @@
               class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
             >
               <div class="loading-overlay gradient"></div>
-              {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
+              {%- unless show_facets -%}
                 <h2 class="visually-hidden">{{ 'accessibility.heading_pieces' | t }}</h2>
               {%- endunless -%}
               <ul

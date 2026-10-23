@@ -19,7 +19,8 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-1",
+        "heading_size": "h2"
       }
     }
   },

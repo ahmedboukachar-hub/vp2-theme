@@ -141,10 +141,16 @@
                   </div>
                 {%- when 'price' -%}
                   <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                    {%- liquid
+                      assign show_price_badges = true
+                      if is_sold_archive
+                        assign show_price_badges = false
+                      endif
+                    -%}
                     {%- render 'price',
                       product: product,
                       use_variant: true,
-                      show_badges: true,
+                      show_badges: show_price_badges,
                       price_class: 'price--large'
                     -%}
                   </div>
@@ -257,7 +263,7 @@
                   {% render 'product-enquiry', product: product, block: block %}
                 {%- when 'wishlist_button' -%}
                   <div class="product__wishlist quick-add-hidden" {{ block.shopify_attributes }}>
-                    {% render 'wishlist-button', wishlist_product: product %}
+                    {%- unless is_sold_archive -%}{% render 'wishlist-button', wishlist_product: product %}{%- endunless -%}
                   </div>
                 {%- when 'collapsible_tab' -%}
                   <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
