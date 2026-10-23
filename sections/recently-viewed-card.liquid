@@ -1,8 +1,9 @@
 {%- comment -%}
-  One product card for the product in context, fetched by assets/recently-viewed.js
+  One product card for the product in context, shared by Recently viewed
+  (assets/recently-viewed.js) and the wishlist page (assets/wishlist.js). Both fetch it
   through the Section Rendering API (/products/<handle>?section_id=recently-viewed-card),
-  so Recently viewed shows exactly the same cards as "You may also like". Not meant to
-  be added in the Theme Editor (no presets).
+  so they show exactly the same cards as "You may also like". Not meant to be added in
+  the Theme Editor (no presets).
 {%- endcomment -%}
 {%- if product -%}
   {% render 'card-product',
