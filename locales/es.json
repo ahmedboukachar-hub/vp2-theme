@@ -184,6 +184,7 @@
   "products": {
     "product": {
       "add_to_cart": "Añadir al carrito",
+      "buy_it_now": "Comprar ahora",
       "in_cart": "En tu carrito",
       "guide_links": {
         "label": "Guías",

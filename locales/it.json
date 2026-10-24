@@ -184,6 +184,7 @@
   "products": {
     "product": {
       "add_to_cart": "Aggiungi al carrello",
+      "buy_it_now": "Acquista ora",
       "in_cart": "Nel carrello",
       "guide_links": {
         "label": "Guide",
