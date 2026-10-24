@@ -4145,6 +4145,89 @@
       "autocompleteOptionsAvailable": {
         "one": "{{count}} artículo disponible"
       }
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "use_email_button": "Usar correo electrónico en su lugar"
+      },
+      "signed_in_state": {
+        "greeting_with_name": "Hola, {{first_name}}",
+        "greeting_without_name": "Cuenta",
+        "orders_button": "Pedidos",
+        "profile_button": "Perfil"
+      },
+      "location_picker": {
+        "sheet_title": "Sucursales",
+        "search_field_placeholder": "Búsqueda"
+      },
+      "aria_labels": {
+        "close_menu": "Cerrar menú",
+        "back_to_main_menu": "Volver al menú principal desde {{title}}",
+        "open_submenu": "{{title}} abre un submenú",
+        "loading_menu": "Cargando menú",
+        "account": "Cuenta",
+        "sign_in_with_email": "Iniciar sesión con correo electrónico",
+        "sign_in": "Iniciar sesión",
+        "loading": "Cargando"
+      }
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "Número de tarjeta",
+        "title": "Reemplazar forma de pago",
+        "replace_with": "Reemplazar con",
+        "add_new_payment_method": "Agregar nuevo",
+        "save_button": "Guardar",
+        "close_button": "Cerrar",
+        "loading": "Cargando el modal de reemplazo de forma de pago",
+        "success": "Forma de pago actualizada",
+        "invalid_subscription_contract": "No se pudo encontrar la suscripción",
+        "expiry_date": "Caduca el {{expiryDate}}",
+        "edit_current_payment_method": "Editar forma de pago actual",
+        "edit_selected_payment_method": "Editar forma de pago seleccionada"
+      }
+    },
+    "order_receipt_document": {
+      "placeholder_title": "Marcador de posición de recibo",
+      "placeholder": "Marcador de posición: el pedido %{name} de %{total} no está listo para mostrarse."
+    },
+    "redirect_warning": {
+      "title": "Este enlace podría no ser seguro",
+      "description_html": "Si haces clic en continuar, se te dirigirá a %{destination}",
+      "go_back": "Volver",
+      "leave_this_page": "Salir de esta página",
+      "continue_anyway": "Continuar de todos modos",
+      "why_am_i_seeing_this": "¿Por qué veo esto?"
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "Logo de %{shop_name}",
+      "step_one": {
+        "page_title": "Iniciar sesión - %{shop_name}",
+        "heading": "Iniciar sesión",
+        "subheading": "Introduce tu correo electrónico y te enviaremos un código de verificación",
+        "input_field_label": "Correo electrónico",
+        "button": "Continuar",
+        "subheading_with_sign_in_options": "Inicia sesión o crea una cuenta",
+        "or": "o",
+        "consent_agreement": "Si continúas, aceptas las %{terms}",
+        "last_used_pill": "Último uso"
+      },
+      "step_two": {
+        "page_title": "Introducir código - %{shop_name}",
+        "heading": "Introducir código",
+        "subheading": "Enviado a %{email}",
+        "restart_link": "Iniciar sesión con otro correo electrónico",
+        "input_field_label": "Código de seis dígitos",
+        "button": "Enviar",
+        "change_email": "Cambiar"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "Introduce una dirección de correo electrónico válida",
+          "invalid_code": "Introduce el código de 6 dígitos correcto"
+        }
+      },
+      "processing": "Procesando…"
     }
   }
 }
