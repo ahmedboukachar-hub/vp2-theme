@@ -4415,6 +4415,116 @@
       "september": "September",
       "october": "Oktober",
       "november": "November"
+    },
+    "announcement_bar": {
+      "expand_label": "Ankündigungsleiste ausklappen",
+      "collapse_label": "Ankündigungsleiste einklappen",
+      "close_label": "Ankündigungsleiste schließen"
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "title": "Zahlungsmethode ersetzen",
+        "loading": "Zahlungsmethoden werden geladen",
+        "no_payment_methods_available": "Keine Zahlungsmethoden verfügbar",
+        "select_new_payment_method": "Wähle eine neue Zahlungsmethode",
+        "current_method": "Aktuell",
+        "cancel": "Abbrechen",
+        "save": "Speichern",
+        "success": "Zahlungsmethode aktualisiert",
+        "use_new_payment_method": "+ Neue Zahlungsmethode verwenden"
+      }
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "sheet_title": "Anmelden oder Konto erstellen",
+        "section_divider": "Weitere Möglichkeiten zum Anmelden",
+        "alternate_divider": "ODER",
+        "email_field_label": "E-Mail-Adresse",
+        "orders_button": "Bestellungen",
+        "profile_button": "Profil",
+        "shop_login_button": "Mit Shop anmelden",
+        "continue_with_google": "Weiter mit Google",
+        "continue_with_facebook": "Weiter mit Facebook",
+        "use_email_button": "Stattdessen E-Mail verwenden"
+      },
+      "signed_in_state": {
+        "greeting_with_name": "Hallo {{first_name}}!",
+        "greeting_without_name": "Konto",
+        "orders_button": "Bestellungen",
+        "profile_button": "Profil"
+      },
+      "location_picker": {
+        "sheet_title": "Standorte",
+        "search_field_placeholder": "Suche"
+      },
+      "aria_labels": {
+        "close_menu": "Menü schließen",
+        "back_to_main_menu": "Zurück zum Hauptmenü von {{title}}",
+        "open_submenu": "{{title}}, öffnet Untermenü",
+        "loading_menu": "Menü wird geladen",
+        "account": "Konto",
+        "sign_in_with_email": "Mit E-Mail-Adresse anmelden",
+        "sign_in": "Anmelden",
+        "loading": "Wird geladen"
+      }
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "Kartennummer",
+        "title": "Zahlungsmethode ersetzen",
+        "replace_with": "Ersetzen durch",
+        "add_new_payment_method": "Neu hinzufügen",
+        "save_button": "Speichern",
+        "close_button": "Schließen",
+        "loading": "Modal zum Ersetzen der Zahlungsmethode wird geladen",
+        "success": "Zahlungsmethode aktualisiert",
+        "invalid_subscription_contract": "Abonnement wurde nicht gefunden",
+        "expiry_date": "Gültig bis {{expiryDate}}",
+        "edit_current_payment_method": "Aktuelle Zahlungsmethode bearbeiten",
+        "edit_selected_payment_method": "Ausgewählte Zahlungsmethode bearbeiten"
+      }
+    },
+    "order_receipt_document": {
+      "placeholder_title": "Belegplatzhalter",
+      "placeholder": "Platzhalter: Bestellung %{name} über %{total} kann noch nicht dargestellt werden."
+    },
+    "redirect_warning": {
+      "title": "Dieser Link ist möglicherweise unsicher",
+      "description_html": "Wenn du fortfährst, wirst du zu %{destination} weitergeleitet.",
+      "go_back": "Zurück",
+      "leave_this_page": "Diese Seite verlassen",
+      "continue_anyway": "Trotzdem fortfahren",
+      "why_am_i_seeing_this": "Warum sehe ich das?"
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "%{shop_name}-Logo",
+      "step_one": {
+        "page_title": "Anmelden – %{shop_name}",
+        "heading": "Anmelden",
+        "subheading": "Gib deine E-Mail-Adresse ein und wir senden dir einen Bestätigungscode",
+        "input_field_label": "E-Mail-Adresse",
+        "button": "Weiter",
+        "subheading_with_sign_in_options": "Anmelden oder ein Konto erstellen",
+        "or": "oder",
+        "consent_agreement": "Wenn du fortfährst, stimmst du unseren %{terms} zu",
+        "last_used_pill": "Zuletzt verwendet"
+      },
+      "step_two": {
+        "page_title": "Code eingeben – %{shop_name}",
+        "heading": "Code eingeben",
+        "subheading": "Gesendet an %{email}",
+        "restart_link": "Mit einer anderen E-Mail-Adresse anmelden",
+        "input_field_label": "6-stelliger Code",
+        "button": "Senden",
+        "change_email": "Ändern"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "Gib eine gültige E-Mail-Adresse ein",
+          "invalid_code": "Gib den richtigen 6-stelligen Code ein"
+        }
+      },
+      "processing": "Wird bearbeitet ..."
     }
   }
 }
