@@ -3787,6 +3787,144 @@
           "show_all": "Tout afficher"
         }
       }
+    },
+    "errors": {
+      "order_not_found": {
+        "title": "Commande introuvable"
+      },
+      "profile_update_error": {
+        "description": "Un problème est survenu lors de la mise à jour de votre profil. Essayez d'actualiser cette page ou vérifiez votre connexion Internet."
+      },
+      "retry_action_label": "Réessayer",
+      "load_orders_error": {
+        "title": "Impossible de charger les commandes",
+        "description": "Réessayez ou revenez ultérieurement.",
+        "retry_button": "Réessayer"
+      },
+      "load_paypal_error": {
+        "description": "Un problème est survenu lors du chargement de PayPal. Veuillez réessayer."
+      },
+      "load_extension_error": {
+        "title": "Erreur",
+        "description": "Actualisez cette page ou réessayez dans quelques minutes.",
+        "refresh_button": "Actualiser la page"
+      },
+      "already_upgraded": "Les comptes clients sont déjà mis à niveau.",
+      "failed_to_upgrade": "Échec de la mise à niveau des paramètres des comptes clients.",
+      "logout_everywhere": {
+        "description": "Une erreur s’est produite lors de la déconnexion. Veuillez réessayer."
+      },
+      "resend_link": {
+        "too_many_requests": "Requêtes trop nombreuses. Réessayez plus tard.",
+        "generic": "Échec de la requête"
+      },
+      "profile_name_update_error": {
+        "description": "Un problème est survenu lors de la mise à jour de votre nom. Essayez d’actualiser cette page ou vérifiez votre connexion Internet."
+      },
+      "load_address_form_error": {
+        "title": "Impossible de charger le formulaire d’adresse",
+        "description": "Impossible de charger le formulaire d’adresse.",
+        "refresh_button": "Rafraîchir la page"
+      },
+      "not_upgraded": "Les comptes clients ne sont pas mis à niveau.",
+      "failed_to_revert": "Échec du rétablissement des paramètres des comptes clients.",
+      "revert_window_expired": "La fenêtre de rétablissement a expiré."
+    },
+    "payment_methods": {
+      "title": "Moyens de paiement",
+      "add_payment_method_button": "Ajouter un moyen de paiement",
+      "payment_details": {
+        "title": "Informations sur le moyen de paiement",
+        "payment_method_expiring_on": "Expirant le {{expiryDate}}",
+        "preauthorized_payments": "Paiements pré-autorisés",
+        "close_payment_modal": "Fermer",
+        "close_payment_modal_accessibility_label": "Fermer la fenêtre modale des informations sur le moyen de paiement",
+        "payment_method_not_found_error": "Impossible de trouver le moyen de paiement",
+        "payment_details_loading": "Détails du moyen de paiement en cours de chargement",
+        "pre_authorized_payments": "Paiements préautorisés",
+        "total_amount_of_subscription_line_items_left": "et {{total}} de plus",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} articles au total, affichage de {{totalItemsToDisplay}} articles",
+        "next_payment_due": "Paiement dû le {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Modifier",
+        "edit_payment_method_button_accessibility_label": "Modifier le moyen de paiement se terminant par {{lastDigits}}",
+        "credit_card_details_accessibility_label": "se terminant par {{lastDigits}}",
+        "billing_title": "Adresse de facturation",
+        "card_info_title": "Informations de la carte",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "payment_method_expired_on": "Expiré le {{expiryDate}}",
+        "loading_shop_pay": "Shop Pay en cours de chargement",
+        "invalid_payment_method": "Moyen de paiement non valide",
+        "invalid_payment_method_message": "Utilisez une nouvelle carte de crédit pour continuer à recevoir les commandes à venir.",
+        "replace_payment_method": "Remplacer le moyen de paiement",
+        "checkout_card_banner": "Ce moyen de paiement peut uniquement être utilisé pour les paiements pré-autorisés. Il n’apparaîtra pas lors du paiement si vous êtes connecté(e) à cette boutique. ",
+        "default_checkbox": "Définir comme support multimédia par défaut",
+        "default_checkbox_accessibility_label": "Définir ce moyen de paiement par défaut",
+        "bank_account_details": "{{bankBrand}} •••• {{lastDigits}}",
+        "replace_payment_method_button": "Remplacer",
+        "bank_details": "{{bankBrand}} •••• {{lastDigits}}"
+      },
+      "delete_payment_method_button": "Supprimer",
+      "delete_payment_method_button_accessibility_label": "Supprimer {{paymentMethodName}}",
+      "back_button": "Retour",
+      "back_button_accessibility_label": "Retour à {{paymentMethodStepTitle}}",
+      "generic_card": "Carte",
+      "payment_delete": {
+        "title": "Supprimer le moyen de paiement",
+        "description_without_replacement": "Ce moyen de paiement ne sera plus disponible lors de vos futures commandes.",
+        "description_with_replacement": "Supprimer ce moyen de paiement affectera les paiements pré-autorisés. Vous pouvez au choix le remplacer par un autre moyen de paiement afin de continuer à recevoir des commandes.",
+        "payment_method_selector_placeholder": "Sélectionner un moyen de paiement de remplacement (facultatif)",
+        "replace_method_with_new_method_description": "Votre {{currentPaymentMethodName}} sera supprimé et remplacé par votre {{newPaymentMethodName}}.",
+        "error_when_deleting": "Nous sommes désolés mais une erreur est survenue et nous n’avons pas pu supprimer ce moyen de paiement. Veuillez réessayer ultérieurement ou rafraîchir la page.",
+        "delete_and_replace_button": "Supprimer et remplacer",
+        "delete_and_replace_button_accessibility_label": "Supprimez {{currentPaymentMethodName}} et remplacez-le par {{newPaymentMethodName}}.",
+        "deleted_successfully": "Le moyen de paiement a été supprimé avec succès.",
+        "payment_method_selector_no_alternative_payment": "Pas de méthode de remplacement",
+        "loading_available_payment_methods_accessibility_label": "Moyens de paiement disponibles en cours chargement",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "La suppression de ce moyen de paiement affectera les paiements pré-autorisés. Les soldes restants à payer sur les commandes existantes continueront d’être prélevés sur ce moyen de paiement, sauf si vous sélectionnez un moyen de paiement alternatif. La sélection d’un moyen de paiement alternatif vous permettra de recevoir les prochaines commandes par abonnement sans interruption.",
+          "with_pending_orders": "Si vous supprimez ce moyen de paiement, il sera éliminé de votre compte et ne sera plus disponible pour de futurs achats. Les soldes restants à payer sur les commandes existantes continueront toutefois d’être prélevés dessus, sauf si vous sélectionnez un moyen de paiement alternatif.",
+          "with_subscriptions": "La suppression de ce moyen de paiement affectera les paiements pré-autorisés. Remplacez-le par un moyen de paiement alternatif afin de continuer à recevoir les commandes à venir."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "La suppression de ce moyen de paiement affectera les paiements pré-autorisés. Tous les soldes restants à payer sur les commandes existantes continueront d’être prélevés sur ce moyen de paiement, mais vous ne recevrez pas les prochaines commandes par abonnement. Ajoutez un moyen de paiement alternatif pour continuer à recevoir les commandes par abonnement.",
+          "with_pending_orders": "Si vous supprimez ce moyen de paiement, il sera éliminé de votre compte et ne sera plus disponible pour de futurs achats. Les soldes restant à payer continueront toutefois d’être prélevés dessus pour les commandes existantes.",
+          "with_subscriptions": "La suppression de ce moyen de paiement affectera les paiements pré-autorisés. Ajoutez un moyen de paiement alternatif pour continuer à recevoir les commandes à venir."
+        }
+      },
+      "edit_payment_method": {
+        "title": "Modifier le moyen de paiement",
+        "save_payment_method_button": "Enregistrer",
+        "cancel_edit_payment_method_button": "Annuler",
+        "payment_method_updated_toast": "Moyen de paiement mis à jour",
+        "billing_address": "Adresse de facturation",
+        "billing_address_add_new": "Ajouter une nouvelle adresse",
+        "billing_address_choose_from_list": "Sélectionner dans la liste",
+        "future_purchases_notice": "Ce moyen de paiement sera enregistré pour de futurs achats.",
+        "generic_error": "Un problème est survenu lors de la mise à jour. Veuillez réessayer."
+      },
+      "card_fields": {
+        "card_number_label": "Numéro de carte",
+        "card_number_placeholder": "Numéro de carte",
+        "name_on_card_label": "Nom sur la carte",
+        "name_on_card_placeholder": "Nom sur la carte",
+        "card_expiry_label": "Date d’expiration (MM/AA)",
+        "card_expiry_placeholder": "Date d’expiration (MM/AA)",
+        "card_verification_value_label": "Code de sécurité",
+        "card_verification_value_placeholder": "Code de sécurité",
+        "card_start_label": "Date d’émission (MM/AA)",
+        "card_start_placeholder": "Date d’émission (MM/AA)",
+        "tooltip": {
+          "tooltip_accessibility_label": "Plus d’informations",
+          "card_verification_value_explanation_amex": "Le code de sécurité à 4 chiffres sur le devant de votre carte",
+          "card_verification_value_explanation_other": "Le code de sécurité à 3 chiffres au dos de votre carte",
+          "card_verification_value_explanation": "Code de sécurité à 3 chiffres généralement situé au dos de votre carte. Le code de sécurité des cartes American Express est composé de 4 chiffres situés sur le devant de la carte.",
+          "card_security_notice": "Toutes les transactions sont sécurisées et chiffrées."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "Entrez votre nom tel qu’il est écrit sur votre carte",
+          "credit_card_number_invalid": "Entrez un numéro de carte valide"
+        }
+      }
     }
   }
 }
