@@ -2806,6 +2806,162 @@
       },
       "online_store_chat": {
         "title": "Des questions ? Discutez avec nous"
+      },
+      "split_delivery": {
+        "delivery_method": "Mode de livraison fractionnée",
+        "delivery_method_menu": "Menu Mode de livraison fractionnée",
+        "items_for_pickup": "Articles pour le retrait",
+        "inventory_issue_banner": {
+          "remove_items_or_ship": "%{ship_separately_link} ou %{remove_items_link}",
+          "remove_items_or_pickup": "%{pickup_in_store_link} ou %{remove_items_link}",
+          "heading": {
+            "cannot_be_picked_up": {
+              "one": "%{count} article ne peut pas être récupéré",
+              "other": "%{count} articles ne peuvent pas être récupérés"
+            },
+            "cannot_be_shipped": {
+              "one": "%{count} article ne peut pas être expédié",
+              "other": "%{count} articles ne peuvent pas être expédiés"
+            }
+          },
+          "remove_item": {
+            "one": "retirer l’article",
+            "other": "retirer les articles"
+          },
+          "ship_separately": {
+            "one": "L’expédier séparément",
+            "other": "Les expédier séparément"
+          },
+          "pick_them_up_in_store": {
+            "one": "Le récupérer en boutique",
+            "other": "Les récupérer en boutique"
+          },
+          "remove_item_only": {
+            "one": "Retirer l’article",
+            "other": "Retirer les articles"
+          },
+          "merchandise_line_with_quantity": "%{title} (×%{quantity})"
+        },
+        "pickup_and_ship": "Retrait et expédition",
+        "ship_all_items": "Expédier tous les articles",
+        "separate_pickup_email_notice": "Vous recevrez un e-mail séparé lorsque votre commande sera prête pour le retrait.",
+        "items_for_shipping": "Articles pour l’expédition",
+        "pickup_items_count": {
+          "one": "Retirer %{count} article",
+          "other": "Retirer %{count} articles"
+        },
+        "ship_items_count": {
+          "one": "Expédier %{count} article",
+          "other": "Expédier %{count} articles"
+        },
+        "items_moved_to_shipping_toast": "Les articles qui ne peuvent pas être retirés ont été transférés vers l’expédition.",
+        "cross_border": {
+          "modal": {
+            "heading": "Changer de pays ?",
+            "content": "Vos emplacements de collecte et d'expédition doivent être situés dans le même pays. Changer de pays réinitialisera tous les articles pour l'expédition.",
+            "change_country": "Changer de pays",
+            "country_changed_heading": "Pays modifié"
+          },
+          "banner": "Votre mode de livraison a été mis à jour"
+        },
+        "all_items": "Tous les articles",
+        "items_count": {
+          "one": "%{count} article",
+          "other": "%{count} articles"
+        },
+        "accessibility": {
+          "status": {
+            "ship_separately": "%{items} seront expédiés séparément.",
+            "pickup_in_store": "%{items} seront retirés en boutique.",
+            "remove_items": "%{items} retirés du panier."
+          }
+        }
+      },
+      "captcha": {
+        "title": "Effectuer le captcha pour continuer",
+        "errors": {
+          "not_solved": "Effectuer le captcha pour continuer"
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Votre commande n’a pas pu être traitée car votre code de réduction n’est plus disponible. Vérifiez le total de votre commande et réessayez."
+      },
+      "wallets": {
+        "return_to_store": "Retourner à la boutique",
+        "redirect_hint": "Vous serez invité(e) à vous connecter avec {{walletName}}.",
+        "logged_in": "Connecté à {{email}}",
+        "shipping_line_label": "Expédition",
+        "connect_shipping_methods": "{{method1}} et {{method2}}",
+        "payment_in_progress_title": "Paiement en cours",
+        "payment_in_progress_body": "Votre paiement est en cours de traitement. Votre commande sera bientôt terminée.",
+        "continue_with": "Continuer avec {{walletName}}",
+        "call_to_action": "Payer avec {{walletName}}",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} n’est pas disponible",
+            "description": "{{walletName}} n’était pas disponible. Utilisez un autre moyen de paiement ou réessayez plus tard.",
+            "instructions": "Un problème est survenu avec {{walletName}}. Retournez sur la boutique pour réessayer ou payez d’une autre façon.",
+            "unavailable_for_country": "{{walletName}} n’est pas disponible dans le pays : {{countryName}}. Sélectionnez un autre moyen de paiement pour terminer votre achat"
+          },
+          "generic": "Un problème est survenu avec {{walletName}}. Réessayez ou utilisez un autre moyen de paiement.",
+          "terminal": "Un problème est survenu avec {{walletName}}. Utilisez un autre moyen de paiement.",
+          "detour": {
+            "stock_problems": "Certains articles ne sont plus disponibles. Fermez {{walletName}} et réessayez.",
+            "price_change": "Les prix de certains articles ont changé. Fermez {{walletName}} pour vérifier votre commande et réessayer.",
+            "queue": "Vous avez été placé(e) dans une file d’attente pour payer. Fermez {{walletName}} pour continuer.",
+            "currency_change": "Vous ne pouvez pas utiliser une adresse différente avec {{walletName}}. Utilisez l’adresse originale ou essayez un autre moyen de paiement.",
+            "currency_change_with_country": "Impossible d’utiliser {{walletName}} car la devise a changé. Utilisez une adresse dans ce pays ({{countryName}}) ou essayez un autre moyen de paiement."
+          },
+          "unsupported": {
+            "address": "Le marchand ne livre pas à l’adresse d’expédition que vous avez sélectionnée.",
+            "postal_code": "Cet emplacement n’est pas pris en charge",
+            "wallet_is_unavailable": "{{walletName}} ne peut pas être utilisé avec cette adresse. Sélectionnez une autre adresse ou fermez {{walletName}} pour terminer votre achat"
+          },
+          "outdated": {
+            "shipping_method": "Les options d’expédition de votre commande ont changé. Veuillez revoir votre sélection.",
+            "payment_terms": "Les modalités de paiement ont changé. Vérifiez votre commande"
+          },
+          "invalid": {
+            "shipping_address": "Saisissez une adresse d’expédition valide",
+            "billing_address": "Saisissez une adresse de facturation valide",
+            "shipping_option": "Choisissez une option d’expédition valide",
+            "email": "Entrez une adresse e-mail valide",
+            "zone": "Entrez un État/une province valide",
+            "postal_code": "Saisir un code postal valide",
+            "reduction_code": "Saisissez un code de réduction ou une carte-cadeau valide",
+            "billing_must_match_shipping": "L’adresse doit correspondre à l’adresse d’expédition",
+            "phone": "Saisir un numéro de téléphone valide",
+            "emirate": "Saisir un émirat valide",
+            "billing_zone": "Saisissez un État/une province/une région valide pour l’adresse de facturation",
+            "billing_phone": "Saisissez un numéro de téléphone valide pour l’adresse de facturation",
+            "billing_zip": "Saisissez un code postal valide pour l’adresse de facturation"
+          },
+          "missing": {
+            "first_name": "Entrez un prénom",
+            "last_name": "Entrez un nom",
+            "address1": "Entrez une adresse",
+            "address2": "Entrez un numéro d’appartement, de suite, etc.",
+            "city": "Entrez une ville",
+            "province": "Sélectionnez un État/une province",
+            "country": "Sélectionnez un pays/une région",
+            "zip": "Entrez un code postal",
+            "phone": "Saisir un numéro de téléphone",
+            "billing_first_name": "Saisissez un prénom pour l’adresse de facturation",
+            "billing_address1": "Saisissez une adresse de facturation",
+            "billing_address2": "Saisissez un numéro d’appartement ou d’habitation pour l’adresse de facturation",
+            "billing_city": "Saisissez une ville pour l’adresse de facturation",
+            "billing_province": "Sélectionnez un état/une province/une région pour l’adresse de facturation",
+            "billing_zip": "Saisissez un code postal pour l’adresse de facturation",
+            "contact_info": "Saisir les coordonnées"
+          },
+          "formatting": {
+            "name_contains_emojis": "Supprimez l’emoji de votre nom",
+            "postal_code_contains_emoji": "Supprimez l’emoji de votre code postal",
+            "first_name_too_long": "Le prénom contient trop de lettres",
+            "last_name_too_long": "Le nom contient trop de lettres",
+            "address_too_long": "La ligne d’adresse est trop longue"
+          }
+        }
       }
     }
   }
