@@ -2590,7 +2590,147 @@
         },
         "gift_card_resend_failure": {
           "one": "Er is een probleem opgetreden bij het opnieuw verzenden van je cadeaubon. Probeer het opnieuw of neem contact op met ons."
+        },
+        "checkout_again": "Voer checkout opnieuw uit",
+        "cashback_notice": "Je krijgt je cashback na 30 dagen",
+        "pickup_address_title": "Afhalen bij",
+        "pickup_map_marker": {
+          "callout": "Ophalen bij {{location}}",
+          "directions_link_accessibility_label": "Ophalen bij {{location}}, routebeschrijving bekijken"
+        },
+        "hsa_qualification": {
+          "review_pending": "We beoordelen je gezondheidsvragenlijst. Je betaling wordt afgeschreven zodra je verklaring van medische noodzaak is afgegeven. Je ontvangt binnenkort een bevestigingse-mail.",
+          "review_pending_pickup": "We beoordelen je gezondheidsvragenlijst. Je betaling wordt afgeschreven zodra je verklaring van medische noodzaak is afgegeven."
         }
+      },
+      "review": {
+        "title": "Recensie",
+        "review_title": "Voltooi je bestelling",
+        "checkout_as_guest": "Afrekenen als gast",
+        "blocks": {
+          "contact_method_title": "Contact",
+          "billing_address_title": "Facturering",
+          "shipping_address_title": "Verzenden naar",
+          "shipping_method_title": "Verzendmethode",
+          "payment_method_title": "Betaalmethode",
+          "change_link_label": "Wijzigen",
+          "change_contact_method_link_label": "Contactinformatie wijzigen",
+          "change_billing_address_link_label": "Factuuradres wijzigen",
+          "change_shipping_address_link_label": "Bezorgadres wijzigen",
+          "change_shipping_method_link_label": "Verzendmethode wijzigen",
+          "change_payment_method_link_label": "Betaalmethode wijzigen",
+          "pick_up_in_store_shipping_method_html": "Afhalen in de winkel · %{location_name}",
+          "purchase_order_number_title": "Bestelnummer",
+          "change_purchase_order_number_label": "Bestelnummer wijzigen",
+          "change_delivery_method_link_label": "Bezorgmethode wijzigen",
+          "no_address": "(Geen adres)",
+          "no_purchase_order_number": "(Geen bestelnummer)",
+          "no_purchase_order_number_long": "Geen bestelnummer",
+          "due_after_order_reviewed_html": "Verschuldigd nadat bestelling is gecontroleerd",
+          "review_title_free_order": "Controleer en voltooi de bestelling",
+          "payment_method_saved_company_location": "Kaart opslaan voor deze locatie",
+          "company_location": "Bedrijfslocatie",
+          "change_company_location_link_label": "Bedrijfslocatie wijzigen",
+          "pickup_items_at": {
+            "one": "%{count} artikel afhalen bij",
+            "other": "%{count} artikelen afhalen bij"
+          },
+          "ship_items_to": {
+            "one": "%{count} artikel verzenden naar",
+            "other": "%{count} artikelen verzenden naar"
+          }
+        },
+        "block_title": "Controleer je gegevens",
+        "checkout_a_different_way": "Op een andere manier afrekenen",
+        "item_header": {
+          "change_value": "Waarde wijzigen",
+          "section": "Sectie",
+          "value": "Waarde"
+        },
+        "review_and_confirm_title": "Controleren en bevestigen",
+        "account_more_actions": "Meer acties voor deze account"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Stuur mij een e-mail met nieuws en aanbiedingen",
+        "unsubscribe": {
+          "title": "Je hebt je afgemeld",
+          "description": "Je ontvangt geen winkelwagenherinneringen meer van ons."
+        },
+        "accept_sms_checkbox_label": "Stuur mij een sms met nieuws en aanbiedingen",
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "Privacybeleid",
+            "terms_of_service": "Servicevoorwaarden",
+            "description_html": "Door je aan te melden via sms, ga je akkoord met het ontvangen van geautomatiseerde marketingberichten, inclusief winkelwagenherinneringen, op het opgegeven telefoonnummer. Toestemming is geen koopvoorwaarde. Reageer STOP om je af te melden. Reageer HELP voor hulp. Frequentie van berichten varieert. Bericht- en datakosten kunnen van toepassing zijn. Bekijk onze %{privacy_policy_link} en ons %{terms_of_service_link}.",
+            "description_transactional_html": "Je krijgt mogelijk sms-berichten in verband met bestelbevestigingen en verzendingsupdates. Reageer met STOP om je af te melden. Reageer met HELP voor hulp. Frequentie van berichten varieert. Bericht- en datakosten kunnen van toepassing zijn. Bekijk ons %{privacy_policy_modal_link} en onze %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Mobiel telefoonnummer",
+          "get_offers_by_text": "Aanbiedingen krijgen via sms"
+        },
+        "post_accept_marketing_checkbox_label": "Je bent aangemeld om e-mails met nieuws en aanbiedingen te ontvangen",
+        "pending_accept_marketing_checkbox_label": "Kijk in je e-mail om je aanmelding voor nieuws en aanbiedingen te bevestigen",
+        "accept_shop_pay_marketing_checkbox_label": "Schrijf me in voor nieuws en aanbiedingen van deze winkel",
+        "disclaimer": {
+          "privacy_policy": "Privacybeleid",
+          "terms_of_service": "Servicevoorwaarden"
+        },
+        "accept_whatsapp_marketing_checkbox_label": "Stuur me WhatsApp-berichten met nieuws en aanbiedingen",
+        "whatsapp": {
+          "disclaimer": {
+            "description_html": "Door je aan te melden via WhatsApp, ga je akkoord met het ontvangen van WhatsApp-marketingberichten op het opgegeven telefoonnummer. Toestemming is geen voorwaarde voor aankoop. Antwoord STOP om je af te melden. De berichtfrequentie varieert. Er kunnen bericht- en datatarieven van toepassing zijn. Bekijk ons %{privacy_policy_link} en onze %{terms_of_service_link}."
+          }
+        }
+      },
+      "shop_policies": {
+        "refund_policy": "Terugbetalingsbeleid",
+        "privacy_policy": "Privacybeleid",
+        "terms_of_service": "Algemene voorwaarden",
+        "legal_notice": "Wettelijke kennisgeving",
+        "shipping_policy": "Verzending",
+        "terms_of_sale": "Verkoopvoorwaarden",
+        "subscription_policy": "Annuleringen",
+        "purchase_options_policy": "Aankoopoptiesbeleid",
+        "contact_information": "Contact",
+        "purchase_options_cancellation_policy": "Annuleringen",
+        "cookie_preferences": "Cookies",
+        "policy_label": "Beleid",
+        "policies_label": "Beleid",
+        "select_policy_label": "Een beleid selecteren",
+        "terms_and_policies": "Voorwaarden en beleid"
+      },
+      "notifications": {
+        "title": "Meldingen"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Te betalen bedrag voor bestelling %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Toegevoegd",
+            "other": "%{count} toegevoegd"
+          },
+          "removed": "Verwijderd",
+          "subtracted": "%{count} verwijderd",
+          "returned": "%{count} geretourneerd",
+          "return_line_item_removed": "%{count} verwijderd uit retour"
+        },
+        "additional_payment_requested": "Betaling van %{total_outstanding} is vereist",
+        "checkout_review_and_pay": "Je bestelling %{order_name} is bijgewerkt. Bekijk deze wijzigingen en betaal vervolgens om je bestelling te bevestigen.",
+        "order_updated_on": "Je bestelling is bijgewerkt op %{last_edited_at}.",
+        "order_review_and_pay": "Je bestelling is bijgewerkt. Controleer en betaal om je bestelling te bevestigen.",
+        "pay_now": "Nu betalen"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "Je creditcard wordt %{amount} in rekening gebracht",
+        "payment_total_label": "Totaal betalingen",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Wijzigen in %{currency_name}",
+        "card_provider_fx_charges_warning": "Je kaartuitgever brengt mogelijk kosten in rekening voor %{currency_code} transacties.",
+        "currency_not_supported_by_shop": "De door jou geselecteerde valuta is niet meer beschikbaar. Alle prijzen zijn nu in %{currency_code}."
+      },
+      "tips": {
+        "title": "Fooi toevoegen",
+        "description": "Laat zien dat je het team van %{shop_name} steunt"
       }
     }
   }
