@@ -1602,6 +1602,274 @@
         "pre_order_ships_date": "Expédition le %{date}",
         "split_shipping_shipped_by_shop": "Expédié par %{shop_name}",
         "split_shipping_multiple_shipment_label": "Plusieurs envois"
+      },
+      "payment": {
+        "klarna_pay_now_label": "Payez maintenant avec Klarna",
+        "klarna_pay_later_label": "Payer plus tard avec Klarna",
+        "bancontact_label": "Bancontact",
+        "giropay_label": "Giropay",
+        "eps_label": "eps-Überweisung (système de paiement électronique)",
+        "klarna_slice_it_label": "Financer avec Klarna",
+        "card_information_notice": "Toutes les transactions sont sécurisées et chiffrées. Les informations de carte de crédit ne sont jamais enregistrées.",
+        "credit_card_start_month": "Mois d’émission",
+        "credit_card_start_year": "Année d’émission",
+        "card_expiration_month_label": "Mois d’expiration",
+        "card_expiration_year_label": "Année d’expiration",
+        "billing_address_not_supported_for_payment_method_error": "Ce moyen de paiement n’est pas disponible pour votre devise et adresse de facturation. Essayez un autre moyen de paiement.",
+        "change_currency_section_description": "Sélectionnez une option de devise",
+        "no_real_orders_dev_store": "Cette boutique ne peut accepter ni les commandes réelles ni les paiements réels.",
+        "subscription_agreement_label_html": "Je comprends que je suis en train d'accepter un abonnement. Celui-ci se renouvellera au prix et à la fréquence indiqués, et ce, jusqu'à ce qu'il prenne fin ou soit\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">annulé</a>.\n",
+        "waiting_on_payment_methods": "Moyens de paiement disponibles en cours d’obtention...",
+        "apple_pay_payment_error": "Votre paiement n'a pas pu être effectué. Réessayez ou utilisez un autre moyen de paiement.",
+        "subscription_card_update_agreement_label": "Le changement du moyen de paiement mettra à jour votre abonnement et vos futurs paiements récurrents.",
+        "card_security_vault_notice": "Nous avons besoin de vos informations pour les paiements ultérieurs. Toutes les transactions sont sécurisées et chiffrées.",
+        "taxes_not_included": "Taxes non incluses",
+        "no_taxes_banner_content": "Les taxes ne seront pas facturées sur cette commande. Les taxes ne peuvent plus être ajoutées une fois que vous avez perçu le paiement.",
+        "card_update_label": "Mettre à jour la carte",
+        "paypal": {
+          "connect": "Cliquez pour connecter votre compte PayPal"
+        },
+        "subscription_agreement_label": "Au moins un article de votre panier est un achat différé ou par abonnement. En poursuivant votre paiement, vous acceptez que votre moyen de paiement soit automatiquement facturé au prix et à la fréquence indiqués sur cette page, jusqu’à ce qu’il prenne fin ou que vous choisissiez de le résilier. Toutes les résiliations sont soumises à la %{cancelled}.",
+        "subscription_agreement_cancelled": "politique de résiliation",
+        "card_expired": "Expiré",
+        "card_verification_confirm": "Pour des raisons de vérification, saisissez le code de sécurité de votre carte.",
+        "different_credit_card_label": "Essayer une autre carte de crédit",
+        "apple": {
+          "connect": "Cliquez pour connecter votre compte Apple Pay",
+          "not_available": "Apple Pay n'est pas disponible sur ce navigateur. Pour connecter votre compte Apple Pay, vous devrez utiliser Safari sur un appareil Apple."
+        },
+        "account_connected": "Compte connecté.",
+        "billing_address_associated_with_mandate": "Utiliser l’adresse associée au moyen de paiement",
+        "billing_address_associated_with_mandate_info": "Si vous souhaitez modifier votre adresse de facturation, supprimez et ressaisissez les informations de votre carte de crédit",
+        "delete_customer_mandate_modal_cancel": "Annuler",
+        "credit_card_vaulting_sign_in_banner_title": "Enregistrez votre carte de crédit",
+        "credit_card_vaulting_sign_in_banner_info": "Connectez-vous ou créez un compte pour enregistrer votre carte de crédit pour vos prochains achats",
+        "credit_card_vaulting_sign_in_banner_button_label": "Se connecter",
+        "expiry_long": "(Expire le %{month}/%{year})",
+        "expiry_short": "(Exp %{month}/%{year})",
+        "ftd_vault_credit_card_label": "Enregistrer ma carte de crédit pour un paiement plus rapide",
+        "delete_customer_mandate_modal_title": "Supprimer cette carte de paiement ?",
+        "delete_customer_mandate_modal_body": "Si vous supprimez cette carte, vous devrez l’ajouter à nouveau avant de l’utiliser pour des paiements.",
+        "delete_customer_mandate_modal_confirm": "Supprimer la carte",
+        "google": {
+          "connect": "Cliquez pour connecter avec votre compte Google Pay",
+          "error_authorizing": "Erreur lors de l’autorisation du paiement"
+        },
+        "klarna_label": "Klarna",
+        "mor_disclaimer_html": "En cliquant ci-dessous et en finalisant votre commande, vous acceptez d’acheter vos articles auprès de Global-e en tant que vendeur attitré\npour cette transaction, conformément aux <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Conditions générales d’utilisation</a>\net à la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Politique de confidentialité</a> de Global-e. Global-e est un fournisseur international de\nservices de traitement des commandes pour %{shop_name}\n",
+        "purchase_options_card_update_agreement_label_html": "En mettant à jour votre moyen de paiement, vous autorisez les paiements de tout achat récurrent ou différés, selon la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">pol  résiliation</a> de la boutique.",
+        "multibanco_label": "Multibanco",
+        "receiver_payment_experience_hint": "Après avoir passé votre commande, vous recevrez les détails du paiement. Effectuez le paiement sur Multibanco ou en ligne dans les %{due_days} jours.",
+        "pending_payment": {
+          "due_notice": "Votre paiement d’un montant de %{amount_due} est dû le %{due_date}.",
+          "multibanco": {
+            "instruction_html": "Effectuez le paiement sur Multibanco ou en ligne avec les informations ci-dessous. Pour toute question ou modification de vos informations de paiement, %{contact_us}.",
+            "entity": "Entité",
+            "reference": "Référence",
+            "amount": "Montant",
+            "find_nearest_atm": "Trouver le guichet automatique le plus proche",
+            "buyer_action_info": "Votre paiement de %{amount_due} est dû.",
+            "label": "Multibanco",
+            "pay": "Payer %{amount}",
+            "expiry_date_time": "%{date} à %{time}",
+            "expires_at": "Expire le %{date}",
+            "expired": "Expiré le %{date}",
+            "expired_title": "Référence de paiement expirée",
+            "labelled_code": "%{label} : %{code}"
+          },
+          "oxxo": {
+            "label": "OXXO",
+            "number": "Numéro de référence",
+            "steps": {
+              "1": "Scannez le code-barres dans le magasin OXXO le plus proche.",
+              "2": "Payez le montant exact en espèces à la caisse."
+            },
+            "print_voucher": "Imprimer le bon",
+            "barcode_alt": "Code-barres du bon OXXO pour le numéro de référence %{reference_number}",
+            "expires_at": "Expire le %{date}",
+            "expires_when_unknown": "À utiliser avant l’expiration du bon",
+            "print": {
+              "instructions_title": "Instructions pour votre paiement OXXO :",
+              "important_details_title": "Détails importants :"
+            },
+            "important_details": {
+              "canceled_by_expiry": "Votre commande sera annulée si le paiement n’est pas reçu au plus tard le %{date}.",
+              "canceled_when_expired": "Votre commande sera annulée si le paiement n’est pas reçu avant l’expiration du bon.",
+              "non_refundable": "Les commandes OXXO sont non remboursables.",
+              "tracking_after_payment": "Vous recevrez les informations de suivi de l’expédition dans un délai d’un jour ouvrable après le paiement."
+            },
+            "days_left": {
+              "one": "%{count} jour",
+              "other": "%{count} jours"
+            },
+            "pay": "Payer %{amount}",
+            "expiry_date_time": "%{date} à %{time}",
+            "reference_number": "Numéro de référence :"
+          },
+          "apple_wallet": {
+            "badge_alt": "Ajouter à Apple Wallet",
+            "pass": {
+              "description": "Bon de paiement %{shop_name}",
+              "logo_text": "Bon de paiement",
+              "store_label": "Boutique",
+              "expiry_date_label": "Date d’expiration",
+              "payment_due_label": "Montant à payer",
+              "reference_number_label": "Numéro de référence",
+              "ordered_on_label": "Commandé le"
+            }
+          }
+        },
+        "purchase_options_agreement_label": "Un ou plusieurs articles de votre panier font l’objet d’un achat différé ou récurrent. En poursuivant votre paiement, vous acceptez que votre moyen de paiement soit automatiquement débité au prix et à la fréquence indiqués sur cette page jusqu’à ce que cet achat prenne fin ou que vous l’annuliez. Toutes les annulations sont soumises à la %{cancellation_policy_label}.",
+        "update_payment_method": "Mettre à jour le moyen de paiement",
+        "paypal_modal": {
+          "order_contains_subscriptions": "Abonnement",
+          "order_contains_fixed_selling_plans": "Le total peut ne pas inclure les taxes, les frais d’expédition, les frais différés et certaines réductions. Continuez jusqu’à la page de paiement pour voir le montant dû aujourd’hui."
+        },
+        "purchase_options_agreement_label_html": "Je comprends qu’un ou plusieurs articles de mon panier font l’objet d’un achat différé ou récurrent. En poursuivant, j’accepte la\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">politique d’annulation</a>\net vous autorise à débiter mon moyen de paiement aux prix, à la fréquence et aux dates indiqués sur cette page jusqu’à ce que ma\ncommande soit traitée ou que je l’annule, si cela est autorisé.\n",
+        "payment_method_saved": "Moyen de paiement enregistré",
+        "card_vaulted_company_location": "Carte enregistrée pour cet emplacement",
+        "order_covered_by_store_credit_notice": "Votre commande est couverte par votre crédit en magasin.",
+        "order_covered_by_redeemables_notice": "Votre commande est couverte.",
+        "store_credit": {
+          "label": "Crédit en magasin",
+          "apply_label": "Appliquer le crédit en magasin",
+          "add_label": "Ajouter un crédit en magasin",
+          "manage_label": "Gérer les crédits en magasin",
+          "buying_gift_card": "Vous ne pouvez pas utiliser un crédit en magasin pour acheter une carte-cadeau",
+          "no_fixed_selling_plans": "Vous ne pouvez pas utiliser de crédit en magasin avec les options d’achat différé"
+        },
+        "clear": "Effacer",
+        "billing_must_match_shipping_notice": "L’adresse de facturation de votre moyen de paiement doit correspondre à l’adresse d’expédition.",
+        "same_billing_address_checkbox_label": "Utiliser l’adresse d’expédition comme adresse de facturation",
+        "location_billing_address_label": "Adresse de facturation de l’emplacement",
+        "fact_billing_address_label": "Adresse de facturation",
+        "location_shipping_address_label": "Adresse d’expédition de l’emplacement",
+        "no_working_method_error": "Cette boutique ne peut pas accepter de paiements pour le moment. Rafraichissez la page ou revenez plus tard.",
+        "brand_not_available": "Cette boutique n’accepte pas {{brand}}. Utilisez une autre carte pour payer.",
+        "shipping_rate_updated": "Les modes d’expédition disponibles ont été mis à jour. Confirmez votre choix avant de procéder au paiement.",
+        "billing_address_invalid_phone": "Mettez à jour le numéro de téléphone dans votre adresse de facturation pour {{label}} {{last_digits}} pour continuer.",
+        "billing_address_invalid_phone_no_card": "Mettez à jour le numéro de téléphone dans votre adresse de facturation pour continuer.",
+        "preview_not_available": {
+          "title": "Aperçu non disponible",
+          "content": "Ne vous inquiétez pas, ce paiement express fonctionne pour vos clients.",
+          "button": "OK"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Saisissez une date d’émission valide",
+              "issue_number": "Saisissez un numéro d’émission valide"
+            },
+            "invalid": {
+              "verification_value": "Saisissez un CVV ou un code de sécurité valide"
+            }
+          }
+        },
+        "simulated_checkout": "Aperçu bientôt disponible",
+        "vaulting_agreement_label": "Enregistrer mes informations de paiement auprès de %{company} pour un paiement plus rapide",
+        "business_customer_vaulting_payment_label": "Enregistrez ce moyen de paiement lors du paiement et autorisez %{company} à le facturer pour les achats futurs pour cet emplacement. Tous les contacts affectés à cet emplacement peuvent utiliser le mode de paiement.",
+        "purchase_options_and_vaulting_agreement_label": "Au moins un article de votre panier est un achat différé ou par abonnement. En poursuivant votre paiement, vous acceptez que votre moyen de paiement soit automatiquement facturé au prix et à la fréquence indiqués sur cette page, jusqu’à ce qu’ils prennent fin ou que vous choisissiez de les résilier. Toutes les résiliations sont soumises à la %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "politique de résiliation",
+        "use_different_credit_card_label": "Utiliser une autre carte",
+        "saved_credit_card": "Votre carte de crédit enregistrée",
+        "saved_credit_card_info": "Quatre derniers chiffres",
+        "saved_credit_cards_modal": {
+          "view_all_label": "Voir toutes les cartes enregistrées",
+          "done": "Terminer",
+          "cancel": "Annuler"
+        },
+        "expired_cards_info": {
+          "one": "Il y a %{count} carte expirée que vous pouvez consulter et modifier sur votre compte.",
+          "other": "Il y a %{count} cartes expirées que vous pouvez consulter et modifier sur votre compte."
+        },
+        "local_payment_method_receiver_notice": "Après avoir passé votre commande, vous recevrez les détails du paiement. Effectuez le paiement à un guichet automatique ou en ligne dans les {{dueDays}} jours.",
+        "order_edit_banner_title": "Un paiement de {{amount_owed}} est requis",
+        "order_edit_banner_subtitle": "Votre commande {{order_number}} a été mise à jour. Vérifiez ces modifications, puis payez pour confirmer votre commande.",
+        "order_edit_banner_single_item_added": "Ajouté",
+        "order_edit_banner_multiple_items_added": "{{amount}} ajouté(s)",
+        "order_edit_banner_single_item_removed": "Supprimé",
+        "order_edit_banner_multiple_items_removed": "{{amount}} supprimé(s)",
+        "gift_card_wrapper": {
+          "heading": "Carte-cadeau",
+          "apply_gift_card_label": "Appliquer une carte-cadeau",
+          "payment_tag": "Carte-cadeau",
+          "apply_another_gift_card_label": "Appliquer une autre carte-cadeau",
+          "gift_card_label": "Carte-cadeau %{identifier}",
+          "add_label": "Ajouter une carte‑cadeau",
+          "manage_label": "Gérer les cartes‑cadeaux"
+        },
+        "custom_onsite_payment_method_modal": {
+          "title": "Confirmation personnalisée de paiement sur site"
+        },
+        "markets_pro_disclaimer_label": "En passant votre commande, vous acceptez d’acheter auprès de Global-e en tant que vendeur attitré, conformément aux %{markets_pro_terms} et à la %{privacy_policy} de Global-e, et de partager vos informations avec %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Conditions générales d’utilisation",
+        "markets_pro_disclaimer_privacy_policy": "Politique de confidentialité",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Conditions générales d’utilisation du vendeur attitré",
+        "markets_pro_disclaimer_privacy_policy_title": "Politique de confidentialité du vendeur attitré",
+        "purchase_order_number": {
+          "title": "N° bon de commande",
+          "label": "Numéro de bon de commande (facultatif)"
+        },
+        "alternative_payment_currency_total_notice": "Remarque : la somme de %{amount_due} vous sera facturée.",
+        "waiting_on_taxes_message": "Si vos taxes ne sont pas calculées dans les prochaines secondes, actualisez la page.",
+        "waiting_on_taxes_notice": "Calcul des taxes",
+        "order_edit_banner_single_item_returned": "Commande retournée",
+        "order_edit_banner_multiple_items_returned": "{{amount}} retourné(s)",
+        "shop_pay_installments_label": "Paiement en plusieurs fois avec Shop Pay",
+        "add_credit_card_modal": {
+          "title": "Ajouter la carte",
+          "cancel": "Annuler",
+          "save": "Enregistrer"
+        },
+        "delete_credit_card_modal": {
+          "title": "Supprimer la carte",
+          "confirmation": "Souhaitez-vous vraiment supprimer la {{brandName}} se terminant par {{lastDigits}} ?",
+          "cancel": "Annuler",
+          "delete": "Supprimer"
+        },
+        "order_edit_banner_items_added": {
+          "one": "Ajouté",
+          "other": "%{count} ajouté(s)"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Retiré",
+          "with_quantities": "{{delta}} sur {{quantity}} retiré(s)"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "{{quantity}} retourné(s)",
+          "with_quantities": "{{delta}} sur {{quantity}} retourné(s)"
+        },
+        "saved_credit_card_actions": {
+          "edit": "Modifier",
+          "delete": "Supprimer"
+        },
+        "edit_credit_card_modal": {
+          "title": "Modifier la carte",
+          "done": "Terminer",
+          "cancel": "Annuler",
+          "description": "Vous pouvez seulement modifier l’adresse de facturation de votre carte.",
+          "fields": {
+            "default": "Définir par défaut",
+            "card_number": "Numéro de carte",
+            "expiry": "Date d’expiration",
+            "security_code": "Code de sécurité",
+            "name": "Nom sur la carte",
+            "billing": "Facturer à"
+          }
+        },
+        "payment_method": "Moyen de paiement",
+        "expired_payment_method": "Le moyen de paiement sélectionné a expiré",
+        "subscription_heading": "Contrat d’abonnement",
+        "use_order_billing_address_label": "Utiliser l’adresse de facturation de la commande",
+        "use_location_billing_address_label": "Utiliser l’adresse de facturation de l’emplacement",
+        "use_location_shipping_address_label": "Utiliser l’adresse d’expédition de l’emplacement",
+        "purchase_options_agreement_label_wallets": "En poursuivant votre paiement, vous acceptez les futurs montants facturés indiqués sur cette page et la %{cancellation_policy_label}.",
+        "gift_card_store_credit": {
+          "add_label": "Ajouter une carte‑cadeau ou un crédit en magasin",
+          "manage_label": "Gérer les cartes‑cadeaux ou les crédits en magasin"
+        },
+        "saved_credit_card_cvv_verification": "Pour des raisons de vérification, saisissez le code de sécurité de votre carte.",
+        "order_edit_banner_updated_order_label": "Commande mise à jour"
       }
     }
   }
