@@ -2724,6 +2724,142 @@
         "thank_you_title_payments_app_failed_pending_payment": "Deine Zahlung konnte nicht verarbeitet werden.",
         "thank_you_payments_app_failed_pending_payment": "Dir wurde für deine Bestellung nichts berechnet. Kehre zu deinem Warenkorb zurück, um deine Bestellung zu überprüfen und erneut zu zahlen.",
         "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "Du erhältst in Kürze eine Bestätigungs-E-Mail. Verfolge deine Bestellung mit der Shop-App."
+      },
+      "review": {
+        "title": "Überprüfen",
+        "review_title": "Schließe deine Bestellung ab",
+        "checkout_as_guest": "Als Gast auschecken",
+        "blocks": {
+          "contact_method_title": "Kontakt",
+          "billing_address_title": "Rechnung an",
+          "shipping_address_title": "Liefern an",
+          "shipping_method_title": "Versandart",
+          "payment_method_title": "Zahlungsmethode",
+          "change_link_label": "Ändern",
+          "change_contact_method_link_label": "Kontaktdaten ändern",
+          "change_billing_address_link_label": "Rechnungsadresse ändern",
+          "change_shipping_address_link_label": "Lieferadresse ändern",
+          "change_shipping_method_link_label": "Versandart ändern",
+          "change_payment_method_link_label": "Zahlungsmethode ändern",
+          "pick_up_in_store_shipping_method_html": "Abholung im Shop · %{location_name}",
+          "purchase_order_number_title": "Bestellnummer",
+          "change_purchase_order_number_label": "Bestellnummer ändern",
+          "change_delivery_method_link_label": "Zustellmethode ändern",
+          "no_address": "(Keine Adresse)",
+          "no_purchase_order_number": "(Keine Bestellnummer)",
+          "no_purchase_order_number_long": "Keine Bestellnummer",
+          "due_after_order_reviewed_html": "Fällig, sobald Bestellung überprüft wurde",
+          "review_title_free_order": "Bestellung überprüfen und abschließen",
+          "payment_method_saved_company_location": "Karte für diesen Standort speichern",
+          "company_location": "Unternehmensstandort",
+          "change_company_location_link_label": "Unternehmensstandort ändern",
+          "pickup_items_at": {
+            "one": "Abholung von %{count} Artikel bei",
+            "other": "Abholung von %{count} Artikeln bei"
+          },
+          "ship_items_to": {
+            "one": "Versand von %{count} Artikel an",
+            "other": "Versand von %{count} Artikeln an"
+          }
+        },
+        "block_title": "Überprüfe deine Daten",
+        "checkout_a_different_way": "Andere Checkout-Option verwenden",
+        "item_header": {
+          "change_value": "Wert ändern",
+          "section": "Abschnitt",
+          "value": "Wert"
+        },
+        "review_and_confirm_title": "Überprüfen und bestätigen",
+        "account_more_actions": "Mehr Aktionen für dieses Konto"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Neuigkeiten und Angebote via E-Mail erhalten",
+        "unsubscribe": {
+          "title": "Du hast dich abgemeldet",
+          "description": "Du wirst keine Warenkorb-Erinnerungen mehr von uns erhalten."
+        },
+        "accept_sms_checkbox_label": "Neuigkeiten und Angebote via Textnachricht erhalten",
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "Datenschutzerklärung",
+            "terms_of_service": "Allgemeinen Geschäftsbedingungen",
+            "description_html": "Wenn du dich für den Erhalt von Textnachrichten registrierst, erhältst du über die angegebene Telefonnummer wiederkehrende automatisierte Marketing-Nachrichten, einschließlich Warenkorb-Erinnerungen. Die Einwilligung stellt keine Einkaufsbedingung dar. Antworte mit dem Wort STOPPEN, um das Abo abzubestellen. Antworte mit dem Wort HILFE, um Unterstützung anzufordern. Die Häufigkeit der Nachrichten variiert. Es fallen u. U. Gebühren für die Nachrichten und Datennutzung an. Schau dir unsere %{privacy_policy_link} und %{terms_of_service_link} an.",
+            "description_transactional_html": "Du erhältst möglicherweise Textnachrichten zu Bestellbestätigungen und Versandaktualisierungen. Antworte mit dem Wort STOPPEN, um das Abo abzubestellen. Antworte mit dem Wort HILFE, um Unterstützung anzufordern. Die Häufigkeit der Nachrichten variiert. Es fallen u. U. Gebühren für die Nachrichten und Datennutzung an. Schau dir unsere %{privacy_policy_modal_link} und %{terms_of_service_modal_link} an."
+          },
+          "mobile_phone_number": "Mobiltelefonnummer",
+          "get_offers_by_text": "Angebote per Textnachricht erhalten"
+        },
+        "post_accept_marketing_checkbox_label": "Du hast ein Abonnement für Neuigkeiten und Angebote per E-Mail abgeschlossen",
+        "pending_accept_marketing_checkbox_label": "Überprüfe deine E-Mails, um dein Abonnement für Neuigkeiten und Angebote zu bestätigen",
+        "accept_shop_pay_marketing_checkbox_label": "Anmeldung für Neuigkeiten und Angebote von diesem Shop",
+        "disclaimer": {
+          "privacy_policy": "Datenschutzerklärung",
+          "terms_of_service": "Allgemeine Geschäftsbedingungen"
+        },
+        "accept_whatsapp_marketing_checkbox_label": "Sende mir WhatsApp-Nachrichten mit Neuigkeiten und Angeboten",
+        "whatsapp": {
+          "disclaimer": {
+            "description_html": "Mit der Anmeldung über WhatsApp stimmst du dem Erhalt von WhatsApp-Marketingnachrichten an die angegebene Telefonnummer zu. Die Einwilligung ist keine Kaufbedingung. Antworte mit STOP, um dich abzumelden. Die Nachrichtenhäufigkeit variiert. Es können Nachrichten- und Datengebühren anfallen. Sieh dir unsere %{privacy_policy_link} und %{terms_of_service_link} an."
+          }
+        }
+      },
+      "shop_policies": {
+        "refund_policy": "Widerrufsrecht",
+        "privacy_policy": "Datenschutzerklärung",
+        "terms_of_service": "AGB",
+        "legal_notice": "Impressum",
+        "shipping_policy": "Versand",
+        "terms_of_sale": "Verkaufsbedingungen",
+        "subscription_policy": "Stornierungen",
+        "purchase_options_policy": "Richtlinie für Kaufoptionen",
+        "contact_information": "Kontakt",
+        "purchase_options_cancellation_policy": "Stornierungen",
+        "cookie_preferences": "Plätzchen",
+        "policy_label": "Richtlinie",
+        "policies_label": "Richtlinien",
+        "select_policy_label": "Wähle eine Richtlinie aus",
+        "terms_and_policies": "Geschäftsbedingungen und Richtlinien"
+      },
+      "notifications": {
+        "title": "Benachrichtigungen"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Für die Bestellung %{order_name} zu zahlender Betrag",
+        "changes_summary": {
+          "added": {
+            "one": "Hinzugefügt",
+            "other": "%{count} hinzugefügt"
+          },
+          "removed": "Entfernt",
+          "subtracted": "%{count} entfernt",
+          "returned": "%{count} zurückgegeben",
+          "return_line_item_removed": "%{count} aus der Rückgabe entfernt"
+        },
+        "additional_payment_requested": "Zahlung von %{total_outstanding} erforderlich",
+        "checkout_review_and_pay": "Deine Bestellung %{order_name} wurde aktualisiert. Überprüfe diese Änderungen und bezahle anschließend, um deine Bestellung zu bestätigen.",
+        "order_updated_on": "Deine Bestellung wurde am %{last_edited_at} aktualisiert.",
+        "order_review_and_pay": "Deine Bestellung wurde aktualisiert. Bitte überprüfe und zahle den Betrag, um deine Bestellung zu bestätigen.",
+        "pay_now": "Jetzt bezahlen"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "Deine Kreditkarte wird mit %{amount} belastet",
+        "payment_total_label": "Gesamtsumme der Zahlung",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Zu %{currency_name} wechseln",
+        "card_provider_fx_charges_warning": "Dein Kartenanbieter kann Gebühren für Transaktion in %{currency_code} erheben.",
+        "currency_not_supported_by_shop": "Die ausgewählte Währung ist nicht mehr verfügbar. Alle Preise werden nun in %{currency_code} angegeben."
+      },
+      "tips": {
+        "title": "Trinkgeld hinzufügen",
+        "description": "Bedanke dich beim Team von %{shop_name}",
+        "presets_description": "Trinkgeld-Prozentsatz auswählen",
+        "custom_label": "Benutzerdefiniertes Trinkgeld",
+        "add_tip": "Trinkgeld hinzufügen",
+        "update_tip": "Trinkgeld aktualisieren",
+        "message": "Vielen Dank, wir wissen dies zu schätzen.",
+        "preset_label": "%{tip_percent} %",
+        "no_tip_label": "Keine"
       }
     }
   }
