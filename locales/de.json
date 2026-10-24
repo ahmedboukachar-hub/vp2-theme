@@ -2592,6 +2592,138 @@
         "debit_card_label": "Debitkarte",
         "deferred_payment_label": "Zahlungsmethode später auswählen",
         "generic_payment_terms": "Für dich gelten die Bedingungen \"{{translatedName}}\". Deine Zahlung ist am {{dueDate}} fällig."
+      },
+      "thank_you": {
+        "unfulfilled_items_description": "Wir bereiten diese Artikel gerade für den Versand vor.",
+        "marker": {
+          "current": "Derzeitiger Standort der Sendung",
+          "shipping": "Lieferadresse"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "Artikel in dieser Lieferung",
+          "unfulfilled_table_title": "Artikel in der Versandvorbereitung",
+          "product_image_label": "Produktbild",
+          "description_label": "Beschreibung",
+          "quantity_label": "Anzahl"
+        },
+        "order_updates_description_missing": "Du erhältst keine Versandaktualisierungen.",
+        "order_updates_subscribe_to_email_notifications": "Erhalte Versandaktualisierungen via E-Mail.",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Du erhältst Versandaktualisierungen per E-Mail oder SMS.",
+        "order_updates_subscribe_to_phone_notifications": "Erhalte per SMS Versandaktualisierungen.",
+        "order_updates_submit_subscription": "Eingabe",
+        "track_shipment": "Sendung verfolgen",
+        "order_status_confirmed_order_with_email_pick_up": "Du erhältst eine E-Mail, sobald deine Bestellung zur Abholung bereit ist.",
+        "order_status_confirmed_order_with_phone_pick_up": "Du erhältst eine SMS, sobald deine Bestellung zur Abholung bereit ist.",
+        "order_status_confirmed_order_with_email_and_phone_pick_up": "Du erhältst eine E-Mail und eine SMS, sobald deine Bestellung zur Abholung bereit ist.",
+        "pick_up_in_store_marker": {
+          "current": "Derzeitiger Standort der Sendung",
+          "shipping": "Abholort"
+        },
+        "thank_you_confirmed_order_with_email_pick_up": "Du erhältst eine E-Mail, sobald deine Bestellung zur Abholung bereit ist.",
+        "thank_you_confirmed_order_with_phone_pick_up": "Du erhältst eine SMS, sobald deine Bestellung zur Abholung bereit ist.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "Du erhältst eine E-Mail, sobald deine Bestellung zur Abholung bereit ist.",
+        "ready_for_pickup_title": "Deine Bestellung ist zur Abholung bereit",
+        "ready_for_pickup_description": "Deine Bestellung ist zur Abholung bereit. Bringe deine Bestellbestätigung zur Abholung der Bestellung mit.",
+        "other_options": "Weitere Optionen",
+        "picked_up_title": "Deine Bestellung wurde abgeholt",
+        "picked_up_description_html": "Deine Bestellung wurde am %{date} am Standort %{location_name} abgeholt.",
+        "shop_phone_description": "Du erhältst eine SMS mit einem Link zur Shop-App, um deine Bestellung zu verfolgen.",
+        "ready_for_delivery_title": "Deine Bestellung ist bereit für die Zustellung",
+        "ready_for_delivery_description": "Wir haben deine Bestellung vorbereitet.",
+        "order_status_confirmed_order_local": "Wir bereiten deine Bestellung gerade für die Zustellung vor.",
+        "delivery_information_label": "Informationen zur Zustellung:",
+        "gift_card_sent_confirmation": "Geschenkgutschein gesendet",
+        "out_for_delivery_local_title": "Zustellung für deine Bestellung läuft",
+        "out_for_delivery_local_description_html": "Deine Bestellung wird in Kürze ankommen.",
+        "delivered_local_title": "Deine Bestellung wurde zugestellt",
+        "delivered_local_description_html": "Du hast deine Bestellung nicht erhalten? %{let_us_know}.",
+        "let_us_know": "Lass es uns wissen",
+        "qr_code": {
+          "title": "Auf dem Telefon verfolgen",
+          "send_link_to_phone": "Oder sende einen Link an dein Telefon"
+        },
+        "gift_card_confirmation_by_text": "Wenn du sie nicht erhalten hast, sende die Textnachricht erneut oder kontaktiere uns.",
+        "gift_card_confirmation_by_email": "Wenn du sie nicht erhalten hast, sende die E-Mail erneut oder kontaktiere uns.",
+        "gift_card_title": "Geschenkgutscheine",
+        "resend_gift_cards": "Geschenkgutscheine erneut senden",
+        "attempted_delivery_local_title": "Zustellung verpasst",
+        "attempted_delivery_local_description_html": "Wir konnten deine Bestellung nicht zustellen. Um eine weitere Zustellung zu vereinbaren, %{contact_us}.",
+        "thank_you_title_payment": "Deine Zahlung ist bestätigt.",
+        "thank_you_confirmed_order_with_email_payment": "Du hast eine Zahlung für deine Bestellung %{date} vorgenommen.",
+        "thank_you_confirmed_order_with_phone_payment": "Du hast eine Zahlung für deine Bestellung %{date} vorgenommen.",
+        "thank_you_confirmed_order_with_email_and_phone_payment": "Du hast eine Zahlung für deine Bestellung %{date} vorgenommen.",
+        "order_status_confirmed_order_with_email_payment": "Du hast eine Zahlung für deine Bestellung %{date} vorgenommen.",
+        "order_status_confirmed_order_with_phone_payment": "Du hast eine Zahlung für deine Bestellung %{date} vorgenommen.",
+        "order_status_confirmed_order_with_email_and_phone_payment": "Du hast eine Zahlung für deine Bestellung %{date} vorgenommen.",
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "Mit deinem Mobiltelefon scannen"
+          },
+          "sms": {
+            "title": "Oder einen Link an dein Telefon senden"
+          }
+        },
+        "estimated_delivery": "Derzeitige voraussichtliche Zustellung: ",
+        "view_business_customer_account": "Konto ansehen",
+        "company_location_title": "Standort",
+        "thank_you_title_review": "Deine Bestellung wurde zur Prüfung gesendet",
+        "thank_you_confirmed_order_with_draft": "Wir lassen es dich wissen, falls wir weitere Informationen benötigen oder wenn deine Bestellung bestätigt wurde.",
+        "breadcrumbs_submitted": "Gesendet",
+        "breadcrumbs_in_review": "Ausstehend",
+        "breadcrumbs_confirmed": "Bestätigt",
+        "missing_shipping_address_banner": {
+          "title": "Bestellung hat keine Lieferadresse",
+          "text_html": "%{contact_us}, um deine Adresse hinzuzufügen",
+          "contact_us": "Kontaktiere uns"
+        },
+        "order_status_confirmed_with_installments_payment_return": "Wende dich wieder an die Verkaufskraft.",
+        "order_status_confirmed_with_installments_payment_confirm": "Du erhältst in Kürze eine Bestätigungs-E-Mail mit deiner Bestellnummer und deinem Ratenplan.",
+        "first_payment_complete": "Erste Zahlung abgeschlossen",
+        "in_store_purchase": "Kauf im Shop",
+        "choose_payment_method_later": "Zahlungsmethode später auswählen",
+        "purchase_order_number_title": "Bestellnummer %{purchase_order_number}",
+        "thank_you_ready_for_picked_up": "Deine Bestellung wurde am Standort %{address} abgeholt.",
+        "ready_for_delivery": "Für die Zustellung bereit",
+        "order_updates_subscribe_to_email_notifications_failed": "Wir können diese E-Mail-Adresse nicht für Aktualisierungen speichern. Versuche es erneut oder verwende eine andere E-Mail-Adresse.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "Die von dir eingegebene E-Mail-Adresse existiert bereits.",
+        "subscriptions_management": {
+          "title": "Abonnement",
+          "description": "Gehe zu deinem Konto, um deine Abonnements anzuzeigen und zu verwalten.",
+          "button_label": "Dein Abonnement verwalten"
+        },
+        "manage_order_label": "Bestellung verwalten",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Du erhältst in einigen Minuten eine Textnachricht mit deinem Gutschein.",
+          "other": "Du erhältst in einigen Minuten eine Textnachricht mit deinen Geschenkgutscheinen."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Du erhältst in einigen Minuten eine E-Mail mit deinem Gutschein.",
+          "other": "Du erhältst in einigen Minuten eine E-Mail mit deinen Geschenkgutscheinen."
+        },
+        "gift_card_email_title": {
+          "one": "Gutschein wurde per E-Mail gesendet",
+          "other": "Geschenkgutscheine wurden per E-Mail gesendet"
+        },
+        "gift_card_text_title": {
+          "one": "Gutschein wurde per Textnachricht gesendet",
+          "other": "Geschenkgutscheine wurden per Textnachricht gesendet"
+        },
+        "resend_gift_cards_by_email": "E-Mail erneut senden",
+        "resend_gift_cards_by_text": "Textnachricht erneut senden",
+        "gift_card_resent_confirmation": {
+          "one": "Gutschein wurde erneut gesendet.",
+          "other": "Geschenkgutscheine wurden erneut gesendet."
+        },
+        "gift_card_resend_failure": {
+          "one": "Beim erneuten Senden deines Gutscheins ist ein Problem aufgetreten. Versuche es erneut oder wende dich an uns.",
+          "other": "Beim erneuten Senden deiner Geschenkgutscheine ist ein Problem aufgetreten. Versuche es erneut oder wende dich an uns."
+        },
+        "failed_pending_payment_page_title": "Es gibt ein Problem mit deiner Zahlung",
+        "thank_you_title_payments_app_pending_default": "Deine Zahlung wird verarbeitet",
+        "thank_you_title_payments_app_pending_buyer_action_required": "Deine Bestellung wurde empfangen",
+        "thank_you_title_payments_app_failed_pending_payment": "Deine Zahlung konnte nicht verarbeitet werden.",
+        "thank_you_payments_app_failed_pending_payment": "Dir wurde für deine Bestellung nichts berechnet. Kehre zu deinem Warenkorb zurück, um deine Bestellung zu überprüfen und erneut zu zahlen.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "Du erhältst in Kürze eine Bestätigungs-E-Mail. Verfolge deine Bestellung mit der Shop-App."
       }
     }
   }
