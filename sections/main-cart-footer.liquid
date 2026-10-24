@@ -128,11 +128,7 @@
                 </button>
               </div>
 
-              {%- if additional_checkout_buttons -%}
-                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
-                  {{ content_for_additional_checkout_buttons }}
-                </div>
-              {%- endif -%}
+              {%- comment -%} No wallet buttons (Shop Pay, PayPal, ...) in the cart: Check out is the only action; the wallets stay available in checkout (owner decision 2026-10-24). {%- endcomment -%}
           {%- endcase -%}
         {% endfor %}
 
