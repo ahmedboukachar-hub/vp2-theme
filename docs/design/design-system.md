@@ -254,6 +254,10 @@ canvas (scheme-1), with product photographs on the `--vp-media-ground` photo
 ground; see `docs/design/photography-brief.md` for the matching photo
 background.
 
+The Journal index (`templates/blog.json`) opens on the same ivory canvas as
+articles, collections and content pages; it was white (scheme-3) until the
+owner found the switch to white abrupt (2026-10-24).
+
 Rules that follow from this:
 
 - scheme-4 (near-black) is not used as a surface anywhere on the storefront;
