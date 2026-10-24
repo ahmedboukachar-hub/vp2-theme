@@ -1075,6 +1075,252 @@
             "tuesday": "Mardi"
           }
         }
+      },
+      "contact": {
+        "optional_last_name_label": "Nom (facultatif)",
+        "company_contact_info": "{{companyName}} · {{contact}}",
+        "different_shipping_address_label": "Expédier vers une adresse différente",
+        "different_shipping_address_text": "Utiliser une adresse unique pour cette commande",
+        "change_company_location_link_label": "Changer l’emplacement de l’entreprise",
+        "change_location_link_label": "Changer d’emplacement",
+        "ship_to_company": "Expédier à {{companyName}}",
+        "shipping_used_as_billing_notice": "Cette adresse sera également utilisée comme adresse de facturation pour cette commande.",
+        "company_attention_label": "Entreprise/À l’attention de",
+        "optional_company_attention_label": "Entreprise/À l’attention de (facultatif)",
+        "street_name_label": "Rue",
+        "street_number_label": "Numéro de bâtiment",
+        "optional_street_number_label": "Numéro de bâtiment (facultatif)",
+        "neighborhood_label": "Quartier",
+        "optional_neighborhood_label": "Quartier (facultatif)",
+        "barangay_label": "Barangay",
+        "optional_barangay_label": "Barangay (facultatif)",
+        "colony_label": "Colonie",
+        "optional_colony_label": "Colonie (facultatif)",
+        "commune_label": "Commune",
+        "optional_commune_label": "Commune (facultatif)",
+        "district_label": "District",
+        "optional_district_label": "District (facultatif)",
+        "ward_label": "Canton",
+        "optional_ward_label": "Canton (facultatif)",
+        "available_addresses_label": "Adresses disponibles",
+        "block_label": "Bloquer",
+        "optional_block_label": "Îlot (facultatif)",
+        "area_label": "Zone",
+        "optional_area_label": "Zone (facultatif)",
+        "optional_zip_code_label": "Code postal (facultatif)",
+        "optional_postal_code_label": "Code postal (facultatif)",
+        "optional_postcode_label": "Code postal (facultatif)",
+        "optional_pincode_label": "Code PIN (facultatif)",
+        "email_rollup_accessibility_label": "Options des e-mails",
+        "phone_rollup_accessibility_label": "Options du téléphone",
+        "phone_country_code_label": "Indicatif pays du numéro de téléphone",
+        "storefront_link": "site web du marchand",
+        "suburb_label": "Banlieue",
+        "subdistrict_label": "Sous-district",
+        "optional_subdistrict_label": "Sous-district (facultatif)",
+        "optional_street_name_label": "Rue (facultatif)",
+        "field_saved_label": "Enregistré",
+        "field_tooltip_helper_text": "Utilisé pour votre confirmation de commande et vos rappels de panier",
+        "field_tooltip_accessibility_label": "Plus d’informations sur l’utilisation de vos coordonnées"
+      },
+      "delivery_options": {
+        "ship": "Expédier",
+        "pick_up": "Récupérer",
+        "pick_up_in_two_hours": "Habituellement prête en 2 heures",
+        "pick_up_in_four_hours": "Habituellement prête en 4 heures",
+        "pick_up_immediately": "Prêt pour le ramassage maintenant",
+        "pick_up_next_day": "Prêt pour le ramassage le jour suivant",
+        "pick_up_in_one_hour": "Habituellement prête en 1 heure",
+        "pick_up_in_twenty_four_hours": "Habituellement prête en 24 heures",
+        "pick_up_in_two_to_four_days": "Habituellement prête en 2 à 4 jours",
+        "pick_up_in_five_or_more_days": "Habituellement prête en 5 jours ou plus",
+        "pick_up_in_zero_to_two_hours": "Prêt pour le ramassage dans 2 heures",
+        "pick_up_in_two_to_four_hours": "Prêt pour le ramassage dans 4 heures",
+        "free_total_label": "Gratuit",
+        "shipping_address": "Adresse d’expédition",
+        "pick_up_locations": "Centres de retrait",
+        "pickup_point_method_definition": "Expédier au point relais",
+        "retail_method_definition": "Expédition au détail",
+        "none_method_definition": "Aucune expédition",
+        "subscription_pickup_information": "Ce sera le point de retrait pour toutes les futures commandes de votre abonnement.",
+        "ship_to_address": "Expédier à l’adresse",
+        "pick_up_from_store": "Retrait en boutique",
+        "company_location_no_address_banner": "L’expédition de commandes vers des emplacements sans adresse sera soumise à examen.",
+        "pickup": "Retrait",
+        "pickup_store": "Retrait en boutique",
+        "pickup_point": "Point de retrait",
+        "pickup_point_map_title": "Carte des points de retrait",
+        "digital_product": "Produit numérique"
+      },
+      "customer_account": {
+        "not_user_label": "Vous n’êtes pas %{first_name} ?",
+        "have_an_account_label": "Vous possédez un compte ?",
+        "sign_in_link_label": "Se connecter",
+        "sign_out_link_label": "Se déconnecter",
+        "save_my_information_label": "Sauvegarder mes coordonnées pour la prochaine fois",
+        "invalid_address": "L’adresse sélectionnée n’est pas valide. %{update_address_link} ou sélectionnez une adresse différente.",
+        "incomplete_address": "L’adresse sélectionnée est incomplète. %{update_address_link} ou sélectionnez une adresse différente.",
+        "rollup_label": "Compte",
+        "invalid_shipping_method_summary": "Sélectionnez une adresse d’expédition valide pour afficher les modes d’expédition disponibles",
+        "saved_address_option_link": "Utiliser une adresse enregistrée",
+        "saved_address_modal_title": "Utiliser mon adresse enregistrée",
+        "saved_address_option_description": {
+          "one": "Vous avez {{count}} adresses enregistrées.",
+          "other": "Vous avez {{count}} adresses enregistrées."
+        },
+        "rollup_accessibility_label": "Options du compte"
+      },
+      "stock": {
+        "page_title": "Problèmes d’inventaire",
+        "title": "En rupture de stock",
+        "items_unavailable_notice": "Certains articles ne sont plus disponibles.",
+        "product_column_header": "Produits",
+        "quantity_column_header": "Quantité",
+        "price_column_header": "Prix",
+        "status_column_header": "Statut",
+        "removed_from_cart_notice": "Retiré du panier",
+        "sold_out_label": "Épuisé",
+        "reduced_label": "Réduit",
+        "reduced_with_quantity_label": "Plus que %{quantity_available} restant",
+        "remove_from_cart_button_label": "Retirer du panier",
+        "continue_shopping_button_label": "Continuer",
+        "go_back_to_cart_button_label": "Revenir à mon panier",
+        "remove": "Retirer",
+        "empty_cart_label": "Votre panier est vide",
+        "quantity_update": {
+          "page_title": "Mise à jour de la quantité",
+          "title": "Mise à jour de la quantité",
+          "description": "Les quantités disponibles pour ces articles ont changé et ont été mises à jour dans votre panier."
+        },
+        "unpurchasable_product": {
+          "title": "Produit inachetable",
+          "header": "Certains articles ont été retirés de votre panier",
+          "message": "Ces articles ne sont pas disponibles pour les commandes B2B.",
+          "status_column_header": "Indisponible"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Produit inachetable",
+          "header": "Certains articles ont été retirés de votre panier",
+          "message": "Ces articles ne sont pas disponibles.",
+          "status_column_header": "Indisponible"
+        },
+        "unshippable_product": {
+          "title": "Aucune livraison disponible",
+          "header": {
+            "one": "Aucune livraison disponible pour %{count} article",
+            "other": "Aucune livraison disponible pour %{count} articles"
+          },
+          "message": {
+            "one": "Cet article sera retiré de votre panier, car il n’y a aucun mode de livraison disponible pour votre adresse.",
+            "other": "Ces articles seront retirés de votre panier, car il n’y a aucun mode de livraison disponible pour votre adresse."
+          },
+          "status_column_header": "Aucune livraison"
+        },
+        "price_update": {
+          "title": "Changement de prix",
+          "description": "Les prix de ces articles ont changé et ont été actualisés dans votre panier.",
+          "updated_price": "Prix actualisé"
+        },
+        "return_to_store_label": "Retour à la boutique",
+        "item_label": {
+          "one": "{{count}} article",
+          "other": "{{count}} articles"
+        },
+        "continue_cta_label": "Poursuivre le paiement",
+        "out_of_stock": {
+          "description": "Ces articles ne sont plus disponibles et seront retirés de votre panier.",
+          "items_unavailable": "Certains articles ne sont plus disponibles et seront retirés de votre panier.",
+          "missing_items": {
+            "mixed_issues_title": "Certains articles ne sont plus disponibles",
+            "title": {
+              "one": "{{count}} article n’est plus disponible",
+              "other": "{{count}} articles ne sont plus disponibles"
+            },
+            "some_available_notice": {
+              "one": "Les articles restants sont toujours disponibles pour le paiement. L’article indisponible sera retiré du panier.",
+              "other": "Les articles restants sont toujours disponibles pour le paiement. Les articles indisponibles seront retirés du panier."
+            },
+            "none_available_notice": {
+              "one": "Cet article n’est plus disponible et a été retiré de votre panier.",
+              "other": "Ces articles ne sont plus disponibles et ont été retirés de votre panier."
+            }
+          }
+        },
+        "unfulfillable_product": {
+          "title": "Livraison indisponible",
+          "message": {
+            "one": "%{delivery_method} n’est plus disponible pour cet article.",
+            "other": "%{delivery_method} n’est plus disponible pour ces articles."
+          },
+          "default_message": {
+            "one": "Le mode de livraison choisi n’est plus disponible pour cet article.",
+            "other": "Le mode de livraison choisi n’est plus disponible pour ces articles."
+          }
+        },
+        "price_and_quantity_update": {
+          "title": "Mise à jour des prix et des quantités",
+          "description": "Les prix et les quantités disponibles pour ces articles ont changé et ont été mis à jour dans votre panier."
+        },
+        "out_of_stock_in_context_label": "Ce produit n’est pas disponible dans votre pays/région.",
+        "unavailable_at_pickup_location_label": "Cet article n’est pas disponible pour la collecte à l’emplacement sélectionné."
+      },
+      "order_summary": {
+        "title": "Résumé de la commande",
+        "order_name_label": "Commande %{name}",
+        "shopping_cart_label": "Panier",
+        "discount_title": "Code promo",
+        "discount_label": "code de réduction",
+        "discount_placeholder": "code de réduction",
+        "gift_card_title": "Carte-cadeau",
+        "gift_card_label": "Carte-cadeau",
+        "gift_card_placeholder": "Carte-cadeau",
+        "gift_card_and_discount_title": "Code de réduction ou carte‑cadeau",
+        "gift_card_and_discount_label": "Code de réduction ou carte‑cadeau",
+        "gift_card_and_discount_placeholder": "Code de réduction ou carte‑cadeau",
+        "add_discount_or_gift_card": "Ajouter un code de réduction ou une carte-cadeau",
+        "remove_gift_card_label": "Retirer la carte-cadeau",
+        "remove_discount_label": "Retirer le code promo",
+        "free_shipping_discount_label": "Expédition gratuite",
+        "apply_discount_button_label": "Valider",
+        "applied_discount_message": "%{amount} a/ont été déduit(s) du prix total",
+        "discount_has_been_applied": "La réduction a été appliquée",
+        "discount_has_been_removed": "La réduction a été retirée",
+        "gift_card_has_been_applied": "La carte-cadeau a été appliquée",
+        "gift_card_has_been_removed": "La carte-cadeau a été retirée",
+        "discount_already_applied": "Une réduction a déjà été appliquée à cette commande. Vous ne pouvez pas appliquer d'autre réduction.",
+        "cart_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> n’est pas valide pour les articles de votre panier",
+        "discount_requires_customer_notice": "Saisissez vos informations d’expédition pour appliquer le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> n’est pas disponible pour vous pour le moment",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Le code de réduction<strong style=\"text-transform:uppercase\"> %{code}</strong> n’est pas disponible pour votre adresse d’expédition",
+        "customer_already_used_once_per_customer_discount_notice": "Le code promo <strong style=\"text-transform:uppercase\">%{code}</strong> a déjà été utilisé",
+        "subtotal_label": "Sous-total",
+        "shipping_label": "Expédition",
+        "tip_label": "Pourboire",
+        "shipping_default_value": "Calculé à l’étape suivante",
+        "shipping_pending_value": "—",
+        "shipping_pending_message": "Pas encore disponible",
+        "shipping_policy_link": "Coûts d’expédition",
+        "taxes_label": "Taxes",
+        "total_label": "Total",
+        "total_outstanding_label": "Montant à payer",
+        "partial_total_label": "Total",
+        "free_total_label": "Gratuit",
+        "free_shipping_total_label": "Gratuit",
+        "paid_label": "Payé",
+        "payment_due_label": "Paiement dû",
+        "vat_label_html": "Taxes de %{amount} incluses",
+        "discount_and_gift_card_savings_notice": "Après %{discount_amount} de réduction et %{gift_card_amount} en cartes-cadeaux",
+        "discount_savings_notice": "Après %{discount_amount} de réduction",
+        "gift_card_savings_notice": "Après %{gift_card_amount} en cartes-cadeaux",
+        "cost_table_title": "Résumé des coûts",
+        "description_label": "Description",
+        "price_label": "Prix",
+        "quantity_label": "Quantité",
+        "product_change_label": "Modifier",
+        "product_image_label": "Image du produit",
+        "scroll_order_summary": "Défiler la liste d’éléments",
+        "expand_order_summary_short": "Afficher",
+        "collapse_order_summary_short": "Masquer"
       }
     }
   }
