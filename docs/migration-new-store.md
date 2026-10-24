@@ -1,6 +1,12 @@
 # Overstap naar een nieuwe, echte Shopify-winkel (samenvatting voor ChatGPT/Codex)
 
-Status: gepland, nog niet gestart (2026-10-24).
+Status (2026-10-24): nieuwe winkel aangemaakt (`ozayrp-60.myshopify.com`),
+thema via GitHub gekoppeld (branch `main`, niet gepubliceerd), app "La
+Retrouvée Migratie" geïnstalleerd; omgevingsvariabelen `*_NEW` toegevoegd.
+Een volledige export van de oude winkel is gemaakt en getest (26 producten,
+273 bestanden, 9 collecties, 14 pagina's, 18 artikelen, 7 menu's, 5 beleidsteksten,
+alle vertalingen). Scripts: `tools/migration/` (zie README daar). Volgende stap:
+in een nieuwe sessie de import bouwen en testen tegen de nieuwe winkel.
 
 ## Waarom
 
