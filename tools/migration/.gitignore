@@ -1,0 +1,4 @@
+.shopify_token*
+.payload*
+migration-export/
+__pycache__/
