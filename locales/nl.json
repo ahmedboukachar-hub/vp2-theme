@@ -817,5 +817,375 @@
       "expanded": "Formulier voor ontvanger cadeaubon uitgevouwen",
       "collapsed": "Formulier voor ontvanger cadeaubon ingeklapt"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "errors": {
+          "delivery": {
+            "auto_fulfill_not_allowed": "Deze sessie is niet gemachtigd om fulfilmentgedrag te overschrijven.",
+            "auto_fulfill_required": "Automatische fulfilment is vereist wanneer de bezorgmethode RETAIL wordt gevraagd.",
+            "prefetch_shipping_rates_used": "Vooraf opgehaalde verzendtarieven mogen nooit retourtarieven zijn.",
+            "fulfillment_constraints_not_satisfied": "Er is niet voldaan aan een of meer fulfilmentbeperkingen.",
+            "must_fulfill_from_constraint_not_satisfied": "De reden hiervoor is dat artikelen niet vanuit vereiste locaties kunnen worden afgehandeld.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "De reden hiervoor is dat artikelen niet vanuit dezelfde locatie kunnen worden afgehandeld.",
+            "delivery_strategy_conditions_not_satisfied": "Er zijn bezorgstrategieën beschikbaar voor deze locatie, maar er wordt niet aan de voorwaarden voldaan.",
+            "out_of_stock_at_origin_location": "Geen voorraad op herkomstlocatie.",
+            "invalid_signature": "Ongeldige handtekening voor korting.",
+            "selected_pickup_option_no_longer_available": "Je eerder geselecteerde afhaaloptie is niet langer beschikbaar.",
+            "mixed_destination_countries": "Bezorging is niet beschikbaar omdat de bezorgregels meerdere landen beslaan."
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "Kortingen zijn niet toegestaan in B2B-winkels.",
+            "custom_discount_not_honoured": "De ingevoerde aangepaste korting is niet gegeven.",
+            "unsupported_expectation": "De ingevoerde kortingsregel bevatte een veronderstelling die het beleid niet kon interpreteren.",
+            "additional_requested_discount_code_discarded": "{{code}} is geldig maar niet van toepassing. Controleer de voorwaarden voor kortingen.",
+            "allocations_mismatch": "Je kortingscode is gewijzigd. Controleer je winkelwagen en probeer het opnieuw.",
+            "discount_code_not_honoured": "%{discount_rejection_message}",
+            "discount_title_too_long": "De titel van de korting mag niet langer dan 255 tekens zijn.",
+            "additional_requested_discount_discarded": "Je korting is geldig maar niet toepasbaar. Controleer de voorwaarden voor kortingen.",
+            "mixed_destination_countries": "Kortingen zijn niet beschikbaar omdat de bezorgregels meerdere landen beslaan."
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "Belastingen die van toepassing zijn op je bestelling, zijn gewijzigd, Controleer je bestelling en probeer het opnieuw.",
+            "unresolvable_tax_terms": "De voorgestelde voorwaarden zijn met het oog op de bestaande onderhandelingscontext niet haalbaar.",
+            "delivery_price_is_abstract": "De desbetreffende prijs voor bezorging is abstract.",
+            "tax_inclusivity_mismatch": "Onderhandel opnieuw met een concrete waarde voor totalTaxAndDutyAmount of totalAmountIncludedInTarget.",
+            "tax_exemption_not_supported": "In de huidige onderhandelingssessie worden geen belastingvrijstellingen ondersteund.",
+            "delivery_tax_exemption_not_supported": "Belastingvrijstellingen voor bezorgingsregels worden momenteel niet ondersteund.",
+            "proposed_allocations_required": "Het veld 'voorgestelde toewijzingen' ontbreekt.",
+            "merchandise_terms_must_be_defined": "Definieer voorwaarden voor goederen.",
+            "delivery_terms_must_be_defined": "Definieer voorwaarden voor bezorging.",
+            "merchandise_discount_terms_must_be_defined": "Definieer voorwaarden voor goederenkorting.",
+            "delivery_discount_terms_must_be_defined": "Definieer voorwaarden voor bezorgkorting.",
+            "allocated_required": "Het veld 'toegewezen' ontbreekt.",
+            "value_required": "Het veld 'waarde' ontbreekt.",
+            "line_splits_not_supported": "Het veld 'goederenregels' moet zodanig worden opgesplitst dat er voor elke regel een aparte component in het voorstel van de verkoper is.",
+            "mixed_tax_inclusivity_not_supported": "Belastingregels moeten allemaal inclusief belasting of allemaal exclusief belasting zijn."
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "Handmatige betalingen zijn niet toegestaan in B2B-winkels.",
+            "positive_amount_expected": "Het te betalen bedrag moet groter zijn dan 0.",
+            "total_amount_mismatch": "Het totaal te betalen bedrag komt niet overeen met de som van de betalingen.",
+            "subscription_terms_not_accepted": "Abonnementsvoorwaarden niet geaccepteerd.",
+            "missing_session_id": "Informatie over creditcardsessie ontbreekt.",
+            "gateway_not_supported": "De betalingsgateway ondersteunt opslaan van de betaalmethode niet.",
+            "credit_card_last_name_required": "'achternaam' mag niet leeg zijn.",
+            "credit_card_update_failed": "Updaten van creditcard is niet gelukt.",
+            "invalid_address_type": "Het ingevoerde adrestype is ongeldig voor deze betaalmethode.",
+            "missing_retail_attributions": "Retailtoewijzingen zijn vereist voor handmatig ingevoerde creditcardbetalingen.",
+            "unexpected_retail_attributions": "Onverwachte retailtoewijzingen opgegeven voor een creditcardbetaling.",
+            "invalid_card_source": "Deze sessie is niet bevoegd om deze kaartbron te gebruiken.",
+            "wallet_content_missing": "Content van wallet ontbreekt.",
+            "payment_instrument_not_found": "Kan betaalmethode niet vinden",
+            "unauthorized_capture_method": "Configuratie van de methode voor het vastleggen van betalingen is niet toegestaan.",
+            "saved_payment_methods_not_allowed": "'Opgeslagen betaalmethoden' is niet toegestaan.",
+            "saved_payment_methods_not_enabled": "'Opgeslagen betaalmethoden' is niet ingeschakeld voor deze winkel.",
+            "store_credit_not_enabled": "Winkeltegoed is niet ingeschakeld voor deze winkel.",
+            "store_credit_account_not_found": "Winkeltegoedaccount niet gevonden.",
+            "store_credit_account_mismatch": "Winkeltegoedaccount komt niet overeen met de identiteit van de koper.",
+            "store_credit_mismatched_currency": "De valuta van het winkeltegoedaccount komt niet overeen met de valuta van de checkout.",
+            "store_credit_insufficient_funds": "Er is onvoldoende saldo in het winkeltegoedaccount.",
+            "store_credit_buying_gift_card": "Met winkeltegoed kun je geen cadeaubon kopen.",
+            "gift_cards_not_allowed_for_b2b": "Cadeaubonnen zijn niet toegestaan in B2B-winkels.",
+            "method_required": "Er moet een betaalmethode worden voorgesteld.",
+            "paypal_express_address_invalid": "PayPal heeft een ongeldig adres geretourneerd.",
+            "saved_payment_methods_cvv_verification_disabled": "Voor de geselecteerde betaalmethode is CVV/CVC-verificatie vereist, maar dat is niet ingeschakeld voor deze winkel. Gebruik een andere betaalmethode."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Shop accepteert geen fooien.",
+            "only_one_tip_line_allowed": "Meerdere fooiregels worden niet ondersteund.",
+            "tips_not_allowed_for_b2b": "Fooien zijn niet toegestaan in B2B-winkels.",
+            "currency_change_reset": "Fooi is opnieuw ingesteld vanwege een valutawijziging.",
+            "tips_not_allowed_for_deferred_purchase_options": "Fooien worden nog niet ondersteund voor uitgestelde aankoopopties."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Deze conceptbestelling bestaat niet in de huidige winkel.",
+            "staff_member_not_exist": "Deze medewerker is niet bekend in de huidige winkel.",
+            "location_not_exist": "Deze locatie bestaat niet in de huidige winkel.",
+            "point_of_sale_device_not_exist": "Dit verkooppuntapparaat bestaat niet in de huidige winkel.",
+            "unresolvable_target_merchandise_lines": "De voorgestelde verkooptoewijzingen zijn in de bestaande onderhandelingscontext niet oplosbaar."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Het voorstel van je koper moet non-negotiable_terms bevatten.",
+            "invalid_signature": "De handtekening voor {{target_terms}} is ongeldig."
+          },
+          "inventory": {
+            "missing_quantity_value": "Het veld 'Hoeveelheid' ontbreekt in de voorraadregels van de koper.",
+            "changing_behavior_not_allowed": "Deze klant is niet gemachtigd om voorraadfunctionaliteit te wijzigen.",
+            "only_one_inventory_behavior_allowed": "Op dit moment is er maar één voorraadfunctie per checkout toegestaan."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Bij deze checkout is het weigeren van douanerechten niet toegestaan."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Bij deze checkout is retailtoewijzing niet toegestaan.",
+            "retail_attribution_required": "Bij deze checkout is retailtoewijzing vereist."
+          },
+          "captcha": {
+            "metadata_missing": "Bij deze checkout is het invullen van een captcha verplicht.",
+            "metadata_mismatch": "De opgegeven captcha-provider en het type komen niet overeen met de verwachte waarden.",
+            "token_missing": "Voltooi deze checkout door een captcha-token in te voeren.",
+            "job_enqueue_failed": "De captcha-validatietaak kan niet in de wachtrij worden geplaatst.",
+            "job_already_queued": "Captcha-validatie is al in de wachtrij geplaatst voor deze token.",
+            "token_expired": "De ingevoerde captcha-token is verlopen. Voer een nieuwe captcha uit om door te gaan met de checkout.",
+            "token_invalid": "De opgegeven captcha-token was ongeldig. Voer een nieuwe captcha uit om door te gaan met de checkout.",
+            "token_not_valid_for_session": "Kan de opgegeven captcha niet gebruiken bij deze checkout."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Het ontvangen bedrag moet in de valuta van de winkel zijn."
+          },
+          "checkout_source": {
+            "revoked": "Deze checkout is niet meer beschikbaar."
+          }
+        },
+        "full_price": "Volle prijs:",
+        "title": "Checkout - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - checkout",
+        "loading_title": "Checkout - {{shopName}}",
+        "display_name": "{{firstName}} {{lastName}}",
+        "google_map_title": "Google-kaart",
+        "submit_order_button_label": "Bestelling indienen",
+        "submit_for_review_button_label": "Ter controle indienen",
+        "submit_for_review_notice_label": "Betaling is pas verschuldigd als je bestelling is gecontroleerd",
+        "continue_to_payment_plans_button_label": "Doorgaan naar betalingsplannen",
+        "back_button_label": "Retourneren",
+        "choose_delivery_strategy": "Kies een bezorgmethode",
+        "autocomplete_zero_item": "Geen artikelen beschikbaar",
+        "autocomplete_powered_by_google": "Mogelijk gemaakt door {{brandName}}",
+        "submit": "Indienen",
+        "processing": "Verwerken...",
+        "stepper": {
+          "increase": "Toename van {{type}}",
+          "decrease": "Afname van {{type}}",
+          "minimum_reached": "Minimum van {{value}} bereikt",
+          "maximum_reached": "Maximum van {{value}} bereikt"
+        },
+        "remove_item": "%{label} verwijderen",
+        "remove_tag": "Tag verwijderen",
+        "dates": {
+          "weekdays": {
+            "monday": "maandag",
+            "tuesday": "dinsdag",
+            "wednesday": "woensdag",
+            "thursday": "donderdag",
+            "friday": "vrijdag",
+            "saturday": "zaterdag",
+            "sunday": "zondag"
+          },
+          "weekdays_abbreviation": {
+            "monday": "ma.",
+            "tuesday": "di.",
+            "wednesday": "wo.",
+            "thursday": "do.",
+            "friday": "vr.",
+            "saturday": "za.",
+            "sunday": "zo."
+          },
+          "months": {
+            "january": "januari",
+            "february": "februari",
+            "march": "maart",
+            "april": "april",
+            "may": "mei",
+            "june": "juni",
+            "july": "juli",
+            "august": "augustus",
+            "september": "september",
+            "october": "oktober",
+            "november": "november",
+            "december": "december"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Vorige maand weergeven, {{month}} {{year}}",
+          "show_next_month": "Volgende maand weergeven, {{month}} {{year}}",
+          "range_start": "Begin bereik",
+          "in_range": "Binnen bereik",
+          "range_end": "Einde bereik"
+        },
+        "list_formatter": {
+          "and": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}} en {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} en {{secondWord}}"
+          },
+          "or": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}} of {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} of {{secondWord}}"
+          },
+          "narrow": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, {{lastWord}}",
+            "twoWordConnector": "{{firstWord}}, {{secondWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Cluster van {{number}} markeerpunt",
+            "other": "Cluster van {{number}} markeerpunten"
+          }
+        },
+        "sheet": {
+          "expand": "Uitvouwen"
+        },
+        "confirm_order_button_label": "Bestelling bevestigen",
+        "qr_code": "QR-code",
+        "dropzone": {
+          "add_file": "Bestand toevoegen",
+          "invalid_file_type": "Dit bestandstype wordt niet ondersteund",
+          "dragged_over": "Bestand neerzetten om te uploaden"
+        },
+        "loading": "Laden...",
+        "remove_chip": "Artikel verwijderen",
+        "finalize_order_accessibility_label": "Bestelling afronden"
+      },
+      "contact": {
+        "title": "Informatie",
+        "address_title": "Adres",
+        "delivery_option_title": "Bezorgmethode",
+        "contact_method_title": "Contact",
+        "email_label": "E-mail",
+        "email_placeholder": "E-mail",
+        "email_or_phone_label": "E‑mail of mobiele telefoonnummer",
+        "email_or_phone_placeholder": "E‑mail of mobiele telefoonnummer",
+        "stored_addresses_label": "Opgeslagen adressen",
+        "new_address_label": "Gebruik een nieuw adres",
+        "first_name_label": "Voornaam",
+        "optional_first_name_label": "Voornaam (optioneel)",
+        "last_name_label": "Achternaam",
+        "company_label": "Bedrijf",
+        "optional_company_label": "Bedrijf (optioneel)",
+        "address1_label": "Adres",
+        "address2_label": "Postbusnr., enz.",
+        "optional_address2_label": "Postbusnr., enz. (optioneel)",
+        "city_label": "Stad",
+        "country_label": "Land/regio",
+        "country_code": "Land-/regiocode",
+        "province_label": "Provincie",
+        "province_placeholder": "Provincie",
+        "county_label": "Provincie",
+        "county_placeholder": "Provincie",
+        "state_label": "Staat",
+        "state_placeholder": "Staat",
+        "region_label": "Regio",
+        "region_placeholder": "Regio",
+        "prefecture_label": "Prefectuur",
+        "prefecture_placeholder": "Prefectuur",
+        "governorate_label": "Gouvernement",
+        "governorate_placeholder": "Gouvernement",
+        "emirate_label": "Emiraat",
+        "emirate_placeholder": "Emiraat",
+        "state_and_territory_label": "Staat/Grondgebied",
+        "state_and_territory_placeholder": "Staat/Grondgebied",
+        "phone_label": "Telefoon",
+        "optional_phone_label": "Telefoon (optioneel)",
+        "phone_placeholder": "Telefoon",
+        "phone_tooltip": "In het geval dat we contact met je moeten opnemen over je bestelling",
+        "zip_code_label": "Postcode",
+        "zip_code_placeholder": "Postcode",
+        "postal_code_label": "Postcode",
+        "postal_code_placeholder": "Postcode",
+        "postcode_label": "Postcode",
+        "postcode_placeholder": "Postcode",
+        "pincode_label": "Postcode",
+        "pincode_placeholder": "Postcode",
+        "region_none": "Geen geselecteerd",
+        "civic_number_warning": "Voeg een huisnummer toe als je er een hebt",
+        "optional_last_name_label": "Achternaam (optioneel)",
+        "company_contact_info": "{{companyName}} · {{contact}}",
+        "different_shipping_address_label": "Naar een ander adres verzenden",
+        "different_shipping_address_text": "Een eenmalig adres gebruiken voor deze bestelling",
+        "change_company_location_link_label": "Bedrijfslocatie wijzigen",
+        "change_location_link_label": "Locatie wijzigen",
+        "ship_to_company": "Verzenden naar {{companyName}}",
+        "shipping_used_as_billing_notice": "We gebruiken dit ook als factuuradres voor deze bestelling.",
+        "company_attention_label": "Bedrijf/t.a.v.",
+        "optional_company_attention_label": "Bedrijf/t.a.v. (optioneel)",
+        "street_name_label": "Straat",
+        "street_number_label": "Huisnummer",
+        "optional_street_number_label": "Huisnummer (optioneel)",
+        "neighborhood_label": "Buurt",
+        "optional_neighborhood_label": "Buurt (optioneel)",
+        "barangay_label": "Barangay",
+        "optional_barangay_label": "Barangay (optioneel)",
+        "colony_label": "Colonia",
+        "optional_colony_label": "Colonia (optioneel)",
+        "commune_label": "Gemeente",
+        "optional_commune_label": "Gemeente (optioneel)",
+        "district_label": "District",
+        "optional_district_label": "District (optioneel)",
+        "ward_label": "Wijk",
+        "optional_ward_label": "Wijk (optioneel)",
+        "available_addresses_label": "Beschikbare adressen",
+        "block_label": "Blok",
+        "optional_block_label": "Blok (optioneel)",
+        "area_label": "Gebied",
+        "optional_area_label": "Gebied (optioneel)",
+        "optional_zip_code_label": "Postcode (optioneel)",
+        "optional_postal_code_label": "Postcode (optioneel)",
+        "optional_postcode_label": "Postcode (optioneel)",
+        "optional_pincode_label": "Pincode (optioneel)",
+        "email_rollup_accessibility_label": "E-mailopties",
+        "phone_rollup_accessibility_label": "Telefoonopties",
+        "phone_country_code_label": "Landcode van telefoonnummer",
+        "storefront_link": "website van de merchant",
+        "suburb_label": "Buitenwijk",
+        "subdistrict_label": "Subdistrict",
+        "optional_subdistrict_label": "Subdistrict (optioneel)",
+        "optional_street_name_label": "Straat (optioneel)",
+        "field_saved_label": "Opgeslagen",
+        "field_tooltip_helper_text": "Wordt gebruikt voor je bestelbevestiging en winkelwagenherinneringen",
+        "field_tooltip_accessibility_label": "Meer informatie over hoe je contactgegevens worden gebruikt"
+      },
+      "delivery_options": {
+        "ship": "Verzenden",
+        "pick_up": "Ophalen",
+        "pick_up_in_two_hours": "Meestal klaar binnen 2 uur",
+        "pick_up_in_four_hours": "Meestal klaar binnen 4 uur",
+        "pick_up_immediately": "Klaar om nu op te halen",
+        "pick_up_next_day": "Klaar om de volgende dag op te halen",
+        "pick_up_in_one_hour": "Meestal klaar binnen 1 uur",
+        "pick_up_in_twenty_four_hours": "Meestal klaar binnen 24 uur",
+        "pick_up_in_two_to_four_days": "Meestal klaar binnen 2-4 dagen",
+        "pick_up_in_five_or_more_days": "Meestal klaar binnen meer dan 5 dagen",
+        "pick_up_in_zero_to_two_hours": "Klaar om over 2 uur op te halen",
+        "pick_up_in_two_to_four_hours": "Klaar om over 4 uur op te halen",
+        "free_total_label": "Gratis",
+        "shipping_address": "Bezorgadres",
+        "pick_up_locations": "Afhaallocaties",
+        "pickup_point_method_definition": "Verzenden naar afhaalpunt",
+        "retail_method_definition": "Verzendingen van retail",
+        "none_method_definition": "Geen verzendingen",
+        "subscription_pickup_information": "Dit wordt de afhaallocatie voor alle toekomstige bestellingen van je abonnement.",
+        "ship_to_address": "Verzenden naar adres",
+        "pick_up_from_store": "Afhalen in de winkel",
+        "company_location_no_address_banner": "Bestellingen die worden verzonden naar locaties zonder adres worden ingediende voor controle.",
+        "pickup": "Afhalen",
+        "pickup_store": "Afhalen in winkel",
+        "pickup_point": "Afhaalpunt",
+        "pickup_point_map_title": "Kaart met afhaalpunten",
+        "digital_product": "Digitaal product"
+      },
+      "customer_account": {
+        "not_user_label": "Ben je niet %{first_name}?",
+        "have_an_account_label": "Heb je een account?",
+        "sign_in_link_label": "Inloggen",
+        "sign_out_link_label": "Uitloggen",
+        "save_my_information_label": "Deze informatie opslaan om in het vervolg sneller af te rekenen",
+        "invalid_address": "Het geselecteerde adres is ongeldig. %{update_address_link} of selecteer een ander adres.",
+        "incomplete_address": "Het geselecteerde adres is onvolledig. %{update_address_link} of selecteer een ander adres.",
+        "rollup_label": "Account",
+        "invalid_shipping_method_summary": "Selecteer een geldig bezorgadres om de beschikbare verzendmethoden te zien",
+        "saved_address_option_link": "Gebruik een opgeslagen adres",
+        "saved_address_modal_title": "Gebruik mijn opgeslagen adres",
+        "saved_address_option_description": {
+          "one": "Je hebt {{count}} opgeslagen adres.",
+          "other": "Je hebt {{count}} opgeslagen adressen."
+        },
+        "rollup_accessibility_label": "Accountopties"
+      }
+    }
   }
 }
