@@ -20,6 +20,20 @@ en kan dus nooit echte bestellingen verwerken. Alles moet naar een nieuwe winkel
 - De nieuwe winkel is volledig onafhankelijk van vintagepareltje.com. Voorraad
   wordt niet gedeeld: een uniek stuk staat maar in één winkel te koop.
 
+## Taakverdeling (afgesproken 2026-10-24, PR #97)
+
+- **Claude Code**: technische migratie: volledige export/back-up van de oude
+  winkel (afbeeldingen, handles, ID's, metavelden, vertalingen, aantallen),
+  herhaalbare scripts met logging en een oud→nieuw ID-mapping, en de migratie
+  in de volgorde hieronder; themacontrole via GitHub.
+- **ChatGPT** (Shopify-connector): controle van de nieuwe winkel en aanvullende
+  Admin-configuratie waar de connector dat toestaat; meldt expliciet welke
+  handmatige stappen overblijven. Scopes op de nieuwe winkel eerst verifiëren.
+- **Eigenaar**: mailbox, account/winkel, app-toegang, betalingen, bank,
+  abonnement, belastingen en de domeinwissel.
+- **Geen domeinwissel of livegang zonder akkoord van de eigenaar** na geslaagde
+  controles. De oude dev-winkel blijft testomgeving.
+
 ## Wat de eigenaar zelf doet (Admin, niet via API)
 
 1. Mailbox info@laretrouvee.com aanmaken.
