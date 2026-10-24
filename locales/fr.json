@@ -4041,6 +4041,107 @@
       "thursday": "Jeudi",
       "friday": "Vendredi",
       "saturday": "Samedi"
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "current_method": "Actuel",
+        "cancel": "Annuler",
+        "save": "Enregistrer",
+        "success": "Moyen de paiement mis à jour",
+        "use_new_payment_method": "+ Utiliser un nouveau moyen de paiement"
+      }
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "sheet_title": "Se connecter ou créer un compte",
+        "section_divider": "Autres moyens de connexion",
+        "alternate_divider": "OU",
+        "email_field_label": "E-mail",
+        "orders_button": "Commandes",
+        "profile_button": "Profil",
+        "shop_login_button": "Se connecter avec Shop",
+        "continue_with_google": "Continuer avec Google",
+        "continue_with_facebook": "Continuer avec Facebook",
+        "use_email_button": "Utiliser une adresse e-mail à la place"
+      },
+      "signed_in_state": {
+        "greeting_with_name": "Bonjour, {{first_name}}",
+        "greeting_without_name": "Compte",
+        "orders_button": "Commandes",
+        "profile_button": "Profil"
+      },
+      "location_picker": {
+        "sheet_title": "Emplacements",
+        "search_field_placeholder": "Rechercher"
+      },
+      "aria_labels": {
+        "close_menu": "Fermer le menu",
+        "back_to_main_menu": "Retour au menu principal depuis {{title}}",
+        "open_submenu": "{{title}}, ouvre le sous-menu",
+        "loading_menu": "Chargement du menu",
+        "account": "Compte",
+        "sign_in_with_email": "Se connecter avec e-mail",
+        "sign_in": "Se connecter",
+        "loading": "Chargement"
+      }
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "Numéro de carte",
+        "title": "Remplacer le moyen de paiement",
+        "replace_with": "Remplacer par",
+        "add_new_payment_method": "Ajouter nouveau",
+        "save_button": "Enregistrer",
+        "close_button": "Fermer",
+        "loading": "Chargement de la fenêtre modale de remplacement du moyen de paiement",
+        "success": "Moyen de paiement mis à jour",
+        "invalid_subscription_contract": "Impossible de trouver l’abonnement",
+        "expiry_date": "Exp. le {{expiryDate}}",
+        "edit_current_payment_method": "Modifier le moyen de paiement actuel",
+        "edit_selected_payment_method": "Modifier le moyen de paiement sélectionné"
+      }
+    },
+    "order_receipt_document": {
+      "placeholder_title": "Paramètre fictif de reçu",
+      "placeholder": "Paramètre fictif : la commande %{name} d’un montant de %{total} n’est pas prête à être affichée."
+    },
+    "redirect_warning": {
+      "title": "Ce lien est peut-être dangereux",
+      "description_html": "En cliquant sur Continuer, vous accéderez à %{destination}",
+      "go_back": "Retourner",
+      "leave_this_page": "Quitter cette page",
+      "continue_anyway": "Continuer quand même",
+      "why_am_i_seeing_this": "Pourquoi ce message s’affiche-t-il ?"
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "Logo de %{shop_name}",
+      "processing": "En cours de traitement…",
+      "step_one": {
+        "page_title": "Se connecter - %{shop_name}",
+        "heading": "Se connecter",
+        "subheading": "Saisissez votre adresse e-mail et nous vous enverrons un code de vérification",
+        "subheading_with_sign_in_options": "Se connecter ou créer un compte",
+        "input_field_label": "Adresse e-mail",
+        "button": "Continuer",
+        "or": "ou",
+        "consent_agreement": "En continuant, vous acceptez les %{terms}",
+        "last_used_pill": "Dernière utilisation"
+      },
+      "step_two": {
+        "page_title": "Saisissez le code - %{shop_name}",
+        "heading": "Saisissez le code",
+        "subheading": "Envoyé à %{email}",
+        "restart_link": "Se connecter avec une autre adresse e-mail",
+        "input_field_label": "Code à six chiffres",
+        "button": "Soumettre",
+        "change_email": "Modifier"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "Saisissez une adresse e-mail valide",
+          "invalid_code": "Saisissez le code à 6 chiffres valide"
+        }
+      }
     }
   }
 }
