@@ -3067,6 +3067,148 @@
             "billing_phone": "Voer een geldig telefoonnummer voor het factuuradres in"
           }
         }
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "all_products_one": "Het product in je winkelwagen is niet beschikbaar voor verzending naar %{location_name}.",
+          "all_products_other": "De producten in je winkelwagen zijn niet beschikbaar voor verzending naar %{location_name}."
+        },
+        "missing_country_fallback": "jouw land",
+        "indeterminate_location_fallback": "jouw locatie",
+        "cart_updated": "Je winkelwagen is bijgewerkt.",
+        "change_address_only": "Wijzig het bezorgadres om door te gaan.",
+        "change_address_or_remove": "Wijzig het bezorgadres of %{remove_action}.",
+        "empty_cart_action": "maak de winkelwagen leeg en ga terug naar de winkel",
+        "unavailable_line_item": "%{product_name}/%{variant_label}",
+        "remove_items_action": {
+          "one": "verwijder het niet beschikbare artikel",
+          "other": "verwijder de niet beschikbare artikelen"
+        }
+      },
+      "b2b_errors": {
+        "lost_b2b_purchasing_permissions": "Je bent niet langer gemachtigd om B2B-bestellingen te plaatsen. %{logout_url} om in plaats daarvan een persoonlijke bestelling te plaatsen.",
+        "log_out_link_text": "Uitloggen",
+        "lost_permissions_subtitle": "Je bent niet langer gemachtigd om B2B-bestellingen te plaatsen. Log uit om een persoonlijke bestelling te plaatsen.",
+        "lost_permissions_title": "Geen locatiemachtigingen"
+      },
+      "units": {
+        "milligram": "mg",
+        "gram": "g",
+        "kilogram": "kg",
+        "milliliter": "ml",
+        "centiliter": "cl",
+        "liter": "l",
+        "cubic_meter": "m³",
+        "millimeter": "mm",
+        "centimeter": "cm",
+        "meter": "m",
+        "square_meter": "m²",
+        "ounce": "oz",
+        "pound": "lb",
+        "fluid_ounce": "fl oz",
+        "pint": "pt",
+        "quart": "qt",
+        "gallon": "gal",
+        "inch": "in",
+        "foot": "ft",
+        "yard": "yd",
+        "square_foot": "ft²",
+        "item": "artikel"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "Dit adres wordt niet ondersteund voor het huidige lidmaatschap.",
+        "items_split_across_locations_unsupported": "Prime-bezorging is niet beschikbaar voor je bestelling. Je verzendopties zijn bijgewerkt."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Navigeren naar webshop"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Meer informatie over %{context}",
+        "additional_payment_methods": "Extra betaalmethoden"
+      },
+      "remote": {
+        "errors": {
+          "currency_mismatch": "Dit artikel kan niet worden toegevoegd aan je winkelwagen omdat het afkomstig is van een winkel die een andere valuta gebruikt.",
+          "max_remote_shops_exceeded": "Dit product kan niet worden toegevoegd omdat je winkelwagen al het maximum uit andere winkels bevat.",
+          "currency_mismatch_removal": "Er is een artikel verwijderd uit je winkelwagen omdat het afkomstig is van een winkel die een andere valuta gebruikt.",
+          "only_remote_merchandise_lines": "De checkout bevat alleen externe goederen. Er is een omleiding naar de externe winkel nodig om het afrekenen af te ronden."
+        }
+      },
+      "remote_merchandise_only": {
+        "title": "Je aankoop voltooien",
+        "remote_only_notice": "Deze artikelen worden verkocht en verzonden door andere winkels. Ga naar de kassa van elke winkel om je aankoop af te ronden.",
+        "return_to_store_label": "Terug naar winkel",
+        "checkout_on_shop_label": "Afrekenen bij %{shop_name}",
+        "single_shop_transition": "Je wordt omgeleid naar %{advertiser} om je aankoop af te ronden.",
+        "detail_item_label": {
+          "one": "{{count}} artikel",
+          "other": "{{count}} artikelen"
+        }
+      },
+      "remote_policies": {
+        "unavailable_policy": "Er is geen %{policy_name} verstrekt voor deze winkel. Neem voor meer informatie rechtstreeks contact op met %{shop_name}."
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_title": "Betaling mislukt",
+        "payment_not_processed_text": "Scan de QR-code nogmaals. Als het nog steeds niet werkt, laat het onze medewerkers dan weten en probeer een andere betaalmethode.",
+        "payment_link_expired_title": "Betaallink verlopen",
+        "payment_link_expired_text": "Scan de QR-code nogmaals.",
+        "title": "Offsite betaling mislukt"
+      },
+      "taxes": {
+        "tax_details": "Aanvullende belastinggegevens",
+        "vat_number": {
+          "field": {
+            "label": "Btw-identificatienummer (optioneel)",
+            "tooltip": "Valideert het btw-identificatienummer en past automatisch de verlegging toe op bestellingen die hiervoor in aanmerking komen"
+          },
+          "add": "Een btw-nummer toevoegen",
+          "vaulted": "Btw-identificatienummer: %{number}",
+          "badge": "Btw-identificatienummer: %{number}",
+          "domestic_order": "De verleggingsregeling geldt alleen voor grensoverschrijdende bestellingen binnen de EU. Voor lokale bestellingen wordt standaard btw in rekening gebracht.",
+          "status": {
+            "invalid_format": {
+              "at": "Een btw-identificatienummer van Oostenrijk bevat AT en 9 tekens",
+              "be": "Een btw-identificatienummer van België bevat BE en 10 tekens",
+              "bg": "Een btw-identificatienummer van Bulgarije bevat BG en 9-10 tekens",
+              "hr": "Een btw-identificatienummer van Kroatië bevat HR en 11 tekens",
+              "cy": "Een btw-identificatienummer van Cyprus bevat CY en 9 tekens",
+              "cz": "Een btw-identificatienummer van Tsjechië bevat CY en 8-10 tekens.",
+              "dk": "Een btw-identificatienummer van Denemarken bevat DK en 8 tekens",
+              "ee": "Een btw-identificatienummer van Estland bevat EE en 9 tekens",
+              "fi": "Een btw-identificatienummer van Finland bevat FI en 8 tekens",
+              "fr": "Een btw-identificatienummer van Frankrijk bevat FR en 11 tekens",
+              "de": "Een btw-identificatienummer van Duitsland bevat DE en 9 tekens",
+              "gr": "Een btw-identificatienummer van Griekenland bevat EL en 9 tekens",
+              "hu": "Een btw-identificatienummer van Hongarije bevat HU en 8 tekens",
+              "ie": "Een btw-identificatienummer van Ierland bevat IE en 8-9 tekens",
+              "it": "Een btw-identificatienummer van Italië bevat IT en 11 tekens",
+              "lv": "Een btw-identificatienummer van Letland bevat LV en 11 tekens",
+              "lt": "Een btw-identificatienummer van Litouwen bevat LT en 9-12 tekens",
+              "lu": "Een btw-identificatienummer van Luxemburg bevat LU en 8 tekens",
+              "mt": "Een btw-identificatienummer van Malta bevat MT en 8 tekens",
+              "nl": "Een btw-identificatienummer van Nederland bevat NL en 12 tekens",
+              "pl": "Een btw-identificatienummer van Polen bevat PL en 10 tekens",
+              "pt": "Een btw-identificatienummer van Portugal bevat PT en 9 tekens",
+              "ro": "Een btw-identificatienummer van Roemenië bevat RO en 10 tekens",
+              "sk": "Een btw-identificatienummer van Slowakije bevat SK en 10 tekens",
+              "si": "Een btw-identificatienummer van Slovenië bevat SI en 8 tekens",
+              "es": "Een btw-identificatienummer van Spanje bevat ES en 9 tekens",
+              "se": "Een btw-identificatienummer van Zweden bevat SE en 12 tekens",
+              "gb": "Een btw-identificatienummer van het VK bevat GB of XI en 5-12 tekens"
+            },
+            "invalid_number": {
+              "at": "Voer een geldig Oostenrijks btw-identificatienummer in",
+              "be": "Voer een geldig Belgisch btw-identificatienummer in",
+              "bg": "Voer een geldig Bulgaars btw-identificatienummer in",
+              "hr": "Voer een geldig Kroatisch btw-identificatienummer in",
+              "cy": "Voer een geldig Cypriotisch btw-identificatienummer in",
+              "cz": "Voer een geldig Tsjechisch btw-identificatienummer in"
+            }
+          }
+        }
       }
     }
   }
