@@ -1186,7 +1186,251 @@
         "phone_tooltip": "Falls wir dich zu deiner Bestellung kontaktieren müssen",
         "zip_code_label": "Postleitzahl",
         "zip_code_placeholder": "Postleitzahl",
-        "postal_code_label": "Postleitzahl"
+        "postal_code_label": "Postleitzahl",
+        "postal_code_placeholder": "Postleitzahl",
+        "postcode_label": "Postleitzahl",
+        "postcode_placeholder": "Postleitzahl",
+        "pincode_label": "PIN-Code",
+        "pincode_placeholder": "PIN-Code",
+        "region_none": "Keine ausgewählt",
+        "civic_number_warning": "Falls verfügbar, füge eine Hausnummer hinzu.",
+        "optional_last_name_label": "Nachname (optional)",
+        "company_contact_info": "{{companyName}} · {{contact}}",
+        "different_shipping_address_label": "An eine andere Adresse versenden",
+        "different_shipping_address_text": "Eine einmalige Adresse für diese Bestellung verwenden",
+        "change_company_location_link_label": "Unternehmensstandort ändern",
+        "change_location_link_label": "Standort wechseln",
+        "ship_to_company": "An {{companyName}} versenden",
+        "shipping_used_as_billing_notice": "Diese wird auch als deine Rechnungsadresse für diese Bestellung verwendet.",
+        "company_attention_label": "Unternehmen/Empfänger",
+        "optional_company_attention_label": "Unternehmen/Empfänger (optional)",
+        "street_name_label": "Straße",
+        "street_number_label": "Hausnummer",
+        "optional_street_number_label": "Hausnummer (optional)",
+        "neighborhood_label": "Stadtviertel",
+        "optional_neighborhood_label": "Stadtviertel (optional)",
+        "barangay_label": "Barangay",
+        "optional_barangay_label": "Barangay (optional)",
+        "colony_label": "Colonia",
+        "optional_colony_label": "Colonia (optional)",
+        "commune_label": "Gemeinde",
+        "optional_commune_label": "Gemeinde (optional)",
+        "district_label": "District",
+        "optional_district_label": "District (optional)",
+        "ward_label": "Bezirk",
+        "optional_ward_label": "Bezirk (optional)",
+        "available_addresses_label": "Verfügbare Adressen",
+        "block_label": "Block",
+        "optional_block_label": "Block (optional)",
+        "area_label": "Gebiet",
+        "optional_area_label": "Gebiet (optional)",
+        "optional_zip_code_label": "Postleitzahl (optional)",
+        "optional_postal_code_label": "Postleitzahl (optional)",
+        "optional_postcode_label": "Postleitzahl (optional)",
+        "optional_pincode_label": "PIN-Code (optional)",
+        "email_rollup_accessibility_label": "E-Mail-Optionen",
+        "phone_rollup_accessibility_label": "Telefon-Optionen",
+        "phone_country_code_label": "Ländervorwahl der Telefonnummer",
+        "storefront_link": "Website des Händlers",
+        "suburb_label": "Vorort",
+        "subdistrict_label": "Unterbezirk",
+        "optional_subdistrict_label": "Unterbezirk (optional)",
+        "optional_street_name_label": "Straße (optional)",
+        "field_saved_label": "Gespeichert",
+        "field_tooltip_helper_text": "Wird für deine Bestellbestätigung und Warenkorberinnerungen verwendet",
+        "field_tooltip_accessibility_label": "Weitere Informationen darüber, wie deine Kontaktinformationen verwendet werden"
+      },
+      "delivery_options": {
+        "ship": "Versand",
+        "pick_up": "Abholen",
+        "pick_up_in_two_hours": "Gewöhnlich fertig in 2 Stunden",
+        "pick_up_in_four_hours": "Gewöhnlich fertig in 4 Stunden",
+        "pick_up_immediately": "Jetzt zur Abholung bereit",
+        "pick_up_next_day": "Abholbereit am nächsten Tag",
+        "pick_up_in_one_hour": "Gewöhnlich fertig in 1 Stunde",
+        "pick_up_in_twenty_four_hours": "Gewöhnlich fertig in 24 Stunden",
+        "pick_up_in_two_to_four_days": "Gewöhnlich fertig in 2 - 4 Tagen",
+        "pick_up_in_five_or_more_days": "Gewöhnlich fertig in 5 oder mehr Tagen",
+        "pick_up_in_zero_to_two_hours": "Abholbereit in 2 Stunden",
+        "pick_up_in_two_to_four_hours": "Abholbereit in 4 Stunden",
+        "free_total_label": "Kostenlos",
+        "shipping_address": "Lieferadresse",
+        "pick_up_locations": "Abholort",
+        "pickup_point_method_definition": "An Abholstandort versenden",
+        "retail_method_definition": "Einzelhandelsversand",
+        "none_method_definition": "Kein Versand",
+        "subscription_pickup_information": "Dies wird der Abholort für alle zukünftigen Bestellungen deines Abonnements sein.",
+        "ship_to_address": "An Adresse versenden",
+        "pick_up_from_store": "Abholung im Shop",
+        "company_location_no_address_banner": "Bestellungen, die an Standorte ohne Adresse versendet werden, werden zur Überprüfung eingereicht.",
+        "pickup": "Abholung",
+        "pickup_store": "Shop-Abholung",
+        "pickup_point": "Pickup-Station",
+        "pickup_point_map_title": "Karte mit Abholstandort",
+        "digital_product": "Digitales Produkt"
+      },
+      "customer_account": {
+        "not_user_label": "Nicht %{first_name}?",
+        "have_an_account_label": "Hast du ein Konto?",
+        "sign_in_link_label": "Anmelden",
+        "sign_out_link_label": "Abmelden",
+        "save_my_information_label": "Meine Informationen speichern und nächstes Mal schneller bezahlen",
+        "incomplete_address": "Die ausgewählte Adresse ist unvollständig. %{update_address_link} oder wähle eine andere Adresse aus.",
+        "invalid_address": "Die ausgewählte Adresse ist ungültig. %{update_address_link} oder wähle eine andere Adresse aus.",
+        "rollup_label": "Konto",
+        "invalid_shipping_method_summary": "Wähle eine gültige Lieferadresse aus, um verfügbare Versandarten anzuzeigen.",
+        "saved_address_option_link": "Eine gespeicherte Adresse verwenden",
+        "saved_address_modal_title": "Meine gespeicherte Adresse verwenden",
+        "saved_address_option_description": {
+          "one": "Du hast {{count}} gespeicherte Adresse.",
+          "other": "Du hast {{count}} gespeicherte Adressen."
+        },
+        "rollup_accessibility_label": "Konto-Optionen"
+      },
+      "stock": {
+        "page_title": "Vorratsprobleme",
+        "title": "Ausverkauft",
+        "items_unavailable_notice": "Einige Artikel sind nicht mehr lieferbar.",
+        "product_column_header": "Produkte",
+        "quantity_column_header": "Anzahl",
+        "price_column_header": "Preis",
+        "status_column_header": "Status",
+        "removed_from_cart_notice": "Aus dem Warenkorb entfernt",
+        "sold_out_label": "Ausverkauft",
+        "reduced_label": "Reduziert",
+        "reduced_with_quantity_label": "Nur %{quantity_available} übrig",
+        "remove_from_cart_button_label": "Aus dem Warenkorb entfernen",
+        "continue_shopping_button_label": "Fortfahren",
+        "go_back_to_cart_button_label": "Zurück zu meinem Warenkorb",
+        "remove": "Entfernen",
+        "empty_cart_label": "Dein Warenkorb ist leer",
+        "quantity_update": {
+          "page_title": "Mengenaktualisierung",
+          "title": "Mengenaktualisierung",
+          "description": "Die verfügbare Menge dieser Artikel hat sich geändert und wurde in deinem Warenkorb aktualisiert."
+        },
+        "unpurchasable_product": {
+          "title": "Nicht gekauftes Produkt",
+          "header": "Einige Artikel wurden aus deinem Warenkorb entfernt",
+          "message": "Diese Artikel sind nicht für B2B-Bestellungen verfügbar.",
+          "status_column_header": "Nicht verfügbar"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Nicht gekauftes Produkt",
+          "header": "Einige Artikel wurden aus deinem Warenkorb entfernt",
+          "message": "Diese Artikel sind nicht verfügbar.",
+          "status_column_header": "Nicht verfügbar"
+        },
+        "unshippable_product": {
+          "title": "Keine Zustellung verfügbar",
+          "header": {
+            "one": "Für %{count} Artikel ist keine Zustellung verfügbar",
+            "other": "Für %{count} Artikel ist keine Zustellung verfügbar"
+          },
+          "message": {
+            "one": "Dieser Artikel wird aus deinem Warenkorb entfernt, da für deine Adresse keine Zustellmethoden verfügbar sind.",
+            "other": "Diese Artikel werden aus deinem Warenkorb entfernt, da für deine Adresse keine Zustellmethoden verfügbar sind."
+          },
+          "status_column_header": "Keine Zustellung"
+        },
+        "price_update": {
+          "title": "Preisaktualisierung",
+          "description": "Die Preise für diese Artikel haben sich geändert und wurden in deinem Warenkorb aktualisiert.",
+          "updated_price": "Geänderter Preis"
+        },
+        "return_to_store_label": "Zurück zum Laden",
+        "item_label": {
+          "one": "{{count}} Artikel",
+          "other": "{{count}} Artikel"
+        },
+        "continue_cta_label": "Checkout fortsetzen",
+        "out_of_stock": {
+          "description": "Diese Artikel sind nicht mehr verfügbar und werden aus deinem Warenkorb entfernt.",
+          "items_unavailable": "Einige Artikel sind nicht mehr verfügbar und werden aus deinem Warenkorb entfernt.",
+          "missing_items": {
+            "mixed_issues_title": "Einige Artikel sind nicht mehr verfügbar",
+            "title": {
+              "one": "{{count}} Artikel ist nicht mehr verfügbar",
+              "other": "{{count}} Artikel sind nicht mehr verfügbar"
+            },
+            "some_available_notice": {
+              "one": "Die verbleibenden Artikel sind weiterhin für den Checkout verfügbar. Der nicht verfügbare Artikel wird aus dem Warenkorb entfernt.",
+              "other": "Die verbleibenden Artikel sind weiterhin für den Checkout verfügbar. Die nicht verfügbaren Artikel werden aus dem Warenkorb entfernt."
+            },
+            "none_available_notice": {
+              "one": "Dieser Artikel ist nicht mehr verfügbar und wurde aus deinem Warenkorb entfernt.",
+              "other": "Diese Artikel sind nicht mehr verfügbar und wurden aus deinem Warenkorb entfernt."
+            }
+          }
+        },
+        "unfulfillable_product": {
+          "title": "Zustellung nicht verfügbar",
+          "message": {
+            "one": "%{delivery_method} ist für diesen Artikel nicht mehr verfügbar.",
+            "other": "%{delivery_method} ist für diese Artikel nicht mehr verfügbar."
+          },
+          "default_message": {
+            "one": "Die ausgewählte Zustellmethode ist für diesen Artikel nicht mehr verfügbar.",
+            "other": "Die ausgewählte Zustellmethode ist für diese Artikel nicht mehr verfügbar."
+          }
+        },
+        "price_and_quantity_update": {
+          "title": "Preis- und Mengenaktualisierung",
+          "description": "Die Preise und verfügbaren Mengen dieser Artikel haben sich geändert und wurden in deinem Warenkorb aktualisiert."
+        },
+        "out_of_stock_in_context_label": "Dieses Produkt ist in deinem Land / deiner Region nicht verfügbar.",
+        "unavailable_at_pickup_location_label": "Dieser Artikel ist am ausgewählten Standort nicht zur Abholung verfügbar."
+      },
+      "order_summary": {
+        "title": "Bestellübersicht",
+        "order_name_label": "Bestellung %{name}",
+        "shopping_cart_label": "Warenkorb",
+        "discount_title": "Rabatt",
+        "discount_label": "Rabattcode",
+        "discount_placeholder": "Rabattcode",
+        "gift_card_title": "Geschenkkarte",
+        "gift_card_label": "Geschenkkarte",
+        "gift_card_placeholder": "Geschenkkarte",
+        "gift_card_and_discount_title": "Rabattcode oder Gutschein",
+        "gift_card_and_discount_label": "Rabattcode oder Gutschein",
+        "gift_card_and_discount_placeholder": "Rabattcode oder Gutschein",
+        "add_discount_or_gift_card": "Rabattcode oder Gutschein hinzufügen",
+        "remove_gift_card_label": "Geschenkkarte löschen",
+        "remove_discount_label": "Rabatt entfernen",
+        "free_shipping_discount_label": "Kostenfreier Versand",
+        "apply_discount_button_label": "Anwenden",
+        "applied_discount_message": "%{amount} Rabatt auf den Gesamtpreis",
+        "discount_has_been_applied": "Der Rabatt wurde genutzt",
+        "discount_has_been_removed": "Der Rabatt wurde gestrichen",
+        "gift_card_has_been_applied": "Die Geschenkkarte wurde genutzt",
+        "gift_card_has_been_removed": "Der Gutschein wurde gestrichen",
+        "discount_already_applied": "Auf diese Bestellung wurde ein Rabatt gewährt. Du kannst keinen weiteren Rabatt hinzufügen.",
+        "cart_does_not_meet_discount_requirements_notice": "Der Rabattcode <strong style=\"text-transform:uppercase\">%{code}</strong> ist für die Artikel in deinem Warenkorb nicht gültig",
+        "discount_requires_customer_notice": "Gib deine Versandinformationen ein, um den Rabattcode <strong style=\"text-transform:uppercase\">%{code}</strong> zu übernehmen",
+        "customer_does_not_meet_discount_requirements_notice": "Der Rabattcode <strong style=\"text-transform:uppercase\">%{code}</strong> ist derzeit für dich nicht verfügbar",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Der Rabattcode <strong style=\"text-transform:uppercase\">%{code}</strong> ist für deine Lieferadresse nicht verfügbar",
+        "customer_already_used_once_per_customer_discount_notice": "Der <strong style=\"text-transform:uppercase\">%{code}</strong>-Rabattcode wurde bereits genutzt",
+        "subtotal_label": "Zwischensumme",
+        "shipping_label": "Versand",
+        "tip_label": "Trinkgeld",
+        "shipping_default_value": "Wird im nächsten Schritt berechnet",
+        "shipping_pending_value": "Wird zzgl. berechnet",
+        "shipping_pending_message": "Wird zzgl. berechnet",
+        "shipping_policy_link": "Siehe Versandkosten",
+        "taxes_label": "Steuern",
+        "total_label": "Gesamt",
+        "total_outstanding_label": "Zu zahlender Betrag",
+        "partial_total_label": "Gesamt",
+        "free_total_label": "Kostenlos",
+        "free_shipping_total_label": "Kostenlos",
+        "paid_label": "Bezahlt",
+        "payment_due_label": "Zahlbar bis",
+        "vat_label_html": "inkl. %{amount} MwSt",
+        "discount_and_gift_card_savings_notice": "Nach %{discount_amount} Rabatt und %{gift_card_amount} in Form von Geschenkgutscheinen",
+        "discount_savings_notice": "Nach %{discount_amount} Rabatt",
+        "gift_card_savings_notice": "Nach %{gift_card_amount} in Form von Geschenkgutscheinen",
+        "cost_table_title": "Kostenüberblick",
+        "description_label": "Beschreibung"
       }
     }
   }
