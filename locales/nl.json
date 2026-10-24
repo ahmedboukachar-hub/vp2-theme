@@ -3506,6 +3506,140 @@
       "go_to_store_link": "Naar winkel",
       "orders_link_label": "Bestellingen",
       "subscriptions_link_label": "Abonnementen"
+    },
+    "orders": {
+      "order_list": {
+        "no_filtered_results_description": "Verwijder filters of pas ze aan om je bestellingen te zien",
+        "no_filtered_results_title": "Geen gefilterde resultaten",
+        "estimated_shortform": "Geschat op {{date}}",
+        "payment_status": {
+          "list_view": {
+            "overdue": "Te laat",
+            "due": "Verschuldigd op {{date}}",
+            "due_today": "Vandaag verschuldigd",
+            "due_without_date": "Verschuldigd",
+            "due_on_fulfillment": "Te betalen bij fulfilment",
+            "pay_to_confirm": "Betalen om te bevestigen",
+            "payment_not_due": "Nog niet verschuldigd",
+            "paid": "Betaald"
+          },
+          "gallery_view": {
+            "overdue": "Betaling is te laat",
+            "due": "Betaling verschuldigd op {{date}}",
+            "due_today": "Betaling is vandaag verschuldigd",
+            "due_without_date": "Betaling verschuldigd",
+            "due_on_fulfillment": "Betaling verschuldigd bij fulfilment",
+            "pay_to_confirm": "Betalen om te bevestigen",
+            "payment_not_due": "Betaling is nog niet verschuldigd"
+          }
+        },
+        "sort_currently_sorted_by_accessibility_label": "Momenteel gesorteerd op: {{option}}",
+        "carousel": {
+          "one_products_accessibility_label": "Bestelling bevat {{lineItemName1}} aantal {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "Bestelling bevat {{lineItemName1}} aantal {{lineItemQuantity1}}, {{lineItemName2}} aantal {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "Bestelling bevat {{lineItemName1}} aantal {{lineItemQuantity1}}, {{lineItemName2}} aantal {{lineItemQuantity2}}, {{lineItemName3}} aantal {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "Bestelling bevat {{lineItemName1}} aantal {{lineItemQuantity1}}, {{lineItemName2}} aantal {{lineItemQuantity2}}, {{lineItemName3}} aantal {{lineItemQuantity3}}, {{lineItemName4}} aantal {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "Bestelling bevat {{lineItemName1}} aantal {{lineItemQuantity1}}, {{lineItemName2}} aantal {{lineItemQuantity2}}, {{lineItemName3}} aantal {{lineItemQuantity3}}, {{lineItemName4}} aantal {{lineItemQuantity4}}, {{lineItemName5}} aantal {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "Bestelling bevat {{lineItemName1}} aantal {{lineItemQuantity1}}, {{lineItemName2}} aantal {{lineItemQuantity2}}, {{lineItemName3}} aantal {{lineItemQuantity3}}, {{lineItemName4}} aantal {{lineItemQuantity4}}, {{lineItemName5}} aantal {{lineItemQuantity5}}, {{lineItemName6}} aantal {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "Bestelling bevat {{lineItemName1}} aantal {{lineItemQuantity1}}, {{lineItemName2}} aantal {{lineItemQuantity2}}, {{lineItemName3}} aantal {{lineItemQuantity3}}, {{lineItemName4}} aantal {{lineItemQuantity4}}, {{lineItemName5}} aantal {{lineItemQuantity5}}, {{lineItemName6}} aantal {{lineItemQuantity6}} en meer",
+          "view_order_details": "Bestellingsgegevens bekijken",
+          "previous": "Vorige",
+          "next": "Volgende"
+        },
+        "show_order_actions_accessibility_label": "Bestelacties voor bestelling {{name}} weergeven",
+        "empty_state_title_for_pending_orders": "Geen bestellingen in behandeling",
+        "more_than_four_products_accessibility_label": "De bestelling bevat {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}} plus nog {{numberOfAdditionalProducts}} producten",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} producten",
+        "order_status_and_message": "{{orderStatus}} - {{message}}",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Bestelling bekijken voor productgegevens",
+            "estimated_delivery": "Verwacht op {{date}}",
+            "last_updated": "Laatst bijgewerkt op {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Geschatte bezorging op {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "more_than_three_products_accessibility_label": "De bestelling bevat {{lineItemName1}}, {{lineItemName2}}, plus nog {{numberOfAdditionalProducts}} producten",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "filter": {
+          "clear_section": "Sectie wissen",
+          "apply": "Toepassen",
+          "date": {
+            "start_date": "Begindatum",
+            "end_date": "Einddatum",
+            "title": "Besteldatum",
+            "today": "Vandaag",
+            "last_7_days": "Afgelopen 7 dagen",
+            "last_30_days": "Afgelopen 30 dagen",
+            "last_90_days": "Afgelopen 90 dagen",
+            "last_365_days": "Afgelopen 12 maanden",
+            "custom": "Aangepast"
+          },
+          "date_section_accessibility_label": "Filteren op {{sectionTitle}}"
+        },
+        "no_order_banner": "Maak een bestelling aan om de extensie te testen op de pagina Bestelstatus.",
+        "location_filter_picker": {
+          "all_location": "Alle locaties",
+          "current_location": "Huidige locatie",
+          "switch_view": "Weergave wisselen"
+        },
+        "empty_state_with_location_title": "Geen bestellingen voor {{locationName}}",
+        "view_order": "Bestelling bekijken",
+        "view_order_accessibility_label": "Bestelling {{orderName}} bekijken",
+        "empty_state_redesign_cta": "Nu winkelen",
+        "empty_state_redesign_subtitle": "Klaar om te winkelen?",
+        "empty_state_redesign_welcome": "Welkom",
+        "empty_state_redesign_welcome_with_name": "Welkom, {{firstName}}",
+        "sort_options_accessibility_label": "Sorteeropties voor bevestigde bestellingen"
+      },
+      "order_status": {
+        "canceled_label": "Geannuleerd",
+        "canceled_title": "Je bestelling is geannuleerd",
+        "come_back": "Kom terug naar deze pagina voor statusupdates over je zending.",
+        "company_tracking_number": "{{company}}-trackingnummer:",
+        "confirmed_label": "Bevestigd",
+        "confirmed_title": "Je bestelling is bevestigd",
+        "delivered_label": "Bezorgd",
+        "estimated_delivery": "Verwacht op {{date}}",
+        "in_review_label": "Ter beoordeling",
+        "in_review_title": "Je bestelling wordt beoordeeld",
+        "on_its_way_label": "Onderweg",
+        "out_for_delivery_label": "Klaar voor bezorging",
+        "resume_tracking": "Volgen hervatten",
+        "submitted_label": "Ingediend",
+        "track_shipment": "Zending volgen",
+        "request_return": "Retour aanvragen",
+        "attempted_delivery_label": "Bezorgpoging",
+        "preparing_for_shipping_label": "Verzending wordt voorbereid",
+        "ready_for_pickup_label": "Klaar voor afhaling",
+        "ready_for_pickup_description": "Deze artikelen zijn klaar om af te halen. Neem de bestelbevestiging mee wanneer je de bestelling afhaalt.",
+        "picked_up_label": "Afgehaald",
+        "submitted_description": "Controleer de bestelling en de betaalgegevens.",
+        "last_updated": "Laatst bijgewerkt op {{date}}",
+        "multiple_shipments_label": "Meerdere zendingen",
+        "view_order_for_details": "Bestelling bekijken voor productgegevens",
+        "confirmed_description_digital": "Je krijgt een e-mail wanneer je bestelling klaarstaat.",
+        "delivered_description_gift_card": {
+          "one": "Cadeaubon is per e-mail verzonden.",
+          "other": "Cadeaubonnen zijn per e-mail verzonden."
+        },
+        "confirmed_description_pickup": "We maken deze artikelen klaar voor het afhaalmoment.",
+        "confirmed_gift_card_additional_description": {
+          "one": "De cadeaubon wordt in een aparte e-mail verzonden.",
+          "other": "Elke cadeaubon wordt in een aparte e-mail verzonden."
+        },
+        "confirmed_description_gift_card_text": "Je ontvangt een sms wanneer de bestelling gereed is.",
+        "delivered_description_gift_card_text": {
+          "one": "De cadeaubon is per sms verstuurd.",
+          "other": "De cadeaubonnen zijn per sms verstuurd."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "De cadeaubon wordt in een aparte sms verzonden."
+        }
+      }
     }
   }
 }
