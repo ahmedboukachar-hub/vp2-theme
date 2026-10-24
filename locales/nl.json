@@ -1185,6 +1185,268 @@
           "other": "Je hebt {{count}} opgeslagen adressen."
         },
         "rollup_accessibility_label": "Accountopties"
+      },
+      "stock": {
+        "page_title": "Voorraadprobleem",
+        "title": "Niet op voorraad",
+        "items_unavailable_notice": "Sommige artikelen zijn niet meer beschikbaar.",
+        "product_column_header": "Producten",
+        "quantity_column_header": "Aantal",
+        "price_column_header": "Prijs",
+        "status_column_header": "Status",
+        "removed_from_cart_notice": "Verwijderd uit winkelwagen",
+        "sold_out_label": "Uitverkocht",
+        "reduced_label": "Verminderd",
+        "reduced_with_quantity_label": "Slechts %{quantity_available} op voorraad",
+        "remove_from_cart_button_label": "Verwijder uit winkelwagen",
+        "continue_shopping_button_label": "Doorgaan",
+        "go_back_to_cart_button_label": "Terug naar mijn winkelwagen",
+        "remove": "Verwijderen",
+        "empty_cart_label": "Je winkelwagen is leeg",
+        "quantity_update": {
+          "page_title": "Hoeveelheid bijgewerkt",
+          "title": "Hoeveelheid bijgewerkt",
+          "description": "De beschikbare hoeveelheden voor deze artikelen zijn gewijzigd en je winkelwagen is bijgewerkt."
+        },
+        "unpurchasable_product": {
+          "title": "Product kan niet worden gekocht",
+          "header": "Sommige artikelen zijn uit je winkelwagen verwijderd",
+          "message": "Deze artikelen zijn niet beschikbaar voor B2B-bestellingen.",
+          "status_column_header": "Niet beschikbaar"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Product kan niet worden gekocht",
+          "header": "Sommige artikelen zijn uit je winkelwagen verwijderd",
+          "message": "Deze artikelen zijn niet beschikbaar.",
+          "status_column_header": "Niet beschikbaar"
+        },
+        "unshippable_product": {
+          "title": "Geen bezorging beschikbaar",
+          "header": {
+            "one": "Geen bezorging beschikbaar voor %{count} artikel",
+            "other": "Geen bezorging beschikbaar voor %{count} artikelen"
+          },
+          "message": {
+            "one": "Dit artikel wordt uit je winkelwagen verwijderd omdat er voor jouw adres geen bezorgmethoden beschikbaar zijn.",
+            "other": "Dit artikel wordt uit je winkelwagen verwijderd omdat er voor jouw adres geen bezorgmethoden beschikbaar zijn."
+          },
+          "status_column_header": "Geen bezorging"
+        },
+        "price_update": {
+          "title": "Prijsupdate",
+          "description": "De prijzen van deze artikelen zijn gewijzigd en bijgewerkt in je winkelwagen.",
+          "updated_price": "Bijgewerkte prijs"
+        },
+        "return_to_store_label": "Terug naar winkel",
+        "item_label": {
+          "one": "{{count}} artikel",
+          "other": "{{count}} artikelen"
+        },
+        "continue_cta_label": "Doorgaan met checkout",
+        "out_of_stock": {
+          "description": "Deze artikelen zijn niet meer beschikbaar en worden uit je winkelwagen verwijderd.",
+          "items_unavailable": "Sommige artikelen zijn niet meer beschikbaar en worden uit je winkelwagen verwijderd.",
+          "missing_items": {
+            "mixed_issues_title": "Sommige artikelen zijn niet meer beschikbaar",
+            "title": {
+              "one": "{{count}} artikel is niet meer beschikbaar",
+              "other": "{{count}} artikelen zijn niet meer beschikbaar"
+            },
+            "some_available_notice": {
+              "one": "De resterende artikelen zijn nog beschikbaar voor de checkout. Het niet-beschikbare artikel wordt uit de winkelwagen verwijderd.",
+              "other": "De resterende artikelen zijn nog beschikbaar voor de checkout. De niet-beschikbare artikelen worden uit de winkelwagen verwijderd."
+            },
+            "none_available_notice": {
+              "one": "Dit artikel is niet meer beschikbaar en is uit je winkelwagen verwijderd.",
+              "other": "Deze artikelen zijn niet meer beschikbaar en zijn uit je winkelwagen verwijderd."
+            }
+          }
+        },
+        "unfulfillable_product": {
+          "title": "Bezorging niet beschikbaar",
+          "message": {
+            "one": "%{delivery_method} is niet meer beschikbaar voor dit artikel.",
+            "other": "%{delivery_method} is niet meer beschikbaar voor deze artikelen."
+          },
+          "default_message": {
+            "one": "De gekozen bezorgmethode is niet meer beschikbaar voor dit artikel.",
+            "other": "De gekozen bezorgmethode is niet meer beschikbaar voor deze artikelen."
+          }
+        },
+        "price_and_quantity_update": {
+          "title": "Update van prijs en hoeveelheid",
+          "description": "De prijzen en beschikbare hoeveelheden voor deze artikelen zijn gewijzigd en de winkelwagen is bijgewerkt."
+        },
+        "out_of_stock_in_context_label": "Dit product is niet beschikbaar in je land/regio.",
+        "unavailable_at_pickup_location_label": "Dit artikel is niet beschikbaar voor afhalen op de geselecteerde locatie."
+      },
+      "order_summary": {
+        "title": "Besteloverzicht",
+        "order_name_label": "Bestelling %{name}",
+        "shopping_cart_label": "Winkelwagen",
+        "discount_title": "Korting",
+        "discount_label": "Kortingscode",
+        "discount_placeholder": "Kortingscode",
+        "gift_card_title": "Cadeaubon",
+        "gift_card_label": "Cadeaubon",
+        "gift_card_placeholder": "Cadeaubon",
+        "gift_card_and_discount_title": "Kortingscode of cadeaubon",
+        "gift_card_and_discount_label": "Kortingscode of cadeaubon",
+        "gift_card_and_discount_placeholder": "Kortingscode of cadeaubon",
+        "add_discount_or_gift_card": "Een kortingscode of cadeaubon toevoegen",
+        "remove_gift_card_label": "Cadeaubon verwijderen",
+        "remove_discount_label": "Korting verwijderen",
+        "free_shipping_discount_label": "Gratis verzending",
+        "apply_discount_button_label": "Toepassen",
+        "applied_discount_message": "Er is %{amount} korting afgetrokken van de totaalprijs.",
+        "discount_has_been_applied": "Korting is toegepast",
+        "discount_has_been_removed": "Korting is verwijderd",
+        "gift_card_has_been_applied": "Cadeaukaart is toegepast",
+        "gift_card_has_been_removed": "Cadeaukaart is verwijderd",
+        "discount_already_applied": "Er is een korting op deze bestelling toegepast. Je kunt geen andere korting toevoegen.",
+        "cart_does_not_meet_discount_requirements_notice": "Kortingscode <strong style=\"text-transform:uppercase\">%{code}</strong> geldt niet voor de artikelen in je winkelwagen",
+        "discount_requires_customer_notice": "Voer je verzendgegevens in om de kortingscode <strong style=\"text-transform:uppercase\">%{code}</strong> toe te passen",
+        "customer_does_not_meet_discount_requirements_notice": "Kortingscode <strong style=\"text-transform:uppercase\">%{code}</strong> is momenteel niet voor je beschikbaar",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Kortingscode <strong style=\"text-transform:uppercase\">%{code}</strong> is niet beschikbaar voor je bezorgadres",
+        "customer_already_used_once_per_customer_discount_notice": "De kortingscode <strong style=\"text-transform:uppercase\">%{code}</strong> is al gebruikt",
+        "subtotal_label": "Subtotaal",
+        "shipping_label": "Verzending",
+        "tip_label": "Fooi",
+        "shipping_default_value": "Berekend bij de volgende stap",
+        "shipping_pending_value": "—",
+        "shipping_pending_message": "Nog niet beschikbaar",
+        "shipping_policy_link": "Verzendkosten",
+        "taxes_label": "btw",
+        "total_label": "Totaal",
+        "total_outstanding_label": "Te betalen bedrag",
+        "partial_total_label": "Totaal",
+        "free_total_label": "Gratis",
+        "free_shipping_total_label": "Gratis",
+        "paid_label": "Betaald",
+        "payment_due_label": "Verschuldigde betaling",
+        "vat_label_html": "Inclusief %{amount} btw",
+        "discount_and_gift_card_savings_notice": "Na %{discount_amount} korting en %{gift_card_amount} aan cadeaubonwaarde",
+        "discount_savings_notice": "Na %{discount_amount} korting",
+        "gift_card_savings_notice": "Na %{gift_card_amount} aan cadeaubonwaarde",
+        "cost_table_title": "Kostenoverzicht",
+        "description_label": "Beschrijving",
+        "price_label": "Prijs",
+        "quantity_label": "Aantal",
+        "product_change_label": "Wijzigen",
+        "product_image_label": "Productafbeelding",
+        "scroll_order_summary": "Scroll voor meer artikelen",
+        "expand_order_summary_short": "Weergeven",
+        "collapse_order_summary_short": "Verbergen",
+        "total_updated_label": "Bijgewerkte totaalprijs:",
+        "order_total_updated_label": "Bijgewerkt totaal",
+        "total_already_paid_label": "betaald",
+        "unit_price": {
+          "accessible_separator": "per",
+          "content_html": "%{price}%{accessible_separator} %{per_unit}",
+          "per_item": {
+            "single": "%{price} per stuk",
+            "one": "%{price} per %{count} artikel",
+            "other": "%{price} per %{count} artikelen"
+          },
+          "per_unit": {
+            "single": "%{price}/%{unit}",
+            "plural": "%{price}/%{count}%{unit}"
+          }
+        },
+        "pickup_label": "Afhalen in de winkel",
+        "no_pickup_location": "Er zijn geen afhaallocaties beschikbaar.",
+        "calculating_shipping": "Aan het berekenen...",
+        "estimated_taxes_label": "Geschatte belasting",
+        "information_estimated_taxes_label": "Belastingen (geschat)",
+        "gift_card_ending": "Cadeaukaart die eindigt op %{last_characters}",
+        "estimated_tax_label": "Geschatte belasting",
+        "multiple_shipping_lines_label": "Totaal verzendkosten",
+        "applied_free_shipping_discount_label": "Toegepast",
+        "original_price": "Originele prijs",
+        "sale_price": "Aanbiedingsprijs",
+        "recurring_subtotal_label": "Terugkerend subtotaal",
+        "recurring_total_label": "Terugkerend totaal",
+        "recurring_total_tooltip": "Exclusief verzending, belasting, douanerechten of toepasselijke kortingen",
+        "gift_card_subscriptions_notice": "Cadeaubonnen worden alleen op je eerste betaling toegepast",
+        "confirmation_number_label": "Bevestigingsnummer %{confirmation_number}",
+        "estimated_taxes_finalization_tooltip_content": "Het totale belastingbedrag wordt via e-mail of sms bevestigd nadat je je bestelling hebt geplaatst.",
+        "deferred_payment_info": {
+          "title": "Betaling van %{amount_due} is verschuldigd op %{due_at}",
+          "description_html": "%{contact_us} voor vragen over je bestelling.",
+          "paid_today": "Totaal betaald vandaag",
+          "due_on_fulfillment_title": "De betaling van %{amount_due} is verschuldigd bij fulfilment van de bestelling.",
+          "due_on_receipt_title": "%{amount_due} is verschuldigd bij ontvangst",
+          "paid_today_next": "Vandaag betaald"
+        },
+        "percent_off_shipping": "%{percent}% korting op verzending",
+        "amount_off_shipping": "%{amount} korting op verzending",
+        "payment_terms_totals": {
+          "due_today": "Totaal verschuldigd vandaag",
+          "due_later": "Totaal verschuldigd op %{due_at}",
+          "due_later_checkout_to_draft": "Totaal verschuldigd later",
+          "due_on_fulfillment": "Totaal verschuldigd bij fulfilment",
+          "due_on_receipt": "Totaal te betalen bij ontvangst",
+          "total_paid": "Totaal betaald",
+          "due_today_next": "Vandaag verschuldigd",
+          "due_on_fulfillment_next": "Te betalen bij fulfilment"
+        },
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> kan niet worden gebruikt met je bestaande kortingen.",
+        "maximum_discount_code_limit_reached": "Je hebt het maximale aantal kortingscodes bereikt. Verwijder een bestaande code om <strong style=\"text-transform:uppercase\">%{code}</strong> te gebruiken.",
+        "order_total_label": "Totaal bestelling",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> werkt op dit moment niet. Neem contact met ons op als je hulp nodig hebt.",
+        "due_on_fulfillment": "Verschuldigd bij fulfilment",
+        "gift_card_masked": "•••• %{last_characters}",
+        "subscriptions": "Abonnementen",
+        "duties_label": "Douanerechten",
+        "duties_and_taxes_label": "Douanerechten en belastingen",
+        "error_duties_tooltip": "Deze bestelling wordt vanuit een ander land verzonden, dus er kunnen douanerechten en belastingen in rekening worden gebracht bij bezorging.",
+        "may_be_charged_on_delivery": "Kan bij bezorging in rekening worden gebracht",
+        "total_updated_label_with_price": "Bijgewerkte totaalprijs: %{totalPrice}",
+        "recurring_payments": "Terugkerende betalingen",
+        "recurring_total_multiple_label": "Deze bestelling bevat terugkerende kosten voor meerdere artikelen",
+        "deferred_total_due_date_label": "Totaal verschuldigd op {{date}}",
+        "full_price": "Volle prijs: %{price}",
+        "custom_discount": "Aangepaste korting",
+        "expand_component_information": {
+          "one": "%{count} artikel weergeven",
+          "other": "%{count} artikelen weergeven"
+        },
+        "collapse_component_information": {
+          "one": "%{count} artikel verbergen",
+          "other": "%{count} artikelen verbergen"
+        },
+        "component_quantity_title": "%{quantity} × %{product_title}",
+        "discount_discovery": {
+          "add_code": "Korting toevoegen",
+          "merchandise_quantity_label": {
+            "one": "%{count} artikel",
+            "other": "%{count} artikelen"
+          },
+          "back_to_finalize_order": "Terug naar bestelling afronden"
+        },
+        "alternative_payment_currency_total": "afgeschreven als %{amount_due}",
+        "calculating": "Aan het berekenen...",
+        "group_title_label": "Onderdeel van '%{group_title}'",
+        "discount_title_stacking": {
+          "one": "Korting",
+          "other": "Kortingen"
+        },
+        "discount_order_stacking": {
+          "one": "Bestellingskorting",
+          "other": "Bestellingskortingen"
+        },
+        "price_per_item": {
+          "accessibility_label": "%{price} per artikel",
+          "label": "%{price}/st."
+        },
+        "updated_shipping_method": "Bijgewerkte verzendmethode: %{shipping_method}",
+        "discount_not_found": "Kan geen geldige korting vinden die overeenkomt met de ingevoerde code",
+        "total_savings": "Totale besparing",
+        "return_restocking_fee_label": "Herbevoorradingskosten",
+        "return_shipping_fee_label": "Retourzending",
+        "enter_shipping_address": "Bezorgadres invoeren",
+        "shipping_discount_title": "Verzendkorting",
+        "discount_code_applied": "Kortingscode toegepast"
       }
     }
   }
