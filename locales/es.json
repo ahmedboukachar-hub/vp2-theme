@@ -3639,6 +3639,142 @@
           }
         }
       }
+    },
+    "order_details": {
+      "payment": {
+        "shop_pay_installments": {
+          "summary": "Cuotas de Shop"
+        },
+        "transactions": {
+          "show_all": "Mostrar todo",
+          "show_less": "Mostrar menos",
+          "details": "Detalles",
+          "payment_details": "Detalles de pago"
+        },
+        "emv_details": {
+          "auth": "AUTH:",
+          "aid": "AID:",
+          "source": "SOURCE:"
+        },
+        "payment_type": {
+          "gift_card": "Tarjeta de regalo",
+          "store_credit": "Crédito en tienda",
+          "money_order": "Giro postal",
+          "cash_on_delivery": "Pago contra entrega",
+          "bank_deposit": "Depósito bancario",
+          "manual": "Manual"
+        }
+      },
+      "shipping": {
+        "address": "Dirección de envío",
+        "address_map_marker": "Dirección de envío",
+        "method": "Método de envío",
+        "summary": "Envío",
+        "free": "Gratis",
+        "free_shipping_discount": "Envío gratis",
+        "one_time": "Envío único",
+        "subscription": "Envío por suscripción",
+        "method_short": "Método",
+        "ship_to": "Enviar a"
+      },
+      "show_items": "Mostrar artículos",
+      "subtitle": "Fecha de confirmación: {{date}}",
+      "subtotal": "Subtotal",
+      "summary_list_title_accessibility_label": "Artículos del pedido",
+      "summary_title": "Resumen del pedido",
+      "summary_totals_title_accessibility_label": "Totales del pedido",
+      "taxes": "Impuestos",
+      "title": "Pedido {{name}}",
+      "total": "Total",
+      "unit_price": "{{price}}/unidad",
+      "location": "Sucursal",
+      "not_applicable": "N. a.",
+      "fully_refunded_label": "REEMBOLSADO",
+      "partially_refunded_label": "PARCIALMENTE REEMBOLSADA",
+      "refunded_amount": "Reembolsado",
+      "discount": "Descuento",
+      "compare_at_sale": "Oferta ({{saleAmount}})",
+      "no_data": "Ninguno",
+      "pagination": {
+        "load_more": "Mostrar más",
+        "load_more_accessibility_label": "Mostrar más artículos",
+        "loading_accessibility_label": "Cargando artículos"
+      },
+      "returns": {
+        "expand_events_label": "Mostrar detalles",
+        "hide_events_label": "Ocultar detalles",
+        "print_shipping_label": "Imprimir etiqueta de envío",
+        "tracking_number": "Número de seguimiento:",
+        "return_and_refund_modal_header": "Política de reembolso",
+        "ineligible_return_message": "Ningún artículo de este pedido cumple los requisitos de devolución.",
+        "ineligible_return_message_when_returned": "Ningún otro artículo de este pedido cumple los requisitos de devolución.",
+        "exchange_header": "Cambiar artículos",
+        "exchange_subheader": "Los artículos de cambio se agregarán al pedido una vez que se complete la devolución."
+      },
+      "request_return_failed": "Se ha producido un error al procesar tu solicitud. Inténtalo de nuevo.",
+      "mobile_summary_toggle_button": {
+        "open": "Mostrar resumen del pedido",
+        "closed": "Ocultar resumen del pedido"
+      },
+      "show_order_summary": "Mostrar el resumen del pedido",
+      "hide_order_summary": "Ocultar el resumen del pedido",
+      "company": "Empresa",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} está vacío",
+      "marketing_section_title": "Noticias y ofertas",
+      "marketing_checkbox_label": "Enviarme novedades y ofertas por correo electrónico",
+      "marketing_checkmark_label": "Estás suscrito para recibir noticias y ofertas por correo electrónico",
+      "image_gallery": {
+        "product_name_and_quantity": "La cantidad de {{productName}} es {{quantity}}",
+        "next": "Mostrar artículos siguientes",
+        "previous": "Mostrar artículos anteriores",
+        "load_more_items": {
+          "one": "Mostrar {{count}} artículo más",
+          "other": "Mostrar {{count}} artículos más"
+        }
+      },
+      "shop_order_tracking": {
+        "download_shop_to_track": "Descarga Shop para hacer seguimiento del paquete",
+        "track_order_with_shop": "Hacer seguimiento del pedido con Shop",
+        "title_header": "Escanea con tu teléfono",
+        "real_time_delivery_updates": "Shop te enviará información en tiempo real sobre la entrega cuando se haya enviado tu pedido.",
+        "real_time_delivery_updates_with_gift": "Recibe actualizaciones de entrega en tiempo real y un regalo de {{promoAmount}} para gastar en la app Shop.",
+        "shop_app_promo_amount_off": "Recibe un regalo de {{promoAmount}}",
+        "shop_app_promo_text": "{{amountOff}} para gastar en la app Shop",
+        "open_in_shop": "Abrir Shop"
+      },
+      "shop_pay": {
+        "order_completed_with": "Pedido completado con",
+        "learn_more": "Más información",
+        "usdc_rewards_terms": "Ver términos de las recompensas en USDC"
+      },
+      "edit_summary": {
+        "added": "Agregado",
+        "added_with_quantity": "Se agregó {{quantity}}.",
+        "removed": "Eliminado",
+        "removed_with_quantity": "Se eliminó {{quantity}}.",
+        "updated_at": "Tu pedido se actualizó el {{date}}",
+        "returned": "Devuelto",
+        "returned_with_quantities": "Se devolvió {{delta}} de {{total}}.",
+        "removed_with_quantities": "Se eliminó {{delta}} de {{total}}.",
+        "return_line_item_removed": "Se eliminó de la devolución.",
+        "return_line_item_removed_with_quantities": "Se eliminó {{delta}} de la devolución."
+      },
+      "pickup": {
+        "pickup": "Retiro",
+        "pickup_location": "Lugar de retiro",
+        "pickup_point": "Punto de retiro"
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Pagado con Cuotas de Shop Pay",
+        "description": "Mantente al día de tu calendario de pagos con los recordatorios de la aplicación Shop.",
+        "payment_reminders_button": "Recibir recordatorios de pagos",
+        "desktop_qr_code_content": {
+          "title": "Escanear para recibir recordatorios",
+          "description": "Recibe recordatorios de tus cuotas con Shop."
+        },
+        "title": "Recordatorios de pago de Cuotas de Shop Pay"
+      }
     }
   }
 }
