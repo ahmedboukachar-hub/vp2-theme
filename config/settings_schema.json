@@ -1501,6 +1501,32 @@
     ]
   },
   {
+    "name": "Search engine details",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Shipping and return facts added to the product structured data. Keep them in line with the shipping and refund policies."
+      },
+      {
+        "type": "checkbox",
+        "id": "seo_free_shipping",
+        "label": "Shipping is free on every order",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "seo_return_days",
+        "label": "Return window in days",
+        "info": "0 leaves the return policy out.",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "d",
+        "default": 14
+      }
+    ]
+  },
+  {
     "name": "Language detection",
     "settings": [
       {

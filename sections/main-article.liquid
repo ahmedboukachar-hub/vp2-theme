@@ -9,6 +9,10 @@
       <meta itemprop="datePublished" content="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
       <meta itemprop="dateModified" content="{{ article.updated_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
       <link itemprop="mainEntityOfPage" href="{{ canonical_url }}">
+      <meta itemprop="inLanguage" content="{{ request.locale.iso_code }}">
+      {%- if article.image -%}
+        <link itemprop="image" href="https:{{ article.image | image_url: width: 1600 }}">
+      {%- endif -%}
       <span itemprop="author" itemscope itemtype="https://schema.org/Organization" hidden>
         <meta itemprop="name" content="{{ article_brand | escape }}">
         <link itemprop="url" href="{{ shop.url }}">
