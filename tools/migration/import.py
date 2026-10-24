@@ -215,7 +215,7 @@ def step_menus():
         return out
     def flat(its): return [x for i in its for x in [i] + flat(i.get('items') or [])]
     for m in load('menus'):
-        if m['handle'] == 'customer-account-main-menu': continue
+        if m['handle'] == 'customer-account-main-menu' or mapped(m['id']): continue  # re-writing a menu gives its items new ids and drops their translations
         vars = {'title': m['title'], 'items': items(m['items'])}
         if m['handle'] in existing:
             r = mutate('menus', m['handle'], 'mutation($id:ID!,$title:String!,$items:[MenuItemUpdateInput!]!){menuUpdate(id:$id,title:$title,items:$items){menu{id items{id items{id items{id}}}} userErrors{field message}}}', dict(vars, id=existing[m['handle']]), 'menuUpdate')
@@ -245,6 +245,9 @@ def new_resource_id(t, old):
         if not owner: return None
         r = gql('query($id:ID!,$n:String!,$k:String!){node(id:$id){... on HasMetafields{metafield(namespace:$n,key:$k){id}}}}', {'id': owner, 'n': mf['namespace'], 'k': mf['key']})['data']['node']
         return ((r or {}).get('metafield') or {}).get('id')
+    if t == 'LINK':  # translations address menu items as Link/<id>, the map holds MenuItem/<id>
+        n = mapped(old.replace('/Link/', '/MenuItem/'))
+        return n and n.replace('/MenuItem/', '/Link/')
     return mapped(old)
 def step_translations():
     primary = next(l['locale'] for l in gql('{shopLocales{locale primary}}')['data']['shopLocales'] if l['primary'])
