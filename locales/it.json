@@ -2490,6 +2490,151 @@
         "thank_you_payments_app_failed_pending_payment_payment": "L'ordine non ti è stato addebitato. Torna al carrello per controllare l'ordine e riprovare il pagamento.",
         "thank_you_payments_app_failed_pending_payment_pick_up": "L'ordine non ti è stato addebitato. Torna al carrello per controllare l'ordine e riprovare il pagamento.",
         "order_status_payments_app_pending_payment_description_default_with_missing": "Contattaci via email o telefono per ricevere la conferma dell'ordine."
+      },
+      "review": {
+        "blocks": {
+          "change_payment_method_link_label": "Cambia il metodo di pagamento",
+          "pick_up_in_store_shipping_method_html": "Ritiro in negozio · %{location_name}",
+          "purchase_order_number_title": "Numero d'ordine dell'acquisto",
+          "change_purchase_order_number_label": "Cambia numero d'ordine dell'acquisto",
+          "change_delivery_method_link_label": "Cambia metodo di consegna",
+          "no_address": "(Nessun indirizzo)",
+          "no_purchase_order_number": "(Nessun numero d'ordine dell'acquisto)",
+          "due_after_order_reviewed_html": "Dovuto dopo la revisione dell'ordine",
+          "review_title_free_order": "Rivedi e completa il tuo ordine",
+          "payment_method_saved_company_location": "Salva carta per questa sede",
+          "company_location": "Sede dell’azienda",
+          "change_company_location_link_label": "Cambia sede aziendale",
+          "pickup_items_at": {
+            "one": "Ritiro di %{count} articolo presso",
+            "other": "Ritiro di %{count} articoli presso"
+          },
+          "ship_items_to": {
+            "one": "Spedisci %{count} articolo a",
+            "other": "Spedisci %{count} articoli a"
+          },
+          "no_purchase_order_number_long": "Nessun numero ordine d'acquisto"
+        },
+        "block_title": "Verifica le informazioni",
+        "checkout_a_different_way": "Altro metodo di check-out",
+        "item_header": {
+          "change_value": "Cambia value (valore)",
+          "section": "Sezione",
+          "value": "Value (Valore)"
+        },
+        "review_and_confirm_title": "Verifica e conferma",
+        "account_more_actions": "Altre azioni per questo account"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Inviami email con notizie e offerte",
+        "unsubscribe": {
+          "title": "Hai annullato l'iscrizione",
+          "description": "Non riceverai più promemoria sul carrello da noi."
+        },
+        "accept_sms_checkbox_label": "Inviami SMS con notizie e offerte",
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "Informativa sulla privacy",
+            "terms_of_service": "Termini e condizioni del servizio",
+            "description_html": "Iscrivendoti tramite SMS, accetti di ricevere sul numero di telefono indicato messaggi di marketing automatici e ricorrenti, inclusi promemoria sul carrello. Il consenso non costituisce una condizione per l'acquisto. Rispondi STOP per annullare l'iscrizione. Rispondi HELP per richiedere assistenza. La frequenza dei messaggi può variare. Potrebbero essere applicate tariffe per messaggi e dati. Visualizza l'%{privacy_policy_link} e i%{terms_of_service_link}.",
+            "description_transactional_html": "Potresti ricevere SMS relativi alla conferma dell'ordine e agli aggiornamenti di spedizione. Rispondi STOP per annullare l'iscrizione. Rispondi HELP per richiedere assistenza. La frequenza dei messaggi può variare. Potrebbero essere applicate tariffe per messaggi e dati. Visualizza l'%{privacy_policy_modal_link} e i %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Numero di cellulare",
+          "get_offers_by_text": "Ricevi offerte tramite messaggio"
+        },
+        "post_accept_marketing_checkbox_label": "Hai effettuato l'iscrizione per ricevere notizie e offerte tramite email",
+        "pending_accept_marketing_checkbox_label": "Controlla la tua email per confermare l'iscrizione a notizie e offerte",
+        "accept_shop_pay_marketing_checkbox_label": "Iscrivimi per ricevere notizie e offerte da questo negozio",
+        "disclaimer": {
+          "privacy_policy": "Informativa sulla privacy",
+          "terms_of_service": "Termini e condizioni del servizio"
+        },
+        "accept_whatsapp_marketing_checkbox_label": "Ricevi messaggi su WhatsApp con novità e offerte",
+        "whatsapp": {
+          "disclaimer": {
+            "description_html": "Iscrivendoti tramite WhatsApp, accetti di ricevere messaggi di marketing su WhatsApp al numero di telefono indicato. Il consenso non è una condizione di acquisto. Rispondi STOP per annullare l'iscrizione. La frequenza dei messaggi varia. Potrebbero essere applicati costi per i messaggi e il traffico dati. Consulta la %{privacy_policy_link} e i %{terms_of_service_link}."
+          }
+        }
+      },
+      "shop_policies": {
+        "refund_policy": "Informativa sui rimborsi",
+        "privacy_policy": "Informativa sulla privacy",
+        "terms_of_service": "Termini e condizioni del servizio",
+        "legal_notice": "Informativa legale",
+        "shipping_policy": "Spedizioni",
+        "terms_of_sale": "Termini e condizioni di vendita",
+        "subscription_policy": "Annullamenti",
+        "purchase_options_policy": "Informativa sulle opzioni di acquisto",
+        "contact_information": "Contatti",
+        "purchase_options_cancellation_policy": "Annullamenti",
+        "cookie_preferences": "Cookie",
+        "policy_label": "Informativa",
+        "policies_label": "Informative",
+        "select_policy_label": "Seleziona un'informativa",
+        "terms_and_policies": "Termini e informative"
+      },
+      "notifications": {
+        "title": "Notifiche"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Importo da pagare per l'ordine %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Inserito",
+            "other": "%{count} aggiunto"
+          },
+          "removed": "Rimossa",
+          "subtracted": "%{count} rimosso",
+          "returned": "%{count} restituito",
+          "return_line_item_removed": "Rimosso %{count} dal reso"
+        },
+        "additional_payment_requested": "È necessario un pagamento di %{total_outstanding}",
+        "checkout_review_and_pay": "Il tuo ordine %{order_name} è stato aggiornato. Rivedi le modifiche, quindi paga per confermare l'ordine.",
+        "order_updated_on": "Il tuo ordine è stato aggiornato il giorno %{last_edited_at}.",
+        "order_review_and_pay": "Il tuo ordine è stato aggiornato. Verifica e paga per confermare l'ordine.",
+        "pay_now": "Paga ora"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "L'importo pari a %{amount} verrà addebitato sulla tua carta di credito",
+        "payment_total_label": "Totale pagamento",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Passa a %{currency_name}",
+        "card_provider_fx_charges_warning": "Il provider della carta potrebbe addebitare commissioni sulle transazioni %{currency_code}.",
+        "currency_not_supported_by_shop": "La valuta selezionata non è più disponibile. Tutti i prezzi ora sono disponibili in %{currency_code}."
+      },
+      "tips": {
+        "title": "Aggiungi mancia",
+        "description": "Mostra il tuo sostegno al team di %{shop_name}",
+        "presets_description": "Seleziona una percentuale per la mancia",
+        "custom_label": "Suggerimento personalizzato",
+        "add_tip": "Aggiungi mancia",
+        "update_tip": "Aggiorna mancia",
+        "message": "Grazie per il sostegno.",
+        "preset_label": "%{tip_percent}%",
+        "no_tip_label": "Nessuno",
+        "not_available_with_spi": "Non disponibile con le rate Shop Pay"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Acquista %{product_name}",
+          "one": "Acquista %{product_name} e %{count} altro articolo",
+          "other": "Acquista %{product_name} e %{count} altri articoli"
+        }
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Informazioni aggiuntive",
+          "tax_credential_br": "CPF/CNPJ",
+          "shipping_credential_br": "CPF/CNPJ",
+          "shipping_credential_kr": "Codice doganale personale",
+          "shipping_credential_cn": "Numero identificativo residente",
+          "tax_credential_it": "Codice fiscale (opzionale)",
+          "tax_email_it": "PEC (opzionale)",
+          "tax_credential_cl": "RUT",
+          "shipping_credential_cl": "RUT",
+          "tax_credential_co": "Cédula/IVA"
+        }
       }
     }
   }
