@@ -3651,6 +3651,130 @@
         "pickup": "Ritiro",
         "pickup_location": "Sede di ritiro"
       }
+    },
+    "addresses": {
+      "billing_address_dropdown_placeholder": "Indirizzo di fatturazione",
+      "add_button_text": "Aggiungi",
+      "add_button_accessibility_label": "Aggiungi indirizzo",
+      "back_button": "Indietro",
+      "back_button_accessibility_label": "Torna alla modifica dell'indirizzo {{address}}",
+      "no_addresses_banner": "No addresses added (Nessun indirizzo aggiunto)"
+    },
+    "address_form": {
+      "auto_complete_close_accessibility_label": "Chiudi suggerimenti",
+      "auto_complete_title": "Suggerimenti",
+      "billing_address": "Utilizza come indirizzo di fatturazione",
+      "cancel": "Annulla",
+      "cancel_accessibility_label": "Annulla la modifica dell'indirizzo {{address}}",
+      "creation_success_notification": "Indirizzo aggiunto",
+      "default_address": "Questo è il mio indirizzo predefinito",
+      "default_address_creation_success_notification": "Indirizzo predefinito aggiunto",
+      "default_address_update_success_notification": "Indirizzo predefinito aggiornato",
+      "loading_add_form_accessibility_message": "Caricamento del modulo per il nuovo indirizzo in corso",
+      "loading_edit_form_accessibility_message": "Caricamento del modulo per la modifica indirizzo in corso",
+      "loading_finished_accessibility_message": "Modulo per l'indirizzo caricato",
+      "save": "Salva",
+      "save_accessibility_label": "Salva indirizzo {{address}}",
+      "section_title_accessibility_label": "Aggiungi indirizzo",
+      "update_success_notification": "Indirizzo aggiornato",
+      "attention": "Destinatario",
+      "attention_help_text": "Il nome di una persona o di un dipartimento",
+      "loading_form_accessibility_message": "Caricamento del modulo per l'indirizzo in corso",
+      "attention_company": "Azienda/all’attenzione di"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Nome azienda",
+        "company_card_section_accessibility_label": "Azienda"
+      },
+      "locations": {
+        "contact_email": "Email",
+        "contact_list_title": "Persone",
+        "contact_name": "Nome",
+        "contact_permissions": "Autorizzazioni",
+        "contact_phone_number": "Numero di telefono",
+        "location_picker_label": "Nome sede",
+        "net_payment_terms_description": "{{name}}: pagamenti previsti tra {{numberOfDays}} giorni",
+        "payment_details_title": "Dettagli di pagamento",
+        "payment_terms": "Termini di pagamento",
+        "permissions_label": "Le tue autorizzazioni",
+        "permissions_title": "Autorizzazioni",
+        "section_title": "Sede",
+        "shipping_address_required": "Aggiungi un indirizzo di spedizione a questa sede per iniziare a effettuare ordini",
+        "tax_details_title": "Dati fiscali",
+        "tax_id": "Codice fiscale",
+        "tax_exemptions": "Esenzioni fiscali",
+        "multiple_tax_exemptions": "altre {{taxExemptionsCount}}",
+        "multiple_tax_exemptions_and": "e",
+        "tax_exemptions_modal_close": "Chiudi",
+        "taxes_none": "Nessuna",
+        "tax_exemption_not_applicable": "N/A",
+        "tax_exemptions_modal_button_accessibility_label": "Vedi tutte le esenzioni fiscali",
+        "pagination": {
+          "load_more": "Mostra altro",
+          "load_more_accessibility_label": "Mostra altre sedi"
+        },
+        "own_role_contact_name": "Tu",
+        "staff_and_permissions_title": "Staff e autorizzazioni",
+        "location_picker_accessibility_label": "Nome sede: {{locationName}}",
+        "deposit_percentage": "{{percentage}} di deposito",
+        "contact_contact": "Contatto"
+      },
+      "location_selection": {
+        "description": "Se hai già degli articoli nel tuo carrello, modificare la sede può influire sui prezzi dell carrello e le quantità.",
+        "list_accessibility_label": "Elenco sedi",
+        "list_item_accessibility_label": "{{name}}: {{address}}",
+        "list_item_without_address_accessibility_label": "{{name}}: nessun indirizzo",
+        "list_loading_accessibility_message": "Caricamento elenco delle sedi in corso",
+        "list_loading_address_accessibility_message": "Caricamento dell'indirizzo di {{locationName}} in corso",
+        "list_loading_finished_accessibility_message": "Elenco delle sedi caricato",
+        "loading_store_accessibility_message": "Stai andando al negozio",
+        "selection_cancel_button": "Annulla",
+        "selection_confirmation_button": "Scegli sede",
+        "title": "Per quale sede stai effettuando l'acquisto?",
+        "continue_to_store": "Continua sul negozio",
+        "no_location_title": "Solo ordini personali",
+        "no_location_description": "Non disponi più dell'autorizzazione per effettuare ordini per {{company}}. Puoi ancora effettuare ordini personali.",
+        "no_locations_found": "Nessuna sede trovata",
+        "search": "Cerca sedi",
+        "clear_search": "Cancella ricerca",
+        "try_new_search": "Prova una nuova ricerca",
+        "search_location_title": "Seleziona una sede",
+        "selection_continue_button": "Continua",
+        "description_switch_later": "Puoi sempre cambiare più tardi",
+        "title_choose_location": "Scegli una sede",
+        "error_loading_locations": "Si è verificato un problema durante il caricamento delle sedi. Controlla la tua connessione internet e riprova."
+      },
+      "addresses": {
+        "add_billing_address_button": "Aggiungi indirizzo di fatturazione",
+        "add_billing_address_section_accessibility_label": "Aggiungi indirizzo di fatturazione",
+        "add_shipping_address_button": "Aggiungi indirizzo di spedizione",
+        "add_shipping_address_section_accessibility_label": "Aggiungi indirizzo di spedizione",
+        "billing_address_card_title": "Indirizzo di fatturazione",
+        "cancel_adding_billing_address_accessibility_label": "Annulla l'aggiunta dell'indirizzo di fatturazione",
+        "cancel_adding_shipping_address_accessibility_label": "Annulla l'aggiunta dell'indirizzo di spedizione",
+        "save_new_billing_address_accessibility_label": "Salva indirizzo di fatturazione",
+        "save_new_shipping_address_accessibility_label": "Salva indirizzo di spedizione",
+        "shipping_address_card_title": "Indirizzo di spedizione",
+        "no_billing_address_banner": "Nessun indirizzo di fatturazione aggiunto"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Nascondi tutto",
+          "show_all": "Mostra tutto",
+          "hide_all_accessibility_label": "Nascondi tutti gli ordini in fase di revisione",
+          "show_all_accessibility_label": "Mostra tutti gli ordini in fase di revisione",
+          "title": "In attesa",
+          "pagination": {
+            "nav_accessibility_label": "Pulsanti di navigazione per gli ordini in fase di revisione"
+          },
+          "show_all_orders_in_review": "Mostra tutti gli ordini in fase di revisione",
+          "show_less_orders_in_review": "Mostra meno ordini in fase di revisione",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Non hai ordini in attesa"
+          }
+        }
+      }
     }
   }
 }
