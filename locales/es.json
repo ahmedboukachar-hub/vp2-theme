@@ -3205,6 +3205,144 @@
           }
         }
       }
+    },
+    "errors": {
+      "invalid_email": "Debe ser una dirección de correo electrónico válida",
+      "discount_disabled": "Este descuento se ha desactivado",
+      "discount_expired": "Este descuento ya no es válido",
+      "discount_limit_reached": "Este descuento ha llegado al límite de su uso",
+      "discount_not_found": "No fue posible encontrar un descuento válido que coincida con el código introducido",
+      "customer_already_used_once_per_customer_discount_notice": "Este descuento ha llegado al límite de su uso",
+      "gift_card_already_applied": "El código ya se ha aplicado a tu pedido",
+      "gift_card_code_invalid": "Código no válido",
+      "gift_card_currency_mismatch": "Esta tarjeta de regalo no se puede usar para esta compra. Contacta a %{shop_name} para que la reemitan.",
+      "gift_card_depleted": "No quedan fondos disponibles en esta tarjeta de regalo",
+      "gift_card_disabled": "La tarjeta de regalo está desactivada",
+      "gift_card_expired": "La tarjeta de regalo ha caducado",
+      "invalid": "no válido",
+      "bad_domain": "contiene un nombre de dominio inválido",
+      "taken": "ya se ha tomado",
+      "contains_html_tags": "no puede contener etiquetas HTML",
+      "too_short": "es demasiado corto (debe contener un mínimo de %{count} caracteres)",
+      "too_long": "es demasiado largo (el máximo son %{count} caracteres)",
+      "password_mismatch": "debe coincidir con la contraseña suministrada",
+      "contains_spaces": "comienza o termina con espacios.",
+      "invalid_for_country": "no es válido para %{country}",
+      "invalid_for_country_and_province": "no es válido para %{province} y %{country}",
+      "invalid_province_in_country": "no es una provincia válida en %{country}",
+      "invalid_state_in_country": "no es un estado válido en %{country}",
+      "invalid_region_in_country": "no es una región válida en %{country}",
+      "less_than_or_equal_to": "debe ser menor o igual a %{count}",
+      "not_supported": "no es compatible",
+      "full_name_required": "Introduce un nombre y apellido",
+      "invalid_for_card_type": "no es válido para este tipo de tarjeta",
+      "invalid_type": "Lo sentimos, no aceptamos tarjetas de este tipo",
+      "invalid_format": "no es un número de tarjeta de crédito",
+      "expired": "La tarjeta de crédito ha caducado",
+      "invalid_start_date_or_issue_number_for_debit": "Se requiere una fecha de inicio o un número de expedición válidos",
+      "invalid_expiry_year": "no es un año de vencimiento válido",
+      "reset_password_html": "Esta dirección de e‑mail ya ha sido asociada con una cuenta. Si la cuenta es tuya, puedes <a href=\"/account/login#recover\">restablecer tu contraseña aquí</a>",
+      "verify_email": "Hemos enviado un correo electrónico a %{customer_email} por favor haz clic en el enlace incluido para verificar tu dirección de correo electrónico.",
+      "blocked_address": "No se admite esta ubicación",
+      "product_not_available": "el producto no aparece publicado para este cliente.",
+      "shop_404": {
+        "title": "¡Crea un sitio web de ecommerce y vende online! Software de Ecommerce hecho por Shopify",
+        "heros": {
+          "store_unavailable": "Esta tienda no está disponible en este momento.",
+          "store_not_exist": "Esta tienda no existe.",
+          "no_storefront": "Esta tienda todavía no tiene sitio web.",
+          "store_will_be_right_back": "Esta tienda volverá pronto"
+        },
+        "links": {
+          "explore_other_stores": "Explorar otras tiendas",
+          "start_free_trial": "Comenzar una prueba gratis",
+          "refresh_page": "Actualizar la página"
+        },
+        "owner_ctas": {
+          "header": "¿Eres el propietario de la tienda?",
+          "fix_domain": "Para terminar de configurar tu nueva dirección web, ve a %{domain_settings_link}. Haz clic en &quot;Connect domain&quot; (Conectar dominio) e introduce: %{domain}.<br>Si tienes problemas para acceder a la tienda, prueba la página %{forgot_your_store_link}.",
+          "fix_domain_link_text": "la configuración de tu dominio",
+          "forgot_your_store_link_text": "¿Olvidaste tu tienda?",
+          "add_storefront": "Para configurar tu sitio web puedes configurar el canal de Tienda online en el %{admin_link}.Si tienes problemas para acceder a la tienda, prueba la página %{forgot_your_store_link}.",
+          "admin_link_text": "panel de control"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Vende en persona",
+            "caption": "Obtén las funciones que necesitas para gestionar tu tienda física, tanto si está empezando como si está creciendo.",
+            "link_text": "Comenzar prueba gratis"
+          },
+          "open_a_store": {
+            "header": "Abre una nueva tienda Shopify",
+            "caption": "Comienza una prueba gratis de 3 días y continúa por $1/mes durante los 3 meses siguientes.",
+            "link_text": "Regístrate ahora"
+          },
+          "editions": {
+            "header": "Conoce Shopify Editions",
+            "caption": "Con más de 100 actualizaciones de productos, puedes ser más productivo, creativo y poderoso en el comercio de lo que nunca imaginaste.",
+            "link_text": "Explorar lo más reciente de Editions"
+          },
+          "store_owner": {
+            "header": "¿Eres el propietario de la tienda?",
+            "caption": "¿Tienes problemas para acceder a la tienda?Prueba la función %{forgot_your_store_link}. Si deseas reactivar tu tienda contacta a %{shopify_support_link}.",
+            "shopify_support_link_text": "atención al cliente de Shopify"
+          }
+        },
+        "title_unavailable": "Tienda no disponible",
+        "subtitles": {
+          "store_will_be_right_back": "Shopify está trabajando para que vuelva a estar online lo antes posible."
+        },
+        "status_card": {
+          "eyebrow": "Ayuda para propietarios de tiendas",
+          "header": "Revisa el estado de Shopify",
+          "caption": "Averigua si hay una interrupción del servicio en Shopify que afecte a más tiendas y no solo a esta.",
+          "link_text": "Ver el estado de los sistemas de Shopify"
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Error al restablecer la contraseña",
+        "no_account_found": "No se encontró ninguna cuenta con esta dirección de correo electrónico.",
+        "invalid_credentials": "Correo electrónico o contraseña incorrectos.",
+        "denylisted_reset_password": "No se puede acceder a tu cuenta porque la contraseña actual no es segura. Recibirás un correo electrónico para actualizar tu contraseña.",
+        "signup_disabled": "La creación de la cuenta de cliente se ha desactivado.",
+        "subscribe_error": "Error de suscripción",
+        "unsubscribe_error": "Error al cancelar la suscripción",
+        "open_tracking_error": "Error de seguimiento de apertura"
+      },
+      "address": {
+        "updated": "Dirección actualizada con éxito.",
+        "error_updating": "Error al actualizar la dirección.",
+        "created": "Dirección creada con éxito",
+        "error_creating": "Error al crear la dirección.",
+        "deleted": "Dirección eliminada con éxito.",
+        "error_deleting": "Error al eliminar la dirección."
+      },
+      "order": {
+        "not_available": "Este pedido no está disponible.",
+        "financial_status": {
+          "authorized": "Autorizada",
+          "pending": "Pendiente",
+          "paid": "Pagada",
+          "unpaid": "No pagada",
+          "voided": "Anulada",
+          "partially_paid": "Pagada parcialmente",
+          "partially_refunded": "Reembolsada parcialmente",
+          "refunded": "Reembolsada",
+          "expired": "Vencido"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Concluida",
+          "complete": "Completar",
+          "partial": "Parcial",
+          "unfulfilled": "No realizada",
+          "restocked": "Repuesto"
+        },
+        "transaction_status": {
+          "success": "Éxito"
+        }
+      }
     }
   }
 }
