@@ -3638,7 +3638,137 @@
         },
         "confirmed_gift_card_additional_description_text": {
           "one": "De cadeaubon wordt in een aparte sms verzonden."
+        },
+        "fulfillment_tracking": {
+          "gift_card_sent_to_recipient": {
+            "one": "De cadeaubon is naar de ontvanger verzonden.",
+            "other": "De cadeaubonnen zijn naar de ontvangers verzonden."
+          },
+          "unknown_carrier_banner": "Neem contact met ons op voor meer informatie"
+        },
+        "arrives_tomorrow": "Komt morgen aan",
+        "arrives_today": "Wordt vandaag bezorgd"
+      },
+      "status_mark_as_delivered": "Markeren als bezorgd",
+      "buy_again": "Opnieuw kopen",
+      "buy_again_accessibility_label": "Opnieuw kopen voor bestelling {{orderId}}",
+      "manage": "Beheren",
+      "manage_accessiblity_label": "Bestelling {{orderId}} beheren",
+      "fulfillment_status_title": "Fulfilmentstatus: {{status}}",
+      "list_title_confirmed_orders_accessibility_label": "Bestellingen: bevestigd",
+      "list_title_pending_orders_accessibility_label": "Bestellingen: in behandeling",
+      "switch_order_type_pending_orders_accessibility_label": "Bestellingstype wisselen; je bekijkt nu bestellingen in behandeling",
+      "switch_order_type_confirmed_orders_accessibility_label": "Bestellingstype wisselen; je bekijkt u bevestigde bestellingen",
+      "group_title_label": "Onderdeel van: {{groupTitle}}",
+      "group_title_label_with_parent": "Voor: {{groupTitle}}"
+    },
+    "order_details": {
+      "addresses_section_title": "Factureren en verzenden",
+      "billing_address": "Factuuradres",
+      "card_ending_with": "eindigt op {{lastDigits}}",
+      "contact": "Contactpersoon",
+      "hide_items": "Artikelen verbergen",
+      "loading": "Bestellingsgegevens laden",
+      "loading_finished_accessibility_message": "Bestellingsgegevens zijn geladen",
+      "payment": {
+        "status_in_review": "Betaling verschuldigd na beoordeling",
+        "status_unpaid": "Betaling verschuldigd op {{date}}",
+        "title": "Betaling",
+        "shop_pay_installments": {
+          "view_schedule": "Planning bekijken",
+          "summary": "Shop-termijnbetalingen"
+        },
+        "transactions": {
+          "show_all": "Alles weergeven",
+          "show_less": "Minder weergeven",
+          "details": "Gegevens",
+          "payment_details": "Betaalgegevens"
+        },
+        "emv_details": {
+          "auth": "AUTH:",
+          "aid": "AID:",
+          "source": "SOURCE:"
+        },
+        "payment_type": {
+          "gift_card": "Cadeaubon",
+          "store_credit": "Winkeltegoed",
+          "money_order": "Postwissel",
+          "cash_on_delivery": "Rembours",
+          "bank_deposit": "Bankstorting",
+          "manual": "Handmatig"
         }
+      },
+      "shipping": {
+        "address": "Bezorgadres",
+        "address_map_marker": "Bezorgadres",
+        "method": "Verzendmethode",
+        "summary": "Verzenden",
+        "free": "Gratis",
+        "free_shipping_discount": "Gratis verzending",
+        "one_time": "Eenmalig verzenden",
+        "subscription": "Verzenden onder abonnement",
+        "method_short": "Methode",
+        "ship_to": "Verzenden naar"
+      },
+      "show_items": "Artikelen weergeven",
+      "subtitle": "Bevestigd: {{date}}",
+      "subtotal": "Subtotaal",
+      "summary_list_title_accessibility_label": "Artikelen bestellen",
+      "summary_title": "Besteloverzicht",
+      "summary_totals_title_accessibility_label": "Totalen bestelling",
+      "taxes": "Belastingen",
+      "title": "Bestelling {{name}}",
+      "total": "Totaal",
+      "unit_price": "{{price}}/st",
+      "location": "Locatie",
+      "not_applicable": "n.v.t.",
+      "fully_refunded_label": "TERUGBETAALD",
+      "partially_refunded_label": "GEDEELTELIJK TERUGBETAALD",
+      "refunded_amount": "Terugbetaald",
+      "discount": "Korting",
+      "compare_at_sale": "Uitverkoop ({{saleAmount}})",
+      "no_data": "Geen",
+      "pagination": {
+        "load_more": "Meer weergeven",
+        "load_more_accessibility_label": "Meer artikelen weergeven",
+        "loading_accessibility_label": "Artikelen laden"
+      },
+      "returns": {
+        "expand_events_label": "Gegevens weergeven",
+        "hide_events_label": "Gegevens verbergen",
+        "print_shipping_label": "Verzendlabel afdrukken",
+        "tracking_number": "Trackingnummer:",
+        "return_and_refund_modal_header": "Terugbetalingsbeleid",
+        "ineligible_return_message": "Geen artikelen in deze bestelling die voor retourneren in aanmerking komen.",
+        "ineligible_return_message_when_returned": "Er zijn geen artikelen meer in deze bestelling die voor retourneren in aanmerking komen.",
+        "exchange_header": "Ruilartikelen",
+        "exchange_subheader": "Ruilartikelen worden aan de bestelling toegevoegd zodra de retour is voltooid."
+      },
+      "request_return_failed": "Er is een probleem opgetreden bij de verwerking van je aanvraag. Probeer het opnieuw.",
+      "mobile_summary_toggle_button": {
+        "open": "Besteloverzicht weergeven",
+        "closed": "Besteloverzicht verbergen"
+      },
+      "show_order_summary": "Besteloverzicht weergeven",
+      "hide_order_summary": "Besteloverzicht verbergen",
+      "company": "Bedrijf",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} is leeg",
+      "marketing_section_title": "Nieuws en aanbiedingen",
+      "marketing_checkbox_label": "Stuur mij e-mails met nieuws en aanbiedingen",
+      "marketing_checkmark_label": "Je bent aangemeld om e-mails met nieuws en aanbiedingen te ontvangen",
+      "image_gallery": {
+        "product_name_and_quantity": "{{productName}}-hoeveelheid {{quantity}}",
+        "next": "Volgende artikelen weergeven",
+        "previous": "Vorige artikelen weergeven",
+        "load_more_items": {
+          "one": "Nog {{count}} artikel weergeven",
+          "other": "Nog {{count}} artikelen weergeven"
+        }
+      },
+      "shop_order_tracking": {
+        "download_shop_to_track": "Download Shop om het pakket te volgen",
+        "track_order_with_shop": "Bestelling volgen met Shop"
       }
     }
   }
