@@ -3343,6 +3343,156 @@
           "success": "Éxito"
         }
       }
+    },
+    "email_marketing": {
+      "open_tracking": {
+        "updated_policy": {
+          "visibility": "Hemos actualizado nuestra política y ahora hacemos seguimiento de correos abiertos. Las tasas de correos abiertos se informarán de manera anónima. Solo veremos si has abierto un correo electrónico como parte de la tasa total de correos abiertos.",
+          "opt_out_html": "Si no deseas compartir esta información, puedes <a style='text-decoration:underline;' href='%{link}'>darte de baja</a>."
+        }
+      },
+      "sms_unsubscribe_confirm": {
+        "message": "¿Confirmas que deseas darte de baja del marketing por SMS?",
+        "button": "Dar de baja"
+      }
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Normalmente está listo en 1 hora",
+        "two_hours": "Normalmente está listo en 2 horas",
+        "four_hours": "Normalmente está listo en 4 horas",
+        "twenty_four_hours": "Normalmente está listo en 24 horas",
+        "two_to_four_days": "Normalmente está listo en 2 a 4 días",
+        "five_or_more_days": "Normalmente está listo en 5 días o más",
+        "zero_to_two_hours": "Normalmente está listo en 2 horas",
+        "two_to_four_hours": "Normalmente está listo en 4 horas",
+        "immediately": "Listo para retirar ahora",
+        "next_day": "Listo para retirar al día siguiente"
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "En existencia",
+          "out_of_stock": "Agotado"
+        }
+      },
+      "boolean": {
+        "true_label": "Sí",
+        "false_label": "No"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "Relevancia",
+        "price_ascending": "Precio, menor a mayor",
+        "price_descending": "Precio, mayor a menor"
+      },
+      "error": "Ha habido un problema al cargar los resultados de búsqueda. Actualiza la página o vuelve a intentarlo más tarde."
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Este artículo es una compra recurrente o diferida. Al continuar, acepto la %{cancellationPolicyLink} y autorizo a realizar cargos en mi forma de pago según los precios, la frecuencia y las fechas indicadas en esta página hasta que se prepare mi pedido o yo lo cancele, si está permitido.",
+      "buyer_consent_cart": "Uno o más de los artículos que hay en tu carrito forman parte de una compra recurrente o diferida. Al continuar, acepto la %{cancellationPolicyLink} y autorizo a realizar cargos en mi forma de pago según los precios, la frecuencia y las fechas indicadas en esta página hasta que se prepare mi pedido o yo lo cancele, si está permitido.",
+      "cancellation_policy": "política de cancelación"
+    },
+    "managed_markets": {
+      "buyer_consent": "Cuando realizas tu pedido, aceptas comprar a Global-e como responsable del procesamiento de pagos, de conformidad con los %{termsAndConditionsLink} y la %{privacyPolicyLink} de Global-e, y compartir tu información con %{shopName}.",
+      "terms_and_conditions": "Términos y condiciones",
+      "privacy_policy": "Política de privacidad"
+    }
+  },
+  "customer_accounts": {
+    "callback": {
+      "try_again": "Reintentar"
+    },
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Ocultar el menú Cuenta",
+        "show_accessibility_label": "Mostrar el menú Cuenta",
+        "nav_accessibility_label": "Navegación de la cuenta",
+        "open_menu_accessibility_label": "Abrir la navegación de la cuenta",
+        "close_menu_accessibility_label": "Cerrar la navegación de la cuenta",
+        "loading_message": "Cargando la navegación de la cuenta",
+        "label": "Cuenta"
+      },
+      "action_menu_accessibility_label": "Más acciones",
+      "close_menu_accessibility_label": "Cerrar la navegación principal",
+      "contact_email_subject": "Contactar desde la tienda online {{shopName}}",
+      "contact_link": "Información de contacto",
+      "delete_confirmation": {
+        "cancel": "Cancelar",
+        "delete": "Eliminar"
+      },
+      "dismiss_toast": "Descartar",
+      "document_title": "{{sectionName}} - {{shopName}} - Cuenta",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "loading_message": "Cargando",
+      "log_out_link": "Cerrar sesión",
+      "logout_overlay_label": "Cerrando sesión…",
+      "nav_label_accessibility_label": "Navegación principal",
+      "navigation_accessibility_message": "Navegaste a {{sectionName}}",
+      "open_menu_accessibility_label": "Abrir navegación principal",
+      "shop_logo_accessibility_label": "Logo de {{shopName}}",
+      "settings_link": "Configuración",
+      "country_switcher_toast_message": "Se ha cambiado el país a {{countryName}}",
+      "switch_country": "Cambiar país",
+      "search": "Buscar",
+      "location_switcher_toast_message": "Se cambió la ubicación a {{locationName}}",
+      "switch_location": "Cambiar ubicación",
+      "view_details": "Ver información",
+      "company_location": "Ubicación de la empresa",
+      "no_countries_found": "No se encontraron países",
+      "no_locations_found": "No se encontraron sucursales",
+      "try_new_search": "Intentar una nueva búsqueda",
+      "skip_to_content": "Ir directamente al contenido",
+      "loading_policy_content_accessibility_label": "Cargando contenido de la política",
+      "policy_load_error": "{{policyName}} no se pudo cargar",
+      "policy_try_again": "Volver a intentar",
+      "loading_section_accessibility_label": "Cargando {{sectionName}}",
+      "back_button_accessibility_label": "Volver",
+      "go_to_store_link": "Ir a la tienda",
+      "orders_link_label": "Pedidos",
+      "subscriptions_link_label": "Suscripciones",
+      "store_credit_accessibility_label": "{{formattedBalance}} de crédito en tienda",
+      "store_credit_balances_list_accessibility_label": "Saldos de crédito en tienda",
+      "store_credit_multi_currency_accessibility_label": {
+        "one": "{{formattedBalance}} de crédito en tienda y en {{count}} moneda más",
+        "other": "{{formattedBalance}} de crédito en tienda y en {{count}} monedas más"
+      }
+    },
+    "account_information": {
+      "loading_accessibility_message": "Cargando información de la cuenta",
+      "loading_finished_accessibility_message": "La información de la cuenta se cargó.",
+      "profile_card": {
+        "cancel": "Cancelar",
+        "cancel_accessibility_label": "Cancelar edición del perfil",
+        "edit": "Editar",
+        "edit_accessibility_label": "Editar perfil",
+        "email_help_text": "El correo electrónico no se puede editar",
+        "first_name": "Nombre",
+        "last_name": "Apellido",
+        "phone_number_help_text": "No se puede editar el número de teléfono",
+        "save": "Guardar",
+        "save_accessibility_label": "Guardar perfil",
+        "title": "Perfil",
+        "no_name_provided_accessibility_label": "No se agregó ningún nombre.",
+        "email": "Correo electrónico",
+        "errors": {
+          "name_too_long": "{{fieldName}} es demasiado largo (máximo 255 caracteres)",
+          "name_cannot_contain_url": "{{fieldName}} no puede incluir una URL",
+          "name_cannot_contain_html_tags": "{{fieldName}} no puede contener etiquetas HTML",
+          "email_cant_be_blank": "El correo electrónico no puede estar en blanco",
+          "invalid_email_format": "Introduce un correo electrónico válido"
+        },
+        "editable_email_help_text": "Este correo electrónico se usa para iniciar sesión y actualizar pedidos."
+      },
+      "profile_update_confirmation_message": "Perfil actualizado",
+      "title": "Perfil",
+      "people": {
+        "pagination": {
+          "load_more": "Mostrar más"
+        }
+      }
     }
   }
 }
