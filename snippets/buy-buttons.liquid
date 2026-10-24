@@ -90,7 +90,7 @@
             endif
           -%}
           {%- comment -%} Buy it now comes first: it is the main action for one-off pieces (owner decision 2026-10-23). It is a plain cart permalink rather than Shopify's dynamic checkout button, which turns into a branded wallet button (Buy with Shop) once Shop Pay is active (owner decision 2026-10-24). {%- endcomment -%}
-          {%- if show_dynamic_checkout and product.selected_or_first_available_variant.available and quantity_rule_soldout == false -%}
+          {%- if show_dynamic_checkout and product.selected_or_first_available_variant.available and quantity_rule_soldout != true -%}
             <a
               href="{{ routes.cart_url }}/{{ product.selected_or_first_available_variant.id }}:1"
               class="product-form__buy-now button button--full-width button--primary"
