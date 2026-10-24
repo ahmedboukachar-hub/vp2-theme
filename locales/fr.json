@@ -3665,6 +3665,128 @@
         "removed_with_quantity": "{{quantity}} supprimé(s)",
         "updated_at": "Votre commande a été mise à jour le {{date}}"
       }
+    },
+    "addresses": {
+      "title": "Adresses",
+      "delete_confirmation_title": "Supprimer l’adresse ?",
+      "delete_confirmation_description": "Les commandes déjà passées ne seront pas affectées.",
+      "edit_modal_title": {
+        "default": "Modifier l’adresse",
+        "billing": "Modifier l’adresse de facturation",
+        "shipping": "Modifier l’adresse d’expédition"
+      },
+      "add_address_banner": "Ajouter des adresses à utiliser au moment du paiement",
+      "billing_address_dropdown_placeholder": "Adresse de facturation",
+      "add_button_text": "Ajouter",
+      "add_button_accessibility_label": "Ajouter une adresse",
+      "back_button": "Retour",
+      "back_button_accessibility_label": "Retour à la modification de l’adresse {{address}}",
+      "no_addresses_banner": "Aucune adresse ajoutée"
+    },
+    "address_form": {
+      "auto_complete_close_accessibility_label": "Fermer les suggestions",
+      "auto_complete_title": "Suggestions",
+      "billing_address": "Utiliser comme adresse de facturation",
+      "cancel": "Annuler",
+      "cancel_accessibility_label": "Annuler la modification de l'adresse {{address}}",
+      "creation_success_notification": "Adresse ajoutée",
+      "default_address": "Ceci est mon adresse par défaut",
+      "default_address_creation_success_notification": "Adresse par défaut ajoutée",
+      "default_address_update_success_notification": "Adresse par défaut mise à jour",
+      "loading_add_form_accessibility_message": "Formulaire de nouvelle adresse en cours de chargement",
+      "loading_edit_form_accessibility_message": "Formulaire de modification d'adresse en cours de chargement",
+      "loading_finished_accessibility_message": "Le formulaire d’adresse a été chargé",
+      "save": "Enregistrer",
+      "save_accessibility_label": "Enregistrer l'adresse {{address}}",
+      "section_title_accessibility_label": "Ajouter une adresse",
+      "update_success_notification": "Adresse mise à jour",
+      "attention": "À l’attention de",
+      "attention_help_text": "Nom d’une personne ou d’un service",
+      "loading_form_accessibility_message": "Formulaire d’adresse en cours de chargement",
+      "attention_company": "Entreprise/à l’attention de"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Nom de l’entreprise",
+        "company_card_section_accessibility_label": "Entreprise"
+      },
+      "locations": {
+        "contact_email": "E-mail",
+        "contact_list_title": "Personnes",
+        "contact_name": "Nom",
+        "contact_permissions": "Autorisations",
+        "contact_phone_number": "Numéro de téléphone",
+        "location_picker_label": "Nom de l'emplacement",
+        "net_payment_terms_description": "{{name}} : paiements dus sous {{numberOfDays}} jours",
+        "payment_details_title": "Détails du paiement",
+        "payment_terms": "Délais de paiement",
+        "permissions_label": "Vos autorisations",
+        "permissions_title": "Autorisations",
+        "section_title": "Emplacement",
+        "shipping_address_required": "Ajoutez une adresse de livraison à cet emplacement pour commencer à passer des commandes",
+        "tax_details_title": "Informations fiscales",
+        "tax_id": "Identifiant fiscal",
+        "tax_exemptions": "Exonérations fiscales",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} autres",
+        "multiple_tax_exemptions_and": "et",
+        "tax_exemptions_modal_close": "Fermer",
+        "taxes_none": "Aucune",
+        "tax_exemption_not_applicable": "s.o.",
+        "tax_exemptions_modal_button_accessibility_label": "Afficher toutes les exonérations fiscales",
+        "pagination": {
+          "load_more": "Afficher plus",
+          "load_more_accessibility_label": "Afficher plus d’emplacements"
+        },
+        "own_role_contact_name": "Vous",
+        "staff_and_permissions_title": "Personnel et autorisations",
+        "location_picker_accessibility_label": "Nom de l’emplacement : {{locationName}}",
+        "deposit_percentage": "{{percentage}} dépôt",
+        "contact_contact": "Contact"
+      },
+      "location_selection": {
+        "description": "Si votre panier contient déjà des articles, changer d'emplacement risque d'en affecter les prix et les quantités.",
+        "list_accessibility_label": "Liste des emplacements",
+        "list_item_accessibility_label": "{{name}} : {{address}}",
+        "list_item_without_address_accessibility_label": "{{name}} : aucune adresse",
+        "list_loading_accessibility_message": "Liste d'emplacements en cours de chargement",
+        "list_loading_address_accessibility_message": "Adresse de {{locationName}} en cours de chargement",
+        "list_loading_finished_accessibility_message": "La liste d'emplacements a été chargée",
+        "loading_store_accessibility_message": "Accès à la boutique",
+        "selection_cancel_button": "Annuler",
+        "selection_confirmation_button": "Choisir l'emplacement",
+        "title": "Pour quel emplacement achetez-vous ?",
+        "continue_to_store": "Continuer vers la boutique",
+        "no_location_title": "Commandes personnelles uniquement",
+        "no_location_description": "Vous n'avez plus l'autorisation de passer des commandes pour {{company}}. Vous pouvez toujours passer des commandes personnelles.",
+        "no_locations_found": "Aucun emplacement trouvé",
+        "search": "Rechercher des emplacements",
+        "clear_search": "Effacer la recherche",
+        "try_new_search": "Essayer une nouvelle recherche",
+        "search_location_title": "Sélectionner un emplacement",
+        "selection_continue_button": "Continuer",
+        "description_switch_later": "Vous pourrez toujours changer plus tard",
+        "title_choose_location": "Choisir un emplacement",
+        "error_loading_locations": "Un problème est survenu lors du chargement des emplacements. Vérifiez votre connexion internet et réessayez."
+      },
+      "addresses": {
+        "add_billing_address_button": "Ajouter une adresse de facturation",
+        "add_billing_address_section_accessibility_label": "Ajouter une adresse de facturation",
+        "add_shipping_address_button": "Ajouter une adresse d'expédition",
+        "add_shipping_address_section_accessibility_label": "Ajouter une adresse d'expédition",
+        "billing_address_card_title": "Adresse de facturation",
+        "cancel_adding_billing_address_accessibility_label": "Annuler l'ajout de l'adresse de facturation",
+        "cancel_adding_shipping_address_accessibility_label": "Annuler l'ajout de l'adresse d'expédition",
+        "save_new_billing_address_accessibility_label": "Enregistrer l'adresse de facturation",
+        "save_new_shipping_address_accessibility_label": "Enregistrer l'adresse d'expédition",
+        "shipping_address_card_title": "Adresse d'expédition",
+        "no_billing_address_banner": "Aucune adresse de facturation ajoutée"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Tout masquer",
+          "show_all": "Tout afficher"
+        }
+      }
     }
   }
 }
