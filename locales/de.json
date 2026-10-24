@@ -4027,6 +4027,126 @@
       "shop_pay": {
         "order_completed_with": "Bestellung abgeschlossen mit"
       }
+    },
+    "addresses": {
+      "loading_addresses_accessibility_message": "Adressen werden geladen",
+      "loading_billing_accessibility_message": "Rechnungsadresse wird geladen",
+      "loading_finished_accessibility_message": "Eine neue Seite an Adressen wurde geladen",
+      "loading_shipping_accessibility_message": "Lieferadresse wird geladen",
+      "pagination": {
+        "load_more": "Mehr anzeigen",
+        "load_more_accessibility_label": "Mehr Adressen anzeigen"
+      },
+      "save_new_address_accessibility_label": "Adresse speichern",
+      "title": "Adressen",
+      "delete_confirmation_title": "Adresse löschen?",
+      "delete_confirmation_description": "Vorhandene Bestellungen sind nicht betroffen.",
+      "edit_modal_title": {
+        "default": "Adresse bearbeiten",
+        "billing": "Rechnungsadresse bearbeiten",
+        "shipping": "Lieferadresse bearbeiten"
+      },
+      "add_address_banner": "Adressen hinzufügen, die beim Checkout verwendet werden sollen",
+      "billing_address_dropdown_placeholder": "Rechnungsadresse",
+      "add_button_text": "Hinzufügen",
+      "add_button_accessibility_label": "Adresse hinzufügen",
+      "back_button": "Zurück",
+      "back_button_accessibility_label": "Zurück zur Bearbeitung der Adresse {{address}}",
+      "no_addresses_banner": "Keine Adressen hinzugefügt"
+    },
+    "address_form": {
+      "auto_complete_close_accessibility_label": "Vorschläge schließen",
+      "auto_complete_title": "Vorschläge",
+      "billing_address": "Als Rechnungsadresse verwenden",
+      "cancel": "Stornieren",
+      "cancel_accessibility_label": "Bearbeitung der Adresse {{address}} abbrechen",
+      "creation_success_notification": "Adresse hinzugefügt",
+      "default_address": "Das ist meine Standardadresse",
+      "default_address_creation_success_notification": "Standardadresse hinzugefügt",
+      "default_address_update_success_notification": "Standardadresse aktualisiert",
+      "loading_add_form_accessibility_message": "Neues Adressformular wird geladen",
+      "loading_edit_form_accessibility_message": "Formular zur Bearbeitung der Adresse wird geladen",
+      "loading_finished_accessibility_message": "Adressformular wurde geladen",
+      "save": "Speichern",
+      "save_accessibility_label": "Adresse {{address}} speichern",
+      "section_title_accessibility_label": "Adresse hinzufügen",
+      "update_success_notification": "Adresse wurde aktualisiert",
+      "attention": "Adressat",
+      "attention_help_text": "Der Name einer Person oder Abteilung",
+      "loading_form_accessibility_message": "Adressformular wird geladen",
+      "attention_company": "Unternehmen / z. H."
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Unternehmensname",
+        "company_card_section_accessibility_label": "Unternehmen"
+      },
+      "locations": {
+        "contact_email": "E-Mail",
+        "contact_list_title": "Leute",
+        "contact_name": "Name",
+        "contact_permissions": "Berechtigungen",
+        "contact_phone_number": "Telefonnummer",
+        "location_picker_label": "Standortname",
+        "net_payment_terms_description": "{{name}}: Zahlungen innerhalb von {{numberOfDays}} Tagen fällig",
+        "payment_details_title": "Zahlungsdetails",
+        "payment_terms": "Zahlungsbedingungen",
+        "permissions_label": "Deine Berechtigungen",
+        "permissions_title": "Berechtigungen",
+        "section_title": "Standort",
+        "shipping_address_required": "Füge diesem Standort eine Lieferadresse hinzu, um Bestellungen aufgeben zu können",
+        "tax_details_title": "Steuerdetails",
+        "tax_id": "Steuer-ID",
+        "tax_exemptions": "Steuerbefreiungen",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} weitere",
+        "multiple_tax_exemptions_and": "und",
+        "tax_exemptions_modal_close": "Schließen",
+        "taxes_none": "Keine",
+        "tax_exemption_not_applicable": "N/A",
+        "tax_exemptions_modal_button_accessibility_label": "Alle Steuerbefreiungen anzeigen",
+        "pagination": {
+          "load_more": "Mehr anzeigen",
+          "load_more_accessibility_label": "Mehr Standorte anzeigen"
+        },
+        "own_role_contact_name": "Du",
+        "staff_and_permissions_title": "Mitarbeiter und Berechtigungen",
+        "location_picker_accessibility_label": "Standortname: {{locationName}}",
+        "deposit_percentage": "{{percentage}} Einlage",
+        "contact_contact": "Kontakt"
+      },
+      "location_selection": {
+        "description": "Wenn du bereits Artikel in deinem Warenkorb hast, kann es Auswirkungen auf die Preise und Mengen dieser Artikel haben, wenn du den Standort wechselst.",
+        "list_accessibility_label": "Standortliste",
+        "list_item_accessibility_label": "{{name}}: {{address}}",
+        "list_item_without_address_accessibility_label": "{{name}}: Keine Adresse",
+        "list_loading_accessibility_message": "Standortliste wird geladen",
+        "list_loading_address_accessibility_message": "Adresse für {{locationName}} wird geladen",
+        "list_loading_finished_accessibility_message": "Standortliste wurde geladen",
+        "loading_store_accessibility_message": "Zum Shop",
+        "selection_cancel_button": "Stornieren",
+        "selection_confirmation_button": "Standort auswählen",
+        "title": "Für welche Standorte kaufst du ein?",
+        "continue_to_store": "Weiter zum Shop",
+        "no_location_title": "Nur private Bestellungen",
+        "no_location_description": "Du verfügst nicht mehr über die Berechtigung, Bestellungen für {{company}} aufzugeben. Du kannst weiterhin private Bestellungen aufgeben.",
+        "no_locations_found": "Keine Standorte gefunden",
+        "search": "Standorte suchen",
+        "clear_search": "Suche zurücksetzen",
+        "try_new_search": "Eine neue Suchanfrage starten",
+        "search_location_title": "Standort auswählen",
+        "selection_continue_button": "Weiter",
+        "description_switch_later": "Du kannst die Auswahl später jederzeit ändern",
+        "title_choose_location": "Standort auswählen",
+        "error_loading_locations": "Beim Laden der Standorte ist ein Problem aufgetreten. Überprüfe deine Internetverbindung und versuche es erneut."
+      },
+      "addresses": {
+        "add_billing_address_button": "Rechnungsadresse hinzufügen",
+        "add_billing_address_section_accessibility_label": "Rechnungsadresse hinzufügen",
+        "add_shipping_address_button": "Lieferadresse hinzufügen",
+        "add_shipping_address_section_accessibility_label": "Lieferadresse hinzufügen",
+        "billing_address_card_title": "Rechnungsadresse",
+        "cancel_adding_billing_address_accessibility_label": "Hinzufügen der Rechnungsadresse abbrechen"
+      }
     }
   }
 }
