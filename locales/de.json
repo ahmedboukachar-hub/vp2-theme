@@ -4147,6 +4147,150 @@
         "billing_address_card_title": "Rechnungsadresse",
         "cancel_adding_billing_address_accessibility_label": "Hinzufügen der Rechnungsadresse abbrechen"
       }
+    },
+    "errors": {
+      "banner_title": {
+        "other": "Es liegen {{count}} Fehler vor"
+      },
+      "failed_address_creation": {
+        "description": "Beim Erstellen deiner Adresse ist ein Problem aufgetreten. Versuche, diese Seite zu aktualisieren oder überprüfe deine Internetverbindung."
+      },
+      "failed_address_update": {
+        "description": "Beim Aktualisieren deiner Adresse ist ein Problem aufgetreten. Versuche, diese Seite zu aktualisieren oder überprüfe deine Internetverbindung."
+      },
+      "no_access_to_locations": {
+        "description": "Du hast keinen Zugriff auf Standorte"
+      },
+      "not_found": {
+        "description": "Überprüfe die URL oder versuche es in ein paar Minuten erneut.",
+        "title": "Beim Laden dieser Seite ist ein Problem aufgetreten"
+      },
+      "order_not_found": {
+        "description": "Diese Bestellung existiert nicht oder du hast keine Berechtigung, sie anzuzeigen.",
+        "title": "Bestellung nicht gefunden"
+      },
+      "profile_update_error": {
+        "description": "Beim Aktualisieren deines Profils ist ein Problem aufgetreten. Versuche, diese Seite zu aktualisieren oder überprüfe deine Internetverbindung."
+      },
+      "retry_action_label": "Erneut versuchen",
+      "load_orders_error": {
+        "title": "Bestellungen können nicht geladen werden",
+        "description": "Versuche es erneut oder komme später zurück.",
+        "retry_button": "Erneut versuchen"
+      },
+      "load_paypal_error": {
+        "description": "Beim Laden von PayPal ist ein Fehler aufgetreten. Bitte versuche es erneut."
+      },
+      "load_extension_error": {
+        "title": "Fehler",
+        "description": "Aktualisiere diese Seite oder versuche es in ein paar Minuten noch einmal.",
+        "refresh_button": "Seite neu laden"
+      },
+      "already_upgraded": "Upgrade für Kundenkonten bereits durchgeführt",
+      "failed_to_upgrade": "Upgrade für Kundenkontoeinstellungen konnten nicht durchgeführt werden.",
+      "logout_everywhere": {
+        "description": "Beim Abmelden ist etwas schiefgelaufen. Bitte versuche es erneut."
+      },
+      "resend_link": {
+        "too_many_requests": "Zu viele Anfragen. Versuche es später noch einmal.",
+        "generic": "Anfrage fehlgeschlagen"
+      },
+      "profile_name_update_error": {
+        "description": "Beim Aktualisieren deines Namens ist ein Problem aufgetreten. Versuche, diese Seite zu aktualisieren oder überprüfe deine Internetverbindung."
+      },
+      "load_address_form_error": {
+        "title": "Adressformular kann nicht geladen werden",
+        "description": "Adressformular konnte nicht geladen werden.",
+        "refresh_button": "Seite neu laden"
+      },
+      "not_upgraded": "Upgrade für Kundenkonten nicht durchgeführt.",
+      "failed_to_revert": "Die Einstellungen für die Kundenkonten konnten nicht zurückgesetzt werden.",
+      "revert_window_expired": "Das Fenster zum Zurücksetzen ist abgelaufen."
+    },
+    "payment_methods": {
+      "title": "Zahlungsmethoden",
+      "add_payment_method_button": "Zahlungsmethode hinzufügen",
+      "payment_details": {
+        "title": "Details zu Zahlungsmethoden",
+        "payment_method_expiring_on": "Läuft am {{expiryDate}} ab",
+        "preauthorized_payments": "Vorautorisierte Zahlungen",
+        "close_payment_modal": "Schließen",
+        "close_payment_modal_accessibility_label": "Zahlungsmethodendetails-Modal schließen",
+        "payment_method_not_found_error": "Zahlungsmethode kann nicht gefunden werden",
+        "payment_details_loading": "Zahlungsmethodendetails werden geladen",
+        "pre_authorized_payments": "Vorautorisierte Zahlungen",
+        "total_amount_of_subscription_line_items_left": "und {{total}} weitere",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} Artikel insgesamt, {{totalItemsToDisplay}} Artikel werden angezeigt.",
+        "next_payment_due": "Nächste Zahlung fällig am {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Bearbeiten",
+        "edit_payment_method_button_accessibility_label": "Zahlungsmethode bearbeiten, die auf {{lastDigits}} endet",
+        "credit_card_details_accessibility_label": "endet auf {{lastDigits}}",
+        "billing_title": "Rechnungsadresse",
+        "card_info_title": "Karteninformationen",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "payment_method_expired_on": "Abgelaufen am {{expiryDate}}",
+        "loading_shop_pay": "Shop Pay wird geladen",
+        "invalid_payment_method": "Ungültige Zahlungsmethode",
+        "invalid_payment_method_message": "Verwende eine neue Kreditkarte, um weiterhin eingehende Bestellungen zu erhalten.",
+        "replace_payment_method": "Zahlungsmethode ersetzen",
+        "checkout_card_banner": "Diese Zahlungsmethode kann nur für vorab autorisierte Zahlungen verwendet werden. Sie wird beim Checkout nicht angezeigt, wenn du in diesem Shop angemeldet bist. ",
+        "default_checkbox": "Als Standard festlegen",
+        "default_checkbox_accessibility_label": "Diese Zahlungsmethode als Standard festlegen",
+        "bank_account_details": "{{bankBrand}} •••• {{lastDigits}}",
+        "replace_payment_method_button": "Ersetzen",
+        "bank_details": "{{bankBrand}} •••• {{lastDigits}}"
+      },
+      "delete_payment_method_button": "Löschen",
+      "delete_payment_method_button_accessibility_label": "{{paymentMethodName}} löschen",
+      "back_button": "Zurück",
+      "back_button_accessibility_label": "Zurück zu {{paymentMethodStepTitle}}",
+      "generic_card": "Karte",
+      "payment_delete": {
+        "title": "Zahlungsmethode löschen",
+        "description_without_replacement": "Diese Zahlungsmethode steht bei zukünftigen Käufen nicht mehr zur Verfügung.",
+        "description_with_replacement": "Wenn du diese Zahlungsmethode löscht, hat dies Auswirkungen auf vorautorisierte Zahlungen. Du hast die Möglichkeit, sie mit einer anderen Zahlungsmethode zu ersetzen, um weiterhin Bestellungen zu erhalten.",
+        "payment_method_selector_placeholder": "Ersatz-Zahlungsmethode auswählen (optional)",
+        "replace_method_with_new_method_description": "Deine {{currentPaymentMethodName}} wird gelöscht und mit {{newPaymentMethodName}} ersetzt.",
+        "error_when_deleting": "Es tut uns leid, etwas ist schiefgelaufen und wir konnten diese Zahlungsmethode nicht löschen. Bitte versuche es später erneut oder aktualisiere die Seite.",
+        "delete_and_replace_button": "Löschen und ersetzen",
+        "delete_and_replace_button_accessibility_label": "Lösche {{currentPaymentMethodName}} und ersetze sie mit {{newPaymentMethodName}}.",
+        "deleted_successfully": "Zahlungsmethode erfolgreich gelöscht.",
+        "payment_method_selector_no_alternative_payment": "Keine Ersatzmethode",
+        "loading_available_payment_methods_accessibility_label": "Verfügbare Zahlungsmethoden werden geladen",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Wenn du diese Zahlungsmethode löscht, hat dies Auswirkungen auf vorautorisierte Zahlungen. Wenn du keine alternative Zahlungsmethode auswählst, wird diese Zahlungsmethode weiterhin bei ausstehenden Beträgen für existierende Bestellungen belastet. Indem du eine alternative Zahlungsmethode auswählst, kannst du Abonnementbestellungen weiterhin ohne Unterbrechung erhalten.",
+          "with_pending_orders": "Wenn du diese Zahlungsmethode löscht, wird sie aus deinem Konto entfernt und steht bei zukünftigen Käufen nicht mehr zur Verfügung. Wenn du keine alternative Zahlungsmethode auswählst, wird diese Zahlungsmethode weiterhin bei ausstehenden Beträgen für existierende Bestellungen belastet.",
+          "with_subscriptions": "Wenn du diese Zahlungsmethode löscht, hat dies Auswirkungen auf vorautorisierte Zahlungen. Ersetze sie mit einer alternativen Zahlungsmethode, um weiterhin Bestellungen zu erhalten."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Wenn du diese Zahlungsmethode löscht, hat dies Auswirkungen auf vorautorisierte Zahlungen. Diese Zahlungsmethode wird weiterhin bei ausstehenden Beträgen für existierende Bestellungen belastet, jedoch erhältst du keine Abonnementbestellungen mehr. Füge eine alternative Zahlungsmethode hinzu, um weiterhin Abonnementbestellungen zu erhalten.",
+          "with_pending_orders": "Wenn du diese Zahlungsmethode löscht, wird sie aus deinem Konto entfernt und steht bei zukünftigen Käufen nicht mehr zur Verfügung. Sie wird weiterhin bei ausstehenden Beträgen für existierende Bestellungen belastet.",
+          "with_subscriptions": "Wenn du diese Zahlungsmethode löscht, hat dies Auswirkungen auf vorautorisierte Zahlungen. Füge eine alternative Zahlungsmethode hinzu, um weiterhin Bestellungen zu erhalten."
+        }
+      },
+      "edit_payment_method": {
+        "title": "Zahlungsmethode bearbeiten",
+        "save_payment_method_button": "Speichern",
+        "cancel_edit_payment_method_button": "Stornieren",
+        "payment_method_updated_toast": "Zahlungsmethode aktualisiert",
+        "billing_address": "Rechnungsadresse",
+        "billing_address_add_new": "Neue Option hinzufügen",
+        "billing_address_choose_from_list": "Aus Liste auswählen",
+        "future_purchases_notice": "Diese Zahlungsmethode wird für zukünftige Käufe gespeichert.",
+        "generic_error": "Beim Aktualisieren ist ein Problem aufgetreten. Bitte versuche es erneut."
+      },
+      "card_fields": {
+        "card_number_label": "Kartennummer",
+        "card_number_placeholder": "Kartennummer",
+        "name_on_card_label": "Name des Karteninhabers",
+        "name_on_card_placeholder": "Name des Karteninhabers",
+        "card_expiry_label": "Gültig bis (MM/JJ)",
+        "card_expiry_placeholder": "Gültig bis (MM/JJ)",
+        "card_verification_value_label": "Sicherheitscode",
+        "card_verification_value_placeholder": "Sicherheitscode",
+        "card_start_label": "Ausstellungszeitpunkt (MM / JJ)",
+        "card_start_placeholder": "Ausstellungszeitpunkt (MM / JJ)"
+      }
     }
   }
 }
