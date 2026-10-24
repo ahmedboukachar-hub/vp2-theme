@@ -3769,7 +3769,263 @@
             "text": "Mit Amazon verwalten",
             "new_window_disclaimer": "(öffnet ein neues Fenster)"
           }
+        },
+        "attempted_to_deliver_label": "Versuchte Zustellung",
+        "there_was_a_problem_label": "Es ist ein Problem aufgetreten",
+        "buy_with_prime_logo_accessibility_label": "Amazon Buy with Prime Logo",
+        "delivered": "Zugestellt am {{date}}",
+        "complete_label": "Abgeschlossen",
+        "multiple_statuses_label": "Mehrere Bestellstatus",
+        "status_timestamp": "Aktualisiert am {{date}}",
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "Zustellung gestützt durch ",
+            "mixed_brands_label": "Zustellung garantiert",
+            "not_delivered_by_label": "Nicht geliefert bis {{date}}",
+            "modal_accessibility_button_label": "Details der Lieferzusage"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Shop Cash erhalten",
+            "no_shop_app_label": "{{appDownloadLink}}, um Shop Cash zu erhalten",
+            "download_shop_app_label": "Shop herunterladen"
+          },
+          "details_modal": {
+            "title": "Zustellung gestützt durch",
+            "modal_accessiblity_label": "Details der Lieferzusage",
+            "delivery_by_label": "Zustellung bis {{date}}",
+            "delivery_guaranteed_by_label": "Garantierte Zustellung bis {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "Shop Promise garantiert eine schnelle und zuverlässige Zustellung. Wenn deine Bestellung verspätet ankommt, kannst du Shop Cash in Anspruch nehmen.",
+              "may_be_eligible_not_authorized_label": "Du hast möglicherweise Anspruch auf Shop Cash, da diese Bestellung verspätet eingetroffen ist. Melde dich an, um Details zu sehen.",
+              "redeemed_label": "Du hast bereits Shop Cash erhalten, weil diese Bestellung verspätet eingetroffen ist.",
+              "no_shop_cash_label": "Für diese Bestellung besteht kein Anspruch aufgrund einer verspäteten Zustellung, da sie nicht mit Shop Pay bezahlt wurde.",
+              "no_longer_guaranteed_label": "Diese Artikel unterliegen nicht mehr der garantierten Zustellung.",
+              "claim_shop_cash_title": "Scannen, um {{amount}} in Shop Cash zu erhalten",
+              "claim_shop_cash_description": "Du kannst dein Shop Cash für zukünftige Einkäufe in der Shop-App verwenden."
+            },
+            "delivery_guarantee_label": "Garantierte Zustellung"
+          }
+        },
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Auf Amazon verwalten"
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "Zustellung garantiert durch",
+            "external_promise_brand_label": "Auslieferung durch",
+            "not_delivered_by_label": "Zugestellt nach dem {{date}}",
+            "delivery_guarantee_expired_label": "Garantierte Lieferzeit abgelaufen",
+            "modal_accessibility_button_label": "Details der Lieferzusage",
+            "download_shop_app_button_label": "Zum Verfolgen Shop herunterladen",
+            "track_with_shop_button_label": "Track with Shop",
+            "claim_shop_cash_button_label": "Shop Cash anfordern"
+          },
+          "details_modal": {
+            "title": "Garantierte Zustellung",
+            "active_delivery_guarantee_label": "Zustellung bis {{date}}",
+            "expired_badge_label": "Abgelaufen",
+            "order_includes_guarantees_label": "Für deine Bestellung bestehen {{deliveryAgreementsCount}} Garantien",
+            "order_includes_guarantees_description": "Shop Promise garantiert eine schnelle und zuverlässige Zustellung. Fordere Shop Cash an, wenn deine Bestellung nach dem {{date}} ankommt.",
+            "delivered_after_label": "Zugestellt nach dem {{date}}",
+            "delivered_after_description": "Da deine Bestellung verspätet eingetroffen ist, hast du Anspruch auf {{amount}} Shop Cash.",
+            "claimed_shop_cash_description": "Da diese Bestellung zu spät ankam, hast du {{amount}} Shop Cash in Anspruch genommen.",
+            "eligible_to_claim_shop_cash_description": "Da deine Bestellung verspätet eingetroffen ist, hast du Anspruch auf {{amount}} Shop Cash.",
+            "learn_more_button_label": "Mehr erfahren",
+            "claim_shop_cash_button_label": "Shop Cash anfordern",
+            "view_balance_in_shop_button_label": "Guthaben in Shop anzeigen",
+            "scan_to_claim_shop_cash_label": "Scannen, um {{amount}} in Shop Cash zu erhalten",
+            "expired_shop_promise_guarantee_description": "Die Shop Promise-Garantie für diese Bestellung ist abgelaufen."
+          }
+        },
+        "tracking_number": {
+          "one": "Trackingnummer",
+          "other": "Trackingnummern"
+        },
+        "gift_card_resend_button": {
+          "one": "Gutschein erneut senden",
+          "other": "Gutscheine erneut senden"
+        },
+        "was_expected_by": "Ursprünglich erwartet bis {{date}}",
+        "confirmed_description_shipping": "Wir bereiten diese Artikel für den Versand vor.",
+        "arrives": "Zustellung am {{date}}",
+        "delivery_estimate_backed_by": "Abgesichert durch",
+        "delivery_estimate_delayed_description": "Zustellungen in deiner Region sind langsamer als gewöhnlich. Deine Bestellung kommt möglicherweise später an.",
+        "delivery_estimate_delayed_title": "Verspätet",
+        "delivery_exception_shop_promise_delivered_late_description": "Deine Bestellung ist durch Shop Promise abgesichert. Da sie zu spät eingetroffen ist, fordere {{amount}} in Shop Cash an.",
+        "predicted_by_shop": "Von Shop prognostiziert",
+        "pickup_address_map_link_accessibility_label": "Abholort unter {{address}} auf einer Karte ansehen (öffnet ein neues Fenster)",
+        "pickup_location_label": "Abholort:",
+        "fulfillment_tracking": {
+          "delivery_progress_heading": "Sendungsverlauf",
+          "happened_at": "{{date}} um {{time}}",
+          "status": {
+            "attempted_delivery": "Versuchte Zustellung",
+            "buyer_action_required": "Handlung erforderlich",
+            "carrier_picked_up": "Vom Versanddienstleister abgeholt",
+            "confirmed": "Bestätigt",
+            "delayed": "Verzögert",
+            "delivered": "Zugestellt",
+            "exception": "Zustellproblem",
+            "failure": "Zustellproblem",
+            "in_transit": "Unterwegs",
+            "label_printed": "Etikett gedruckt",
+            "label_purchased": "Etikett gekauft",
+            "out_for_delivery": "Zustellung läuft",
+            "picked_up": "Abgeholt",
+            "ready_for_pickup": "Bereit zur Abholung durch den Versanddienstleister",
+            "ready_for_recipient_pickup": "Bereit zur Abholung",
+            "returning_to_sender": "Rücksendung an Absender"
+          },
+          "attempted_delivery_banner": "Informiere dich bei {{carrier}} über die Zustellung oder vereinbare eine neue Zustellung.",
+          "buyer_action_required_banner": "Informiere dich bei {{carrier}} oder kontaktiere uns für weitere Informationen.",
+          "carrier_banner_link_accessibility_label": "Details zur Sendungsverfolgung von {{carrier}} ansehen (öffnet ein neues Fenster)",
+          "carrier_link_accessibility_label": "Lieferung von {{carrier}} nachverfolgen (öffnet ein neues Fenster)",
+          "completed_gift_card": "Abgeschlossen am {{date}}",
+          "delivered_on": "Zugestellt am {{date}}",
+          "in_store_purchase": "Kauf im Geschäft",
+          "picked_up_on": "Abgeholt am {{date}}",
+          "pickup_details_banner": "Prüfe die Details zur Abholung bei {{carrier}}.",
+          "pickup_details_link_accessibility_label": "Details zur Abholung bei {{carrier}} ansehen (öffnet ein neues Fenster)",
+          "delivery_progress_for_shipment_accessibility_label": "Zustellfortschritt für Lieferung {{position}}",
+          "tracking_link_accessibility_label": "Lieferung {{trackingNumber}} von {{carrier}} nachverfolgen (öffnet ein neues Fenster)",
+          "gift_card_sent_to_recipient": {
+            "one": "Der Gutschein wurde an den:die Empfänger:in gesendet.",
+            "other": "Die Gutscheine wurden an die Empfänger:innen gesendet."
+          },
+          "unknown_carrier_banner": "Kontaktiere uns für weitere Informationen"
+        },
+        "arrives_tomorrow": "Kommt morgen an",
+        "arrives_today": "Zustellung heute"
+      },
+      "status_mark_as_delivered": "Als zugestellt markieren",
+      "buy_again": "Erneut kaufen",
+      "buy_again_accessibility_label": "Für Bestellung {{orderId}} erneut kaufen",
+      "manage": "Verwalten",
+      "manage_accessiblity_label": "Bestellung {{orderId}} verwalten",
+      "fulfillment_status_title": "Fulfillmentstatus: {{status}}",
+      "list_title_confirmed_orders_accessibility_label": "Bestellungen: bestätigt",
+      "list_title_pending_orders_accessibility_label": "Bestellungen: ausstehend",
+      "switch_order_type_pending_orders_accessibility_label": "Bestellungstyp wechseln, derzeit werden ausstehende Bestellungen angezeigt",
+      "switch_order_type_confirmed_orders_accessibility_label": "Bestellungstyp wechseln, derzeit werden bestätigte Bestellungen angezeigt",
+      "group_title_label": "Teil von: {{groupTitle}}",
+      "group_title_label_with_parent": "Für: {{groupTitle}}"
+    },
+    "order_details": {
+      "addresses_section_title": "Rechnungsstellung und Versand",
+      "billing_address": "Rechnungsadresse",
+      "card_ending_with": "endet mit {{lastDigits}}",
+      "contact": "Kontakt",
+      "hide_items": "Artikel ausblenden",
+      "loading": "Bestelldetails werden geladen",
+      "loading_finished_accessibility_message": "Bestelldetails wurden geladen",
+      "payment": {
+        "status_in_review": "Zahlung fällig nach der Überprüfung",
+        "status_unpaid": "Zahlung fällig am {{date}}",
+        "title": "Zahlung",
+        "shop_pay_installments": {
+          "view_schedule": "Plan anzeigen",
+          "summary": "Shop-Ratenzahlung"
+        },
+        "transactions": {
+          "show_all": "Alle anzeigen",
+          "show_less": "Weniger anzeigen",
+          "details": "Details",
+          "payment_details": "Zahlungsdetails"
+        },
+        "emv_details": {
+          "auth": "AUTH:",
+          "aid": "AID:",
+          "source": "SOURCE:"
+        },
+        "payment_type": {
+          "gift_card": "Gutschein",
+          "store_credit": "Shop-Guthaben",
+          "money_order": "Geldbrief",
+          "cash_on_delivery": "Nachnahme (COD)",
+          "bank_deposit": "Bankeinlage",
+          "manual": "Manuell"
         }
+      },
+      "shipping": {
+        "address": "Lieferadresse",
+        "address_map_marker": "Lieferadresse",
+        "method": "Versandart",
+        "summary": "Versand",
+        "free": "Kostenlos",
+        "one_time": "Einmaliger Versand",
+        "subscription": "Abonnement-Versandkosten",
+        "free_shipping_discount": "Kostenloser Versand",
+        "method_short": "Methode",
+        "ship_to": "Senden an"
+      },
+      "show_items": "Artikel anzeigen",
+      "subtitle": "Bestätigt am {{date}}",
+      "subtotal": "Zwischensumme",
+      "summary_list_title_accessibility_label": "Bestellartikel",
+      "summary_title": "Bestellübersicht",
+      "summary_totals_title_accessibility_label": "Gesamtbestellwerte",
+      "taxes": "Steuern",
+      "title": "Bestellung {{name}}",
+      "total": "Gesamt",
+      "unit_price": "({{price}}/Stück)",
+      "location": "Standort",
+      "not_applicable": "N. z.",
+      "fully_refunded_label": "ZURÜCKERSTATTET",
+      "partially_refunded_label": "TEILWEISE ZURÜCKERSTATTET",
+      "refunded_amount": "Zurückerstattet",
+      "discount": "Rabatt",
+      "compare_at_sale": "Sale ({{saleAmount}})",
+      "no_data": "Keine",
+      "pagination": {
+        "load_more": "Mehr anzeigen",
+        "load_more_accessibility_label": "Mehr Artikel anzeigen",
+        "loading_accessibility_label": "Artikel werden geladen"
+      },
+      "returns": {
+        "expand_events_label": "Details anzeigen",
+        "hide_events_label": "Details ausblenden",
+        "print_shipping_label": "Versandetikett drucken",
+        "tracking_number": "Trackingnummer:",
+        "return_and_refund_modal_header": "Widerrufsrecht",
+        "ineligible_return_message": "Keine Artikel in dieser Bestellung können zurückgegeben werden.",
+        "ineligible_return_message_when_returned": "Es können keine zusätzlichen Artikel in dieser Bestellung zurückgegeben werden.",
+        "exchange_header": "Umtauschartikel",
+        "exchange_subheader": "Umtauschartikel werden der Bestellung hinzugefügt, sobald die Rückgabe abgeschlossen wurde."
+      },
+      "request_return_failed": "Bei der Verarbeitung deiner Anfrage ist ein Problem aufgetreten. Bitte versuche es erneut.",
+      "mobile_summary_toggle_button": {
+        "open": "Bestellübersicht anzeigen",
+        "closed": "Bestellübersicht verbergen"
+      },
+      "show_order_summary": "Bestellübersicht anzeigen",
+      "hide_order_summary": "Bestellübersicht ausblenden",
+      "company": "Unternehmen",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} ist leer",
+      "marketing_section_title": "Neuigkeiten und Angebote",
+      "marketing_checkbox_label": "Neuigkeiten und Angebote via E-Mail erhalten",
+      "marketing_checkmark_label": "Du hast ein Abonnement zum Erhalt von Neuigkeiten und Angebote per E-Mail abgeschlossen",
+      "image_gallery": {
+        "product_name_and_quantity": "{{quantity}} Stück {{productName}}",
+        "next": "Nächste Artikel anzeigen",
+        "previous": "Vorherige Artikel anzeigen",
+        "load_more_items": {
+          "one": "{{count}} weiteren Artikel anzeigen",
+          "other": "{{count}} weitere Artikel anzeigen"
+        }
+      },
+      "shop_order_tracking": {
+        "download_shop_to_track": "Shop herunterladen, um das Paket zu verfolgen",
+        "track_order_with_shop": "Bestellung mit Shop verfolgen",
+        "title_header": "Mit deinem Mobiltelefon scannen",
+        "real_time_delivery_updates": "Shop sendet dir Zustellungsaktualisierungen in Echtzeit, sobald deine Bestellung versendet wurde.",
+        "real_time_delivery_updates_with_gift": "Erhalte Echtzeit-Zustellungs-Updates und ein Geschenk im Wert von {{promoAmount}} zum Einlösen in der Shop-App.",
+        "shop_app_promo_amount_off": "Erhalte ein Geschenk im Wert von {{promoAmount}}",
+        "shop_app_promo_text": "{{amountOff}} zum Einlösen in der Shop-App",
+        "open_in_shop": "Shop öffnen"
+      },
+      "shop_pay": {
+        "order_completed_with": "Bestellung abgeschlossen mit"
       }
     }
   }
