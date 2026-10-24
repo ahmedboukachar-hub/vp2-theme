@@ -4166,6 +4166,131 @@
       "february": "februari",
       "march": "maart",
       "april": "april"
+    },
+    "shop_ads": {
+      "subtitle": "Tijdelijk verkrijgbaar",
+      "button": "Verkennen op Shop",
+      "previous_button": "Vorige",
+      "next_button": "Volgende"
+    },
+    "knowledge_base": {
+      "self_serve_returns": {
+        "enabled": "Klanten kunnen in hun klantaccount zelf retouren aanvragen en beheren.",
+        "disabled": "Selfservice-retouren in klantaccounts zijn niet beschikbaar voor deze winkel. Retouren worden mogelijk nog wel geaccepteerd. Bekijk het retourbeleid of de website van de winkel om te zien hoe je een retour aanvraagt, of neem contact op met de winkel."
+      }
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "Cookievoorkeuren"
+    },
+    "announcement_bar": {
+      "expand_label": "Aankondigingsbalk uitklappen",
+      "collapse_label": "Aankondigingsbalk inklappen",
+      "close_label": "Aankondigingsbalk sluiten"
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "title": "Betaalmethode vervangen",
+        "loading": "Betaalmethoden laden",
+        "no_payment_methods_available": "Geen betaalmethoden beschikbaar",
+        "select_new_payment_method": "Selecteer een nieuwe betaalmethode",
+        "current_method": "Huidige",
+        "cancel": "Annuleren",
+        "save": "Opslaan",
+        "success": "Betaalmethode bijgewerkt",
+        "use_new_payment_method": "+ Gebruik nieuwe betaalmethode"
+      }
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "sheet_title": "Inloggen of account aanmaken",
+        "section_divider": "Meer manieren om in te loggen",
+        "alternate_divider": "OF",
+        "email_field_label": "E-mail",
+        "orders_button": "Bestellingen",
+        "profile_button": "Profiel",
+        "shop_login_button": "Inloggen met Shop",
+        "continue_with_google": "Doorgaan met Google",
+        "continue_with_facebook": "Doorgaan met Facebook",
+        "use_email_button": "E-mailadres gebruiken"
+      },
+      "signed_in_state": {
+        "greeting_with_name": "Hoi {{first_name}},",
+        "greeting_without_name": "Account",
+        "orders_button": "Bestellingen",
+        "profile_button": "Profiel"
+      },
+      "location_picker": {
+        "sheet_title": "Locaties",
+        "search_field_placeholder": "Zoeken"
+      },
+      "aria_labels": {
+        "close_menu": "Menu sluiten",
+        "back_to_main_menu": "Terug naar hoofdmenu vanuit {{title}}",
+        "open_submenu": "{{title}}, opent submenu",
+        "loading_menu": "Menu laden",
+        "account": "Account",
+        "sign_in_with_email": "Inloggen met e-mail",
+        "sign_in": "Inloggen",
+        "loading": "Laden"
+      }
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "Kaartnummer",
+        "title": "Betaalmethode vervangen",
+        "replace_with": "Vervangen door",
+        "add_new_payment_method": "Nieuwe toevoegen",
+        "save_button": "Opslaan",
+        "close_button": "Sluiten",
+        "loading": "Modaal voor vervangen betaalmethode wordt geladen",
+        "success": "Betaalmethode bijgewerkt",
+        "invalid_subscription_contract": "Kan abonnement niet vinden",
+        "expiry_date": "Vervalt op {{expiryDate}}",
+        "edit_current_payment_method": "Huidige betaalmethode bewerken",
+        "edit_selected_payment_method": "Geselecteerde betaalmethode bewerken"
+      }
+    },
+    "order_receipt_document": {
+      "placeholder_title": "Tijdelijke aanduiding voor bon",
+      "placeholder": "Tijdelijke aanduiding: bestelling %{name} voor %{total} kan nog niet worden weergegeven."
+    },
+    "redirect_warning": {
+      "title": "Deze link is mogelijk onveilig",
+      "description_html": "Als je op Doorgaan klikt, word je doorgestuurd naar %{destination}",
+      "go_back": "Teruggaan",
+      "leave_this_page": "Deze pagina verlaten",
+      "continue_anyway": "Toch doorgaan",
+      "why_am_i_seeing_this": "Waarom zie ik dit?"
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "%{shop_name}-logo",
+      "step_one": {
+        "page_title": "Inloggen - %{shop_name}",
+        "heading": "Inloggen",
+        "subheading": "Voer je e-mailadres in en wij sturen je een verificatiecode",
+        "input_field_label": "E-mailadres",
+        "button": "Doorgaan",
+        "subheading_with_sign_in_options": "Inloggen of een account aanmaken",
+        "or": "of",
+        "consent_agreement": "Door verder te gaan, ga je akkoord met de %{terms}",
+        "last_used_pill": "Laatst gebruikt"
+      },
+      "step_two": {
+        "page_title": "Code invoeren - %{shop_name}",
+        "heading": "Code invoeren",
+        "subheading": "Verzonden naar %{email}",
+        "restart_link": "Inloggen met een ander e-mailadres",
+        "input_field_label": "Code van 6 cijfers",
+        "button": "Indienen",
+        "change_email": "Wijzigen"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "Voer een geldig e-mailadres in",
+          "invalid_code": "Voer de juiste code van zes cijfers in"
+        }
+      },
+      "processing": "Verwerken..."
     }
   }
 }
