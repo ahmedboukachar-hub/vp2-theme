@@ -1448,7 +1448,278 @@
         "pickup_label": "Retiro en tienda",
         "no_pickup_location": "No hay ningún lugar de retiro disponible.",
         "calculating_shipping": "Calculando…",
-        "estimated_taxes_label": "Impuestos estimados"
+        "estimated_taxes_label": "Impuestos estimados",
+        "total_due_later_label": "Total a pagar más adelante",
+        "discount_code_allocations_mismatch": "Tu código de descuento <strong style=\"text-transform:uppercase\">%{code}</strong> cambió. Revisa tu carrito e inténtalo de nuevo.",
+        "deferred_total_due_date_label_next": "Vence el %{date}",
+        "total_due_label": "Total por pagar",
+        "total_price_label": "Precio total",
+        "for_add_on": "Para: %{group_title}",
+        "unconfirmed_label": "Sin confirmar",
+        "total_paid_label": "Total pagado",
+        "from_shop_heading": "De: %{shop_name}",
+        "from_other_stores_heading": "De otras tiendas",
+        "order_discounts_apply_to_local_shop": "Los descuentos de pedido solo se aplican a artículos de %{shop_name}",
+        "gift_cards_apply_to_local_shop": "Las tarjetas de regalo solo se aplican a artículos de %{shop_name}",
+        "estimated_taxes_label_short": "Estimado",
+        "discount_code_removed": "Se eliminó el código de descuento %{code}",
+        "discount_code_replaced": "Se eliminó el código de descuento %{old_code} y se aplicó %{code}",
+        "discount_code_replaced_multiple": "Se eliminaron varios códigos de descuento y se aplicó %{code}",
+        "from_multiple_stores_heading": "De varias tiendas",
+        "pay_merchant_label": "Pagar a %{merchant_name}",
+        "discount_applies_to_subscription_items_only": "Este descuento solo se aplica a artículos de suscripción",
+        "estimated_taxes_finalization_tooltip_content_short": "Impuestos definitivos tras el pago",
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "No hay tiendas disponibles en %{country} con tu artículo",
+          "other": "No hay tiendas disponibles en %{country} con tus artículos"
+        },
+        "compare_at_sale": "Oferta (%{sale_amount})",
+        "tax_line": {
+          "hst": "HST",
+          "gst": "GST",
+          "pst": "PST",
+          "rst": "RST",
+          "qst": "QST",
+          "vpt": "VPT"
+        },
+        "automatic_discount_tooltip": "Los descuentos aplicados automáticamente no se pueden eliminar",
+        "alternative_payment_currency_chinese_yuan": "Confirma el total final en CNY en la app %{wallet}.",
+        "product_disclosures": {
+          "title": "Avisos sobre el producto"
+        },
+        "lpm": {
+          "wechat_pay": {
+            "checkout_disclosure": "Confirma el total final en CNY en la app de WeChat",
+            "post_purchase_disclosure": "Consulta el total en CNY en WeChat",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} procesará este pago como %{amount_due} %{processing_currency}, que WeChat convierte a CNY",
+            "checkout_disclosure_charged_in_cny": "%{shop_name} procesará este pago como %{amount_due} %{processing_currency}"
+          },
+          "alipay": {
+            "checkout_disclosure": "Confirma el total final en CNY en la app de Alipay",
+            "post_purchase_disclosure": "Consulta el total en CNY en Alipay",
+            "checkout_disclosure_with_alternative_payment_currency": "%{shop_name} procesará este pago como %{amount_due} %{processing_currency}, que Alipay convierte a CNY",
+            "checkout_disclosure_charged_in_cny": "%{shop_name} procesará este pago como %{amount_due} %{processing_currency}"
+          }
+        },
+        "discount_title_with_position": "Descuento %{position}",
+        "item_discounts_label": "Descuentos en artículos",
+        "tax_label": "Impuestos",
+        "duty_label": "Aranceles"
+      },
+      "shipping": {
+        "title": "Envío",
+        "shipping_method_title": "Métodos de envío",
+        "waiting_on_rate_notice": "Obteniendo las tarifas de envío disponibles...",
+        "waiting_on_pickup_location_notice": "Obtención de las sucursales para retirar disponibles...",
+        "no_rates_for_cart_or_destination_notice": "No hay métodos de envío disponibles para tu carrito o dirección",
+        "no_pickup_location_notice": "Al menos uno de tus productos no está disponible para ser retirado",
+        "no_rates_for_country_notice": "No se encontraron tarifas de envío para esta dirección.",
+        "no_rates_contact_notice": "Pónte en contacto con nosotros para obtener más información",
+        "free_rate_label": "Gratis",
+        "cheapest_rate_label": "Más económico",
+        "estimated_delivery_date": {
+          "one": "%{count} día hábil",
+          "other": "%{count} días hábiles"
+        },
+        "estimated_delivery_date_range": "%{minimum} a %{maximum} días hábiles",
+        "shipping_line_phone_label": "Número de teléfono móvil (obligatorio)",
+        "shipping_line_phone": "Tu servicio de mensajería y paquetería puede usar este número para contactarte.",
+        "other_method": {
+          "zero": "No hay otros métodos de envío disponibles",
+          "one": "%{count} método diferente disponible por",
+          "other": "Otros %{count} métodos de envío disponibles a partir de"
+        },
+        "shipping_rate_discounted_amount": "Antes: %{original_amount}. Ahora: %{amount}",
+        "shipping_line_delivery_phone": "Es posible que se contacte contigo con información actualizada sobre tu entrega.",
+        "optional_shipping_line_delivery_instructions_label": "Instrucciones de entrega (opcional)",
+        "shipping_line_delivery_phone_label": "Número de teléfono",
+        "shipping_line_delivery_instructions": "Introduce los datos necesarios como códigos de puertas o instrucciones para la entrega.",
+        "local_delivery": "Entrega local",
+        "subscription_shipping": "Envío por suscripción",
+        "shipping_method_one_time_purchase_group_title": "Compra única",
+        "shipping_method_subscription_group_title": "Suscripción",
+        "subscription_delivery_description": {
+          "prepaid_delivery_frequency": {
+            "one": "para %{count} entrega",
+            "other": "para %{count} entregas"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "cada día",
+              "other": "cada %{count} días"
+            },
+            "week": {
+              "one": "cada semana",
+              "other": "cada %{count} semanas"
+            },
+            "month": {
+              "one": "cada mes",
+              "other": "cada %{count} meses"
+            },
+            "year": {
+              "one": "cada año",
+              "other": "cada %{count} años"
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} por entrega",
+          "prepaid_shipping_price_label": "%{shipping_price} por entrega x %{delivery_interval_count}",
+          "initial_order_discounted": "Costo del primer envío %{discounted_shipping_cost}, luego %{frequency_description}",
+          "prepaid_initial_order_discounted": "Costo del primer envío %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Costo del primer envío %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Costo del primer envío %{discounted_shipping_price} %{prepaid_delivery_frequency}, luego %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Costo del primer envío %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), luego %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "Incluido",
+          "recurring_order_shipping_price": "seguido de %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "Primer pedido incluido, seguido de %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} por entrega), seguido de %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Primer pedido gratis",
+            "other": "Primeros %{count} pedidos gratis"
+          },
+          "free_for_first_n_order": {
+            "one": "Para el primer pedido",
+            "other": "Para los primeros %{count} pedidos"
+          },
+          "subscription_free_with_frequency_label": "Envío gratis %{delivery_frequency}",
+          "free_shipping_cycles": {
+            "one": "Envío gratis para %{count} entrega más",
+            "other": "Envío gratis para %{count} entregas más"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Envío gratis para %{count} entrega",
+            "other": "Envío gratis para %{count} entregas"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Envío gratis para %{count} entrega más y después por %{recurring_order_shipping_price}",
+            "other": "Envío gratis para %{count} entregas más y después por %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Envío gratis para %{count} entrega y después por %{recurring_order_shipping_price}",
+            "other": "Envío gratis para %{count} entregas y después por %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} entrega más por %{shipping_price}",
+            "other": "%{count} entregas más por %{shipping_price} cada una"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{count} entrega por %{shipping_price}",
+            "other": "%{count} entregas más por %{shipping_price} cada una"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Envío gratis durante el primer%{cycle} y luego por %{recurring_order_shipping_price}",
+            "other": "Envío gratis durante el primer%{cycle} y luego por %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} para %{count} entrega más",
+            "other": "%{shipping_price} para %{count} entregas más (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} para %{count} entrega",
+            "other": "%{shipping_price} para %{count} entregas (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} para %{count} entrega más y luego por %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} para %{count} entregas más (%{per_delivery_cost}) y luego por %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} para %{count} entrega y luego por %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} para %{count} entregas (%{per_delivery_cost}) y luego por %{recurring_order_shipping_price}"
+          }
+        },
+        "one_time_purchase_shipping": "Envío único",
+        "estimated_delivery_time": "Fecha de entrega estimada: %{time}",
+        "estimated_delivery_time_range": "Fecha de entrega estimada: %{min_time}–%{max_time}",
+        "arrives_time": "Llega en %{time}",
+        "arrives_time_range": "Llega entre %{min_time}–%{max_time}",
+        "estimated_time": "Llegada prevista: %{time}",
+        "estimated_time_range": "Hora estimada: %{min_time}-%{max_time}",
+        "delivery_date_range": "%{min_time}–%{max_time}",
+        "subscription_local_delivery": "Suscripción con entrega local",
+        "subscription_pickup": "Suscripción con retiro",
+        "delivery_today": "Entrega en el mismo día %{time}",
+        "delivery_tomorrow": "Entrega al día siguiente %{time}",
+        "two_day_delivery": "Entrega en dos días a las %{time}",
+        "delivery": "Entrega a las %{time}",
+        "duties_and_taxes_title": "Aranceles e impuestos",
+        "shipping_information_required_notice": "La información de envío es obligatoria. {{link}}.",
+        "shipping_information_redirect_link": "Ingresa tu información aquí",
+        "loading_progressive_rates": "Buscando más tarifas...",
+        "no_other_methods_available": "No hay otros métodos de envío disponibles",
+        "duties_and_taxes_options": {
+          "ddu_title": "Pagar al momento de la entrega",
+          "ddu_caption": "Es posible que se apliquen cargos adicionales",
+          "ddp_title": "Pagar ahora",
+          "ddp_caption": "No hay cargos adicionales por la entrega"
+        },
+        "shipping_method_combinations": {
+          "without_separator": "%{firstMethod}, %{secondMethod}",
+          "with_separator": "%{rest}, %{current},",
+          "combination": "%{rest} y %{current}"
+        },
+        "shipping_used_as_billing_notice": "También se utilizará como dirección de facturación para este pedido.",
+        "address_update": "Modificar dirección",
+        "shipping_address_title": "Enviar a",
+        "add_address": "Usar una dirección diferente",
+        "add_delivery_instructions": "Agregar instrucciones de entrega",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "address_more": "Más acciones para esta dirección",
+        "address_edit": "Editar dirección",
+        "address_delete": "Eliminar dirección",
+        "address_confirm": "¿Confirmas que deseas eliminar esta dirección de la cuenta?",
+        "address_form": {
+          "add_address": "Agregar dirección",
+          "save": "Guardar",
+          "cancel": "Cancelar",
+          "generic_error": "Hubo un problema al guardar la dirección. Inténtalo de nuevo.",
+          "one_time_address_subtitle": "Usar una dirección una sola vez para este pedido",
+          "edit": "Editar dirección",
+          "update": "Guardar cambios"
+        },
+        "different_shipping_method_summary": "Ingresa una dirección de envío diferente para ver los métodos de envío disponibles.",
+        "invalid_shipping_method_summary": "Introduce una dirección de envío válida para ver los métodos de envío disponibles",
+        "method_summary": {
+          "incomplete_address_entered": "Introduce una dirección de envío completa para ver los métodos de envío disponibles.",
+          "incomplete_address_selected": "Selecciona una dirección de envío completa para ver los métodos de envío disponibles."
+        },
+        "local_pickup": {
+          "search_address": "Buscar la dirección",
+          "rollup_title": "Lugar de retiro",
+          "rollup_accessibility_label": "Opciones de lugar de retiro"
+        },
+        "missing_shipping_address": "Falta la dirección de envío.",
+        "delivery_title": "Entrega",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Primer envío",
+          "other": "Primeros envíos"
+        },
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Envío recurrente",
+          "other": "Envíos recurrentes"
+        },
+        "address_default": "Establecer como predeterminada",
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} artículos",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} más",
+        "split_shipping_merchandise_shipment_number": "Envío %{number} de %{total}",
+        "pre_order_ships_now": "Se envía ahora",
+        "pre_order_ships_later": "Se envía más tarde",
+        "pre_order_ships_date": "Se envía el %{date}",
+        "split_shipping_shipped_by_shop": "Envío realizado por %{shop_name}",
+        "split_shipping_multiple_shipment_label": "Varios envíos",
+        "split_shipping_shipping_label": "Método",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} envíos",
+        "split_shipping_multiple_shipment_notice": "Tu pedido llegará en varios envíos",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "Tu pedido llegará en %{quantity} envíos",
+        "split_shipping_more_shipping_options": "Más opciones de envío",
+        "split_shipping_shipment_number": "Envío %{number}",
+        "split_shipping_option_free": "Envío gratis",
+        "split_shipping_option_lowest_price": "Precio más bajo",
+        "split_shipping_option_fastest": "Envío más rápido",
+        "split_shipping_option_recommended": "Recomendado",
+        "split_shipping_option_custom": "Personalizado",
+        "default_description": "Se envía en un día hábil",
+        "split_shipping_shipment_notice": "Tu pedido llegará en %{quantity_shipments}",
+        "unbranded_default_description": "Listo para enviar"
       }
     }
   }
