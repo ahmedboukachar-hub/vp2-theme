@@ -3534,6 +3534,136 @@
         "complete_label": "Terminé",
         "multiple_statuses_label": "Plusieurs statuts de la commande",
         "status_timestamp": "Mis à jour le {{date}}"
+      },
+      "switch_order_type_confirmed_orders_accessibility_label": "Changement de type de commandes, affichage des commandes confirmées",
+      "group_title_label": "Partie de : {{groupTitle}}",
+      "group_title_label_with_parent": "Pour : {{groupTitle}}"
+    },
+    "order_details": {
+      "addresses_section_title": "Facturation et expédition",
+      "billing_address": "Adresse de facturation",
+      "card_ending_with": "se terminant par {{lastDigits}}",
+      "contact": "Contact",
+      "hide_items": "Masquer les articles",
+      "loading": "Détails de la commande en cours de chargement",
+      "loading_finished_accessibility_message": "Les détails de la commande ont été chargés",
+      "payment": {
+        "status_in_review": "Paiement dû après examen",
+        "status_unpaid": "Paiement dû le {{date}}",
+        "title": "Paiement",
+        "shop_pay_installments": {
+          "view_schedule": "Voir le calendrier",
+          "summary": "Échéances Shop"
+        },
+        "transactions": {
+          "show_all": "Tout afficher",
+          "show_less": "Afficher moins",
+          "details": "Détails",
+          "payment_details": "Détails du paiement"
+        },
+        "emv_details": {
+          "auth": "AUTH :",
+          "aid": "AID :",
+          "source": "SOURCE :"
+        },
+        "payment_type": {
+          "gift_card": "Carte-cadeau",
+          "store_credit": "Crédit en magasin",
+          "money_order": "Mandat",
+          "cash_on_delivery": "Paiement à la livraison",
+          "bank_deposit": "Dépôt en banque",
+          "manual": "Manuel"
+        }
+      },
+      "shipping": {
+        "address": "Adresse d'expédition",
+        "address_map_marker": "Adresse d'expédition",
+        "method": "Mode d'expédition",
+        "summary": "Expédition",
+        "free": "Gratuit",
+        "free_shipping_discount": "Expédition gratuite",
+        "one_time": "Expédition ponctuelle",
+        "subscription": "Expédition à l’abonnement",
+        "method_short": "Méthode",
+        "ship_to": "Expédier à"
+      },
+      "show_items": "Afficher les articles",
+      "subtitle": "Confirmée le {{date}}",
+      "subtotal": "Sous-total",
+      "summary_list_title_accessibility_label": "Articles de la commande",
+      "summary_title": "Résumé de la commande",
+      "summary_totals_title_accessibility_label": "Totaux de la commande",
+      "taxes": "Taxes",
+      "title": "Commande {{name}}",
+      "total": "Total",
+      "unit_price": "{{price}}/pièce",
+      "location": "Emplacement",
+      "not_applicable": "s.o.",
+      "fully_refunded_label": "REMBOURSÉ",
+      "partially_refunded_label": "REMBOURSÉ PARTIELLEMENT",
+      "refunded_amount": "Remboursé",
+      "discount": "Réduction",
+      "compare_at_sale": "Promotion ({{saleAmount}})",
+      "no_data": "Aucun",
+      "pagination": {
+        "load_more": "Afficher plus",
+        "load_more_accessibility_label": "Afficher plus d’articles",
+        "loading_accessibility_label": "Chargement des articles"
+      },
+      "returns": {
+        "expand_events_label": "Afficher les détails",
+        "hide_events_label": "Masquer les détails",
+        "print_shipping_label": "Imprimer l'étiquette d’expédition",
+        "tracking_number": "Numéro de suivi :",
+        "return_and_refund_modal_header": "Politique de remboursement",
+        "ineligible_return_message": "Aucun article de cette commande n’est admissible au retour.",
+        "ineligible_return_message_when_returned": "Aucun autre article de cette commande n’est admissible au retour.",
+        "exchange_header": "Articles d’échange",
+        "exchange_subheader": "Des articles d’échange seront ajoutés à la commande une fois le retour terminé."
+      },
+      "request_return_failed": "Un problème est survenu lors du traitement de votre requête. Veuillez réessayer.",
+      "mobile_summary_toggle_button": {
+        "open": "Afficher le résumé de la commande",
+        "closed": "Masquer le résumé de la commande"
+      },
+      "show_order_summary": "Afficher le résumé de la commande",
+      "hide_order_summary": "Masquer le résumé de la commande",
+      "company": "Entreprise",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} est vide",
+      "marketing_section_title": "Nouveautés et offres",
+      "marketing_checkbox_label": "Envoyez-moi des nouvelles et des offres par e-mail",
+      "marketing_checkmark_label": "Vous êtes abonné(e) pour recevoir les nouveautés et offres par e-mail",
+      "image_gallery": {
+        "product_name_and_quantity": "{{productName}} quantité {{quantity}}",
+        "next": "Afficher les articles suivants",
+        "previous": "Afficher les articles précédents",
+        "load_more_items": {
+          "one": "Afficher {{count}} autre article",
+          "other": "Afficher {{count}} autres articles"
+        }
+      },
+      "shop_order_tracking": {
+        "download_shop_to_track": "Télécharger Shop pour suivre le colis",
+        "track_order_with_shop": "Suivre une commande avec Shop",
+        "title_header": "Scannez avec votre téléphone",
+        "real_time_delivery_updates": "Shop vous enverra des informations en temps réel sur la livraison dès que votre commande sera expédiée.",
+        "real_time_delivery_updates_with_gift": "Obtenez des mises à jour de livraison en temps réel et un cadeau de {{promoAmount}} à dépenser dans l’appli Shop.",
+        "shop_app_promo_amount_off": "Obtenez un cadeau de {{promoAmount}}",
+        "shop_app_promo_text": "{{amountOff}} à dépenser dans l’appli Shop",
+        "open_in_shop": "Ouvrir Shop"
+      },
+      "shop_pay": {
+        "order_completed_with": "Commande finalisée avec",
+        "learn_more": "En savoir plus",
+        "usdc_rewards_terms": "Afficher les conditions des récompenses en USDC"
+      },
+      "edit_summary": {
+        "added": "Ajouté",
+        "added_with_quantity": "{{quantity}} ajouté(s)",
+        "removed": "Supprimé",
+        "removed_with_quantity": "{{quantity}} supprimé(s)",
+        "updated_at": "Votre commande a été mise à jour le {{date}}"
       }
     }
   }
