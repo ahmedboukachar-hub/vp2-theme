@@ -1716,7 +1716,279 @@
         "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} totaal %{total_shop_price}",
         "billing_address_title": "Factuuradres",
         "billing_address_description": "Selecteer het adres dat overeenkomt met je kaart of betaalmethode.",
-        "billing_address_description_no_shipping_address": "Voer het adres in dat overeenkomt met je kaart of betaalmethode."
+        "billing_address_description_no_shipping_address": "Voer het adres in dat overeenkomt met je kaart of betaalmethode.",
+        "pending_payment": {
+          "apple_wallet": {
+            "pass": {
+              "store_label": "Winkel",
+              "expiry_date_label": "Vervaldatum",
+              "payment_due_label": "Te betalen",
+              "reference_number_label": "Referentienummer",
+              "ordered_on_label": "Besteld op"
+            }
+          }
+        },
+        "purchase_options_agreement_label": "Minimaal één artikel in je winkelwagen is een uitgestelde of terugkerende aankoop. Door verder te gaan met je betaling, ga je ermee akkoord dat je betaalmethode automatisch wordt belast volgens de prijs en frequentie die op deze pagina staan vermeld, totdat dit afloopt of je annuleert. Op alle annuleringen is het %{cancellation_policy_label} van toepassing.",
+        "update_payment_method": "Betaalmethode bijwerken",
+        "paypal_modal": {
+          "order_contains_subscriptions": "Abonnement",
+          "order_contains_fixed_selling_plans": "Totaal is mogelijk exclusief belastingen, verzending, uitgestelde kosten en sommige kortingen. Ga door naar de checkout voor het vandaag verschuldigde bedrag."
+        },
+        "purchase_options_agreement_label_html": "Ik begrijp dat minimaal één artikel in mijn winkelwagen een uitgestelde of terugkerende aankoop is. Door verder te gaan, ga ik akkoord met het\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">annuleringsbeleid</a>\nen geef ik toestemming om mijn betaalmethode te belasten volgens de prijzen, frequentie en datums die op deze pagina staan vermeld totdat mijn\nbestelling is afgehandeld of ik annuleer, indien toegestaan.\n",
+        "payment_method_saved": "Betaalmethode opgeslagen",
+        "card_vaulted_company_location": "Kaart opgeslagen voor deze locatie",
+        "order_covered_by_store_credit_notice": "De bestelling wordt betaald met je winkeltegoed.",
+        "order_covered_by_redeemables_notice": "De bestelling wordt betaald.",
+        "store_credit": {
+          "label": "Winkeltegoed",
+          "apply_label": "Winkeltegoed toepassen",
+          "add_label": "Winkeltegoed toevoegen",
+          "manage_label": "Winkeltegoed beheren",
+          "buying_gift_card": "Met een winkeltegoed kun je geen cadeaubon kopen",
+          "no_fixed_selling_plans": "Je kunt geen winkeltegoed gebruiken in combinatie met uitgestelde aankoopopties"
+        },
+        "clear": "Wissen",
+        "billing_must_match_shipping_notice": "Het factuuradres van je betaalmethode moet overeenkomen met het bezorgadres.",
+        "same_billing_address_checkbox_label": "Bezorgadres en factuuradres zijn hetzelfde",
+        "location_billing_address_label": "Factuuradres van locatie",
+        "fact_billing_address_label": "Factuuradres",
+        "location_shipping_address_label": "Bezorgadres van locatie",
+        "no_working_method_error": "Deze winkel kan momenteel geen betalingen accepteren. Vernieuw de pagina of kom later terug.",
+        "brand_not_available": "Deze winkel accepteert geen {{brand}}. Gebruik een andere kaart om te betalen.",
+        "shipping_rate_updated": "Beschikbare verzendmethoden zijn bijgewerkt. Bevestig je keuze voordat je afrekent.",
+        "billing_address_invalid_phone": "Werk het telefoonnummer bij het factuuradres voor {{label}} {{last_digits}} bij om door te gaan.",
+        "billing_address_invalid_phone_no_card": "Werk het telefoonnummer bij het factuuradres bij om door te gaan.",
+        "preview_not_available": {
+          "title": "Voorbeeld niet beschikbaar",
+          "content": "Geen zorgen, deze snelle checkout werkt voor je klanten.",
+          "button": "OK"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Voer een geldige uitgiftedatum in",
+              "issue_number": "Voer een geldig uitgiftenummer in"
+            },
+            "invalid": {
+              "verification_value": "Voer een geldige CVV/CVC of veiligheidscode in"
+            }
+          }
+        },
+        "simulated_checkout": "Voorbeeld verschijnt binnenkort",
+        "vaulting_agreement_label": "Mijn betaalgegevens opslaan bij %{company} voor een snellere checkout",
+        "business_customer_vaulting_payment_label": "Sla deze betaalmethode bij de checkout op en machtig %{company} om via deze kaart geld af te schrijven voor toekomstige aankopen op deze locatie. Alle contactpersonen die aan deze locatie zijn toegewezen, mogen de betaalmethode gebruiken.",
+        "purchase_options_and_vaulting_agreement_label": "Een of meer artikelen in de winkelwagen zijn een uitgestelde of abonnementsaankoop. Als je doorgaat met de betaling, ga je ermee akkoord dat we de aankoopbedragen automatisch in rekening brengen via jouw betaalmethode tegen de prijs en frequentie die op deze pagina staan, totdat het afloopt of je het zelf opzegt. Voor alle opzeggingen geldt het %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "annuleringsbeleid",
+        "use_different_credit_card_label": "Een andere kaart gebruiken",
+        "saved_credit_card": "Je opgeslagen creditcard",
+        "saved_credit_card_info": "Laatste vier cijfers",
+        "saved_credit_cards_modal": {
+          "view_all_label": "Alle opgeslagen kaarten bekijken",
+          "done": "Gereed",
+          "cancel": "Annuleren"
+        },
+        "expired_cards_info": {
+          "one": "Er is %{count} verlopen kaart. Je kunt deze bekijken en aanpassen in je account.",
+          "other": "Er zijn %{count} verlopen kaarten. Je kunt deze bekijken en aanpassen in je account."
+        },
+        "local_payment_method_receiver_notice": "Na het plaatsen van je bestelling, ontvang je de betalingsgegevens. Voer de betaling binnen {{dueDays}} dagen uit bij een geldautomaat of online.",
+        "order_edit_banner_title": "Betaling van {{amount_owed}} is vereist",
+        "order_edit_banner_subtitle": "Je bestelling {{order_number}} is bijgewerkt. Loop deze wijzigingen na en betaal om je bestelling te bevestigen.",
+        "order_edit_banner_single_item_added": "Toegevoegd",
+        "order_edit_banner_multiple_items_added": "{{amount}} toegevoegd",
+        "order_edit_banner_single_item_removed": "Verwijderd",
+        "order_edit_banner_multiple_items_removed": "{{amount}} verwijderd",
+        "gift_card_wrapper": {
+          "heading": "Cadeaubon",
+          "apply_gift_card_label": "Een cadeaubon toepassen",
+          "payment_tag": "Cadeaubon",
+          "apply_another_gift_card_label": "Een andere cadeaubon toepassen",
+          "gift_card_label": "Cadeaubon %{identifier}",
+          "add_label": "Een cadeaubon toevoegen",
+          "manage_label": "Cadeaubonnen beheren"
+        },
+        "custom_onsite_payment_method_modal": {
+          "title": "Bevestiging voor aangepaste onsite betalingen"
+        },
+        "markets_pro_disclaimer_label": "Door je bestelling te plaatsen, ga je akkoord met de aankoop bij Global-e als de geregistreerde handelaar, onderworpen aan de %{markets_pro_terms} en %{privacy_policy} van Global-e, en deel je je gegevens met %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "algemene voorwaarden",
+        "markets_pro_disclaimer_privacy_policy": "privacybeleid",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Algemene voorwaarden voor merchants of record",
+        "markets_pro_disclaimer_privacy_policy_title": "Privacybeleid voor merchants of record",
+        "purchase_order_number": {
+          "title": "Bestelnummer",
+          "label": "Bestelnummer (optioneel)"
+        },
+        "alternative_payment_currency_total_notice": "Opmerking: Er wordt %{amount_due} afgeschreven.",
+        "waiting_on_taxes_message": "Vernieuw de pagina als de belastingen niet binnen een paar seconden wordt berekend.",
+        "waiting_on_taxes_notice": "Belastingen berekenen",
+        "order_edit_banner_single_item_returned": "Geretourneerd",
+        "order_edit_banner_multiple_items_returned": "{{amount}} geretourneerd",
+        "shop_pay_installments_label": "Shop Pay-termijnbetalingen",
+        "add_credit_card_modal": {
+          "title": "Kaart toevoegen",
+          "cancel": "Annuleren",
+          "save": "Opslaan"
+        },
+        "delete_credit_card_modal": {
+          "title": "Kaart verwijderen",
+          "confirmation": "Weet je zeker dat je {{brandName}} eindigend op {{lastDigits}} wilt verwijderen?",
+          "cancel": "Annuleren",
+          "delete": "Verwijderen"
+        },
+        "order_edit_banner_items_added": {
+          "one": "Toegevoegd",
+          "other": "%{count} toegevoegd"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Verwijderd",
+          "with_quantities": "{{delta}} van {{quantity}} verwijderd"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "{{quantity}} geretourneerd",
+          "with_quantities": "{{delta}} van {{quantity}} geretourneerd"
+        },
+        "saved_credit_card_actions": {
+          "edit": "Bewerken",
+          "delete": "Verwijderen"
+        },
+        "edit_credit_card_modal": {
+          "title": "Kaart bewerken",
+          "done": "Gereed",
+          "cancel": "Annuleren",
+          "description": "Je kunt alleen het factuuradres van je kaart wijzigen.",
+          "fields": {
+            "default": "Als standaard instellen",
+            "card_number": "Kaartnummer",
+            "expiry": "Vervaldatum",
+            "security_code": "Beveiligingscode",
+            "name": "Naam op kaart",
+            "billing": "Factureren aan"
+          }
+        },
+        "payment_method": "Betaalmethode",
+        "expired_payment_method": "De geselecteerde betaalmethode is verlopen",
+        "subscription_heading": "Abonnementsovereenkomst",
+        "use_order_billing_address_label": "Factuuradres van bestelling gebruiken",
+        "use_location_billing_address_label": "Factuuradres van locatie gebruiken",
+        "use_location_shipping_address_label": "Bezorgadres van locatie gebruiken",
+        "purchase_options_agreement_label_wallets": "Door verder te gaan met je betaling, ga je akkoord met de toekomstige afschrijvingen die op deze pagina staan vermeld en het %{cancellation_policy_label}.",
+        "gift_card_store_credit": {
+          "add_label": "Een cadeaubon of winkeltegoed toevoegen",
+          "manage_label": "Cadeaubonnen of winkeltegoed beheren"
+        },
+        "saved_credit_card_cvv_verification": "Voer voor verificatiedoeleinden de beveiligingscode van je kaart in.",
+        "order_edit_banner_updated_order_label": "Bijgewerkte bestelling",
+        "afterpay_label": "Afterpay",
+        "cashapppay_label": "Cash App Pay",
+        "card_nickname_label": "Bijnaam (optioneel)",
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Verwijderd uit retour",
+          "with_quantities": "{{delta}} verwijderd uit retour"
+        },
+        "order_edit_banner_single_item_return_line_item_removed": "Verwijderd uit retour",
+        "order_edit_banner_multiple_items_return_line_item_removed": "{{amount}} verwijderd uit retour",
+        "proposed_gateway_unavailable": "De voorgestelde betalingsgateway is niet beschikbaar",
+        "pay_in_installments_split_pay_short": "Vier betalingen van %{amount}",
+        "payment_method_not_available_for_shipping_address_error": "Betaalmethode niet beschikbaar voor gekozen bezorgadres. Kies een andere betaalmethode.",
+        "shop_pay_ideal_unavailable_error": "iDEAL | Wero is niet beschikbaar voor deze bestelling. Kies een andere betaalmethode.",
+        "paypal_disconnect": "Loskoppelen",
+        "paypal_wallet_label": "PayPal-wallet",
+        "payment_method_update_failed": "Bijwerken van betaalmethode is mislukt.",
+        "alternative_payment_currency_total_manual_payment_notice": "Opmerking: Geconverteerd totaal is %{amount_due}.",
+        "gift_cards_unavailable": "Je cadeaubon kan niet meer voor deze bestelling worden gebruikt en is daarom verwijderd",
+        "network_card_payment_options": "Een creditcardmaatschappij kiezen",
+        "payment_flexibility_terms_id_mismatch": "ID voorwaarden betalingsflexibiliteit komt niet overeen",
+        "offsite_gateway_review_page_redirect_hint": "Nadat je je bestelling hebt gecontroleerd, word je doorgestuurd naar %{gateway_label} om je aankoop te voltooien",
+        "przelewy24_label": "Przelewy24",
+        "twint_label": "TWINT",
+        "mobilepay_label": "MobilePay",
+        "gift_card_checkbox_label": "Cadeaubon toepassen",
+        "blik_label": "BLIK",
+        "vipps_label": "Vipps",
+        "grabpay_label": "GrabPay",
+        "kcp_creditcard_label": "KCP-creditcard",
+        "simulated_express_checkout": "Digitale portemonnees zijn niet beschikbaar in het voorbeeld van de editor vanwege je regio of browser",
+        "offsite_gateway_redirect_hint_no_button_label": "Je wordt doorgestuurd naar %{gateway_label} om je aankoop te voltooien",
+        "swish_label": "Swish",
+        "network_card_persistence_description": "Het geselecteerde netwerk wordt met je betaalmethode opgeslagen voor toekomstige transacties.",
+        "usdc_label": "USDC",
+        "payment_method_incompatible_with_payment_terms": "Betaalmethode is incompatibel met betalingsvoorwaarden.",
+        "payment_option": {
+          "accessibility_label": "Kies een betalingsoptie"
+        },
+        "billing_address_rollup_accessibility_label": "Opties voor factuuradres",
+        "payment_method_rollup_accessibility_label": "Opties voor betaalmethode",
+        "crypto_modal": {
+          "header": "Betaal %{shop_name} %{total_price} USDC",
+          "error": {
+            "refresh": "Vernieuwen",
+            "close": "sluiten",
+            "sandbox_error": "Er ging iets mis",
+            "web_component_error": "Er is een probleem opgetreden bij het laden van deze pagina"
+          }
+        },
+        "bank_account_type": {
+          "checking": "Betaalrekening",
+          "savings": "Spaarrekening"
+        },
+        "bank_account_choose": "Kies een rekening om je aankoop veilig te voltooien",
+        "bank_account_connect_another": "Andere bankrekening koppelen",
+        "bank_account_connect": "Bankrekening koppelen",
+        "bank_account_missing": "Bankrekening moet gekoppeld zijn",
+        "crypto_payment_method": {
+          "description": "Koppel je wallet veilig. Je saldo en adres worden niet gedeeld.",
+          "tooltip": "Het saldo van je portemonnee en je adres worden niet gedeeld en alleen het aangevraagde bedrag kan worden afgetrokken",
+          "cashback_descriptor": {
+            "one": "Je ontvangt je cashback na %{count} dag",
+            "other": "Je ontvangt je cashback na %{count} dagen"
+          }
+        },
+        "usdc_cashback_title": "%{incentive_percentage}% cashback",
+        "usdc_cashback_additional_info": "Betaal met USDC op Base en ontvang binnen 30 dagen %{incentive_percentage}% terug in je digitale portemonnee.",
+        "usdc_cashback_terms": "Voorwaarden en limieten van toepassing",
+        "discount_show_more_warnings": {
+          "one": "%{count} meer weergeven",
+          "other": "%{count} meer weergeven"
+        },
+        "separate_payments_label": "Je artikelen komen uit meer dan één winkel. Je moet afrekenen met %{separate_payments_link}.",
+        "separate_payments_text": "afzonderlijke betalingen",
+        "payments": "Betalingen",
+        "business_customer_with_bank_account_vaulting_payment_label": "Sla deze betaalmethode op bij het afrekenen en machtig %{company} om je rekening te belasten voor toekomstige aankopen die je voor deze locatie goedkeurt, totdat je annuleert. Alle contactpersonen die aan deze locatie zijn toegewezen, mogen de betaalmethode gebruiken.",
+        "new_bank_account_disclaimer": "Met het voltooien van je bestelling machtig je %{shop_name} om het aangegeven bedrag op het genoemde tijdstip van de onderstaande rekening af te schrijven via ACH.",
+        "bank_account_disclaimer": "Het kan tot 4 werkdagen duren voordat ACH-betalingen zijn verwerkt.",
+        "bank_account_vaulted_company_location": "Bankrekening opgeslagen voor deze locatie",
+        "bank_account_generic_error": "Kan bankrekening niet toevoegen. Probeer het later opnieuw.",
+        "discount_codes_removed_summary": {
+          "one": "%{count} kortingscode was verwijderd",
+          "other": "%{count} kortingscodes zijn verwijderd"
+        },
+        "default": "Standaard",
+        "continue_to_guest_checkout": "Als gast naar checkout",
+        "add_payment_method": "Betaalmethode toevoegen",
+        "choose_new_payment_method": "Kies een nieuwe betaalmethode",
+        "add_new_payment_method": "Een nieuwe betaalmethode toevoegen",
+        "discount_codes_modified_summary": {
+          "one": "%{count} kortingscode is gewijzigd",
+          "other": "%{count} kortingscodes zijn gewijzigd"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "%{count} kortingscode is verwijderd of gewijzigd",
+          "other": "%{count} kortingscodes zijn verwijderd of gewijzigd"
+        },
+        "multiple_primary_payment_not_allowed": "Ongeldige betaalmethoden",
+        "purchase_options_subscription_confirmation_title": "Je abonnement bevestigen",
+        "purchase_options_subscription_agreement_label": "Je winkelwagen bevat een abonnement dat automatisch wordt verlengd. Door op ‘%{button_label}’ te klikken, %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_agreement_label_wallets": "Je winkelwagen bevat een automatisch verlengend abonnement. Door snelle checkout te gebruiken, %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_consent_text": "ga je er uitdrukkelijk mee akkoord dat het/de terugkerende bedrag(en) zoals weergegeven in je winkelwagen (plus verzending en belastingen) automatisch in rekening wordt gebracht totdat het/de abonnement(en) eindigt of je annuleert.",
+        "purchase_options_subscription_cancellation_instructions": "%{cancel_text} Raadpleeg het %{cancellation_policy_label}.",
+        "purchase_options_subscription_cancel_text": "Je kunt op elk moment annuleren door naar je account te gaan of contact op te nemen met de winkel.",
+        "vault_for_payment_later": {
+          "pay_button_label": "Bestelling plaatsen",
+          "notice": "Er worden nu geen kosten in rekening gebracht. Door verder te gaan met je betaling, ga je ermee akkoord dat je betaalmethode wordt belast wanneer je bestelling wordt verwerkt."
+        },
+        "alipay_label": "Alipay",
+        "wechat_pay_label": "WeChat Pay"
       }
     }
   }
