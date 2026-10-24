@@ -126,16 +126,9 @@
         </div>
       {%- endform -%}
       {%- if product.selected_or_first_available_variant.available -%}
-        <ul class="product-form__assurance list-unstyled" role="list">
-          {%- assign assurance_items = 'lock:checkout,check-mark:authenticity,return:returns,truck:shipping' | split: ',' -%}
-          {%- for item in assurance_items -%}
-            {%- assign parts = item | split: ':' -%}
-            <li class="product-form__assurance-item">
-              <span class="svg-wrapper" aria-hidden="true">{{- 'icon-' | append: parts[0] | append: '.svg' | inline_asset_content -}}</span>
-              {{- 'products.product.assurance.' | append: parts[1] | t -}}
-            </li>
-          {%- endfor -%}
-        </ul>
+        <p class="product-form__assurance">
+          {{- 'products.product.assurance.authenticity' | t }} · {{ 'products.product.assurance.returns' | t }} · {{ 'products.product.assurance.checkout' | t -}}
+        </p>
       {%- endif -%}
     </product-form>
   {%- else -%}
