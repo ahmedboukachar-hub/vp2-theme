@@ -4021,6 +4021,96 @@
       "thursdayAbbreviation": "Gio",
       "fridayAbbreviation": "Ven",
       "saturdayAbbreviation": "Sab"
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "alternate_divider": "OPPURE",
+        "email_field_label": "Email",
+        "orders_button": "Ordini",
+        "profile_button": "Profilo",
+        "shop_login_button": "Accedi con Shop",
+        "continue_with_google": "Continua con Google",
+        "continue_with_facebook": "Continua con Facebook",
+        "use_email_button": "Usa invece l'email"
+      },
+      "signed_in_state": {
+        "greeting_with_name": "Ciao {{first_name}}",
+        "greeting_without_name": "Account",
+        "orders_button": "Ordini",
+        "profile_button": "Profilo"
+      },
+      "location_picker": {
+        "sheet_title": "Sedi",
+        "search_field_placeholder": "Ricerca"
+      },
+      "aria_labels": {
+        "close_menu": "Chiudi menu",
+        "back_to_main_menu": "Torna al menu principale da {{title}}",
+        "open_submenu": "{{title}}, apre il sottomenu",
+        "loading_menu": "Caricamento menu",
+        "account": "Account",
+        "sign_in_with_email": "Accedi con l'email",
+        "sign_in": "Accedi",
+        "loading": "Caricamento"
+      }
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "Numero di carta",
+        "title": "Sostituisci metodo di pagamento",
+        "replace_with": "Sostituisci con",
+        "add_new_payment_method": "Aggiungi nuovo",
+        "save_button": "Salva",
+        "close_button": "Chiudi",
+        "loading": "Caricamento della finestra modale di sostituzione del metodo di pagamento",
+        "success": "Metodo di pagamento aggiornato",
+        "invalid_subscription_contract": "Impossibile trovare l'abbonamento",
+        "expiry_date": "Scad. {{expiryDate}}",
+        "edit_current_payment_method": "Modifica il metodo di pagamento corrente",
+        "edit_selected_payment_method": "Modifica il metodo di pagamento selezionato"
+      }
+    },
+    "order_receipt_document": {
+      "placeholder_title": "Segnaposto ricevuta",
+      "placeholder": "Segnaposto: l'ordine %{name} di %{total} non è pronto per essere visualizzato."
+    },
+    "redirect_warning": {
+      "title": "Questo link potrebbe non essere sicuro",
+      "description_html": "Cliccando su Continua accederai a %{destination}",
+      "go_back": "Torna indietro",
+      "leave_this_page": "Abbandona la pagina",
+      "continue_anyway": "Continua comunque",
+      "why_am_i_seeing_this": "Perché visualizzo questo messaggio?"
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "Logo %{shop_name}",
+      "step_one": {
+        "page_title": "Accedi - %{shop_name}",
+        "heading": "Accedi",
+        "subheading": "Immetti il tuo indirizzo email e ti invieremo un codice di verifica",
+        "input_field_label": "Email",
+        "button": "Continua",
+        "subheading_with_sign_in_options": "Accedi o crea un account",
+        "or": "oppure",
+        "consent_agreement": "Continuando, accetti %{terms}",
+        "last_used_pill": "Ultimo utilizzo"
+      },
+      "step_two": {
+        "page_title": "Immetti il codice - %{shop_name}",
+        "heading": "Immetti il codice",
+        "subheading": "Inviato a %{email}",
+        "restart_link": "Accedi con un'email diversa",
+        "input_field_label": "Codice di 6 cifre",
+        "button": "Invia",
+        "change_email": "Modifica"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "Immetti un indirizzo email valido",
+          "invalid_code": "Immetti il codice a 6 cifre corretto"
+        }
+      },
+      "processing": "In elaborazione…"
     }
   }
 }
