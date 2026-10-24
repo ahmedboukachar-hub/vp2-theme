@@ -3066,6 +3066,144 @@
           "subscription_review_required": "Tu pedido incluye una suscripción. Debes revisar los términos a continuación antes de completar el pedido.",
           "sdk_load_failure": "Hubo un problema al cargar {{walletName}}. Selecciona {{refresh_link}} para volver a intentarlo o usa otra forma de pago."
         }
+      },
+      "units": {
+        "fluid_ounce": "fl oz",
+        "pint": "pt",
+        "quart": "qt",
+        "gallon": "gal",
+        "inch": "in",
+        "foot": "pies",
+        "yard": "yd",
+        "square_foot": "pies²",
+        "item": "artículo"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "La dirección no es compatible con la membresía actual.",
+        "items_split_across_locations_unsupported": "La entrega con Prime no está disponible para tu pedido. Se actualizaron tus opciones de envío."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Ir a la tienda online"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Más información sobre %{context}",
+        "additional_payment_methods": "Formas de pago adicionales"
+      },
+      "remote": {
+        "errors": {
+          "currency_mismatch": "Este artículo no se puede agregar a tu carrito porque es de una tienda que usa otra moneda.",
+          "max_remote_shops_exceeded": "No se puede agregar este producto porque tu carrito ya alcanzó el máximo permitido en otras tiendas.",
+          "currency_mismatch_removal": "Se quitó un artículo de tu carrito porque pertenece a una tienda que usa una moneda diferente.",
+          "only_remote_merchandise_lines": "El pago solo contiene mercancía promocional de una tienda remota. Es necesario un redireccionamiento a la tienda remota para completar el pago."
+        }
+      },
+      "remote_merchandise_only": {
+        "title": "Completa la compra",
+        "remote_only_notice": "Estos artículos se venden y envían desde otras tiendas. Para completar la compra debes pagar en las tiendas correspondientes.",
+        "return_to_store_label": "Volver a la tienda",
+        "checkout_on_shop_label": "Pagar en %{shop_name}",
+        "single_shop_transition": "Se te está redirigiendo a %{advertiser} para que completes tu compra.",
+        "detail_item_label": {
+          "one": "{{count}} artículo",
+          "other": "{{count}} artículos"
+        }
+      },
+      "remote_policies": {
+        "unavailable_policy": "No se proporcionó ninguna %{policy_name} para esta tienda. Para más información, contacta directamente con %{shop_name}."
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_title": "Pago fallido",
+        "payment_not_processed_text": "Intenta escanear el código QR de nuevo. Si aún no funciona, informa a nuestro personal y prueba con otra forma de pago.",
+        "payment_link_expired_title": "El enlace de pago caducó",
+        "payment_link_expired_text": "Intenta escanear el código QR de nuevo.",
+        "title": "Error en el pago externo"
+      },
+      "taxes": {
+        "tax_details": "Información fiscal adicional",
+        "vat_number": {
+          "field": {
+            "label": "Número de IVA (opcional)",
+            "tooltip": "Valida el número de IVA y aplica automáticamente la inversión del sujeto pasivo en los pedidos elegibles"
+          },
+          "add": "Agregar un número de IVA",
+          "vaulted": "Número de IVA: %{number}",
+          "badge": "Número de IVA: %{number}",
+          "domestic_order": "La exención de inversión del sujeto pasivo solo se aplica a los pedidos transfronterizos dentro de la UE. A los pedidos locales se les aplica el IVA estándar.",
+          "status": {
+            "invalid_format": {
+              "at": "Los números de IVA de Austria contienen AT y 9 caracteres",
+              "be": "Los números de IVA de Bélgica contienen BE y 10 caracteres",
+              "bg": "Los números de IVA de Bulgaria contienen BG y de 9 a 10 caracteres",
+              "hr": "Los números de IVA de Croacia contienen HR y 11 caracteres",
+              "cy": "Los números de IVA de Chipre contienen CY y 9 caracteres",
+              "cz": "Los números de IVA de la República Checa contienen CZ y de 8 a 10 caracteres",
+              "dk": "Los números de IVA de Dinamarca contienen DK y 8 caracteres",
+              "ee": "Los números de IVA de Estonia contienen EE y 9 caracteres",
+              "fi": "Los números de IVA de Finlandia contienen FI y 8 caracteres",
+              "fr": "Los números de IVA de Francia contienen FR y 11 caracteres",
+              "de": "Los números de IVA de Alemania contienen DE y 9 caracteres",
+              "gr": "Los números de IVA de Grecia contienen EL y nueve caracteres",
+              "hu": "Los números de IVA de Hungría contienen HU y 8 caracteres",
+              "ie": "Los números de IVA de Irlanda contienen IE y de 8 a 9 caracteres",
+              "it": "Los números de IVA de Italia contienen IT y 11 caracteres",
+              "lv": "Los números de IVA de Letonia contienen LV y 11 caracteres",
+              "lt": "Los números de IVA de Lituania contienen LT y de 9 a 12 caracteres",
+              "lu": "Los números de IVA de Luxemburgo contienen LU y 8 caracteres",
+              "mt": "Los números de IVA de Malta contienen MT y 8 caracteres",
+              "nl": "Los números de IVA de los Países Bajos contienen NL y 12 caracteres",
+              "pl": "Los números de IVA de Polonia contienen PL y 10 caracteres",
+              "pt": "Los números de IVA de Portugal contienen PT y 9 caracteres",
+              "ro": "Los números de IVA de Rumanía contienen RO y 10 caracteres",
+              "sk": "Los números de IVA de Eslovaquia contienen SK y 10 caracteres",
+              "si": "Los números de IVA de Eslovenia contienen SI y 8 caracteres",
+              "es": "Los números de IVA de España contienen ES y 9 caracteres",
+              "se": "Los números de IVA de Suecia contienen SE y 12 caracteres",
+              "gb": "Los números de IVA del Reino Unido contienen GB o XI y de 5 a 12 caracteres"
+            },
+            "invalid_number": {
+              "at": "Introduce un número de IVA válido de Austria",
+              "be": "Introduce un número de IVA válido de Bélgica",
+              "bg": "Introduce un número de IVA válido de Bulgaria",
+              "hr": "Introduce un número de IVA válido de Croacia",
+              "cy": "Introduce un número de IVA válido de Chipre",
+              "cz": "Introduce un número de IVA válido de la República Checa",
+              "dk": "Introduce un número de IVA válido de Dinamarca",
+              "ee": "Introduce un número de IVA válido de Estonia",
+              "fi": "Introduce un número de IVA válido de Finlandia",
+              "fr": "Introduce un número de IVA válido de Francia",
+              "de": "Introduce un número de IVA válido de Alemania",
+              "gr": "Introduce un número de IVA válido de Grecia",
+              "hu": "Introduce un número de IVA válido de Hungría",
+              "ie": "Introduce un número de IVA válido de Irlanda",
+              "it": "Introduce un número de IVA válido de Italia",
+              "lv": "Introduce un número de IVA válido de Letonia",
+              "lt": "Introduce un número de IVA válido de Lituania",
+              "lu": "Introduce un número de IVA válido de Luxemburgo",
+              "mt": "Introduce un número de IVA válido de Malta",
+              "nl": "Introduce un número de IVA válido de los Países Bajos",
+              "pl": "Introduce un número de IVA válido de Polonia",
+              "pt": "Introduce un número de IVA válido de Portugal",
+              "ro": "Introduce un número de IVA válido de Rumanía",
+              "sk": "Introduce un número de IVA válido de Eslovaquia",
+              "si": "Introduce un número de IVA válido de Eslovenia",
+              "es": "Introduce un número de IVA válido de España",
+              "se": "Introduce un número de IVA válido de Suecia",
+              "gb": "Introduce un número de IVA válido del Reino Unido"
+            },
+            "service_unavailable": "Servicio de validación no disponible",
+            "service_error": "Servicio de validación no disponible"
+          },
+          "accessibility": {
+            "status": {
+              "validating": "Validación del número de IVA en curso",
+              "valid": "El número de IVA es válido",
+              "applied": "Se aplicó la exención de IVA",
+              "domestic": "No se aplicó la exención de IVA"
+            }
+          }
+        }
       }
     }
   }
