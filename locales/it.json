@@ -3087,6 +3087,144 @@
           }
         }
       }
+    },
+    "collections": {
+      "sorting": {
+        "price_descending": "Prezzo decrescente",
+        "date_ascending": "Data, da meno a più recente",
+        "date_descending": "Data, da più a meno recente",
+        "most_relevant": "Più rilevanti"
+      }
+    },
+    "errors": {
+      "blank": "non può restare vuoto",
+      "credit_card_session_expired": "L'autorizzazione per la carta di credito è scaduta, ti preghiamo di inserire nuovamente i dati di pagamento. Nulla è stato addebitato sulla tua carta.",
+      "empty": "non può restare vuoto",
+      "invalid_email": "l'indirizzo email deve essere valido",
+      "discount_disabled": "Questo codice sconto è stato disattivato",
+      "discount_expired": "Questo codice sconto non è più valido",
+      "discount_limit_reached": "Questo codice sconto ha raggiunto il limite di utilizzo",
+      "discount_not_found": "Impossibile trovare uno sconto valido corrispondente al codice inserito",
+      "customer_already_used_once_per_customer_discount_notice": "Questo codice sconto ha raggiunto il limite di utilizzo",
+      "gift_card_already_applied": "Il codice è già stato applicato al pagamento",
+      "gift_card_code_invalid": "Codice non valido",
+      "gift_card_currency_mismatch": "Questo buono regalo non può essere utilizzato per questo acquisto. Contatta %{shop_name} per farlo riemettere.",
+      "gift_card_depleted": "Non ci sono più fondi in questa gift card",
+      "gift_card_disabled": "La gift card non è valida",
+      "gift_card_expired": "Il buono regalo è scaduto",
+      "invalid": "non è valido",
+      "bad_domain": "contiene un nome di dominio non valido",
+      "taken": "è già stato scelto",
+      "contains_html_tags": "non può contenere tag HTML",
+      "too_short": "è troppo breve (deve contenere almeno %{count} caratteri)",
+      "too_long": "è troppo lungo (deve contenere al massimo %{count} caratteri)",
+      "password_mismatch": "dev'essere identica alla password già inserita",
+      "contains_spaces": "comincia o finisce con degli spazi.",
+      "invalid_for_country": "non è valido in %{country}",
+      "invalid_for_country_and_province": "non è valido per la provincia di %{province} in %{country}",
+      "invalid_province_in_country": "provincia non valida in %{country}",
+      "invalid_state_in_country": "stato non valido in %{country}",
+      "invalid_region_in_country": "area geografica non valida in %{country}",
+      "less_than_or_equal_to": "deve essere inferiore o uguale a %{count}",
+      "not_supported": "non è supportato",
+      "full_name_required": "Inserisci nome e cognome",
+      "invalid_for_card_type": "non è valido",
+      "invalid_type": "siamo spiacenti ma non accettiamo carte di questo tipo",
+      "invalid_format": "il formato non è valido",
+      "expired": "è scaduto",
+      "invalid_start_date_or_issue_number_for_debit": "è necessario inserire una data di inizio o un numero di emissione valido",
+      "invalid_expiry_year": "non è valido come anno di scadenza",
+      "reset_password_html": "Questo indirizzo email è già associato ad un account. Se l'account è tuo, puoi <a href=\"/account/login#recover\">resettare la tua password</a>",
+      "verify_email": "Abbiamo inviato un'e‑mail all'indirizzo %{customer_email}: è necessario cliccare sul link incluso per poter verificare il tuo indirizzo email.",
+      "blocked_address": "Questa posizione non è supportata",
+      "product_not_available": "prodotto non è stato pubblicato per questo cliente.",
+      "shop_404": {
+        "title": "Crea un sito ecommerce e vendi online! Software ecommerce da Shopify",
+        "heros": {
+          "store_unavailable": "Questo negozio al momento non è disponibile.",
+          "store_not_exist": "Questo negozio non esiste.",
+          "no_storefront": "Questo negozio non ha ancora un sito web.",
+          "store_will_be_right_back": "Questo negozio tornerà presto disponibile"
+        },
+        "links": {
+          "explore_other_stores": "Esplora altri negozi",
+          "start_free_trial": "Inizia la prova gratuita",
+          "refresh_page": "Aggiorna la pagina"
+        },
+        "owner_ctas": {
+          "header": "Sei il proprietario del negozio?",
+          "fix_domain": "Completa la configurazione del nuovo indirizzo web, vai sulle %{domain_settings_link}. Clicca &quot;Collega dominio&quot; e inserisci: %{domain}.<br>Se hai problemi ad accedere nel tuo negozio, prova la pagina %{forgot_your_store_link}.",
+          "fix_domain_link_text": "impostazioni del dominio",
+          "forgot_your_store_link_text": "hai dimenticato il tuo negozio",
+          "add_storefront": "Puoi configurare il tuo sito web aggiungendo il canale del negozio online nel %{admin_link}. Se hai problemi ad accedere nel tuo negozio, prova la pagina %{forgot_your_store_link}.",
+          "admin_link_text": "pannello di controllo"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Vendi di persona",
+            "caption": "Ottieni le funzionalità che ti servono per gestire il tuo negozio fisico, sia che tu abbia appena iniziato o che ti stia espandendo.",
+            "link_text": "Inizia la prova gratuita"
+          },
+          "open_a_store": {
+            "header": "Apri un nuovo negozio Shopify",
+            "caption": "Inizia una prova gratuita di tre giorni, poi continua a 1 USD/mese per i prossimi tre mesi.",
+            "link_text": "Iscriviti ora"
+          },
+          "editions": {
+            "header": "Dai un'occhiata a Shopify Editions",
+            "caption": "Con più di 100 aggiornamenti di prodotto, avrai più produttività, creatività ed efficacia nel commercio di quanto pensavi possibile.",
+            "link_text": "Esplora le ultime Editions"
+          },
+          "store_owner": {
+            "header": "Sei il proprietario del negozio?",
+            "caption": "Hai problemi ad accedere nel tuo negozio? Prova la funzionalità %{forgot_your_store_link}. Se desideri riattivare il tuo negozio, contatta l'%{shopify_support_link}.",
+            "shopify_support_link_text": "Assistenza Shopify"
+          }
+        },
+        "title_unavailable": "Negozio non disponibile",
+        "subtitles": {
+          "store_will_be_right_back": "Shopify sta lavorando per riportarlo online il prima possibile."
+        },
+        "status_card": {
+          "eyebrow": "Assistenza per i proprietari di negozi",
+          "header": "Controlla lo stato di Shopify",
+          "caption": "Scopri se su Shopify c’è un disservizio che interessa altri negozi oltre a questo.",
+          "link_text": "Visualizza lo stato dei sistemi Shopify"
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Errore durante la reimpostazione della password",
+        "no_account_found": "Non è stato trovato alcun account con questo indirizzo email.",
+        "invalid_credentials": "Email o password errati.",
+        "denylisted_reset_password": "Non hai potuto accedere al tuo account perché la password attuale non è sicura. Riceverai un'email per aggiornarla.",
+        "signup_disabled": "La creazione dell'account cliente è stata disattivata.",
+        "subscribe_error": "Errore iscrizione",
+        "unsubscribe_error": "Errore annullamento iscrizione",
+        "open_tracking_error": "Errore di monitoraggio dell'apertura"
+      },
+      "address": {
+        "updated": "Indirizzo aggiornato con successo.",
+        "error_updating": "Errore durante l'aggiornamento dell'indirizzo",
+        "created": "Indirizzo creato con successo",
+        "error_creating": "Errore durante la creazione dell'indirizzo.\"",
+        "deleted": "Indirizzo eliminato con successo",
+        "error_deleting": "Errore durante l'eliminazione dell'indirizzo."
+      },
+      "order": {
+        "not_available": "Questo ordine non è disponibile",
+        "financial_status": {
+          "authorized": "Autorizzato",
+          "pending": "In attesa",
+          "paid": "Pagato",
+          "unpaid": "Non pagati",
+          "voided": "Annullato",
+          "partially_paid": "Parzialmente pagato",
+          "partially_refunded": "Parzialmente rimborsato",
+          "refunded": "Rimborsato"
+        }
+      }
     }
   }
 }
