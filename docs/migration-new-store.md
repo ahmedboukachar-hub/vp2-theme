@@ -1,12 +1,34 @@
 # Overstap naar een nieuwe, echte Shopify-winkel (samenvatting voor ChatGPT/Codex)
 
-Status (2026-10-24): nieuwe winkel aangemaakt (`ozayrp-60.myshopify.com`),
-thema via GitHub gekoppeld (branch `main`, niet gepubliceerd), app "La
-Retrouvée Migratie" geïnstalleerd; omgevingsvariabelen `*_NEW` toegevoegd.
-Een volledige export van de oude winkel is gemaakt en getest (26 producten,
-273 bestanden, 9 collecties, 14 pagina's, 18 artikelen, 7 menu's, 5 beleidsteksten,
-alle vertalingen). Scripts: `tools/migration/` (zie README daar). Volgende stap:
-in een nieuwe sessie de import bouwen en testen tegen de nieuwe winkel.
+Status (2026-10-24, avond): **import in de nieuwe winkel gedaan** (`0zayrp-60.myshopify.com`),
+nog achter het wachtwoord en zonder domeinwissel. Met `tools/migration/import.py`
+(stappen en logging: zie README daar) staan er nu: talen en/nl/de/fr/it/es
+(Engels primair, door de eigenaar omgezet), 25 metaveld- en 1 metaobject-definitie,
+121 losse bestanden met dezelfde bestandsnaam, 26 producten met 152 foto's
+(originele bestanden), 9 collecties, 13 pagina's, blog Journal met 18 artikelen,
+4 beleidsteksten, 6 menu's, 1 redirect en 26.648 vertaalwaarden in 5 talen, 0
+`outdated` (oude winkel 26.678; het verschil zit in het door Shopify beheerde
+privacybeleid, de filters en Shopify-eigen resources zoals het klantaccountmenu). Het thema `vp2-theme/main` staat er compleet in na PR #100–#102: de
+nieuwe winkel valideert strenger dan de oude (zie `CLAUDE.md`, sync-valkuilen).
+Read-only pariteitscontrole oud↔nieuw (per domein, met tegencontrole): producten,
+varianten, metavelden, foto's (volgorde, alt, afmetingen, originele bestanden),
+collecties (regels, productaantallen), pagina's, artikelen, menu's, redirects en
+beleid zijn gelijk. Open: zie "Nog te doen na de import" hieronder.
+
+## Nog te doen na de import
+
+- **Eigenaar (Admin):** winkelnaam staat nog op "Mijn winkel"; privacybeleid
+  aanzetten (Shopify beheert het, de NL/DE/FR/IT/ES-vertalingen ervan konden
+  daarom niet mee); Search & Discovery-filters opnieuw instellen (vertalingen
+  daarvan volgen daarna); betalingen, verzending, belastingen, afzender-e-mail;
+  de standaardblog "nieuws" mag weg.
+- **Markt Europa** met laretrouvee.com pas na de domeinwissel (eigenaar akkoord).
+- **Steekproef live in EN en NL** zodra de eigenaar het wachtwoord deelt of de
+  winkel opent (homepage, collectie, product beschikbaar/verkocht, artikel, Over
+  ons, zoeken, winkelwagen).
+- De mapping oud→nieuw en het schrijflog staan buiten de repo in
+  `$MIGRATION_EXPORT_DIR` (`id-map.json`, `import-log.jsonl`) van de sessie die de
+  import draaide; bij een nieuwe run eerst opnieuw exporteren.
 
 ## Waarom
 
