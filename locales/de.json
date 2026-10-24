@@ -4290,7 +4290,131 @@
         "card_verification_value_placeholder": "Sicherheitscode",
         "card_start_label": "Ausstellungszeitpunkt (MM / JJ)",
         "card_start_placeholder": "Ausstellungszeitpunkt (MM / JJ)"
-      }
+      },
+      "store_credit": {
+        "expirable_amounts_label": "Transaktionen mit Ablaufdatum",
+        "accessibility_label": "Shop-Guthaben - {{formattedBalance}}"
+      },
+      "three_d_secure": {
+        "title": "3D Secure",
+        "verification_failed": "Deine Zahlung konnte nicht verifiziert werden. Versuche es erneut oder verwende eine andere Zahlungsmethode."
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "PayPal-Zahlungsmethode hinzufügen",
+        "loading_accessibility_message": "PayPal wird geladen",
+        "errors": {
+          "generic": "Es gab ein Problem mit PayPal. Versuche es erneut oder verwende eine andere Zahlungsmethode."
+        }
+      },
+      "card_update_consent_subscriptions": "Diese Zahlungsmethode wird für zukünftige Käufe gespeichert und kann für wiederholte Käufe oder Käufe mit Zahlungsaufschub verwendet werden.",
+      "add_payment_method_dropdown": {
+        "bank_account_consent": "Durch Hinzufügen einer Zahlungsmethode autorisierst du, dass deine Karte belastet oder dein Bankkonto für zukünftige Käufe, die du genehmigst, belastet wird, bis du die Methode kündigst."
+      },
+      "bank_account": {
+        "loading_accessibility_message": "Bankkonto-Button wird geladen",
+        "iframe_title_accessibility_label": "Bankkonto-Einrichtung",
+        "display_name": "Bankkonto",
+        "generic_error": "Bankkonto konnte nicht hinzugefügt werden. Versuche es später noch einmal."
+      },
+      "replacement_payment_method_title": "Ersatz-Zahlungsmethode",
+      "update_payment_method": {
+        "title": "Zahlungsmethode aktualisieren",
+        "button_title": "Aktualisieren",
+        "billing_address": "Rechnungsadresse",
+        "disclaimer": "Diese Zahlungsmethode wird für zukünftige Käufe gespeichert und kann für wiederholte Käufe oder Käufe mit Zahlungsaufschub verwendet werden.",
+        "error_message": "Zahlungsmethode kann nicht aktualisiert werden",
+        "current": "Aktuell",
+        "loading_form_accessibility_message": "Formular zur Aktualisierung der Zahlungsmethode wird geladen",
+        "loading_current_payment_method": "Aktuelle Zahlungsmethode wird geladen",
+        "loading_digital_wallets": "Optionen für digitale Wallets werden geladen",
+        "loading_card_fields": "Kreditkartenfelder werden geladen",
+        "subscriptions_title": "Abonnements",
+        "subscriptions_list_accessibility_label": "Liste der Abonnementprodukte",
+        "pre_orders_title": "Anstehend",
+        "pre_orders_list_accessibility_label": "Liste der ausstehenden bestellten Produkte",
+        "resources_list_accessibility_label": "Abonnementprodukte und ausstehende bestellte Produkte, die diese Zahlungsmethode verwenden",
+        "resources_card_scroll": "Für weitere Artikel scrollen",
+        "resources_card_show_more": "Mehr anzeigen",
+        "resources_card_show_less": "Weniger anzeigen",
+        "loading_resources": "Abonnements und anstehende Bestellungen werden geladen"
+      },
+      "link_expired": {
+        "message": "Der Link zum Aktualisieren deiner Zahlungsmethode ist abgelaufen.",
+        "return_home_button": "Zurück zur Startseite",
+        "update_message": "Dieser Link zum Aktualisieren deiner Zahlungsmethode ist abgelaufen.",
+        "add_message": "Dieser Link zum Hinzufügen deiner Zahlungsmethode ist abgelaufen."
+      },
+      "update_success": {
+        "title": "Zahlungsmethode aktualisiert",
+        "done_button": "Zurückkehren zum Shop"
+      },
+      "expired_badge_label": "Abgelaufen",
+      "credit_card_title": "Kreditkarte",
+      "or": "OR",
+      "additional_payment_methods": "Zusätzliche Zahlungsmethoden",
+      "add_success": {
+        "title": "Zahlungsmethode hinzugefügt",
+        "done_button": "Weiter shoppen"
+      },
+      "expiring_badge_label": "Läuft ab"
+    },
+    "payment_method_brands": {
+      "visa": "Visa",
+      "mastercard": "Mastercard",
+      "shoppay": "Shop Pay",
+      "applepay": "Apple Pay",
+      "googlepay": "Google Pay",
+      "paypal": "PayPal",
+      "americanexpress": "American Express",
+      "discover": "Entdecken",
+      "dinersclub": "Diners Club",
+      "jcb": "JCB",
+      "elo": "Elo",
+      "visaelectron": "Visa Electron",
+      "maestro": "Maestro",
+      "forbrugsforeningen": "Forbrugsforeningen",
+      "dankort": "Dankort",
+      "hipercard": "Hipercard",
+      "unionpay": "UnionPay",
+      "laser": "Laser",
+      "storecredit": "Shop-Guthaben",
+      "bogus": "Bogus",
+      "klarna_pay_now": "Klarna",
+      "klarna_pay_later": "Klarna",
+      "klarna_slice_it": "Klarna",
+      "blik": "BLIK",
+      "ideal": "iDEAL",
+      "klarna": "Klarna",
+      "mobilepay": "MobilePay",
+      "przelewy24": "Przelewy24",
+      "swish": "Swish",
+      "twint": "TWINT",
+      "usdc": "Krypto: USDC",
+      "vipps": "Vipps",
+      "paypay": "PayPay"
+    },
+    "enable_javascript": "Um dein Konto anzusehen, aktiviere JavaScript in deinen Browsereinstellungen oder melde dich mit einem anderen Browser an.",
+    "ui_components": {
+      "closeNotification": "Schließen",
+      "expandNotification": "Mehr anzeigen",
+      "closeModal": "Schließen",
+      "submit": "Senden",
+      "processing": "Wird bearbeitet ...",
+      "increase": "{{type}} erhöhen",
+      "decrease": "{{type}} senken",
+      "minimumReached": "Minimum von {{value}} wurde erreicht",
+      "maximumReached": "Maximum von {{value}} wurde erreicht",
+      "january": "Januar",
+      "february": "Februar",
+      "march": "März",
+      "april": "April",
+      "may": "Mai",
+      "june": "Juni",
+      "july": "Juli",
+      "august": "August",
+      "september": "September",
+      "october": "Oktober",
+      "november": "November"
     }
   }
 }
