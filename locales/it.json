@@ -3519,6 +3519,138 @@
           }
         }
       }
+    },
+    "order_details": {
+      "hide_items": "Nascondi articoli",
+      "loading": "Caricamento dettagli dell'ordine in corso",
+      "loading_finished_accessibility_message": "Dettagli dell'ordine caricati",
+      "payment": {
+        "status_in_review": "Pagamento previsto dopo la revisione",
+        "status_unpaid": "Pagamento dovuto il giorno {{date}}",
+        "title": "Pagamento",
+        "shop_pay_installments": {
+          "view_schedule": "Visualizza pianificazione",
+          "summary": "Rate Shop"
+        },
+        "transactions": {
+          "show_all": "Mostra tutto",
+          "show_less": "Mostra meno",
+          "details": "Dettagli",
+          "payment_details": "Dettagli di pagamento"
+        },
+        "emv_details": {
+          "auth": "AUT:",
+          "aid": "AID:",
+          "source": "ORIGINE:"
+        },
+        "payment_type": {
+          "gift_card": "Buono regalo",
+          "store_credit": "Credito in negozio",
+          "money_order": "Vaglia Postale",
+          "cash_on_delivery": "Contrassegno",
+          "bank_deposit": "Deposito bancario",
+          "manual": "Manuale"
+        }
+      },
+      "shipping": {
+        "address": "Indirizzo di spedizione",
+        "address_map_marker": "Indirizzo di spedizione",
+        "method": "Metodo di spedizione",
+        "summary": "Spedizione",
+        "free": "Gratis",
+        "free_shipping_discount": "Spedizione gratuita",
+        "one_time": "Spedizione una tantum",
+        "subscription": "Spedizione in abbonamento",
+        "method_short": "Metodo",
+        "ship_to": "Spedisci a"
+      },
+      "show_items": "Mostra articoli",
+      "subtitle": "Confermato il giorno {{date}}",
+      "subtotal": "Subtotale",
+      "summary_list_title_accessibility_label": "Articoli dell'ordine",
+      "summary_title": "Riepilogo ordine",
+      "summary_totals_title_accessibility_label": "Totali dell'ordine",
+      "taxes": "Imposte",
+      "title": "Ordine {{name}}",
+      "total": "Totale",
+      "unit_price": "{{price}}/ciascuno",
+      "location": "Sede",
+      "not_applicable": "N/A",
+      "fully_refunded_label": "RIMBORSATO",
+      "partially_refunded_label": "PARZIALMENTE RIMBORSATO",
+      "refunded_amount": "Rimborsato",
+      "discount": "Sconto",
+      "compare_at_sale": "Sconto ({{saleAmount}})",
+      "no_data": "Nessuno",
+      "pagination": {
+        "load_more": "Mostra altro",
+        "load_more_accessibility_label": "Mostra altri articoli",
+        "loading_accessibility_label": "Caricamento articoli in corso"
+      },
+      "returns": {
+        "expand_events_label": "Mostra dettagli",
+        "hide_events_label": "Nascondi dettagli",
+        "print_shipping_label": "Stampa etichetta di spedizione",
+        "tracking_number": "Numero di tracciamento:",
+        "return_and_refund_modal_header": "Informativa sui rimborsi",
+        "ineligible_return_message": "Gli articoli in quest'ordine non sono idonei al reso.",
+        "ineligible_return_message_when_returned": "Gli articoli aggiuntivi in quest'ordine non sono idonei al reso.",
+        "exchange_header": "Articoli di cambio",
+        "exchange_subheader": "Gli articoli di cambio verranno aggiunti all'ordine una volta completato il reso."
+      },
+      "request_return_failed": "Si è verificato un problema durante l'elaborazione della richiesta. Riprova.",
+      "mobile_summary_toggle_button": {
+        "open": "Mostra riepilogo ordine",
+        "closed": "Nascondi riepilogo ordine"
+      },
+      "show_order_summary": "Mostra riepilogo ordine",
+      "hide_order_summary": "Nascondi riepilogo ordine",
+      "company": "Azienda",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} è vuoto",
+      "marketing_section_title": "Notizie e offerte",
+      "marketing_checkbox_label": "Inviami email con notizie e offerte",
+      "marketing_checkmark_label": "Hai effettuato l'iscrizione per ricevere notizie e offerte tramite email",
+      "image_gallery": {
+        "product_name_and_quantity": "Quantità di {{productName}}: {{quantity}}",
+        "next": "Mostra articoli successivi",
+        "previous": "Mostra articoli precedenti",
+        "load_more_items": {
+          "one": "Mostra {{count}} altro articolo",
+          "other": "Mostra altri {{count}} articoli"
+        }
+      },
+      "shop_order_tracking": {
+        "download_shop_to_track": "Scarica Shop per rintracciare il pacco",
+        "track_order_with_shop": "Monitora l'ordine con Shop",
+        "title_header": "Scansiona con il telefono",
+        "real_time_delivery_updates": "Shop ti invierà aggiornamenti sulla consegna in tempo reale una volta che l'ordine sarà stato spedito.",
+        "real_time_delivery_updates_with_gift": "Ottieni aggiornamenti in tempo reale sulla consegna e un regalo di {{promoAmount}} da spendere nell’app Shop.",
+        "shop_app_promo_amount_off": "Ricevi un regalo di {{promoAmount}}",
+        "shop_app_promo_text": "{{amountOff}} da spendere nell’app Shop",
+        "open_in_shop": "Apri Shop"
+      },
+      "shop_pay": {
+        "order_completed_with": "Ordine completato con",
+        "learn_more": "Maggiori informazioni",
+        "usdc_rewards_terms": "Visualizza i termini dei premi in USDC"
+      },
+      "edit_summary": {
+        "added": "Aggiunto",
+        "added_with_quantity": "{{quantity}} aggiunto",
+        "removed": "Rimosso",
+        "removed_with_quantity": "{{quantity}} rimosso",
+        "updated_at": "Il tuo ordine è stato aggiornato il giorno {{date}}",
+        "returned": "Reso completato",
+        "returned_with_quantities": "{{delta}} di {{total}} restituito",
+        "removed_with_quantities": "{{delta}} di {{total}} rimosse",
+        "return_line_item_removed": "Rimosso dal reso",
+        "return_line_item_removed_with_quantities": "Rimosso {{delta}} dal reso"
+      },
+      "pickup": {
+        "pickup": "Ritiro",
+        "pickup_location": "Sede di ritiro"
+      }
     }
   }
 }
