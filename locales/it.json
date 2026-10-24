@@ -2635,6 +2635,163 @@
           "shipping_credential_cl": "RUT",
           "tax_credential_co": "Cédula/IVA"
         }
+      },
+      "order_errors": {
+        "creation_failure": "Si è verificato un problema durante la creazione dell'ordine. Riprova o contattaci per maggiori dettagli.",
+        "network_failure": "Impossibile inviare l'ordine a causa di un errore di rete. Controlla la connessione e riprova.",
+        "inventory_reservation_failure": "Alcuni articoli non sono più disponibili."
+      },
+      "session_errors": {
+        "session_not_unique": "Si è verificato un problema durante l'elaborazione dell'ordine. Aggiorna la pagina per tornare al negozio.",
+        "session_already_finished": "Quest'ordine è già stato inviato. Puoi restituirlo al negozio per iniziare un nuovo ordine."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Chiuso",
+        "business_hours": "Orario di apertura",
+        "title": "Punto di ritiro",
+        "or": "oppure",
+        "search_button": "Ricerca",
+        "selector_tabs": "Selettore punto di ritiro",
+        "selector_tab_map": "Mappa",
+        "selector_tab_list": "Elenco",
+        "could_not_resolve_address": "Impossibile individuare l'indirizzo. Riprova oppure utilizza un indirizzo diverso",
+        "no_pickup_points_near_you": "Nessun punto di ritiro trovato vicino all'indirizzo selezionato",
+        "no_pickup_points_near_location": "Nessun punto di ritiro trovato vicino a te",
+        "no_pickup_points_found": "Nessun punto di ritiro trovato",
+        "paginator": {
+          "next_accessibility_label": "Pagina successiva",
+          "previous_accessibility_label": "Pagina precedente",
+          "header": {
+            "one": "%{first} - %{last} di %{count} punto visualizzato",
+            "other": "%{first} - %{last} di %{count} punti visualizzati"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} di %{count} punto",
+            "other": "%{pickup_point_index} di %{count} punti"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} di %{count} punto",
+            "other": "%{first} - %{last} di %{count} punti"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} di punto di ritiro vicino a te",
+          "other": "%{count} di punti di ritiro vicini a te"
+        },
+        "change": "Cambia sede",
+        "waiting_on_pickup_point_location_notice": "Ricerca di punto di ritiro in corso...",
+        "geolocation": {
+          "shared_location_button": "Usa la mia posizione",
+          "errors": {
+            "unsuported_by_browser": "La geolocalizzazione non è supportato dal browser. Riprova oppure usa un browser diverso.",
+            "permission_not_allowed": "Consenti la condivisione della posizione.",
+            "permission_denied": "Impossibile ottenere la posizione. Riprova."
+          }
+        },
+        "no_business_hours": "Nessun orario di apertura disponibile",
+        "open_twenty_four_hours": "Aperto 24/7",
+        "address_label": "Indirizzo",
+        "pickup_unavailable_banner_title": {
+          "one": "Nessun punto di ritiro disponibile per il tuo articolo",
+          "other": "Nessun punto di ritiro disponibile per i tuoi articoli"
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Si è verificato un problema con il check-out",
+          "message": "Aggiorna la pagina o riprova tra qualche minuto",
+          "action": {
+            "cta": "Aggiorna pagina"
+          },
+          "request_id": "ID richiesta: {{requestId}}"
+        },
+        "embed_errors": {
+          "storefront_password_required": "Questo negozio è protetto da password",
+          "customer_account_required": "Per completare il check-out è necessario un account cliente",
+          "cart_completed": "Questo check-out è già stato completato",
+          "invalid_cart": "Il carrello non è più valido",
+          "not_authorized": "Autenticazione al check-out non riuscita. Verifica le credenziali dell'applicazione",
+          "killswitch_enabled": "Il check-out è temporaneamente non disponibile",
+          "policy_violation": "Impossibile completare il check-out a causa di restrizioni di configurazione delle informative",
+          "unrecoverable_failure": "Impossibile caricare il check-out. Riprova"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Torna al carrello",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} per aggiornare le quantità",
+        "subscription_changed": "Uno dei tuoi abbonamenti è cambiato.",
+        "company_location_changed": "Il carrello è stato aggiornato. Controlla l'ordine prima di inviarlo.",
+        "violations_title": "{{violation}} mancante o non valido",
+        "individual_violations_title": {
+          "DeliveryViolations": "Indirizzo di spedizione",
+          "PaymentViolations": "Indirizzo di fatturazione",
+          "OtherViolations": "Dato sull'ordine",
+          "UnhandledViolations": "Dati sull'ordine"
+        },
+        "all_violations_content": "Chiamaci o contattaci via {{emailLink}} per aggiornare queste informazioni e completare il tuo ordine:",
+        "all_violations_email_link": "email",
+        "editable_shipping_address_violations_message_title": "Aggiungi queste informazioni per completare l'ordine:",
+        "editable_shipping_address_violations_message_footer": "Per aggiornare in modo permanente l'indirizzo di questa sede, {{emailLink}}.",
+        "editable_shipping_address_violations_email_link": "contattaci",
+        "company_location_changed_product_removed": "Il tuo carrello è stato aggiornato poiché alcuni prodotti non sono disponibili per questa sede. Controlla l'ordine prima di inviarlo.",
+        "shipping_address_incomplete_title": "L'indirizzo di spedizione è incompleto",
+        "calculating_shipping": "È ancora in corso il calcolo della spedizione. Riprova tra qualche istante. Non ti sono stati addebitati costi.",
+        "calculating_taxes": "È ancora in corso il calcolo delle imposte. Riprova tra qualche istante. Non ti sono stati addebitati costi.",
+        "generic_processing_error": {
+          "title": "Si è verificato un problema durante l'elaborazione dell'ordine.",
+          "body": "Non ti sono stati addebitati costi. Riprova o utilizza un altro metodo di pagamento."
+        },
+        "contact_information": {
+          "title": "Informazioni di contatto non valide",
+          "header": "Per aggiornare i tuoi dati, {{emailLink}}.",
+          "email_link": "contattaci"
+        },
+        "payment_method_not_available_with_payment_terms": "Il metodo di pagamento selezionato non è più disponibile perché il pagamento per questo ordine è ora previsto per il {{paymentTerms}}",
+        "payment_method_not_available_with_fulfillment_terms": "Il metodo di pagamento selezionato non è più disponibile perché il pagamento per questo ordine è ora dovuto al momento dell'evasione",
+        "payment_method_not_available_with_fixed_terms": "Il metodo di pagamento selezionato non è più disponibile perché il pagamento per questo ordine è dovuto in un secondo momento",
+        "payment_method_not_available_with_review_requirement": "Il metodo di pagamento che hai selezionato non è più disponibile perché il pagamento è dovuto solo dopo la conferma dell'ordine.",
+        "validation_errors_banner": {
+          "section_label": {
+            "delivery": "Consegna",
+            "contact": "Contatto",
+            "payment": "Pagamento",
+            "billing": "Fatturazione"
+          },
+          "heading": {
+            "one": "C’è {{count}} errore:",
+            "other": "Ci sono {{count}} errori:"
+          },
+          "errors_in_section": {
+            "one": "{{count}} errore in {{section}}",
+            "other": "{{count}} errori in {{section}}"
+          }
+        },
+        "delivery_address_validation_errors_banner": {
+          "title": "Indirizzo di spedizione non valido",
+          "text_html": "%{contact_us} per modificare l'indirizzo",
+          "contact_us": "Contattaci",
+          "use_different_address": "Usa un indirizzo di spedizione diverso"
+        }
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Revisione",
+          "link_label": "termini e condizioni di {{partnerDisplayName}}"
+        }
+      },
+      "online_store_chat": {
+        "title": "Hai delle domande? Chatta con noi"
+      },
+      "local_pickup": {
+        "location_information": {
+          "one": "C'è %{count} sede con scorte disponibili vicino a te",
+          "other": "Ci sono %{count} sedi con scorte disponibili vicino a te"
+        },
+        "toggle_location": "Cambia sede",
+        "or": "OPPURE",
+        "cancel": "Annulla",
+        "your_location": "la tua sede",
+        "search_button": "Cerca negozi"
       }
     }
   }
