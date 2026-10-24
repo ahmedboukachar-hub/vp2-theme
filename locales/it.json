@@ -3377,6 +3377,148 @@
           "name_cannot_contain_url": "Il campo {{fieldName}} non può contenere URL"
         }
       }
+    },
+    "orders": {
+      "order_list": {
+        "carousel": {
+          "three_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}, {{lineItemName4}} quantity {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}, {{lineItemName4}} quantità {{lineItemQuantity4}}, {{lineItemName5}} quantità {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}, {{lineItemName4}} quantità {{lineItemQuantity4}}, {{lineItemName5}} quantità {{lineItemQuantity5}}, {{lineItemName6}} quantità {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}, {{lineItemName4}} quantità {{lineItemQuantity4}}, {{lineItemName5}} quantità {{lineItemQuantity5}}, {{lineItemName6}} quantità {{lineItemQuantity6}} e altro",
+          "view_order_details": "Visualizza dettagli ordine",
+          "previous": "Indietro",
+          "next": "Avanti"
+        },
+        "show_order_actions_accessibility_label": "Mostra azioni dell'ordine per l'ordine {{name}}",
+        "empty_state_title_for_pending_orders": "Nessun ordine in attesa",
+        "more_than_four_products_accessibility_label": "L'ordine include {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}} e altri {{numberOfAdditionalProducts}} prodotti",
+        "plus_more_products": "+{{numberOfAdditionalProducts}} prodotti",
+        "order_status_and_message": "{{orderStatus}} - {{message}}",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Visualizza l'ordine per maggiori dettagli",
+            "estimated_delivery": "Arrivo previsto il giorno {{date}}",
+            "last_updated": "Ultimo aggiornamento: {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Consegna prevista il giorno {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "more_than_three_products_accessibility_label": "L'ordine include {{lineItemName1}}, {{lineItemName2}} e altri {{numberOfAdditionalProducts}} prodotti",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "filter": {
+          "clear_section": "Cancella sezione",
+          "apply": "Applica",
+          "date": {
+            "start_date": "Data di inizio",
+            "end_date": "Data di fine",
+            "title": "Data ordine",
+            "today": "Oggi",
+            "last_7_days": "Ultimi sette giorni",
+            "last_30_days": "Ultimi 30 giorni",
+            "last_90_days": "Ultimi 90 giorni",
+            "last_365_days": "Ultimi 12 mesi",
+            "custom": "Personalizzato"
+          },
+          "date_section_accessibility_label": "Filtra per {{sectionTitle}}"
+        },
+        "no_order_banner": "Per provare l'estensione sulla pagina di stato dell'ordine, crea un ordine.",
+        "location_filter_picker": {
+          "all_location": "Tutte le sedi",
+          "current_location": "Sede attuale",
+          "switch_view": "Cambia vista"
+        },
+        "empty_state_with_location_title": "Nessun ordine per {{locationName}}",
+        "view_order": "Visualizza ordine",
+        "view_order_accessibility_label": "Visualizza ordine {{orderName}}",
+        "empty_state_redesign_cta": "Acquista ora",
+        "empty_state_redesign_subtitle": "Vuoi fare acquisti?",
+        "empty_state_redesign_welcome": "Ti diamo il benvenuto",
+        "empty_state_redesign_welcome_with_name": "Ti diamo il benvenuto, {{firstName}}",
+        "sort_options_accessibility_label": "Opzioni di ordinamento per gli ordini confermati"
+      },
+      "order_status": {
+        "canceled_label": "Annullato",
+        "canceled_title": "Il tuo ordine è stato annullato",
+        "come_back": "Torna su questa pagina per aggiornamenti sullo stato della tua spedizione.",
+        "company_tracking_number": "Numero di tracking {{company}}:",
+        "confirmed_label": "Confermato",
+        "confirmed_title": "Il tuo ordine è confermato",
+        "delivered_label": "Consegnato",
+        "estimated_delivery": "Arrivo previsto il giorno {{date}}",
+        "in_review_label": "In fase di revisione",
+        "in_review_title": "Il tuo ordine è in fase di revisione",
+        "on_its_way_label": "In arrivo",
+        "out_for_delivery_label": "In consegna",
+        "resume_tracking": "Riprendi tracking",
+        "submitted_label": "Inviato",
+        "track_shipment": "Monitora la spedizione",
+        "request_return": "Richiedi reso",
+        "attempted_delivery_label": "Tentativo di consegna",
+        "preparing_for_shipping_label": "Preparazione per la spedizione in corso",
+        "ready_for_pickup_label": "Pronto per il ritiro",
+        "ready_for_pickup_description": "Questi articoli sono pronti per il ritiro. Porta la conferma dell'ordine quando vieni a ritirarlo.",
+        "picked_up_label": "Ritirato",
+        "submitted_description": "Verifica i dettagli dell'ordine e del pagamento.",
+        "last_updated": "Ultimo aggiornamento: {{date}}",
+        "multiple_shipments_label": "Spedizioni multiple",
+        "view_order_for_details": "Visualizza l'ordine per maggiori dettagli",
+        "confirmed_description_digital": "Riceverai un'email quando il tuo ordine è pronto.",
+        "delivered_description_gift_card": {
+          "one": "Buono regalo inviato via email.",
+          "other": "Buoni regalo inviati via email."
+        },
+        "confirmed_description_pickup": "Stiamo preparando questi articoli per il ritiro.",
+        "confirmed_gift_card_additional_description": {
+          "one": "Il buono regalo sarà inviato in un'email separata.",
+          "other": "Ciascun buono regalo sarà inviato in un'email separata."
+        },
+        "confirmed_description_gift_card_text": "Riceverai un messaggio quando il tuo ordine è pronto.",
+        "delivered_description_gift_card_text": {
+          "one": "Il buono regalo sarà inviato tramite messaggio.",
+          "other": "I buoni regalo sono stati inviati tramite messaggio."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "Il buono regalo sarà inviato in un messaggio separato.",
+          "other": "Ciascun buono regalo sarà inviato in un messaggio separato."
+        },
+        "gift_resend_success": {
+          "one": "Buono regalo inviato nuovamente",
+          "other": "Buoni regalo inviati nuovamente"
+        },
+        "gift_resend_failure": {
+          "one": "Si è verificato un problema con la ripetizione dell'invio del buono regalo. Riprova o contattaci.",
+          "other": "Si è verificato un problema con la ripetizione dell'invio dei buoni regalo. Riprova o contattaci."
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Gestisci con Amazon",
+            "new_window_disclaimer": "(apre una nuova finestra)"
+          }
+        },
+        "attempted_to_deliver_label": "Tentata consegna",
+        "there_was_a_problem_label": "Si è verificato un problema",
+        "buy_with_prime_logo_accessibility_label": "Logo Amazon Buy with Prime",
+        "delivered": "Consegnato il {{date}}",
+        "complete_label": "Completo",
+        "multiple_statuses_label": "Stati dell'ordine multipli",
+        "status_timestamp": "Aggiornato il giorno {{date}}",
+        "delivery_promise": {
+          "claim_shop_cash_cta": {
+            "no_shop_app_label": "{{appDownloadLink}} per richiedere il tuo Shop Cash",
+            "has_shop_app_label": "Richiedi il tuo Shop Cash",
+            "download_shop_app_label": "Scarica Shop"
+          },
+          "promise_line": {
+            "single_brand_label": "Consegna supportata da",
+            "mixed_brands_label": "Consegna garantita",
+            "not_delivered_by_label": "Non consegnato entro il giorno {{date}}",
+            "modal_accessibility_button_label": "Dettagli delle promesse di consegna"
+          }
+        }
+      }
     }
   }
 }
