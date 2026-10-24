@@ -2860,6 +2860,172 @@
         "message": "Vielen Dank, wir wissen dies zu schätzen.",
         "preset_label": "%{tip_percent} %",
         "no_tip_label": "Keine"
+      },
+      "throttle": {
+        "footer": {
+          "body": "Artikel in deinem Warenkorb werden nicht bis zum Abschluss des Checkouts reserviert."
+        },
+        "too_many_attempts": {
+          "message": "Zu viele Versuche",
+          "description": "Versuche es in ein paar Minuten erneut"
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Bei der Verarbeitung deiner Anfrage ist ein Problem aufgetreten. Bitte kontaktiere die Shop-Inhaberin oder den Shop-Inhaber."
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Für %{count} Artikel ist keine Zustellung verfügbar",
+            "other": "Für %{count} Artikel ist keine Zustellung verfügbar"
+          },
+          "message": {
+            "one": "Dieser Artikel wird aus deinem Warenkorb entfernt, da für deine Adresse keine Zustellmethoden verfügbar sind.",
+            "other": "Diese Artikel werden aus deinem Warenkorb entfernt, da für deine Adresse keine Zustellmethoden verfügbar sind."
+          },
+          "label": "Keine Zustellung"
+        }
+      },
+      "no_address_location": {
+        "title": "Standort ohne Adresse",
+        "header": "Es gibt keine Versandadresse für diesen Standort",
+        "message": "Wende dich an uns, um eine Adresse für diesen Standort hinzuzufügen und den Checkout abzuschließen.",
+        "email_us_button_label": "Sende uns eine E-Mail",
+        "alt_header": "Fehlende Lieferadresse"
+      },
+      "order_errors": {
+        "creation_failure": "Es gab ein Problem beim Erstellen deiner Bestellung. Versuche es erneut oder wende dich an uns für weitere Details.",
+        "network_failure": "Deine Bestellung konnte aufgrund eines Netzwerkfehlers nicht eingereicht werden. Überprüfe deine Verbindung und versuche es erneut.",
+        "inventory_reservation_failure": "Einige Artikel sind nicht mehr lieferbar."
+      },
+      "session_errors": {
+        "session_not_unique": "Bei der Verarbeitung deiner Bestellung ist ein Problem aufgetreten. Aktualisiere diese Seite, um zum Shop zurückzukehren.",
+        "session_already_finished": "Diese Bestellung wurde bereits eingereicht. Du kannst zum Shop zurückkehren, um eine neue Bestellung aufzugeben."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Geschlossen",
+        "business_hours": "Öffnungszeiten",
+        "title": "Abholstation",
+        "or": "oder",
+        "search_button": "Suche",
+        "selector_tabs": "Auswahl der Abholpunkte",
+        "selector_tab_map": "Karte",
+        "selector_tab_list": "Liste",
+        "could_not_resolve_address": "Deine Adresse konnte nicht geortet werden. Versuche es erneut oder verwende eine andere Adresse",
+        "no_pickup_points_near_you": "Keine Abholpunkte in der Nähe der ausgewählten Adresse gefunden",
+        "no_pickup_points_near_location": "Keine Abholpunkte in der Nähe deines Standorts gefunden",
+        "no_pickup_points_found": "Keine Abholstandorte gefunden",
+        "paginator": {
+          "next_accessibility_label": "Nächste Seite",
+          "previous_accessibility_label": "Vorherige Seite",
+          "header": {
+            "one": "%{first} - %{last} von %{count} Standort anzeigen",
+            "other": "%{first} - %{last} von %{count} Standorten anzeigen"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} Standort von %{count}",
+            "other": "%{pickup_point_index} Standorte von %{count}"
+          },
+          "selected_page": {
+            "one": "%{first}–%{last} Standort von %{count}",
+            "other": "%{first}–%{last} Standorte von %{count}"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} Abholpunkt in der Nähe deines Standorts gefunden",
+          "other": "%{count} Abholpunkte in der Nähe deines Standorts gefunden"
+        },
+        "change": "Standort wechseln",
+        "waiting_on_pickup_point_location_notice": "Suche nach Abholpunkten ...",
+        "geolocation": {
+          "shared_location_button": "Meinen Standort verwenden",
+          "errors": {
+            "unsuported_by_browser": "Das Abrufen der Geolocation wird von deinem Browser nicht unterstützt. Versuche es erneut oder verwende einen anderen Browser.",
+            "permission_not_allowed": "Genehmige die Freigabe deines Standorts.",
+            "permission_denied": "Dein Standort konnte nicht abgerufen werden. Versuche es noch einmal."
+          }
+        },
+        "no_business_hours": "Keine Öffnungszeiten verfügbar",
+        "open_twenty_four_hours": "Rund um die Uhr geöffnet",
+        "address_label": "Adresse",
+        "pickup_unavailable_banner_title": {
+          "one": "Keine Verfügbarkeit von Abholstandorten für deine Artikel",
+          "other": "Keine Verfügbarkeit von Abholstandorten für deine Artikel"
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Es gab ein Problem mit unserem Checkout",
+          "message": "Aktualisiere diese Seite oder versuche es in ein paar Minuten noch einmal",
+          "action": {
+            "cta": "Seite neu laden"
+          },
+          "request_id": "Anfrage-ID: {{requestId}}"
+        },
+        "embed_errors": {
+          "storefront_password_required": "Dieser Shop ist passwortgeschützt.",
+          "customer_account_required": "Für den Abschluss des Checkouts ist ein Kundenkonto erforderlich.",
+          "cart_completed": "Dieser Checkout wurde bereits abgeschlossen.",
+          "invalid_cart": "Der Warenkorb ist nicht mehr gültig.",
+          "not_authorized": "Die Checkout-Authentifizierung ist fehlgeschlagen. Überprüfe deine Anmeldedaten.",
+          "killswitch_enabled": "Der Checkout ist vorübergehend nicht verfügbar.",
+          "policy_violation": "Der Checkout kann aufgrund von Richtlinienkonfigurationseinschränkungen nicht abgeschlossen werden.",
+          "unrecoverable_failure": "Der Checkout konnte nicht geladen werden. Erneut versuchen"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Kehre zum Warenkorb zurück",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text}, um die Mengen zu aktualisieren",
+        "subscription_changed": "Eins deiner Abonnements hat sich geändert.",
+        "company_location_changed": "Dein Warenkorb wurde aktualisiert. Überprüfe deine Bestellung, bevor du sie aufgibst.",
+        "violations_title": "{{violation}} fehlt oder ist ungültig",
+        "individual_violations_title": {
+          "DeliveryViolations": "Lieferadresse",
+          "PaymentViolations": "Rechnungsadresse",
+          "OtherViolations": "Bestellinformationen",
+          "UnhandledViolations": "Bestellinformationen"
+        },
+        "all_violations_content": "Rufe uns an oder {{emailLink}}, um diese Informationen zu aktualisieren und deine Bestellung abzuschließen:",
+        "all_violations_email_link": "sende uns eine E-Mail",
+        "editable_shipping_address_violations_message_title": "Füge diese Informationen hinzu, um deine Bestellung abzuschließen:",
+        "editable_shipping_address_violations_message_footer": "Um die Adresse für diesen Standort dauerhaft zu aktualisieren, {{emailLink}}.",
+        "editable_shipping_address_violations_email_link": "kontaktiere uns",
+        "company_location_changed_product_removed": "Dein Warenkorb wurde aktualisiert, da einige Produkte an diesem Standort nicht verfügbar sind. Überprüfe deine Bestellung, bevor du sie aufgibst.",
+        "shipping_address_incomplete_title": "Lieferadresse ist unvollständig",
+        "calculating_shipping": "Die Versandkosten werden noch berechnet.Versuche es in ein paar Sekunden erneut.Dir wurde nichts berechnet.",
+        "calculating_taxes": "Steuern werden noch berechnet. Versuche es in ein paar Sekunden erneut. Dir wurde nichts berechnet.",
+        "generic_processing_error": {
+          "title": "Bei der Bearbeitung deiner Bestellung ist ein Problem aufgetreten",
+          "body": "Dir wurde nichts berechnet. Versuche es erneut oder mit einer anderen Zahlungsmethode."
+        },
+        "contact_information": {
+          "title": "Kontaktinformationen sind ungültig",
+          "header": "Um deine Informationen zu aktualisieren, {{emailLink}}.",
+          "email_link": "kontaktiere uns"
+        },
+        "payment_method_not_available_with_payment_terms": "Die von dir ausgewählte Zahlungsmethode ist nicht mehr verfügbar, da die Zahlung für diese Bestellung jetzt den Zahlungsbestellungen {{paymentTerms}} unterliegt",
+        "payment_method_not_available_with_fulfillment_terms": "Die von dir ausgewählte Zahlungsmethode ist nicht mehr verfügbar, da die Zahlung für diese Bestellung jetzt bei Fulfillment fällig ist.",
+        "payment_method_not_available_with_fixed_terms": "Die von dir ausgewählte Zahlungsmethode ist nicht mehr verfügbar, da die Zahlung für diese Bestellung später fällig ist",
+        "payment_method_not_available_with_review_requirement": "Die von dir ausgewählte Zahlungsmethode ist nicht mehr verfügbar, da die Zahlung erst fällig wird, wenn deine Bestellung bestätigt ist.",
+        "validation_errors_banner": {
+          "section_label": {
+            "delivery": "Zustellung",
+            "contact": "Kontakt",
+            "payment": "Zahlung",
+            "billing": "Rechnung"
+          },
+          "heading": {
+            "one": "Es gibt {{count}} Fehler:",
+            "other": "Es gibt {{count}} Fehler:"
+          },
+          "errors_in_section": {
+            "one": "{{count}} Fehler im Bereich {{section}}",
+            "other": "{{count}} Fehler im Bereich {{section}}"
+          }
+        },
+        "delivery_address_validation_errors_banner": {
+          "title": "Die Lieferadresse ist ungültig"
+        }
       }
     }
   }
