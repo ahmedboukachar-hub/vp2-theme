@@ -3101,6 +3101,146 @@
           }
         }
       }
+    },
+    "addresses": {
+      "governorate": "Gouvernorat",
+      "confirm": "Souhaitez-vous vraiment supprimer cette adresse ?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "En vedette",
+        "best_selling": "Meilleures ventes",
+        "az": "Alphabétique, de A à Z",
+        "za": "Alphabétique, de Z à A",
+        "price_ascending": "Prix: faible à élevé",
+        "price_descending": "Prix: élevé à faible",
+        "date_ascending": "Date, de la plus ancienne à la plus récente",
+        "date_descending": "Date, de la plus récente à la plus ancienne",
+        "most_relevant": "Le plus pertinent"
+      }
+    },
+    "errors": {
+      "blank": "ne peut pas rester vide",
+      "credit_card_session_expired": "L'autorisation de carte de crédit a expiré. Veuillez entrer vos informations de paiement à nouveau. Votre carte n'a pas été débitée.",
+      "empty": "ne peut être vide",
+      "invalid_email": "doit être une adresse e-mail valide",
+      "discount_disabled": "Cette promotion a été désactivée",
+      "discount_expired": "Cette promotion n'est plus valide",
+      "discount_limit_reached": "Cette promotion a atteint sa limite d'utilisation",
+      "discount_not_found": "Nous n'avons pas trouvé de promotion valide correspondant à ce code",
+      "customer_already_used_once_per_customer_discount_notice": "Cette promotion a atteint sa limite d'utilisation",
+      "gift_card_already_applied": "Ce code a déjà été appliqué à votre commande",
+      "gift_card_code_invalid": "Le code est invalide",
+      "gift_card_currency_mismatch": "Cette carte-cadeau ne peut pas être utilisée pour cet achat. Contactez %{shop_name} pour la faire réémettre.",
+      "gift_card_depleted": "Il ne reste plus d'argent sur cette carte cadeau",
+      "gift_card_disabled": "La carte cadeau a été désactivée",
+      "gift_card_expired": "La carte cadeau a expiré",
+      "invalid": "est invalide",
+      "bad_domain": "contient un nom de domaine non valide",
+      "taken": "est déjà pris",
+      "contains_html_tags": "ne peut pas contenir de balises HTML",
+      "too_short": "est trop court (le minimum est de %{count} caractères)",
+      "too_long": "est trop long (le maximum est de %{count} caractères)",
+      "password_mismatch": "doit correspondre au mot de passe fourni",
+      "contains_spaces": "commence ou se termine par des espaces.",
+      "invalid_for_country": "n'est pas valide pour %{country}",
+      "invalid_for_country_and_province": "n'est pas valide pour %{province} et %{country}",
+      "invalid_province_in_country": "n'est pas une province valide pour %{country}",
+      "invalid_state_in_country": "n'est pas un état valide pour %{country}",
+      "invalid_region_in_country": "n'est pas une région valide pour %{country}",
+      "less_than_or_equal_to": "doit être inférieur ou égal à %{count}",
+      "not_supported": "n'est pas pris en charge",
+      "full_name_required": "Saisir un prénom et un nom",
+      "invalid_for_card_type": "n'est pas valide pour ce type de carte",
+      "invalid_type": "Malheureusement, nous n'acceptons pas les cartes de ce type",
+      "invalid_format": "n'est pas un numéro de carte de crédit",
+      "expired": "La carte de crédit a expiré",
+      "invalid_start_date_or_issue_number_for_debit": "Une date valide de début ou d'émission est requise",
+      "invalid_expiry_year": "n'est pas une année d'expiration valide",
+      "reset_password_html": "Cette adresse e-mail est déjà associée à un compte. Si ce compte vous appartient, vous pouvez <a href=\"/account/login#recover\">reconfigurer votre mot de passe</a>",
+      "verify_email": "Un e-mail a été envoyé à %{customer_email} veuillez cliquer sur le lien contenu dans le e-mail pour confirmer votre adresse.",
+      "blocked_address": "Cet emplacement n’est pas pris en charge",
+      "product_not_available": "le produit n’est pas publié pour ce(‑tte) client(e).",
+      "shop_404": {
+        "title": "Créez un site e-commerce et vendez en ligne ! Logiciel e-commerce de Shopify",
+        "heros": {
+          "store_unavailable": "Cette boutique est actuellement indisponible.",
+          "store_not_exist": "Cette boutique n’existe pas.",
+          "no_storefront": "Cette boutique n’a pas encore de site web.",
+          "store_will_be_right_back": "Cette boutique sera bientôt de retour"
+        },
+        "links": {
+          "explore_other_stores": "Explorer d’autres boutiques",
+          "start_free_trial": "Démarrer un essai gratuit",
+          "refresh_page": "Actualiser la page"
+        },
+        "owner_ctas": {
+          "header": "Êtes-vous propriétaire de la boutique ?",
+          "fix_domain": "Terminez la configuration de votre nouvelle adresse web en accédant à %{domain_settings_link}. Cliquez sur « Connecter un domaine », puis tapez : %{domain}.<br>Si vous avez des difficultés à entrer dans votre boutique, essayez la page %{forgot_your_store_link}.",
+          "fix_domain_link_text": "vos paramètres de domaine",
+          "forgot_your_store_link_text": "Vous avez oublié l’adresse de votre boutique ?",
+          "add_storefront": "Vous pouvez configurer votre site web en ajoutant le canal Boutique en ligne dans votre %{admin_link}. Si vous avez des difficultés à entrer dans votre boutique, essayez la page %{forgot_your_store_link}.",
+          "admin_link_text": "interface administrateur"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Vendre en personne",
+            "caption": "Accédez aux fonctionnalités dont vous avez besoin pour gérer votre magasin physique de vente au détail, que vous débutiez ou que votre activité se développe.",
+            "link_text": "Démarrer l’essai gratuit"
+          },
+          "open_a_store": {
+            "header": "Ouvrez une nouvelle boutique Shopify",
+            "caption": "Démarrez un essai gratuit de 3 jours, puis continuez pour 1 USD/mois pendant les 3 prochains mois.",
+            "link_text": "S’inscrire maintenant"
+          },
+          "editions": {
+            "header": "Découvrez Shopify Editions",
+            "caption": "Avec plus de 100 mises à jour de produits, votre activité commerciale peut gagner en productivité, en créativité et en puissance.",
+            "link_text": "Explorer le tout dernier programme Editions"
+          },
+          "store_owner": {
+            "header": "Êtes-vous propriétaire de la boutique ?",
+            "caption": "Vous avez des difficultés à entrer dans votre boutique ? Essayez la fonctionnalité %{forgot_your_store_link}. Si vous souhaitez réactiver votre boutique, contactez l’%{shopify_support_link}.",
+            "shopify_support_link_text": "assistance Shopify"
+          }
+        },
+        "title_unavailable": "Boutique indisponible",
+        "subtitles": {
+          "store_will_be_right_back": "Shopify met tout en œuvre pour la remettre en ligne dès que possible."
+        },
+        "status_card": {
+          "eyebrow": "Aide pour les propriétaires de boutique",
+          "header": "Statut de Shopify",
+          "caption": "Vérifiez si une panne sur Shopify affecte d’autres boutiques en plus de celle-ci.",
+          "link_text": "Consulter l’état des systèmes Shopify"
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Erreur lors de la réinitialisation du mot de passe",
+        "no_account_found": "Aucun compte associé à cet e-mail n'a été trouvé.",
+        "invalid_credentials": "E-mail ou mot de passe incorrect",
+        "denylisted_reset_password": "Votre compte n'a pas pu être consulté car le mot de passe actuel n'est pas sécurisé. Vous allez recevoir un e-mail pour mettre à jour votre mot de passe.",
+        "signup_disabled": "La création du compte client a été désactivée.",
+        "subscribe_error": "Erreur d’abonnement",
+        "unsubscribe_error": "Erreur de désabonnement",
+        "open_tracking_error": "Erreur de suivi des ouvertures"
+      },
+      "address": {
+        "updated": "L'adresse a été mise à jour avec succès.",
+        "error_updating": "Erreur lors de la mise à jour de l'adresse",
+        "created": "L'adresse a été créée avec succès",
+        "error_creating": "Erreur lors de la création de l'adresse.",
+        "deleted": "L'adresse a été supprimée avec succès",
+        "error_deleting": "Erreur lors de la suppression de l'adresse."
+      },
+      "order": {
+        "not_available": "Cette commande n'est pas disponible",
+        "financial_status": {
+          "authorized": "Autorisée"
+        }
+      }
     }
   }
 }
