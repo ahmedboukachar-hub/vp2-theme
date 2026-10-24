@@ -3629,6 +3629,148 @@
       "profile_card": {
         "cancel": "Stornieren"
       }
+    },
+    "orders": {
+      "order_list": {
+        "payment_status": {
+          "list_view": {
+            "due_on_fulfillment": "Bei Fulfillment fällig",
+            "pay_to_confirm": "Zur Bestätigung zahlen",
+            "payment_not_due": "Noch nicht fällig",
+            "paid": "Bezahlt"
+          },
+          "gallery_view": {
+            "overdue": "Zahlung überfällig",
+            "due": "Zahlung fällig am {{date}}",
+            "due_today": "Zahlung heute fällig",
+            "due_without_date": "Zahlbar bis",
+            "due_on_fulfillment": "Zahlung wird bei Fulfillment fällig",
+            "pay_to_confirm": "Zur Bestätigung zahlen",
+            "payment_not_due": "Die Zahlung ist noch nicht fällig"
+          }
+        },
+        "sort_currently_sorted_by_accessibility_label": "Aktuell sortiert nach: {{option}}",
+        "carousel": {
+          "one_products_accessibility_label": "Bestellung enthält {{lineItemName1}} Menge {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "Bestellung enthält {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "Bestellung enthält {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "Bestellung enthält {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}, {{lineItemName4}} Menge {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "Bestellung enthält {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}, {{lineItemName4}} Menge {{lineItemQuantity4}}, {{lineItemName5}} Menge {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "Bestellung enthält {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}, {{lineItemName4}} Menge {{lineItemQuantity4}}, {{lineItemName5}} Menge {{lineItemQuantity5}}, {{lineItemName6}} Menge {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "Bestellung enthält {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}, {{lineItemName4}} Menge {{lineItemQuantity4}}, {{lineItemName5}} Menge {{lineItemQuantity5}}, {{lineItemName6}} Menge {{lineItemQuantity6}} und mehr",
+          "view_order_details": "Bestelldetails anzeigen",
+          "previous": "Vorherige",
+          "next": "Weiter"
+        },
+        "show_order_actions_accessibility_label": "Bestellaktionen für Bestellung {{name}} zeigen",
+        "empty_state_title_for_pending_orders": "Keine ausstehenden Bestellungen",
+        "more_than_four_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}} und {{numberOfAdditionalProducts}} weitere Produkte",
+        "plus_more_products": "+{{numberOfAdditionalProducts}} Produkte",
+        "order_status_and_message": "{{orderStatus}} bis {{message}}",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Bestellung anzeigen für Details",
+            "estimated_delivery": "Erwartet am {{date}}",
+            "last_updated": "Zuletzt aktualisiert am {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Vorauss. Zustellung am {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "more_than_three_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}, {{lineItemName2}} und {{numberOfAdditionalProducts}} weitere Produkte",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "filter": {
+          "clear_section": "Bereich löschen",
+          "apply": "Anwenden",
+          "date": {
+            "start_date": "Startdatum",
+            "end_date": "Enddatum",
+            "title": "Bestelldatum",
+            "today": "Heute",
+            "last_7_days": "Letzte 7 Tage",
+            "last_30_days": "Letzte 30 Tage",
+            "last_90_days": "Letzte 90 Tage",
+            "last_365_days": "Letzte 12 Monate",
+            "custom": "Benutzerdefiniert"
+          },
+          "date_section_accessibility_label": "Nach {{sectionTitle}} filtern"
+        },
+        "no_order_banner": "Erstelle eine Bestellung, um deine Erweiterung auf der Bestellstatus-Seite zu testen.",
+        "location_filter_picker": {
+          "all_location": "Alle Standorte",
+          "current_location": "Aktueller Standort",
+          "switch_view": "Ansicht wechseln"
+        },
+        "empty_state_with_location_title": "Keine Bestellungen für {{locationName}}",
+        "view_order": "Bestellung anzeigen",
+        "view_order_accessibility_label": "Bestellung {{orderName}} ansehen",
+        "empty_state_redesign_cta": "Jetzt einkaufen",
+        "empty_state_redesign_subtitle": "Bereit zum Einkaufen?",
+        "empty_state_redesign_welcome": "Willkommen",
+        "empty_state_redesign_welcome_with_name": "Willkommen, {{firstName}}",
+        "sort_options_accessibility_label": "Sortieroptionen für bestätigte Bestellungen"
+      },
+      "order_status": {
+        "canceled_label": "Storniert",
+        "canceled_title": "Deine Bestellung wurde storniert",
+        "come_back": "Besuche diese Seite, um dich über den aktuellen Lieferstatus deiner Sendung zu informieren.",
+        "company_tracking_number": "{{company}} Trackingnummer:",
+        "confirmed_label": "Bestätigt",
+        "confirmed_title": "Deine Bestellung wurde bestätigt",
+        "delivered_label": "Zugestellt",
+        "estimated_delivery": "Erwartet am {{date}}",
+        "in_review_label": "Ausstehend",
+        "in_review_title": "Deine Bestellung wird überprüft",
+        "on_its_way_label": "Unterwegs",
+        "out_for_delivery_label": "Zustellung läuft",
+        "resume_tracking": "Tracking fortsetzen",
+        "submitted_label": "Gesendet",
+        "track_shipment": "Lieferung verfolgen",
+        "request_return": "Rückgabe anfragen",
+        "attempted_delivery_label": "Versuchte Zustellung",
+        "preparing_for_shipping_label": "Vorbereitung auf den Versand",
+        "ready_for_pickup_label": "Abholbereit",
+        "ready_for_pickup_description": "Diese Artikel sind abholbereit. Bitte bringe deine Bestellbestätigung zur Abholung der Bestellung mit.",
+        "picked_up_label": "Abgeholt",
+        "submitted_description": "Überprüfe die Bestellung und die Zahlungsdetails.",
+        "last_updated": "Zuletzt aktualisiert am {{date}}",
+        "multiple_shipments_label": "Mehrere Lieferungen",
+        "view_order_for_details": "Bestellung anzeigen für Details",
+        "confirmed_description_digital": "Du erhältst eine E-Mail, sobald deine Bestellung bereit ist.",
+        "delivered_description_gift_card": {
+          "one": "Gutschein wurde per E-Mail gesendet.",
+          "other": "Geschenkgutscheine wurden per E-Mail gesendet."
+        },
+        "confirmed_description_pickup": "Wir bereiten diese Artikel für die Abholung vor.",
+        "confirmed_gift_card_additional_description": {
+          "one": "Der Gutschein wird in einer separaten E-Mail versendet.",
+          "other": "Jeder Gutschein wird in einer separaten E-Mail versendet."
+        },
+        "confirmed_description_gift_card_text": "Du erhältst eine SMS, sobald deine Bestellung bereit ist.",
+        "delivered_description_gift_card_text": {
+          "one": "Gutschein wurde per SMS gesendet.",
+          "other": "Geschenkgutscheine wurden per SMS gesendet."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "Der Gutschein wird in einer separaten SMS versendet.",
+          "other": "Jeder Gutschein wird in einer separaten SMS versendet."
+        },
+        "gift_resend_success": {
+          "one": "Gutschein erneut gesendet",
+          "other": "Geschenkgutscheine erneut gesendet"
+        },
+        "gift_resend_failure": {
+          "one": "Beim erneuten Senden deines Gutscheins ist ein Problem aufgetreten. Versuche es erneut oder wende dich an uns.",
+          "other": "Beim erneuten Senden deiner Geschenkgutscheine ist ein Problem aufgetreten. Versuche es erneut oder wende dich an uns."
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Mit Amazon verwalten",
+            "new_window_disclaimer": "(öffnet ein neues Fenster)"
+          }
+        }
+      }
     }
   }
 }
