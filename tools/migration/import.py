@@ -185,7 +185,8 @@ def step_collections():
             r = mutate('collections', c['handle'], 'mutation($c:CollectionInput!){collectionCreate(input:$c){collection{id} userErrors{field message}}}', {'c': inp}, 'collectionCreate')
         if not r: continue
         new = r['collection']['id']; remember('collections', c['id'], new, c['handle'])
-        manual = [mapped(x['id']) for x in c['products']['nodes'] if 'id' in x] if not c['ruleSet'] else []
+        by_handle = {p['handle']: mapped(p['id']) for p in load('products')}  # the export lists collection products by handle
+        manual = [by_handle.get(x['handle']) for x in c['products']['nodes']] if not c['ruleSet'] else []
         if manual: mutate('collections', c['handle'], 'mutation($id:ID!,$p:[ID!]!){collectionAddProducts(id:$id,productIds:$p){userErrors{field message}}}', {'id': new, 'p': [m for m in manual if m]}, 'collectionAddProducts')
         if not ex: publish('collections', new, c['handle'])
 
