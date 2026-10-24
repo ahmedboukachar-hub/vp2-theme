@@ -3194,6 +3194,146 @@
             "province": "Wähle ein Bundesland/einen Kanton aus"
           }
         }
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "empty_cart_action": "leere den Warenkorb und kehre zum Shop zurück.",
+        "unavailable_line_item": "%{product_name} / %{variant_label}",
+        "remove_items_action": {
+          "one": "entferne den nicht verfügbaren Artikel",
+          "other": "entferne die nicht verfügbaren Artikel"
+        }
+      },
+      "b2b_errors": {
+        "lost_b2b_purchasing_permissions": "Du verfügst nicht mehr über die Berechtigung, B2B-Bestellungen aufzugeben. %{logout_url}, um stattdessen eine private Bestellung aufzugeben.",
+        "log_out_link_text": "Abmelden",
+        "lost_permissions_subtitle": "Du verfügst nicht mehr über die Berechtigung, B2B-Bestellungen aufzugeben. Melde dich ab, um eine private Bestellung aufzugeben.",
+        "lost_permissions_title": "Keine Standortberechtigungen"
+      },
+      "units": {
+        "milligram": "mg",
+        "gram": "g",
+        "kilogram": "kg",
+        "milliliter": "ml",
+        "centiliter": "cl",
+        "liter": "l",
+        "cubic_meter": "m³",
+        "millimeter": "mm",
+        "centimeter": "cm",
+        "meter": "m",
+        "square_meter": "m²",
+        "ounce": "oz",
+        "pound": "lb",
+        "fluid_ounce": "fl oz",
+        "pint": "pt",
+        "quart": "qt",
+        "gallon": "gal",
+        "inch": "in",
+        "foot": "ft",
+        "yard": "yd",
+        "square_foot": "ft²",
+        "item": "Artikel"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "Diese Adresse wird nicht für die aktuelle Mitgliedschaft unterstützt.",
+        "items_split_across_locations_unsupported": "Prime-Zustellung ist nicht für deine Bestellung verfügbar. Deine Versandoptionen wurden aktualisiert."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Zum Onlineshop navigieren"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Mehr Informationen zu %{context}",
+        "additional_payment_methods": "Zusätzliche Zahlungsmethoden"
+      },
+      "remote": {
+        "errors": {
+          "currency_mismatch": "Dieser Artikel kann nicht in deinen Warenkorb gelegt werden, da er aus einem Shop stammt, der eine andere Währung verwendet.",
+          "max_remote_shops_exceeded": "Dieses Produkt kann nicht hinzugefügt werden, da dein Warenkorb bereits die maximale Anzahl aus anderen Shops enthält.",
+          "currency_mismatch_removal": "Ein Artikel wurde aus deinem Warenkorb entfernt, weil er aus einem Shop stammt, der eine andere Währung verwendet.",
+          "only_remote_merchandise_lines": "Der Checkout enthält nur Merchandise-Artikel aus einem anderen Shop. Um den Checkout abzuschließen, ist eine Weiterleitung zum anderen Shop erforderlich."
+        }
+      },
+      "remote_merchandise_only": {
+        "title": "Schließe deinen Einkauf ab",
+        "remote_only_notice": "Diese Artikel werden von anderen Shops verkauft und versendet. Schließe den Kauf bei jedem Shop ab, um Deine Bestellung zu vollenden.",
+        "return_to_store_label": "Zurück zum Shop",
+        "checkout_on_shop_label": "Zur Kasse bei %{shop_name}",
+        "single_shop_transition": "Du wirst zu %{advertiser} weitergeleitet, um deinen Kauf abzuschließen.",
+        "detail_item_label": {
+          "one": "{{count}} Artikel",
+          "other": "{{count}} Artikel"
+        }
+      },
+      "remote_policies": {
+        "unavailable_policy": "Für diesen Shop wurde kein %{policy_name} angegeben. Für weitere Informationen wende dich direkt an %{shop_name}."
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_title": "Zahlung fehlgeschlagen",
+        "payment_not_processed_text": "Versuche, den QR-Code erneut zu scannen. Wenn es immer noch nicht funktioniert, informiere unser Personal und probiere eine andere Zahlungsmethode.",
+        "payment_link_expired_title": "Zahlungslink abgelaufen",
+        "payment_link_expired_text": "Versuche, den QR-Code erneut zu scannen.",
+        "title": "Externe Zahlung fehlgeschlagen"
+      },
+      "taxes": {
+        "tax_details": "Weitere Steuerdetails",
+        "vat_number": {
+          "field": {
+            "label": "USt-IdNr. (optional)",
+            "tooltip": "Überprüft die USt.-IdNr. und wendet bei berechtigten Bestellungen automatisch die Umkehrung der Steuerschuldnerschaft an"
+          },
+          "add": "USt-IdNr. hinzufügen",
+          "vaulted": "USt-IdNr.: %{number}",
+          "badge": "USt-IdNr.: %{number}",
+          "domestic_order": "Die Befreiung von der Umkehrung der Steuerschuldnerschaft gilt nur für länderübergreifende EU-Bestellungen. Für lokale Bestellungen wird der standardmäßige Mehrwertsteuersatz berechnet.",
+          "status": {
+            "invalid_format": {
+              "at": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Österreich bestehen aus dem Kürzel AT und 9 Zeichen",
+              "be": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Belgien bestehen aus dem Kürzel BE und 10 Zeichen",
+              "bg": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Bulgarien bestehen aus dem Kürzel BG und 9–10 Zeichen",
+              "hr": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Kroatien bestehen aus dem Kürzel HR und 11 Zeichen",
+              "cy": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Zypern bestehen aus dem Kürzel CY und 9 Zeichen",
+              "cz": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in der Tschechischen Republik bestehen aus dem Kürzel CZ und 8–10 Zeichen",
+              "dk": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Dänemark bestehen aus dem Kürzel DK und 8 Zeichen",
+              "ee": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Estland bestehen aus dem Kürzel EE und 9 Zeichen",
+              "fi": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Finnland bestehen aus dem Kürzel FI und 8 Zeichen",
+              "fr": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Frankreich bestehen aus dem Kürzel FR und 11 Zeichen",
+              "de": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Deutschland bestehen aus dem Kürzel DE und 9 Zeichen",
+              "gr": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Griechenland bestehen aus dem Kürzel EL und 9 Zeichen",
+              "hu": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Ungarn bestehen aus dem Kürzel HU und 8 Zeichen",
+              "ie": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Irland bestehen aus dem Kürzel IE und 8–9 Zeichen",
+              "it": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Italien bestehen aus dem Kürzel IT und 11 Zeichen",
+              "lv": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Lettland bestehen aus dem Kürzel LV und 11 Zeichen",
+              "lt": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Litauen bestehen aus dem Kürzel LT und 9–12 Zeichen",
+              "lu": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Luxemburg bestehen aus dem Kürzel LU und 8 Zeichen",
+              "mt": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Malta bestehen aus dem Kürzel MT und 8 Zeichen",
+              "nl": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in den Niederlanden bestehen aus dem Kürzel NL und 12 Zeichen",
+              "pl": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Polen bestehen aus dem Kürzel PL und 10 Zeichen",
+              "pt": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Portugal bestehen aus dem Kürzel PT und 9 Zeichen",
+              "ro": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Rumänien bestehen aus dem Kürzel RO und 10 Zeichen",
+              "sk": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in der Slowakei bestehen aus dem Kürzel SK und 10 Zeichen",
+              "si": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Slowenien bestehen aus dem Kürzel SI und 8 Zeichen",
+              "es": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Spanien bestehen aus dem Kürzel ES und 9 Zeichen",
+              "se": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) in Schweden bestehen aus dem Kürzel SE und 12 Zeichen",
+              "gb": "Umsatzsteuer-Identifikationsnummern (USt-IdNr.) im Vereinigten Königreich bestehen aus dem Kürzel GB oder XI und 5–12 Zeichen"
+            },
+            "invalid_number": {
+              "at": "Gültige USt-IdNr. für Österreich eingeben",
+              "be": "Gültige USt-IdNr. für Belgien eingeben",
+              "bg": "Gültige USt-IdNr. für Bulgarien eingeben",
+              "hr": "Gültige USt-IdNr. für Kroatien eingeben",
+              "cy": "Gültige USt-IdNr. für Zypern eingeben",
+              "cz": "Gültige USt-IdNr. für Tschechien eingeben",
+              "dk": "Gültige USt-IdNr. für Dänemark eingeben",
+              "ee": "Gültige USt-IdNr. für Estland eingeben",
+              "fi": "Gültige USt-IdNr. für Finnland eingeben",
+              "fr": "Gültige USt-IdNr. für Frankreich eingeben",
+              "de": "Gültige USt-IdNr. für Deutschland eingeben",
+              "gr": "Gültige USt-IdNr. für Griechenland eingeben",
+              "hu": "Gültige USt-IdNr. für Ungarn eingeben"
+            }
+          }
+        }
       }
     }
   }
