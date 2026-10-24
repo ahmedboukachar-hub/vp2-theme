@@ -185,7 +185,12 @@
     "product": {
       "add_to_cart": "Aggiungi al carrello",
       "buy_it_now": "Acquista ora",
-      "assurance": "Pagamento sicuro · Garanzia di autenticità · Reso entro 14 giorni · Spedizione gratuita",
+      "assurance": {
+        "checkout": "Pagamento sicuro",
+        "authenticity": "Garanzia di autenticità",
+        "returns": "Reso entro 14 giorni",
+        "shipping": "Spedizione gratuita"
+      },
       "in_cart": "Nel carrello",
       "guide_links": {
         "label": "Guide",

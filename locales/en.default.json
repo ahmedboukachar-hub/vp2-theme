@@ -184,7 +184,12 @@
     "product": {
       "add_to_cart": "Add to cart",
       "buy_it_now": "Buy it now",
-      "assurance": "Secure checkout · Authenticity guarantee · 14-day returns · Free shipping",
+      "assurance": {
+        "checkout": "Secure checkout",
+        "authenticity": "Authenticity guarantee",
+        "returns": "14-day returns",
+        "shipping": "Free shipping"
+      },
       "in_cart": "In your cart",
       "guide_links": {
         "label": "Guides",
