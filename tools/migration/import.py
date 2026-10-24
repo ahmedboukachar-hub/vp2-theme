@@ -1,7 +1,7 @@
 """Import the export (see export.py) into the NEW store, in the order of docs/migration-new-store.md.
 
 Usage: python3 -I tools/migration/import.py <step> [<step> ...] [--dry-run]
-Steps: locales defs files products collections pages blog policies menus redirects translations (or: all)
+Steps: locales defs files products originals collections pages blog policies menus redirects translations (or: all)
 Idempotent: every created resource is recorded in $MIGRATION_EXPORT_DIR/id-map.json (old gid -> new gid) and
 existing handles in the new store are reused, so a step can be re-run safely. Every write goes to import-log.jsonl.
 """
@@ -142,6 +142,22 @@ def map_product_media():
         for o, n in zip(old, nn): IDMAP[o['id']] = n['id']
         IDMAP['media-done:' + p['id']] = len(nn); save_map(); log('products', 'media', p['handle'], f'{len(nn)}/{len(old)}')
 
+# 4b. Originals: image.url on the CDN is a re-encoded copy, so swap every image for the old store's original
+# file (same media id, so alt texts, order and translations stay). Files that already match in size are skipped.
+Q_ORIG = 'query($ids:[ID!]!){nodes(ids:$ids){id ... on MediaImage{originalSource{url fileSize} image{url}}}}'
+def step_originals(only=None):
+    pairs = [(o, n) for o, n in IDMAP.items() if o.startswith('gid://shopify/MediaImage/') and n and (not only or o in only)]
+    for i in range(0, len(pairs), 25):
+        chunk = pairs[i:i + 25]
+        old = {x['id']: x for x in gql(Q_ORIG, {'ids': [o for o, _ in chunk]}, target='old')['data']['nodes'] if x}
+        new = {x['id']: x for x in gql(Q_ORIG, {'ids': [n for _, n in chunk]})['data']['nodes'] if x}
+        todo = [(o, n) for o, n in chunk if o in old and n in new and old[o].get('originalSource') and (new[n].get('originalSource') or {}).get('fileSize') != old[o]['originalSource']['fileSize']]
+        if not todo: continue
+        inp = [{'id': n, 'originalSource': old[o]['originalSource']['url']} for o, n in todo]
+        r = mutate('originals', f'batch {i // 25 + 1} ({len(todo)})', 'mutation($f:[FileUpdateInput!]!){fileUpdate(files:$f){files{id} userErrors{field message code}}}', {'f': inp}, 'fileUpdate')
+        if r: log('originals', 'replaced', f'batch {i // 25 + 1}', f'{len(todo)} images')
+    wait_files()
+
 # 5. Collections (all smart except frontpage, which every store already has)
 def step_collections():
     for c in load('collections'):
@@ -276,7 +292,7 @@ def step_translations():
             log('translations', 'registered' if ok else 'PARTIAL', f'{t} {new}', f'{len(inputs)} values, {stale} skipped (source changed)')
             if ok and not DRY: done.add(n['resourceId']); IDMAP['translations-done'] = sorted(done); save_map()
 
-STEPS = ['locales', 'defs', 'files', 'products', 'collections', 'pages', 'blog', 'policies', 'menus', 'redirects', 'translations']
+STEPS = ['locales', 'defs', 'files', 'products', 'originals', 'collections', 'pages', 'blog', 'policies', 'menus', 'redirects', 'translations']
 if __name__ == '__main__':
     want = [a for a in sys.argv[1:] if not a.startswith('--')]
     if want == ['all']: want = STEPS
