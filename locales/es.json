@@ -3493,6 +3493,152 @@
           "load_more": "Mostrar más"
         }
       }
+    },
+    "orders": {
+      "order_list": {
+        "carousel": {
+          "next": "Siguiente"
+        },
+        "show_order_actions_accessibility_label": "Mostrar acciones para el pedido {{name}}",
+        "empty_state_title_for_pending_orders": "No hay ningún pedido pendiente",
+        "more_than_four_products_accessibility_label": "El pedido incluye {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}} y {{numberOfAdditionalProducts}} productos más",
+        "plus_more_products": "{{numberOfAdditionalProducts}} productos",
+        "order_status_and_message": "{{orderStatus}}: {{message}}",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Ver el pedido para obtener información",
+            "estimated_delivery": "Se estima para el {{date}}",
+            "last_updated": "Última actualización: {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Entrega estimada: {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "more_than_three_products_accessibility_label": "El pedido incluye {{lineItemName1}}, {{lineItemName2}} y {{numberOfAdditionalProducts}} productos más",
+        "plus_more": "Más de {{numberOfAdditionalProducts}}",
+        "filter": {
+          "clear_section": "Borrar sección",
+          "apply": "Aplicar",
+          "date": {
+            "start_date": "Fecha de inicio",
+            "end_date": "Fecha de finalización",
+            "title": "Fecha del pedido",
+            "today": "Hoy",
+            "last_7_days": "Últimos siete días",
+            "last_30_days": "Últimos 30 días",
+            "last_90_days": "Últimos 90 días",
+            "last_365_days": "Últimos 12 meses",
+            "custom": "Personalizado"
+          },
+          "date_section_accessibility_label": "Filtrar por {{sectionTitle}}"
+        },
+        "no_order_banner": "Crea un pedido para probar tu extensión en la página de estado del pedido.",
+        "location_filter_picker": {
+          "all_location": "Todas las ubicaciones",
+          "current_location": "Ubicación actual",
+          "switch_view": "Cambiar vista"
+        },
+        "empty_state_with_location_title": "No hay pedidos para {{locationName}}",
+        "view_order": "Ver pedido",
+        "view_order_accessibility_label": "Ver pedido {{orderName}}",
+        "empty_state_redesign_cta": "Comprar ahora",
+        "empty_state_redesign_subtitle": "¿Todo listo para comprar?",
+        "empty_state_redesign_welcome": "Te damos la bienvenida",
+        "empty_state_redesign_welcome_with_name": "Te damos la bienvenida, {{firstName}}",
+        "sort_options_accessibility_label": "Opciones de clasificación para pedidos confirmados"
+      },
+      "order_status": {
+        "canceled_label": "Cancelado",
+        "canceled_title": "Tu pedido se canceló",
+        "come_back": "Vuelve a esta página para recibir actualizaciones sobre el estado del envío.",
+        "company_tracking_number": "Número de seguimiento de {{company}}:",
+        "confirmed_label": "Confirmado",
+        "confirmed_title": "Tu pedido está confirmado",
+        "delivered_label": "Entregado",
+        "estimated_delivery": "Se estima para el {{date}}",
+        "in_review_label": "En revisión",
+        "in_review_title": "El pedido se está revisando",
+        "on_its_way_label": "En camino",
+        "out_for_delivery_label": "Enviado al destinatario",
+        "resume_tracking": "Reanudar seguimiento",
+        "submitted_label": "Enviado",
+        "track_shipment": "Hacer seguimiento de envío",
+        "request_return": "Solicitar devolución",
+        "attempted_delivery_label": "Intento de entrega",
+        "preparing_for_shipping_label": "En preparación para el envío",
+        "ready_for_pickup_label": "Listo para el retiro",
+        "ready_for_pickup_description": "Estos artículos están listos para su retiro. Trae la confirmación del pedido cuando vengas a retirarlo.",
+        "picked_up_label": "Retirado",
+        "submitted_description": "Revisa los detalles del pedido y el pago.",
+        "last_updated": "Última actualización el {{date}}",
+        "multiple_shipments_label": "Varios envíos",
+        "view_order_for_details": "Ver el pedido para obtener información",
+        "confirmed_description_digital": "Recibirás un correo electrónico cuando el pedido esté listo.",
+        "delivered_description_gift_card": {
+          "one": "La tarjeta de regalo se envió por correo electrónico.",
+          "other": "Las tarjetas de regalo se enviaron por correo electrónico."
+        },
+        "confirmed_description_pickup": "Estamos preparando estos artículos para retiro.",
+        "confirmed_gift_card_additional_description": {
+          "one": "La tarjeta de regalo se enviará en un correo electrónico diferente.",
+          "other": "Cada tarjeta de regalo se enviará en un correo electrónico por separado."
+        },
+        "confirmed_description_gift_card_text": "Recibirás un mensaje de texto cuando tu pedido esté listo.",
+        "delivered_description_gift_card_text": {
+          "one": "La tarjeta de regalo se envió por mensaje de texto.",
+          "other": "Las tarjetas de regalo se enviaron por mensaje de texto."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "La tarjeta de regalo se enviará en un mensaje de texto diferente.",
+          "other": "Cada tarjeta de regalo se enviará en un mensaje de texto independiente."
+        },
+        "gift_resend_success": {
+          "one": "Tarjeta de regalo reenviada",
+          "other": "Tarjetas de regalo reenviadas"
+        },
+        "gift_resend_failure": {
+          "one": "Ha habido un problema al reenviar tu tarjeta de regalo. Inténtalo de nuevo o contáctanos.",
+          "other": "Ha habido un problema al reenviar tus tarjetas de regalo. Inténtalo de nuevo o contáctanos."
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Gestionar con Amazon",
+            "new_window_disclaimer": "(abre una nueva ventana)"
+          }
+        },
+        "attempted_to_deliver_label": "Se intentó la entrega.",
+        "there_was_a_problem_label": "Ha habido un problema",
+        "buy_with_prime_logo_accessibility_label": "Logo de Amazon Buy with Prime",
+        "delivered": "Entregado el {{date}}",
+        "complete_label": "Completado",
+        "multiple_statuses_label": "Estados de varios pedidos",
+        "status_timestamp": "Actualizado el {{date}}",
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "Entrega respaldada por",
+            "mixed_brands_label": "Entrega garantizada",
+            "not_delivered_by_label": "Aún no entregado el {{date}}",
+            "modal_accessibility_button_label": "Información sobre la promesa de entrega"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Reclamar tu Shop Cash",
+            "no_shop_app_label": "{{appDownloadLink}} para reclamar Shop Cash",
+            "download_shop_app_label": "Descargar Shop"
+          },
+          "details_modal": {
+            "title": "Entrega respaldada por",
+            "modal_accessiblity_label": "Información sobre la promesa de entrega",
+            "delivery_by_label": "Entrega para el {{date}}",
+            "delivery_guaranteed_by_label": "Fecha de entrega asegurada para el {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "Shop Promise garantiza una entrega rápida y confiable. Solicita Shop Cash si tu pedido llega con retraso.",
+              "may_be_eligible_not_authorized_label": "Es posible que seas elegible para reclamar Shop Cash porque este pedido llegó con demora. Inicia sesión para ver toda la información.",
+              "redeemed_label": "Ya reclamaste Shop Cash porque este pedido llegó tarde."
+            }
+          }
+        }
+      }
     }
   }
 }
