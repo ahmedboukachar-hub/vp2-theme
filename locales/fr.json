@@ -3241,6 +3241,160 @@
           "authorized": "Autorisée"
         }
       }
+    },
+    "email_marketing": {
+      "unsubscribed": {
+        "preview": "Vous êtes en train de consulter un aperçu de ce que les clients verront lorsqu'ils se désabonneront."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Vous avez accepté le suivi des ouvertures d'e-mails.</b>",
+          "visibility": "Les taux d'ouverture d'e-mails seront signalés anonymement dans un rapport. Nous verrons si vous avez ouvert un e-mail uniquement sous la forme d'un taux agrégé d'ouverture d'e-mail.",
+          "opt_out_html": "Vous pouvez <a style='text-decoration:underline;' href='%{link}'>désactiver</a> le suivi des ouvertures d'e-mails si vous ne souhaitez pas communiquer cette information.",
+          "preview_bar": "Vous êtes en train de consulter un aperçu de ce que les clients verront lorsqu'ils s'abonneront au suivi des ouvertures d'e-mails."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Vous avez désactivé le suivi des ouvertures d'e-mails.</b>",
+          "visibility": "Nous ne verrons pas si vous avez ouvert nos e-mails.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Activez</a> le suivi des ouvertures d'e-mails.",
+          "preview_bar": "Vous êtes en train de consulter un aperçu de ce que les clients verront lorsqu'ils se désabonneront le suivi des ouvertures d'e-mails."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Nous ne suivons plus aucune ouverture d'e-mail.</b>",
+          "privacy_policy": "Après l'envoi de cet e-mail, nous avons mis à jour notre politique de confidentialité et nous ne suivons plus les ouvertures."
+        },
+        "track": {
+          "status_html": "<b>Le suivi des ouvertures d'e-mails fait l'objet d'un rapport.</b>",
+          "visibility": "Nous verrons si vous avez ouvert l'e-mail uniquement sous la forme de son taux d'ouverture global."
+        },
+        "updated_policy": {
+          "status_html": "<b>Le suivi des ouvertures d'e-mails fait l'objet d'un rapport.</b>",
+          "visibility": "Nous avons mis à jour notre politique, et nous suivons désormais les ouvertures d'e-mails. Les taux d'ouverture d'e-mails seront signalés anonymement dans un rapport. Nous verrons si vous avez ouvert un e-mail uniquement sous la forme de son taux d'ouverture global.",
+          "opt_out_html": "Si vous ne souhaitez pas communiquer cette information, vous pouvez vous <a style='text-decoration:underline;' href='%{link}'>désabonner</a>."
+        }
+      },
+      "sms_unsubscribe_confirm": {
+        "message": "Voulez-vous vraiment vous désabonner du marketing par SMS ?",
+        "button": "Se désabonner"
+      }
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Habituellement prête en 1 heure",
+        "two_hours": "Habituellement prête en 2 heures",
+        "four_hours": "Habituellement prête en 4 heures",
+        "twenty_four_hours": "Habituellement prête en 24 heures",
+        "two_to_four_days": "Habituellement prête en 2 à 4 jours",
+        "five_or_more_days": "Habituellement prête en 5 jours ou plus",
+        "zero_to_two_hours": "Habituellement prête en 2 heures",
+        "two_to_four_hours": "Habituellement prête en 4 heures",
+        "immediately": "Prête pour le ramassage maintenant",
+        "next_day": "Prête pour le ramassage le jour suivant"
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "En stock",
+          "out_of_stock": "En rupture de stock"
+        }
+      },
+      "boolean": {
+        "true_label": "Oui",
+        "false_label": "Non"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "Pertinence",
+        "price_ascending": "Prix : faible à élevé",
+        "price_descending": "Prix : élevé à faible"
+      },
+      "error": "Un problème est survenu lors du chargement des résultats de votre recherche. Veuillez actualiser la page ou réessayer plus tard."
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Cet article constitue un achat récurrent ou différé. En continuant, j’accepte la %{cancellationPolicyLink} et vous autorise à facturer mon moyen de paiement aux prix, fréquences et dates listées sur cette page jusqu’à ce que ma commande soit traitée ou que je l’annule, si autorisé.",
+      "buyer_consent_cart": "Au moins un article de votre panier constitue un achat récurrent ou différé. En continuant, j’accepte la %{cancellationPolicyLink} et vous autorise à facturer mon moyen de paiement aux prix, fréquences et dates listées sur cette page jusqu’à ce que ma commande soit traitée ou que je l’annule, si autorisé.",
+      "cancellation_policy": "politique de résiliation"
+    },
+    "managed_markets": {
+      "buyer_consent": "En passant votre commande, vous acceptez d’acheter auprès de Global-e en tant que vendeur attitré, conformément aux %{termsAndConditionsLink} et à la %{privacyPolicyLink} de Global-e, et de partager vos informations avec %{shopName}.",
+      "terms_and_conditions": "Conditions générales d’utilisation",
+      "privacy_policy": "Politique de confidentialité"
+    }
+  },
+  "customer_accounts": {
+    "callback": {
+      "try_again": "Réessayer"
+    },
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Masquer le menu du compte",
+        "show_accessibility_label": "Afficher le menu du compte",
+        "nav_accessibility_label": "Navigation du compte",
+        "open_menu_accessibility_label": "Ouvrir la navigation du compte",
+        "close_menu_accessibility_label": "Fermer la navigation du compte",
+        "loading_message": "Navigation du compte en cours de chargement",
+        "label": "Compte"
+      },
+      "action_menu_accessibility_label": "Autres actions",
+      "close_menu_accessibility_label": "Fermer le menu principal",
+      "contact_email_subject": "Coordonnées de la boutique en ligne {{shopName}}",
+      "contact_link": "Coordonnées",
+      "delete_confirmation": {
+        "cancel": "Annuler",
+        "delete": "Supprimer"
+      },
+      "dismiss_toast": "Ignorer",
+      "document_title": "{{sectionName}} – {{shopName}} – Compte",
+      "generic_accessibility_label": "{{label}} : {{value}}",
+      "loading_message": "Chargement en cours",
+      "log_out_link": "Se déconnecter",
+      "logout_overlay_label": "Déconnexion en cours...",
+      "nav_label_accessibility_label": "Menu principal",
+      "navigation_accessibility_message": "Vous avez accédé à {{sectionName}}",
+      "open_menu_accessibility_label": "Ouvrir le menu principal",
+      "shop_logo_accessibility_label": "Logo {{shopName}}",
+      "settings_link": "Paramètres",
+      "country_switcher_toast_message": "Changement de pays effectué : {{countryName}}",
+      "switch_country": "Changer le pays",
+      "search": "Rechercher",
+      "location_switcher_toast_message": "Emplacement passé à {{locationName}}",
+      "switch_location": "Changer d’emplacement",
+      "view_details": "Voir les détails",
+      "company_location": "Emplacement de l’entreprise",
+      "no_countries_found": "Aucun pays trouvé",
+      "no_locations_found": "Aucun emplacement trouvé",
+      "try_new_search": "Essayer une nouvelle recherche",
+      "skip_to_content": "Passer au contenu",
+      "loading_policy_content_accessibility_label": "Chargement du contenu de la politique",
+      "policy_load_error": "Impossible de charger la {{policyName}}",
+      "policy_try_again": "Réessayer",
+      "loading_section_accessibility_label": "Chargement de la section {{sectionName}}",
+      "back_button_accessibility_label": "Retour",
+      "go_to_store_link": "Aller à la boutique",
+      "orders_link_label": "Commandes",
+      "subscriptions_link_label": "Abonnements",
+      "store_credit_accessibility_label": "{{formattedBalance}} de crédit en magasin",
+      "store_credit_balances_list_accessibility_label": "Soldes de crédit en magasin",
+      "store_credit_multi_currency_accessibility_label": {
+        "one": "{{formattedBalance}} de crédit en magasin et dans {{count}} autre devise",
+        "other": "{{formattedBalance}} de crédit en magasin et dans {{count}} autres devises"
+      }
+    },
+    "account_information": {
+      "loading_accessibility_message": "Informations du compte en cours de chargement",
+      "loading_finished_accessibility_message": "Les informations du compte ont été chargées",
+      "profile_card": {
+        "cancel": "Annuler",
+        "cancel_accessibility_label": "Annuler la modification du profil",
+        "edit": "Modifier",
+        "edit_accessibility_label": "Modifier le profil",
+        "email_help_text": "L’e-mail ne peut pas être modifié",
+        "first_name": "Prénom",
+        "last_name": "Nom",
+        "phone_number_help_text": "Le numéro de téléphone ne peut pas être modifié"
+      }
     }
   }
 }
