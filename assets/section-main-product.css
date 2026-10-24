@@ -232,28 +232,11 @@ product-info {
 }
 
 .product-form__assurance {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem 1.6rem;
-  margin: 2rem 0 0;
-  padding-top: 2rem;
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.1);
-  font-size: 1.3rem;
-  line-height: 1.4;
-  letter-spacing: 0.04rem;
-}
-
-.product-form__assurance-item {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.product-form__assurance-item .svg-wrapper {
-  flex: 0 0 auto;
-  width: 2rem;
-  height: 2rem;
-  color: rgba(var(--color-foreground), 0.8);
+  margin: 1.4rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  color: rgba(var(--color-foreground), 0.7);
 }
 
 /* Buy it now sits above Add to cart (see buy-buttons.liquid). */
