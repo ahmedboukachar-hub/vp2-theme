@@ -2948,6 +2948,144 @@
           "sdk_load_failure": "Si è verificato un problema durante il caricamento di {{walletName}}. {{refresh_link}} per riprovare oppure usa un altro metodo di pagamento.",
           "refresh_link": "Aggiorna"
         }
+      },
+      "units": {
+        "pint": "pt",
+        "quart": "qt",
+        "gallon": "gal",
+        "inch": "in",
+        "foot": "ft",
+        "yard": "yd",
+        "square_foot": "ft²",
+        "item": "articolo"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "L’indirizzo non è supportato per l’iscrizione corrente.",
+        "items_split_across_locations_unsupported": "La consegna Prime non è disponibile per l'ordine. Le opzioni di spedizione sono state aggiornate."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Vai al Negozio online"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Maggiori informazioni su %{context}",
+        "additional_payment_methods": "Metodi di pagamento aggiuntivi"
+      },
+      "review_address_modal": {
+        "title": "Controlla indirizzo",
+        "subtitle_no_match": "Questo indirizzo non corrisponde a nessuno dei tuoi indirizzi salvati.",
+        "subtitle_must_use": "Il tuo ordine sarà spedito a questo indirizzo.",
+        "continue": "Continua con questo indirizzo",
+        "use_saved_address": "Utilizza un indirizzo diverso",
+        "return_to_cart": "Torna al carrello",
+        "subtitle": {
+          "one": "Questo ordine verrà spedito all'indirizzo fornito da {{merchant}}.",
+          "other": "Questo ordine verrà spedito a un indirizzo fornito da {{merchant}}. Seleziona un indirizzo di spedizione."
+        }
+      },
+      "remote": {
+        "errors": {
+          "currency_mismatch": "Questo articolo non può essere aggiunto al carrello perché proviene da un negozio che utilizza una valuta diversa.",
+          "max_remote_shops_exceeded": "Questo prodotto non può essere aggiunto perché il carrello ha già raggiunto il limite massimo da altri negozi.",
+          "currency_mismatch_removal": "Un articolo è stato rimosso dal carrello perché proviene da un negozio che utilizza una valuta diversa.",
+          "only_remote_merchandise_lines": "Il check-out contiene solo merce remota. Per completare il check-out è necessario un reindirizzamento al negozio remoto."
+        }
+      },
+      "remote_merchandise_only": {
+        "title": "Completa l'acquisto",
+        "remote_only_notice": "Questi articoli sono venduti e spediti da altri negozi. Per completare l'acquisto, esegui il check-out in ogni negozio.",
+        "return_to_store_label": "Ritorna al negozio",
+        "checkout_on_shop_label": "Esegui il check-out su %{shop_name}",
+        "single_shop_transition": "Ti reindirizzeremo a %{advertiser} per completare l'acquisto.",
+        "detail_item_label": {
+          "one": "{{count}} articolo",
+          "other": "{{count}} articoli"
+        }
+      },
+      "remote_policies": {
+        "unavailable_policy": "Non è stata fornita alcuna %{policy_name} per questo negozio. Per ulteriori informazioni, contatta direttamente %{shop_name}."
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_title": "Pagamento non riuscito",
+        "payment_not_processed_text": "Prova a scansionare nuovamente il codice QR. Se continua a non funzionare, informa il nostro staff e prova un metodo di pagamento diverso.",
+        "payment_link_expired_title": "Link di pagamento scaduto",
+        "payment_link_expired_text": "Prova a scansionare nuovamente il codice QR.",
+        "title": "Pagamento esterno non riuscito"
+      },
+      "taxes": {
+        "tax_details": "Ulteriori dettagli sulle imposte",
+        "vat_number": {
+          "field": {
+            "label": "Partita IVA (facoltativa)",
+            "tooltip": "Convalida il numero di partita IVA e applica automaticamente l'inversione contabile agli ordini quando possibile."
+          },
+          "add": "Aggiungi una partita IVA",
+          "vaulted": "Partita IVA: %{number}",
+          "badge": "Partita IVA: %{number}",
+          "domestic_order": "L'esenzione dell'inversione contabile si applica esclusivamente agli ordini transfrontalieri UE. Agli ordini locali viene applicata l'IVA standard.",
+          "status": {
+            "invalid_format": {
+              "at": "La partita IVA austriaca contiene AT e 9 caratteri",
+              "be": "La partita IVA belga contiene BE e 10 caratteri",
+              "bg": "La partita IVA bulgara contiene BG e 9-10 caratteri",
+              "hr": "La partita IVA croata contiene HR e 11 caratteri",
+              "cy": "La partita IVA cipriota contiene CY e 9 caratteri",
+              "cz": "La partita IVA per la Repubblica Ceca contiene CZ e 8-10 caratteri",
+              "dk": "La partita IVA danese contiene DK e 8 caratteri",
+              "ee": "La partita IVA estone contiene EE e 9 caratteri",
+              "fi": "La partita IVA finlandese contiene FI e 8 caratteri",
+              "fr": "La partita IVA francese contiene FR e 11 caratteri",
+              "de": "La partita IVA tedesca contiene DE e 9 caratteri",
+              "gr": "La partita IVA greca contiene EL e 9 caratteri",
+              "hu": "La partita IVA ungherese contiene HU e 8 caratteri",
+              "ie": "La partita IVA irlandese contiene IE e 8-9 caratteri",
+              "it": "La partita IVA italiana contiene IT e 11 caratteri",
+              "lv": "La partita IVA lettone contiene LV e 11 caratteri",
+              "lt": "La partita IVA lituana contiene LT e 9-12 caratteri",
+              "lu": "La partita IVA lussemburghese contiene LU e 8 caratteri",
+              "mt": "La partita IVA maltese contiene MT e 8 caratteri",
+              "nl": "La partita IVA olandese contiene NL e 12 caratteri",
+              "pl": "La partita IVA polacca contiene PL e 10 caratteri",
+              "pt": "La partita IVA portoghese contiene PT e 9 caratteri",
+              "ro": "La partita IVA rumena contiene RO e 10 caratteri",
+              "sk": "La partita IVA slovacca contiene SK e 10 caratteri",
+              "si": "La partita IVA slovena contiene SI e 8 caratteri",
+              "es": "La partita IVA spagnola contiene ES e 9 caratteri",
+              "se": "La partita IVA svedese contiene SE e 12 caratteri",
+              "gb": "La partita IVA del Regno Unito contiene GB o XI e 5-12 caratteri"
+            },
+            "invalid_number": {
+              "at": "Inserisci una partita IVA valida per l'Austria",
+              "be": "Inserisci una partita IVA valida per il Belgio",
+              "bg": "Inserisci una partita IVA valida per la Bulgaria",
+              "hr": "Inserisci una partita IVA valida per la Croazia",
+              "cy": "Inserisci una partita IVA valida per Cipro",
+              "cz": "Inserisci una partita IVA valida per la Repubblica Ceca",
+              "dk": "Inserisci una partita IVA valida per la Danimarca",
+              "ee": "Inserisci una partita IVA valida per l'Estonia",
+              "fi": "Inserisci una partita IVA valida per la Finlandia",
+              "fr": "Inserisci una partita IVA valida per la Francia",
+              "de": "Inserisci una partita IVA valida per la Germania",
+              "gr": "Inserisci una partita IVA valida per la Grecia",
+              "hu": "Inserisci una partita IVA valida per l'Ungheria",
+              "ie": "Inserisci una partita IVA valida per l'Irlanda",
+              "it": "Inserisci una partita IVA valida per l'Italia",
+              "lv": "Inserisci una partita IVA valida per la Lettonia",
+              "lt": "Inserisci una partita IVA valida per la Lituania",
+              "lu": "Inserisci una partita IVA valida per il Lussemburgo",
+              "mt": "Inserisci una partita IVA valida per Malta",
+              "nl": "Inserisci una partita IVA valida per i Paesi Bassi",
+              "pl": "Inserisci una partita IVA valida per la Polonia",
+              "pt": "Inserisci una partita IVA valida per il Portogallo",
+              "ro": "Inserisci una partita IVA valida per la Romania",
+              "sk": "Inserisci una partita IVA valida per la Slovacchia",
+              "si": "Inserisci una partita IVA valida per la Slovenia",
+              "es": "Inserisci una partita IVA valida per la Spagna",
+              "se": "Inserisci una partita IVA valida per la Svezia"
+            }
+          }
+        }
       }
     }
   }
