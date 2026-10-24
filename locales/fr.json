@@ -2500,6 +2500,151 @@
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone": "Après finalisation de votre paiement, vous recevrez une confirmation par e-mail. Suivez votre commande en utilisant l’application Shop.",
         "order_status_payments_app_failed_pending_payment": "Votre commande ne vous a pas été facturée. Retournez à votre panier pour examiner votre commande et procéder de nouveau au paiement.",
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "Après finalisation de votre paiement, vous recevrez une confirmation par e-mail. Suivez votre commande en utilisant l’application Shop."
+      },
+      "review": {
+        "blocks": {
+          "shipping_method_title": "Mode d’expédition",
+          "payment_method_title": "Moyen de paiement",
+          "change_link_label": "Modifier",
+          "change_contact_method_link_label": "Modifier les coordonnées",
+          "change_billing_address_link_label": "Modifier l’adresse de facturation",
+          "change_shipping_address_link_label": "Modifier l’adresse de livraison",
+          "change_shipping_method_link_label": "Modifier le mode d’expédition",
+          "change_payment_method_link_label": "Modifier le mode de paiement",
+          "pick_up_in_store_shipping_method_html": "Retrait en boutique · %{location_name}",
+          "purchase_order_number_title": "Numéro de bon de commande",
+          "change_purchase_order_number_label": "Changer le numéro de bon de commande",
+          "change_delivery_method_link_label": "Modifier le mode de livraison",
+          "no_address": "(Aucune adresse)",
+          "no_purchase_order_number": "(Aucun numéro de bon de commande)",
+          "no_purchase_order_number_long": "Aucun numéro de bon de commande",
+          "due_after_order_reviewed_html": "Dû après examen de la commande",
+          "review_title_free_order": "Vérifier et finaliser votre commande",
+          "payment_method_saved_company_location": "Enregistrer la carte pour cet emplacement",
+          "company_location": "Emplacement de l’entreprise",
+          "change_company_location_link_label": "Changer l’emplacement de l’entreprise",
+          "pickup_items_at": {
+            "one": "Retrait de %{count} article à",
+            "other": "Retrait de %{count} articles à"
+          },
+          "ship_items_to": {
+            "one": "Expédier %{count} article à",
+            "other": "Expédier %{count} articles à"
+          }
+        },
+        "block_title": "Vérifiez vos renseignements",
+        "checkout_a_different_way": "Payer avec un autre moyen de paiement",
+        "item_header": {
+          "change_value": "Modifier la valeur",
+          "section": "Section",
+          "value": "Valeur"
+        },
+        "review_and_confirm_title": "Vérifier et confirmer",
+        "account_more_actions": "Plus d’actions pour ce compte"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Envoyez-moi des nouvelles et des offres par e-mail",
+        "unsubscribe": {
+          "title": "Vous vous êtes désinscrit",
+          "description": "Vous ne recevrez plus de rappels concernant votre panier de notre part."
+        },
+        "accept_sms_checkbox_label": "Envoyez-moi des nouvelles et des offres par SMS",
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "Politique de confidentialité",
+            "terms_of_service": "Conditions d’utilisation",
+            "description_html": "En vous inscrivant aux envois par SMS, vous acceptez de recevoir des messages de marketing automatisés au numéro de téléphone fourni, notamment des rappels de panier. Le consentement n'est pas une condition d'achat. Répondez STOP pour vous désabonner. Répondez HELP pour obtenir de l'aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s'appliquer. Consultez notre %{privacy_policy_link} et nos %{terms_of_service_link}.",
+            "description_transactional_html": "Vous recevrez peut-être des SMS concernant la confirmation de votre commande et des mises à jour du statut de son expédition. Répondez STOP pour vous désabonner. Répondez HELP pour obtenir de l’aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s’appliquer. Consultez notre %{privacy_policy_modal_link} et nos %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Numéro de téléphone mobile",
+          "get_offers_by_text": "Recevoir des offres par SMS"
+        },
+        "post_accept_marketing_checkbox_label": "Vous êtes abonné(e) pour recevoir les nouveautés et offres par e-mail",
+        "pending_accept_marketing_checkbox_label": "Consultez votre boîte mail pour confirmer votre abonnement aux nouveautés et offres",
+        "accept_shop_pay_marketing_checkbox_label": "Envoyez-moi des nouvelles et des offres de cette boutique",
+        "disclaimer": {
+          "privacy_policy": "Politique de confidentialité",
+          "terms_of_service": "Conditions de service"
+        },
+        "accept_whatsapp_marketing_checkbox_label": "M’envoyer des messages sur WhatsApp avec des actualités et des offres",
+        "whatsapp": {
+          "disclaimer": {
+            "description_html": "En vous inscrivant via WhatsApp, vous acceptez de recevoir des messages marketing WhatsApp au numéro de téléphone fourni. Le consentement n’est pas une condition d’achat. Répondez STOP pour vous désabonner. La fréquence des messages varie. Des frais de messagerie et de données peuvent s’appliquer. Consultez notre %{privacy_policy_link} et nos %{terms_of_service_link}."
+          }
+        }
+      },
+      "shop_policies": {
+        "refund_policy": "Politique de remboursement",
+        "privacy_policy": "Politique de confidentialité",
+        "terms_of_service": "Conditions d’utilisation",
+        "legal_notice": "Mentions légales",
+        "shipping_policy": "Expédition",
+        "terms_of_sale": "Conditions générales de vente",
+        "subscription_policy": "Annulations",
+        "purchase_options_policy": "Politique sur les options d’achat",
+        "contact_information": "Contact",
+        "purchase_options_cancellation_policy": "Annulations",
+        "cookie_preferences": "Cookies",
+        "policy_label": "Politique",
+        "policies_label": "Politiques",
+        "select_policy_label": "Sélectionnez une politique",
+        "terms_and_policies": "Conditions générales et politiques"
+      },
+      "notifications": {
+        "title": "Notifications"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Montant à payer pour la commande %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Ajouté",
+            "other": "%{count} ajouté(s)"
+          },
+          "removed": "Supprimé",
+          "subtracted": "%{count} supprimé(s)",
+          "returned": "%{count} retourné(s)",
+          "return_line_item_removed": "Suppression de %{count} du retour"
+        },
+        "additional_payment_requested": "Un paiement de %{total_outstanding} est requis",
+        "checkout_review_and_pay": "Votre commande %{order_name} a été mise à jour. Vérifiez ces modifications, puis payez pour confirmer votre commande.",
+        "order_updated_on": "Votre commande a été mise à jour le %{last_edited_at}.",
+        "order_review_and_pay": "Votre commande a été mise à jour. Vérifiez et payez pour confirmer votre commande.",
+        "pay_now": "Payer maintenant"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "Votre carte de crédit sera débitée de %{amount}",
+        "payment_total_label": "Paiement total",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Passer à %{currency_name}",
+        "card_provider_fx_charges_warning": "Il est possible que votre fournisseur de carte facture des frais sur les transactions en %{currency_code}.",
+        "currency_not_supported_by_shop": "La devise que vous avez sélectionnée n'est plus disponible. Tous les prix sont maintenant en %{currency_code}."
+      },
+      "tips": {
+        "title": "Ajouter un pourboire",
+        "description": "Témoignez votre soutien à l’équipe de %{shop_name}",
+        "presets_description": "Sélectionnez un pourcentage de pourboire",
+        "custom_label": "Pourboire personnalisé",
+        "add_tip": "Ajouter un pourboire",
+        "update_tip": "Modifier le pourboire",
+        "message": "Merci beaucoup !",
+        "preset_label": "%{tip_percent} %",
+        "no_tip_label": "Aucun",
+        "not_available_with_spi": "Non disponible avec le paiement en plusieurs fois avec Shop Pay"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Acheter %{product_name}",
+          "one": "Acheter %{product_name} et %{count} autre article",
+          "other": "Acheter %{product_name} et %{count} autres articles"
+        }
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Informations supplémentaires",
+          "tax_credential_br": "CPF/CNPJ",
+          "shipping_credential_br": "CPF/CNPJ"
+        }
       }
     }
   }
