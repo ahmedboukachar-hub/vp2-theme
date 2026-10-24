@@ -1077,6 +1077,256 @@
             "tuesday": "Mar"
           }
         }
+      },
+      "contact": {
+        "shipping_used_as_billing_notice": "Sarà utilizzato anche come indirizzo di fatturazione per questo ordine.",
+        "company_attention_label": "Azienda/Destinatario",
+        "optional_company_attention_label": "Azienda/Destinatario (facoltativo)",
+        "street_name_label": "Via",
+        "street_number_label": "Numero civico",
+        "optional_street_number_label": "Numero civico (facoltativo)",
+        "neighborhood_label": "Quartiere",
+        "optional_neighborhood_label": "Quartiere (facoltativo)",
+        "barangay_label": "Barangay",
+        "optional_barangay_label": "Barangay (facoltativo)",
+        "colony_label": "Colonia",
+        "optional_colony_label": "Colonia (facoltativo)",
+        "commune_label": "Comune",
+        "optional_commune_label": "Comune (facoltativo)",
+        "district_label": "Distretto",
+        "optional_district_label": "Distretto (facoltativo)",
+        "ward_label": "Circoscrizione",
+        "optional_ward_label": "Circoscrizione (facoltativo)",
+        "available_addresses_label": "Indirizzi disponibili",
+        "block_label": "Isolato",
+        "optional_block_label": "Isolato (facoltativo)",
+        "area_label": "Area",
+        "optional_area_label": "Area (facoltativo)",
+        "optional_zip_code_label": "CAP (facoltativo)",
+        "optional_postal_code_label": "CAP (facoltativo)",
+        "optional_postcode_label": "Codice postale (facoltativo)",
+        "optional_pincode_label": "Codice PIN (facoltativo)",
+        "email_rollup_accessibility_label": "Opzioni email",
+        "phone_rollup_accessibility_label": "Opzioni telefono",
+        "phone_country_code_label": "Prefisso telefonico internazionale",
+        "storefront_link": "sito web del merchant",
+        "suburb_label": "Zona",
+        "subdistrict_label": "Sottodistretto",
+        "optional_subdistrict_label": "Sottodistretto (facoltativo)",
+        "optional_street_name_label": "Via (facoltativa)",
+        "field_saved_label": "Salvato",
+        "field_tooltip_helper_text": "Utilizzato per la conferma dell'ordine e i promemoria del carrello",
+        "field_tooltip_accessibility_label": "Maggiori informazioni su come vengono utilizzati i dati di contatto"
+      },
+      "delivery_options": {
+        "ship": "Spedisci",
+        "pick_up": "Ritiro",
+        "pick_up_in_two_hours": "Di solito pronto in 2 ore",
+        "pick_up_in_four_hours": "Di solito pronto in 4 ore",
+        "pick_up_immediately": "Pronto adesso per il ritiro",
+        "pick_up_next_day": "Pronto per il ritiro il giorno successivo",
+        "pick_up_in_one_hour": "Di solito pronto in 1 ora",
+        "pick_up_in_twenty_four_hours": "Di solito pronto in 24 ore",
+        "pick_up_in_two_to_four_days": "Di solito pronto in 2-4 giorni",
+        "pick_up_in_five_or_more_days": "Di solito pronto in 5 o più giorni",
+        "pick_up_in_zero_to_two_hours": "Pronto per il ritiro in 2 ore",
+        "pick_up_in_two_to_four_hours": "Pronto per il ritiro in 4 ore",
+        "free_total_label": "Gratis",
+        "shipping_address": "Indirizzo di spedizione",
+        "pick_up_locations": "Sedi di ritiro",
+        "pickup_point_method_definition": "Spedizione al punto di ritiro",
+        "retail_method_definition": "Spedizione al dettaglio",
+        "none_method_definition": "Nessuna spedizione",
+        "subscription_pickup_information": "Questa sarà la sede di ritiro per tutti gli ordini futuri dell'abbonamento.",
+        "ship_to_address": "Spedisci all'indirizzo",
+        "pick_up_from_store": "Ritiro in negozio",
+        "company_location_no_address_banner": "Gli ordini con spedizione verso destinazioni prive di indirizzo saranno sottoposti a revisione.",
+        "pickup": "Ritiro",
+        "pickup_store": "Ritiro in negozio",
+        "pickup_point": "Punto di ritiro",
+        "pickup_point_map_title": "Mappa punto di ritiro",
+        "digital_product": "Prodotto digitale"
+      },
+      "customer_account": {
+        "not_user_label": "Non sei %{first_name}?",
+        "have_an_account_label": "Hai un account?",
+        "sign_in_link_label": "Accedi",
+        "sign_out_link_label": "Esci",
+        "save_my_information_label": "Salva questi dati per la prossima volta",
+        "incomplete_address": "L'indirizzo selezionato è incompleto. %{update_address_link} o seleziona un indirizzo diverso.",
+        "invalid_address": "L'indirizzo selezionato non è valido. %{update_address_link} o seleziona un indirizzo diverso.",
+        "rollup_label": "Account",
+        "invalid_shipping_method_summary": "Per visualizzare le modalità di spedizione disponibili, seleziona un indirizzo di spedizione valido",
+        "saved_address_option_link": "Usa un indirizzo salvato",
+        "saved_address_modal_title": "Usa il mio indirizzo salvato",
+        "saved_address_option_description": {
+          "one": "Hai {{count}} indirizzo salvato.",
+          "other": "Hai {{count}} indirizzi salvati."
+        },
+        "rollup_accessibility_label": "Opzioni account"
+      },
+      "stock": {
+        "page_title": "Problemi di scorte",
+        "title": "Esaurito",
+        "items_unavailable_notice": "Alcuni articoli non sono più disponibili.",
+        "product_column_header": "Prodotti",
+        "quantity_column_header": "Quantità",
+        "price_column_header": "Prezzo",
+        "status_column_header": "Stato",
+        "removed_from_cart_notice": "Tolto dal carrello",
+        "sold_out_label": "Esaurito",
+        "reduced_label": "Ridotto",
+        "reduced_with_quantity_label": "Solo %{quantity_available} rimanenti",
+        "remove_from_cart_button_label": "Togli dal carrello",
+        "continue_shopping_button_label": "Continua",
+        "go_back_to_cart_button_label": "Torna al mio carrello",
+        "remove": "Rimuovi",
+        "empty_cart_label": "Il tuo carrello è vuoto",
+        "quantity_update": {
+          "page_title": "Aggiornamento quantità",
+          "title": "Aggiornamento quantità",
+          "description": "Le quantità disponibili per questi articoli sono cambiate e sono aggiornate nel tuo carrello."
+        },
+        "unpurchasable_product": {
+          "title": "Prodotto non acquistabile",
+          "header": "Alcuni articoli sono stati rimossi dal tuo carrello",
+          "message": "Questi articoli non sono disponibili per gli ordini B2B.",
+          "status_column_header": "Non disponibile"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Prodotto non acquistabile",
+          "header": "Alcuni articoli sono stati rimossi dal tuo carrello",
+          "message": "Questi articoli non sono disponibili.",
+          "status_column_header": "Non disponibile"
+        },
+        "unshippable_product": {
+          "title": "Nessuna consegna disponibile",
+          "header": {
+            "one": "Nessuna consegna disponibile per %{count} articolo",
+            "other": "Nessuna consegna disponibile per %{count} articoli"
+          },
+          "message": {
+            "one": "Questo articolo verrà rimosso dal tuo carrello in quanto non ci sono metodi di consegna disponibili per il tuo indirizzo.",
+            "other": "Questi articoli verranno rimossi dal tuo carrello in quanto non ci sono metodi di consegna disponibili per il tuo indirizzo."
+          },
+          "status_column_header": "Nessuna consegna"
+        },
+        "price_update": {
+          "title": "Aggiornamento di prezzo",
+          "description": "I prezzi per questi articoli sono cambiati e sono aggiornati nel tuo carrello.",
+          "updated_price": "Prezzo aggiornato"
+        },
+        "return_to_store_label": "Ritorna al negozio",
+        "item_label": {
+          "one": "{{count}} articolo",
+          "other": "{{count}} articoli"
+        },
+        "continue_cta_label": "Continua il check-out",
+        "out_of_stock": {
+          "description": "Questi articoli non sono più disponibili e saranno rimossi dal carrello.",
+          "items_unavailable": "Alcuni articoli non sono più disponibili e saranno rimossi dal carrello.",
+          "missing_items": {
+            "mixed_issues_title": "Alcuni articoli non sono più disponibili",
+            "title": {
+              "one": "{{count}} articolo non è più disponibile",
+              "other": "{{count}} articoli non sono più disponibili"
+            },
+            "some_available_notice": {
+              "one": "Gli articoli rimanenti sono ancora disponibili per il check-out. L’articolo non disponibile verrà rimosso dal carrello.",
+              "other": "Gli articoli rimanenti sono ancora disponibili per il check-out. Gli articoli non disponibili verranno rimossi dal carrello."
+            },
+            "none_available_notice": {
+              "one": "Questo articolo non è più disponibile ed è stato rimosso dal carrello.",
+              "other": "Questi articoli non sono più disponibili e sono stati rimossi dal carrello."
+            }
+          }
+        },
+        "unfulfillable_product": {
+          "title": "Consegna non disponibile",
+          "message": {
+            "one": "%{delivery_method} non è più disponibile per questo articolo.",
+            "other": "%{delivery_method} non è più disponibile per questi articoli."
+          },
+          "default_message": {
+            "one": "Il metodo di consegna scelto non è più disponibile per questo articolo.",
+            "other": "Il metodo di consegna scelto non è più disponibile per questi articoli."
+          }
+        },
+        "price_and_quantity_update": {
+          "title": "Aggiornamento di prezzi e quantità",
+          "description": "I prezzi e le quantità disponibili per questi articoli sono cambiati e sono aggiornati nel tuo carrello."
+        },
+        "out_of_stock_in_context_label": "Questo prodotto non è disponibile nel tuo paese/area geografica.",
+        "unavailable_at_pickup_location_label": "Questo articolo non è disponibile per il ritiro presso la sede selezionata."
+      },
+      "order_summary": {
+        "title": "Riepilogo ordine",
+        "order_name_label": "Ordine %{name}",
+        "shopping_cart_label": "Carrello",
+        "discount_title": "Sconto",
+        "discount_label": "Codice sconto",
+        "discount_placeholder": "Codice sconto",
+        "gift_card_title": "Buono regalo",
+        "gift_card_label": "Buono regalo",
+        "gift_card_placeholder": "Buono regalo",
+        "gift_card_and_discount_title": "Codice sconto o buono regalo",
+        "gift_card_and_discount_label": "Codice sconto o buono regalo",
+        "gift_card_and_discount_placeholder": "Codice sconto o buono regalo",
+        "add_discount_or_gift_card": "Aggiungi un codice sconto o un buono regalo",
+        "remove_gift_card_label": "Cancella buono regalo",
+        "remove_discount_label": "Rimuovi sconto",
+        "free_shipping_discount_label": "Spedizione gratuita",
+        "apply_discount_button_label": "Applica",
+        "applied_discount_message": "%{amount} è stato rimosso dal prezzo totale",
+        "discount_has_been_applied": "Lo sconto è stato applicato",
+        "discount_has_been_removed": "Lo sconto è stato rimosso",
+        "gift_card_has_been_applied": "Il buono regalo è stato applicato",
+        "gift_card_has_been_removed": "Il gift card è stato rimosso",
+        "discount_already_applied": "Su questo ordine è già stato applicato uno sconto, pertanto non è possibile aggiungerne un altro.",
+        "cart_does_not_meet_discount_requirements_notice": "Il codice sconto <strong style=\"text-transform:uppercase\">%{code}</strong> non è valido per gli articoli nel carrello",
+        "discount_requires_customer_notice": "Inserisci i tuoi dati di spedizione per applicare il codice di sconto <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "Il codice sconto <strong style=\"text-transform:uppercase\">%{code}</strong> non è disponibile per te in questo momento",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Il codice sconto <strong style=\"text-transform:uppercase\">%{code}</strong> non è disponibile per il tuo indirizzo di spedizione",
+        "customer_already_used_once_per_customer_discount_notice": "Il codice sconto <strong style=\"text-transform:uppercase\">%{code}</strong> è già stato usato",
+        "subtotal_label": "Subtotale",
+        "shipping_label": "Spedizione",
+        "tip_label": "Mancia",
+        "shipping_default_value": "Calcolata al passaggio successivo",
+        "shipping_pending_value": "—",
+        "shipping_pending_message": "Non ancora disponibile",
+        "shipping_policy_link": "Costi di spedizione",
+        "taxes_label": "Imposte",
+        "total_label": "Totale",
+        "total_outstanding_label": "Importo da pagare",
+        "partial_total_label": "Totale",
+        "free_total_label": "Gratis",
+        "free_shipping_total_label": "Gratis",
+        "paid_label": "Pagato",
+        "payment_due_label": "Pagamento dovuto",
+        "vat_label_html": "Incluse imposte per un ammontare di %{amount}",
+        "discount_and_gift_card_savings_notice": "Al netto di %{discount_amount} di sconto e %{gift_card_amount} di gift card",
+        "discount_savings_notice": "Al netto di %{discount_amount} di sconto",
+        "gift_card_savings_notice": "Al netto di %{gift_card_amount} di gift card",
+        "cost_table_title": "Riepilogo di spesa",
+        "description_label": "Descrizione",
+        "price_label": "Prezzo",
+        "quantity_label": "Quantità",
+        "product_change_label": "Cambia",
+        "product_image_label": "Immagine prodotto",
+        "scroll_order_summary": "Scorri per più articoli",
+        "expand_order_summary_short": "Mostra",
+        "collapse_order_summary_short": "Nascondi",
+        "total_updated_label": "Totale aggiornato:",
+        "order_total_updated_label": "Totale aggiornato",
+        "total_already_paid_label": "Pagato",
+        "unit_price": {
+          "accessible_separator": "per",
+          "content_html": "%{price}%{accessible_separator}%{per_unit}",
+          "per_item": {
+            "single": "%{price} per ciascun articolo",
+            "one": "%{price} per %{count} articolo"
+          }
+        }
       }
     }
   }
