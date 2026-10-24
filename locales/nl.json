@@ -3887,6 +3887,156 @@
         "selection_continue_button": "Doorgaan",
         "description_switch_later": "Je kunt later altijd nog wisselen",
         "title_choose_location": "Kies een locatie"
+      },
+      "purchase_order_number": {
+        "modal_po_number_input_label": "Bestelnummer",
+        "modal_po_number_input_max_length_error": "Bestelnummers zijn maximaal {{maxLength}} tekens lang.",
+        "save": "Opslaan",
+        "title": "Inkoopordernummer {{poNumber}}"
+      }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Er is een probleem opgetreden bij het verwijderen van dit adres. Probeer het opnieuw of ververs de pagina."
+      },
+      "addresses_loading_issue": {
+        "description": "Verbindingsfout. Controleer je internetverbinding en probeer het opnieuw."
+      },
+      "banner_title": {
+        "one": "Er is {{count}} fout",
+        "other": "Er zijn {{count}} fouten"
+      },
+      "failed_address_creation": {
+        "description": "Er is een probleem opgetreden bij het aanmaken van je adres. Ververs deze pagina of controleer je internetverbinding."
+      },
+      "failed_address_update": {
+        "description": "Er is een probleem opgetreden bij het bijwerken van je adres. Ververs deze pagina of controleer je internetverbinding."
+      },
+      "no_access_to_locations": {
+        "description": "Je hebt geen toegang tot locaties"
+      },
+      "not_found": {
+        "description": "Controleer de URL of probeer het over een paar minuten opnieuw.",
+        "title": "Er is een probleem opgetreden bij het laden van deze pagina"
+      },
+      "order_not_found": {
+        "description": "Deze bestelling bestaat niet of je bent niet gemachtigd om deze te bekijken.",
+        "title": "Bestelling niet gevonden"
+      },
+      "profile_update_error": {
+        "description": "Er is een probleem opgetreden bij het bijwerken van je profiel. Ververs deze pagina of controleer je internetverbinding."
+      },
+      "retry_action_label": "Opnieuw proberen",
+      "load_orders_error": {
+        "title": "Kan bestellingen niet laden",
+        "description": "Probeer het opnieuw of kom later terug.",
+        "retry_button": "Opnieuw proberen"
+      },
+      "load_paypal_error": {
+        "description": "Er is een probleem opgetreden bij het laden van PayPal. Probeer het opnieuw."
+      },
+      "load_extension_error": {
+        "title": "Fout",
+        "description": "Vernieuw deze pagina of probeer het over een paar minuten opnieuw.",
+        "refresh_button": "Pagina vernieuwen"
+      },
+      "already_upgraded": "Klantaccounts zijn al geüpgraded.",
+      "failed_to_upgrade": "Het upgraden van de klantaccountinstellingen is mislukt.",
+      "logout_everywhere": {
+        "description": "Er is iets misgegaan tijdens het uitloggen. Probeer het opnieuw."
+      },
+      "resend_link": {
+        "too_many_requests": "Te veel aanvragen. Probeer het later opnieuw.",
+        "generic": "Aanvraag mislukt"
+      },
+      "profile_name_update_error": {
+        "description": "Er is een probleem opgetreden bij het bijwerken van je naam. Ververs deze pagina of controleer je internetverbinding."
+      },
+      "load_address_form_error": {
+        "title": "Kan adresformulier niet laden",
+        "description": "Kon adresformulier niet laden.",
+        "refresh_button": "Pagina verversen"
+      },
+      "not_upgraded": "Klantaccounts zijn niet geüpgraded.",
+      "failed_to_revert": "Het herstellen van de klantaccountinstellingen is mislukt.",
+      "revert_window_expired": "De herstelperiode is verlopen."
+    },
+    "payment_methods": {
+      "title": "Betaalmethoden",
+      "add_payment_method_button": "Betaalmethode toevoegen",
+      "payment_details": {
+        "title": "Gegevens betaalmethode",
+        "payment_method_expiring_on": "Verloopt op {{expiryDate}}",
+        "preauthorized_payments": "Vooraf geautoriseerde betalingen",
+        "close_payment_modal": "Sluiten",
+        "close_payment_modal_accessibility_label": "Modaal Gegevens betaalmethode sluiten",
+        "payment_method_not_found_error": "Kan betaalmethode niet vinden",
+        "payment_details_loading": "Gegevens betaalmethode laden",
+        "pre_authorized_payments": "Vooraf geautoriseerde betalingen",
+        "total_amount_of_subscription_line_items_left": "en nog {{total}}",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} artikelen in totaal; {{totalItemsToDisplay}} artikelen worden weergegeven.",
+        "next_payment_due": "Volgende betaling verschuldigd op {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Bewerken",
+        "edit_payment_method_button_accessibility_label": "De betaalmethode die eindigt op {{lastDigits}} bewerken",
+        "credit_card_details_accessibility_label": "eindigend op {{lastDigits}}",
+        "billing_title": "Factuuradres",
+        "card_info_title": "Kaartgegevens",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "payment_method_expired_on": "Verlopen op {{expiryDate}}",
+        "loading_shop_pay": "Shop Pay laden",
+        "invalid_payment_method": "Ongeldige betaalmethode",
+        "invalid_payment_method_message": "Gebruik een nieuwe creditcard om komende bestellingen te blijven ontvangen.",
+        "replace_payment_method": "Betaalmethode vervangen",
+        "checkout_card_banner": "Je kunt deze betaalmethode alleen gebruiken voor vooraf geautoriseerde betalingen. Deze wordt niet weergegeven bij de checkout als je bent ingelogd bij deze winkel. ",
+        "default_checkbox": "Als standaard instellen",
+        "default_checkbox_accessibility_label": "Stel deze betaalmethode in als standaard",
+        "bank_account_details": "{{bankBrand}} •••• {{lastDigits}}",
+        "replace_payment_method_button": "Vervangen",
+        "bank_details": "{{bankBrand}} •••• {{lastDigits}}"
+      },
+      "delete_payment_method_button": "Verwijderen",
+      "delete_payment_method_button_accessibility_label": "{{paymentMethodName}} verwijderen",
+      "back_button": "Terug",
+      "back_button_accessibility_label": "Terug naar {{paymentMethodStepTitle}}",
+      "generic_card": "Kaart",
+      "payment_delete": {
+        "title": "Betaalmethode verwijderen",
+        "description_without_replacement": "Deze betaalmethode is niet meer beschikbaar voor toekomstige aankopen.",
+        "description_with_replacement": "Als je deze betaalmethode verwijdert, heeft dat gevolgen voor vooraf geautoriseerde betalingen. Je kunt deze ook vervangen door een andere betaalmethode om aankomende bestellingen te blijven ontvangen.",
+        "payment_method_selector_placeholder": "Selecteer een vervangende betaalmethode (optioneel)",
+        "replace_method_with_new_method_description": "Je {{currentPaymentMethodName}} wordt verwijderd en vervangen door je {{newPaymentMethodName}}.",
+        "error_when_deleting": "Onze excuses, er is iets misgegaan en we kunnen deze betaalmethode niet verwijderen. Probeer het later opnieuw of vernieuw de pagina.",
+        "delete_and_replace_button": "Verwijderen en vervangen",
+        "delete_and_replace_button_accessibility_label": "Verwijder {{currentPaymentMethodName}} en vervang deze door {{newPaymentMethodName}}.",
+        "deleted_successfully": "De betaalmethode is verwijderd.",
+        "payment_method_selector_no_alternative_payment": "Geen vervangende methode",
+        "loading_available_payment_methods_accessibility_label": "Beschikbare betaalmethoden laden",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Als je deze betaalmethode verwijdert, heeft dat gevolgen voor vooraf geautoriseerde betalingen. Openstaande bedragen van bestaande bestellingen nog steeds via deze betaalmethode in rekening gebracht, tenzij je een andere betaalmethode selecteert. Selecteer een andere betaalmethode om zonder onderbreking aankomende abonnementsbestellingen te blijven ontvangen.",
+          "with_pending_orders": "Het verwijderen van de betaalmethode zorgt ervoor dat deze wordt verwijderd uit je account en niet meer beschikbaar is voor toekomstige aankopen. Openstaande bedragen van bestaande bestellingen nog steeds via deze betaalmethode in rekening gebracht, tenzij je een andere betaalmethode selecteert.",
+          "with_subscriptions": "Als je deze betaalmethode verwijdert, heeft dat gevolgen voor vooraf geautoriseerde betalingen. Vervang deze door een andere betaalmethode om aankomende bestellingen te blijven ontvangen."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Als je deze betaalmethode verwijdert, heeft dat gevolgen voor vooraf geautoriseerde betalingen. Openstaande bedragen van bestaande bestellingen worden nog steeds via deze betaalmethode in rekening gebracht, maar je ontvangt geen aankomende abonnementsbestellingen. Voeg een andere betaalmethode toe om abonnementsbestellingen te blijven ontvangen.",
+          "with_pending_orders": "Het verwijderen van de betaalmethode zorgt ervoor dat deze wordt verwijderd van je account en niet meer beschikbaar is voor toekomstige aankopen. Openstaande bedragen van bestaande bestellingen worden nog steeds via deze betaalmethode in rekening gebracht.",
+          "with_subscriptions": "Als je deze betaalmethode verwijdert, heeft dat gevolgen voor vooraf geautoriseerde betalingen. Voeg een andere betaalmethode toe om aankomende bestellingen te blijven ontvangen."
+        }
+      },
+      "edit_payment_method": {
+        "title": "Betaalmethode wijzigen",
+        "save_payment_method_button": "Opslaan",
+        "cancel_edit_payment_method_button": "Annuleren",
+        "payment_method_updated_toast": "Betaalmethode bijgewerkt",
+        "billing_address": "Factuuradres",
+        "billing_address_add_new": "Nieuwe toevoegen",
+        "billing_address_choose_from_list": "Kiezen uit lijst",
+        "future_purchases_notice": "Deze betaalmethode wordt voor toekomstige aankopen opgeslagen.",
+        "generic_error": "Er is een probleem opgetreden met het bijwerken. Probeer het opnieuw."
+      },
+      "card_fields": {
+        "card_number_label": "Kaartnummer",
+        "card_number_placeholder": "Kaartnummer",
+        "name_on_card_label": "Naam op kaart"
       }
     }
   }
