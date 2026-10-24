@@ -83,6 +83,13 @@ def step_defs():
 
 # 3. Files not used as product media (theme images, banners, journal images), same filename so shopify://shop_images/... resolves
 def basename(url): return os.path.basename((url or '').split('?')[0])
+def original_urls(old_ids):
+    """Fresh (signed, short-lived) URLs of the old store's original files; image.url on the CDN is a re-encoded copy."""
+    out = {}
+    for i in range(0, len(old_ids), 50):
+        for n in gql('query($ids:[ID!]!){nodes(ids:$ids){id ... on MediaImage{originalSource{url}}}}', {'ids': old_ids[i:i + 50]}, target='old')['data']['nodes']:
+            if n and n.get('originalSource'): out[n['id']] = n['originalSource']['url']
+    return out
 def step_files():
     product_media = {basename(m['image']['url']) for p in load('products') for m in p['media']['nodes'] if m.get('image')}
     todo = []
@@ -95,7 +102,8 @@ def step_files():
         todo.append((f, url, name))
     for i in range(0, len(todo), 20):
         batch = todo[i:i + 20]
-        inp = [{'originalSource': url, 'filename': name, 'alt': f.get('alt') or '', 'contentType': 'IMAGE' if f.get('image') else 'FILE', 'duplicateResolutionMode': 'RAISE_ERROR'} for f, url, name in batch]
+        orig = original_urls([f['id'] for f, _, _ in batch])
+        inp = [{'originalSource': orig.get(f['id'], url), 'filename': name, 'alt': f.get('alt') or '', 'contentType': 'IMAGE' if f.get('image') else 'FILE', 'duplicateResolutionMode': 'RAISE_ERROR'} for f, url, name in batch]
         r = mutate('files', f'batch {i // 20 + 1} ({len(batch)})', 'mutation($f:[FileCreateInput!]!){fileCreate(files:$f){files{id} userErrors{field message}}}', {'f': inp}, 'fileCreate')
         if r:
             for (f, url, name), nf in zip(batch, r['files']): remember('files', f['id'], nf['id'], name)
@@ -114,13 +122,16 @@ def step_products():
     for p in load('products'):
         if mapped(p['id']): continue
         v = p['variants']['nodes'][0]; inv = v['inventoryItem']
+        old_media = gql('query($id:ID!){product(id:$id){media(first:50){nodes{id}}}}', {'id': p['id']}, target='old')['data']['product']['media']['nodes']
+        orig = original_urls([m['id'] for m in old_media])
+        sources = [orig.get(o['id'], m['image']['url']) for o, m in zip(old_media, [m for m in p['media']['nodes'] if m.get('image')])]
         variant = {'optionValues': [{'optionName': o['name'], 'name': o['value']} for o in v['selectedOptions']], 'price': v['price'], 'compareAtPrice': v['compareAtPrice'], 'sku': v['sku'], 'barcode': v['barcode'],
                    'taxable': v['taxable'], 'inventoryPolicy': v['inventoryPolicy'], 'inventoryItem': {'tracked': inv['tracked'], 'requiresShipping': inv['requiresShipping'], 'measurement': inv['measurement']},
                    'inventoryQuantities': [{'locationId': loc, 'name': 'available', 'quantity': v['inventoryQuantity'] or 0}]}
         inp = {'handle': p['handle'], 'title': p['title'], 'descriptionHtml': p['descriptionHtml'], 'vendor': p['vendor'], 'productType': p['productType'], 'tags': p['tags'], 'status': p['status'],
                'templateSuffix': p['templateSuffix'], 'seo': p['seo'], 'productOptions': [{'name': o['name'], 'values': [{'name': x} for x in o['values']]} for o in p['options']], 'variants': [variant],
                'metafields': [{'namespace': m['namespace'], 'key': m['key'], 'type': m['type'], 'value': m['value']} for m in seo_metafields(p['metafields']['nodes'])],
-               'files': [{'originalSource': m['image']['url'], 'filename': basename(m['image']['url']), 'alt': m['alt'] or '', 'contentType': 'IMAGE'} for m in p['media']['nodes'] if m.get('image')]}
+               'files': [{'originalSource': src, 'filename': basename(m['image']['url']), 'alt': m['alt'] or '', 'contentType': 'IMAGE'} for src, m in zip(sources, [m for m in p['media']['nodes'] if m.get('image')])]}
         r = mutate('products', p['handle'], 'mutation($p:ProductSetInput!,$i:ProductSetIdentifiers){productSet(synchronous:true,input:$p,identifier:$i){product{id variants(first:1){nodes{id}}} userErrors{field message code}}}',
                    {'p': inp, 'i': {'handle': p['handle']}}, 'productSet')
         if not r: continue
@@ -142,8 +153,8 @@ def map_product_media():
         for o, n in zip(old, nn): IDMAP[o['id']] = n['id']
         IDMAP['media-done:' + p['id']] = len(nn); save_map(); log('products', 'media', p['handle'], f'{len(nn)}/{len(old)}')
 
-# 4b. Originals: image.url on the CDN is a re-encoded copy, so swap every image for the old store's original
-# file (same media id, so alt texts, order and translations stay). Files that already match in size are skipped.
+# 4b. Originals: safety net (and the repair for the first import, which used the re-encoded CDN copy). Swaps any
+# image whose size differs for the old store's original file; same media id, so alt texts, order and translations stay.
 Q_ORIG = 'query($ids:[ID!]!){nodes(ids:$ids){id ... on MediaImage{originalSource{url fileSize} image{url}}}}'
 def step_originals(only=None):
     pairs = [(o, n) for o, n in IDMAP.items() if o.startswith('gid://shopify/MediaImage/') and n and (not only or o in only)]
