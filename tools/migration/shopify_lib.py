@@ -2,12 +2,13 @@
 """Shared helpers: GraphQL call + translation registration."""
 import json, os, subprocess, sys
 SCRATCH = os.path.dirname(os.path.abspath(__file__))
-def gql(query, variables=None):
+def gql(query, variables=None, target=None):
+    """target: None uses $SHOPIFY_TARGET (default old store); 'old' or 'new' overrides it for this call."""
     import tempfile
     fd, qf = tempfile.mkstemp(prefix=".q_", suffix=".graphql")
     with os.fdopen(fd, "w") as fh: fh.write(query)
     try:
-        out = subprocess.run([os.path.join(os.path.dirname(os.path.abspath(__file__)), "shopify_query.sh"), qf, json.dumps(variables or {})], capture_output=True, text=True)
+        out = subprocess.run([os.path.join(os.path.dirname(os.path.abspath(__file__)), "shopify_query.sh"), qf, json.dumps(variables or {})], capture_output=True, text=True, env=dict(os.environ, **({"SHOPIFY_TARGET": target} if target else {})))
     finally:
         os.unlink(qf)
     if out.returncode != 0: print(out.stderr); sys.exit(1)
