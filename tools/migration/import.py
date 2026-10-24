@@ -56,6 +56,12 @@ def step_locales():
             mutate('locales', loc, 'mutation($l:String!){shopLocaleEnable(locale:$l){shopLocale{locale} userErrors{field message}}}', {'l': loc}, 'shopLocaleEnable') and log('locales', 'enabled', loc, 'ok')
         if not have.get(loc, {}).get('published') and not have.get(loc, {}).get('primary'):
             mutate('locales', loc, 'mutation($l:String!){shopLocaleUpdate(locale:$l,shopLocale:{published:true}){shopLocale{locale published} userErrors{field message}}}', {'l': loc}, 'shopLocaleUpdate') and log('locales', 'published', loc, 'ok')
+    # A published language is only reachable (/nl, /de, ...) once it is an alternate locale of the web presence.
+    for wp in gql('{webPresences(first:10){nodes{id alternateLocales{locale}}}}')['data']['webPresences']['nodes']:
+        alt = [l['locale'] for l in wp['alternateLocales']]
+        missing = [l for l in LOCALES if l not in alt]
+        if missing and mutate('locales', wp['id'], 'mutation($id:ID!,$l:[String!]){webPresenceUpdate(id:$id,input:{alternateLocales:$l}){webPresence{id} userErrors{field message}}}', {'id': wp['id'], 'l': alt + missing}, 'webPresenceUpdate'):
+            log('locales', 'web presence', wp['id'], f'added {missing}')
     primary = next(l for l, v in have.items() if v['primary'])
     if primary != 'en': print(f'  NOTE: primary language is {primary!r}; the owner must make English the default (Settings > Languages) before the translations step.')
 
