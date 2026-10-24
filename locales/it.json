@@ -3225,6 +3225,158 @@
           "refunded": "Rimborsato"
         }
       }
+    },
+    "email_marketing": {
+      "open_tracking": {
+        "opt_out": {
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Acconsenti esplicitamente</a> al monitoraggio dell'apertura delle email.",
+          "preview_bar": "Stai visualizzando in anteprima ciò che i clienti visualizzeranno quando rifiuteranno esplicitamente il monitoraggio dell'apertura delle email."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Non monitoriamo più l'apertura delle email.</b>",
+          "privacy_policy": "Dopo aver inviato questa email, abbiamo aggiornato la nostra informativa sulla privacy e non monitoriamo più l'apertura delle email."
+        },
+        "track": {
+          "status_html": "<b>Il monitoraggio dell'apertura delle email viene riportato.</b>",
+          "visibility": "Vedremo se hai aperto l'email solo nell'ambito del tasso totale di apertura delle email."
+        },
+        "updated_policy": {
+          "status_html": "<b>Il monitoraggio dell'apertura delle email viene riportato.</b>",
+          "visibility": "Abbiamo aggiornato la nostra informativa e ora monitoriamo l'apertura delle email. I tassi di apertura delle email verranno riportati in modo anonimo. Vedremo se hai aperto un'email solo nell'ambito del tasso totale di apertura delle email.",
+          "opt_out_html": "Se non vuoi condividere questa informazione, puoi <a style='text-decoration:underline;' href='%{link}'>annullare l'iscrizione</a>."
+        }
+      },
+      "sms_unsubscribe_confirm": {
+        "message": "Confermi di voler annullare l'iscrizione a SMS marketing?",
+        "button": "Annulla iscrizione"
+      }
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Di solito pronto in 1 ora",
+        "two_hours": "Di solito pronto in 2 ore",
+        "four_hours": "Di solito pronto in 4 ore",
+        "twenty_four_hours": "Di solito pronto in 24 ore",
+        "two_to_four_days": "Di solito pronto in 2-4 giorni",
+        "five_or_more_days": "Di solito pronto in 5 o più giorni",
+        "zero_to_two_hours": "Di solito pronto in 2 ore",
+        "two_to_four_hours": "Di solito pronto in 4 ore",
+        "immediately": "Pronto adesso per il ritiro",
+        "next_day": "Pronto per il ritiro il giorno successivo"
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "Disponibile",
+          "out_of_stock": "Esaurito"
+        }
+      },
+      "boolean": {
+        "true_label": "Sì",
+        "false_label": "No"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "Pertinenza",
+        "price_ascending": "Prezzo crescente",
+        "price_descending": "Prezzo decrescente"
+      },
+      "error": "Si è verificato un problema durante il caricamento dei risultati di ricerca. Aggiorna la pagina o riprova più tardi."
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Questo articolo è un acquisto ricorrente o dilazionato. Continuando, acconsento all'%{cancellationPolicyLink} e autorizzo all'addebito del mio metodo di pagamento ai prezzi, alla frequenza e alle date elencati su questa pagina fino all'evasione del mio ordine o al mio annullamento, se consentito.",
+      "buyer_consent_cart": "Uno o più articoli nel carrello costituiscono un acquisto ricorrente o dilazionato. Continuando, acconsento all'%{cancellationPolicyLink} e autorizzo all'addebito del mio metodo di pagamento ai prezzi, alla frequenza e alle date elencati su questa pagina fino all'evasione del mio ordine o al mio annullamento, se consentito.",
+      "cancellation_policy": "informativa sulla cancellazione"
+    },
+    "managed_markets": {
+      "buyer_consent": "Effettuando l’ordine, accetti di acquistare da Global-e in qualità di venditore ufficiale, nel rispetto dei %{termsAndConditionsLink} e dell’%{privacyPolicyLink} di Global-e, e di condividere le tue informazioni con %{shopName}.",
+      "terms_and_conditions": "Termini e condizioni",
+      "privacy_policy": "Informativa sulla privacy"
+    }
+  },
+  "customer_accounts": {
+    "callback": {
+      "try_again": "Riprova"
+    },
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Nascondi menu account",
+        "show_accessibility_label": "Mostra menu account",
+        "nav_accessibility_label": "Navigazione nell'account",
+        "open_menu_accessibility_label": "Apri navigazione nell'account",
+        "close_menu_accessibility_label": "Chiudi navigazione nell'account",
+        "loading_message": "Caricamento della navigazione nell'account",
+        "label": "Account"
+      },
+      "action_menu_accessibility_label": "Altre azioni",
+      "close_menu_accessibility_label": "Chiudi menu principale",
+      "contact_email_subject": "Contatto del negozio online {{shopName}}",
+      "contact_link": "Recapiti",
+      "delete_confirmation": {
+        "cancel": "Annulla",
+        "delete": "Elimina"
+      },
+      "dismiss_toast": "Ignora",
+      "document_title": "{{sectionName}} - {{shopName}} - Account",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "loading_message": "Caricamento in corso",
+      "log_out_link": "Esci",
+      "logout_overlay_label": "Disconnessione in corso...",
+      "nav_label_accessibility_label": "Menu principale",
+      "navigation_accessibility_message": "Sei nella sezione {{sectionName}}",
+      "open_menu_accessibility_label": "Apri menu principale",
+      "shop_logo_accessibility_label": "Logo di {{shopName}}",
+      "settings_link": "Impostazioni",
+      "country_switcher_toast_message": "Nuovo paese: {{countryName}}",
+      "switch_country": "Cambia paese",
+      "search": "Cerca",
+      "location_switcher_toast_message": "Sede cambiata in {{locationName}}",
+      "switch_location": "Cambia sede",
+      "view_details": "Visualizza dettagli",
+      "company_location": "Sede aziendale",
+      "no_countries_found": "Nessun paese trovato",
+      "no_locations_found": "Nessuna sede trovata",
+      "try_new_search": "Prova una nuova ricerca",
+      "skip_to_content": "Passa al contenuto",
+      "loading_policy_content_accessibility_label": "Caricamento contenuto della policy",
+      "policy_load_error": "Impossibile caricare {{policyName}}",
+      "policy_try_again": "Riprova",
+      "loading_section_accessibility_label": "Caricamento di {{sectionName}}",
+      "back_button_accessibility_label": "Indietro",
+      "go_to_store_link": "Vai al negozio",
+      "orders_link_label": "Ordini",
+      "subscriptions_link_label": "Abbonamenti",
+      "store_credit_accessibility_label": "{{formattedBalance}} di credito in negozio",
+      "store_credit_balances_list_accessibility_label": "Saldi del credito in negozio",
+      "store_credit_multi_currency_accessibility_label": {
+        "one": "{{formattedBalance}} e credito in negozio in {{count}} altra valuta",
+        "other": "{{formattedBalance}} e credito in negozio in altre {{count}} valute"
+      }
+    },
+    "account_information": {
+      "loading_accessibility_message": "Caricamento delle informazioni sull'account in corso",
+      "loading_finished_accessibility_message": "Informazioni sull'account caricate",
+      "profile_card": {
+        "cancel": "Annulla",
+        "cancel_accessibility_label": "Annulla modifica profilo",
+        "edit": "Modifica",
+        "edit_accessibility_label": "Modifica profilo",
+        "email_help_text": "Impossibile modificare l'email",
+        "first_name": "Nome",
+        "last_name": "Cognome",
+        "phone_number_help_text": "Impossibile modificare il numero di telefono",
+        "save": "Salva",
+        "save_accessibility_label": "Salva profilo",
+        "title": "Profilo",
+        "no_name_provided_accessibility_label": "Nessun nome aggiunto",
+        "email": "Email",
+        "errors": {
+          "name_too_long": "Il campo {{fieldName}} è troppo lungo (massimo 255 caratteri)",
+          "name_cannot_contain_url": "Il campo {{fieldName}} non può contenere URL"
+        }
+      }
     }
   }
 }
