@@ -2362,6 +2362,134 @@
         "order_deposit_due_now": "{{depositAmount}} in scadenza oggi. Il pagamento del saldo è soggetto ai termini di {{translatedName}} e sarà dovuto il {{dueDate}}.",
         "order_deposit_due_on_fulfillment": "{{depositAmount}} in scadenza oggi. Il pagamento del saldo sarà dovuto dopo l'evasione dell'ordine.",
         "order_due_on_receipt_choose_later": "Il pagamento sarà dovuto alla ricezione."
+      },
+      "thank_you": {
+        "order_status_confirmed_order_with_email_pick_up": "Riceverai un'email quando il tuo ordine è pronto per il ritiro.",
+        "order_status_confirmed_order_with_phone_pick_up": "Riceverai un messaggio quando il tuo ordine è pronto per il ritiro.",
+        "order_status_confirmed_order_with_email_and_phone_pick_up": "Riceverai un'email e un messaggio quando il tuo ordine è pronto per il ritiro.",
+        "pick_up_in_store_marker": {
+          "current": "Posizione attuale della consegna",
+          "shipping": "Sede di ritiro"
+        },
+        "thank_you_confirmed_order_with_email_pick_up": "Riceverai un'email quando il tuo ordine è pronto per il ritiro.",
+        "thank_you_confirmed_order_with_phone_pick_up": "Riceverai un messaggio quando il tuo ordine è pronto per il ritiro.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "Riceverai un'email quando il tuo ordine è pronto per il ritiro.",
+        "ready_for_pickup_title": "Il tuo ordine è pronto per il ritiro",
+        "ready_for_pickup_description": "Il tuo ordine è pronto per il ritiro. Porta la conferma dell'ordine quando vieni a ritirarlo.",
+        "picked_up_title": "Il tuo ordine è stato ritirato",
+        "picked_up_description_html": "Il tuo ordine è stato ritirato presso %{location_name} il %{date}.",
+        "other_options": "Altre opzioni",
+        "ready_for_delivery_title": "Il tuo ordine è pronto per la consegna",
+        "ready_for_delivery_description": "Abbiamo preparato il tuo ordine.",
+        "shop_phone_description": "Riceverai un messaggio con un link all'app Shop per aiutarti a monitorare l'ordine.",
+        "order_status_confirmed_order_local": "Stiamo preparando l'ordine per la consegna.",
+        "delivery_information_label": "Informazioni sulla consegna:",
+        "gift_card_sent_confirmation": "Buoni regalo inviati",
+        "out_for_delivery_local_title": "Il tuo ordine è in fase di consegna",
+        "out_for_delivery_local_description_html": "Il tuo ordine arriverà presto.",
+        "delivered_local_title": "Il tuo ordine è stato consegnato",
+        "delivered_local_description_html": "Non hai ricevuto l'ordine? %{let_us_know}.",
+        "let_us_know": "Facci sapere",
+        "qr_code": {
+          "title": "Monitora sul tuo telefono",
+          "send_link_to_phone": "Oppure invia un link al telefono"
+        },
+        "gift_card_confirmation_by_text": "Se non l'hai ricevuto, invia nuovamente l'SMS o contattaci.",
+        "gift_card_confirmation_by_email": "Se non l'hai ricevuto, invia nuovamente l'email o contattaci.",
+        "gift_card_title": "Buoni regalo",
+        "resend_gift_cards": "Invia nuovamente buoni regalo",
+        "attempted_delivery_local_title": "Mancata consegna",
+        "attempted_delivery_local_description_html": "Non siamo riusciti a consegnare il tuo ordine. Per pianificare un'altra consegna, %{contact_us}.",
+        "thank_you_title_payment": "Il pagamento è confermato",
+        "thank_you_confirmed_order_with_email_payment": "Hai effettuato un pagamento sull'ordine del %{date}.",
+        "thank_you_confirmed_order_with_phone_payment": "Hai effettuato un pagamento sull'ordine del %{date}.",
+        "thank_you_confirmed_order_with_email_and_phone_payment": "Hai effettuato un pagamento sull'ordine del %{date}.",
+        "order_status_confirmed_order_with_email_payment": "Hai effettuato un pagamento sull'ordine del %{date}.",
+        "order_status_confirmed_order_with_phone_payment": "Hai effettuato un pagamento sull'ordine del %{date}.",
+        "order_status_confirmed_order_with_email_and_phone_payment": "Hai effettuato un pagamento sull'ordine del %{date}.",
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "Scansiona con il telefono"
+          },
+          "sms": {
+            "title": "Oppure invia un link al telefono"
+          }
+        },
+        "estimated_delivery": "Attuale data di consegna prevista: ",
+        "view_business_customer_account": "Visualizza account",
+        "company_location_title": "Sede",
+        "thank_you_title_review": "Il tuo ordine è stato sottoposto a revisione",
+        "thank_you_confirmed_order_with_draft": "Ti faremo sapere se avremo bisogno di maggiori informazioni o ti informeremo quando il tuo ordine verrà confermato.",
+        "breadcrumbs_submitted": "Inviato",
+        "breadcrumbs_in_review": "In fase di revisione",
+        "breadcrumbs_confirmed": "Confermato",
+        "missing_shipping_address_banner": {
+          "title": "Indirizzo di spedizione mancante nell'ordine",
+          "text_html": "%{contact_us} per aggiungere il tuo indirizzo",
+          "contact_us": "Contattaci"
+        },
+        "order_status_confirmed_with_installments_payment_return": "Rivolgiti nuovamente alla persona addetta alle vendite.",
+        "order_status_confirmed_with_installments_payment_confirm": "A breve riceverai un'email di conferma con il tuo numero d'ordine e i dettagli del tuo piano rateale.",
+        "first_payment_complete": "Primo pagamento completato",
+        "in_store_purchase": "Acquisto in negozio",
+        "choose_payment_method_later": "Scegli metodo di pagamento più tardi",
+        "purchase_order_number_title": "Numero d'ordine dell'acquisto #%{purchase_order_number}",
+        "thank_you_ready_for_picked_up": "Il tuo ordine è stato ritirato presso %{address}.",
+        "ready_for_delivery": "Pronto per la consegna",
+        "order_updates_subscribe_to_email_notifications_failed": "Non possiamo memorizzare questo indirizzo email per gli aggiornamenti. Prova di nuovo o utilizza un altro indirizzo email.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "L'indirizzo email inserito è già esistente.",
+        "subscriptions_management": {
+          "title": "Abbonamento",
+          "description": "Continua sul tuo account per visualizzare e gestire i tuoi abbonamenti.",
+          "button_label": "Gestisci abbonamento"
+        },
+        "manage_order_label": "Gestisci il tuo ordine",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Riceverai un SMS con il buono regalo tra qualche minuto.",
+          "other": "Riceverai un SMS con i buoni regalo tra qualche minuto."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Riceverai un'email con il buono regalo tra qualche minuto.",
+          "other": "Riceverai un'email con i buoni regalo tra qualche minuto."
+        },
+        "gift_card_email_title": {
+          "one": "Buono regalo inviato via email",
+          "other": "Buoni regalo inviati via email"
+        },
+        "gift_card_text_title": {
+          "one": "Buono regalo inviato via SMS",
+          "other": "Buoni regalo inviati via SMS"
+        },
+        "resend_gift_cards_by_email": "Ripeti invio email",
+        "resend_gift_cards_by_text": "Ripeti invio messaggio SMS",
+        "gift_card_resent_confirmation": {
+          "one": "Il buono regalo è stato inviato nuovamente.",
+          "other": "I buoni regalo sono stati inviati nuovamente."
+        },
+        "gift_card_resend_failure": {
+          "one": "Si è verificato un problema con la ripetizione dell'invio del buono regalo. Riprova o contattaci.",
+          "other": "Si è verificato un problema con la ripetizione dell'invio dei buoni regalo. Riprova o contattaci."
+        },
+        "failed_pending_payment_page_title": "Si è verificato un problema con il tuo pagamento",
+        "thank_you_title_payments_app_pending_default": "Il tuo pagamento è in fase di elaborazione",
+        "thank_you_title_payments_app_pending_buyer_action_required": "Il tuo ordine è stato ricevuto",
+        "thank_you_title_payments_app_failed_pending_payment": "Impossibile elaborare il pagamento",
+        "thank_you_payments_app_failed_pending_payment": "L'ordine non ti è stato addebitato. Torna al carrello per controllare l'ordine e riprovare il pagamento.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "Riceverai un'email di conferma a breve. Monitora l'ordine con l'app Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email": "Riceverai un'email di conferma a breve. Monitora l'ordine con l'app Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_phone": "Riceverai un messaggio di conferma a breve. Monitora l'ordine con l'app Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "Una volta completato il pagamento riceverai un'email di conferma. Monitora l'ordine con l'app Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email": "Una volta completato il pagamento riceverai un'email di conferma. Monitora l'ordine con l'app Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone": "Una volta completato il pagamento riceverai un messaggio di conferma. Monitora l'ordine con l'app Shop.",
+        "order_status_payments_app_failed_pending_payment": "L'ordine non ti è stato addebitato. Torna al carrello per controllare l'ordine e riprovare il pagamento.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "Una volta completato il pagamento riceverai un'email di conferma. Monitora l'ordine con l'app Shop.",
+        "thank_you_confirmed_order_with_missing_payment": "Contattaci via email o telefono per ricevere la conferma dell'ordine.",
+        "thank_you_confirmed_order_with_missing_pick_up": "Contattaci via email o telefono per ricevere la conferma dell'ordine.",
+        "thank_you_confirmed_order_with_draft_payment": "Ti faremo sapere se avremo bisogno di maggiori informazioni o ti informeremo quando il tuo ordine verrà confermato.",
+        "thank_you_confirmed_order_with_draft_pick_up": "Ti faremo sapere se avremo bisogno di maggiori informazioni o ti informeremo quando il tuo ordine verrà confermato.",
+        "thank_you_payments_app_failed_pending_payment_payment": "L'ordine non ti è stato addebitato. Torna al carrello per controllare l'ordine e riprovare il pagamento.",
+        "thank_you_payments_app_failed_pending_payment_pick_up": "L'ordine non ti è stato addebitato. Torna al carrello per controllare l'ordine e riprovare il pagamento.",
+        "order_status_payments_app_pending_payment_description_default_with_missing": "Contattaci via email o telefono per ricevere la conferma dell'ordine."
       }
     }
   }
