@@ -2893,6 +2893,180 @@
             "contact": "Contact"
           }
         }
+      },
+      "local_pickup": {
+        "stock_details": {
+          "remove_items": {
+            "one": "Wordt uit je bestelling verwijderd",
+            "other": "Worden uit je bestelling verwijderd"
+          }
+        },
+        "unavailable_item_count": {
+          "one": "%{count} artikel niet beschikbaar",
+          "other": "%{count} artikelen niet beschikbaar"
+        },
+        "ship_separately_notice": {
+          "one": "%{count} artikel wordt apart verzonden",
+          "other": "%{count} artikelen worden apart verzonden"
+        },
+        "stock_details_modal": {
+          "unavailable_title": "Niet beschikbaar voor afhalen",
+          "location": "Bij %{location}",
+          "ship_separately": "Apart verzenden",
+          "choose_different_location": "Andere locatie kiezen",
+          "can_ship_description": {
+            "one": "Dit artikel is niet op voorraad bij je geselecteerde afhaallocatie.",
+            "other": "Deze artikelen zijn niet op voorraad bij je geselecteerde afhaallocatie."
+          },
+          "cannot_ship_description": {
+            "one": "Dit artikel is niet op voorraad bij je geselecteerde afhaallocatie en kan niet worden verzonden.",
+            "other": "Deze artikelen zijn niet op voorraad bij je geselecteerde afhaallocatie en kunnen niet worden verzonden."
+          }
+        },
+        "stock_details_banner": {
+          "closest_location": "De dichtstbijzijnde afhaallocatie met alle artikelen op voorraad is op %{distance} afstand",
+          "change_location_or_ship_separately": "%{change_location_link} of %{ship_separately_link}",
+          "change_location_or_remove_items": "%{change_location_link} of %{remove_items_link}",
+          "heading": {
+            "one": "%{count} artikel is niet beschikbaar om af te halen bij %{location}",
+            "other": "%{count} artikelen zijn niet beschikbaar om af te halen bij %{location}"
+          },
+          "ship_separately": {
+            "one": "het apart verzenden",
+            "other": "ze apart verzenden"
+          }
+        }
+      },
+      "split_delivery": {
+        "pickup_all_items": "Alle artikelen afhalen",
+        "items_for_pickup": "Artikelen om af te halen",
+        "delivery_method": "Gesplitste bezorgmethode",
+        "delivery_method_menu": "Menu gesplitste bezorgmethode",
+        "inventory_issue_banner": {
+          "remove_items_or_ship": "%{ship_separately_link} of %{remove_items_link}",
+          "remove_items_or_pickup": "%{pickup_in_store_link} of %{remove_items_link}",
+          "heading": {
+            "cannot_be_picked_up": {
+              "one": "%{count} artikel kan niet worden opgehaald",
+              "other": "%{count} artikelen kunnen niet worden opgehaald"
+            },
+            "cannot_be_shipped": {
+              "one": "%{count} artikel kan niet worden verzonden",
+              "other": "%{count} artikelen kunnen niet worden verzonden"
+            }
+          },
+          "remove_item": {
+            "one": "artikel verwijderen",
+            "other": "artikelen verwijderen"
+          },
+          "ship_separately": {
+            "one": "Apart verzenden",
+            "other": "Apart verzenden"
+          },
+          "pick_them_up_in_store": {
+            "one": "In de winkel ophalen",
+            "other": "In de winkel ophalen"
+          },
+          "remove_item_only": {
+            "one": "Artikel verwijderen",
+            "other": "Artikelen verwijderen"
+          },
+          "merchandise_line_with_quantity": "%{title} (×%{quantity})"
+        },
+        "pickup_and_ship": "Ophalen en verzenden",
+        "ship_all_items": "Alle artikelen verzenden",
+        "items_for_shipping": "Artikelen voor verzending",
+        "separate_pickup_email_notice": "Je ontvangt een aparte e-mail wanneer je bestelling klaar is om af te halen.",
+        "pickup_items_count": {
+          "one": "%{count} artikel ophalen",
+          "other": "%{count} artikelen ophalen"
+        },
+        "ship_items_count": {
+          "one": "%{count} artikel verzenden",
+          "other": "%{count} artikelen verzenden"
+        },
+        "items_moved_to_shipping_toast": "Artikelen die niet kunnen worden opgehaald, zijn verplaatst naar verzending",
+        "cross_border": {
+          "modal": {
+            "heading": "Land wijzigen?",
+            "content": "Je afhaal- en verzendlocaties moeten zich in hetzelfde land bevinden. Als je het land wijzigt, worden alle artikelen opnieuw ingesteld op verzending.",
+            "change_country": "Land wijzigen",
+            "country_changed_heading": "Land gewijzigd"
+          },
+          "banner": "Je bezorgmethode is bijgewerkt"
+        },
+        "all_items": "Alle artikelen",
+        "items_count": {
+          "one": "%{count} artikel",
+          "other": "%{count} artikelen"
+        },
+        "accessibility": {
+          "status": {
+            "ship_separately": "%{items} worden apart verzonden.",
+            "pickup_in_store": "%{items} worden in de winkel opgehaald.",
+            "remove_items": "%{items} verwijderd uit de winkelwagen."
+          }
+        }
+      },
+      "captcha": {
+        "title": "Doorloop de CAPTCHA om door te gaan",
+        "errors": {
+          "not_solved": "Doorloop de CAPTCHA om door te gaan"
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Je bestelling kon niet worden verwerkt omdat je kortingscode niet meer beschikbaar is. Controleer het totaal van je bestelling en probeer het opnieuw."
+      },
+      "wallets": {
+        "return_to_store": "Terug naar winkel",
+        "redirect_hint": "Je wordt gevraagd om in te loggen bij {{walletName}}.",
+        "logged_in": "Verbonden met {{email}}",
+        "shipping_line_label": "Verzending",
+        "connect_shipping_methods": "{{method1}} en {{method2}}",
+        "payment_in_progress_title": "Betaling in uitvoering",
+        "payment_in_progress_body": "De betaling wordt verwerkt. De bestelling is bijna voltooid.",
+        "continue_with": "Doorgaan met {{walletName}}",
+        "call_to_action": "Betaal met {{walletName}}",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} is niet beschikbaar",
+            "description": "{{walletName}} was niet beschikbaar. Gebruik een andere betaalmethode of probeer het later opnieuw.",
+            "instructions": "Er is een probleem opgetreden met {{walletName}}. Ga terug naar de winkel en probeer het opnieuw of reken af op een andere manier.",
+            "unavailable_for_country": "{{walletName}} is niet beschikbaar in {{countryName}}. Selecteer een andere betaalmethode om je aankoop te voltooien"
+          },
+          "generic": "Er is een probleem opgetreden met {{walletName}}. Probeer het opnieuw of gebruik een andere betaalmethode.",
+          "terminal": "Er is een probleem opgetreden met {{walletName}}. Gebruik een andere betaalmethode.",
+          "detour": {
+            "stock_problems": "Sommige artikelen zijn niet meer beschikbaar. Sluit {{walletName}} en probeer het opnieuw.",
+            "price_change": "De prijzen van sommige artikelen zijn gewijzigd. Sluit {{walletName}} om je bestelling te controleren en probeer het opnieuw.",
+            "queue": "Je staat in de rij voor de checkout. Sluit {{walletName}} om door te gaan.",
+            "currency_change": "Je kunt geen ander adres gebruiken met {{walletName}}. Gebruik het oorspronkelijke adres of probeer een andere betaalmethode.",
+            "currency_change_with_country": "{{walletName}} kan niet worden gebruikt omdat de valuta is gewijzigd. Gebruik een adres in {{countryName}} of probeer een andere betaalmethode."
+          },
+          "unsupported": {
+            "address": "De merchant kan niet leveren op het bezorgadres dat je hebt geselecteerd.",
+            "postal_code": "Deze locatie wordt niet ondersteund",
+            "wallet_is_unavailable": "Je kunt {{walletName}} niet gebruiken met dit adres. Selecteer een ander adres of sluit {{walletName}} om de aankoop af te ronden."
+          },
+          "outdated": {
+            "shipping_method": "De verzendopties voor je bestelling zijn gewijzigd. Controleer je selectie.",
+            "payment_terms": "De betalingsvoorwaarden zijn gewijzigd. Controleer je bestelling"
+          },
+          "invalid": {
+            "shipping_address": "Voer een geldig bezorgadres in",
+            "billing_address": "Voer een geldig factuuradres in",
+            "shipping_option": "Kies een geldige verzendoptie",
+            "email": "Voer een geldig e-mailadres in",
+            "zone": "Voer een geldige staat/provincie in",
+            "postal_code": "Voer een geldige ZIP- of postcode in",
+            "reduction_code": "Voer een geldige kortingscode of cadeaubon in",
+            "billing_must_match_shipping": "Dient overeen te komen met bezorgadres.",
+            "phone": "Voer een geldig telefoonnummer in",
+            "emirate": "Voer een geldig emiraat in",
+            "billing_zone": "Voer een geldige staat/provincie voor het factuuradres in",
+            "billing_phone": "Voer een geldig telefoonnummer voor het factuuradres in"
+          }
+        }
       }
     }
   }
