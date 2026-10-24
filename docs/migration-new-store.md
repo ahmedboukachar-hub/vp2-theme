@@ -17,7 +17,10 @@ beleid zijn gelijk. Open: zie "Nog te doen na de import" hieronder.
 
 ## Nog te doen na de import
 
-- **Eigenaar (Admin):** winkelnaam staat nog op "Mijn winkel"; privacybeleid
+- **Eigenaar (Admin):** winkelnaam staat nog op "Mijn winkel" (de storefront toont
+  `brand_display_name`, maar e-mails, checkout en sync-commits gebruiken de winkelnaam);
+  "prijzen inclusief btw" staat in de nieuwe winkel aan en stond in de oude uit:
+  bevestigen (voor consumentenprijzen in de EU hoort het aan); privacybeleid
   aanzetten (Shopify beheert het, de NL/DE/FR/IT/ES-vertalingen ervan konden
   daarom niet mee); Search & Discovery-filters opnieuw instellen (vertalingen
   daarvan volgen daarna); betalingen, verzending, belastingen, afzender-e-mail;

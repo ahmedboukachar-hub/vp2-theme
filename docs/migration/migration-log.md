@@ -202,5 +202,21 @@ Theme: the new store validates more strictly than the development store. It skip
 `templates/page.designers.json`. Fixed in #101; #100 and #102 touched the templates so
 the sync retried them. All theme files are now live in the new store.
 
-Still open (owner / later): store name, privacy policy, Search & Discovery filters,
-payments, shipping, taxes, market Europe with the domain, live spot check in EN and NL.
+A read-only parity check, one agent per domain with two independent re-checks per
+finding, compared every product, variant, metafield, image (order, alt, size and
+original bytes, 273/273), collection (rules, product sets), page, article, menu,
+redirect, policy, definition and all 431 theme files. It found no remaining difference
+apart from cosmetic store-side normalisation (`product.json` gains empty block
+`settings`, locale files are re-formatted).
+
+Settings outside the import, compared by hand: currency format, units and time zone
+match; **prices include tax** is on in the new store and was off in the development
+store. Including VAT is what Dutch consumer prices require; it is the owner's call and
+was left as set.
+
+The Journal index was the only template that opened on white (scheme-3, since #57);
+the owner flagged it and #103 moved it to the ivory canvas like every other page.
+
+Still open (owner / later): store name ("Mijn winkel"), privacy policy, Search &
+Discovery filters, payments, shipping, taxes, market Europe with the domain, live spot
+check in EN and NL.
