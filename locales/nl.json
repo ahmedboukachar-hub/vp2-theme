@@ -3346,6 +3346,166 @@
         "password_reset_error": "Fout bij het resetten van het wachtwoord",
         "no_account_found": "Geen account gevonden met dat e-mailadres."
       }
+    },
+    "page_titles": {
+      "search_results": {
+        "other": "Zoeken: %{count} resultaten gevonden voor '%{terms}'"
+      },
+      "blog_or_article_with_error": "Fout - %{title}"
+    },
+    "cart": {
+      "discounts_with_count": "Er zijn %{count} kortingen toegepast"
+    },
+    "challenge": {
+      "message": "Laat ons weten dat je geen robot bent om verder te gaan.",
+      "error": "Je antwoord was niet goed, probeer het nogmaals.",
+      "submit_button_text": "Verzenden"
+    },
+    "checkpoint": {
+      "message": "Los captcha op om door te gaan",
+      "error": "captcha-verificatie mislukt",
+      "submit_button_text": "Verzenden"
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Bedankt voor het inschrijven op onze mailinglijst.",
+        "disclaimer": "Je kunt je op elk gewenst moment afmelden.",
+        "unsubscribe": "Afmelden"
+      },
+      "unsubscribed": {
+        "confirmation": "Je bent uitgeschreven voor onze mailinglijst.",
+        "disclaimer": "Je ontvangt geen marketingupdates meer van ons. Je kunt je op elk gewenst moment opnieuw aanmelden.",
+        "preview": "Je bekijkt een voorbeeld van wat klanten zullen zien als ze zich afmelden."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Je hebt toestemming gegeven voor e-mail open-tracking.</b>",
+          "visibility": "E-mail open-percentages worden anoniem gerapporteerd. We zullen alleen zien of je een e-mail hebt geopend als onderdeel van een geaggregeerde e-mailopeningspercentage.",
+          "opt_out_html": "Je kunt je <a style='text-decoration:underline;' href='%{link}'>afmelden</a> van e-mail open-tracking als je deze informatie niet wilt delen.",
+          "preview_bar": "Je bekijkt een voorbeeld van wat klanten te zien krijgen wanneer ze toestemming geven voor het ontvangen van e-mails over open tracking."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Je hebt je afgemeld voor e-mail open-tracking.</b>",
+          "visibility": "We zien niet of je onze e-mails hebt geopend.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Toestemming geven</a> voor open tracking van e-mails.",
+          "preview_bar": "Je bekijkt een voorbeeld van wat klanten te zien krijgen wanneer ze zich afmelden voor het ontvangen van e-mails over open tracking."
+        },
+        "no_longer_track": {
+          "status_html": "<b>We volgen niet meer of e-mails worden geopend.</b>",
+          "privacy_policy": "Nadat deze e-mail was verzonden, hebben we ons privacybeleid bijgewerkt en volgen we niet langer het openen van e-mails."
+        },
+        "track": {
+          "status_html": "<b>E-mail open-tracking wordt gerapporteerd.</b>",
+          "visibility": "We zullen alleen zien of je de e-mail hebt geopend, als onderdeel van de totale e-mailopeningspercentage."
+        },
+        "updated_policy": {
+          "status_html": "<b>E-mail open-tracking wordt gerapporteerd.</b>",
+          "visibility": "We hebben ons beleid bijgewerkt, en volgen nu geopende e-mails. E-mail open-percentages worden anoniem gerapporteerd. We zullen alleen zien of je een e-mail hebt geopend, als onderdeel van de totale e-mailopeningspercentage.",
+          "opt_out_html": "Als je deze informatie niet meer wilt delen, dan kun je je <a style='text-decoration:underline;' href='%{link}'>afmelden</a>."
+        }
+      },
+      "sms_unsubscribe_confirm": {
+        "message": "Weet je zeker dat je je wil afmelden voor sms-marketing?",
+        "button": "Afmelden"
+      }
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Meestal klaar binnen 1 uur",
+        "two_hours": "Meestal klaar binnen 2 uur",
+        "four_hours": "Meestal klaar binnen 4 uur",
+        "twenty_four_hours": "Meestal klaar binnen 24 uur",
+        "two_to_four_days": "Meestal klaar binnen 2-4 dagen",
+        "five_or_more_days": "Meestal klaar binnen meer dan 5 dagen",
+        "zero_to_two_hours": "Meestal klaar binnen 2 uur",
+        "two_to_four_hours": "Meestal klaar binnen 4 uur",
+        "immediately": "Klaar om nu op te halen",
+        "next_day": "Klaar om de volgende dag op te halen"
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "Op voorraad",
+          "out_of_stock": "Niet op voorraad"
+        }
+      },
+      "boolean": {
+        "true_label": "Ja",
+        "false_label": "Nee"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "Relevantie",
+        "price_ascending": "Prijs: laag naar hoog",
+        "price_descending": "Prijs: hoog naar laag"
+      },
+      "error": "Er is een probleem opgetreden bij het laden van de zoekresultaten. Vernieuw de pagina of probeer het later opnieuw."
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Dit artikel is een terugkerende of uitgestelde aankoop. Als ik doorga, ga ik akkoord met het %{cancellationPolicyLink} en geef ik je ook toestemming de vermelde prijzen af te schrijven van mijn betaalmethode, op de vermelde frequentie en datums, totdat mijn bestelling is afgehandeld of totdat ik, indien toegestaan, opzeg.",
+      "buyer_consent_cart": "Een of meer artikelen in je winkelwagen zijn uitgestelde of terugkerende aankopen. Als ik doorga, ga ik akkoord met het %{cancellationPolicyLink} en geef ik je ook toestemming de vermelde prijzen af te schrijven van mijn betaalmethode, op de vermelde frequentie en datums, totdat mijn bestelling is afgehandeld of totdat ik, indien toegestaan, opzeg.",
+      "cancellation_policy": "opzeggingsbeleid"
+    },
+    "managed_markets": {
+      "buyer_consent": "Door je bestelling te plaatsen, ga je ermee akkoord je aankoop te doen bij Global-e als de merchant of record, conform de %{termsAndConditionsLink} en het %{privacyPolicyLink} van Global-e, en je gegevens te delen met %{shopName}.",
+      "terms_and_conditions": "Algemene voorwaarden",
+      "privacy_policy": "Privacybeleid"
+    }
+  },
+  "customer_accounts": {
+    "callback": {
+      "try_again": "Opnieuw proberen"
+    },
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Accountmenu verbergen",
+        "show_accessibility_label": "Accountmenu weergeven",
+        "nav_accessibility_label": "Accountnavigatie",
+        "open_menu_accessibility_label": "Accountnavigatie openen",
+        "close_menu_accessibility_label": "Accountnavigatie sluiten",
+        "loading_message": "Accountnavigatie laden",
+        "label": "Account"
+      },
+      "action_menu_accessibility_label": "Meer acties",
+      "close_menu_accessibility_label": "Hoofdnavigatie sluiten",
+      "contact_email_subject": "Contactpersoon van de webshop {{shopName}}",
+      "contact_link": "Contactgegevens",
+      "delete_confirmation": {
+        "cancel": "Annuleren",
+        "delete": "Verwijderen"
+      },
+      "dismiss_toast": "Sluiten",
+      "document_title": "{{sectionName}} - {{shopName}} - account",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "loading_message": "Laden",
+      "log_out_link": "Uitloggen",
+      "logout_overlay_label": "Uitloggen...",
+      "nav_label_accessibility_label": "Hoofdnavigatie",
+      "navigation_accessibility_message": "Je bent naar {{sectionName}} genavigeerd",
+      "open_menu_accessibility_label": "Hoofdnavigatie openen",
+      "shop_logo_accessibility_label": "{{shopName}}-logo",
+      "settings_link": "Instellingen",
+      "country_switcher_toast_message": "Land overgeschakeld naar {{countryName}}",
+      "switch_country": "Land overschakelen",
+      "search": "Zoeken",
+      "location_switcher_toast_message": "Locatie verwisseld naar {{locationName}}",
+      "switch_location": "Wissel van locatie",
+      "view_details": "Gegevens bekijken",
+      "company_location": "Bedrijfslocatie",
+      "no_countries_found": "Geen landen gevonden",
+      "no_locations_found": "Geen locaties gevonden",
+      "try_new_search": "Probeer een nieuwe zoekopdracht",
+      "skip_to_content": "Meteen naar de content",
+      "loading_policy_content_accessibility_label": "Beleid voor content laden",
+      "policy_load_error": "Kan {{policyName}} niet laden",
+      "policy_try_again": "Probeer het opnieuw",
+      "loading_section_accessibility_label": "{{sectionName}} laden",
+      "back_button_accessibility_label": "Terug",
+      "go_to_store_link": "Naar winkel",
+      "orders_link_label": "Bestellingen",
+      "subscriptions_link_label": "Abonnementen"
     }
   }
 }
