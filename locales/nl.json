@@ -2731,6 +2731,168 @@
       "tips": {
         "title": "Fooi toevoegen",
         "description": "Laat zien dat je het team van %{shop_name} steunt"
+      },
+      "throttle": {
+        "time_to_checkout_title": "Tijd voor afrekenen - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Geschatte wachttijd berekenen",
+          "less_than_one": "Geschatte wachttijd: minder dan een minuut",
+          "one": "Geschatte wachttijd: {{count}} minuut",
+          "other": "Geschatte wachttijd: {{count}} minuten"
+        },
+        "last_checked": "(Laatst gecontroleerd: {{time}})",
+        "footer": {
+          "heading": "Je hoeft deze pagina niet te vernieuwen, deze wordt automatisch bijgewerkt.",
+          "body": "Artikelen in je winkelwagen worden pas gereserveerd als je de checkout hebt voltooid."
+        },
+        "too_many_attempts": {
+          "message": "Te veel pogingen",
+          "description": "Probeer het over een paar minuten opnieuw"
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Er is een probleem opgetreden bij de verwerking van je aanvraag. Neem contact op met de winkeleigenaar."
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Geen bezorging beschikbaar voor %{count} artikel",
+            "other": "Geen bezorging beschikbaar voor %{count} artikelen"
+          },
+          "message": {
+            "one": "Dit artikel wordt uit je winkelwagen verwijderd omdat er voor jouw adres geen bezorgmethoden beschikbaar zijn.",
+            "other": "Dit artikel wordt uit je winkelwagen verwijderd omdat er voor jouw adres geen bezorgmethoden beschikbaar zijn."
+          },
+          "label": "Geen bezorging"
+        }
+      },
+      "no_address_location": {
+        "title": "Locatie zonder adres",
+        "header": "Er is geen bezorgadres voor deze locatie",
+        "message": "Neem contact met ons op om een adres voor deze locatie toe te voegen, zodat je de checkout kunt afronden.",
+        "email_us_button_label": "Stuur ons een e-mail",
+        "alt_header": "Bezorgadres ontbreekt"
+      },
+      "order_errors": {
+        "creation_failure": "Er is een probleem opgetreden bij het aanmaken van je bestelling. Probeer het opnieuw of neem contact op met ons voor meer informatie.",
+        "network_failure": "Je bestelling kan niet worden ingediend vanwege een netwerkfout. Controleer je verbinding en probeer het opnieuw.",
+        "inventory_reservation_failure": "Sommige artikelen zijn niet meer beschikbaar."
+      },
+      "session_errors": {
+        "session_not_unique": "Er is een probleem opgetreden bij het verwerken van je bestelling. Vernieuw deze pagina om terug te gaan naar de winkel.",
+        "session_already_finished": "Deze bestelling is al ingediend. Je kunt teruggaan naar de winkel om een nieuwe bestelling te starten."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Gesloten",
+        "business_hours": "Openingstijden",
+        "title": "Afhaalpunt",
+        "or": "of",
+        "search_button": "Zoeken",
+        "selector_tabs": "Afhaalpunt-kiezer",
+        "selector_tab_map": "Kaart",
+        "selector_tab_list": "Lijst",
+        "could_not_resolve_address": "Kan je adres niet vinden. Probeer het opnieuw of gebruik een ander adres",
+        "no_pickup_points_near_you": "Geen afhaalpunten gevonden in de buurt van het geselecteerde adres",
+        "no_pickup_points_near_location": "Geen afhaalpunten gevonden in de buurt van je locatie",
+        "no_pickup_points_found": "Geen afhaalpunten gevonden",
+        "paginator": {
+          "next_accessibility_label": "Volgende pagina",
+          "previous_accessibility_label": "Vorige pagina",
+          "header": {
+            "one": "Geeft %{first} - %{last} van %{count} punt weer",
+            "other": "Geeft %{first} - %{last} van %{count} punten weer"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} van %{count} punt",
+            "other": "%{pickup_point_index} van %{count} punten"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} van %{count} punt",
+            "other": "%{first} - %{last} van %{count} punten"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} afhaalpunt in de buurt van je locatie",
+          "other": "%{count} afhaalpunten in de buurt van je locatie"
+        },
+        "change": "Locatie wijzigen",
+        "waiting_on_pickup_point_location_notice": "Afhaalpunten zoeken...",
+        "geolocation": {
+          "shared_location_button": "Mijn locatie gebruiken",
+          "errors": {
+            "unsuported_by_browser": "Geolocatie opvragen wordt niet ondersteund door je browser. Probeer het opnieuw of gebruik een andere browser.",
+            "permission_not_allowed": "Sta het delen van je locatie toe.",
+            "permission_denied": "Kan je locatie niet ophalen. Probeer het opnieuw."
+          }
+        },
+        "no_business_hours": "Geen openingstijden beschikbaar",
+        "open_twenty_four_hours": "24/7 geopend",
+        "address_label": "Adres",
+        "pickup_unavailable_banner_title": {
+          "one": "Geen afhaalpunten beschikbaar voor jouw artikel",
+          "other": "Geen afhaalpunten beschikbaar voor jouw artikelen"
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Er is een probleem opgetreden bij de checkout",
+          "message": "Vernieuw deze pagina of probeer het over een paar minuten no geens",
+          "action": {
+            "cta": "Pagina opnieuw laden"
+          },
+          "request_id": "Aanvraag-ID: {{requestId}}"
+        },
+        "embed_errors": {
+          "storefront_password_required": "Deze winkel is met een wachtwoord beveiligd",
+          "customer_account_required": "Klantaccount is vereist om checkout te voltooien",
+          "cart_completed": "Deze checkout is al voltooid",
+          "invalid_cart": "De winkelwagen is niet langer geldig",
+          "not_authorized": "Checkoutverificatie is mislukt. Verifieer je inloggegevens voor de app.",
+          "killswitch_enabled": "Checkout is tijdelijk niet beschikbaar",
+          "policy_violation": "Kan checkout niet voltooien door beperkingen van de beleidsconfiguratie",
+          "unrecoverable_failure": "Kan checkout niet laden. Probeer het opnieuw"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Terug naar winkelwagen",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} om de hoeveelheden bij te werken",
+        "subscription_changed": "Een van je abonnementen is gewijzigd.",
+        "company_location_changed": "Je winkelwagen is aangepast. Controleer je bestelling voordat je deze verstuurt.",
+        "violations_title": "{{violation}} ontbreekt of is ongeldig",
+        "individual_violations_title": {
+          "DeliveryViolations": "Bezorgadres",
+          "PaymentViolations": "Factuuradres",
+          "OtherViolations": "Bestellingsgegevens",
+          "UnhandledViolations": "Bestelgegevens"
+        },
+        "all_violations_content": "Bel of {{emailLink}} ons om deze gegevens bij te werken en je bestelling te voltooien:",
+        "all_violations_email_link": "e-mail",
+        "editable_shipping_address_violations_message_title": "Voeg deze informatie toe om je bestelling te voltooien:",
+        "editable_shipping_address_violations_message_footer": "{{emailLink}} om het adres voor deze locatie permanent bij te werken.",
+        "editable_shipping_address_violations_email_link": "Neem contact met ons op",
+        "company_location_changed_product_removed": "Je winkelwagen is aangepast omdat sommige producten niet beschikbaar zijn op deze locatie. Controleer je bestelling voordat je deze verstuurt.",
+        "shipping_address_incomplete_title": "Het bezorgadres is onvolledig",
+        "calculating_shipping": "Verzending wordt nog berekend. Probeer het over enkele seconden opnieuw. Er zijn geen kosten in rekening gebracht.",
+        "calculating_taxes": "De belastingen worden nog berekend. Probeer het over enkele seconden opnieuw. Er zijn geen kosten in rekening gebracht.",
+        "generic_processing_error": {
+          "title": "Er is een probleem opgetreden bij het verwerken van je bestelling",
+          "body": "Er zijn geen kosten in rekening gebracht. Probeer het opnieuw of gebruik een andere betaalmethode."
+        },
+        "contact_information": {
+          "title": "Contactgegevens zijn ongeldig",
+          "header": "{{emailLink}} om je gegevens bij te werken",
+          "email_link": "Neem contact met ons op"
+        },
+        "payment_method_not_available_with_payment_terms": "De betaalmethode die je hebt geselecteerd, is niet langer beschikbaar omdat de betaling voor deze bestelling nu onder {{paymentTerms}}-voorwaarden valt.",
+        "payment_method_not_available_with_fulfillment_terms": "De betaalmethode die je hebt geselecteerd, is niet langer beschikbaar omdat de betaling voor deze bestelling nu bij fulfilment moet worden uitgevoerd.",
+        "payment_method_not_available_with_fixed_terms": "De betaalmethode die je hebt geselecteerd, is niet langer beschikbaar omdat de betaling voor deze bestelling later moet worden uitgevoerd.",
+        "payment_method_not_available_with_review_requirement": "De betaalmethode die je hebt geselecteerd, is niet langer beschikbaar omdat de betaling verschuldigd is als de bestelling is bevestigd.",
+        "validation_errors_banner": {
+          "section_label": {
+            "delivery": "Bezorging",
+            "contact": "Contact"
+          }
+        }
       }
     }
   }
