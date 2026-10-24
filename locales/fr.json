@@ -3395,6 +3395,146 @@
         "last_name": "Nom",
         "phone_number_help_text": "Le numéro de téléphone ne peut pas être modifié"
       }
+    },
+    "orders": {
+      "order_list": {
+        "payment_status": {
+          "gallery_view": {
+            "due_without_date": "Paiement dû",
+            "due_on_fulfillment": "Paiement dû lors du traitement de la commande",
+            "pay_to_confirm": "Payer pour confirmer",
+            "payment_not_due": "Paiement pas encore dû"
+          }
+        },
+        "sort_currently_sorted_by_accessibility_label": "Actuellement triées par : {{option}}",
+        "carousel": {
+          "one_products_accessibility_label": "La commande inclut une quantité de {{lineItemQuantity1}} {{lineItemName1}}",
+          "two_products_accessibility_label": "La commande inclut une quantité de {{lineItemQuantity1}} {{lineItemName1}}, une quantité de {{lineItemQuantity2}} {{lineItemName2}}",
+          "three_products_accessibility_label": "La commande inclut une quantité de {{lineItemQuantity1}} {{lineItemName1}}, une quantité de {{lineItemQuantity2}} {{lineItemName2}}, une quantité de {{lineItemQuantity3}} {{lineItemName3}}",
+          "four_products_accessibility_label": "La commande inclut une quantité de {{lineItemQuantity1}} {{lineItemName1}}, une quantité de {{lineItemQuantity2}} {{lineItemName2}}, une quantité de {{lineItemQuantity3}} {{lineItemName3}}, une quantité de {{lineItemQuantity4}} {{lineItemName4}}",
+          "five_products_accessibility_label": "La commande inclut une quantité de {{lineItemQuantity1}} {{lineItemName1}}, une quantité de {{lineItemQuantity2}} {{lineItemName2}}, une quantité de {{lineItemQuantity3}} {{lineItemName3}}, une quantité de {{lineItemQuantity4}} {{lineItemName4}}, une quantité de {{lineItemQuantity5}} {{lineItemName5}}",
+          "six_products_accessibility_label": "La commande inclut une quantité de {{lineItemQuantity1}} {{lineItemName1}}, une quantité de {{lineItemQuantity2}} {{lineItemName2}}, une quantité de {{lineItemQuantity3}} {{lineItemName3}}, une quantité de {{lineItemQuantity4}} {{lineItemName4}}, une quantité de {{lineItemQuantity5}} {{lineItemName5}}, une quantité de {{lineItemQuantity6}} {{lineItemName6}}",
+          "six_and_more_products_accessibility_label": "La commande inclut une quantité de {{lineItemQuantity1}} {{lineItemName1}}, une quantité de {{lineItemQuantity2}} {{lineItemName2}}, une quantité de {{lineItemQuantity3}} {{lineItemName3}}, une quantité de {{lineItemQuantity4}} {{lineItemName4}}, une quantité de {{lineItemQuantity5}} {{lineItemName5}}, une quantité de {{lineItemQuantity6}} {{lineItemName6}} et plus",
+          "view_order_details": "Afficher les détails de la commande",
+          "previous": "Précédent",
+          "next": "Suivant"
+        },
+        "show_order_actions_accessibility_label": "Afficher les actions de commande pour la commande {{name}}",
+        "empty_state_title_for_pending_orders": "Commandes en attente",
+        "more_than_four_products_accessibility_label": "La commande comprend {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}} et {{numberOfAdditionalProducts}} autres produits",
+        "plus_more_products": "+{{numberOfAdditionalProducts}} produits",
+        "order_status_and_message": "{{orderStatus}} – {{message}}",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Afficher la commande pour en voir les détails",
+            "estimated_delivery": "Prévu le {{date}}",
+            "last_updated": "Dernière mise à jour le {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Livraison prévue le {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "more_than_three_products_accessibility_label": "La commande comprend {{lineItemName1}}, {{lineItemName2}} et {{numberOfAdditionalProducts}} autres produits",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "filter": {
+          "clear_section": "Effacer la section",
+          "apply": "Appliquer",
+          "date": {
+            "start_date": "Date de début",
+            "end_date": "Date de fin",
+            "title": "Date de la commande",
+            "today": "Aujourd’hui",
+            "last_7_days": "7 derniers jours",
+            "last_30_days": "30 derniers jours",
+            "last_90_days": "90 derniers jours",
+            "last_365_days": "12 derniers mois",
+            "custom": "Personnaliser"
+          },
+          "date_section_accessibility_label": "Filtrer par {{sectionTitle}}"
+        },
+        "no_order_banner": "Pour tester votre extension sur la page de statut de commande, créez une commande.",
+        "location_filter_picker": {
+          "all_location": "Tous les emplacements",
+          "current_location": "Emplacement actuel",
+          "switch_view": "Changer de vue"
+        },
+        "empty_state_with_location_title": "Aucune commande pour {{locationName}}",
+        "view_order": "Afficher la commande",
+        "view_order_accessibility_label": "Afficher la commande {{orderName}}",
+        "empty_state_redesign_cta": "Acheter",
+        "empty_state_redesign_subtitle": "Envie de faire des achats ?",
+        "empty_state_redesign_welcome": "Bienvenue",
+        "empty_state_redesign_welcome_with_name": "Bienvenue, {{firstName}}",
+        "sort_options_accessibility_label": "Options de tri pour les commandes confirmées"
+      },
+      "order_status": {
+        "canceled_label": "Annulée",
+        "canceled_title": "Votre commande a été annulée",
+        "come_back": "Revenez sur cette page pour voir les mises à jour du statut de votre envoi.",
+        "company_tracking_number": "Numéro de suivi {{company}} :",
+        "confirmed_label": "Confirmée",
+        "confirmed_title": "Votre commande est confirmée",
+        "delivered_label": "Livrée",
+        "estimated_delivery": "Prévu le {{date}}",
+        "in_review_label": "En cours d'examen",
+        "in_review_title": "Votre commande est en cours d'examen",
+        "on_its_way_label": "En transit",
+        "out_for_delivery_label": "En cours de livraison",
+        "resume_tracking": "Reprendre le suivi",
+        "submitted_label": "Soumise",
+        "track_shipment": "Suivre l'envoi",
+        "request_return": "Demander un retour",
+        "attempted_delivery_label": "Tentative de livraison",
+        "preparing_for_shipping_label": "Préparation pour expédition",
+        "ready_for_pickup_label": "Prête pour retrait",
+        "ready_for_pickup_description": "Ces articles sont prêts à être retirés. Veuillez apporter votre confirmation de commande lors du retrait de votre commande.",
+        "picked_up_label": "Retirée",
+        "submitted_description": "Vérifiez la commande et les détails du paiement.",
+        "last_updated": "Dernière mise à jour le {{date}}",
+        "multiple_shipments_label": "Plusieurs envois",
+        "view_order_for_details": "Afficher la commande pour en voir les détails",
+        "confirmed_description_digital": "Vous recevrez un e-mail lorsque votre commande sera prête.",
+        "delivered_description_gift_card": {
+          "one": "La carte-cadeau a été envoyée par e-mail.",
+          "other": "Les cartes-cadeaux ont été envoyées par e-mail."
+        },
+        "confirmed_description_pickup": "Nous préparons ces articles pour la collecte.",
+        "confirmed_gift_card_additional_description": {
+          "one": "La carte-cadeau sera envoyée dans un e-mail distinct.",
+          "other": "Chaque carte-cadeau sera envoyée dans un e-mail distinct."
+        },
+        "confirmed_description_gift_card_text": "Vous recevrez un SMS lorsque votre commande sera prête.",
+        "delivered_description_gift_card_text": {
+          "one": "La carte-cadeau a été envoyée par SMS.",
+          "other": "Les cartes-cadeaux ont été envoyées par SMS."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "La carte-cadeau sera envoyée dans un SMS distinct.",
+          "other": "Chaque carte-cadeau sera envoyée dans un SMS distinct."
+        },
+        "gift_resend_success": {
+          "one": "Carte-cadeau renvoyée",
+          "other": "Cartes-cadeaux renvoyées"
+        },
+        "gift_resend_failure": {
+          "one": "Un problème est survenu lors du renvoi de votre carte-cadeau. Réessayez ou contactez-nous.",
+          "other": "Un problème est survenu lors du renvoi de vos cartes-cadeaux. Réessayez ou contactez-nous."
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Gérer avec Amazon",
+            "new_window_disclaimer": "(ouvre une nouvelle fenêtre)"
+          }
+        },
+        "attempted_to_deliver_label": "Tentative de livraison",
+        "there_was_a_problem_label": "Un problème est survenu",
+        "buy_with_prime_logo_accessibility_label": "Logo de Buy with Prime d’Amazon",
+        "delivered": "Livré le {{date}}",
+        "complete_label": "Terminé",
+        "multiple_statuses_label": "Plusieurs statuts de la commande",
+        "status_timestamp": "Mis à jour le {{date}}"
+      }
     }
   }
 }
