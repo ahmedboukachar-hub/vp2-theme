@@ -2093,7 +2093,275 @@
         "payment_method": "Zahlungsmethode",
         "expired_payment_method": "Die ausgewählte Zahlungsmethode ist abgelaufen",
         "subscription_heading": "Abonnementvereinbarung",
-        "use_order_billing_address_label": "Rechnungsadresse der Bestellung verwenden"
+        "use_order_billing_address_label": "Rechnungsadresse der Bestellung verwenden",
+        "use_location_billing_address_label": "Rechnungsadresse des Standorts verwenden",
+        "use_location_shipping_address_label": "Lieferadresse des Standorts verwenden",
+        "purchase_options_agreement_label_wallets": "Wenn du mit deiner Zahlung fortfährst, stimmst du den auf dieser Seite aufgeführten zukünftigen Gebühren und %{cancellation_policy_label} zu.",
+        "gift_card_store_credit": {
+          "add_label": "Einen Gutschein oder Shop-Guthaben hinzufügen",
+          "manage_label": "Geschenkgutscheine oder Shop-Guthaben verwalten"
+        },
+        "saved_credit_card_cvv_verification": "Gib zur Verifizierung den Sicherheitscode deiner Karte ein.",
+        "order_edit_banner_updated_order_label": "Aktualisierte Bestellung",
+        "afterpay_label": "Afterpay",
+        "cashapppay_label": "Cash App Pay",
+        "card_nickname_label": "Spitzname (optional)",
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Aus Rückgabe entfernt",
+          "with_quantities": "{{delta}} aus der Rückgabe entfernt"
+        },
+        "order_edit_banner_single_item_return_line_item_removed": "Aus Rückgabe entfernt",
+        "order_edit_banner_multiple_items_return_line_item_removed": "{{amount}} aus der Rückgabe entfernt",
+        "proposed_gateway_unavailable": "Das vorgeschlagene Zahlungs-Gateway ist nicht verfügbar",
+        "pay_in_installments_split_pay_short": "4 Zahlungen über %{amount}",
+        "payment_method_not_available_for_shipping_address_error": "Die Zahlungsmethode ist für die ausgewählte Versandadresse nicht verfügbar. Wähle eine andere Zahlungsmethode aus.",
+        "shop_pay_ideal_unavailable_error": "iDEAL | Wero ist für diese Bestellung nicht verfügbar. Wähle eine andere Zahlungsmethode aus.",
+        "paypal_disconnect": "Verbindung trennen",
+        "paypal_wallet_label": "PayPal-Wallet",
+        "payment_method_update_failed": "Aktualisierung der Zahlungsmethode fehlgeschlagen.",
+        "alternative_payment_currency_total_manual_payment_notice": "Hinweise: %{amount_due} insgesamt umgerechnet.",
+        "gift_cards_unavailable": "Dein Geschenkgutschein kann nicht mehr für diese Bestellung verwendet werden und wurde entfernt.",
+        "network_card_payment_options": "Ein Kartennetzwerk auswählen",
+        "payment_flexibility_terms_id_mismatch": "ID der Zahlungsflexibilitätsbedingungen stimmt nicht überein",
+        "offsite_gateway_review_page_redirect_hint": "Nachdem du deine Bestellung überprüft hast, wirst du zu %{gateway_label} weitergeleitet, um deinen Kauf abzuschließen",
+        "przelewy24_label": "Przelewy24",
+        "twint_label": "TWINT",
+        "mobilepay_label": "MobilePay",
+        "gift_card_checkbox_label": "Gutschein anwenden",
+        "blik_label": "BLIK",
+        "simulated_express_checkout": "Wallets sind aufgrund deiner Region oder deines Browsers nicht in der Vorschau verfügbar",
+        "vipps_label": "Vipps",
+        "grabpay_label": "GrabPay",
+        "kcp_creditcard_label": "KCP-Kreditkarte",
+        "offsite_gateway_redirect_hint_no_button_label": "Du wirst zu %{gateway_label} weitergeleitet, um deinen Kauf abzuschließen",
+        "swish_label": "Swish",
+        "network_card_persistence_description": "Das ausgewählte Netzwerk wird mit deiner Zahlungsmethode für künftige Transaktionen gespeichert.",
+        "usdc_label": "USDC",
+        "payment_method_incompatible_with_payment_terms": "Die Zahlungsmethode ist nicht mit den Zahlungsbedingungen kompatibel.",
+        "payment_option": {
+          "accessibility_label": "Zahlungsoption auswählen"
+        },
+        "billing_address_rollup_accessibility_label": "Optionen für Rechnungsadresse",
+        "payment_method_rollup_accessibility_label": "Zahlungsmethoden-Optionen",
+        "crypto_modal": {
+          "header": "%{total_price} USDC an %{shop_name} zahlen",
+          "error": {
+            "refresh": "Aktualisieren",
+            "close": "schließen",
+            "sandbox_error": "Etwas ist schiefgelaufen",
+            "web_component_error": "Beim Laden dieser Seite ist ein Problem aufgetreten"
+          }
+        },
+        "bank_account_type": {
+          "checking": "Wird überprüft",
+          "savings": "Sparkonto"
+        },
+        "bank_account_choose": "Wähle ein Konto, um deinen Kauf sicher abzuschließen",
+        "bank_account_connect_another": "Verbinde ein weiteres Bankkonto",
+        "bank_account_connect": "Bankkonto verbinden",
+        "crypto_payment_method": {
+          "description": "Verbinde deine Wallet sicher. Dein Guthaben und deine Adresse werden nicht weitergegeben.",
+          "tooltip": "Das Guthaben deiner digitalen Wallet und deine Adresse werden nicht geteilt und nur der angeforderte Betrag kann abgezogen werden",
+          "cashback_descriptor": {
+            "one": "Du erhältst dein Cashback nach %{count} Tag",
+            "other": "Du erhältst dein Cashback nach %{count} Tagen"
+          }
+        },
+        "bank_account_missing": "Bankkonto muss verbunden sein",
+        "usdc_cashback_title": "%{incentive_percentage} % Cashback",
+        "usdc_cashback_additional_info": "Zahle mit USDC auf Base und erhalte in 30 Tagen %{incentive_percentage}% in deine Wallet zurück.",
+        "usdc_cashback_terms": "Es gelten Bedingungen und Limits",
+        "discount_show_more_warnings": {
+          "one": "%{count} weitere anzeigen",
+          "other": "%{count} weitere anzeigen"
+        },
+        "separate_payments_label": "Deine Artikel stammen aus mehr als einem Shop. Du wirst in %{separate_payments_link} abgerechnet.",
+        "separate_payments_text": "Separate Zahlungen",
+        "payments": "Zahlungen",
+        "business_customer_with_bank_account_vaulting_payment_label": "Speichere diese Zahlungsmethode beim Checkout und erteile %{company} die Erlaubnis, dein Konto für zukünftige genehmigte Käufe an diesem Standort zu belasten, bis du die Methode kündigst. Alle Kontakte, die diesem Standort zugewiesen sind, können die Zahlungsmethode verwenden.",
+        "new_bank_account_disclaimer": "Mit Abschluss deiner Bestellung erteilst du %{shop_name} die Erlaubnis, den untenstehenden Betrag über ACH vom angegebenen Konto zum angegebenen Zeitpunkt abzubuchen.",
+        "bank_account_disclaimer": "ACH-Zahlungen können bis zu 4 Werktage in der Verarbeitung dauern.",
+        "bank_account_vaulted_company_location": "Bankkonto für diesen Standort gespeichert",
+        "bank_account_generic_error": "Bankkonto konnte nicht hinzugefügt werden. Versuche es später noch einmal.",
+        "discount_codes_removed_summary": {
+          "one": "%{count} Rabattcode wurde entfernt",
+          "other": "%{count} Rabattcodes wurden entfernt"
+        },
+        "default": "Standard",
+        "continue_to_guest_checkout": "Zum Gast-Checkout",
+        "add_payment_method": "Zahlungsmethode hinzufügen",
+        "choose_new_payment_method": "Wähle eine neue Zahlungsmethode aus.",
+        "add_new_payment_method": "Neue Zahlungsmethode hinzufügen",
+        "discount_codes_modified_summary": {
+          "one": "%{count} Rabattcode wurde geändert",
+          "other": "%{count} Rabattcodes wurden geändert"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "%{count} Rabattcode wurde entfernt oder geändert",
+          "other": "%{count} Rabattcodes wurden entfernt oder geändert"
+        },
+        "multiple_primary_payment_not_allowed": "Ungültige Zahlungsmethoden",
+        "purchase_options_subscription_confirmation_title": "Abonnement bestätigen",
+        "purchase_options_subscription_agreement_label": "Dein Warenkorb enthält ein sich automatisch verlängerndes Abonnement. Mit Klick auf „%{button_label}“ %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_agreement_label_wallets": "Dein Warenkorb enthält ein sich automatisch verlängerndes Abonnement. Durch die Nutzung des Express-Checkouts %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_consent_text": "stimmst du ausdrücklich zu, dass dir der in deinem Warenkorb angezeigte wiederkehrende Betrag (bzw. die Beträge) (zuzüglich Versand und Steuern) automatisch berechnet wird, bis das Abonnement (bzw. die Abonnements) endet oder du kündigst.",
+        "purchase_options_subscription_cancellation_instructions": "%{cancel_text} Bitte beachte die %{cancellation_policy_label}.",
+        "purchase_options_subscription_cancel_text": "Du kannst jederzeit kündigen, indem du dein Konto aufrufst oder den Shop kontaktierst.",
+        "vault_for_payment_later": {
+          "pay_button_label": "Bestellung aufgeben",
+          "notice": "Dir wird jetzt nichts abgebucht. Wenn du mit deiner Zahlung fortfährst, stimmst du zu, dass deine Zahlungsmethode belastet wird, wenn deine Bestellung bearbeitet wird."
+        },
+        "alipay_label": "Alipay",
+        "wechat_pay_label": "WeChat Pay",
+        "oxxo_label": "OXXO",
+        "pay_with_credit_card": "Mit Kreditkarte bezahlen",
+        "pay_with_debit_card": "Mit Debitkarte bezahlen",
+        "bogus_test_checkout": {
+          "title": "Testanleitung",
+          "intro": "Verwende diese Werte, um deinen Checkout zu testen:",
+          "approved_transaction": "{{card_number}}, um eine genehmigte Transaktion zu simulieren",
+          "declined_transaction": "{{card_number}}, um eine abgelehnte Transaktion zu simulieren",
+          "gateway_failure": "{{card_number}}, um einen Gateway-Fehler zu simulieren",
+          "additional_instructions": "Verwende ein beliebiges Ablaufdatum in der Zukunft und einen beliebigen 3-stelligen Sicherheitscode.",
+          "support_link": "Support erhalten"
+        },
+        "order_edit_banner_single_item_updated": "Aktualisiert",
+        "order_edit_banner_previous_taxes_label": "Bisherige Steuern:",
+        "order_edit_banner_new_taxes_label": "Neue Steuern:",
+        "order_edit_banner_no_taxes_label": "Keine",
+        "satispay_label": "Satispay",
+        "wechat_app_label": "WeChat",
+        "mb_way_label": "MB WAY",
+        "bizum_label": "Bizum",
+        "lpm": {
+          "oxxo": {
+            "voucher": {
+              "label": "OXXO",
+              "number": "Referenznummer",
+              "steps": {
+                "scan_barcode_at_oxxo": "Scanne den Barcode in deinem nächstgelegenen OXXO."
+              },
+              "barcode_alt": "OXXO-Beleg-Barcode für Referenznummer %{reference_number}"
+            }
+          },
+          "multibanco": {
+            "voucher": {
+              "label": "Multibanco",
+              "codes": {
+                "entity": "Entität",
+                "reference_number": "Referenz"
+              },
+              "steps": {
+                "pay_at_atm_or_online": "Bezahle an einem Multibanco-Geldautomaten oder über dein Online-Banking mit den unten stehenden Details."
+              }
+            }
+          },
+          "konbini": {
+            "voucher": {
+              "label": "Konbini",
+              "outlets": {
+                "familymart": "FamilyMart",
+                "lawson": "Lawson",
+                "ministop": "Ministop",
+                "seicomart": "Seicomart"
+              },
+              "codes": {
+                "reference_number": "Zahlungscode",
+                "confirmation_number": "Bestätigungscode"
+              },
+              "steps": {
+                "familymart": {
+                  "1": "Wähle am Multifunktionsdrucker 代金支払い／チャージ („Zahlung / Aufladen“) aus.",
+                  "2": "Gib deinen Zahlungscode ein und drücke auf OK.",
+                  "3": "Gib deinen Bestätigungscode ein und drücke auf OK.",
+                  "4": "Prüfe die Details und drücke auf 確認 („Bestätigen“), um deinen Beleg auszudrucken.",
+                  "5": "Bringe den Beleg innerhalb von 30 Minuten zur Kasse und bezahle bar oder mit FamiPay."
+                },
+                "lawson": {
+                  "1": "Wähle am Loppi-Terminal 各種番号をお持ちの方 („Ich habe eine Nummer“) aus.",
+                  "2": "Gib deinen Zahlungscode ein und drücke auf 次へ („Weiter“).",
+                  "3": "Gib deinen Bestätigungscode ein und drücke auf 次へ.",
+                  "4": "Prüfe die Details und drücke auf はい („Ja“), um deinen Beleg auszudrucken.",
+                  "5": "Bringe den Beleg innerhalb von 30 Minuten zur Kasse und bezahle bar."
+                },
+                "ministop": {
+                  "1": "Wähle am Loppi-Terminal 各種番号をお持ちの方 („Ich habe eine Nummer“) aus.",
+                  "2": "Gib deinen Zahlungscode ein und drücke auf 次へ („Weiter“).",
+                  "3": "Gib deinen Bestätigungscode ein und drücke auf 次へ.",
+                  "4": "Prüfe die Details und drücke auf はい („Ja“), um deinen Beleg auszudrucken.",
+                  "5": "Bringe den Beleg innerhalb von 30 Minuten zur Kasse und bezahle bar."
+                },
+                "seicomart": {
+                  "1": "Sage an der Kasse インターネット支払い („Internet-Zahlung“).",
+                  "2": "Gib deinen Zahlungscode auf dem Kundenbildschirm ein und wähle 登録 („Eingeben“) aus.",
+                  "3": "Gib deinen Bestätigungscode ein und wähle 登録 aus.",
+                  "4": "Prüfe die Details und wähle OK aus.",
+                  "5": "Bezahle bar."
+                },
+                "1": "Bringe den Zahlungscode und Bestätigungscode zum Terminal oder zur Kasse des Geschäfts und bezahle bar, bevor der Gutschein abläuft."
+              },
+              "pay": "%{amount} bezahlen",
+              "choose_outlet": "Wähle einen Konbini aus, um deine Codes und Zahlungsanweisungen anzuzeigen.",
+              "expires_at": "Läuft ab: %{date}",
+              "expiry_date_time": "%{date} um %{time} JST",
+              "copy_code": "%{label} kopieren",
+              "code_copied": "Kopiert",
+              "keep_receipt": "Bewahre deinen Beleg als Zahlungsnachweis auf.",
+              "view_instructions": "Zahlungsanweisungen ansehen",
+              "view_instructions_accessibility_label": "Zahlungsanweisungen ansehen (wird in einem neuen Tab geöffnet)",
+              "expired_title": "Zahlungscode abgelaufen",
+              "expired": "Abgelaufen am %{date}"
+            }
+          }
+        },
+        "payment_method_unavailable_error": "Diese Zahlungsmethode ist momentan nicht verfügbar. Wähle eine andere Zahlungsmethode.",
+        "payment_method_loading_error": "Diese Zahlungsmethode wird noch geladen. Versuche es in ein paar Sekunden erneut.",
+        "bank_payment_method_label": "Bankzahlungsmethode",
+        "set_as_default_card": "Als Standardkarte festlegen",
+        "loading": "Zahlung wird geladen...",
+        "konbini_label": "Konbini",
+        "paynow_label": "PayNow",
+        "paypay_label": "PayPay",
+        "shop_pay_hsa": {
+          "label": "Ich möchte HSA/FSA-Guthaben für diesen Kauf verwenden",
+          "description": "Bezahle direkt mit deiner Benefits-Karte oder verwende eine private Karte und beantrage eine Rückerstattung für den erstattungsfähigen Betrag.",
+          "eligibility_disclaimer_html": "Die HSA/FSA-Berechtigung wird von Truemed festgelegt. %{terms_link}",
+          "truemed": "Truemed",
+          "view_terms": "Bedingungen anzeigen",
+          "login_message": "Logge dich bei Shop ein, um dein HSA/FSA-Guthaben zu verwenden",
+          "eligible_product": "HSA/FSA-berechtigt",
+          "mixed_cart_description": "Dein Warenkorb darf nur HSA/FSA-berechtigte Produkte enthalten"
+        },
+        "scalapay_label": "Scalapay"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "Aktuelles Guthaben: %{amount}",
+        "credit_card_expires_on_notice": "Gültig bis %{month}/%{year}",
+        "express_payment_gateway_label": "Express",
+        "manual_payment_gateway_label": "Manuell",
+        "billing_address_title": "Rechnungsadresse",
+        "free_label": "Kostenlos"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "Gib eine gültige Telefonnummer ein",
+        "handle_email_invalid": "Gib eine gültige E-Mail-Adresse ein",
+        "email_invalid": "Gib eine gültige E-Mail-Adresse ein",
+        "email_or_phone_blank": "Eine E-Mail-Adresse oder Telefonnummer eingeben",
+        "email_or_phone_invalid": "Gib eine gültige E-Mail-Adresse oder Handynummer ein",
+        "address_first_name_blank": "Gib einen Vornamen ein",
+        "address_last_name_blank": "Gib einen Nachnamen ein",
+        "address_address1_blank": "Gib eine Adresse ein",
+        "address_address2_blank": "Gib eine Wohnung, ein Zimmer usw. ein",
+        "address_city_blank": "Gib eine Stadt ein",
+        "address_country_blank": "Wähle ein Land/eine Region aus",
+        "address_country_not_supported": "Wir versenden nicht an dieses Land oder diese Region. Gib eine neue Lieferadresse ein und versuche es noch einmal.",
+        "address_province_blank": "Wähle ein Bundesland/einen Kanton aus",
+        "address_company_blank": "Gib einen Unternehmensnamen ein",
+        "address_phone_blank": "Gib eine gültige Telefonnummer ein",
+        "address_zip_blank": "Gib eine Postleitzahl ein",
+        "address_zip_invalid_for_country": "Gib eine gültige Postleitzahl für %{country} ein",
+        "address_zip_invalid_for_country_and_province": "Gib eine gültige Postleitzahl für %{province}, %{country} ein",
+        "credit_card_name_blank": "Gib deinen Namen genau so ein, wie er auf deiner Karte steht"
       }
     }
   }
