@@ -4037,7 +4037,135 @@
         "card_number_label": "Kaartnummer",
         "card_number_placeholder": "Kaartnummer",
         "name_on_card_label": "Naam op kaart"
-      }
+      },
+      "store_credit": {
+        "details_modal": {
+          "expirable_transactions_list_accessibility_label": "Winkeltegoedtransacties die vervallen",
+          "loading_accessibility_message": "Winkeltegoedgegevens laden",
+          "transactions_list_accessibility_label": "Winkeltegoedtransacties",
+          "transaction_types": {
+            "credit": "Toegevoegd",
+            "debit": "Uitgegeven",
+            "debit_revert": "Terugbetaald",
+            "expiration": "Vervallen"
+          }
+        },
+        "expirable_amounts_label": "Vervallen bedragen",
+        "accessibility_label": "Winkeltegoed - {{formattedBalance}}"
+      },
+      "three_d_secure": {
+        "title": "3D Secure",
+        "verification_failed": "Je betaling kan niet worden geverifieerd. Probeer het opnieuw of gebruik een andere betaalmethode."
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "PayPal-betaalmethode toevoegen",
+        "loading_accessibility_message": "PayPal laden",
+        "errors": {
+          "generic": "Er was een probleem met PayPal. Probeer het opnieuw of gebruik een andere betaalmethode."
+        }
+      },
+      "card_update_consent_subscriptions": "Deze betaalmethode wordt opgeslagen voor toekomstige aankopen en kan worden gebruikt voor elke terugkerende of uitgestelde aankoop.",
+      "add_payment_method_dropdown": {
+        "bank_account_consent": "Door een betaalmethode toe te voegen kun je autoriseren dat er, totdat je annuleert, kosten in rekening worden gebracht op je kaart of dat bij toekomstige aankopen die je goedkeurt afschrijvingen van je bankrekening plaatsvinden."
+      },
+      "replacement_payment_method_title": "Vervangende betaalmethoden",
+      "bank_account": {
+        "loading_accessibility_message": "Knop voor bankrekening wordt geladen",
+        "iframe_title_accessibility_label": "Instelling van bankrekening",
+        "display_name": "Bankrekening",
+        "generic_error": "Kan bankrekening niet toevoegen. Probeer het later opnieuw."
+      },
+      "update_payment_method": {
+        "title": "Betaalmethode updaten",
+        "button_title": "Updaten",
+        "billing_address": "Factuuradres",
+        "disclaimer": "Deze betaalmethode wordt opgeslagen voor toekomstige aankopen en kan worden gebruikt voor elke terugkerende of uitgestelde aankoop.",
+        "error_message": "Kan betaalmethode niet bijwerken",
+        "current": "Huidige",
+        "loading_form_accessibility_message": "Formulier voor updaten van betaalmethode wordt geladen",
+        "loading_current_payment_method": "Huidige betaalmethode wordt geladen",
+        "loading_digital_wallets": "Opties voor digitale portemonnee worden geladen",
+        "loading_card_fields": "Creditcardvelden worden geladen",
+        "subscriptions_title": "Abonnementen",
+        "subscriptions_list_accessibility_label": "Lijst met abonnementsproducten",
+        "pre_orders_title": "Komende",
+        "pre_orders_list_accessibility_label": "Lijst met producten met lopende bestelling",
+        "resources_list_accessibility_label": "Abonnementsproducten en producten met een lopende bestelling die deze betaalmethode gebruiken",
+        "resources_card_scroll": "Scroll voor meer artikelen",
+        "resources_card_show_more": "Meer weergeven",
+        "resources_card_show_less": "Minder weergeven",
+        "loading_resources": "Abonnementen en komende bestellingen laden"
+      },
+      "link_expired": {
+        "message": "Deze link om je betaalmethode bij te werken is verlopen.",
+        "return_home_button": "Terug naar homepage",
+        "update_message": "Deze link om je betaalmethode bij te werken is verlopen.",
+        "add_message": "Deze link om je betaalmethode toe te voegen is verlopen."
+      },
+      "update_success": {
+        "title": "Betaalmethode bijgewerkt",
+        "done_button": "Doorgaan met winkelen"
+      },
+      "expired_badge_label": "Verlopen",
+      "credit_card_title": "Creditcard",
+      "or": "OR",
+      "additional_payment_methods": "Aanvullende betaalmethoden",
+      "add_success": {
+        "title": "Betaalmethode toegevoegd",
+        "done_button": "Doorgaan met winkelen"
+      },
+      "expiring_badge_label": "Verloopt"
+    },
+    "payment_method_brands": {
+      "visa": "Visa",
+      "mastercard": "Mastercard",
+      "shoppay": "Shop Pay",
+      "applepay": "Apple Pay",
+      "googlepay": "Google Pay",
+      "paypal": "PayPal",
+      "americanexpress": "American Express",
+      "discover": "Discover",
+      "dinersclub": "Diners Club",
+      "jcb": "JCB",
+      "elo": "Elo",
+      "visaelectron": "Visa Electron",
+      "maestro": "Maestro",
+      "forbrugsforeningen": "Forbrugsforeningen",
+      "dankort": "Dankort",
+      "hipercard": "Hipercard",
+      "unionpay": "Union Pay",
+      "laser": "Laser",
+      "storecredit": "Winkeltegoed",
+      "bogus": "Bogus",
+      "klarna_pay_now": "Klarna",
+      "klarna_pay_later": "Klarna",
+      "klarna_slice_it": "Klarna",
+      "blik": "BLIK",
+      "ideal": "iDEAL",
+      "klarna": "Klarna",
+      "mobilepay": "MobilePay",
+      "przelewy24": "Przelewy24",
+      "swish": "Swish",
+      "twint": "TWINT",
+      "usdc": "Crypto: USDC",
+      "vipps": "Vipps",
+      "paypay": "PayPay"
+    },
+    "enable_javascript": "Schakel JavaScript in je browserinstellingen in of log in met een andere browser om je account te bekijken.",
+    "ui_components": {
+      "closeNotification": "Sluiten",
+      "expandNotification": "Meer bekijken",
+      "closeModal": "Sluiten",
+      "submit": "Indienen",
+      "processing": "Verwerken...",
+      "increase": "Toename van {{type}}",
+      "decrease": "Afname van {{type}}",
+      "minimumReached": "Minimum van {{value}} bereikt",
+      "maximumReached": "Maximum van {{value}} bereikt",
+      "january": "januari",
+      "february": "februari",
+      "march": "maart",
+      "april": "april"
     }
   }
 }
