@@ -2332,7 +2332,133 @@
         "expired_card": "Je kaart is verlopen. Gebruik een andere betaalmethode.",
         "card_declined": "Je kaart is geweigerd. Probeer het opnieuw of gebruik een andere betaalmethode.",
         "processing_error": "Er is een probleem opgetreden met het verwerken van je betaling. Probeer het opnieuw of gebruik een andere betaalmethode.",
-        "call_issuer": "Je kaart is geweigerd. Gebruik een andere betaalmethode of neem contact op met je bank voor meer informatie."
+        "call_issuer": "Je kaart is geweigerd. Gebruik een andere betaalmethode of neem contact op met je bank voor meer informatie.",
+        "test_mode_live_card": "Deze winkel kan geen echte bestellingen accepteren of echte betalingen verwerken.",
+        "transient_error": "Er is een probleem opgetreden met het verwerken van je betaling. Vernieuw deze pagina of controleer je internetverbinding.",
+        "missing_shipping_address": "Je betaling kon niet worden verwerkt omdat je bezorgadres ontbreekt. Voeg een bezorgadres toe en probeer het opnieuw.",
+        "invalid_shipping_address": "Je betaling kon niet worden verwerkt omdat we je bezorgadres niet konden vinden. Controleer je bezorgadres en probeer het opnieuw.",
+        "successful_offsite_with_gift_card_error": "Er is een probleem opgetreden bij het verwerken van je betaling met cadeaubon. Probeer het opnieuw of gebruik een andere betaalmethode.",
+        "development_store_order_limit_reached": "Je hebt het maximumaantal development store-bestellingen met deze betalingsverwerker bereikt. Gebruik een testbetalingsgateway om nog een bestelling te plaatsen. Hier vind je meer informatie over %{development_store_order_testing_docs_link}.",
+        "development_store_with_order_limit": "Gebruik een testbetalingsgateway om een testbestelling te plaatsen. Hier vind je meer informatie over %{development_store_order_testing_docs_link}.",
+        "development_store_order_testing_docs_link": "bestellingen testen in development stores",
+        "method_not_available": "De aangevraagde betaalmethode is niet beschikbaar. Kies een andere betaalmethode en probeer het opnieuw.",
+        "available_methods_updated": "Beschikbare betaalmethoden zijn bijgewerkt.",
+        "selected_payment_method": "Er was een probleem met de gekozen betaalmethode en er zijn geen kosten in rekening gebracht. Probeer het opnieuw of gebruik een andere betaalmethode.",
+        "payment_method_billing_address": "Er is een probleem met het factuuradres van je geselecteerde betaalmethode. Controleer het adres en probeer het opnieuw of gebruik een andere betaalmethode.",
+        "processing_error_checkout_as_guest": "Er is een probleem opgetreden met het verwerken van de betaling. Probeer het opnieuw met een andere betaalmethode of {{checkout_as_guest_link}}.",
+        "installments": {
+          "retry_same_instrument": {
+            "heading": "Controleer je kaartgegevens",
+            "body": "Update je kaartgegevens of kies een andere kaart"
+          },
+          "retry_different_instrument": {
+            "heading": "Je kaart is geweigerd",
+            "body": "Probeer het opnieuw of kies een andere kaart"
+          },
+          "restart_payment_method": {
+            "heading": "Je sessie is verlopen",
+            "body": "Kies een betalingsschema om opnieuw te beginnen"
+          }
+        },
+        "amount_too_small": "Het minimale betalingsbedrag moet hoger zijn dan 0,50 USD. Probeer het opnieuw met een hoger bedrag.",
+        "payment_above_threshold": "Het betalingsbedrag is hoger dan de geldlimiet voor deze regio. Verlaag het totaal en probeer het opnieuw",
+        "risky": "Er is een probleem opgetreden met het verwerken van de betaling. Probeer het opnieuw of gebruik een andere betaalmethode.",
+        "expired_buyer_action": "Time-out van betaalmethode. Probeer het opnieuw.",
+        "three_d_secure_failed_payment_method": "Je kaart kan niet worden geverifieerd. Probeer het opnieuw of voeg een andere kaart toe.",
+        "name_mismatch": "Controleer je kaartgegevens. De naam op je kaart en het factuuradres komen niet overeen.",
+        "payment_method_not_applicable": "Deze betaalmethode is niet van toepassing. Gebruik een andere betaalmethode.",
+        "shop_pay_wallet_not_available": "Shop Pay is niet beschikbaar voor deze checkout.",
+        "market_manager_blocks_wallet_payments": "Deze betaalmethode wordt niet ondersteund in je land.",
+        "paypal_over_capture": "Het totaalbedrag van je bestelling is bijgewerkt. Betaal met {{walletName}} om je bestelling te voltooien.",
+        "test_mode_enabled_only_test_cards": "De testmodus is ingeschakeld, er kunnen alleen testcreditcards worden toegevoegd.",
+        "captcha_required": "Voer de betaalgegevens in en los de captcha op om je aankoop te voltooien.",
+        "captcha_required_without_payment_information": "Los de captcha op om je aankoop te voltooien.",
+        "shipping_company_required_error": "{{shopName}} vereist een bedrijfsnaam voor het bezorgadres.",
+        "payment_credential_delegation_error": "Er is een probleem opgetreden bij het verwerken van je betaling. Kies een nieuwe betaalmethode.",
+        "cancelled_payment": "Je betaling is geannuleerd. Probeer het opnieuw of gebruik een andere betaalmethode.",
+        "currency": {
+          "no_longer_supported": "De valuta van de winkel wordt niet meer ondersteund."
+        },
+        "installments_payment_method_incompatible": "De geselecteerde betaalmethode kan niet worden gebruikt voor termijnbetalingen. Kies een andere betaalmethode.",
+        "missing_cvc": "Voer een beveiligingscode in",
+        "local_payment_method_amount_out_of_range": "%{payment_method} kan alleen worden gebruikt voor betalingen tussen %{minimum} en %{maximum}.",
+        "local_payment_method_unavailable": "%{payment_method} is niet beschikbaar",
+        "custom_redeemable_no_longer_available": "Deze aanbieding is niet meer beschikbaar.",
+        "duplicate_autopay_card": "Deze kaart is gekoppeld aan aankomende termijnbetalingen. Betaal op een andere manier of {{update_payment_details_link}}",
+        "duplicate_autopay_card_link": "update je betaalgegevens",
+        "duplicate_autopay_card_without_link": "Deze kaart is gekoppeld aan aankomende termijnbetalingen. Betaal op een andere manier.",
+        "invalid_customer_account": "We konden het bedrag niet van je account afschrijven. Je kunt het opnieuw proberen nadat je het probleem met je account hebt opgelost, of een andere betaalmethode gebruiken.",
+        "code_expired": "Je betaalcode is verlopen of al gebruikt. Haal een nieuwe code op in de app van je bank en probeer het opnieuw.",
+        "code_invalid": "Je betaalcode is niet geldig. Controleer de code en probeer het opnieuw, of haal een nieuwe code op in de app van je bank."
+      },
+      "shipping_errors": {
+        "shipping_method": "De verzendopties voor je bestelling zijn gewijzigd. Controleer je selectie.",
+        "shipping_method_not_available": "Je winkelwagen is bijgewerkt en de artikelen die je hebt toegevoegd, kunnen niet naar je adres worden verzonden. Verwijder de artikelen om je bestelling te voltooien.",
+        "shipping_method_not_available_generic": {
+          "one": "Je bestelling kan niet naar het geselecteerde adres worden verzonden. Controleer of het adres klopt en probeer het opnieuw, of selecteer een ander adres.",
+          "other": "Sommige artikelen in je winkelwagen kunnen niet worden verzonden naar het ingevoerde adres. Controleer of het adres klopt en probeer het opnieuw of selecteer een ander adres."
+        },
+        "shipping_method_not_available_updated": {
+          "one": "Het artikel dat je hebt toegevoegd, wordt niet verzonden naar je locatie. Verwijder dit artikel om te betalen, of neem contact op met de winkel.",
+          "other": "Eén of meer artikelen die je hebt toegevoegd, kunnen niet naar je locatie worden verzonden. Verwijder de artikelen om te betalen, of neem contact op met de winkel."
+        },
+        "payment_method_not_supported": "Je kunt deze betaalmethode niet gebruiken voor %{country}. Gebruik een andere betaalmethode om naar dit land te verzenden.",
+        "empty_state": "Voer je bezorgadres in om de beschikbare verzendmethoden te zien.",
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Er zijn artikelen in de winkelwagen die niet aan prijs- of gewichtsvereisten voldoen om voor verzending in aanmerking te komen. Werk de winkelwagen bij en probeer het opnieuw.",
+        "title": "Verzending niet beschikbaar",
+        "invalid_selected_address": "Het geselecteerde bezorgadres is ongeldig",
+        "invalid_selected_address_with_update_link": "Het geselecteerde bezorgadres is ongeldig. %{update_address_link} of selecteer een ander adres.",
+        "unavailable_selected_address": "Verzending niet beschikbaar voor het geselecteerde adres",
+        "unavailable_selected_address_for_region": "Verzending is niet beschikbaar voor {{region}}. Selecteer een ander adres om door te gaan",
+        "unavailable_addresses_only_countries": "Je bestelling kan alleen naar {{countriesList}} worden verzonden. Voeg een nieuw adres toe om verder te gaan.",
+        "unavailable_address_country": "Verzending is niet mogelijk in het land dat je hebt geselecteerd. Geef een ander adres op om door te gaan"
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Snelle checkout",
+        "or": "OF",
+        "show_more_options": "Meer opties weergeven",
+        "hide_more_options": "Meer opties verbergen",
+        "or_pay_another_way": "Of op een andere manier betalen",
+        "or_check_out_another_way": "Of op een andere manier afrekenen",
+        "or_pay_with_credit_card": "Of betalen met creditcard"
+      },
+      "processing": {
+        "redirecting_page_title": "Doorverwijzen…",
+        "redirecting_title": "Doorverwijzen…",
+        "redirecting_notice": "Je wordt doorverwezen.",
+        "complete_your_purchase_title": "Je aankoop voltooien",
+        "continue_to_payment_gateway_notice": "Ga door naar de betaling om je betaalgegevens toe te voegen.",
+        "continue_to_payment_gateway_button_label": "Ga naar betalen",
+        "complete_your_purchase_title_error": "Corrigeer je betalingsinformatie",
+        "continue_to_payment_gateway_notice_error": "Je betaalgegevens kunnen niet worden geverifieerd.",
+        "continue_to_payment_gateway_button_label_error": "Betaalgegevens bijwerken",
+        "page_title": "Bestelling wordt verwerkt",
+        "title": "Bestelling wordt verwerkt",
+        "your_order_has_been_received_title": "Bedankt voor je bestelling",
+        "you_will_receive_confirmation": "We ontvangen momenteel erg veel bestellingen. Je zou spoedig per e-mail of sms een bevestiging moeten ontvangen. Laat het ons weten, als je deze niet binnen een uur hebt ontvangen.",
+        "wait": {
+          "short": "Je bestelling wordt verwerkt.",
+          "medium": {
+            "one": "Je bestelling wordt verwerkt. Geschatte wachttijd is %{count} minuut.",
+            "other": "Je bestelling wordt verwerkt. Geschatte wachttijd is %{count} minuten."
+          },
+          "long": "Je ontvangt een e-mail zodra je bestelling verwerkt is. Er is momenteel een groot aantal bestellingen.",
+          "no_auto_refresh_html": "%{link} als je niet automatisch doorgestuurd wordt.",
+          "refresh_this_page": "Laad deze pagina opnieuw"
+        },
+        "you_will_not_be_charged": "Er worden nog geen kosten in rekening gebracht",
+        "action_required": "Actie vereist",
+        "redirecting_to_bank": "Omleiden naar {{bank}}",
+        "modal_notice": "We maken contact met {{paymentMethod}}",
+        "remote_shops_payments_processing": "Betalingen verwerken",
+        "remote_checkout_count": "%{current} van %{total}"
+      },
+      "failed_payment": {
+        "page_title": "De betaling kan niet worden verwerkt",
+        "title": "De betaling kan niet worden verwerkt",
+        "payment_not_processed_title": "Je betaling kan niet worden verwerkt.",
+        "payment_not_processed_text": "Er zijn geen kosten in rekening gebracht. Keer terug naar je winkelwagen om je aankoop te voltooien.",
+        "return_to_cart_button_label": "Terug naar winkelwagen"
       }
     }
   }
