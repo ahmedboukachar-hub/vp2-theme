@@ -3026,6 +3026,174 @@
         "delivery_address_validation_errors_banner": {
           "title": "Die Lieferadresse ist ungültig"
         }
+      },
+      "local_pickup": {
+        "stock_details_modal": {
+          "location": "Bei %{location}",
+          "ship_separately": "Separat versenden",
+          "choose_different_location": "Anderen Standort auswählen",
+          "can_ship_description": {
+            "one": "Dieser Artikel ist an deinem ausgewählten Abholort nicht vorrätig.",
+            "other": "Diese Artikel sind an deinem ausgewählten Abholort nicht vorrätig."
+          },
+          "cannot_ship_description": {
+            "one": "Dieser Artikel ist an deinem ausgewählten Abholort nicht vorrätig und kann nicht versendet werden.",
+            "other": "Diese Artikel sind an deinem ausgewählten Abholort nicht vorrätig und können nicht versendet werden."
+          }
+        },
+        "stock_details_banner": {
+          "closest_location": "Der nächstgelegene Abholort mit allen Artikeln auf Lager ist %{distance} entfernt",
+          "change_location_or_ship_separately": "%{change_location_link} oder %{ship_separately_link}",
+          "change_location_or_remove_items": "%{change_location_link} oder %{remove_items_link}",
+          "heading": {
+            "one": "%{count} Artikel ist am Standort %{location} nicht zur Abholung verfügbar",
+            "other": "%{count} Artikel sind am Standort %{location} nicht zur Abholung verfügbar"
+          },
+          "ship_separately": {
+            "one": "ihn separat versenden",
+            "other": "sie separat versenden"
+          }
+        }
+      },
+      "split_delivery": {
+        "pickup_all_items": "Alle Artikel abholen",
+        "items_for_pickup": "Artikel für Abholung",
+        "delivery_method": "Aufgeteilte Zustellmethode",
+        "delivery_method_menu": "Menü für aufgeteilte Zustellmethode",
+        "inventory_issue_banner": {
+          "remove_items_or_ship": "%{ship_separately_link} oder %{remove_items_link}",
+          "remove_items_or_pickup": "%{pickup_in_store_link} oder %{remove_items_link}",
+          "heading": {
+            "cannot_be_picked_up": {
+              "one": "%{count} Artikel kann nicht abgeholt werden",
+              "other": "%{count} Artikel können nicht abgeholt werden"
+            },
+            "cannot_be_shipped": {
+              "one": "%{count} Artikel kann nicht versendet werden",
+              "other": "%{count} Artikel können nicht versendet werden"
+            }
+          },
+          "remove_item": {
+            "one": "Artikel entfernen",
+            "other": "Artikel entfernen"
+          },
+          "ship_separately": {
+            "one": "Separat versenden",
+            "other": "Separat versenden"
+          },
+          "pick_them_up_in_store": {
+            "one": "Im Shop abholen",
+            "other": "Im Shop abholen"
+          },
+          "remove_item_only": {
+            "one": "Artikel entfernen",
+            "other": "Artikel entfernen"
+          },
+          "merchandise_line_with_quantity": "%{title} (×%{quantity})"
+        },
+        "pickup_and_ship": "Abholung und Versand",
+        "ship_all_items": "Alle Artikel versenden",
+        "separate_pickup_email_notice": "Du erhältst eine separate E-Mail, wenn deine Bestellung abholbereit ist.",
+        "items_for_shipping": "Artikel für den Versand",
+        "pickup_items_count": {
+          "one": "%{count} Artikel abholen",
+          "other": "%{count} Artikel abholen"
+        },
+        "ship_items_count": {
+          "one": "%{count} Artikel versenden",
+          "other": "%{count} Artikel versenden"
+        },
+        "items_moved_to_shipping_toast": "Artikel, die nicht abgeholt werden können, wurden auf Versand umgestellt",
+        "cross_border": {
+          "modal": {
+            "heading": "Land ändern?",
+            "content": "Deine Standorte für Abholung und Versand müssen sich im selben Land befinden. Wenn du das Land änderst, werden alle Artikel auf Versand zurückgesetzt.",
+            "change_country": "Land ändern",
+            "country_changed_heading": "Land geändert"
+          },
+          "banner": "Deine Zustellmethode wurde aktualisiert"
+        },
+        "all_items": "Alle Artikel",
+        "items_count": {
+          "one": "%{count} Artikel",
+          "other": "%{count} Artikel"
+        },
+        "accessibility": {
+          "status": {
+            "ship_separately": "%{items} werden separat versendet.",
+            "pickup_in_store": "%{items} werden im Shop abgeholt.",
+            "remove_items": "%{items} wurden aus dem Warenkorb entfernt."
+          }
+        }
+      },
+      "captcha": {
+        "title": "CAPTCHA zum Fortfahren abschließen",
+        "errors": {
+          "not_solved": "CAPTCHA zum Fortfahren abschließen"
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Deine Bestellung konnte nicht bearbeitet werden, weil dein Rabattcode nicht mehr verfügbar ist. Prüfe deinen Gesamtbestellwert und versuche es erneut."
+      },
+      "wallets": {
+        "return_to_store": "Zurück zum Laden",
+        "redirect_hint": "Du wirst aufgefordert, dich mit {{walletName}} anzumelden.",
+        "logged_in": "Mit {{email}} verbunden",
+        "shipping_line_label": "Versand",
+        "connect_shipping_methods": "{{method1}} und {{method2}}",
+        "payment_in_progress_title": "Zahlung wird verarbeitet",
+        "payment_in_progress_body": "Deine Zahlung wird verarbeitet. Deine Bestellung ist in Kürze abgeschlossen.",
+        "continue_with": "Weiter mit {{walletName}}",
+        "call_to_action": "Mit {{walletName}} bezahlen",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} nicht verfügbar",
+            "description": "{{walletName}} ist nicht verfügbar. Versuche es mit einer anderen Zahlungsmethode oder probiere es später noch einmal.",
+            "instructions": "Es ist ein Problem mit {{walletName}} aufgetreten. Kehre zum Shop zurück, um es erneut zu versuchen, oder checke mit einer anderen Methode aus.",
+            "unavailable_for_country": "{{walletName}} ist in {{countryName}} nicht verfügbar. Wähle eine andere Zahlungsmethode aus, um deinen Kauf abzuschließen"
+          },
+          "generic": "Es ist ein Problem mit Buy with {{walletName}} aufgetreten. Kehre zum Shop zurück, um es erneut zu versuchen, oder checke mit einer anderen Methode aus.",
+          "terminal": "Es ist ein Problem mit {{walletName}} aufgetreten. Verwende eine andere Zahlungsmethode.",
+          "detour": {
+            "stock_problems": "Einige Artikel sind nicht mehr lieferbar. Schließe {{walletName}} und versuche es erneut.",
+            "price_change": "Einige Artikelpreise haben sich geändert. Schließe {{walletName}}, um deine Bestellung zu überprüfen, und versuche es erneut.",
+            "queue": "Du wurdest zur Warteschlange für den Checkout hinzugefügt. Schließe {{walletName}}, um fortzufahren.",
+            "currency_change": "Du kannst mit {{walletName}} keine andere Adresse verwenden. Verwende die ursprüngliche Adresse oder versuche es mit einer anderen Zahlungsmethode.",
+            "currency_change_with_country": "{{walletName}} kann nicht verwendet werden, da sich die Währung geändert hat. Verwende eine Adresse in {{countryName}} oder wähle eine andere Zahlungsmethode."
+          },
+          "unsupported": {
+            "address": "Der Händler kann nicht an die ausgewählte Lieferadresse liefern.",
+            "postal_code": "Dieser Standort wird nicht unterstützt",
+            "wallet_is_unavailable": "{{walletName}} kann mit dieser Adresse nicht verwendet werden. Wähle eine andere Adresse aus oder schließe {{walletName}}, um deinen Kauf abzuschließen."
+          },
+          "outdated": {
+            "shipping_method": "Die Versandoptionen für deine Bestellung haben sich geändert. Prüfe deine Auswahl.",
+            "payment_terms": "Die Zahlungsbedingungen haben sich geändert. Überprüfe deine Bestellung."
+          },
+          "invalid": {
+            "shipping_address": "Gib eine gültige Lieferadresse ein",
+            "billing_address": "Gib eine gültige Rechnungsadresse ein",
+            "shipping_option": "Wähle eine gültige Versandoption aus",
+            "email": "Gib eine gültige E-Mail-Adresse ein",
+            "zone": "Gib ein gültiges Bundesland/eine gültige Provinz ein",
+            "postal_code": "Gib eine gültige Postleitzahl ein",
+            "reduction_code": "Gib einen gültigen Rabattcode oder Gutschein ein",
+            "billing_must_match_shipping": "Muss mit der Lieferadresse übereinstimmen",
+            "phone": "Gib eine gültige Telefonnummer ein",
+            "emirate": "Gültiges Emirat eingeben",
+            "billing_zone": "Gib ein gültiges Bundesland/einen gültigen Kanton für diese Rechnungsadresse ein",
+            "billing_phone": "Gib eine gültige Telefonnummer für diese Rechnungsadresse ein",
+            "billing_zip": "Gib eine gültige Postleitzahl für diese Rechnungsadresse ein"
+          },
+          "missing": {
+            "first_name": "Gib einen Vornamen ein",
+            "last_name": "Gib einen Nachnamen ein",
+            "address1": "Gib eine Adresse ein",
+            "address2": "Gib eine Wohnung, ein Zimmer usw. ein",
+            "city": "Gib eine Stadt ein",
+            "province": "Wähle ein Bundesland/einen Kanton aus"
+          }
+        }
       }
     }
   }
