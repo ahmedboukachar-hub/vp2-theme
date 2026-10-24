@@ -1,3 +1,4 @@
+{%- comment -%} Homepage and Designers page: one card per designer collection. {%- endcomment -%}
 {{ 'section-featured-designers.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
@@ -93,9 +94,10 @@
       "type": "select",
       "id": "columns_desktop",
       "label": "Cards per row on desktop",
+      "info": "Small cards: two shorter cards per row on the two-up grid, six per row on the three-up grid.",
       "options": [
-        { "value": "2", "label": "2 large cards per row (small cards: 2 shorter cards per row)" },
-        { "value": "3", "label": "3 large cards per row (small cards: 6 per row)" }
+        { "value": "2", "label": "2 large cards per row" },
+        { "value": "3", "label": "3 large cards per row" }
       ],
       "default": "2"
     },
