@@ -817,5 +817,377 @@
       "expanded": "Formular für den Empfänger des Gutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Gutscheins minimiert"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "continue_button_label": "Weiter",
+        "complete_purchase_button_label": "Kaufen",
+        "pay_now_button_label": "Jetzt kaufen",
+        "authenticate_purchase_button_label": "Zahlung authentifizieren",
+        "edit_link_label": "Bearbeiten",
+        "all_rights_reserved": "Alle Rechte vorbehalten %{shop_name}",
+        "print_policies_link_label": "Drucken",
+        "cart": "Warenkorb",
+        "close_modal_label": "Schließen",
+        "close_notice_label": "Schließen",
+        "expand_notice_label": "Mehr anzeigen",
+        "continue_to_shipping_method": "Weiter zum Versand",
+        "continue_to_payment_method": "Weiter zur Zahlung",
+        "continue_to_review": "Bestellung überprüfen",
+        "back_to_cart": "Zurück zum Warenkorb",
+        "back_to_contact_information": "Zurück zu den Informationen",
+        "back_to_shipping_method": "Zurück zum Versand",
+        "back_to_payment_method": "Zurück zur Zahlung",
+        "choose_shipping_method": "Wähle eine Versandart aus",
+        "choose_payment_method": "Wähle eine Zahlungsmethode aus",
+        "choose_billing_address": "Wähle eine Rechnungsadresse aus",
+        "contact_us_html": "Kontaktiere uns für weitere Informationen",
+        "autocomplete_title": "Vorschläge",
+        "autocomplete_single_item": "1 Option verfügbar",
+        "autocomplete_multi_item": "{{number}} Optionen verfügbar",
+        "autocomplete_selection": "{{number}} von {{total}}",
+        "autocomplete_close": "Vorschläge schließen",
+        "forwarding_indicator": {
+          "new_window": "Öffnet ein neues Fenster.",
+          "external": "Öffnet externe Webseite.",
+          "external_and_new_window": "Öffnet externe Webseite in einem neuen Fenster."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - Checkout"
+        },
+        "tooltip_accessibility_label": "Mehr Informationen",
+        "errors": {
+          "session_identifier_not_unique_error": "Mit deiner Bestellung ist etwas schiefgelaufen, bitte versuche erneut auszuchecken.",
+          "line_item_limit_reached": "Die maximale Anzahl an Positionen wurde erreicht.",
+          "only_empty_terms_accepted": "Für diese Bedingung sind nur leere Eingaben gültig.",
+          "session_is_already_finished": "Diese Checkout-Sitzung wurde bereits abgeschlossen.",
+          "merchandise": {
+            "only_value_constraint": "In der Merchandise-Artikel-Eingabe sind nur exakte Werte zulässig.",
+            "merchandise_not_found": "Produkt wurde nicht gefunden.",
+            "merchandise_variant_not_found": "Produktvariante wurde nicht gefunden.",
+            "merchandise_not_applicable": "Die Produktvariante kann nicht gekauft werden.",
+            "bundle_products_not_supported_for_b2b": "Gebündelte Artikel können nicht zu B2B-Bestellungen für diesen Standort hinzugefügt werden.",
+            "gift_card_quantity_mismatch": "Bei der Angabe von Geschenkgutscheincodes müssen die Positionsmenge und die Anzahl der Geschenkgutscheincodes übereinstimmen.",
+            "gift_card_not_supported": "Geschenkgutscheine werden in diesem Checkout nicht unterstützt.",
+            "gift_card_not_unique": "Der Gutschein mit dem Code {{code}} liegt in diesem Checkout mehr als einmal vor. Die Codes werden vor dem Vergleich formatiert.",
+            "gift_card_used": "Der Gutscheincode {{code}} ist bereits einem Gutschein zugewiesen. Die Codes werden vor dem Vergleich formatiert.",
+            "gift_card_invalid": "Der Geschenkgutscheincode {{code}} ist ungültig.",
+            "gift_card_code_changed": "Der Geschenkgutscheincode {{proposed_code}} wurde zu {{formatted_code}} geändert, um den Formatierungsregeln zu entsprechen.",
+            "gift_card_with_attributes_not_supported": "Geschenkgutscheine mit benutzerdefinierten Attributen werden in diesem Checkout nicht unterstützt.",
+            "gift_card_with_components_not_supported": "Geschenkgutscheine mit Komponenten werden in diesem Checkout nicht unterstützt.",
+            "selling_plan_mismatch": "Das Abonnement wurde aktualisiert.",
+            "selling_plan_not_supported_b2b": "Abonnements werden im B2B-Checkout nicht unterstützt.",
+            "price_mismatch": "Der zuvor vorgeschlagene Preis für diesen Merchandise-Artikel war ungültig und wurde aktualisiert.",
+            "inventory_not_found": "Für diesen Merchandise-Artikel wurde kein Inventar gefunden.",
+            "product_not_published": "Produkt wurde nicht veröffentlicht.",
+            "duplicated_stable_id": "Diese Merchandise-Artikel-Reihe weist die gleiche Stable-ID wie eine andere Reihe auf.",
+            "minimum_quantity_not_met": "Die Menge einiger Artikel erfüllt nicht die erforderliche Mindestmenge.",
+            "maximum_quantity_exceeded": "Die Menge einiger Artikel überschreitet die maximale Menge.",
+            "quantity_increment_not_met": "Die Menge einiger Artikel erfüllt nicht die Bestellbeschränkungen.",
+            "quantity_rules_not_met": "Die Menge einiger Artikel erfüllt nicht die Bestellbeschränkungen.",
+            "bundle_requires_components": "Dieses Merchandise-Artikel-Bundle hat keine Komponenten.",
+            "title_too_long": "Der Merchandise-Artikel-Titel ist zu lang.",
+            "title_empty": "Der Merchandise-Artikel-Titel ist leer.",
+            "mixed_currencies": "Checkout enthält Positionen mit verschiedenen Währungen.",
+            "product_not_published_in_buyer_location": "Das Produkt ist am aktuellen Käuferstandort nicht verfügbar.",
+            "combined_listing_parent_not_purchasable": "Übergeordnete Produkte eines kombinierten Angebots können nicht direkt gekauft werden.",
+            "fixed_selling_plans_not_supported_for_draft_orders": "Diese Kaufoption wird für Bestellentwürfe nicht unterstützt."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Unternehmenskontakt hat keinen Zugriff auf dieses Unternehmen.",
+            "customer_account_required": "Du musst dich anmelden, um fortzufahren.",
+            "contact_info_does_not_match_customer_account": "Die Kontaktinformationen müssen mit dem Konto übereinstimmen, bei dem du gerade angemeldet bist.",
+            "phone_number_does_not_match_expected_pattern": "Die angegebene Telefonnummer stimmt nicht mit dem erwarteten Muster überein.",
+            "email_required": "Eine E-Mail ist erforderlich, wenn der Merchandise-Artikel im Rahmen eines Abonnements gekauft wird.",
+            "email_domain_is_invalid": "Diese angegebene Domain kann nicht aufgelöst werden.",
+            "missing_contact_method": "Es fehlt eine gültige Kontaktmethode.",
+            "checkout_completion_target_is_missing": "Das Ziel für den Checkout-Abschluss fehlt.",
+            "invalid_customer_profile": "Es wurde ein ungültiges Kundenprofil angegeben.",
+            "customer_profile_access_restricted": "Der Checkout hat keine Berechtigung, auf das Kundenprofil zuzugreifen.",
+            "checkout_completion_target_is_invalid_proc": "Ungültiges Ziel für den Checkout-Abschluss.",
+            "company_location_required": "Der Kunde muss zum Fortfahren einen Unternehmensstandort auswählen.",
+            "lost_access_to_company": "Kunde hat Zugang zu allen Unternehmen verloren.",
+            "company_purchase_permission_required": "Kunde ist nicht berechtigt, Unternehmensbestellungen aufzugeben.",
+            "personal_order_not_allowed": "Privatbestellungen sind für diesen Shop nicht möglich.",
+            "buyer_identity_presentment_currency_does_not_match": "Bei der Verarbeitung deiner Bestellung ist ein Problem aufgetreten. Versuche es in ein paar Minuten noch einmal."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Der Warenkorb darf nur über eine Zustellungsreihe verfügen.",
+            "wrong_number_of_delivery_lines": "Für jede Merchandise-Artikel-Gruppe muss eine Zustellungsreihe angegeben werden.",
+            "external_delivery_promise_error": "Externer Fehler bei der Abfrage des Zustellungsdatums.",
+            "options_instructions_invalid": "Die angegebenen Anweisungen entsprechen nicht dem erwarteten Muster.",
+            "destination_address_required": "Zum Fortfahren ist eine Zieladresse ist erforderlich.",
+            "pickup_points_unavailable": "Abholstandorte sind derzeit nicht verfügbar.",
+            "local_pickup_delivery_line_detail_changed": "Zum Fortfahren muss die derzeitige Zustellungsstrategie für die lokale Abholung geändert werden.",
+            "local_pickup_no_delivery_strategy_available": "Es wurde keine verfügbare Zustellungsstrategie für die lokale Abholung gefunden.",
+            "origin_location_id_required": "Eine Herkunftsstandort-ID ist erforderlich, wenn die Zustellmethode EINZELHANDEL angefordert wird.",
+            "invalid_origin_location_id": "Es konnte kein Standort gefunden werden, der mit der Herkunftsstandort-ID übereinstimmt.",
+            "origin_location_id_not_allowed": "Die angeforderten Zustellmethoden unterstützen keine Herkunftsstandort-ID.",
+            "auto_fulfill_not_allowed": "Diese Sitzung ist nicht dazu autorisiert, das Fulfillment-Verhalten zu überschreiben.",
+            "auto_fulfill_required": "Die automatische Ausführung ist erforderlich, wenn die Zustellmethode EINZELHANDEL angefordert wird.",
+            "prefetch_shipping_rates_used": "Vorab abgerufene Versandtarife dürfen keine Rückgabekosten sein.",
+            "fulfillment_constraints_not_satisfied": "Eine oder mehrere Fulfillment-Bedingungen wurden nicht erfüllt.",
+            "must_fulfill_from_constraint_not_satisfied": "Die Fulfillment-Bedingungen wurden nicht erfüllt, da die Artikel nicht in den erforderlichen Standorten ausgeführt werden können.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "Die Fulfillment-Bedingungen wurden nicht erfüllt, da die Artikel nicht im selben Standort ausgeführt werden können.",
+            "delivery_strategy_conditions_not_satisfied": "Für diesen Standort sind Zustellungsstrategien verfügbar, deren Bedingungen jedoch nicht erfüllt wurden.",
+            "out_of_stock_at_origin_location": "Kein Lagerbestand am Herkunftsstandort.",
+            "invalid_signature": "Ungültige Rabattsignatur.",
+            "selected_pickup_option_no_longer_available": "Deine zuvor ausgewählte Abholoption ist nicht mehr verfügbar.",
+            "mixed_destination_countries": "Die Zustellung ist nicht verfügbar, da sich die Zustellpositionen über mehrere Länder erstrecken."
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "Rabatte sind in B2B-Shops nicht zulässig.",
+            "custom_discount_not_honoured": "Der bereitgestellte Kundenrabatt wurde nicht gewährt.",
+            "unsupported_expectation": "Die angegebene Rabattreihe enthielt einen Erwartungswert, der von der Richtlinie nicht interpretiert werden konnte.",
+            "additional_requested_discount_code_discarded": "{{code}} ist gültig, aber nicht anwendbar. Rabattbedingungen überprüfen.",
+            "allocations_mismatch": "Dein Rabattcode hat sich geändert. Überprüfe deinen Warenkorb und versuche es erneut.",
+            "discount_code_not_honoured": "%{discount_rejection_message}",
+            "discount_title_too_long": "Der Rabatttitel darf maximal 255 Zeichen enthalten.",
+            "additional_requested_discount_discarded": "Dein Rabatt ist gültig, aber nicht anwendbar. Rabattbedingungen überprüfen.",
+            "mixed_destination_countries": "Rabatte sind nicht verfügbar, da sich die Zustellpositionen über mehrere Länder erstrecken."
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "Die mit deiner Bestellung verbundenen Steuern haben sich geändert. Überprüfe sie und versuche es erneut.",
+            "unresolvable_tax_terms": "Die vorgeschlagenen Bedingungen sind im derzeitigen Verhandlungskontext unvereinbar.",
+            "delivery_price_is_abstract": "Der zugehörige Zustellungspreis ist abstrakt.",
+            "tax_inclusivity_mismatch": "Verhandle mit dem konkretem Wert totalTaxAndDutyAmount oder totalAmountIncludedInTarget neu.",
+            "tax_exemption_not_supported": "Steuerbefreiungen werden in der aktuellen Verhandlungssitzung nicht unterstützt.",
+            "delivery_tax_exemption_not_supported": "Steuerbefreiungen für Zustellungsreihen werden derzeit nicht unterstützt.",
+            "proposed_allocations_required": "Das Feld \"Vorgeschlagene Zuweisungen\" fehlt.",
+            "merchandise_terms_must_be_defined": "Die Merchandise-Artikel-Bedingungen müssen definiert werden.",
+            "delivery_terms_must_be_defined": "Die Zustellungsbedingungen müssen definiert werden.",
+            "merchandise_discount_terms_must_be_defined": "Die Bedingungen für den Rabatt auf Merchandise-Artikel müssen definiert werden.",
+            "delivery_discount_terms_must_be_defined": "Die Bedingungen für den Rabatt auf Zustellungen müssen definiert werden.",
+            "allocated_required": "Das Feld \"Zugewiesen\" fehlt.",
+            "value_required": "Das Feld \"Wert\" fehlt.",
+            "line_splits_not_supported": "Das Feld \"Merchandise-Artikel-Reihen\" muss so geteilt werden, dass jede Reihe jeweils eine einzelne Reihenkomponente im Angebot des Verkäufers ausmacht.",
+            "mixed_tax_inclusivity_not_supported": "Steuerzeilen müssen entweder alle inklusive oder alle exklusive Steuern sein."
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "Manuelle Zahlungen sind in B2B-Shops nicht zulässig.",
+            "positive_amount_expected": "Der zu zahlende Betrag muss größer als 0 sein.",
+            "total_amount_mismatch": "Der zu zahlende Gesamtbetrag stimmt nicht mit der Summe der Zahlungen überein.",
+            "subscription_terms_not_accepted": "Die Abonnementbedingungen wurden nicht akzeptiert.",
+            "missing_session_id": "Es fehlen die Kreditkarten-Sitzungsinformationen.",
+            "gateway_not_supported": "Das Zahlungs-Gateway unterstützt die Speicherung der Zahlungsmethode nicht.",
+            "credit_card_last_name_required": "\"Nachname\" kann nicht gleich Null sein.",
+            "credit_card_update_failed": "Die Aktualisierung der Kreditkarte ist fehlgeschlagen.",
+            "invalid_address_type": "Der angegebene Adresstyp ist für diese Zahlungsmethode ungültig.",
+            "missing_retail_attributions": "Für manuell eingegebene Kreditkartenzahlungen sind Einzelhandelszuordnungen erforderlich.",
+            "unexpected_retail_attributions": "Es wurden unerwartet Einzelhandelszuordnungen für die Zahlung per Kreditkarte angegeben.",
+            "invalid_card_source": "Diese Sitzung hat nicht die Berechtigung, diese Kartenquelle zu verwenden.",
+            "wallet_content_missing": "Es fehlt der Wallet-Inhalt.",
+            "payment_instrument_not_found": "Zahlungsmethode konnte nicht gefunden werden.",
+            "unauthorized_capture_method": "Das Konfigurieren der Zahlungserfassungsmethode ist nicht zulässig.",
+            "saved_payment_methods_not_allowed": "Gespeicherte Zahlungsmethoden sind nicht zulässig.",
+            "saved_payment_methods_not_enabled": "Gespeicherte Zahlungsmethoden sind für diesen Shop nicht aktiviert.",
+            "store_credit_not_enabled": "Shop-Guthaben ist für diesen Shop nicht aktiviert.",
+            "store_credit_account_not_found": "Shop-Guthaben-Konto wurde nicht gefunden.",
+            "store_credit_account_mismatch": "Shop-Guthaben-Konto stimmt nicht mit der Identität des Käufers überein.",
+            "store_credit_mismatched_currency": "Die Währung des Shop-Guthaben-Kontos stimmt nicht mit der Checkout-Währung überein.",
+            "store_credit_insufficient_funds": "Das Guthaben auf dem Shop-Guthaben-Konto ist nicht ausreichend.",
+            "store_credit_buying_gift_card": "Du kannst kein Shop-Guthaben verwenden, um einen Gutschein zu kaufen.",
+            "gift_cards_not_allowed_for_b2b": "Geschenkgutscheine sind in B2B-Shops nicht zulässig.",
+            "method_required": "Es muss eine Zahlungsmethode vorgeschlagen werden.",
+            "paypal_express_address_invalid": "PayPal hat eine ungültige Adresse zurückgegeben.",
+            "saved_payment_methods_cvv_verification_disabled": "Die ausgewählte Zahlungsmethode erfordert eine CVV-Verifizierung, die für diesen Shop nicht aktiviert ist. Wähle eine andere Zahlungsmethode aus."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Shop akzeptiert kein Trinkgeld.",
+            "only_one_tip_line_allowed": "Mehrere Trinkgeldreihen werden nicht unterstützt.",
+            "tips_not_allowed_for_b2b": "Trinkgelder sind in B2B-Shops nicht zulässig.",
+            "currency_change_reset": "Das Trinkgeld wurde aufgrund der Währungsumstellung zurückgesetzt.",
+            "tips_not_allowed_for_deferred_purchase_options": "Trinkgelder für latente Kaufoptionen werden noch nicht unterstützt."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Dieser Bestellentwurf ist im aktuellen Shop nicht vorhanden.",
+            "staff_member_not_exist": "Dieser Mitarbeiter ist im aktuellen Shop nicht vorhanden.",
+            "location_not_exist": "Dieser Standort ist im aktuellen Shop nicht vorhanden.",
+            "point_of_sale_device_not_exist": "Dieses Verkaufsstellengerät ist im aktuellen Shop nicht vorhanden.",
+            "unresolvable_target_merchandise_lines": "Die vorgeschlagenen Verkaufszuweisungen sind im derzeitigen Verhandlungskontext unvereinbar."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Das Angebot des Käufers muss nicht-verhandelbare Bedingungen enthalten.",
+            "invalid_signature": "Die Signatur für {{target_terms}} ist ungültig."
+          },
+          "inventory": {
+            "missing_quantity_value": "In den Bestandsreihen des Käufers fehlt das Mengenfeld.",
+            "changing_behavior_not_allowed": "Dieser Kunde hat nicht die Berechtigung, das Inventarverhalten zu ändern.",
+            "only_one_inventory_behavior_allowed": "Derzeit ist nur ein Inventarverhalten pro Checkout zulässig."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Das Ablehnen von Zöllen ist in diesem Checkout nicht zulässig."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Die Einzelhandelszuordnung ist in diesem Checkout nicht zulässig.",
+            "retail_attribution_required": "Die Einzelhandelszuordnung ist in diesem Checkout erforderlich."
+          },
+          "captcha": {
+            "metadata_missing": "Das Abschließen einer Captcha-Validierung ist in diesem Checkout erforderlich.",
+            "metadata_mismatch": "Der angegebene Captcha-Anbieter und der Typ stimmen nicht mit den erwarteten Werten überein.",
+            "token_missing": "Ein Captcha-Token muss bereitgestellt werden, um den Checkout abzuschließen.",
+            "job_enqueue_failed": "Der Captcha-Validierungsvorgang konnte nicht zur Warteschlange hinzufügt werden.",
+            "job_already_queued": "Die Captcha-Validierung für dieses Captcha-Token wurde bereits zur Warteschlange hinzugefügt.",
+            "token_expired": "Das angegebene Captcha-Token ist abgelaufen. Schließe eine neue Captcha-Validierung ab, um mit dem Checkout fortzufahren.",
+            "token_invalid": "Das angegebene Captcha-Token ist ungültig. Schließe eine neue Captcha-Validierung ab, um mit dem Checkout fortzufahren.",
+            "token_not_valid_for_session": "Das angegebene Captcha-Token kann in diesem Checkout nicht verwendet werden."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Der erhaltene Betrag muss in der Shop-Währung vorliegen."
+          },
+          "checkout_source": {
+            "revoked": "Dieser Checkout ist nicht mehr verfügbar."
+          }
+        },
+        "full_price": "Voller Preis:",
+        "title": "Checkout – {{shopName}}",
+        "full_title": "{{pageTitle}} – {{shopName}} – Checkout",
+        "loading_title": "Checkout – {{shopName}}",
+        "display_name": "{{firstName}} {{lastName}}",
+        "google_map_title": "Google Maps",
+        "submit_order_button_label": "Bestellung senden",
+        "submit_for_review_button_label": "Zur Prüfung einreichen",
+        "submit_for_review_notice_label": "Die Zahlung ist erst fällig, sobald deine Bestellung überprüft wurde",
+        "continue_to_payment_plans_button_label": "Weiter zu den Zahlungsplänen",
+        "back_button_label": "Rückgabe",
+        "choose_delivery_strategy": "Wähle eine Zustellmethode",
+        "autocomplete_zero_item": "Keine Artikel verfügbar",
+        "autocomplete_powered_by_google": "Unterstützt von {{brandName}}",
+        "submit": "Absenden",
+        "processing": "Wird bearbeitet ...",
+        "stepper": {
+          "increase": "{{type}} erhöhen",
+          "decrease": "{{type}} senken",
+          "minimum_reached": "Minimum von {{value}} wurde erreicht",
+          "maximum_reached": "Maximum von {{value}} wurde erreicht"
+        },
+        "remove_item": "%{label} entfernen",
+        "remove_tag": "Tag entfernen",
+        "dates": {
+          "weekdays": {
+            "monday": "Montag",
+            "tuesday": "Dienstag",
+            "wednesday": "Mittwoch",
+            "thursday": "Donnerstag",
+            "friday": "Freitag",
+            "saturday": "Samstag",
+            "sunday": "Sonntag"
+          },
+          "weekdays_abbreviation": {
+            "monday": "Mo",
+            "tuesday": "Di",
+            "wednesday": "Mi",
+            "thursday": "Do",
+            "friday": "Fr",
+            "saturday": "Sa",
+            "sunday": "So"
+          },
+          "months": {
+            "january": "Januar",
+            "february": "Februar",
+            "march": "März",
+            "april": "April",
+            "may": "Mai",
+            "june": "Juni",
+            "july": "Juli",
+            "august": "August",
+            "september": "September",
+            "october": "Oktober",
+            "november": "November",
+            "december": "Dezember"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Vormonat anzeigen, {{month}} {{year}}",
+          "show_next_month": "Nächsten Monat anzeigen, {{month}} {{year}}",
+          "range_start": "Bereichsbeginn",
+          "in_range": "Im Bereich",
+          "range_end": "Bereichsende"
+        },
+        "list_formatter": {
+          "and": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}} und {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} und {{secondWord}}"
+          },
+          "or": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}} oder {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} oder {{secondWord}}"
+          },
+          "narrow": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, {{lastWord}}",
+            "twoWordConnector": "{{firstWord}}, {{secondWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Cluster mit {{number}} Marker",
+            "other": "Cluster mit {{number}} Markern"
+          }
+        },
+        "sheet": {
+          "expand": "Erweitern"
+        },
+        "confirm_order_button_label": "Bestellung bestätigen",
+        "qr_code": "QR-Code",
+        "dropzone": {
+          "add_file": "Datei hinzufügen",
+          "invalid_file_type": "Dateityp wird nicht unterstützt",
+          "dragged_over": "Datei zum Hochladen ablegen"
+        },
+        "loading": "Wird geladen …",
+        "remove_chip": "Artikel entfernen",
+        "finalize_order_accessibility_label": "Bestellung abschließen"
+      },
+      "contact": {
+        "title": "Information",
+        "address_title": "Adresse",
+        "delivery_option_title": "Zustellmethode",
+        "contact_method_title": "Kontakt",
+        "email_label": "E-Mail",
+        "email_placeholder": "E-Mail",
+        "email_or_phone_label": "E-Mail oder Mobiltelefonnummer",
+        "email_or_phone_placeholder": "E-Mail oder Mobiltelefonnummer",
+        "stored_addresses_label": "Gespeicherte Adressen",
+        "new_address_label": "Neue Adresse verwenden",
+        "first_name_label": "Vorname",
+        "optional_first_name_label": "Vorname (optional)",
+        "last_name_label": "Nachname",
+        "company_label": "Firma",
+        "optional_company_label": "Firma (optional)",
+        "address1_label": "Adresse",
+        "address2_label": "Wohnung, Zimmer usw.",
+        "optional_address2_label": "Wohnung, Zimmer, usw. (optional)",
+        "city_label": "Stadt",
+        "country_label": "Land / Region",
+        "country_code": "Länder-/Regionscode",
+        "province_label": "Bundesland",
+        "province_placeholder": "Bundesland",
+        "county_label": "Provinz",
+        "county_placeholder": "Provinz",
+        "state_label": "Bundesland",
+        "state_placeholder": "Bundesland",
+        "region_label": "Region",
+        "region_placeholder": "Region",
+        "prefecture_label": "Präfektur",
+        "prefecture_placeholder": "Präfektur",
+        "governorate_label": "Governorate",
+        "governorate_placeholder": "Governorate",
+        "emirate_label": "Emirate",
+        "emirate_placeholder": "Emirate",
+        "state_and_territory_label": "Staat/Territorium",
+        "state_and_territory_placeholder": "Staat/Territorium",
+        "phone_label": "Telefon",
+        "optional_phone_label": "Telefon (optional)",
+        "phone_placeholder": "Telefon",
+        "phone_tooltip": "Falls wir dich zu deiner Bestellung kontaktieren müssen",
+        "zip_code_label": "Postleitzahl",
+        "zip_code_placeholder": "Postleitzahl",
+        "postal_code_label": "Postleitzahl"
+      }
+    }
   }
 }
