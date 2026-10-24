@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "meta": {
@@ -819,6 +828,256 @@
       "send_on_label": "Spedisci il giorno (opzionale)",
       "expanded": "Modulo destinatario del buono regalo espanso",
       "collapsed": "Modulo destinatario del buono regalo compresso"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "back_to_cart": "Torna al carrello",
+        "back_to_contact_information": "Torna alle informazioni",
+        "back_to_shipping_method": "Torna alla spedizione",
+        "back_to_payment_method": "Ritorna al pagamento",
+        "choose_shipping_method": "Scegli una modalità di spedizione",
+        "choose_payment_method": "Scegli un metodo di pagamento",
+        "choose_billing_address": "Scegli l'indirizzo per la fatturazione",
+        "contact_us_html": "Modifica l'indirizzo di fatturazione",
+        "autocomplete_title": "Suggerimenti",
+        "autocomplete_single_item": "1 articolo disponibile",
+        "autocomplete_multi_item": "{{number}} articoli disponibili",
+        "autocomplete_selection": "{{number}} di {{total}}",
+        "autocomplete_close": "Chiudi i suggerimenti",
+        "forwarding_indicator": {
+          "new_window": "Apre in una nuova finestra.",
+          "external": "Apre un sito esterno.",
+          "external_and_new_window": "Apre un sito esterno in una nuova finestra."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - Check-out"
+        },
+        "tooltip_accessibility_label": "Maggiori informazioni",
+        "errors": {
+          "session_identifier_not_unique_error": "Si è verificato un errore con l'ordine, riprova a eseguire il check-out.",
+          "line_item_limit_reached": "Numero massimo di voci raggiunto.",
+          "only_empty_terms_accepted": "Questa policy accetta solo termini vuoti.",
+          "session_is_already_finished": "Questa sessione di check-out è già stata completata.",
+          "merchandise": {
+            "only_value_constraint": "Nell'input della merce sono consentiti solo valori esatti.",
+            "merchandise_not_found": "Prodotto non trovato.",
+            "merchandise_variant_not_found": "Variante di prodotto non trovata.",
+            "merchandise_not_applicable": "Impossibile acquistare la variante di prodotto.",
+            "bundle_products_not_supported_for_b2b": "Gli articoli nei pacchetti non possono essere aggiunti agli ordini B2B per questa sede.",
+            "gift_card_quantity_mismatch": "Quando si specificano i codici dei buoni regalo, la quantità della voce e il numero dei codici dei buoni regalo devono corrispondere.",
+            "gift_card_not_supported": "I buoni regalo non sono supportati su questo check-out.",
+            "gift_card_not_unique": "Il buono regalo con codice {{code}} è presente più di una volta in questo check-out. I codici vengono formattati prima del confronto.",
+            "gift_card_used": "Il codice del buono regalo {{code}} è già assegnato a un buono regalo. I codici vengono formattati prima del confronto.",
+            "gift_card_invalid": "Il codice del buono regalo {{code}} non è valido.",
+            "gift_card_code_changed": "Il codice del buono regalo {{proposed_code}} è stato modificato in {{formatted_code}} per conformarlo alle regole di formattazione.",
+            "gift_card_with_attributes_not_supported": "I buoni regalo con attributi personalizzati non sono supportati su questo check-out.",
+            "gift_card_with_components_not_supported": "I buoni regalo con componenti non sono supportati su questo check-out.",
+            "selling_plan_mismatch": "L'abbonamento è stato aggiornato.",
+            "selling_plan_not_supported_b2b": "Gli abbonamenti non sono supportati per il check-out B2B.",
+            "price_mismatch": "Il prezzo proposto precedentemente per questa merce non era valido ed è stato aggiornato.",
+            "inventory_not_found": "Scorte non trovate per questa merce.",
+            "product_not_published": "Prodotto non in elenco.",
+            "duplicated_stable_id": "Questa voce della merce ha lo stesso ID stabile di un'altra voce.",
+            "minimum_quantity_not_met": "La quantità di alcuni articoli non raggiunge il minimo necessario.",
+            "maximum_quantity_exceeded": "La quantità di alcuni articoli supera il massimo consentito.",
+            "quantity_increment_not_met": "La quantità di alcuni articoli non raggiunge i limiti per gli ordini.",
+            "quantity_rules_not_met": "La quantità di alcuni articoli non raggiunge i limiti per gli ordini.",
+            "bundle_requires_components": "Questa merce in pacchetto non ha componenti.",
+            "title_too_long": "Titolo della merce troppo lungo.",
+            "title_empty": "Il titolo della merce è vuoto.",
+            "mixed_currencies": "Il check-out contiene voci con diverse valute.",
+            "product_not_published_in_buyer_location": "Il prodotto non è disponibile nella posizione attuale dell'acquirente.",
+            "combined_listing_parent_not_purchasable": "I prodotti principali delle inserzioni combinate non possono essere acquistati direttamente.",
+            "fixed_selling_plans_not_supported_for_draft_orders": "Questa opzione di acquisto non è supportata per le bozze di ordini."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Il contatto dell'azienda non ha accesso all'azienda.",
+            "customer_account_required": "Devi effettuare l'accesso per continuare.",
+            "contact_info_does_not_match_customer_account": "Le informazioni di contatto devono corrispondere all'account a cui hai effettuato l'accesso.",
+            "phone_number_does_not_match_expected_pattern": "Il numero di telefono specificato non corrisponde al modello previsto.",
+            "email_required": "Quando la merce viene acquistata utilizzando un abbonamento, è richiesta un'email.",
+            "email_domain_is_invalid": "Impossibile risolvere il dominio specificato.",
+            "missing_contact_method": "Metodo di contatto valido mancante.",
+            "checkout_completion_target_is_missing": "Destinazione di completamento del check-out mancante.",
+            "invalid_customer_profile": "Il profilo cliente fornito non è valido.",
+            "customer_profile_access_restricted": "Il check-out non ha l'autorizzazione per accedere al profilo cliente.",
+            "checkout_completion_target_is_invalid_proc": "Destinazione di completamento del check-out non valida.",
+            "company_location_required": "Il cliente deve scegliere una sede di un'azienda per continuare.",
+            "lost_access_to_company": "Il cliente ha perso l'accesso a qualsiasi azienda.",
+            "company_purchase_permission_required": "Il cliente non è autorizzato a effettuare ordini aziendali.",
+            "personal_order_not_allowed": "Per questo negozio non sono ammessi ordini personali.",
+            "buyer_identity_presentment_currency_does_not_match": "Si è verificato un problema durante l'elaborazione dell'ordine. Riprova tra qualche minuto."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Il carrello deve avere una sola voce di consegna.",
+            "wrong_number_of_delivery_lines": "Deve essere specificata una voce di consegna per ogni gruppo di merce.",
+            "external_delivery_promise_error": "Errore di recupero di una promessa di consegna esterna.",
+            "options_instructions_invalid": "Le istruzioni specificate non corrispondono al modello previsto.",
+            "destination_address_required": "Per continuare è obbligatorio un indirizzo di destinazione.",
+            "pickup_points_unavailable": "I punti di ritiro non sono attualmente disponibili.",
+            "local_pickup_delivery_line_detail_changed": "Per continuare è necessario cambiare l'attuale strategia di consegna con ritiro locale.",
+            "local_pickup_no_delivery_strategy_available": "Nessuna strategia di consegna con ritiro locale disponibile trovata.",
+            "origin_location_id_required": "L'ID della posizione di origine è obbligatorio quando si richiede il metodo di consegna RETAIL.",
+            "invalid_origin_location_id": "Impossibile trovare una Sede che corrisponda all'ID della posizione di origine.",
+            "origin_location_id_not_allowed": "I metodi di consegna richiesti non supportano un ID della posizione di origine.",
+            "auto_fulfill_not_allowed": "Questa sessione non è autorizzata a sostituire il comportamento dell'evasione.",
+            "auto_fulfill_required": "L'evasione automatica è obbligatoria quando viene richiesto il metodo di consegna RETAIL.",
+            "prefetch_shipping_rates_used": "I tariffari di spedizione prefissati non devono mai restituire le tariffe.",
+            "fulfillment_constraints_not_satisfied": "Uno o più vincoli di evasione non sono stati rispettati.",
+            "must_fulfill_from_constraint_not_satisfied": "I vincoli di evasione non sono stati rispettati perché gli articoli non possono essere evasi dalle sedi richieste.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "I vincoli di evasione non sono stati rispettati perché gli articoli non possono essere evasi dalla stessa sede.",
+            "delivery_strategy_conditions_not_satisfied": "Le strategie di consegna sono disponibili per questa sede, ma le loro condizioni non sono soddisfatte.",
+            "out_of_stock_at_origin_location": "Nessuna scorta nella posizione di origine.",
+            "invalid_signature": "Firma non valida per lo sconto.",
+            "selected_pickup_option_no_longer_available": "L'opzione di ritiro selezionata in precedenza non è più disponibile.",
+            "mixed_destination_countries": "La consegna non è disponibile perché le linee di consegna includono più paesi."
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "Gli sconti non sono consentiti nei negozi B2B.",
+            "custom_discount_not_honoured": "Lo sconto personalizzato fornito non è stato rispettato.",
+            "unsupported_expectation": "La voce di sconto fornita conteneva un'aspettativa non interpretabile per la policy.",
+            "additional_requested_discount_code_discarded": "{{code}} è valido ma non applicabile. Controlla i termini dello sconto.",
+            "allocations_mismatch": "Il tuo codice sconto è cambiato. Controlla il carrello e riprova.",
+            "discount_code_not_honoured": "%{discount_rejection_message}",
+            "discount_title_too_long": "Il titolo dello sconto non può superare i 255 caratteri.",
+            "additional_requested_discount_discarded": "Lo sconto è valido ma non applicabile. Controlla i termini dello sconto.",
+            "mixed_destination_countries": "Gli sconti non sono disponibili perché le linee di consegna includono più paesi."
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "Le imposte associate al tuo ordine sono cambiate. Controlla e riprova.",
+            "unresolvable_tax_terms": "Considerato il contesto attuale della negoziazione, i termini proposti sono irrisolvibili.",
+            "delivery_price_is_abstract": "Il prezzo di consegna relativo è astratto.",
+            "tax_inclusivity_mismatch": "Rinegoziare con il valore concreto totalTaxAndDutyAmount o totalAmountIncludedInTarget.",
+            "tax_exemption_not_supported": "Le esenzioni fiscali non sono supportate per la sessione di negoziazione attuale.",
+            "delivery_tax_exemption_not_supported": "Le esenzioni fiscali per le voci di consegna non sono attualmente supportate.",
+            "proposed_allocations_required": "Campo \"assegnazioni proposte\" mancante.",
+            "merchandise_terms_must_be_defined": "I termini della merce devono essere definiti.",
+            "delivery_terms_must_be_defined": "I termini di consegna devono essere definiti.",
+            "merchandise_discount_terms_must_be_defined": "I termini degli sconti della merce devono essere definiti.",
+            "delivery_discount_terms_must_be_defined": "I termini degli sconti di consegna devono essere definiti.",
+            "allocated_required": "Campo \"assegnato\" mancante.",
+            "value_required": "Campo \"valore\" mancante.",
+            "line_splits_not_supported": "Il campo \"voci merce\" deve essere diviso in modo che ogni componente abbia una voce singola nella proposta del venditore.",
+            "mixed_tax_inclusivity_not_supported": "Le righe d'imposta devono essere tutte con imposte incluse o tutte con imposte escluse."
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "I pagamenti manuali non sono consentiti nei negozi B2B.",
+            "positive_amount_expected": "L'importo da pagare deve essere superiore a 0.",
+            "total_amount_mismatch": "Il totale da pagare non corrisponde alla somma dei pagamenti.",
+            "subscription_terms_not_accepted": "Termini di abbonamento non accettati.",
+            "missing_session_id": "Dati mancanti della sessione della carta di credito.",
+            "gateway_not_supported": "Il canale di pagamento non supporta l'archiviazione del metodo di pagamento.",
+            "credit_card_last_name_required": "Il campo \"cognome\" non può essere nullo.",
+            "credit_card_update_failed": "Aggiornamento della carta di credito non riuscito.",
+            "invalid_address_type": "Il tipo di indirizzo fornito non è valido per questo metodo di pagamento.",
+            "missing_retail_attributions": "Le attribuzioni della vendita al dettaglio sono necessarie per i pagamenti con carta di credito inseriti manualmente.",
+            "unexpected_retail_attributions": "Attribuzioni della vendita al dettaglio fornite inaspettatamente per il pagamento con carta di credito.",
+            "invalid_card_source": "Questa sessione non ha l'autorizzazione per utilizzare questa fonte della carta.",
+            "wallet_content_missing": "Contenuto del portafoglio mancante.",
+            "payment_instrument_not_found": "Impossibile trovare il metodo di pagamento",
+            "unauthorized_capture_method": "Configurazione del metodo di acquisizione del pagamento non consentita.",
+            "saved_payment_methods_not_allowed": "I metodi di pagamento salvati non sono consentiti.",
+            "saved_payment_methods_not_enabled": "I metodi di pagamento salvati non sono abilitati per questo negozio.",
+            "store_credit_not_enabled": "Il credito in negozio non è abilitato per questo negozio.",
+            "store_credit_account_not_found": "Account del credito in negozio non trovato.",
+            "store_credit_account_mismatch": "L'account del credito in negozio non corrisponde all'identità dell'acquirente.",
+            "store_credit_mismatched_currency": "La valuta dell'account del credito in negozio non corrisponde alla valuta del check-out.",
+            "store_credit_insufficient_funds": "Ci sono fondi insufficienti nell'account del credito in negozio.",
+            "store_credit_buying_gift_card": "Non puoi usare il credito in negozio per acquistare un buono regalo.",
+            "gift_cards_not_allowed_for_b2b": "I buoni regalo non sono consentiti nei negozi B2B.",
+            "method_required": "È necessario proporre un metodo di pagamento.",
+            "paypal_express_address_invalid": "PayPal ha restituito un indirizzo non valido.",
+            "saved_payment_methods_cvv_verification_disabled": "Il metodo di pagamento selezionato richiede la verifica CVV, non abilitata per questo negozio. Seleziona un altro metodo di pagamento."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Shop non accetta mance.",
+            "only_one_tip_line_allowed": "Voci di mance multiple non supportate.",
+            "tips_not_allowed_for_b2b": "Le mance non sono consentite nei negozi B2B.",
+            "currency_change_reset": "Mancia ripristinata a causa del cambio di valuta.",
+            "tips_not_allowed_for_deferred_purchase_options": "Le mance non sono attualmente supportare con le opzioni di acquisto dilazionate."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Questa bozza di ordine non esiste nel negozio attuale.",
+            "staff_member_not_exist": "Questo membro dello staff non esiste nel negozio attuale.",
+            "location_not_exist": "Questa sede non esiste nel negozio attuale.",
+            "point_of_sale_device_not_exist": "Questo dispositivo POS non esiste nel negozio attuale.",
+            "unresolvable_target_merchandise_lines": "Considerato il contesto attuale della negoziazione, le attribuzioni di vendita proposte sono irrisolvibili."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "La proposta dell'acquirente deve contenere non-negotiable_terms.",
+            "invalid_signature": "La firma per {{target_terms}} non è valida."
+          },
+          "inventory": {
+            "missing_quantity_value": "Campo quantità mancante nelle voci delle scorte dell'acquirente.",
+            "changing_behavior_not_allowed": "Questo cliente non ha l'autorizzazione per modificare il comportamento delle scorte.",
+            "only_one_inventory_behavior_allowed": "Attualmente è consentito un solo comportamento delle scorte per check-out."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Rifiuto dei dazi non consentito per questo check-out."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Attribuzione della vendita al dettaglio non consentita per questo check-out.",
+            "retail_attribution_required": "Attribuzione della vendita al dettaglio obbligatoria per questo check-out."
+          },
+          "captcha": {
+            "metadata_missing": "Completamento di un captcha obbligatorio per questo check-out.",
+            "metadata_mismatch": "Il provider e il tipo di captcha forniti non corrispondono ai valori previsti.",
+            "token_missing": "Per completare il checkout è necessario fornire un token captcha.",
+            "job_enqueue_failed": "Impossibile mettere in coda il lavoro di convalida del captcha.",
+            "job_already_queued": "La convalida del captcha è già stata messa in coda per questo token captcha.",
+            "token_expired": "Il token captcha fornito è scaduto. Completa un nuovo captcha per continuare il check-out.",
+            "token_invalid": "Il token captcha fornito non era valido. Completa un nuovo captcha per continuare il check-out.",
+            "token_not_valid_for_session": "Impossibile utilizzare il captcha fornito per questo check-out."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "L'importo ricevuto deve essere nella valuta del negozio."
+          },
+          "checkout_source": {
+            "revoked": "Questo check-out non è più disponibile."
+          }
+        },
+        "full_price": "Prezzo pieno:",
+        "title": "Check-out: {{shopName}}",
+        "full_title": "{{pageTitle}}: {{shopName}}: Check-out",
+        "loading_title": "Check-out: {{shopName}}",
+        "display_name": "{{firstName}} {{lastName}}",
+        "google_map_title": "Mappa di Google",
+        "submit_order_button_label": "Invia ordine",
+        "submit_for_review_button_label": "Invia per la revisione",
+        "submit_for_review_notice_label": "Il pagamento non sarà dovuto fino alla revisione dell'ordine",
+        "continue_to_payment_plans_button_label": "Vai ai piani di pagamento",
+        "back_button_label": "Restituisci",
+        "choose_delivery_strategy": "Scegli un metodo di consegna",
+        "autocomplete_zero_item": "Nessun articolo disponibile",
+        "autocomplete_powered_by_google": "Con tecnologia {{brandName}}",
+        "submit": "Invia",
+        "processing": "In elaborazione…",
+        "stepper": {
+          "increase": "Aumenta {{type}}",
+          "decrease": "Diminuisci {{type}}",
+          "minimum_reached": "Minimo di {{value}} raggiunto",
+          "maximum_reached": "Massimo di {{value}} raggiunto"
+        },
+        "remove_item": "Rimuovi %{label}",
+        "remove_tag": "Rimuovi tag",
+        "dates": {
+          "weekdays": {
+            "monday": "lunedì",
+            "tuesday": "martedì",
+            "wednesday": "mercoledì",
+            "thursday": "giovedì",
+            "friday": "venerdì",
+            "saturday": "sabato",
+            "sunday": "domenica"
+          },
+          "weekdays_abbreviation": {
+            "monday": "Lun",
+            "tuesday": "Mar"
+          }
+        }
+      }
     }
   }
 }
