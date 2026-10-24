@@ -3899,6 +3899,138 @@
         "order_list_column_headers_contact": "Contacto",
         "removed_company_contact_tooltip": "Eliminado de la empresa"
       }
+    },
+    "errors": {
+      "resend_link": {
+        "generic": "Solicitud fallida"
+      },
+      "profile_name_update_error": {
+        "description": "Hubo un problema al actualizar tu nombre. Intenta actualizar esta página o comprueba tu conexión a internet."
+      },
+      "load_address_form_error": {
+        "title": "No se puede cargar el formulario de dirección",
+        "description": "No se pudo cargar el formulario de dirección.",
+        "refresh_button": "Actualizar página"
+      },
+      "not_upgraded": "Las cuentas de cliente no están actualizadas.",
+      "failed_to_revert": "No se pudo revertir la configuración de la cuenta de cliente.",
+      "revert_window_expired": "La ventana de reversión caducó."
+    },
+    "payment_methods": {
+      "title": "Formas de pago",
+      "add_payment_method_button": "Agregar forma de pago",
+      "payment_details": {
+        "title": "Detalles de la forma de pago",
+        "payment_method_expiring_on": "Vence el {{expiryDate}}",
+        "preauthorized_payments": "Pagos preautorizados",
+        "close_payment_modal": "Cerrar",
+        "close_payment_modal_accessibility_label": "Cerrar modal de detalles de forma de pago",
+        "payment_method_not_found_error": "No se encuentra la forma de pago",
+        "payment_details_loading": "Cargando detalles de forma de pago",
+        "pre_authorized_payments": "Pagos preautorizados",
+        "total_amount_of_subscription_line_items_left": "y {{total}} más",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "Hay un total de {{totalItems}} artículos. Se muestran {{totalItemsToDisplay}}.",
+        "next_payment_due": "El próximo pago vence el {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Editar",
+        "edit_payment_method_button_accessibility_label": "Editar forma de pago que termina en {{lastDigits}}",
+        "credit_card_details_accessibility_label": "acabada en {{lastDigits}}",
+        "billing_title": "Dirección de facturación",
+        "card_info_title": "Información de la tarjeta",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "payment_method_expired_on": "Expiró el {{expiryDate}}",
+        "loading_shop_pay": "Cargando Shop Pay",
+        "invalid_payment_method": "Forma de pago no válida",
+        "invalid_payment_method_message": "Usa otra tarjeta de crédito para seguir recibiendo futuros pedidos.",
+        "replace_payment_method": "Reemplazar forma de pago",
+        "checkout_card_banner": "Esta forma de pago solo se puede usar para pagos preautorizados. Esta forma de pago solo se puede usar para pagos preautorizados. No aparecerá en la página de pago si iniciaste sesión en esta tienda. No aparecerá en la página de pago si iniciaste sesión en esta tienda. ",
+        "default_checkbox": "Establecer como predeterminada",
+        "default_checkbox_accessibility_label": "Establecer esta forma de pago como predeterminada",
+        "bank_account_details": "{{bankBrand}} •••• {{lastDigits}}",
+        "replace_payment_method_button": "Reemplazar",
+        "bank_details": "{{bankBrand}} •••• {{lastDigits}}"
+      },
+      "delete_payment_method_button": "Eliminar",
+      "delete_payment_method_button_accessibility_label": "Eliminar {{paymentMethodName}}",
+      "back_button": "Atrás",
+      "back_button_accessibility_label": "Volver a {{paymentMethodStepTitle}}",
+      "generic_card": "Tarjeta",
+      "payment_delete": {
+        "title": "Eliminar forma de pago",
+        "description_without_replacement": "Esta forma de pago ya no estará disponible para futuras compras.",
+        "description_with_replacement": "Eliminar esta forma de pago afectará a los pagos preautorizados. Puedes reemplazarla por otra forma de pago para seguir recibiendo los próximos pedidos.",
+        "payment_method_selector_placeholder": "Selecciona una forma de pago de reemplazo (opcional)",
+        "replace_method_with_new_method_description": "Tu {{currentPaymentMethodName}} se eliminará y se sustituirá por tu {{newPaymentMethodName}}.",
+        "error_when_deleting": "Disculpa, pero se produjo un error y no hemos podido eliminar esta forma de pago. Vuelve a intentarlo más tarde o actualiza la página.",
+        "delete_and_replace_button": "Eliminar y reemplazar",
+        "delete_and_replace_button_accessibility_label": "Eliminar {{currentPaymentMethodName}} y reemplázala por {{newPaymentMethodName}}.",
+        "deleted_successfully": "La forma de pago se eliminó correctamente.",
+        "payment_method_selector_no_alternative_payment": "Sin forma de pago de reemplazo",
+        "loading_available_payment_methods_accessibility_label": "Cargando las formas de pago disponibles",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Eliminar esta forma de pago afectará a los pagos preautorizados. A menos que selecciones una forma de pago alternativa, se seguirá usando esta para cobrar todos los saldos pendientes de los pedidos ya existentes. Seleccionar una forma de pago alternativa te permitirá recibir los próximos pedidos de suscripción sin interrupciones.",
+          "with_pending_orders": "Eliminar esta forma de pago la borrará de tu cuenta y ya no estará disponible para futuras compras. A menos que selecciones una forma de pago alternativa, se seguirá usando esta para cobrar todos los saldos pendientes de los pedidos ya existentes.",
+          "with_subscriptions": "Eliminar esta forma de pago afectará a los pagos preautorizados. Reemplázala por otra para recibir los próximos pedidos."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Eliminar esta forma de pago afectará a los pagos preautorizados. Se seguirá usando esta forma de pago para cobrar todos los saldos pendientes de los pedidos ya existentes, pero no recibirás próximos pedidos de suscripción. Agrega una forma de pago alternativa para seguir recibiendo pedidos de suscripción.",
+          "with_pending_orders": "Eliminar esta forma de pago la borrará de tu cuenta y ya no estará disponible para futuras compras. No obstante, se seguirá usando para cobrar todos los saldos pendientes de los pedidos ya existentes.",
+          "with_subscriptions": "Eliminar esta forma de pago afectará a los pagos preautorizados. Agrega una forma de pago alternativa para seguir recibiendo próximos pedidos."
+        }
+      },
+      "edit_payment_method": {
+        "title": "Editar forma de pago",
+        "save_payment_method_button": "Guardar",
+        "cancel_edit_payment_method_button": "Cancelar",
+        "payment_method_updated_toast": "Forma de pago actualizada",
+        "billing_address": "Dirección de facturación",
+        "billing_address_add_new": "Agregar nueva",
+        "billing_address_choose_from_list": "Elegir de la lista",
+        "future_purchases_notice": "Esta forma de pago se guardará para futuras compras.",
+        "generic_error": "Se ha producido un problema en la actualización. Inténtalo de nuevo"
+      },
+      "card_fields": {
+        "card_number_label": "Número de tarjeta",
+        "card_number_placeholder": "Número de tarjeta",
+        "name_on_card_label": "Nombre del titular",
+        "name_on_card_placeholder": "Nombre del titular",
+        "card_expiry_label": "Fecha de vencimiento (MM / AA)",
+        "card_expiry_placeholder": "Fecha de vencimiento (MM / AA)",
+        "card_verification_value_label": "Código de seguridad",
+        "card_verification_value_placeholder": "Código de seguridad",
+        "card_start_label": "Inicio (MM / AA)",
+        "card_start_placeholder": "Inicio (MM / AA)",
+        "tooltip": {
+          "tooltip_accessibility_label": "Más información",
+          "card_verification_value_explanation_amex": "Código de seguridad de 4 dígitos en la parte frontal de tu tarjeta",
+          "card_verification_value_explanation_other": "Código de seguridad de 3 dígitos en el reverso de tu tarjeta",
+          "card_verification_value_explanation": "Código de seguridad de 3 dígitos ubicado normalmente en el reverso de tu tarjeta. Las tarjetas American Express tienen un código de 4 dígitos ubicado en el anverso.",
+          "card_security_notice": "Todas las transacciones son seguras y están encriptadas."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "Introduce tu nombre exactamente como aparece en tu tarjeta",
+          "credit_card_number_invalid": "Introduce un número de tarjeta válido",
+          "credit_card_expiry_invalid": "Introduce una fecha de expiración de tarjeta válida",
+          "credit_card_verification_value_blank": "Introduce el código de seguridad (CVV) de tu tarjeta"
+        },
+        "unavailable": {
+          "text": "Los pagos con tarjeta de crédito y débito no están disponibles en este momento.",
+          "link_text": "Recarga la página",
+          "suffix": "o inténtalo de nuevo más tarde."
+        }
+      },
+      "add_payment_method": {
+        "title": "Agregar forma de pago",
+        "payment_method_added_confirmation": "Forma de pago agregada",
+        "billing_address": {
+          "title": "Dirección de facturación",
+          "add_billing_address_button": "Agregar nueva",
+          "add_billing_address_button_accessibility_label": "Agregar nueva dirección de facturación",
+          "choose_billing_address_from_list_button": "Elegir de la lista",
+          "choose_billing_address_from_list_button_accessibility_label": "Elegir una dirección de facturación de la lista",
+          "missing_billing_address_error_message": "Escribe una dirección de facturación.",
+          "default_checkbox": "Establecer como forma de pago predeterminada"
+        }
+      }
     }
   }
 }
