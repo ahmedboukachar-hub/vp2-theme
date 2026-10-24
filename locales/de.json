@@ -3335,6 +3335,142 @@
           }
         }
       }
+    },
+    "addresses": {
+      "region": "Region",
+      "prefecture": "Präfektur",
+      "province": "Provinz",
+      "state": "Bundesland",
+      "state_and_territory": "Staat/Territorium",
+      "county": "Provinz",
+      "emirate": "Emirate",
+      "governorate": "Governorate",
+      "confirm": "Bist du sicher, dass du diese Adresse löschen möchtest?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Ausgewählt",
+        "best_selling": "meistverkauft",
+        "az": "Alphabetisch, A-Z",
+        "za": "Alphabetisch, Z-A",
+        "price_ascending": "Preis, niedrig nach hoch",
+        "price_descending": "Preis, hoch nach niedrig",
+        "date_ascending": "Datum, alt zu neu",
+        "date_descending": "Datum, neu zu alt",
+        "most_relevant": "Am relevantesten"
+      }
+    },
+    "errors": {
+      "blank": "darf nicht leer sein",
+      "credit_card_session_expired": "Die Kreditkartenautorisierung ist abgelaufen, bitte gib deine Zahlungsinformationen erneut ein. deine Karte wurde nicht belastet.",
+      "empty": "darf nicht leer sein",
+      "invalid_email": "muss gültige E-Mail-Adresse sein",
+      "discount_disabled": "Dieser Rabatt wurde deaktiviert",
+      "discount_expired": "Dieser Rabatt ist nicht mehr gültig",
+      "discount_limit_reached": "Dieser Rabatt hat seine Nutzungsgrenze erreicht",
+      "discount_not_found": "Konnte keinen gültigen Rabatt finden, der zu dem eingegebenen Code gehört",
+      "customer_already_used_once_per_customer_discount_notice": "Dieser Rabatt hat seine Nutzungsgrenze erreicht",
+      "gift_card_already_applied": "Der Code wurde bereits auf deine Bestellung angewendet",
+      "gift_card_code_invalid": "Ungültiger Code",
+      "gift_card_currency_mismatch": "Dieser Gutschein kann nicht für diesen Kauf verwendet werden. Wende dich an %{shop_name}, um ihn neu ausstellen zu lassen.",
+      "gift_card_depleted": "Es befindet sich kein Guthaben mehr auf dieser Geschenkkarte",
+      "gift_card_disabled": "Geschenkkarte ist gesperrt",
+      "gift_card_expired": "Geschenkkarte ist abgelaufen",
+      "invalid": "ist ungültig",
+      "bad_domain": "enthält einen ungültigen Domain-Namen",
+      "taken": "wurde bereits in Anspruch genommen",
+      "contains_html_tags": "darf keine HTML-Tags enthalten",
+      "too_short": "ist zu kurz (Untergrenze sind %{count} Zeichen)",
+      "too_long": "ist zu lang (Obergrenze sind %{count} Zeichen)",
+      "password_mismatch": "muss mit dem angegebenen Passwort übereinstimmen",
+      "contains_spaces": "beginnt oder endet mit einem Leerzeichen.",
+      "invalid_for_country": "ist nicht gültig für %{country}",
+      "invalid_for_country_and_province": "ist nicht gültig für %{province} und %{country}",
+      "invalid_province_in_country": "ist keine gültige Provinz in %{country}",
+      "invalid_state_in_country": "ist kein gültiger Staat in %{country}",
+      "invalid_region_in_country": "ist keine gültige Region in %{country}",
+      "less_than_or_equal_to": "muss kleiner oder gleich %{count} sein",
+      "not_supported": "wird nicht unterstützt",
+      "full_name_required": "Gib Vor- und Nachnamen ein.",
+      "invalid_for_card_type": "ist für diesen Kartentyp nicht gültig",
+      "invalid_type": "Es tut uns leid, wir haben keine Karten dieser Art akzeptieren",
+      "invalid_format": "ist keine Kreditkartennummer",
+      "expired": "Kreditkarte ist abgelaufen",
+      "invalid_start_date_or_issue_number_for_debit": "Ein gültiges Anfangsdatum oder eine Ausgabenummer ist erforderlich",
+      "invalid_expiry_year": "ist kein gültiges Ablaufjahr",
+      "reset_password_html": "Diese E-Mail Adresse ist bereits vergeben. Wenn es sich um dein Benutzerkonto handelt kannst du <a href=\"/account/login#recover\">ein neues Passwort anfordern</a>",
+      "verify_email": "Wir haben eine E-Mail an %{customer_email} geschickt, bitte klicke auf den enthaltenen Link, um deine E-Mail-Adresse zu bestätigen.",
+      "blocked_address": "Dieser Standort wird nicht unterstützt",
+      "product_not_available": "Produkt ist nicht für diesen Kunden veröffentlicht.",
+      "shop_404": {
+        "title": "Erstelle eine E-Commerce-Website und verkaufe online! E-Commerce-Software von Shopify",
+        "heros": {
+          "store_unavailable": "Dieser Shop ist derzeit nicht verfügbar.",
+          "store_not_exist": "Dieser Shop existiert nicht.",
+          "no_storefront": "Dieser Shop hat noch keine Website.",
+          "store_will_be_right_back": "Dieser Shop ist gleich wieder da"
+        },
+        "links": {
+          "explore_other_stores": "Andere Shops entdecken",
+          "start_free_trial": "Jetzt kostenlos testen",
+          "refresh_page": "Seite aktualisieren"
+        },
+        "owner_ctas": {
+          "header": "Bist du der Shop-Inhaber?",
+          "fix_domain": "Schließe die Einrichtung deiner neuen Webadresse ab, gehe zu %{domain_settings_link}. Klicke auf &quot;Domain verbinden&quot; und gib Folgendes ein: %{domain}.<br>Wenn du Probleme beim Anmelden in deinem Shop hast, versuche es auf der Seite %{forgot_your_store_link}.",
+          "fix_domain_link_text": "deinen Domain-Einstellungen",
+          "forgot_your_store_link_text": "\"Shop vergessen\"",
+          "add_storefront": "Du kannst deine Website einrichten, indem du den Onlineshop-Kanal in deinem %{admin_link} hinzufügst. Wenn du Probleme beim Anmelden in deinem Shop hast, versuche es auf der Seite %{forgot_your_store_link}.",
+          "admin_link_text": "Adminbereich"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Persönlich verkaufen",
+            "caption": "Erhalte Zugriff auf die Funktionen, die du brauchst, um dein Einzelhandelsgeschäft zu führen, ob du gerade erst beginnst oder dich vergrößern möchtest.",
+            "link_text": "Kostenlosen Test starten"
+          },
+          "open_a_store": {
+            "header": "Einen neuen Shopify-Shop eröffnen",
+            "caption": "Starte einen 3-tägigen kostenlosen Test und zahle danach 1 USD/Monat für die nächsten drei Monate.",
+            "link_text": "Jetzt registrieren"
+          },
+          "editions": {
+            "header": "Shopify Editions ansehen",
+            "caption": "Mit über 100 Produktaktualisierungen kannst du produktiver, kreativer und leistungsstärker als Händler agieren, als du es dir jemals vorgestellt hast.",
+            "link_text": "Letzte Editions ansehen"
+          },
+          "store_owner": {
+            "header": "Bist du der Shop-Inhaber?",
+            "caption": "Hast du Probleme beim Anmelden in deinem Shop? Probiere die Funktion %{forgot_your_store_link} aus. Wenn du deinen Shop erneut aktivieren möchtest, wende dich an den %{shopify_support_link}.",
+            "shopify_support_link_text": "Shopify Support"
+          }
+        },
+        "title_unavailable": "Shop nicht verfügbar",
+        "subtitles": {
+          "store_will_be_right_back": "Shopify arbeitet daran, ihn so schnell wie möglich wieder online zu bringen."
+        },
+        "status_card": {
+          "eyebrow": "Hilfe für Shop-Inhaber:innen",
+          "header": "Shopify-Status prüfen",
+          "caption": "Finde heraus, ob eine Störung vorliegt, die mehr als nur diesen Shop bei Shopify betrifft.",
+          "link_text": "Shopify-Systemstatus anzeigen"
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Fehler beim Zurücksetzen des Passworts",
+        "no_account_found": "Kein Konto mit dieser E-Mail gefunden.",
+        "invalid_credentials": "Die E-Mail-Adresse oder das Passwort ist falsch.",
+        "denylisted_reset_password": "Auf dein Konto konnte nicht zugegriffen werden, da das aktuelle Passwort nicht sicher ist. Du erhältst eine E-Mail mit der Aufforderung, dein Passwort zu aktualisieren.",
+        "signup_disabled": "Erstellung von Kundenkonten wurde deaktiviert.",
+        "subscribe_error": "Fehler beim Abonnieren",
+        "unsubscribe_error": "Fehler bei Kündigung des Abonnements",
+        "open_tracking_error": "Fehler beim Tracking der Öffnungsrate"
+      },
+      "address": {
+        "updated": "Adresse erfolgreich aktualisiert."
+      }
     }
   }
 }
