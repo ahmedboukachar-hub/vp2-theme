@@ -2462,6 +2462,136 @@
         "address_neighborhood_contains_emojis": "Stadtviertel darf keine Emojis enthalten.",
         "address_neighborhood_contains_html_tags": "Stadtteil darf keine HTML-Tags enthalten",
         "address_neighborhood_contains_mathematical_symbols": "Stadtviertel darf keine mathematischen Symbole enthalten."
+      },
+      "payment_errors": {
+        "development_store_order_testing_docs_link": "Testen von Bestellungen in Development Shops",
+        "method_not_available": "Die angefragte Zahlungsmethode ist nicht verfügbar. Wähle eine andere Zahlungsmethode aus und versuche es erneut.",
+        "available_methods_updated": "Verfügbare Zahlungsmethoden wurden aktualisiert.",
+        "selected_payment_method": "Deine Zahlungsmethode konnte nicht belastet werden und dir wurde nichts berechnet.Versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "payment_method_billing_address": "Es gab ein Problem mit der Rechnungsadresse deiner ausgewählten Zahlungsmethode. Überprüfe die Adresse und versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "processing_error_checkout_as_guest": "Bei der Verarbeitung deiner Zahlung ist ein Problem aufgetreten. Versuche es mit einer anderen Zahlungsmethode erneut oder {{checkout_as_guest_link}}.",
+        "installments": {
+          "retry_same_instrument": {
+            "heading": "Kartendetails überprüfen",
+            "body": "Aktualisiere deine Kartendetails oder wähle eine andere Karte"
+          },
+          "retry_different_instrument": {
+            "heading": "Deine Karte wurde abgelehnt",
+            "body": "Versuche es erneut oder wähle eine andere Karte"
+          },
+          "restart_payment_method": {
+            "heading": "Deine Sitzung ist abgelaufen",
+            "body": "Wähle einen Zahlungsplan, um neu zu starten"
+          }
+        },
+        "amount_too_small": "Der Mindestzahlungsbetrag muss größer als 0,50 USD sein. Versuche es mit einem höheren Betrag erneut.",
+        "payment_above_threshold": "Der Zahlungsbetrag liegt über der Währungsgrenze für diese Region. Reduziere die Gesamtsumme und versuche es erneut",
+        "risky": "Bei der Verarbeitung deiner Zahlung ist ein Problem aufgetreten. Versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "expired_buyer_action": "Die Ausführung der Zahlungsmethode hat zu lange gedauert. Versuche es noch einmal.",
+        "three_d_secure_failed_payment_method": "Deine Karte konnte nicht verifiziert werden. Versuche es erneut oder füge eine andere Karte hinzu.",
+        "name_mismatch": "Überprüfe deine Kartendetails. Der Name auf deiner Karte und die Rechnungsadresse stimmen nicht überein.",
+        "payment_method_not_applicable": "Diese Zahlungsmethode kann nicht angewendet werden. Verwende eine andere Zahlungsmethode.",
+        "shop_pay_wallet_not_available": "Shop Pay ist für diesen Checkout nicht verfügbar.",
+        "market_manager_blocks_wallet_payments": "Zahlungsmethode wird in deinem Land nicht unterstützt.",
+        "paypal_over_capture": "Dein Bestellbetrag wurde aktualisiert. Bezahl mit {{walletName}}, um deine Bestellung abzuschließen.",
+        "test_mode_enabled_only_test_cards": "Der Testmodus ist aktiviert, es können nur Testkreditkarten hinzugefügt werden.",
+        "captcha_required": "Gib deine Zahlungsinformationen ein und löse das CAPTCHA, um deinen Kauf abzuschließen.",
+        "captcha_required_without_payment_information": "Löse das CAPTCHA, um deinen Kauf abzuschließen.",
+        "shipping_company_required_error": "{{shopName}} erfordert einen Unternehmensnamen für die Lieferadresse.",
+        "payment_credential_delegation_error": "Bei der Verarbeitung deiner Zahlung ist ein Problem aufgetreten. Wähle eine neue Zahlungsmethode.",
+        "cancelled_payment": "Deine Zahlung wurde abgebrochen. Versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "currency": {
+          "no_longer_supported": "Die Währung des Shops wird nicht mehr unterstützt."
+        },
+        "installments_payment_method_incompatible": "Die ausgewählte Zahlungsmethode kann nicht für Ratenzahlungen verwendet werden. Wähle eine andere Zahlungsmethode.",
+        "missing_cvc": "Gib einen Sicherheitscode ein",
+        "local_payment_method_amount_out_of_range": "%{payment_method} kann nur für Zahlungen zwischen %{minimum} und %{maximum} verwendet werden.",
+        "local_payment_method_unavailable": "%{payment_method} ist nicht verfügbar",
+        "custom_redeemable_no_longer_available": "Dieses Angebot ist nicht mehr verfügbar.",
+        "duplicate_autopay_card": "Diese Karte ist mit anstehenden Raten verknüpft. Wähle eine andere Zahlungsart oder {{update_payment_details_link}}",
+        "duplicate_autopay_card_link": "aktualisiere die Zahlungsdetails",
+        "duplicate_autopay_card_without_link": "Diese Karte ist mit anstehenden Raten verknüpft. Wähle eine andere Zahlungsart.",
+        "invalid_customer_account": "Wir konnten dein Konto nicht belasten. Du kannst es erneut versuchen, nachdem du das Problem mit deinem Konto behoben hast, oder eine andere Zahlungsmethode verwenden.",
+        "code_expired": "Dein Zahlungscode ist abgelaufen oder wurde bereits verwendet. Fordere in deiner Banking-App einen neuen Code an und versuche es erneut.",
+        "code_invalid": "Dein Zahlungscode ist ungültig. Überprüfe den Code und versuche es erneut oder fordere in deiner Banking-App einen neuen Code an."
+      },
+      "shipping_errors": {
+        "shipping_method": "Die Versandoptionen für deine Bestellung haben sich geändert. Prüfe deine Auswahl.",
+        "shipping_method_not_available": "Dein Warenkorb wurde aktualisiert und die von dir hinzugefügten Artikel können nicht an deine Adresse geliefert werden. Entferne die Artikel, um deine Bestellung abzuschließen.",
+        "shipping_method_not_available_generic": {
+          "one": "Deine Bestellung kann nicht an die ausgewählte Adresse versendet werden. Überprüfe deine Adresse auf ihre Richtigkeit und versuche es erneut oder wähle eine andere Adresse aus.",
+          "other": "Einige Artikel in deinem Warenkorb können nicht an die von dir angegebene Adresse versendet werden. Überprüfe deine Adresse auf ihre Richtigkeit und versuche es erneut oder wähle eine andere Adresse aus."
+        },
+        "shipping_method_not_available_updated": {
+          "one": "Der von dir hinzugefügte Artikel wird nicht an deinen Standort versendet. Entferne ihn vor dem Checkout, oder kontaktiere den Shop.",
+          "other": "Mindestens einer der von dir hinzugefügten Artikel wird nicht an deinen Standort versendet. Entferne ihn vor dem Checkout, oder kontaktiere den Shop."
+        },
+        "payment_method_not_supported": "Du kannst diese Zahlungsmethode für %{country} nicht verwenden. Verwende eine andere Zahlungsmethode, um in dieses Land zu versenden.",
+        "empty_state": "Gib deine Lieferadresse ein, um verfügbare Versandarten anzuzeigen.",
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Artikel im Warenkorb entsprechen nicht den Preis- oder Gewichtsanforderungen, um sich für den Versand zu qualifizieren. Aktualisiere deinen Warenkorb und versuche es erneut.",
+        "title": "Versand nicht verfügbar",
+        "invalid_selected_address": "Die ausgewählte Lieferadresse ist ungültig",
+        "invalid_selected_address_with_update_link": "Die ausgewählte Lieferadresse ist ungültig. %{update_address_link} oder wähle eine andere Adresse aus",
+        "unavailable_selected_address": "Versand für die ausgewählte Adresse nicht möglich",
+        "unavailable_selected_address_for_region": "Versand ist für {{region}} nicht verfügbar. Wähle eine andere Adresse aus, um fortzufahren.",
+        "unavailable_addresses_only_countries": "Deine Bestellung kann nur nach {{countriesList}} versendet werden. Füge eine neue Adresse hinzu, um fortzufahren.",
+        "unavailable_address_country": "Der Versand ist für das Land, das du ausgewählt hast, nicht verfügbar. Wähle eine andere Adresse aus, um fortzufahren."
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Express Checkout",
+        "or": "ODER",
+        "show_more_options": "Weitere Optionen anzeigen",
+        "hide_more_options": "Weitere Optionen ausblenden",
+        "or_pay_another_way": "Oder auf eine andere Weise bezahlen",
+        "or_check_out_another_way": "Oder auf eine andere Weise auschecken",
+        "or_pay_with_credit_card": "Oder per Kreditkarte bezahlen"
+      },
+      "processing": {
+        "redirecting_page_title": "Weiterleitung…",
+        "redirecting_title": "Weiterleitung…",
+        "redirecting_notice": "Warte, während wir dich weiterleiten.",
+        "complete_your_purchase_title": "Schließe deinen Einkauf ab",
+        "continue_to_payment_gateway_notice": "Fahre mit der Zahlung fort, um deine Zahlungsinformationen hinzuzufügen.",
+        "continue_to_payment_gateway_button_label": "Weiter zur Zahlung",
+        "complete_your_purchase_title_error": "Korrigiere bitte deine Zahlungsinformationen",
+        "continue_to_payment_gateway_notice_error": "Deine Zahlungsinformationen konnten nicht verifiziert werden.",
+        "continue_to_payment_gateway_button_label_error": "Zahlungsinformationen aktualisieren",
+        "page_title": "Bestellung wird bearbeitet",
+        "title": "Bestellung wird bearbeitet",
+        "your_order_has_been_received_title": "Vielen Dank für deine Bestellung",
+        "you_will_receive_confirmation": "Wir bekommen gerade sehr viele Bestellungen herein. Du solltest deine Bestätigung in Kürze per E-Mail oder per SMS erhalten. Wenn du diese nicht in der nächsten Stunde erhalten solltest, dann gib uns Bescheid.",
+        "wait": {
+          "short": "Deine Bestellung wird bearbeitet.",
+          "medium": {
+            "one": "Deine Bestellung wird bearbeitet. Die geschätzte Wartezeit beträgt %{count} Minute.",
+            "other": "Deine Bestellung wird bearbeitet. Die geschätzte Wartezeit beträgt %{count} Minuten."
+          },
+          "long": "Du erhältst eine E-Mail, sobald deine Bestellung bearbeitet worden ist. Wir verzeichnen derzeit eine große Anzahl an Bestellungen.",
+          "no_auto_refresh_html": "Wenn du nicht automatisch weitergeleitet wirst, %{link}.",
+          "refresh_this_page": "lade die Seite erneut"
+        },
+        "you_will_not_be_charged": "Dir wird noch nichts berechnet",
+        "action_required": "Aktion erforderlich",
+        "redirecting_to_bank": "Du wirst zu {{bank}} weitergeleitet",
+        "modal_notice": "Wir kontaktieren {{paymentMethod}}",
+        "remote_shops_payments_processing": "Verarbeitung von Zahlungen",
+        "remote_checkout_count": "%{current} von %{total}"
+      },
+      "failed_payment": {
+        "page_title": "Zahlung konnte nicht verarbeitet werden",
+        "title": "Zahlung konnte nicht verarbeitet werden",
+        "payment_not_processed_title": "Deine Zahlung konnte nicht verarbeitet werden.",
+        "payment_not_processed_text": "Dir wurde nichts berechnet. Kehre zu deinem Warenkorb zurück, um deinen Einkauf abzuschließen.",
+        "return_to_cart_button_label": "Zurück zum Warenkorb"
+      },
+      "payment_gateway": {
+        "credit_card_label": "Kreditkarte",
+        "bank_deposit_label": "Banküberweisung",
+        "cash_on_delivery_label": "Nachnahme",
+        "money_order_label": "Geldanweisung",
+        "debit_card_label": "Debitkarte",
+        "deferred_payment_label": "Zahlungsmethode später auswählen",
+        "generic_payment_terms": "Für dich gelten die Bedingungen \"{{translatedName}}\". Deine Zahlung ist am {{dueDate}} fällig."
       }
     }
   }
