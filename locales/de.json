@@ -1713,7 +1713,387 @@
           "other": "Wiederkehrende Lieferungen"
         },
         "address_default": "Als Standard festlegen",
-        "split_shipping_merchandise_quantity_label_standard": "%{quantity} Artikel"
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} Artikel",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} weitere",
+        "split_shipping_merchandise_shipment_number": "Lieferung %{number} von %{total}",
+        "pre_order_ships_now": "Wird jetzt versendet",
+        "pre_order_ships_later": "Wird später versendet",
+        "pre_order_ships_date": "Wird am %{date} versendet",
+        "split_shipping_shipped_by_shop": "Versand durch %{shop_name}",
+        "split_shipping_multiple_shipment_label": "Mehrere Lieferungen",
+        "split_shipping_shipping_label": "Art",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} Lieferungen",
+        "split_shipping_multiple_shipment_notice": "Deine Bestellung wird in mehreren Lieferungen zugestellt",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "Deine Bestellung wird in %{quantity} Lieferungen zugestellt",
+        "split_shipping_more_shipping_options": "Weitere Versandoptionen",
+        "split_shipping_shipment_number": "Lieferung %{number}",
+        "split_shipping_option_free": "Kostenfreier Versand",
+        "split_shipping_option_lowest_price": "Niedrigster Preis",
+        "split_shipping_option_fastest": "Am schnellsten",
+        "split_shipping_option_recommended": "Empfohlen",
+        "split_shipping_option_custom": "Benutzerdefiniert",
+        "default_description": "Versand innerhalb 1 Werktags",
+        "split_shipping_shipment_notice": "Deine Bestellung wird in %{quantity_shipments} zugestellt.",
+        "unbranded_default_description": "Versandbereit",
+        "prime_not_available": {
+          "default": "Prime-Zustellung ist nicht für deine Bestellung verfügbar. Deine Versandoptionen wurden aktualisiert."
+        },
+        "split_shipping_first_shipment_notice": "Deine erste Bestellung wird in %{quantity_shipments} geliefert",
+        "shipping_method_rollup_accessibility_label": "Versandarten-Optionen",
+        "shipping_address_rollup_accessibility_label": "Lieferadressen-Optionen",
+        "back": "Zurück",
+        "invalid_shipping_method_summary_selected": "Wähle eine andere Lieferadresse aus, um verfügbare Versandarten anzuzeigen",
+        "third_party_address_timeout": "Adressen können nicht geladen werden. Versuche es erneut und verwende eine andere Adresse.",
+        "third_party_address_error": "Beim Laden der Adressauswahl ist ein Fehler aufgetreten. Bitte gib deine Adresse unten manuell ein.",
+        "third_party_payment_timeout": "Zahlungsmethoden können nicht geladen werden. Versuche es erneut oder verwende eine andere Zahlungsmethode.",
+        "third_party_payment_error": "Beim Laden der Zahlungsauswahl ist ein Fehler aufgetreten. Verwende eine andere Zahlungsmethode.",
+        "add_shipping_address": "Lieferadresse hinzufügen",
+        "choose_new_address": "Wähe eine neue Adresse aus.",
+        "unbranded_description_same_day": "Versand am selben Werktag",
+        "unbranded_description_with_fulfillment_days": {
+          "one": "Versand am nächsten Werktag",
+          "other": "Versand in %{count} Werktagen"
+        },
+        "unbranded_description_with_fulfillment_weeks": {
+          "one": "Versand in %{count} Woche",
+          "other": "Versand in %{count} Wochen"
+        },
+        "add_new_delivery_address": "Neue Zustelladresse hinzufügen",
+        "delivery_to": "Zustellung an",
+        "split_shipping_shipment_count_notice_one_time_purchase": {
+          "one": "Deine Bestellung wird in %{count} Lieferung eintreffen",
+          "other": "Deine Bestellung wird in %{count} Lieferungen eintreffen"
+        },
+        "split_shipping_arrives_in_shipments": {
+          "one": "Kommt in %{count} Lieferung an",
+          "other": "Kommt in %{count} Lieferungen an"
+        },
+        "includes_recurring_items": "Enthält wiederkehrende Artikel"
+      },
+      "payment": {
+        "amazon_payments_label": "Amazon Pay",
+        "amazon_payments_login_hint": "Du wirst aufgefordert, dich mit Amazon anzumelden.",
+        "amazon_payments_logout": "Von Amazon Pay abmelden",
+        "amazon_payments_failed_mfa_challenge": "Die ausgewählte Zahlungsmethode konnte nicht verwendet werden. Wähle eine andere Methode aus oder wende dich an deine Bank oder deinen Kartenaussteller.",
+        "amazon_payments_abandoned_mfa_challenge": "Deine Zahlung konnte nicht abgeschlossen werden. Versuche es mit einer anderen Zahlungsmethode oder wende dich an deine Bank oder deinen Kartenaussteller.",
+        "amazon_payments_could_not_enqueue_authorize": "Bei der Verarbeitung deiner Zahlung ist ein Problem aufgetreten. Versuche es erneut oder mit einer anderen Zahlungsmethode.",
+        "title": "Zahlung",
+        "amount_left_to_pay_label": "Betrag",
+        "discount_button_action_label": "Rabattcode nutzen",
+        "gift_card_code_label": "Gutscheincode",
+        "apply_gift_card_button_label": "Anwenden",
+        "gift_card_balance_label": "Balance:",
+        "supported_card_brands_more_label": "und mehr …",
+        "detected_card_brand": "Erkannte Kartenmarke: {brand}",
+        "card_number_label": "Kartennummer",
+        "card_number_placeholder": "Kartennummer",
+        "card_pay_with": "Zahle mit:",
+        "card_security_notice": "Alle Transaktionen sind sicher und verschlüsselt.",
+        "name_on_card_label": "Name des Karteninhabers",
+        "name_on_card_placeholder": "Name des Karteninhabers",
+        "card_expiry_label": "Gültig bis (MM/JJ)",
+        "card_expiry_placeholder": "Gültig bis (MM/JJ)",
+        "card_verification_value_label": "Sicherheitscode",
+        "card_verification_value_placeholder": "Sicherheitscode",
+        "card_expiry_date_explanation": "Ablaufdatum der Karte im Format: Monat, Monat, Jahr, Jahr",
+        "card_verification_value_explanation": "Ein dreistelliger Sicherheitscode, der sich in der Regel auf der Rückseite deiner Karte befindet. American Express-Karten haben einen vierstelligen Code auf der Vorderseite.",
+        "card_verification_value_explanation_amex": "4-stelliger Sicherheitscode auf der Vorderseite deiner Karte",
+        "card_verification_value_explanation_other": "3-stelliger Sicherheitscode auf der Rückseite deiner Karte",
+        "card_start_label": "Ausstellungszeitpunkt (MM / JJ)",
+        "card_start_placeholder": "Ausstellungszeitpunkt (MM / JJ)",
+        "card_issue_number_label": "Nummer",
+        "card_issue_number_placeholder": "Nummer",
+        "card_change_label": "Ändern",
+        "ends_with_label": "endet mit %{last_digits}",
+        "masked_digits_label": "•••• %{last_digits}",
+        "saved_by_payment_method": "Abgespeichert mit %{payment_method}",
+        "pay_with_payment_method": "Bezahlung via %{payment_method}",
+        "same_billing_address_label": "Mit der Lieferadresse identisch",
+        "different_billing_address_label": "Eine andere Rechnungsadresse verwenden",
+        "free_order_notice_html": "Deine Bestellung ist <strong>kostenlos</strong>. Keine Zahlung notwendig.",
+        "express_checkout_free_order": "Für eine kostenlose Bestellung wird dir nichts in Rechnung gestellt",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Deine Bestellung wird von deinem Gutschein abgedeckt.",
+          "other": "Deine Bestellung wird von deinen Gutscheinen abgedeckt."
+        },
+        "offsite_gateway_redirect_hint": "Du wirst zu %{gateway_label} weitergeleitet, um deinen Kauf abzuschließen",
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} insgesamt %{total_shop_price}",
+        "billing_address_title": "Rechnungsadresse",
+        "billing_address_description": "Wähle die mit deiner Karte oder Zahlungsmethode verknüpfte Adresse aus.",
+        "billing_address_description_no_shipping_address": "Gib die mit deiner Karte oder Zahlungsmethode verknüpfte Adresse ein.",
+        "no_js_credit_card_fields_redirect_hint": "Du wirst weitergeleitet, um deine Zahlungsinformationen hinzuzufügen.",
+        "card_fields_container_prefix": "Rahmen für das Feld:",
+        "card_fields_unavailable_html": {
+          "one": "Kredit- und Debitkartenzahlungen sind momentan nicht verfügbar.<br>Bitte <a href=\"%{current_url}\">lade diese Seite neu</a> oder versuche es später noch einmal.",
+          "other": "Kredit- und Debitkartenzahlungen sind momentan nicht verfügbar.<br>Bitte <a href=\"%{current_url}\">lade diese Seite neu</a> oder probiere eine andere Zahlungsmethode."
+        },
+        "card_fields_processing_error": "Bei der Verarbeitung der Zahlung ist ein Problem aufgetreten. Versuche, diese Seite zu aktualisieren oder überprüfe deine Internetverbindung.",
+        "technical_error": "Zahlungen können derzeit aus technischen Gründen nicht bearbeitet werden. Versuche es in ein paar Minuten noch einmal.",
+        "no_method_error": "Dieser Shop kann zurzeit keine Zahlungen akzeptieren.",
+        "not_configured_error": "Dieser Shop kann zurzeit keine Zahlungen akzeptieren.",
+        "missing_credit_card_error": "Gib deine Kartendaten ein, um die Zahlung abzuschließen",
+        "generic_incorrect_card_info": "Deine Zahlungsdetails konnten nicht verifiziert werden. Überprüfe deine Kartendaten und versuche es erneut.",
+        "sofort_label": "Sofortüberweisung",
+        "paypal_label": "PayPal",
+        "ideal_label": "iDEAL | Wero",
+        "bank_picker_label": "Bank",
+        "klarna_pay_now_label": "Sofort bezahlen mit Klarna",
+        "klarna_pay_later_label": "Rechnung mit Klarna",
+        "bancontact_label": "Bancontact",
+        "giropay_label": "Giropay",
+        "eps_label": "eps-Überweisung",
+        "klarna_slice_it_label": "Finanzierung mit Klarna",
+        "card_expiration_month_label": "Ablaufmonat",
+        "card_expiration_year_label": "Ablaufjahr",
+        "card_information_notice": "Alle Transaktionen sind sicher und verschlüsselt. Kreditkarteninformationen werden niemals gespeichert.",
+        "credit_card_start_month": "Ausstellungsmonat",
+        "credit_card_start_year": "Ausstellungsjahr",
+        "billing_address_not_supported_for_payment_method_error": "Diese Zahlungsmethode steht für deine Rechnungsadresse und Währung nicht zur Verfügung. Versuche es mit einer anderen Zahlungsmethode.",
+        "change_currency_section_description": "Währungsoption auswählen",
+        "no_real_orders_dev_store": "Dieser Shop kann weder echte Bestellungen noch echte Zahlungen akzeptieren.",
+        "subscription_agreement_label_html": "Ich verstehe, dass ich einem Abonnement zustimme. Es wird zum aufgeführten Preis und in der festgelegten Häufigkeit verlängert, bis es ausläuft oder \n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">storniert</a> wird.\n",
+        "waiting_on_payment_methods": "Abfrage der verfügbaren Zahlungsmethoden...",
+        "apple_pay_payment_error": "Deine Zahlung konnte nicht abgeschlossen werden. Versuche es erneut oder mit einer anderen Zahlungsmethode.",
+        "subscription_card_update_agreement_label": "Durch das Ändern der Zahlungsmethode aktualisierst du dein Abonnement und zukünftige wiederkehrende Zahlungen.",
+        "card_security_vault_notice": "Für zukünftige Zahlungen benötigen wir deine Details. Alle Transaktionen sind sicher und verschlüsselt.",
+        "taxes_not_included": "Steuern nicht inbegriffen",
+        "no_taxes_banner_content": "Auf diese Bestellung werden keine Steuern erhoben. Nachdem du die Zahlung erhalten hast, können keine Steuern mehr hinzugefügt werden.",
+        "card_update_label": "Karte aktualisieren",
+        "paypal": {
+          "connect": "Klicke hier, um dein PayPal-Konto zu verbinden"
+        },
+        "subscription_agreement_label": "Ein oder mehrere Artikel in deinem Warenkorb sind ein ausstehender Kauf oder ein Abonnementkauf. Indem du mit deiner Zahlung fortfährst, stimmst du zu, dass deine Zahlungsmethode automatisch zu dem Preis und mit der Häufigkeit, die auf dieser Seite aufgeführt sind, belastet wird, bis die Zahlungsmethode endet oder du sie kündigst. Alle Kündigungen unterliegen der %{cancelled}.",
+        "subscription_agreement_cancelled": "Stornierungsrichtlinie",
+        "card_expired": "Abgelaufen",
+        "card_verification_confirm": "Gib zur Verifizierung den Sicherheitscode deiner Karte ein.",
+        "different_credit_card_label": "Verwende eine andere Kreditkarte",
+        "apple": {
+          "connect": "Klicke hier, um dein Apple Pay-Konto zu verbinden",
+          "not_available": "Apple Pay ist in diesem Browser nicht verfügbar. Wenn du dein Apple Pay-Konto verbinden möchtest, nutze bitte Safari auf einem Apple-Gerät."
+        },
+        "account_connected": "Konto verbunden.",
+        "billing_address_associated_with_mandate": "Adresse verwenden, die mit der Zahlungsmethode assoziiert ist",
+        "billing_address_associated_with_mandate_info": "Wenn du deine Rechnungsadresse ändern möchtest, entferne deine Kreditkartendaten und gib sie erneut ein.",
+        "delete_customer_mandate_modal_cancel": "Schließen",
+        "credit_card_vaulting_sign_in_banner_title": "Speichere deine Kreditkarte",
+        "credit_card_vaulting_sign_in_banner_info": "Logge dich ein oder erstelle ein Konto, um deine Kreditkarteninformationen für zukünftige Käufe zu speichern.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Einloggen",
+        "expiry_long": "(Läuft ab: %{month}/%{year})",
+        "expiry_short": "(Läuft ab: %{month}/%{year})",
+        "ftd_vault_credit_card_label": "Diese Kreditkarte in meinem Konto speichern, um den Checkout zu beschleunigen",
+        "delete_customer_mandate_modal_title": "Diese Zahlungskarte entfernen?",
+        "delete_customer_mandate_modal_body": "Wenn du diese Karte entfernst, musst du sie erneut hinzufügen, bevor du sie für Zahlungen verwendest.",
+        "delete_customer_mandate_modal_confirm": "Karte entfernen",
+        "google": {
+          "connect": "Hier klicken, um dich mit deinem Google Pay-Konto zu verbinden",
+          "error_authorizing": "Fehler bei der Zahlungsautorisierung"
+        },
+        "klarna_label": "Klarna",
+        "mor_disclaimer_html": "Indem du unten klickst und deine Bestellung abschließt, stimmst du dem Kauf eines Artikels (von Artikeln) von Global-e als eingetragener Händler \nfür diese Transaktion mit den <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Geschäftsbedingungen</a>\nund der <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Datenschutzerklärung</a> von Global-e zu. Global-e ist ein internationaler\nFulfillmentdienstanbieter für %{shop_name}\n",
+        "purchase_options_card_update_agreement_label_html": "Indem du deine Zahlungsmethode aktualisierst, autorisierst du Zahlungen für wiederkehrende Käufe oder Käufe mit Zahlungsaufschub gemäß der <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">Stornierungsrichtlinie</a> dieses Shops.",
+        "multibanco_label": "Multibanco",
+        "receiver_payment_experience_hint": "Nachdem du deine Bestellung aufgegeben hast, erhältst du die Zahlungsdetails. Führe die Zahlung innerhalb von %{due_days} Tagen bei Multibanco oder online aus.",
+        "pending_payment": {
+          "due_notice": "Deine Zahlung über %{amount_due} ist am %{due_date} fällig.",
+          "multibanco": {
+            "instruction_html": "Führe anhand der Details unten die Zahlung bei Multibanco oder online aus. Bei Fragen oder zum Aktualisieren deiner Zahlungsdetails %{contact_us}.",
+            "entity": "Entität",
+            "reference": "Referenz",
+            "amount": "Betrag",
+            "find_nearest_atm": "Geldautomat in deiner Nähe finden",
+            "buyer_action_info": "Deine Zahlung über %{amount_due} ist fällig.",
+            "label": "Multibanco",
+            "pay": "%{amount} bezahlen",
+            "expiry_date_time": "%{date} um %{time}",
+            "expires_at": "Läuft am %{date} ab",
+            "expired": "Abgelaufen am %{date}",
+            "expired_title": "Zahlungsreferenz abgelaufen",
+            "labelled_code": "%{label}: %{code}"
+          },
+          "oxxo": {
+            "label": "OXXO",
+            "number": "Referenznummer",
+            "steps": {
+              "1": "Scanne den Barcode bei deinem nächsten OXXO.",
+              "2": "Bezahle den genauen Betrag bar an der Kasse."
+            },
+            "print_voucher": "Beleg drucken",
+            "barcode_alt": "Barcode des OXXO-Belegs für Referenznummer %{reference_number}",
+            "expires_at": "Läuft am %{date} ab",
+            "expires_when_unknown": "Vor Ablauf des Zahlungsbelegs verwenden",
+            "print": {
+              "instructions_title": "Anleitung für deine OXXO-Zahlung:",
+              "important_details_title": "Wichtige Details:"
+            },
+            "important_details": {
+              "canceled_by_expiry": "Deine Bestellung wird storniert, wenn die Zahlung nicht bis spätestens %{date} eingeht.",
+              "canceled_when_expired": "Deine Bestellung wird storniert, wenn die Zahlung nicht vor Ablauf des Zahlungsbelegs eingeht.",
+              "non_refundable": "OXXO-Bestellungen sind nicht erstattungsfähig.",
+              "tracking_after_payment": "Du erhältst die Informationen zur Sendungsverfolgung für den Versand innerhalb eines Werktags nach der Zahlung."
+            },
+            "days_left": {
+              "one": "%{count} Tag",
+              "other": "%{count} Tage"
+            },
+            "pay": "%{amount} bezahlen",
+            "expiry_date_time": "%{date} um %{time}",
+            "reference_number": "Referenznummer:"
+          },
+          "apple_wallet": {
+            "badge_alt": "Zu Apple Wallet hinzufügen",
+            "pass": {
+              "description": "%{shop_name} Zahlschein",
+              "logo_text": "Zahlschein",
+              "store_label": "Shop",
+              "expiry_date_label": "Ablaufdatum",
+              "payment_due_label": "Fälliger Betrag",
+              "reference_number_label": "Referenznummer",
+              "ordered_on_label": "Bestellt am"
+            }
+          }
+        },
+        "purchase_options_agreement_label": "Ein oder mehrere Artikel in deinem Warenkorb sind Teil eines aufgeschobenen oder wiederkehrenden Kaufs. Wenn du mit der Zahlung fortfährst, stimmst du zu, dass deine Zahlungsmethode automatisch zu dem Preis und in der Häufigkeit belastet wird, die auf dieser Seite aufgeführt sind, bis der Kauf endet oder du stornierst. Für alle Stornierungen gilt die %{cancellation_policy_label}.",
+        "update_payment_method": "Zahlungsmethode aktualisieren",
+        "paypal_modal": {
+          "order_contains_subscriptions": "Abonnement",
+          "order_contains_fixed_selling_plans": "Der Gesamtbetrag enthält möglicherweise die Steuern, den Versand, ausstehende Gebühren und einige Rabatte nicht. Gehe zum Checkout, um den heute fälligen Betrag zu sehen."
+        },
+        "purchase_options_agreement_label_html": "Mir ist bekannt, dass ein oder mehrere Artikel in meinem Warenkorb Teil eines aufgeschobenen oder wiederkehrenden Kaufs sind. Indem ich fortfahre, stimme ich der\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">Stornierungsrichtlinie</a> zu\nund genehmige die Belastung meiner Zahlungsmethode zu den Preisen, in der Häufigkeit und an den Daten, die auf dieser Seite aufgeführt sind, bis meine\nBestellung ausgeführt ist oder ich storniere, sofern zulässig.\n",
+        "payment_method_saved": "Zahlungsmethode gespeichert",
+        "card_vaulted_company_location": "Karte für diesen Standort gespeichert",
+        "order_covered_by_store_credit_notice": "Deine Bestellung wird von deinem Shop-Guthaben abgedeckt.",
+        "order_covered_by_redeemables_notice": "Deine Bestellung ist abgedeckt.",
+        "store_credit": {
+          "label": "Shop-Guthaben",
+          "apply_label": "Shop-Guthaben anwenden",
+          "add_label": "Shop-Guthaben hinzufügen",
+          "manage_label": "Shop-Guthaben verwalten",
+          "buying_gift_card": "Du kannst kein Shop-Guthaben verwenden, um einen Gutschein zu kaufen",
+          "no_fixed_selling_plans": "Du kannst Shop-Guthaben nicht für Optionen für den Kauf mit Zahlungsaufschub verwenden"
+        },
+        "clear": "Löschen",
+        "billing_must_match_shipping_notice": "Die Rechnungsadresse deiner Zahlungsmethode muss mit der Lieferadresse übereinstimmen.",
+        "same_billing_address_checkbox_label": "Lieferadresse als Rechnungsadresse verwenden",
+        "location_billing_address_label": "Rechnungsadresse des Standorts",
+        "fact_billing_address_label": "Rechnungsadresse",
+        "location_shipping_address_label": "Lieferadresse des Standorts",
+        "no_working_method_error": "Dieser Shop kann zurzeit keine Zahlungen akzeptieren. Aktualisiere diese Seite oder versuche es später erneut.",
+        "brand_not_available": "Dieser Shop akzeptiert {{brand}} nicht. Verwende eine andere Karte für die Zahlung.",
+        "shipping_rate_updated": "Verfügbare Versandarten wurden aktualisiert. Bestätige deine Auswahl vor dem Auschecken.",
+        "billing_address_invalid_phone": "Aktualisiere die Telefonnummer in deiner Rechnungsadresse, um mit {{label}} {{last_digits}} fortzufahren.",
+        "billing_address_invalid_phone_no_card": "Aktualisiere die Telefonnummer in deiner Rechnungsadresse, um fortzufahren.",
+        "preview_not_available": {
+          "title": "Vorschau nicht verfügbar",
+          "content": "Keine Sorge, dieser Express-Checkout funktioniert weiterhin für deine Kunden.",
+          "button": "Ok"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Gültiges Ausstellungsdatum eingeben",
+              "issue_number": "Gültige Ausstellungsnummer eingeben"
+            },
+            "invalid": {
+              "verification_value": "Gib einen gültigen CVV- oder Sicherheitscode ein"
+            }
+          }
+        },
+        "simulated_checkout": "Vorschau demnächst verfügbar",
+        "vaulting_agreement_label": "Meine Zahlungsinformationen bei %{company} für einen schnelleren Checkout speichern",
+        "business_customer_vaulting_payment_label": "Diese Zahlungsmethode beim Checkout speichern und %{company} autorisieren, sie für zukünftige Käufe an diesem Standort zu belasten. Alle Kontakte, die diesem Standort zugewiesen sind, können die Zahlungsmethode verwenden.",
+        "purchase_options_and_vaulting_agreement_label": "Ein oder mehrere Artikel in deinem Warenkorb sind ein ausstehender Kauf oder ein Abonnementkauf. Indem du mit deiner Zahlung fortfährst, stimmst du zu, dass deine Zahlungsmethode automatisch zu dem Preis und mit der Häufigkeit, die auf dieser Seite aufgeführt sind, belastet wird, bis die Zahlungsmethode endet oder du sie kündigst. Alle Kündigungen unterliegen der %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "Stornierungsrichtlinie",
+        "use_different_credit_card_label": "Eine andere Karte verwenden",
+        "saved_credit_card": "Deine gespeicherte Kreditkarte",
+        "saved_credit_card_info": "Die letzten vier Ziffern",
+        "saved_credit_cards_modal": {
+          "view_all_label": "Alle gespeicherten Karten anzeigen",
+          "done": "Fertig",
+          "cancel": "Schließen"
+        },
+        "expired_cards_info": {
+          "one": "Es gibt %{count} abgelaufene Karte, die du in deinem Konto anzeigen und bearbeiten kannst.",
+          "other": "Es gibt %{count} abgelaufene Karten, die du anzeigen und in deinem Konto bearbeiten kannst."
+        },
+        "local_payment_method_receiver_notice": "Nachdem du deine Bestellung aufgegeben hast, erhältst du die Zahlungsdetails. Führe die Zahlung innerhalb von {{dueDays}} Tagen an einem Geldautomaten oder online aus.",
+        "order_edit_banner_title": "Zahlung von {{amount_owed}} erforderlich",
+        "order_edit_banner_subtitle": "Deine Bestellung {{order_number}} wurde aktualisiert. Überprüfe diese Änderungen und bezahle anschließend, um deine Bestellung zu bestätigen.",
+        "order_edit_banner_single_item_added": "Hinzugefügt",
+        "order_edit_banner_multiple_items_added": "{{amount}} hinzugefügt",
+        "order_edit_banner_single_item_removed": "Entfernt",
+        "order_edit_banner_multiple_items_removed": "{{amount}} entfernt",
+        "gift_card_wrapper": {
+          "heading": "Gutschein",
+          "apply_gift_card_label": "Gutschein anwenden",
+          "payment_tag": "Gutschein",
+          "apply_another_gift_card_label": "Weiteren Gutschein anwenden",
+          "gift_card_label": "Gutschein: %{identifier}",
+          "add_label": "Einen Gutschein hinzufügen",
+          "manage_label": "Geschenkgutscheine verwalten"
+        },
+        "custom_onsite_payment_method_modal": {
+          "title": "Bestätigung der benutzerdefinierten Onsite-Zahlung"
+        },
+        "markets_pro_disclaimer_label": "Indem du deine Bestellung aufgibst, stimmst du zu, als eingetragener Händler gemäß den %{markets_pro_terms} und der %{privacy_policy} von Global-e bei Global-e einzukaufen und deine Daten mit %{shop_name} zu teilen.",
+        "markets_pro_disclaimer_terms_and_conditions": "Geschäftsbedingungen",
+        "markets_pro_disclaimer_privacy_policy": "Datenschutzerklärung",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Geschäftsbedingungen des eingetragenen Händlers",
+        "markets_pro_disclaimer_privacy_policy_title": "Datenschutzerklärung des eingetragenen Händlers",
+        "purchase_order_number": {
+          "title": "Bestellnummer",
+          "label": "Bestellnummer (optional)"
+        },
+        "alternative_payment_currency_total_notice": "Hinweis: Dir werden %{amount_due} berechnet",
+        "waiting_on_taxes_message": "Wenn deine Steuern nicht innerhalb der nächsten Sekunden berechnet werden, aktualisiere die Seite.",
+        "waiting_on_taxes_notice": "Steuern werden berechnet",
+        "order_edit_banner_single_item_returned": "Zurückgegeben",
+        "order_edit_banner_multiple_items_returned": "{{amount}} zurückgegeben",
+        "shop_pay_installments_label": "Shop Pay-Ratenzahlung",
+        "add_credit_card_modal": {
+          "title": "Karte hinzufügen",
+          "cancel": "Schließen",
+          "save": "Speichern"
+        },
+        "delete_credit_card_modal": {
+          "title": "Karte löschen",
+          "confirmation": "Möchtest du das folgende Element wirklich löschen: {{brandName}} mit den letzten Ziffern {{lastDigits}}?",
+          "cancel": "Schließen",
+          "delete": "Löschen"
+        },
+        "order_edit_banner_items_added": {
+          "one": "Hinzugefügt",
+          "other": "%{count} hinzugefügt"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Entfernt",
+          "with_quantities": "{{delta}} von {{quantity}} entfernt"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "{{quantity}} zurückgegeben",
+          "with_quantities": "{{delta}} von {{quantity}} zurückgegeben"
+        },
+        "saved_credit_card_actions": {
+          "edit": "Bearbeiten",
+          "delete": "Löschen"
+        },
+        "edit_credit_card_modal": {
+          "title": "Karte bearbeiten",
+          "done": "Fertig",
+          "cancel": "Schließen",
+          "description": "Du kannst nur die Rechnungsadresse deiner Karte bearbeiten.",
+          "fields": {
+            "default": "Als Standard festlegen",
+            "card_number": "Kartennummer",
+            "expiry": "Ablaufdatum",
+            "security_code": "Sicherheitscode",
+            "name": "Name des Karteninhabers",
+            "billing": "Rechnung an"
+          }
+        },
+        "payment_method": "Zahlungsmethode",
+        "expired_payment_method": "Die ausgewählte Zahlungsmethode ist abgelaufen",
+        "subscription_heading": "Abonnementvereinbarung",
+        "use_order_billing_address_label": "Rechnungsadresse der Bestellung verwenden"
       }
     }
   }
