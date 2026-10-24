@@ -91,14 +91,15 @@
     { "type": "richtext", "id": "text", "label": "Text" },
     { "type": "collection", "id": "collection", "label": "Archive collection" },
     {
-      "type": "range",
+      "type": "select",
       "id": "products_to_show",
       "label": "Pieces to show on desktop",
       "info": "Mobile always shows two.",
-      "min": 2,
-      "max": 3,
-      "step": 1,
-      "default": 3
+      "options": [
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" }
+      ],
+      "default": "3"
     },
     { "type": "checkbox", "id": "show_price", "label": "Show the price these pieces sold at", "default": false },
     { "type": "text", "id": "button_label", "label": "Link label", "default": "Explore the archive" },
