@@ -3775,6 +3775,130 @@
         },
         "title": "Recordatorios de pago de Cuotas de Shop Pay"
       }
+    },
+    "address_form": {
+      "auto_complete_title": "Sugerencias",
+      "billing_address": "Usar como dirección de facturación",
+      "cancel": "Cancelar",
+      "cancel_accessibility_label": "Cancelar la edición de la dirección {{address}}",
+      "creation_success_notification": "Dirección agregada",
+      "default_address": "Esta es mi dirección predeterminada.",
+      "default_address_creation_success_notification": "Dirección predeterminada agregada",
+      "default_address_update_success_notification": "Dirección predeterminada actualizada",
+      "loading_add_form_accessibility_message": "Cargando formulario de nueva dirección",
+      "loading_edit_form_accessibility_message": "Cargando formulario de edición de dirección",
+      "loading_finished_accessibility_message": "Formulario de dirección cargado",
+      "save": "Guardar",
+      "save_accessibility_label": "Guardar la dirección {{address}}",
+      "section_title_accessibility_label": "Agregar dirección",
+      "update_success_notification": "Dirección actualizada",
+      "attention": "Atención",
+      "attention_help_text": "Nombre de una persona o departamento",
+      "loading_form_accessibility_message": "Cargando formulario de dirección",
+      "attention_company": "Empresa/destinatario"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Nombre de la empresa",
+        "company_card_section_accessibility_label": "Empresa"
+      },
+      "locations": {
+        "contact_email": "Correo electrónico",
+        "contact_list_title": "Gente",
+        "contact_name": "Nombre",
+        "contact_permissions": "Permisos",
+        "contact_phone_number": "Número de teléfono",
+        "location_picker_label": "Nombre de la sucursal",
+        "net_payment_terms_description": "{{name}}: pagos que vencen en {{numberOfDays}} días",
+        "payment_details_title": "Detalles del pago",
+        "payment_terms": "Condiciones del pago",
+        "permissions_label": "Sus permisos",
+        "permissions_title": "Permisos",
+        "section_title": "Sucursal",
+        "shipping_address_required": "Agrega una dirección de envío a esta sucursal para empezar a hacer pedidos",
+        "tax_details_title": "Información fiscal",
+        "tax_id": "Identificación fiscal",
+        "tax_exemptions": "Exenciones de impuestos",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} más",
+        "multiple_tax_exemptions_and": "y",
+        "tax_exemptions_modal_close": "Cerrar",
+        "taxes_none": "Ninguno",
+        "tax_exemption_not_applicable": "N/A",
+        "tax_exemptions_modal_button_accessibility_label": "Ver todas las exenciones fiscales",
+        "pagination": {
+          "load_more": "Mostrar más",
+          "load_more_accessibility_label": "Mostrar más sucursales"
+        },
+        "own_role_contact_name": "Tú",
+        "staff_and_permissions_title": "Empleados y permisos",
+        "location_picker_accessibility_label": "Nombre de la sucursal: {{locationName}}",
+        "deposit_percentage": "Depósito del {{percentage}}",
+        "contact_contact": "Contacto"
+      },
+      "location_selection": {
+        "description": "Si ya tienes artículos en el carrito, el cambio de sucursal puede afectar a los precios y las cantidades del carrito.",
+        "list_accessibility_label": "Lista de sucursales",
+        "list_item_accessibility_label": "{{name}}: {{address}}",
+        "list_item_without_address_accessibility_label": "{{name}}: sin dirección",
+        "list_loading_accessibility_message": "Cargando lista de sucursales",
+        "list_loading_address_accessibility_message": "Cargando dirección para {{locationName}}",
+        "list_loading_finished_accessibility_message": "Se cargó la lista de sucursales.",
+        "loading_store_accessibility_message": "Ir a la tienda",
+        "selection_cancel_button": "Cancelar",
+        "selection_confirmation_button": "Elegir sucursal",
+        "title": "¿Para qué sucursal compras?",
+        "continue_to_store": "Continuar a la tienda",
+        "no_location_title": "Solo pedidos personales",
+        "no_location_description": "Ya no tienes permiso para realizar pedidos para {{company}}. Aún puedes realizar pedidos personales.",
+        "no_locations_found": "No se encontró ninguna sucursal",
+        "search": "Buscar sucursales",
+        "clear_search": "Borrar búsqueda",
+        "try_new_search": "Intentar una nueva búsqueda",
+        "search_location_title": "Seleccionar una sucursal",
+        "selection_continue_button": "Continuar",
+        "description_switch_later": "Puedes cambiarla más adelante",
+        "title_choose_location": "Selecciona una sucursal",
+        "error_loading_locations": "Hubo un problema al cargar las sucursales. Revisa tu conexión a internet e inténtalo de nuevo."
+      },
+      "addresses": {
+        "add_billing_address_button": "Agregar dirección de facturación",
+        "add_billing_address_section_accessibility_label": "Agregar dirección de facturación",
+        "add_shipping_address_button": "Agregar dirección de envío",
+        "add_shipping_address_section_accessibility_label": "Agregar dirección de envío",
+        "billing_address_card_title": "Dirección de facturación",
+        "cancel_adding_billing_address_accessibility_label": "Cancelar adición de dirección de facturación",
+        "cancel_adding_shipping_address_accessibility_label": "Cancelar adición de dirección de envío",
+        "save_new_billing_address_accessibility_label": "Guardar dirección de facturación",
+        "save_new_shipping_address_accessibility_label": "Guardar dirección de envío",
+        "shipping_address_card_title": "Dirección de envío",
+        "no_billing_address_banner": "No se agregó una dirección de facturación"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Ocultar todo",
+          "show_all": "Mostrar todo",
+          "hide_all_accessibility_label": "Ocultar todos los pedidos de la revisión",
+          "show_all_accessibility_label": "Mostrar todos los pedidos de la revisión",
+          "title": "Pendiente",
+          "pagination": {
+            "nav_accessibility_label": "Botones de navegación de pedidos en revisión"
+          },
+          "show_all_orders_in_review": "Mostrar todos los pedidos en la revisión",
+          "show_less_orders_in_review": "Mostrar menos pedidos en la revisión",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "No tienes ningún pedido pendiente",
+            "pending_orders": {
+              "one": "Tienes {{count}} pedido pendiente",
+              "other": "Tienes {{count}} pedidos pendientes"
+            },
+            "more_than_pagination_length": "Tienes más de {{count}} pedidos pendientes"
+          },
+          "pending_orders_count_more_than_pagination_length": "Más de {{count}}"
+        },
+        "order_list_column_headers_location": "Sucursal",
+        "order_list_column_headers_contact": "Contacto",
+        "removed_company_contact_tooltip": "Eliminado de la empresa"
+      }
     }
   }
 }
