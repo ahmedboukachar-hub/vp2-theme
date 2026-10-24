@@ -2606,6 +2606,151 @@
         "order_status_payments_app_pending_payment_description_default_with_email_payment": "En breve recibirás un correo electrónico de confirmación. Haz seguimiento de tu pedido usando la aplicación Shop.",
         "order_status_payments_app_pending_payment_description_default_with_email_pick_up": "En breve recibirás un correo electrónico de confirmación. Haz seguimiento de tu pedido usando la aplicación Shop.",
         "order_status_payments_app_pending_payment_description_default_with_phone_payment": "En breve recibirás un SMS de confirmación. Haz seguimiento de tu pedido usando la aplicación Shop."
+      },
+      "review": {
+        "blocks": {
+          "due_after_order_reviewed_html": "Vence una vez revisado el pedido",
+          "review_title_free_order": "Revisar y completar el pedido",
+          "payment_method_saved_company_location": "Guardar tarjeta para esta sucursal",
+          "company_location": "Ubicación de la empresa",
+          "change_company_location_link_label": "Cambiar sucursal de la empresa",
+          "pickup_items_at": {
+            "one": "Retiro de %{count} artículo en",
+            "other": "Retiro de %{count} artículos en"
+          },
+          "ship_items_to": {
+            "one": "Enviar %{count} artículo a",
+            "other": "Enviar %{count} artículos a"
+          },
+          "no_purchase_order_number_long": "Ningún número de pedido"
+        },
+        "block_title": "Revisa tu información",
+        "checkout_a_different_way": "Pagar de otra manera",
+        "item_header": {
+          "change_value": "Cambiar valor",
+          "section": "Sección",
+          "value": "Valor"
+        },
+        "review_and_confirm_title": "Revisar y confirmar",
+        "account_more_actions": "Más acciones para esta cuenta"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Enviarme novedades y ofertas por correo electrónico",
+        "unsubscribe": {
+          "title": "Ha cancelado su suscripción",
+          "description": "No recibirá más recordatorios de cestas de compra nuestros."
+        },
+        "accept_sms_checkbox_label": "Enviarme novedades y ofertas por SMS",
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "Política de privacidad",
+            "terms_of_service": "Términos del servicio",
+            "description_html": "Al registrarte por SMS, aceptas recibir mensajes automatizados de marketing recurrentes al número de teléfono proporcionado, incluyendo recordatorios de carritos. El consentimiento no es una condición de compra. Responde STOP para darte de baja. Responde HELP para obtener ayuda. La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos. Ver nuestra %{privacy_policy_link} y nuestros %{terms_of_service_link}.",
+            "description_transactional_html": "Puedes recibir mensajes de texto relacionados con la confirmación del pedido y actualizaciones de envío. Responde STOP para darte de baja. Responde HELP para obtener ayuda. La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos. Consulta nuestra %{privacy_policy_modal_link} y nuestros %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Número de teléfono móvil",
+          "get_offers_by_text": "Obtener ofertas por texto"
+        },
+        "post_accept_marketing_checkbox_label": "Estas suscrito para recibir noticias y ofertas por correo electrónico",
+        "pending_accept_marketing_checkbox_label": "Revisa tu correo electrónico y confirma tu suscripción a las noticias y ofertas",
+        "accept_shop_pay_marketing_checkbox_label": "Regístrame para recibir noticias y ofertas de esta tienda",
+        "disclaimer": {
+          "privacy_policy": "Política de privacidad",
+          "terms_of_service": "Términos del Servicio"
+        },
+        "accept_whatsapp_marketing_checkbox_label": "Enviarme mensajes por WhatsApp con novedades y ofertas",
+        "whatsapp": {
+          "disclaimer": {
+            "description_html": "Si te suscribes a través de WhatsApp, aceptas recibir mensajes de marketing por WhatsApp en el número de teléfono proporcionado. El consentimiento no es una condición de compra. Responde STOP para cancelar la suscripción. La frecuencia de los mensajes varía. Pueden aplicarse tarifas por mensajes y datos. Consulta la %{privacy_policy_link} y los %{terms_of_service_link}."
+          }
+        }
+      },
+      "shop_policies": {
+        "refund_policy": "Política de reembolso",
+        "privacy_policy": "Política de privacidad",
+        "terms_of_service": "Términos del servicio",
+        "legal_notice": "Aviso legal",
+        "shipping_policy": "Envío",
+        "terms_of_sale": "Condiciones de venta",
+        "subscription_policy": "Cancelaciones",
+        "purchase_options_policy": "Política de opciones de compra",
+        "contact_information": "Contacto",
+        "purchase_options_cancellation_policy": "Cancelaciones",
+        "cookie_preferences": "Cookies",
+        "policy_label": "Política",
+        "policies_label": "Políticas",
+        "select_policy_label": "Seleccione una política",
+        "terms_and_policies": "Términos y políticas"
+      },
+      "notifications": {
+        "title": "Notificaciones"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Monto a pagar por el pedido %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Agregado",
+            "other": "Se agregó %{count}."
+          },
+          "removed": "Eliminada",
+          "subtracted": "Se eliminó %{count}.",
+          "returned": "Se devolvió %{count}.",
+          "return_line_item_removed": "Se eliminó %{count} de la devolución."
+        },
+        "additional_payment_requested": "Se requiere el pago de %{total_outstanding}",
+        "checkout_review_and_pay": "Tu pedido %{order_name} se actualizó. Revisa estos cambios, luego paga para confirmar tu pedido.",
+        "order_updated_on": "Tu pedido se actualizó en %{last_edited_at}.",
+        "order_review_and_pay": "Tu pedido se actualizó. Revisa y paga para confirmar tu pedido.",
+        "pay_now": "Pagar ahora"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "Se cobrará %{amount} a tu tarjeta de crédito",
+        "payment_total_label": "Total del pago",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Cambia a %{currency_name}",
+        "card_provider_fx_charges_warning": "Es posible que tu proveedor de tarjeta cobre algún cargo por transacciones en %{currency_code}.",
+        "currency_not_supported_by_shop": "La moneda que has seleccionado ya no está disponible. Todos los precios ahora están en %{currency_code}."
+      },
+      "tips": {
+        "title": "Agregar propina",
+        "description": "Da una muestra de apoyo al equipo de %{shop_name}",
+        "presets_description": "Selecciona un porcentaje de propina",
+        "custom_label": "Propina personalizada",
+        "add_tip": "Agregar propina",
+        "update_tip": "Actualizar propina",
+        "message": "Muchas gracias.",
+        "preset_label": "%{tip_percent}%",
+        "no_tip_label": "Ninguno",
+        "not_available_with_spi": "No disponible con Cuotas de Shop Pay"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Comprar %{product_name}",
+          "one": "Comprar %{product_name} y %{count} artículo más",
+          "other": "Comprar %{product_name} y %{count} artículos más"
+        }
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Información adicional",
+          "tax_credential_br": "CPF/CNPJ",
+          "shipping_credential_br": "CPF/CNPJ",
+          "shipping_credential_kr": "Código personal de aduanas",
+          "shipping_credential_cn": "Número de identificación de residente",
+          "tax_credential_it": "Codice Fiscale (opcional)",
+          "tax_email_it": "Correo electrónico certificado (PEC) (opcional)",
+          "tax_credential_cl": "RUT",
+          "shipping_credential_cl": "RUT",
+          "tax_credential_co": "Cédula/IVA",
+          "tax_credential_type_co": "Tipo Cédula",
+          "shipping_credential_co": "Cédula/IVA",
+          "shipping_credential_type_co": "Tipo Cédula",
+          "tax_credential_cr": "Número de identificación/RUT",
+          "shipping_credential_cr": "Número de identificación/RUT",
+          "tax_credential_ec": "CI/RUC/IVA",
+          "shipping_credential_ec": "CI/RUC/IVA"
+        }
       }
     }
   }
