@@ -154,6 +154,12 @@
           {%- endcase -%}
         {%- endfor -%}
       </div>
+      <script>
+        {%- comment -%} Collapse the groups on small screens while the footer is parsed, before it is painted; footer-groups.js (deferred) only handles later breakpoint changes. Without JavaScript the groups stay open. {%- endcomment -%}
+        if (!window.matchMedia('(min-width: 750px)').matches) {
+          document.querySelectorAll('[data-footer-groups] details.footer__group').forEach(function (group) { group.open = false; });
+        }
+      </script>
     {%- endif -%}
 
     <div class="footer__bottom">
