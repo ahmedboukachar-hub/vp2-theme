@@ -2962,6 +2962,144 @@
             "address_too_long": "La ligne d’adresse est trop longue"
           }
         }
+      },
+      "units": {
+        "millimeter": "mm",
+        "centimeter": "cm",
+        "meter": "m",
+        "square_meter": "m²",
+        "ounce": "oz",
+        "pound": "lb",
+        "fluid_ounce": "oz liq.",
+        "pint": "pt",
+        "quart": "qt",
+        "gallon": "gal",
+        "inch": "po",
+        "foot": "pi",
+        "yard": "yd",
+        "square_foot": "pi²",
+        "item": "article"
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Accéder à la boutique en ligne"
+        }
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "L’adresse n’est pas prise en charge pour l’adhésion actuelle.",
+        "items_split_across_locations_unsupported": "La livraison Prime n’est pas disponible pour votre commande. Vos options d’expédition ont été mises à jour."
+      },
+      "tooltip": {
+        "accessibility_label_context": "Plus d’informations sur %{context}",
+        "additional_payment_methods": "Autres moyens de paiement"
+      },
+      "review_address_modal": {
+        "title": "Vérifier l’adresse",
+        "subtitle_no_match": "Cette adresse ne correspond à aucune des adresses que vous avez enregistrées.",
+        "subtitle_must_use": "Votre commande sera expédiée à cette adresse.",
+        "continue": "Continuer avec cette adresse",
+        "use_saved_address": "Utiliser une autre adresse",
+        "return_to_cart": "Retour au panier",
+        "subtitle": {
+          "one": "Cette commande sera expédiée à l’adresse communiquée par {{merchant}}.",
+          "other": "Cette commande sera expédiée à une adresse communiquée par {{merchant}}. Sélectionnez une adresse de livraison."
+        }
+      },
+      "remote": {
+        "errors": {
+          "currency_mismatch": "Cet article ne peut pas être ajouté à votre panier, car il provient d’une boutique qui utilise une devise différente.",
+          "max_remote_shops_exceeded": "Ce produit ne peut pas être ajouté, car votre panier comporte déjà le nombre maximum de produits provenant d’autres boutiques.",
+          "currency_mismatch_removal": "Un article a été supprimé de votre panier, car il provient d’une boutique qui utilise une devise différente.",
+          "only_remote_merchandise_lines": "Le paiement ne concerne que des articles provenant d’une boutique externe. Une redirection vers cette boutique est nécessaire pour finaliser le paiement."
+        }
+      },
+      "remote_merchandise_only": {
+        "title": "Finalisez votre achat",
+        "return_to_store_label": "Retourner à la boutique",
+        "checkout_on_shop_label": "Finaliser le paiement sur %{shop_name}",
+        "single_shop_transition": "Vous êtes actuellement redirigé(e) vers %{advertiser} pour finaliser votre achat.",
+        "detail_item_label": {
+          "one": "{{count}} article",
+          "other": "{{count}} articles"
+        },
+        "remote_only_notice": "Ces articles sont vendus et expédiés par d’autres boutiques. Vous devez régler chaque commande séparément."
+      },
+      "remote_policies": {
+        "unavailable_policy": "Aucune %{policy_name} n’a été fournie pour cette boutique. Pour plus d’informations, contactez directement %{shop_name}."
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_title": "Échec du paiement",
+        "payment_not_processed_text": "Essayez de nouveau de scanner le code QR. S’il ne fonctionne toujours pas, informez nos employés et essayez un autre moyen de paiement.",
+        "payment_link_expired_title": "Lien de paiement expiré",
+        "payment_link_expired_text": "Essayez de nouveau de scanner le code QR.",
+        "title": "Échec du paiement hors site"
+      },
+      "taxes": {
+        "tax_details": "Informations fiscales supplémentaires",
+        "vat_number": {
+          "field": {
+            "label": "Numéro de TVA (facultatif)",
+            "tooltip": "Valide le numéro de TVA et applique automatiquement l’autoliquidation pour les commandes éligibles"
+          },
+          "add": "Ajouter un numéro de TVA",
+          "vaulted": "Numéro de TVA : %{number}",
+          "badge": "Numéro de TVA : %{number}",
+          "domestic_order": "L’exonération au titre de l’autoliquidation s’applique uniquement aux commandes transfrontalières au sein de l’UE. Pour les commandes locales, la TVA standard est facturée.",
+          "status": {
+            "invalid_format": {
+              "at": "En Autriche, les numéros de TVA se composent du préfixe AT suivi de 9 caractères",
+              "be": "En Belgique, les numéros de TVA se composent du préfixe BE suivi de 10 caractères",
+              "bg": "En Bulgarie, les numéros de TVA se composent du préfixe BG suivi de 9 ou 10 caractères",
+              "hr": "En Croatie, les numéros de TVA se composent du préfixe HR suivi de 11 caractères",
+              "cy": "À Chypre, les numéros de TVA comportent le préfixe CY suivi de 9 caractères",
+              "cz": "En Tchéquie, les numéros de TVA se composent du préfixe CZ suivi de 8, 9 ou 10 caractères",
+              "dk": "Au Danemark, les numéros de TVA se composent du préfixe DK suivi de 8 caractères",
+              "ee": "En Estonie, les numéros de TVA se composent du préfixe EE suivi de 9 caractères",
+              "fi": "En Finlande, les numéros de TVA se composent du préfixe FI suivi de 8 caractères",
+              "fr": "En France, les numéros de TVA se composent du préfixe FR suivi de 11 caractères",
+              "de": "En Allemagne, les numéros de TVA se composent du préfixe DE suivi de 9 caractères",
+              "gr": "En Grèce, les numéros de TVA se composent du préfixe EL suivi de 9 caractères",
+              "hu": "En Hongrie, les numéros de TVA se composent du préfixe HU suivi de 8 caractères",
+              "ie": "En Irlande, les numéros de TVA se composent du préfixe IE suivi de 8 ou 9 caractères",
+              "it": "En Italie, les numéros de TVA se composent du préfixe IT suivi de 11 caractères",
+              "lv": "En Lettonie, les numéros de TVA se composent du préfixe LV suivi de 11 caractères",
+              "lt": "En Lituanie, les numéros de TVA se composent du préfixe LT suivi de 9 à 12 caractères",
+              "lu": "Au Luxembourg, les numéros de TVA se composent du préfixe LU suivi de 8 caractères",
+              "mt": "À Malte, les numéros de TVA se composent du préfixe MT suivi de 8 caractères",
+              "nl": "Aux Pays-Bas, les numéros de TVA se composent du préfixe NL suivi de 12 caractères",
+              "pl": "En Pologne, les numéros de TVA se composent du préfixe PL suivi de 10 caractères",
+              "pt": "Au Portugal, les numéros de TVA se composent du préfixe PT suivi de 9 caractères",
+              "ro": "En Roumanie, les numéros de TVA se composent du préfixe RO suivi de 10 caractères",
+              "sk": "En Slovaquie, les numéros de TVA se composent du préfixe SK suivi de 10 caractères",
+              "si": "En Slovénie, les numéros de TVA se composent du préfixe SI suivi de 8 caractères",
+              "es": "En Espagne, les numéros de TVA se composent du préfixe ES suivi de 9 caractères",
+              "se": "En Suède, les numéros de TVA se composent du préfixe SE suivi de 9 caractères",
+              "gb": "Au Royaume-Uni, les numéros de TVA se composent du préfixe GB ou XI suivi de 5 à 12 caractères"
+            },
+            "invalid_number": {
+              "at": "Saisissez un numéro de TVA autrichien valide",
+              "be": "Saisissez un numéro de TVA belge valide",
+              "bg": "Saisissez un numéro de TVA bulgare valide",
+              "hr": "Saisissez un numéro de TVA croate valide",
+              "cy": "Saisissez un numéro de TVA chypriote valide",
+              "cz": "Saisissez un numéro de TVA tchèque valide",
+              "dk": "Saisissez un numéro de TVA danois valide",
+              "ee": "Saisissez un numéro de TVA estonien valide",
+              "fi": "Saisissez un numéro de TVA finlandais valide",
+              "fr": "Saisissez un numéro de TVA français valide",
+              "de": "Saisissez un numéro de TVA allemand valide",
+              "gr": "Saisissez un numéro de TVA grec valide",
+              "hu": "Saisissez un numéro de TVA hongrois valide",
+              "ie": "Saisissez un numéro de TVA irlandais valide",
+              "it": "Saisissez un numéro de TVA italien valide",
+              "lv": "Saisissez un numéro de TVA letton valide",
+              "lt": "Saisissez un numéro de TVA lituanien valide",
+              "lu": "Saisissez un numéro de TVA luxembourgeois valide",
+              "mt": "Saisissez un numéro de TVA maltais valide",
+              "nl": "Saisissez un numéro de TVA néerlandais valide"
+            }
+          }
+        }
       }
     }
   }
