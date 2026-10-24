@@ -3471,6 +3471,164 @@
       "address": {
         "updated": "Adresse erfolgreich aktualisiert."
       }
+    },
+    "checkpoint": {
+      "error": "Captcha-Validierung fehlgeschlagen.",
+      "submit_button_text": "Senden"
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Vielen Dank, dass du dich für unsere Mailingliste angemeldet hast.",
+        "disclaimer": "Du kannst dich jederzeit wieder abmelden.",
+        "unsubscribe": "Abmelden"
+      },
+      "unsubscribed": {
+        "confirmation": "Du hast dich von unserer Mailingliste abgemeldet.",
+        "disclaimer": "Du erhältst von uns keine Marketing-Updates mehr. Du kannst dich jederzeit wieder anmelden.",
+        "preview": "Du siehst eine Vorschau dessen, was Kunden beim Abmelden sehen."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Du hast Tracking geöffneter E-Mails aktiviert.</b>",
+          "visibility": "E-Mail-Öffnungsraten werden anonym aufgezeichnet. Wir sehen nur als Teil einer zusammengefassten E-Mail-Öffnungsrate, ob du eine E-Mail geöffnet hast.",
+          "opt_out_html": "Du kannst das Tracking geöffneter E-Mails <a style='text-decoration:underline;' href='%{link}'>deaktivieren</a>, wenn du diese Informationen nicht teilen möchtest.",
+          "preview_bar": "Du siehst eine Vorschau dessen, was Kunden angezeigt wird, wenn sie die Nachverfolgung geöffneter E-Mails aktivieren."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Du hast Tracking geöffneter E-Mails deaktiviert.</b>",
+          "visibility": "Wir können nicht sehen, ob du unsere E-Mails geöffnet hast.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Aktiviere</a> das Tracking geöffneter E-Mails.",
+          "preview_bar": "Du siehst eine Vorschau dessen, was Kunden angezeigt wird, wenn sie die Nachverfolgung geöffneter E-Mails deaktivieren."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Wir verfolgen nicht mehr nach, ob du E-Mails öffnest.</b>",
+          "privacy_policy": "Nachdem diese E-Mail versendet wurde, haben wir unsere Datenschutzerklärung aktualisiert und verfolgen keine geöffneten E-Mails mehr nach."
+        },
+        "track": {
+          "status_html": "<b>Tracking geöffneter E-Mails wird übermittelt.</b>",
+          "visibility": "Wir sehen nur als Teil der zusammengefassten E-Mail-Öffnungsrate, ob du die E-Mail geöffnet hast."
+        },
+        "updated_policy": {
+          "status_html": "<b>Tracking geöffneter E-Mails wird übermittelt.</b>",
+          "visibility": "Wir haben unsere Datenschutzerklärung aktualisiert und verfolgen geöffnete E-Mails nach. E-Mail-Öffnungsraten werden anonym aufgezeichnet. Wir sehen nur als Teil der zusammengefassten E-Mail-Öffnungsrate, ob du eine E-Mail geöffnet hast.",
+          "opt_out_html": "Wenn du diese Informationen nicht teilen möchtest, kannst du das <a style='text-decoration:underline;' href='%{link}'>Abonnement kündigen</a>."
+        }
+      },
+      "sms_unsubscribe_confirm": {
+        "message": "Bist du sicher, dass du das SMS-Marketing abbestellen möchtest?",
+        "button": "Abbestellen"
+      }
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Gewöhnlich fertig in 1 Stunde",
+        "two_hours": "Gewöhnlich fertig in 2 Stunden",
+        "four_hours": "Gewöhnlich fertig in 4 Stunden",
+        "twenty_four_hours": "Gewöhnlich fertig in 24 Stunden",
+        "two_to_four_days": "Gewöhnlich fertig in 2 - 4 Tagen",
+        "five_or_more_days": "Gewöhnlich fertig in 5 oder mehr Tagen",
+        "zero_to_two_hours": "Gewöhnlich fertig in 2 Stunden",
+        "two_to_four_hours": "Gewöhnlich fertig in 4 Stunden",
+        "immediately": "Jetzt zur Abholung bereit",
+        "next_day": "Abholbereit am nächsten Tag"
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "Auf Lager",
+          "out_of_stock": "Nicht vorrätig"
+        }
+      },
+      "boolean": {
+        "true_label": "Ja",
+        "false_label": "Nein"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "Relevanz",
+        "price_ascending": "Preis (aufsteigend)",
+        "price_descending": "Preis (absteigend)"
+      },
+      "error": "Beim Laden deiner Suchergebnisse ist ein Problem aufgetreten. Lade die Seite neu oder versuche es später noch einmal."
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Bei diesem Artikel handelt es sich um einen wiederkehrenden Kauf oder Kauf mit Zahlungsaufschub. Indem ich fortfahre, stimme ich den %{cancellationPolicyLink} zu und autorisiere Sie, meine Zahlungsmethode zu den auf dieser Seite aufgeführten Preisen, in der Häufigkeit und zu den Terminen zu belasten, bis meine Bestellung ausgeführt wurde oder ich, sofern zulässig, storniere.",
+      "buyer_consent_cart": "Ein oder mehrere Artikel in deinem Warenkorb ist/sind ein wiederkehrender Kauf oder ein Kauf mit Zahlungsaufschub. Indem ich fortfahre, stimme ich den %{cancellationPolicyLink} zu und autorisiere Sie, meine Zahlungsmethode zu den auf dieser Seite aufgeführten Preisen, in der Häufigkeit und zu den Terminen zu belasten, bis meine Bestellung ausgeführt wurde oder ich, sofern zulässig, storniere.",
+      "cancellation_policy": "Stornierungsrichtlinie"
+    },
+    "managed_markets": {
+      "buyer_consent": "Mit der Aufgabe deiner Bestellung erklärst du dich damit einverstanden, bei Global-e als eingetragenem Händler gemäß den %{termsAndConditionsLink} und der %{privacyPolicyLink} von Global-e zu kaufen und deine Informationen mit %{shopName} zu teilen.",
+      "terms_and_conditions": "Geschäftsbedingungen",
+      "privacy_policy": "Datenschutzerklärung"
+    }
+  },
+  "customer_accounts": {
+    "callback": {
+      "try_again": "Erneut versuchen"
+    },
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Konto-Menü ausblenden",
+        "show_accessibility_label": "Konto-Menü anzeigen",
+        "nav_accessibility_label": "Kontonavigation",
+        "open_menu_accessibility_label": "Kontonavigation öffnen",
+        "close_menu_accessibility_label": "Kontonavigation schließen",
+        "loading_message": "Kontonavigation wird geladen",
+        "label": "Konto"
+      },
+      "action_menu_accessibility_label": "Weitere Aktionen",
+      "close_menu_accessibility_label": "Hauptmenü schließen",
+      "contact_email_subject": "Vom Onlineshop {{shopName}} aus Kontakt aufnehmen",
+      "contact_link": "Kontaktinformationen",
+      "delete_confirmation": {
+        "cancel": "Stornieren",
+        "delete": "Löschen"
+      },
+      "dismiss_toast": "Verwerfen",
+      "document_title": "{{sectionName}} – {{shopName}} – Konto",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "loading_message": "Wird geladen",
+      "log_out_link": "Abmelden",
+      "logout_overlay_label": "Wird abgemeldet …",
+      "nav_label_accessibility_label": "Hauptmenü",
+      "navigation_accessibility_message": "Du hast zu {{sectionName}} navigiert",
+      "open_menu_accessibility_label": "Hauptmenü öffnen",
+      "shop_logo_accessibility_label": "{{shopName}}-Logo",
+      "settings_link": "Einstellungen",
+      "country_switcher_toast_message": "Land zu {{countryName}} geändert",
+      "switch_country": "Land wechseln",
+      "search": "Suche",
+      "location_switcher_toast_message": "Standort gewechselt zu {{locationName}}",
+      "switch_location": "Standort wechseln",
+      "view_details": "Details anzeigen",
+      "company_location": "Unternehmensstandort",
+      "no_countries_found": "Keine Länder gefunden",
+      "no_locations_found": "Keine Standorte gefunden",
+      "try_new_search": "Eine neue Suchanfrage starten",
+      "skip_to_content": "Direkt zum Inhalt",
+      "loading_policy_content_accessibility_label": "Lade Richtlinieninhalt",
+      "policy_load_error": "{{policyName}} konnte nicht geladen werden",
+      "policy_try_again": "Erneut versuchen",
+      "loading_section_accessibility_label": "{{sectionName}} wird geladen",
+      "back_button_accessibility_label": "Zurück",
+      "go_to_store_link": "Zum Shop",
+      "orders_link_label": "Bestellungen",
+      "subscriptions_link_label": "Abonnements",
+      "store_credit_accessibility_label": "{{formattedBalance}} Shop-Guthaben",
+      "store_credit_balances_list_accessibility_label": "Shop-Guthabenstände",
+      "store_credit_multi_currency_accessibility_label": {
+        "one": "{{formattedBalance}} und Shop-Guthaben in {{count}} weiterer Währung",
+        "other": "{{formattedBalance}} und Shop-Guthaben in {{count}} weiteren Währungen"
+      }
+    },
+    "account_information": {
+      "loading_accessibility_message": "Kontoinformationen werden geladen",
+      "loading_finished_accessibility_message": "Kontoinformationen wurden geladen",
+      "profile_card": {
+        "cancel": "Stornieren"
+      }
     }
   }
 }
