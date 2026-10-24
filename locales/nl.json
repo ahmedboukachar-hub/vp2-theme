@@ -3210,6 +3210,142 @@
           }
         }
       }
+    },
+    "attributes": {
+      "last_name": "achternaam",
+      "body": "hoofdtekst",
+      "signature": "Adres"
+    },
+    "addresses": {
+      "zip_code": "Postcode",
+      "postal_code": "Postcode",
+      "postcode": "Postcode",
+      "pincode": "Postcode",
+      "region": "Regio",
+      "prefecture": "Prefectuur",
+      "province": "Provincie",
+      "state": "Staat",
+      "state_and_territory": "Staat/Grondgebied",
+      "county": "Provincie",
+      "emirate": "Emiraat",
+      "governorate": "Gouvernement",
+      "confirm": "Weet je zeker dat je dit adres wilt verwijderen?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Uitgelicht",
+        "best_selling": "Best verkopende",
+        "az": "Alfabetisch: A-Z",
+        "za": "Alfabetisch: Z-A",
+        "price_ascending": "Prijs: laag naar hoog",
+        "price_descending": "Prijs: hoog naar laag",
+        "date_ascending": "Datum: oud naar nieuw",
+        "date_descending": "Datum: nieuw naar oud",
+        "most_relevant": "Meest relevant"
+      }
+    },
+    "errors": {
+      "blank": "kan niet leeg zijn",
+      "credit_card_session_expired": "Creditcardautorisatie is verlopen. Voer je betaalgegevens opnieuw in. Er is geen geld van je kaart afgeschreven.",
+      "empty": "kan niet leeg zijn",
+      "invalid_email": "moet een geldig e-mailadres zijn",
+      "discount_disabled": "Deze korting is geblokkeerd",
+      "discount_expired": "Deze korting is niet meer geldig",
+      "discount_limit_reached": "Deze korting heeft de gebruikslimiet bereikt",
+      "discount_not_found": "Kan geen geldige korting vinden die overeenkomt met de code",
+      "customer_already_used_once_per_customer_discount_notice": "Deze korting heeft de gebruikslimiet bereikt",
+      "gift_card_already_applied": "Code is al op je winkelwagen toegepast",
+      "gift_card_code_invalid": "Code is ongeldig",
+      "gift_card_currency_mismatch": "Deze cadeaubon kan niet voor deze aankoop worden gebruikt. Neem contact op met %{shop_name} om deze opnieuw te laten uitgeven.",
+      "gift_card_depleted": "Er staat geen saldo meer op deze cadeaubon",
+      "gift_card_disabled": "Cadeaubon is geblokkeerd",
+      "gift_card_expired": "Cadeaubon is verlopen",
+      "invalid": "is ongeldig",
+      "bad_domain": "bevat een ongeldige domeinnaam",
+      "taken": "is al gebruikt",
+      "contains_html_tags": "kan geen HTML-tags bevatten",
+      "too_short": "is te kort (het minimum is %{count} tekens)",
+      "too_long": "is te lang (het maximum is %{count} tekens)",
+      "password_mismatch": "moet identiek zijn aan het opgegeven wachtwoord",
+      "contains_spaces": "begint of eindigt met spaties.",
+      "invalid_for_country": "is niet geldig voor %{country}",
+      "invalid_for_country_and_province": "is niet geldig voor %{province} en %{country}",
+      "invalid_province_in_country": "is geen geldige provincie in %{country}",
+      "invalid_state_in_country": "is geen geldige staat in %{country}",
+      "invalid_region_in_country": "is geen geldige regio in %{country}",
+      "less_than_or_equal_to": "moet kleiner dan of gelijk aan %{count} zijn",
+      "not_supported": "wordt niet ondersteund",
+      "full_name_required": "Vul een voor- en achternaam in",
+      "invalid_for_card_type": "is ongeldig",
+      "invalid_type": "sorry, we aanvaarden geen kaarten van dit type",
+      "invalid_format": "formaat is ongeldig",
+      "expired": "is verlopen",
+      "invalid_start_date_or_issue_number_for_debit": "geldige startdatum of geldig uitgiftenummer vereist",
+      "invalid_expiry_year": "is geen geldig vervaljaar",
+      "reset_password_html": "Dit e-mailadres is al gekoppeld aan een account. Als dit account van jou is, dan kun je <a href=\"/account/login#recover\">je wachtwoord resetten</a>",
+      "verify_email": "We hebben een e‑mail verstuurd naar %{customer_email}. Klik alstublieft op de bijgevoegde link om je e-mailadres te controleren.",
+      "blocked_address": "Deze locatie wordt niet ondersteund",
+      "product_not_available": "product is niet gepubliceerd voor deze klant.",
+      "shop_404": {
+        "title": "Maak een e-commercewebsite en verkoop je producten online!E-commercesoftware van Shopify",
+        "heros": {
+          "store_unavailable": "Deze winkel is momenteel niet beschikbaar.",
+          "store_not_exist": "Deze winkel bestaat niet.",
+          "no_storefront": "Deze winkel heeft nog geen website.",
+          "store_will_be_right_back": "Deze winkel is zo weer beschikbaar"
+        },
+        "links": {
+          "explore_other_stores": "Andere winkels verkennen",
+          "start_free_trial": "Gratis uitproberen",
+          "refresh_page": "Pagina vernieuwen"
+        },
+        "owner_ctas": {
+          "header": "Ben jij de winkeleigenaar?",
+          "fix_domain": "Ga naar %{domain_settings_link} en rond het instellen van je nieuwe webadres af.Klik op 'Domein verbinden' en typ: %{domain}.<br>Als je niet in je winkel kunt komen, probeer dan %{forgot_your_store_link}",
+          "fix_domain_link_text": "je domeininstellingen",
+          "forgot_your_store_link_text": "Je winkel vergeten?",
+          "add_storefront": "Je kunt je website instellen door het webshop-kanaal in het %{admin_link} toe te voegen.Als je niet in je winkel kunt komen, probeer dan %{forgot_your_store_link}",
+          "admin_link_text": "beheercentrum"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Persoonlijke verkoop",
+            "caption": "Krijg de functies die je nodig hebt om je retailwinkel te runnen, of je nu pas begint of uitbreidt.",
+            "link_text": "Gratis proefversie starten"
+          },
+          "open_a_store": {
+            "header": "Een nieuwe Shopify-winkel openen",
+            "caption": "Start een gratis proefversie van drie dagen en ga daarna drie maanden door voor 1 USD per maand.",
+            "link_text": "Meld je nu aan"
+          },
+          "editions": {
+            "header": "Shopify Editions bekijken",
+            "caption": "Er zijn meer dan 100 productupdates waarmee je productiever, creatiever en slagvaardiger kunt zijn in de commerciële wereld dan je ooit voor mogelijk had gehouden.",
+            "link_text": "Nieuwste edities verkennen"
+          },
+          "store_owner": {
+            "header": "Ben jij de winkeleigenaar?",
+            "caption": "Kun je niet in je winkel komen?Probeer de functie %{forgot_your_store_link}Als je je winkel opnieuw wilt activeren, neem dan contact op met %{shopify_support_link}.",
+            "shopify_support_link_text": "Shopify Support"
+          }
+        },
+        "title_unavailable": "Winkel niet beschikbaar",
+        "subtitles": {
+          "store_will_be_right_back": "Shopify werkt eraan om de winkel zo snel mogelijk weer online te krijgen."
+        },
+        "status_card": {
+          "eyebrow": "Hulp voor winkeleigenaren",
+          "header": "De status van Shopify controleren",
+          "caption": "Ontdek of er een storing op Shopify is die meer dan alleen deze winkel treft.",
+          "link_text": "Systeemstatus van Shopify bekijken"
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Fout bij het resetten van het wachtwoord",
+        "no_account_found": "Geen account gevonden met dat e-mailadres."
+      }
     }
   }
 }
