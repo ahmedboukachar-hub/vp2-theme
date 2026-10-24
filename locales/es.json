@@ -2354,6 +2354,132 @@
         "address_district_contains_html_tags": "El distrito no puede contener etiquetas HTML",
         "address_district_contains_mathematical_symbols": "El distrito no puede contener símbolos matemáticos.",
         "address_ward_blank": "Introduce una municipalidad."
+      },
+      "payment_errors": {
+        "paypal_over_capture": "El total de tu pedido se actualizó. Paga con {{walletName}} para completar tu pedido.",
+        "test_mode_enabled_only_test_cards": "El modo de prueba está activado, solo se pueden añadir tarjetas de crédito de prueba.",
+        "captcha_required": "Ingresa la información de pago y resuelve el CAPTCHA para completar la compra.",
+        "captcha_required_without_payment_information": "Resuelve el CAPTCHA para completar la compra.",
+        "shipping_company_required_error": "{{shopName}} necesita un nombre de empresa para la dirección de envío.",
+        "payment_credential_delegation_error": "Hubo un problema al procesar el pago. Elige una nueva forma de pago.",
+        "cancelled_payment": "Se canceló tu pago. Inténtalo de nuevo o usa otra forma de pago.",
+        "currency": {
+          "no_longer_supported": "La moneda de la tienda ya no se admite."
+        },
+        "installments_payment_method_incompatible": "La forma de pago seleccionada no se puede usar con cuotas. Elige otra forma de pago.",
+        "missing_cvc": "Ingresa un código de seguridad",
+        "local_payment_method_amount_out_of_range": "%{payment_method} solo se puede usar para pagos entre %{minimum} y %{maximum}.",
+        "local_payment_method_unavailable": "%{payment_method} no está disponible",
+        "custom_redeemable_no_longer_available": "Esta oferta ya no está disponible.",
+        "duplicate_autopay_card": "Esta tarjeta está vinculada a próximas cuotas. Paga de otra forma o {{update_payment_details_link}}",
+        "duplicate_autopay_card_link": "actualiza la información de pago",
+        "duplicate_autopay_card_without_link": "Esta tarjeta está vinculada a próximas cuotas. Paga de otra forma.",
+        "invalid_customer_account": "No pudimos realizar un cargo en tu cuenta. Puedes volver a intentarlo después de resolver el problema de la cuenta o usar otra forma de pago.",
+        "code_expired": "Tu código de pago venció o ya se usó. Obtén un código nuevo en la app de tu banco y vuelve a intentarlo.",
+        "code_invalid": "Tu código de pago no es válido. Revisa el código y vuelve a intentarlo, u obtén un código nuevo en la app de tu banco."
+      },
+      "shipping_errors": {
+        "shipping_method": "Las opciones de envío de tu pedido han cambiado. Revisa la selección.",
+        "shipping_method_not_available": "Tu carrito se ha actualizado y los artículos que agregaste no pueden enviarse a tu dirección. Elimina los artículos para completar tu pedido.",
+        "shipping_method_not_available_generic": {
+          "one": "El pedido no se puede enviar a la dirección seleccionada. Revisa tu dirección para comprobar que sea correcta e inténtalo de nuevo, o bien selecciona otra.",
+          "other": "Algunos artículos de tu carrito no se pueden enviar a la dirección que has indicado. Revisa tu dirección para comprobar que sea correcta e inténtalo de nuevo, o bien selecciona otra."
+        },
+        "shipping_method_not_available_updated": {
+          "one": "El artículo que agregaste no se puede enviar a tu ubicación. Elimínalo para completar el pago, o ponte en contacto con la tienda.",
+          "other": "Uno o más artículos que agregaste no se pueden enviar a tu ubicación. Elimínalos para completar el pago, o ponte en contacto con la tienda."
+        },
+        "payment_method_not_supported": "No puedes utilizar esta forma de pago en %{country}. Utiliza otra forma de pago para hacer el envío a este país.",
+        "empty_state": "Ingresa tu dirección de envío para ver los métodos disponibles.",
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Los artículos del carrito no cumplen con los requisitos de precio o peso para calificar para el envío. Modifica el carrito e inténtalo de nuevo.",
+        "title": "El envío no está disponible",
+        "invalid_selected_address": "La dirección de envío seleccionada no es válida",
+        "invalid_selected_address_with_update_link": "La dirección de envío seleccionada no es válida. %{update_address_link} o selecciona una dirección diferente",
+        "unavailable_selected_address": "No hay envío disponible para la dirección seleccionada",
+        "unavailable_selected_address_for_region": "No hay servicio de envío disponible para {{region}}. Selecciona una dirección diferente para continuar",
+        "unavailable_addresses_only_countries": "Tu pedido solo se puede enviar a {{countriesList}}. Para continuar, agrega una dirección nueva.",
+        "unavailable_address_country": "El envío al país que seleccionaste no está disponible. Usa otra dirección para continuar."
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Pago exprés",
+        "or": "O",
+        "show_more_options": "Mostrar más opciones",
+        "hide_more_options": "Ocultar más opciones",
+        "or_pay_another_way": "O paga de otra manera",
+        "or_check_out_another_way": "O completa el proceso de pago de otra manera",
+        "or_pay_with_credit_card": "O paga con tarjeta de crédito"
+      },
+      "processing": {
+        "redirecting_page_title": "Redirigiendo…",
+        "redirecting_title": "Redirigiendo…",
+        "redirecting_notice": "Espera mientras te redirigimos.",
+        "complete_your_purchase_title": "Completar tu compra.",
+        "continue_to_payment_gateway_notice": "Continúa con la pantalla de pago para agregar tu información de pago.",
+        "continue_to_payment_gateway_button_label": "Continuar con el pago",
+        "complete_your_purchase_title_error": "Corregir tu información de pago",
+        "continue_to_payment_gateway_notice_error": "No se pudo verificar tu información de pago.",
+        "continue_to_payment_gateway_button_label_error": "Actualiza la información de pago",
+        "page_title": "Tramitación del pedido",
+        "title": "Tramitación del pedido",
+        "your_order_has_been_received_title": "Gracias por tu pedido",
+        "you_will_receive_confirmation": "Estamos recibiendo muchos pedidos en este momento. Deberías recibir la confirmación por correo electrónico o mensaje de texto en breve. Si no la recibes antes de una hora, contáctanos.",
+        "wait": {
+          "short": "Tu pedido está siendo procesado.",
+          "medium": {
+            "one": "Tu pedido se está procesando. El tiempo de espera estimado es de %{count} minuto.",
+            "other": "Tu pedido está siendo procesado. El tiempo de espera estimado es de %{count} minutos."
+          },
+          "long": "Recibirás un correo electrónico cuando se procese tu pedido. Actualmente hay un alto volumen de pedidos.",
+          "no_auto_refresh_html": "Si no eres redirigido automáticamente, %{link}.",
+          "refresh_this_page": "vuelve a cargar esta página"
+        },
+        "you_will_not_be_charged": "No se te cobrará aún",
+        "action_required": "Medida necesaria",
+        "redirecting_to_bank": "Redirigir a {{bank}}",
+        "modal_notice": "Nos estamos conectando con {{paymentMethod}}",
+        "remote_shops_payments_processing": "Procesando pagos",
+        "remote_checkout_count": "%{current} de %{total}"
+      },
+      "failed_payment": {
+        "page_title": "No pudo procesarse el pago",
+        "title": "No pudo procesarse el pago",
+        "payment_not_processed_title": "Tu pago no pudo procesarse",
+        "payment_not_processed_text": "No se te ha cobrado. Regresa a tu carrito para finalizar la transacción.",
+        "return_to_cart_button_label": "Volver al carrito"
+      },
+      "payment_gateway": {
+        "credit_card_label": "Tarjeta de crédito",
+        "bank_deposit_label": "Depósito Bancario",
+        "cash_on_delivery_label": "Pago contra entrega",
+        "money_order_label": "Giro Postal",
+        "debit_card_label": "Tarjeta de débito",
+        "deferred_payment_label": "Elegir la forma de pago más tarde",
+        "generic_payment_terms": "Estás bajo los términos de {{translatedName}}. Tu pago vencerá el {{dueDate}}.",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} en una cuenta con acceso a esta sucursal para agregar o usar formas de pago guardadas.",
+            "link": "Inicia sesión"
+          }
+        },
+        "direct_payment_terms": "Estás bajo los términos de {{translatedName}}. Se efectuará el cargo en tu tarjeta el día {{dueDate}}.",
+        "order_due_on_fulfillment_choose_later": "El pago deberá realizarse cuando se haya preparado el pedido.",
+        "order_due_on_fulfillment_payment": "Se efectuará el cargo en la tarjeta cuando se haya preparado el pedido.",
+        "draft_order_payment_due_later_no_terms": "El pago deberá realizarse cuando se haya confirmado el pedido.",
+        "draft_order_payment_due_later_no_terms_payment_selected": "Se efectuará el cargo en tu tarjeta cuando se haya confirmado el pedido.",
+        "draft_order_payment_due_later_terms": "Cuando se confirme el pedido, estarás bajo los términos de {{translatedName}}.",
+        "draft_order_payment_due_on_fulfillment": "El pago deberá realizarse cuando se haya confirmado y preparado el pedido.",
+        "fixed_payment_label": "Tu pago vencerá el {{dueDate}}.",
+        "fixed_direct_payment_terms": "Se efectuará el cargo en tu tarjeta el {{dueDate}}.",
+        "order_deposit_due_now": "El {{depositAmount}} debe abonarse hoy. El saldo está sujeto a las condiciones de pago {{translatedName}} y vence el {{dueDate}}.",
+        "order_deposit_due_on_fulfillment": "El {{depositAmount}} debe abonarse hoy. El saldo deberá pagarse una vez que el pedido se haya preparado.",
+        "order_due_on_receipt_choose_later": "Deberás realizar el pago al momento de la recepción.",
+        "draft_order_deposit_due_later": "El depósito de {{depositAmount}} deberá abonarse cuando se confirme tu pedido. El saldo estará en las condiciones de {{translatedName}}.",
+        "draft_order_deposit_due_on_fulfillment": "El depósito de {{depositAmount}} deberá abonarse cuando se confirme tu pedido. El saldo deberá pagarse una vez que el pedido se haya preparado.",
+        "order_deposit_due_on_receipt": "Hoy es la fecha límite para abonar el {{depositAmount}}. La fecha de pago del saldo vence más adelante.",
+        "order_deposit_due_on_fixed_date": "Hoy es la fecha límite para abonar el {{depositAmount}}. La fecha de pago del saldo es el {{dueDate}}.",
+        "bank_account_label": "Cuenta bancaria",
+        "credit_or_debit_card_label": "Crédito/débito",
+        "bogus_label": "Pasarela de pago de prueba"
       }
     }
   }
