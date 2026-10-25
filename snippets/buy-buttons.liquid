@@ -134,7 +134,7 @@
           {%- assign whatsapp_text = 'products.product.whatsapp.message' | t: title: product.title, url: product_link -%}
           <a
             class="product-form__whatsapp link"
-            href="https://wa.me/{{ settings.whatsapp_number | remove: '+' | remove: ' ' }}?text={{ whatsapp_text | url_encode }}"
+            href="https://wa.me/{{ settings.whatsapp_number | remove: '+' | remove: ' ' }}?text={{ whatsapp_text | url_encode | replace: '+', '%20' }}"
             target="_blank"
             rel="noopener"
           >
