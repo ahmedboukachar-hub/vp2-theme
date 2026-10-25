@@ -1526,6 +1526,13 @@
       },
       {
         "type": "text",
+        "id": "contact_email",
+        "label": "Customer service email address",
+        "info": "Published in the site's structured data for search engines and AI assistants.",
+        "default": "info@laretrouvee.com"
+      },
+      {
+        "type": "text",
         "id": "whatsapp_number",
         "label": "WhatsApp number for product questions",
         "info": "International format without + or spaces, e.g. 31612345678. Shows 'Ask for a video' on available products; leave empty to hide it.",

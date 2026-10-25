@@ -34,9 +34,7 @@
         assign document_title = brand_name | append: ' &ndash; ' | append: brand_tagline
       endif
     -%}
-    <title>
-      {{ document_title }}
-      {%- if designer_selection != blank %} &ndash; {{ designer_selection | escape }}{% elsif current_tags and request.page_type == 'blog' %} &ndash; {% render 'journal-topic', topic: current_tags.first %}{% elsif current_tags %} &ndash; {{ current_tags | join: ', ' | escape }}{% endif -%}
+    <title>{{ document_title }}{%- if designer_selection != blank %} &ndash; {{ designer_selection | escape }}{% elsif current_tags and request.page_type == 'blog' %} &ndash; {% render 'journal-topic', topic: current_tags.first %}{% elsif current_tags %} &ndash; {{ current_tags | join: ', ' | escape }}{% endif -%}
       {%- if current_page != 1 %} &ndash; {{ 'general.pagination.page' | t: number: current_page }}{% endif -%}
       {%- unless document_title contains brand_name %} &ndash; {{ brand_name | escape }}{% endunless -%}
     </title>
@@ -53,9 +51,14 @@
 
     {%- if request.page_type == 'cart' or template.suffix == 'wishlist' -%}
       <meta name="robots" content="noindex, follow">
+    {%- elsif designer_selection == blank -%}
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     {%- endif -%}
 
     {% render 'meta-tags', description: meta_description %}
+    {%- if request.page_type == 'page' -%}
+      {%- render 'page-structured-data', page: page, description: meta_description -%}
+    {%- endif -%}
 
     <script type="module">
       import * as StandardEvents from 'https://cdn.shopify.com/storefront/standard-events.js';

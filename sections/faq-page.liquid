@@ -26,6 +26,38 @@
   </div>
 </div>
 
+{%- comment -%}
+  FAQPage structured data built from the page's own details/summary blocks, so
+  search engines and AI assistants can quote each answer with its question.
+{%- endcomment -%}
+{%- liquid
+  assign faq_blocks = page.content | split: '<details'
+  assign faq_count = faq_blocks.size | minus: 1
+-%}
+{%- if faq_count > 0 -%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": {{ page.title | json }},
+    "url": {{ canonical_url | json }},
+    "inLanguage": {{ request.locale.iso_code | json }},
+    {%- capture faq_items -%}
+      {%- for block in faq_blocks offset: 1 -%}
+        {%- liquid
+          assign question = block | split: '<summary' | last | split: '</summary>' | first | split: '>' | slice: 1, 50 | join: '>' | strip_html | strip_newlines | strip | replace: '&amp;', '&' | replace: '&nbsp;', ' '
+          assign answer = block | split: '</summary>' | last | split: '</details>' | first | replace: '</p>', ' </p>' | replace: '</li>', ' </li>' | replace: '<br', ' <br' | strip_html | strip_newlines | strip | replace: '&amp;', '&' | replace: '&nbsp;', ' '
+        -%}
+        {%- if question != blank and answer != blank -%}
+        { "@type": "Question", "name": {{ question | json }}, "acceptedAnswer": { "@type": "Answer", "text": {{ answer | json }} } },
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    "mainEntity": [ {{ faq_items | strip | remove_last: ',' }} ]
+  }
+</script>
+{%- endif -%}
+
 {% schema %}
 {
   "name": "FAQ page",

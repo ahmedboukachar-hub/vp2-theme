@@ -20,6 +20,17 @@
     assign country_codes = country_codes | append: country.iso_code | append: ','
   endfor
   assign country_codes = country_codes | split: ','
+  assign mf = product.metafields.custom
+  assign condition_grade = mf.condition | metafield_text
+  assign year_or_era = mf.year_or_era | metafield_text
+  assign dimensions = mf.dimensions | metafield_text
+  assign inclusions = mf.inclusions.value | join: ', '
+  assign model_name = mf.model | metafield_text
+  assign material = mf.material | metafield_text
+  assign color = mf.color | metafield_text
+  assign size_category = mf.size_category | metafield_text
+  assign condition_summary = mf.condition_summary | metafield_text | newline_to_br | replace: '<br />', ' · ' | strip_html | strip_newlines | strip
+  assign product_sku = product.selected_or_first_available_variant.sku | default: product.variants.first.sku
 -%}
 <script type="application/ld+json">
   {
@@ -40,8 +51,37 @@
         {%- endif -%}
       {%- endfor -%}
     ],
+    "inLanguage": {{ request.locale.iso_code | json }},
+    {%- if product_sku != blank %}
+    "sku": {{ product_sku | json }},
+    {%- endif %}
+    {%- if product.type != blank %}
+    "category": {{ product.type | json }},
+    {%- endif %}
     {%- if product.vendor != blank %}
     "brand": { "@type": "Brand", "name": {{ product.vendor | json }} },
+    {%- endif %}
+    {%- if model_name != blank %}
+    "model": {{ model_name | json }},
+    {%- endif %}
+    {%- if material != blank %}
+    "material": {{ material | json }},
+    {%- endif %}
+    {%- if color != blank %}
+    "color": {{ color | json }},
+    {%- endif %}
+    {%- comment -%} Facts a reader or an AI assistant asks about a pre-owned bag, as named properties. {%- endcomment -%}
+    {%- capture properties -%}
+      {%- if condition_grade != blank %}{ "@type": "PropertyValue", "name": "Condition grade", "value": {{ condition_grade | json }} },{% endif -%}
+      {%- if condition_summary != blank %}{ "@type": "PropertyValue", "name": "Condition notes", "value": {{ condition_summary | json }} },{% endif -%}
+      {%- if year_or_era != blank %}{ "@type": "PropertyValue", "name": "Year or era", "value": {{ year_or_era | json }} },{% endif -%}
+      {%- if dimensions != blank %}{ "@type": "PropertyValue", "name": "Dimensions", "value": {{ dimensions | json }} },{% endif -%}
+      {%- if size_category != blank %}{ "@type": "PropertyValue", "name": "Size", "value": {{ size_category | json }} },{% endif -%}
+      {%- if inclusions != blank %}{ "@type": "PropertyValue", "name": "Included", "value": {{ inclusions | json }} },{% endif -%}
+    {%- endcapture -%}
+    {%- assign properties = properties | strip -%}
+    {%- if properties != blank %}
+    "additionalProperty": [ {{ properties | remove_last: ',' }} ],
     {%- endif %}
     {%- if is_used %}
     "itemCondition": "https://schema.org/UsedCondition",
