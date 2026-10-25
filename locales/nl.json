@@ -535,11 +535,8 @@
       }
     },
     "about_story": {
-      "eyebrow": "Waar wij voor staan",
-      "heading": "Gevonden om opnieuw te dragen.",
-      "intro": "La Retrouvée brengt vintage en pre-owned designertassen samen, geselecteerd op ontwerp, conditie en eigen karakter. Een tas kan een verleden hebben en toch helemaal bij het heden passen. Beide krijgen hier de ruimte. Elk stuk wordt vanuit Europa verzonden, zonder douanekosten binnen de EU.",
       "story_heading": "Ons verhaal",
-      "story_text": "La Retrouvée is begonnen vanuit een eenvoudige overtuiging: de mooiste tassen zijn vaak de tassen die al een leven achter zich hebben. We selecteren met de hand en in kleine aantallen, alleen stukken die we zelf zouden dragen. Het resultaat is geen winkel met voorraad, maar een zorgvuldige selectie die langzaam verandert.",
+      "story_text": "La Retrouvée betekent ‘de teruggevondene’. Het begon in Nederland vanuit een eenvoudige overtuiging: de mooiste tassen zijn vaak de tassen die al een leven achter zich hebben. We selecteren met de hand en in kleine aantallen, alleen stukken die we zelf zouden dragen. Het resultaat is geen winkel met voorraad, maar een zorgvuldige selectie die langzaam verandert.",
       "story_link": "Hoe wij kiezen",
       "auth_heading": "Gecontroleerd voordat hij online gaat",
       "auth_text": "Elke tas wordt fysiek onderzocht voordat hij online komt: materialen, stiksels, beslag, binnenkant en de datum- of productiecode waar het huis die gebruikte. Blijft er twijfel bestaan, dan verkopen we het stuk niet. Blijkt een tas ooit toch niet echt, dan nemen we hem terug en betalen we het volledige bedrag terug.",
@@ -552,9 +549,7 @@
       "find_link": "Vertel ons wat je zoekt",
       "sell_heading": "Een tas doorgeven",
       "sell_text": "Onze selectie groeit dankzij particuliere eigenaren die afscheid willen nemen van een stuk. Stuur ons een paar foto’s en een eerlijke beschrijving, dan laten we je weten of de tas in de collectie past en wat we kunnen bieden.",
-      "sell_link": "Verkoop aan ons",
-      "shipping_link": "Verzending en retouren",
-      "contact_link": "Stel ons een vraag"
+      "sell_link": "Verkoop aan ons"
     }
   },
   "sections": {

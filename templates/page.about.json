@@ -18,9 +18,7 @@
         "authenticity_page": "authenticity",
         "condition_page": "condition-guide",
         "find_page": "find-a-bag",
-        "sell_page": "sell-to-us",
-        "shipping_page": "shipping-returns",
-        "contact_page": "contact"
+        "sell_page": "sell-to-us"
       }
     },
     "closing": {
@@ -30,10 +28,10 @@
         "heading": "Discover the current selection.",
         "heading_size": "h2",
         "text": "<p>Newly added vintage and pre-owned pieces, each available only once.</p>",
-        "button_label": "Shop new arrivals",
-        "button_link": "shopify://collections/new-arrivals",
-        "link_label": "Browse by designer",
-        "link_url": "shopify://pages/designers",
+        "button_label": "Shop all bags",
+        "button_link": "shopify://collections/all-bags",
+        "link_label": "Ask us a question",
+        "link_url": "shopify://pages/contact",
         "color_scheme": "scheme-3"
       }
     }

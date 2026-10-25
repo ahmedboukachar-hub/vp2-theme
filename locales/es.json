@@ -544,11 +544,8 @@
       }
     },
     "about_story": {
-      "eyebrow": "Lo que nos define",
-      "heading": "Encontrados para volver a llevarlos.",
-      "intro": "La Retrouvée reúne bolsos de diseñador vintage y de segunda mano elegidos por su diseño, estado y carácter propio. Una pieza puede tener historia y encontrar su lugar en el presente. Cada pieza se envía desde Europa, sin gastos de aduana dentro de la UE.",
       "story_heading": "Nuestra historia",
-      "story_text": "La Retrouvée nació de una convicción sencilla: los bolsos más bonitos suelen ser los que ya tienen una vida detrás. Seleccionamos a mano y en pequeñas cantidades, solo piezas que llevaríamos nosotros mismos. El resultado no es una tienda con stock, sino una selección meditada que cambia despacio.",
+      "story_text": "La Retrouvée significa ‘la reencontrada’. Nació en los Países Bajos de una convicción sencilla: los bolsos más bonitos suelen ser los que ya tienen una vida detrás. Seleccionamos a mano y en pequeñas cantidades, solo piezas que llevaríamos nosotros mismos. El resultado no es una tienda con stock, sino una selección meditada que cambia despacio.",
       "story_link": "Cómo elegimos",
       "auth_heading": "Revisado antes de publicarlo",
       "auth_text": "Cada bolso se examina físicamente antes de publicarse: materiales, costuras, herrajes, interior y el código de fecha o producción cuando la casa lo utilizaba. Si una duda no puede resolverse, no vendemos la pieza. Si un bolso resultara alguna vez no ser auténtico, lo recogemos y devolvemos el importe completo.",
@@ -561,9 +558,7 @@
       "find_link": "Cuéntanos qué buscas",
       "sell_heading": "Dar paso a un bolso",
       "sell_text": "Nuestra selección crece gracias a particulares dispuestos a desprenderse de una pieza. Envíanos algunas fotografías y una descripción sincera, y te diremos si el bolso encaja en la colección y qué podemos ofrecer.",
-      "sell_link": "Véndenos tu bolso",
-      "shipping_link": "Envíos y devoluciones",
-      "contact_link": "Haznos una pregunta"
+      "sell_link": "Véndenos tu bolso"
     }
   },
   "sections": {
