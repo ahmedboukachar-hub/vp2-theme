@@ -1597,7 +1597,7 @@ a.product__text {
 @media screen and (min-width: 990px) {
   .product__media-wrapper media-gallery:has(.constrain-height) {
     display: block;
-    max-width: max(48rem, calc(100vh - 30rem));
+    max-width: max(56rem, calc(100vh - 22rem));
     margin-inline: auto;
   }
 }
