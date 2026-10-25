@@ -10,7 +10,8 @@
 {
   "general": {
     "whatsapp": {
-      "message": "Hola, tengo una pregunta sobre una pieza de La Retrouvée."
+      "message": "Hola, tengo una pregunta sobre una pieza de La Retrouvée.",
+      "bubble": "¿Dudas? Te enviamos un vídeo con gusto."
     },
     "meta": {
       "home_description": "Bolsos de diseñador vintage y de segunda mano elegidos con cuidado: Louis Vuitton, Gucci, Dior. Autenticidad verificada, envío gratuito y devoluciones en 14 días."

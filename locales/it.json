@@ -10,7 +10,8 @@
 {
   "general": {
     "whatsapp": {
-      "message": "Ciao, ho una domanda su un pezzo di La Retrouvée."
+      "message": "Ciao, ho una domanda su un pezzo di La Retrouvée.",
+      "bubble": "Domande? Ti inviamo volentieri un video."
     },
     "meta": {
       "home_description": "Borse firmate vintage e di seconda mano scelte con cura: Louis Vuitton, Gucci, Dior. Autenticità verificata, spedizione gratuita e resi entro 14 giorni."
