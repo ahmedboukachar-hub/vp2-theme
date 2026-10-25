@@ -127,19 +127,6 @@
         "color_scheme": "scheme-1"
       }
     },
-    "about": {
-      "type": "editorial-feature",
-      "settings": {
-        "image": "shopify://shop_images/owner-gucci-halfmoon-coat.jpg",
-        "layout": "text_first",
-        "eyebrow": "About La Retrouvée",
-        "heading": "A small, personal curation from Heemstede.",
-        "text": "<p>We buy only pieces we would carry ourselves, check each one by hand and describe it honestly. Questions about a bag? Send a message or a WhatsApp — you will hear from us personally.</p>",
-        "button_label": "Read our story",
-        "button_link": "shopify://pages/about",
-        "color_scheme": "scheme-1"
-      }
-    },
     "journal": {
       "type": "journal-feature",
       "settings": {
@@ -191,7 +178,6 @@
     "new_arrivals",
     "designers",
     "editorial",
-    "about",
     "journal",
     "find_a_bag",
     "archive",
