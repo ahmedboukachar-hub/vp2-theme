@@ -184,6 +184,10 @@
     "product": {
       "add_to_cart": "In den Warenkorb legen",
       "buy_it_now": "Jetzt kaufen",
+      "whatsapp": {
+        "label": "Video oder weitere Fotos per WhatsApp anfragen",
+        "message": "Hallo, könnten Sie mir ein Video oder weitere Fotos der {{ title }} schicken? {{ url }}"
+      },
       "assurance": {
         "checkout": "Sicherer Checkout",
         "authenticity": "Echtheitsgarantie",

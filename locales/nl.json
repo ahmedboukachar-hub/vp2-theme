@@ -184,6 +184,10 @@
     "product": {
       "add_to_cart": "Aan winkelwagen toevoegen",
       "buy_it_now": "Nu kopen",
+      "whatsapp": {
+        "label": "Vraag om een video of extra foto’s via WhatsApp",
+        "message": "Hallo, kunnen jullie mij een video of extra foto’s sturen van de {{ title }}? {{ url }}"
+      },
       "assurance": {
         "checkout": "Veilig afrekenen",
         "authenticity": "Echtheidsgarantie",
