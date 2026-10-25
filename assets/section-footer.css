@@ -116,6 +116,18 @@
   color: rgba(var(--color-foreground), 0.78);
 }
 
+/* Links inside the text block look like the menu links: same colour, no
+   underline until hover. The paragraph itself carries no extra margin. */
+.footer__text p { margin: 0; }
+.footer__text a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  transition: color var(--vp-duration) var(--vp-ease), border-color var(--vp-duration) var(--vp-ease);
+}
+.footer__text a:hover,
+.footer__text a:focus-visible { color: rgb(var(--color-foreground)); border-bottom-color: rgb(var(--color-foreground)); }
+
 .footer__group--image img { max-width: 20rem; }
 
 /* ---------- bottom row ---------- */
