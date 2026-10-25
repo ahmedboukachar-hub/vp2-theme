@@ -1608,3 +1608,12 @@ a.product__text {
 .product__tax {
   font-size: 1.2rem;
 }
+
+/* Desktop: the gallery stays in view while the longer information column
+   scrolls, instead of leaving an empty column under the photos. */
+@media screen and (min-width: 990px) {
+  .product__media-wrapper > media-gallery {
+    position: sticky;
+    top: 3rem;
+  }
+}
