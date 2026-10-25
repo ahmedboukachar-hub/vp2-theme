@@ -132,6 +132,7 @@
 /* Links inside the text block look like the menu links: same colour, no
    underline until hover. The paragraph itself carries no extra margin. */
 .footer__text p { margin: 0; }
+.footer__text p + p { margin-top: 0.8rem; }
 .footer__text a {
   color: inherit;
   text-decoration: none;
