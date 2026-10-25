@@ -62,7 +62,7 @@
         "newsletter_enable": false,
         "newsletter_heading": "Stay informed",
         "enable_follow_on_shop": false,
-        "show_social": false,
+        "show_social": true,
         "enable_language_selector": true,
         "show_policy": true,
         "margin_top": 0,
