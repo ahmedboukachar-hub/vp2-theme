@@ -103,7 +103,9 @@
 .featured-designers__media.vp-media > img { position: absolute; inset: 0; }
 @media screen and (min-width:750px) { .featured-designers.vp-section { padding-block:6.4rem; } }
 
-/* Four per row: compact cards, name under the photo. */
+/* Four per row: compact cards, name under the photo. Every card takes one
+   track, whatever its size setting. */
+.featured-designers__list--4 .featured-designers__item { grid-column: span 1; }
 @media screen and (max-width: 749px) {
   .featured-designers__list--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
