@@ -1,0 +1,33 @@
+{% doc %}
+  WebPage structured data for Shopify pages, typed by template suffix so the
+  About and Contact pages are recognised as such and linked to the
+  Organization and WebSite nodes.
+
+  @param {object} page - The page being shown.
+  @param {string} description - The meta description already chosen for the page.
+{% enddoc %}
+{%- liquid
+  assign brand_name = settings.brand_display_name | default: 'La Retrouvée'
+  assign page_schema_type = 'WebPage'
+  case template.suffix
+    when 'about'
+      assign page_schema_type = 'AboutPage'
+    when 'contact'
+      assign page_schema_type = 'ContactPage'
+  endcase
+-%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": {{ page_schema_type | json }},
+    "name": {{ page.title | json }},
+    "url": {{ canonical_url | json }},
+    "inLanguage": {{ request.locale.iso_code | json }},
+    {%- if description != blank %}
+    "description": {{ description | json }},
+    {%- endif %}
+    "isPartOf": { "@type": "WebSite", "name": {{ brand_name | json }}, "url": {{ request.origin | json }} },
+    "about": { "@id": {{ request.origin | append: '#organization' | json }} },
+    "publisher": { "@id": {{ request.origin | append: '#organization' | json }} }
+  }
+</script>

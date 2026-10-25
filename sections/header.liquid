@@ -478,6 +478,44 @@
     {%- if same_as_list.size > 0 -%}
       "sameAs": {{ same_as_list | json }},
     {%- endif -%}
+    {%- liquid
+      assign org_fallback = 'general.meta.home_description' | t
+      assign org_description = shop.description | default: org_fallback
+      assign served = ''
+      for country in localization.available_countries
+        assign served = served | append: country.iso_code | append: ','
+      endfor
+      assign served = served | split: ','
+      assign languages = ''
+      for language in localization.available_languages
+        assign languages = languages | append: language.iso_code | append: ','
+      endfor
+      assign languages = languages | split: ','
+      assign whatsapp = settings.whatsapp_number | replace: ' ', '' | replace: '+', ''
+      assign contact_email = settings.contact_email | strip
+    -%}
+    "@id": {{ request.origin | append: '#organization' | json }},
+    "description": {{ org_description | json }},
+    {%- if contact_email != blank %}
+    "email": {{ contact_email | json }},
+    {%- endif %}
+    {%- if shop.address.country_code != blank %}
+    "address": { "@type": "PostalAddress", "addressCountry": {{ shop.address.country_code | json }} },
+    {%- endif %}
+    {%- if served.size > 0 %}
+    "areaServed": {{ served | json }},
+    {%- endif %}
+    {%- if languages.size > 0 %}
+    "knowsLanguage": {{ languages | json }},
+    {%- endif %}
+    "contactPoint": [
+      {%- if contact_email != blank %}
+      { "@type": "ContactPoint", "contactType": "customer service", "email": {{ contact_email | json }}, "availableLanguage": {{ languages | json }} }{% if whatsapp != blank %},{% endif %}
+      {%- endif %}
+      {%- if whatsapp != blank %}
+      { "@type": "ContactPoint", "contactType": "customer service", "telephone": {{ whatsapp | prepend: '+' | json }}, "url": {{ whatsapp | prepend: 'https://wa.me/' | json }}, "availableLanguage": {{ languages | json }} }
+      {%- endif %}
+    ],
     "url": {{ shop.url | json }}
   }
 </script>

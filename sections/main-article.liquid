@@ -1,5 +1,33 @@
 {{ 'section-main-article.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign article_brand = settings.brand_display_name | default: shop.name
+  assign article_summary = article.excerpt_or_content | replace: '</p>', ' </p>' | strip_html | strip_newlines | strip | truncate: 300
+-%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ article.title | json }},
+    "url": {{ canonical_url | json }},
+    "mainEntityOfPage": {{ canonical_url | json }},
+    "inLanguage": {{ request.locale.iso_code | json }},
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' | json }},
+    "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%S%:z' | json }},
+    {%- if article.image %}
+    "image": {{ article.image | image_url: width: 1600 | prepend: 'https:' | json }},
+    {%- endif %}
+    {%- if article_summary != blank %}
+    "description": {{ article_summary | json }},
+    {%- endif %}
+    {%- if article.tags.size > 0 %}
+    "keywords": {{ article.tags | join: ', ' | json }},
+    {%- endif %}
+    "author": { "@type": "Organization", "name": {{ article_brand | json }}, "url": {{ shop.url | json }} },
+    "publisher": { "@id": {{ request.origin | append: '#organization' | json }} }
+  }
+</script>
+
 {%- assign topic = article.tags | first -%}
 
 <article class="article-page color-{{ section.settings.color_scheme }} gradient" itemscope itemtype="https://schema.org/BlogPosting">

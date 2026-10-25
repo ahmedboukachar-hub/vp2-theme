@@ -1,0 +1,71 @@
+{% doc %}
+  CollectionPage structured data with an ItemList of the products on the
+  current page, so a crawler or AI assistant sees names, prices and
+  availability without rendering the grid.
+
+  @param {object} collection - The collection being shown.
+  @param {object} products - The paginated products on this page.
+{% enddoc %}
+{%- liquid
+  assign brand_name = settings.brand_display_name | default: 'La Retrouvée'
+  assign collection_url = request.origin | append: collection.url
+-%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": {{ collection.title | json }},
+    "url": {{ collection_url | json }},
+    "inLanguage": {{ request.locale.iso_code | json }},
+    {%- if collection.description != blank %}
+    "description": {{ collection.description | replace: '</p>', ' </p>' | strip_html | strip_newlines | strip | truncate: 1000 | json }},
+    {%- endif %}
+    "isPartOf": { "@type": "WebSite", "name": {{ brand_name | json }}, "url": {{ request.origin | json }} },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": {{ collection.products_count }},
+      "itemListElement": [
+        {%- for product in products -%}
+          {%- liquid
+            assign product_url = request.origin | append: product.url
+            if product.available
+              assign availability = 'https://schema.org/InStock'
+            else
+              assign availability = 'https://schema.org/SoldOut'
+            endif
+            assign condition_grade = product.metafields.custom.condition | metafield_text
+          -%}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "item": {
+              "@type": "Product",
+              "@id": {{ product_url | append: '#product' | json }},
+              "name": {{ product.title | json }},
+              "url": {{ product_url | json }},
+              {%- if product.featured_image %}
+              "image": {{ product.featured_image | image_url: width: 1200 | prepend: 'https:' | json }},
+              {%- endif %}
+              {%- if product.vendor != blank %}
+              "brand": { "@type": "Brand", "name": {{ product.vendor | json }} },
+              {%- endif %}
+              {%- if product.tags contains 'bag' %}
+              "itemCondition": "https://schema.org/UsedCondition",
+              {%- endif %}
+              {%- if condition_grade != blank %}
+              "additionalProperty": [ { "@type": "PropertyValue", "name": "Condition grade", "value": {{ condition_grade | json }} } ],
+              {%- endif %}
+              "offers": {
+                "@type": "Offer",
+                "price": {{ product.price | divided_by: 100.0 | json }},
+                "priceCurrency": {{ cart.currency.iso_code | json }},
+                "availability": {{ availability | json }},
+                "url": {{ product_url | json }}
+              }
+            }
+          }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    }
+  }
+</script>
