@@ -1,19 +1,26 @@
 # Overstap naar een nieuwe, echte Shopify-winkel (samenvatting voor ChatGPT/Codex)
 
-Status (2026-10-24, avond): **import in de nieuwe winkel gedaan** (`0zayrp-60.myshopify.com`),
-nog achter het wachtwoord en zonder domeinwissel. Met `tools/migration/import.py`
-(stappen en logging: zie README daar) staan er nu: talen en/nl/de/fr/it/es
-(Engels primair, door de eigenaar omgezet), 25 metaveld- en 1 metaobject-definitie,
-121 losse bestanden met dezelfde bestandsnaam, 26 producten met 152 foto's
-(originele bestanden), 9 collecties, 13 pagina's, blog Journal met 18 artikelen,
-4 beleidsteksten, 6 menu's, 1 redirect en 26.648 vertaalwaarden in 5 talen, 0
-`outdated` (oude winkel 26.678; het verschil zit in het door Shopify beheerde
-privacybeleid, de filters en Shopify-eigen resources zoals het klantaccountmenu). Het thema `vp2-theme/main` staat er compleet in na PR #100–#102: de
-nieuwe winkel valideert strenger dan de oude (zie `CLAUDE.md`, sync-valkuilen).
-Read-only pariteitscontrole oud↔nieuw (per domein, met tegencontrole): producten,
-varianten, metavelden, foto's (volgorde, alt, afmetingen, originele bestanden),
-collecties (regels, productaantallen), pagina's, artikelen, menu's, redirects en
-beleid zijn gelijk. Open: zie "Nog te doen na de import" hieronder.
+Status (2026-10-25): **de nieuwe winkel is live op laretrouvee.com.** De import
+(`tools/migration/import.py`, zie README daar) bracht alle inhoud over; daarna
+volgden op 24–25 oktober: domeinverhuizing, wachtwoord eraf, Shopify Payments
+actief (iDEAL wacht op Shopify's herbeoordeling), markten en verzendzone beperkt
+tot NL, BE, DE, FR, ES en IT (eigenaarsbesluit), conditierapporten en modelmaten
+op alle tassen, en een reeks thema-PR's (#100–#125) na een live beoordeling.
+De oude dev-winkel blijft testomgeving. Open punten staan hieronder.
+
+## Nog te doen na de livegang
+
+- **Eigenaar (Admin):** winkelnaam staat nog op "Mijn winkel"; btw voor markt
+  Europe staat op "Niet innen" (met de boekhouder nakijken); iDEAL activeren zodra
+  Shopify het vrijgeeft; Shop Pay in de checkout aan of uit; Search &
+  Discovery-filters; Google Search Console en het Google & YouTube-kanaal.
+- **Productdata (eigenaar levert aan):** maten van Princy Hobo, Marmont en GG
+  Shoulder Bag; jaar of periode en bandlengte per tas; foto's met leesbare
+  datumcode bijsnijden (Pochette Accessoires, Speedy 30-03); VP-B001 en VP-B022
+  lijken dezelfde tas.
+- De mapping oud→nieuw en het schrijflog staan buiten de repo in
+  `$MIGRATION_EXPORT_DIR` (`id-map.json`, `import-log.jsonl`) van de sessie die de
+  import draaide; bij een nieuwe run eerst opnieuw exporteren.
 
 ## Nog te doen na de import
 
