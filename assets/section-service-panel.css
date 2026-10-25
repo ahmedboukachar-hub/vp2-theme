@@ -12,6 +12,21 @@
   max-width: var(--vp-measure-text, 72rem);
 }
 
+/* Desktop: the panel sits centred with the copy and button on one axis,
+   instead of a short column at the left of an otherwise empty band. */
+@media screen and (min-width: 990px) {
+  .service-panel__inner {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .service-panel__text {
+    margin-inline: auto;
+  }
+  .service-panel__actions {
+    justify-content: center;
+  }
+}
+
 .service-panel__eyebrow {
   margin: 0 0 1.2rem;
 }

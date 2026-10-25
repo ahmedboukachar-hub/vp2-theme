@@ -9,6 +9,10 @@
  */
 {
   "general": {
+    "whatsapp": {
+      "message": "Hallo, ik heb een vraag over een stuk op La Retrouvée.",
+      "bubble": "Vragen? We sturen je graag een video."
+    },
     "meta": {
       "home_description": "Zorgvuldig geselecteerde vintage en pre-owned designertassen van Louis Vuitton, Gucci en Dior. Gecontroleerd op echtheid, gratis verzending en 14 dagen retour."
     },
@@ -183,6 +187,17 @@
   "products": {
     "product": {
       "add_to_cart": "Aan winkelwagen toevoegen",
+      "buy_it_now": "Nu kopen",
+      "whatsapp": {
+        "label": "Vraag om een video of extra foto’s via WhatsApp",
+        "message": "Hallo, kunnen jullie mij een video of extra foto’s sturen van de {{ title }}? {{ url }}"
+      },
+      "assurance": {
+        "checkout": "Veilig afrekenen",
+        "authenticity": "Echtheidsgarantie",
+        "returns": "14 dagen bedenktijd",
+        "shipping": "Gratis verzending"
+      },
       "in_cart": "In je winkelwagen",
       "guide_links": {
         "label": "Gidsen",

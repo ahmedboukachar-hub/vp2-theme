@@ -9,6 +9,10 @@
  */
 {
   "general": {
+    "whatsapp": {
+      "message": "Hello, I have a question about a piece on La Retrouvée.",
+      "bubble": "Questions? We’re happy to send a video."
+    },
     "meta": {
       "home_description": "Curated vintage and pre-owned designer bags by Louis Vuitton, Gucci and Dior. Checked for authenticity, with free shipping and 14-day returns."
     },
@@ -183,6 +187,17 @@
   "products": {
     "product": {
       "add_to_cart": "Add to cart",
+      "buy_it_now": "Buy it now",
+      "whatsapp": {
+        "label": "Ask for a video or more photos on WhatsApp",
+        "message": "Hello, could you send me a video or more photos of the {{ title }}? {{ url }}"
+      },
+      "assurance": {
+        "checkout": "Secure checkout",
+        "authenticity": "Authenticity guarantee",
+        "returns": "14-day returns",
+        "shipping": "Free shipping"
+      },
       "in_cart": "In your cart",
       "guide_links": {
         "label": "Guides",

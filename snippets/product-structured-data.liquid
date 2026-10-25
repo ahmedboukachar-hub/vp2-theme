@@ -2,7 +2,9 @@
   Product structured data (schema.org/Product) for pre-owned pieces.
   Replaces Dawn's generic `structured_data` output so search engines get the
   item condition (used, for pieces tagged `bag`), every product photo, the
-  brand and one offer per variant.
+  brand and one offer per variant, with shipping and return facts from the
+  theme settings (Search engine details) for the countries of the store's
+  markets.
 
   @param {object} product - The product to describe.
 {% enddoc %}
@@ -13,6 +15,11 @@
   if product.tags contains 'bag'
     assign is_used = true
   endif
+  assign country_codes = ''
+  for country in localization.available_countries
+    assign country_codes = country_codes | append: country.iso_code | append: ','
+  endfor
+  assign country_codes = country_codes | split: ','
 -%}
 <script type="application/ld+json">
   {
@@ -59,6 +66,27 @@
           "priceCurrency": {{ cart.currency.iso_code | json }},
           {%- if is_used %}
           "itemCondition": "https://schema.org/UsedCondition",
+          {%- endif %}
+          {%- if settings.seo_free_shipping and country_codes.size > 0 %}
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": { "@type": "MonetaryAmount", "value": 0, "currency": {{ cart.currency.iso_code | json }} },
+            "shippingDestination": [
+              {%- for code in country_codes -%}
+                { "@type": "DefinedRegion", "addressCountry": {{ code | json }} }{% unless forloop.last %},{% endunless %}
+              {%- endfor -%}
+            ]
+          },
+          {%- endif %}
+          {%- if settings.seo_return_days > 0 and country_codes.size > 0 %}
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": {{ country_codes | json }},
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": {{ settings.seo_return_days }},
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+          },
           {%- endif %}
           "availability": {{ availability | json }}
         }{% unless forloop.last %},{% endunless %}

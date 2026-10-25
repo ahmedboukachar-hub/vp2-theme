@@ -35,7 +35,14 @@
             "menu": "footer-services"
           }
         },
-        "footer-care": {
+        "footer-contact": {
+      "type": "text",
+      "settings": {
+        "heading": "Contact",
+        "subtext": "<p>Questions about a piece? Email us at <a href=\"mailto:info@laretrouvee.com\">info@laretrouvee.com</a> or send a <a href=\"https://wa.me/31643715013\">WhatsApp</a> — we reply personally.</p>"
+      }
+    },
+    "footer-care": {
           "type": "link_list",
           "settings": {
             "heading": "Customer care",
@@ -47,7 +54,8 @@
         "footer-shop",
         "footer-discover",
         "footer-services",
-        "footer-care"
+        "footer-care",
+        "footer-contact"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -56,7 +64,6 @@
         "enable_follow_on_shop": false,
         "show_social": false,
         "enable_language_selector": true,
-        "payment_enable": false,
         "show_policy": true,
         "margin_top": 0,
         "padding_top": 40,

@@ -231,13 +231,23 @@ product-info {
   margin-bottom: 1rem;
 }
 
+.product-form__assurance {
+  margin: 1.4rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  color: rgba(var(--color-foreground), 0.7);
+}
+
 /* Buy it now sits above Add to cart (see buy-buttons.liquid). */
-.product-form__buttons .shopify-payment-button {
+.product-form__buttons .shopify-payment-button,
+.product-form__buttons .product-form__buy-now {
   margin-bottom: 1rem;
 }
 
 /* Keep the space below the pair as it was when Add to cart came first. */
-.product-form__buttons .shopify-payment-button + .product-form__submit {
+.product-form__buttons .shopify-payment-button + .product-form__submit,
+.product-form__buttons .product-form__buy-now + .product-form__submit {
   margin-bottom: 0;
 }
 
@@ -1587,7 +1597,7 @@ a.product__text {
 @media screen and (min-width: 990px) {
   .product__media-wrapper media-gallery:has(.constrain-height) {
     display: block;
-    max-width: max(48rem, calc(100vh - 30rem));
+    max-width: max(56rem, calc(100vh - 22rem));
     margin-inline: auto;
   }
 }
@@ -1597,4 +1607,13 @@ a.product__text {
 .product__info-container .caption-with-letter-spacing,
 .product__tax {
   font-size: 1.2rem;
+}
+
+/* Desktop: the gallery stays in view while the longer information column
+   scrolls, instead of leaving an empty column under the photos. */
+@media screen and (min-width: 990px) {
+  .product__media-wrapper > media-gallery {
+    position: sticky;
+    top: 3rem;
+  }
 }

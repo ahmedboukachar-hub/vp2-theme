@@ -9,6 +9,10 @@
  */
 {
   "general": {
+    "whatsapp": {
+      "message": "Hola, tengo una pregunta sobre una pieza de La Retrouvée.",
+      "bubble": "¿Dudas? Te enviamos un vídeo con gusto."
+    },
     "meta": {
       "home_description": "Bolsos de diseñador vintage y de segunda mano elegidos con cuidado: Louis Vuitton, Gucci, Dior. Autenticidad verificada, envío gratuito y devoluciones en 14 días."
     },
@@ -184,6 +188,17 @@
   "products": {
     "product": {
       "add_to_cart": "Añadir al carrito",
+      "buy_it_now": "Comprar ahora",
+      "whatsapp": {
+        "label": "Pide un vídeo o más fotos por WhatsApp",
+        "message": "Hola, ¿podríais enviarme un vídeo o más fotos del {{ title }}? {{ url }}"
+      },
+      "assurance": {
+        "checkout": "Pago seguro",
+        "authenticity": "Garantía de autenticidad",
+        "returns": "Devolución en 14 días",
+        "shipping": "Envío gratuito"
+      },
       "in_cart": "En tu carrito",
       "guide_links": {
         "label": "Guías",

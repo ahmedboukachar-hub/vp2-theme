@@ -67,15 +67,13 @@
         "designer_dior": {
           "type": "designer",
           "settings": {
-            "collection": "dior",
-            "size": "small"
+            "collection": "dior"
           }
         },
         "designer_jacquemus": {
           "type": "designer",
           "settings": {
-            "collection": "jacquemus",
-            "size": "small"
+            "collection": "jacquemus"
           }
         }
       },
@@ -88,7 +86,7 @@
       "settings": {
         "eyebrow": "The houses",
         "title": "Explore the designers.",
-        "columns_desktop": "2",
+        "columns_desktop": "4",
         "color_scheme": "scheme-3"
       }
     },
@@ -99,7 +97,7 @@
         "layout": "image_first",
         "eyebrow": "The selection",
         "heading": "Chosen with a collector’s eye.",
-        "text": "<p>Every piece has its own listing and its own photographs. We record dimensions, inclusions and, where verified, the date or era, and we describe the visible signs of wear.</p>",
+        "text": "<p>Every piece has its own listing and its own photographs, a condition grade with a short note and, where known, its dimensions and what comes with it.</p>",
         "button_label": "How we select",
         "button_link": "shopify://pages/our-curation",
         "color_scheme": "scheme-6"
