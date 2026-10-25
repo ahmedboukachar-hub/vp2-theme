@@ -116,6 +116,19 @@
   color: rgba(var(--color-foreground), 0.78);
 }
 
+/* The text group's heading sits on the same baseline as the accordion
+   summaries on phones (same height and spacing), and keeps the column
+   spacing on wider screens. */
+.footer__group--text .footer__group-heading {
+  display: flex;
+  align-items: center;
+  min-height: 5.2rem;
+  padding-block: 0.6rem;
+}
+@media screen and (min-width: 750px) {
+  .footer__group--text .footer__group-heading { min-height: 0; margin-bottom: 1.6rem; padding-block: 0; }
+}
+
 /* Links inside the text block look like the menu links: same colour, no
    underline until hover. The paragraph itself carries no extra margin. */
 .footer__text p { margin: 0; }
