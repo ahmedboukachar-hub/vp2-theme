@@ -1,9 +1,9 @@
 {{ 'section-about-story.css' | asset_url | stylesheet_tag }}
 
 {%- comment -%}
-  Five chapters, each closing with a link to the page that tells the rest:
-  curation, authenticity, condition guide, find a bag, sell to us. A chapter
-  link is hidden when its page setting is empty.
+  Five chapters straight after the page hero, each closing with a link to the
+  page that tells the rest: curation, authenticity, condition guide, find a
+  bag, sell to us. A chapter link is hidden when its page setting is empty.
 {%- endcomment -%}
 {%- liquid
   assign chapter_keys = 'story,auth,cond,find,sell' | split: ','
@@ -11,11 +11,6 @@
 
 <div class="about-story color-{{ section.settings.color_scheme }} gradient">
   <div class="vp-width">
-    <div class="about-story__opening">
-      <p class="vp-eyebrow">{{ 'templates.about_story.eyebrow' | t }}</p>
-      <h2 class="vp-heading-section">{{ 'templates.about_story.heading' | t }}</h2>
-      <div class="about-story__lead rte">{{ 'templates.about_story.intro' | t }}</div>
-    </div>
     <div class="about-story__chapters">
       {%- for key in chapter_keys -%}
         {%- liquid
@@ -37,7 +32,7 @@
         -%}
         <div class="about-story__chapter">
           <span class="about-story__number" aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>
-          <h3>{{ heading_key | t }}</h3>
+          <h2>{{ heading_key | t }}</h2>
           <div class="about-story__body">
             <p>{{ text_key | t }}</p>
             {%- if chapter_page != blank %}
@@ -46,14 +41,6 @@
           </div>
         </div>
       {%- endfor -%}
-    </div>
-    <div class="about-story__links">
-      {%- if section.settings.shipping_page != blank %}
-      <a class="vp-link vp-link--arrow" href="{{ section.settings.shipping_page.url }}">{{ 'templates.about_story.shipping_link' | t }}</a>
-      {%- endif %}
-      {%- if section.settings.contact_page != blank %}
-      <a class="vp-link vp-link--arrow" href="{{ section.settings.contact_page.url }}">{{ 'templates.about_story.contact_link' | t }}</a>
-      {%- endif %}
     </div>
   </div>
 </div>
@@ -69,10 +56,7 @@
     { "type": "page", "id": "authenticity_page", "label": "Authenticity page" },
     { "type": "page", "id": "condition_page", "label": "Condition guide page" },
     { "type": "page", "id": "find_page", "label": "Find a bag page" },
-    { "type": "page", "id": "sell_page", "label": "Sell to us page" },
-    { "type": "header", "content": "Closing links" },
-    { "type": "page", "id": "shipping_page", "label": "Shipping and returns page" },
-    { "type": "page", "id": "contact_page", "label": "Contact page" }
+    { "type": "page", "id": "sell_page", "label": "Sell to us page" }
   ],
   "presets": [{ "name": "About story" }]
 }

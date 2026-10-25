@@ -535,11 +535,8 @@
       }
     },
     "about_story": {
-      "eyebrow": "Wofür wir stehen",
-      "heading": "Gefunden, um wieder getragen zu werden.",
-      "intro": "La Retrouvée vereint Vintage- und Pre-owned-Designertaschen, ausgewählt nach Gestaltung, Zustand und eigenem Charakter. Ein Stück kann eine Geschichte haben und dennoch ganz in die Gegenwart passen. Jedes Stück wird aus Europa versandt, ohne Zollgebühren innerhalb der EU.",
       "story_heading": "Unsere Geschichte",
-      "story_text": "La Retrouvée begann mit einer einfachen Überzeugung: Die schönsten Taschen sind oft jene, die bereits ein Leben hinter sich haben. Wir wählen von Hand und in kleiner Zahl aus, nur Stücke, die wir selbst tragen würden. Das Ergebnis ist kein Laden mit Lagerbestand, sondern eine überlegte Auswahl, die sich langsam verändert.",
+      "story_text": "La Retrouvée bedeutet ‚die Wiedergefundene‘. Angefangen hat es in den Niederlanden mit einer einfachen Überzeugung: Die schönsten Taschen sind oft jene, die bereits ein Leben hinter sich haben. Wir wählen von Hand und in kleiner Zahl aus, nur Stücke, die wir selbst tragen würden. Das Ergebnis ist kein Laden mit Lagerbestand, sondern eine überlegte Auswahl, die sich langsam verändert.",
       "story_link": "Wie wir auswählen",
       "auth_heading": "Geprüft, bevor sie online geht",
       "auth_text": "Jede Tasche wird vor der Veröffentlichung physisch geprüft: Materialien, Nähte, Beschläge, Innenraum sowie der Datums- oder Produktionscode, wo das Haus einen verwendet hat. Lässt sich ein Zweifel nicht ausräumen, verkaufen wir das Stück nicht. Sollte sich eine Tasche je als nicht authentisch erweisen, nehmen wir sie zurück und erstatten den vollen Kaufpreis.",
@@ -552,9 +549,7 @@
       "find_link": "Sagen Sie uns, was Sie suchen",
       "sell_heading": "Eine Tasche weitergeben",
       "sell_text": "Unsere Auswahl wächst durch private Besitzer, die sich von einem Stück trennen möchten. Senden Sie uns einige Fotos und eine ehrliche Beschreibung, und wir sagen Ihnen, ob die Tasche in die Kollektion passt und was wir anbieten können.",
-      "sell_link": "An uns verkaufen",
-      "shipping_link": "Versand und Rückgabe",
-      "contact_link": "Stellen Sie uns eine Frage"
+      "sell_link": "An uns verkaufen"
     }
   },
   "sections": {

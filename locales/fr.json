@@ -544,11 +544,8 @@
       }
     },
     "about_story": {
-      "eyebrow": "Ce qui nous guide",
-      "heading": "Retrouvés pour être portés à nouveau.",
-      "intro": "La Retrouvée réunit des sacs de créateurs vintage et de seconde main, choisis pour leur ligne, leur état et leur caractère singulier. Une pièce peut avoir une histoire et trouver naturellement sa place aujourd’hui. Chaque pièce est expédiée depuis l’Europe, sans frais de douane au sein de l’UE.",
       "story_heading": "Notre histoire",
-      "story_text": "La Retrouvée est née d’une conviction simple : les plus beaux sacs sont souvent ceux qui ont déjà une vie derrière eux. Nous sélectionnons à la main et en petit nombre, uniquement des pièces que nous porterions nous-mêmes. Le résultat n’est pas une boutique avec du stock, mais une sélection réfléchie qui évolue lentement.",
+      "story_text": "La Retrouvée, c’est celle que l’on retrouve. Tout a commencé aux Pays-Bas avec une conviction simple : les plus beaux sacs sont souvent ceux qui ont déjà une vie derrière eux. Nous sélectionnons à la main et en petit nombre, uniquement des pièces que nous porterions nous-mêmes. Le résultat n’est pas une boutique avec du stock, mais une sélection réfléchie qui évolue lentement.",
       "story_link": "Comment nous choisissons",
       "auth_heading": "Vérifié avant la mise en ligne",
       "auth_text": "Chaque sac est examiné physiquement avant d’être mis en ligne : matières, coutures, ferrures, intérieur et code de date ou de production lorsque la maison en utilisait un. Si un doute ne peut être levé, nous ne vendons pas la pièce. Si un sac s’avérait un jour non authentique, nous le reprenons et remboursons intégralement.",
@@ -561,9 +558,7 @@
       "find_link": "Dites-nous ce que vous cherchez",
       "sell_heading": "Transmettre un sac",
       "sell_text": "Notre sélection s’enrichit grâce à des particuliers prêts à se séparer d’une pièce. Envoyez-nous quelques photographies et une description honnête, et nous vous dirons si le sac a sa place dans la collection et ce que nous pouvons proposer.",
-      "sell_link": "Vendez-nous votre sac",
-      "shipping_link": "Livraison et retours",
-      "contact_link": "Posez-nous une question"
+      "sell_link": "Vendez-nous votre sac"
     }
   },
   "sections": {

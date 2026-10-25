@@ -544,11 +544,8 @@
       }
     },
     "about_story": {
-      "eyebrow": "Ciò in cui crediamo",
-      "heading": "Ritrovate per essere indossate ancora.",
-      "intro": "La Retrouvée riunisce borse firmate vintage e di seconda mano, scelte per il design, le condizioni e il carattere unico. Un pezzo può avere una storia e trovare il suo posto nel presente. Ogni pezzo viene spedito dall’Europa, senza costi doganali all’interno dell’UE.",
       "story_heading": "La nostra storia",
-      "story_text": "La Retrouvée è nata da una convinzione semplice: le borse più belle sono spesso quelle che hanno già una vita alle spalle. Selezioniamo a mano e in piccoli numeri, solo pezzi che porteremmo noi stessi. Il risultato non è un negozio con un magazzino, ma una selezione ponderata che cambia lentamente.",
+      "story_text": "La Retrouvée significa ‘la ritrovata’. È nata nei Paesi Bassi da una convinzione semplice: le borse più belle sono spesso quelle che hanno già una vita alle spalle. Selezioniamo a mano e in piccoli numeri, solo pezzi che porteremmo noi stessi. Il risultato non è un negozio con un magazzino, ma una selezione ponderata che cambia lentamente.",
       "story_link": "Come scegliamo",
       "auth_heading": "Controllata prima di andare online",
       "auth_text": "Ogni borsa viene esaminata fisicamente prima della pubblicazione: materiali, cuciture, minuteria, interno e il codice di data o produzione dove la maison ne usava uno. Se un dubbio non può essere risolto, non vendiamo il pezzo. Se una borsa dovesse mai rivelarsi non autentica, la ritiriamo e rimborsiamo l’intero importo.",
@@ -561,9 +558,7 @@
       "find_link": "Dicci cosa stai cercando",
       "sell_heading": "Cedere una borsa",
       "sell_text": "La nostra selezione cresce grazie a privati pronti a separarsi da un pezzo. Inviaci alcune fotografie e una descrizione onesta, e ti diremo se la borsa si adatta alla collezione e cosa possiamo offrire.",
-      "sell_link": "Vendi a noi",
-      "shipping_link": "Spedizione e resi",
-      "contact_link": "Facci una domanda"
+      "sell_link": "Vendi a noi"
     }
   },
   "sections": {
