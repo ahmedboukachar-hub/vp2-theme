@@ -35,7 +35,14 @@
             "menu": "footer-services"
           }
         },
-        "footer-care": {
+        "footer-contact": {
+      "type": "text",
+      "settings": {
+        "heading": "Contact",
+        "subtext": "<p><a href=\"mailto:info@laretrouvee.com\">info@laretrouvee.com</a><br>+31 6 4371 5013 (WhatsApp)<br>Mon–Sat 09:00–17:00<br>Heemstede, the Netherlands</p>"
+      }
+    },
+    "footer-care": {
           "type": "link_list",
           "settings": {
             "heading": "Customer care",
@@ -47,7 +54,8 @@
         "footer-shop",
         "footer-discover",
         "footer-services",
-        "footer-care"
+        "footer-care",
+        "footer-contact"
       ],
       "settings": {
         "color_scheme": "scheme-2",
