@@ -9,6 +9,9 @@
  */
 {
   "general": {
+    "whatsapp": {
+      "message": "Hallo, ich habe eine Frage zu einem Stück bei La Retrouvée."
+    },
     "meta": {
       "home_description": "Ausgewählte Vintage- und Pre-owned-Designertaschen von Louis Vuitton, Gucci und Dior. Auf Echtheit geprüft, kostenloser Versand und 14 Tage Rückgaberecht."
     },

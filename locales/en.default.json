@@ -9,6 +9,9 @@
  */
 {
   "general": {
+    "whatsapp": {
+      "message": "Hello, I have a question about a piece on La Retrouvée."
+    },
     "meta": {
       "home_description": "Curated vintage and pre-owned designer bags by Louis Vuitton, Gucci and Dior. Checked for authenticity, with free shipping and 14-day returns."
     },

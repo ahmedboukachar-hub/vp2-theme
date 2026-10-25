@@ -231,13 +231,6 @@ product-info {
   margin-bottom: 1rem;
 }
 
-.product-form__whatsapp {
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: 1.3rem;
-  letter-spacing: 0.04rem;
-}
-
 .product-form__assurance {
   margin: 1.4rem 0 0;
   font-size: 1.2rem;

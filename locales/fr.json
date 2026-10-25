@@ -9,6 +9,9 @@
  */
 {
   "general": {
+    "whatsapp": {
+      "message": "Bonjour, j’ai une question sur une pièce de La Retrouvée."
+    },
     "meta": {
       "home_description": "Sacs de créateurs vintage et de seconde main choisis avec soin : Louis Vuitton, Gucci, Dior. Authenticité vérifiée, livraison offerte, retours sous 14 jours."
     },
