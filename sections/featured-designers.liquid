@@ -39,7 +39,9 @@
             # and a 4rem gap below). On the two-up grid a small card is a horizontal
             # card from 990px, its photo half the card width.
             assign card_size = block.settings.size | default: 'large'
-            if section.settings.columns_desktop == '3'
+            if section.settings.columns_desktop == '4'
+              assign card_sizes = '(min-width: 1440px) 300px, (min-width: 750px) calc(25vw - 60px), calc(50vw - 35px)'
+            elsif section.settings.columns_desktop == '3'
               assign card_sizes = '(min-width: 1440px) 404px, (min-width: 750px) calc(33.3vw - 76px), calc(100vw - 30px)'
               if card_size == 'small'
                 assign card_sizes = '(min-width: 1440px) 170px, (min-width: 750px) calc(16.7vw - 70px), calc(50vw - 35px)'
@@ -97,7 +99,8 @@
       "info": "Small cards: two shorter cards per row on the two-up grid, six per row on the three-up grid.",
       "options": [
         { "value": "2", "label": "2 large cards per row" },
-        { "value": "3", "label": "3 large cards per row" }
+        { "value": "3", "label": "3 large cards per row" },
+        { "value": "4", "label": "4 cards per row" }
       ],
       "default": "2"
     },
