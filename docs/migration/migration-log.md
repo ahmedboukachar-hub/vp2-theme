@@ -175,3 +175,48 @@ accordingly. Eight products are not in the sheet and remain unclassified
 (see `docs/launch-readiness.md` item 8). The sheet itself contains purchase
 prices and is deliberately not stored in this repository.
 
+
+---
+
+## Import into the new store — 2026-10-24
+
+Source: a fresh read-only export of the development store (`tools/migration/export.py`).
+Target: `0zayrp-60.myshopify.com`, written by `tools/migration/import.py` step by step
+(old→new ID map and JSONL write log kept outside the repository).
+
+| Step | Result |
+| --- | --- |
+| Languages | en (primary, switched by the owner), nl, de, fr, it, es enabled and published; switching the default dropped nl, which the script re-enabled |
+| Definitions | 25 metafield definitions (pinned order kept), metaobject definition `condition_issue` |
+| Files | 121 non-product files with identical filenames; all 11 `shopify://shop_images/…` references of the theme resolve |
+| Products | 26 (25 active, 1 draft), 14 available; 152 images in order with alt texts; inventory on the single location; published on Online Store |
+| Originals | the first pass used the CDN `image.url`, a re-encoded copy; 230 images were swapped for the old store's original files via `fileUpdate` (same media ids) |
+| Collections | 9 with identical rules, sort order, templates, images and SEO; product counts 13/13/7/3/12/1/2/1; Shopify's auto-added product removed from `frontpage` |
+| Pages / Journal | 13 pages with template suffixes; blog `journal` with 18 articles (dates, tags in order, images, `custom.models`) |
+| Policies / menus / redirects | 4 policies (privacy is Shopify-managed); 6 menus with links to the new ids; `/blogs/news → /blogs/journal` |
+| Translations | 26,648 values in 5 languages, 0 outdated |
+
+Theme: the new store validates more strictly than the development store. It skipped
+`featured-designers` (an option label over 50 characters) and `archive-feature`
+(a range with two values), and with them `templates/index.json` and
+`templates/page.designers.json`. Fixed in #101; #100 and #102 touched the templates so
+the sync retried them. All theme files are now live in the new store.
+
+A read-only parity check, one agent per domain with two independent re-checks per
+finding, compared every product, variant, metafield, image (order, alt, size and
+original bytes, 273/273), collection (rules, product sets), page, article, menu,
+redirect, policy, definition and all 431 theme files. It found no remaining difference
+apart from cosmetic store-side normalisation (`product.json` gains empty block
+`settings`, locale files are re-formatted).
+
+Settings outside the import, compared by hand: currency format, units and time zone
+match; **prices include tax** is on in the new store and was off in the development
+store. Including VAT is what Dutch consumer prices require; it is the owner's call and
+was left as set.
+
+The Journal index was the only template that opened on white (scheme-3, since #57);
+the owner flagged it and #103 moved it to the ivory canvas like every other page.
+
+Still open (owner / later): store name ("Mijn winkel"), privacy policy, Search &
+Discovery filters, payments, shipping, taxes, market Europe with the domain, live spot
+check in EN and NL.

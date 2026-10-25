@@ -15,6 +15,14 @@ Secret-free helpers for the move described in `docs/migration-new-store.md`.
   `$MIGRATION_EXPORT_DIR` (default `./migration-export`, git-ignored). Run from a
   scratch directory: `python3 -I /path/to/tools/migration/export.py`.
 
+- `import.py`: writes the export into the **new** store, step by step in the
+  order of the doc (`locales defs files products collections pages blog policies
+  menus redirects translations`, or `all`; `--dry-run` logs without writing).
+  Idempotent: the old→new ID mapping is kept in `$MIGRATION_EXPORT_DIR/id-map.json`
+  and every write is logged to `import-log.jsonl` there. The translations step
+  refuses to run until English is the new store's default language. Run it the
+  same way: `python3 -I /path/to/tools/migration/import.py products`.
+
 Usage from Python:
 
 ```python

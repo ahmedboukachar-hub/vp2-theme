@@ -1,12 +1,44 @@
 # Overstap naar een nieuwe, echte Shopify-winkel (samenvatting voor ChatGPT/Codex)
 
-Status (2026-10-24): nieuwe winkel aangemaakt (`ozayrp-60.myshopify.com`),
-thema via GitHub gekoppeld (branch `main`, niet gepubliceerd), app "La
-Retrouvée Migratie" geïnstalleerd; omgevingsvariabelen `*_NEW` toegevoegd.
-Een volledige export van de oude winkel is gemaakt en getest (26 producten,
-273 bestanden, 9 collecties, 14 pagina's, 18 artikelen, 7 menu's, 5 beleidsteksten,
-alle vertalingen). Scripts: `tools/migration/` (zie README daar). Volgende stap:
-in een nieuwe sessie de import bouwen en testen tegen de nieuwe winkel.
+Status (2026-10-25): **de nieuwe winkel is live op laretrouvee.com.** De import
+(`tools/migration/import.py`, zie README daar) bracht alle inhoud over; daarna
+volgden op 24–25 oktober: domeinverhuizing, wachtwoord eraf, Shopify Payments
+actief (iDEAL wacht op Shopify's herbeoordeling), markten en verzendzone beperkt
+tot NL, BE, DE, FR, ES en IT (eigenaarsbesluit), conditierapporten en modelmaten
+op alle tassen, en een reeks thema-PR's (#100–#125) na een live beoordeling.
+De oude dev-winkel blijft testomgeving. Open punten staan hieronder.
+
+## Nog te doen na de livegang
+
+- **Eigenaar (Admin):** winkelnaam staat nog op "Mijn winkel"; btw voor markt
+  Europe staat op "Niet innen" (met de boekhouder nakijken); iDEAL activeren zodra
+  Shopify het vrijgeeft; Shop Pay in de checkout aan of uit; Search &
+  Discovery-filters; Google Search Console en het Google & YouTube-kanaal.
+- **Productdata (eigenaar levert aan):** maten van Princy Hobo, Marmont en GG
+  Shoulder Bag; jaar of periode en bandlengte per tas; foto's met leesbare
+  datumcode bijsnijden (Pochette Accessoires, Speedy 30-03); VP-B001 en VP-B022
+  lijken dezelfde tas.
+- De mapping oud→nieuw en het schrijflog staan buiten de repo in
+  `$MIGRATION_EXPORT_DIR` (`id-map.json`, `import-log.jsonl`) van de sessie die de
+  import draaide; bij een nieuwe run eerst opnieuw exporteren.
+
+## Nog te doen na de import
+
+- **Eigenaar (Admin):** winkelnaam staat nog op "Mijn winkel" (de storefront toont
+  `brand_display_name`, maar e-mails, checkout en sync-commits gebruiken de winkelnaam);
+  "prijzen inclusief btw" staat in de nieuwe winkel aan en stond in de oude uit:
+  bevestigen (voor consumentenprijzen in de EU hoort het aan); privacybeleid
+  aanzetten (Shopify beheert het, de NL/DE/FR/IT/ES-vertalingen ervan konden
+  daarom niet mee); Search & Discovery-filters opnieuw instellen (vertalingen
+  daarvan volgen daarna); betalingen, verzending, belastingen, afzender-e-mail;
+  de standaardblog "nieuws" mag weg.
+- **Markt Europa** met laretrouvee.com pas na de domeinwissel (eigenaar akkoord).
+- **Steekproef live in EN en NL** zodra de eigenaar het wachtwoord deelt of de
+  winkel opent (homepage, collectie, product beschikbaar/verkocht, artikel, Over
+  ons, zoeken, winkelwagen).
+- De mapping oud→nieuw en het schrijflog staan buiten de repo in
+  `$MIGRATION_EXPORT_DIR` (`id-map.json`, `import-log.jsonl`) van de sessie die de
+  import draaide; bij een nieuwe run eerst opnieuw exporteren.
 
 ## Waarom
 
