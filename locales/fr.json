@@ -185,6 +185,10 @@
     "product": {
       "add_to_cart": "Ajouter au panier",
       "buy_it_now": "Acheter maintenant",
+      "whatsapp": {
+        "label": "Demander une vidéo ou plus de photos sur WhatsApp",
+        "message": "Bonjour, pourriez-vous m’envoyer une vidéo ou plus de photos du {{ title }} ? {{ url }}"
+      },
       "assurance": {
         "checkout": "Paiement sécurisé",
         "authenticity": "Garantie d’authenticité",

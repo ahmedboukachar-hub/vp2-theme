@@ -185,6 +185,10 @@
     "product": {
       "add_to_cart": "Añadir al carrito",
       "buy_it_now": "Comprar ahora",
+      "whatsapp": {
+        "label": "Pide un vídeo o más fotos por WhatsApp",
+        "message": "Hola, ¿podríais enviarme un vídeo o más fotos del {{ title }}? {{ url }}"
+      },
       "assurance": {
         "checkout": "Pago seguro",
         "authenticity": "Garantía de autenticidad",
