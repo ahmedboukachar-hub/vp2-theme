@@ -535,17 +535,26 @@
       }
     },
     "about_story": {
-      "eyebrow": "Unsere Sicht",
+      "eyebrow": "Wofür wir stehen",
       "heading": "Gefunden, um wieder getragen zu werden.",
       "intro": "La Retrouvée vereint Vintage- und Pre-owned-Designertaschen, ausgewählt nach Gestaltung, Zustand und eigenem Charakter. Ein Stück kann eine Geschichte haben und dennoch ganz in die Gegenwart passen. Jedes Stück wird aus Europa versandt, ohne Zollgebühren innerhalb der EU.",
-      "selection_heading": "Einzeln ausgewählt",
-      "selection_text": "Ein bekannter Name erzählt nie die ganze Geschichte. Wir betrachten Form, Material und Details jedes Stücks, bevor es Teil der Auswahl wird. Jede Tasche wird als einzelnes Stück angeboten.",
-      "detail_heading": "Klar gezeigt",
-      "detail_text": "Die Fotos und die Beschreibung zeigen genau die Tasche, die Sie erhalten. Wir beschreiben sichtbare Gebrauchsspuren, nennen Maße, soweit verfügbar, und beantworten Fragen zu den Details, die Ihnen wichtig sind.",
-      "next_heading": "Für ein neues Kapitel",
-      "next_text": "Die richtige Tasche möchte man tragen. Unsere bewusst zusammengestellte Auswahl umfasst Stücke, die genutzt, gepflegt und wiederentdeckt werden sollen.",
-      "curation_link": "Unsere Auswahl entdecken",
-      "contact_link": "Frage stellen"
+      "story_heading": "Unsere Geschichte",
+      "story_text": "La Retrouvée begann mit einer einfachen Überzeugung: Die schönsten Taschen sind oft jene, die bereits ein Leben hinter sich haben. Wir wählen von Hand und in kleiner Zahl aus, nur Stücke, die wir selbst tragen würden. Das Ergebnis ist kein Laden mit Lagerbestand, sondern eine überlegte Auswahl, die sich langsam verändert.",
+      "story_link": "Wie wir auswählen",
+      "auth_heading": "Geprüft, bevor sie online geht",
+      "auth_text": "Jede Tasche wird vor der Veröffentlichung physisch geprüft: Materialien, Nähte, Beschläge, Innenraum sowie der Datums- oder Produktionscode, wo das Haus einen verwendet hat. Lässt sich ein Zweifel nicht ausräumen, verkaufen wir das Stück nicht. Sollte sich eine Tasche je als nicht authentisch erweisen, nehmen wir sie zurück und erstatten den vollen Kaufpreis.",
+      "auth_link": "Unser Umgang mit Echtheit",
+      "cond_heading": "Gezeigt, wie sie ist",
+      "cond_text": "Die Fotos und Zustandsnotizen gehören zu genau der Tasche, die Sie erhalten. Patina, weich gewordene Ecken und kleine Spuren zeigen wir, statt sie wegzuretuschieren, und wir nennen Maße, wo verfügbar. Vier Zustandsgrade setzen Erwartungen; die Fotos entscheiden.",
+      "cond_link": "Zum Zustandsleitfaden",
+      "find_heading": "Auf der Suche nach einer bestimmten Tasche?",
+      "find_text": "Manche Taschen sind das Warten wert. Nennen Sie uns Modell, Größe, Farbe oder Ära, und wir behalten Ihre Anfrage beim Einkauf im Blick. Kommt ein passendes Stück herein, erfahren Sie es persönlich von uns.",
+      "find_link": "Sagen Sie uns, was Sie suchen",
+      "sell_heading": "Eine Tasche weitergeben",
+      "sell_text": "Unsere Auswahl wächst durch private Besitzer, die sich von einem Stück trennen möchten. Senden Sie uns einige Fotos und eine ehrliche Beschreibung, und wir sagen Ihnen, ob die Tasche in die Kollektion passt und was wir anbieten können.",
+      "sell_link": "An uns verkaufen",
+      "shipping_link": "Versand und Rückgabe",
+      "contact_link": "Stellen Sie uns eine Frage"
     }
   },
   "sections": {

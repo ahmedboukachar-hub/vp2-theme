@@ -1,5 +1,14 @@
 {{ 'section-about-story.css' | asset_url | stylesheet_tag }}
 
+{%- comment -%}
+  Five chapters, each closing with a link to the page that tells the rest:
+  curation, authenticity, condition guide, find a bag, sell to us. A chapter
+  link is hidden when its page setting is empty.
+{%- endcomment -%}
+{%- liquid
+  assign chapter_keys = 'story,auth,cond,find,sell' | split: ','
+-%}
+
 <div class="about-story color-{{ section.settings.color_scheme }} gradient">
   <div class="vp-width">
     <div class="about-story__opening">
@@ -8,25 +17,39 @@
       <div class="about-story__lead rte">{{ 'templates.about_story.intro' | t }}</div>
     </div>
     <div class="about-story__chapters">
-      <div class="about-story__chapter">
-        <span class="about-story__number" aria-hidden="true">01</span>
-        <h3>{{ 'templates.about_story.selection_heading' | t }}</h3>
-        <p>{{ 'templates.about_story.selection_text' | t }}</p>
-      </div>
-      <div class="about-story__chapter">
-        <span class="about-story__number" aria-hidden="true">02</span>
-        <h3>{{ 'templates.about_story.detail_heading' | t }}</h3>
-        <p>{{ 'templates.about_story.detail_text' | t }}</p>
-      </div>
-      <div class="about-story__chapter">
-        <span class="about-story__number" aria-hidden="true">03</span>
-        <h3>{{ 'templates.about_story.next_heading' | t }}</h3>
-        <p>{{ 'templates.about_story.next_text' | t }}</p>
-      </div>
+      {%- for key in chapter_keys -%}
+        {%- liquid
+          case key
+            when 'story'
+              assign chapter_page = section.settings.curation_page
+            when 'auth'
+              assign chapter_page = section.settings.authenticity_page
+            when 'cond'
+              assign chapter_page = section.settings.condition_page
+            when 'find'
+              assign chapter_page = section.settings.find_page
+            when 'sell'
+              assign chapter_page = section.settings.sell_page
+          endcase
+          assign heading_key = 'templates.about_story.' | append: key | append: '_heading'
+          assign text_key = 'templates.about_story.' | append: key | append: '_text'
+          assign link_key = 'templates.about_story.' | append: key | append: '_link'
+        -%}
+        <div class="about-story__chapter">
+          <span class="about-story__number" aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>
+          <h3>{{ heading_key | t }}</h3>
+          <div class="about-story__body">
+            <p>{{ text_key | t }}</p>
+            {%- if chapter_page != blank %}
+              <a class="vp-link vp-link--arrow" href="{{ chapter_page.url }}">{{ link_key | t }}</a>
+            {%- endif %}
+          </div>
+        </div>
+      {%- endfor -%}
     </div>
     <div class="about-story__links">
-      {%- if section.settings.curation_page != blank %}
-      <a class="vp-link vp-link--arrow" href="{{ section.settings.curation_page.url }}">{{ 'templates.about_story.curation_link' | t }}</a>
+      {%- if section.settings.shipping_page != blank %}
+      <a class="vp-link vp-link--arrow" href="{{ section.settings.shipping_page.url }}">{{ 'templates.about_story.shipping_link' | t }}</a>
       {%- endif %}
       {%- if section.settings.contact_page != blank %}
       <a class="vp-link vp-link--arrow" href="{{ section.settings.contact_page.url }}">{{ 'templates.about_story.contact_link' | t }}</a>
@@ -41,8 +64,15 @@
   "tag": "section",
   "settings": [
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
-    { "type": "page", "id": "curation_page", "label": "Page for 'Explore our curation'", "info": "The link is hidden when no page is selected." },
-    { "type": "page", "id": "contact_page", "label": "Page for 'Ask us a question'", "info": "The link is hidden when no page is selected." }
+    { "type": "header", "content": "Chapter links", "info": "Each chapter ends with a link to the page that tells the rest. A link is hidden when no page is selected." },
+    { "type": "page", "id": "curation_page", "label": "Our story: curation page" },
+    { "type": "page", "id": "authenticity_page", "label": "Authenticity page" },
+    { "type": "page", "id": "condition_page", "label": "Condition guide page" },
+    { "type": "page", "id": "find_page", "label": "Find a bag page" },
+    { "type": "page", "id": "sell_page", "label": "Sell to us page" },
+    { "type": "header", "content": "Closing links" },
+    { "type": "page", "id": "shipping_page", "label": "Shipping and returns page" },
+    { "type": "page", "id": "contact_page", "label": "Contact page" }
   ],
   "presets": [{ "name": "About story" }]
 }

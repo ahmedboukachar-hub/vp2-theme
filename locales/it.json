@@ -544,17 +544,26 @@
       }
     },
     "about_story": {
-      "eyebrow": "Il nostro punto di vista",
+      "eyebrow": "Ciò in cui crediamo",
       "heading": "Ritrovate per essere indossate ancora.",
       "intro": "La Retrouvée riunisce borse firmate vintage e di seconda mano, scelte per il design, le condizioni e il carattere unico. Un pezzo può avere una storia e trovare il suo posto nel presente. Ogni pezzo viene spedito dall’Europa, senza costi doganali all’interno dell’UE.",
-      "selection_heading": "Scelte una per una",
-      "selection_text": "Un nome celebre non racconta tutta la storia. Osserviamo forma, materiali e dettagli di ogni pezzo prima di inserirlo nella selezione. Ogni borsa è proposta come esemplare unico.",
-      "detail_heading": "Mostrate con chiarezza",
-      "detail_text": "Le foto e la descrizione riguardano proprio la borsa che riceverai. Descriviamo i segni d’uso visibili, indichiamo le misure quando disponibili e rispondiamo alle tue domande.",
-      "next_heading": "Per un nuovo capitolo",
-      "next_text": "La borsa giusta è quella che desideri usare. La nostra selezione riunisce pezzi da indossare, curare e ritrovare.",
-      "curation_link": "Scopri la selezione",
-      "contact_link": "Fai una domanda"
+      "story_heading": "La nostra storia",
+      "story_text": "La Retrouvée è nata da una convinzione semplice: le borse più belle sono spesso quelle che hanno già una vita alle spalle. Selezioniamo a mano e in piccoli numeri, solo pezzi che porteremmo noi stessi. Il risultato non è un negozio con un magazzino, ma una selezione ponderata che cambia lentamente.",
+      "story_link": "Come scegliamo",
+      "auth_heading": "Controllata prima di andare online",
+      "auth_text": "Ogni borsa viene esaminata fisicamente prima della pubblicazione: materiali, cuciture, minuteria, interno e il codice di data o produzione dove la maison ne usava uno. Se un dubbio non può essere risolto, non vendiamo il pezzo. Se una borsa dovesse mai rivelarsi non autentica, la ritiriamo e rimborsiamo l’intero importo.",
+      "auth_link": "Il nostro approccio all’autenticità",
+      "cond_heading": "Mostrata com’è",
+      "cond_text": "Le fotografie e le note sulle condizioni appartengono esattamente alla borsa che ricevi. Patina, angoli ammorbiditi e piccoli segni vengono mostrati, non ritoccati, e indichiamo le misure dove disponibili. Quattro gradi definiscono le aspettative; le fotografie decidono.",
+      "cond_link": "Leggi la guida alle condizioni",
+      "find_heading": "Cerchi una borsa in particolare?",
+      "find_text": "Alcune borse meritano l’attesa. Dicci modello, misura, colore o epoca che hai in mente e terremo presente la tua richiesta durante la ricerca. Quando arriva un pezzo corrispondente, lo saprai personalmente da noi.",
+      "find_link": "Dicci cosa stai cercando",
+      "sell_heading": "Cedere una borsa",
+      "sell_text": "La nostra selezione cresce grazie a privati pronti a separarsi da un pezzo. Inviaci alcune fotografie e una descrizione onesta, e ti diremo se la borsa si adatta alla collezione e cosa possiamo offrire.",
+      "sell_link": "Vendi a noi",
+      "shipping_link": "Spedizione e resi",
+      "contact_link": "Facci una domanda"
     }
   },
   "sections": {
