@@ -171,6 +171,9 @@
               {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
             {%- endform -%}
           </localization-form>
+          {%- if section.settings.show_social and has_social_icons -%}
+            {%- render 'social-icons', class: 'footer__list-social' -%}
+          {%- endif -%}
         </div>
       {%- endif -%}
 

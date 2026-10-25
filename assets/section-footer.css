@@ -156,8 +156,16 @@
 .footer__localization {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1.2rem 2.4rem;
 }
+
+/* Social icons beside the language selector: same quiet grey as the links. */
+.footer__list-social { gap: 0.4rem; }
+.footer__list-social .list-social__link { color: rgba(var(--color-foreground), 0.78); }
+.footer__list-social .list-social__link:hover,
+.footer__list-social .list-social__link:focus-visible { color: rgb(var(--color-foreground)); }
+.footer__list-social .icon { width: 1.8rem; height: 1.8rem; }
 
 .footer__legal {
   display: flex;
