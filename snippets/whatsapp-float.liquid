@@ -31,6 +31,8 @@
       var bubble = document.querySelector('.whatsapp-float__bubble');
       if (!bubble) return;
       var key = 'lr-whatsapp-bubble';
+      // Phones: not on product and collection pages, where it would sit over buttons and product cards.
+      if (window.matchMedia('(max-width: 749px)').matches && /^(product|collection|search)$/.test('{{ template.name }}')) return;
       try { if (sessionStorage.getItem(key)) return; } catch (e) {}
       var hide = function () { bubble.hidden = true; try { sessionStorage.setItem(key, '1'); } catch (e) {} };
       bubble.querySelector('button').addEventListener('click', hide);
@@ -75,7 +77,7 @@
       transition: bottom 0.25s ease;
     }
     .whatsapp-float__bubble[hidden] { display: none; }
-    .whatsapp-float__close { background: none; border: 0; padding: 0 0.2rem; font-size: 1.8rem; line-height: 1; color: inherit; cursor: pointer; opacity: 0.6; }
+    .whatsapp-float__close { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; min-width: 4.4rem; min-height: 4.4rem; margin: -1rem -1.2rem -1rem 0; background: none; border: 0; padding: 0; font-size: 2rem; line-height: 1; color: inherit; cursor: pointer; opacity: 0.6; }
     body:has(.sticky-buy--visible) .whatsapp-float__bubble { bottom: calc(9rem + env(safe-area-inset-bottom)); }
     @media print { .whatsapp-float, .whatsapp-float__bubble { display: none; } }
   </style>

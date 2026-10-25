@@ -129,6 +129,7 @@
         <p class="product-form__assurance">
           {{- 'products.product.assurance.authenticity' | t }} · {{ 'products.product.assurance.returns' | t }} · {{ 'products.product.assurance.checkout' | t -}}
         </p>
+        {% render 'payment-icons', class: 'product-form__payment' %}
       {%- endif -%}
     </product-form>
   {%- else -%}

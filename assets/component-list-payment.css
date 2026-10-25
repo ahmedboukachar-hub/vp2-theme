@@ -20,3 +20,10 @@
   display: flex;
   padding: 0.5rem;
 }
+
+/* Country-aware payment icons (snippets/payment-icons.liquid) */
+.payment-icons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; padding: 0; }
+.payment-icons .icon { width: 3.8rem; height: 2.4rem; }
+.product-form__payment { margin-top: 1.2rem; }
+.cart__payment { margin-top: 1.2rem; justify-content: flex-end; }
+@media screen and (max-width: 749px) { .cart__payment { justify-content: center; } }
