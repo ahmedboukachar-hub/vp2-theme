@@ -58,6 +58,7 @@
         {%- if results.terms -%}
           <input type="hidden" name="q" value="{{ results.terms | escape }}">
           <input name="options[prefix]" type="hidden" value="last">
+          <input type="hidden" name="options[fields]" value="title,product_type,variants.title,vendor,tag">
         {%- endif -%}
 
         {% if enable_filtering %}
@@ -874,6 +875,7 @@
             {%- if results.terms -%}
               <input type="hidden" name="q" value="{{ results.terms | escape }}">
               <input name="options[prefix]" type="hidden" value="last">
+              <input type="hidden" name="options[fields]" value="title,product_type,variants.title,vendor,tag">
             {%- endif -%}
           </div>
         </form>
@@ -979,6 +981,7 @@
         {%- if results.terms -%}
           <input type="hidden" name="q" value="{{ results.terms | escape }}">
           <input name="options[prefix]" type="hidden" value="last">
+          <input type="hidden" name="options[fields]" value="title,product_type,variants.title,vendor,tag">
         {%- endif -%}
       </form>
     </facet-filters-form>

@@ -181,11 +181,13 @@ class PredictiveSearch extends SearchForm {
     const searchDeferred = this.dispatchSearchUpdateEvent(searchTerm);
 
     // The type list replaces Shopify's default (which leaves out articles), so
-    // Journal guides appear next to pages in the first column.
+    // Journal guides appear next to pages in the first column. Fields leave out
+    // long descriptions, so a model name finds that model rather than every bag
+    // whose text mentions it.
     fetch(
       `${routes.predictive_search_url}?q=${encodeURIComponent(
         searchTerm
-      )}&resources[type]=query,product,collection,page,article&section_id=predictive-search`,
+      )}&resources[type]=query,product,collection,page,article&resources[options][fields]=title,product_type,variants.title,vendor,tag&section_id=predictive-search`,
       {
         signal: this.abortController.signal,
       }
