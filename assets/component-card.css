@@ -677,10 +677,4 @@
   height: 100%;
   object-fit: contain;
   object-position: center;
-  /* White source backgrounds take on the warm photo ground, so photos shot on
-     white and on ivory sit together without visible bars or seams. */
-  mix-blend-mode: multiply;
-}
-.product-card-wrapper .card__media .media {
-  background: var(--vp-media-ground, #fcf9f5);
 }
