@@ -127,6 +127,7 @@
                   {{ 'sections.cart.checkout' | t }}
                 </button>
               </div>
+              {% render 'payment-icons', class: 'cart__payment' %}
 
               {%- comment -%} No wallet buttons (Shop Pay, PayPal, ...) in the cart: Check out is the only action; the wallets stay available in checkout (owner decision 2026-10-24). {%- endcomment -%}
           {%- endcase -%}

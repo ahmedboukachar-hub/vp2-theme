@@ -206,13 +206,8 @@
 
       <p class="footer__note">{{ 'general.footer.non_affiliation' | t: shop_name: brand_name }}</p>
 
-      {%- if section.settings.payment_enable and shop.enabled_payment_types != empty -%}
-        <div class="footer__payment">
-          <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-          {%- for type in shop.enabled_payment_types -%}
-            {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-          {%- endfor -%}
-        </div>
+      {%- if section.settings.payment_enable -%}
+        <div class="footer__payment">{% render 'payment-icons' %}</div>
       {%- endif -%}
     </div>
   </div>
